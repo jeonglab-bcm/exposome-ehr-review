@@ -96,3 +96,37 @@ def test_extract_jats_xml_abstract_only():
         text = extract_jats_xml(Path(f.name))
     assert "My Poster" in text
     assert "p abstract" in text
+
+
+# ── chunked recovery helpers ────────────────────────────────────────────────
+def test_chunk_text_short_returns_single():
+    from summarizer.llm_client import _chunk_text
+    assert _chunk_text("short text") == ["short text"]
+
+
+def test_chunk_text_splits_with_overlap():
+    from summarizer.llm_client import _chunk_text
+    text = "x" * 9000
+    chunks = _chunk_text(text, size=4000, overlap=600)
+    assert len(chunks) >= 2
+    # overlap: start of chunk 2 should be within chunk 1's tail
+    assert chunks[1][:10] == chunks[0][3400:3410]
+
+
+def test_merge_partials_unions_and_or_ehr():
+    from summarizer.llm_client import _merge_partials
+    partials = [
+        {"ehr_used": False, "ehr_evidence": "", "summary": "part A",
+         "key_findings": ["A1"], "captured_features": ["BMI"],
+         "pathologies_diseases": ["obesity"], "confidence": "medium"},
+        {"ehr_used": True, "ehr_evidence": "used HES", "summary": "part B",
+         "key_findings": ["A1", "B2"], "captured_features": ["HES codes"],
+         "pathologies_diseases": ["T1DM"], "confidence": "high"},
+    ]
+    m = _merge_partials(partials)
+    assert m["ehr_used"] is True           # OR across chunks
+    assert "HES" in m["ehr_evidence"]
+    assert m["key_findings"] == ["A1", "B2"]  # union, dedup
+    assert set(m["captured_features"]) == {"BMI", "HES codes"}
+    assert set(m["pathologies_diseases"]) == {"obesity", "T1DM"}
+    assert m["confidence"] == "high"         # highest across chunks

@@ -245,3 +245,153 @@ def summarize_text(
 
 def _corrective_nudge(msg: str) -> str:
     return msg
+
+
+# ── chunked recovery ("dissect into two then redo") ─────────────────────────
+# When a paper is too long for a single shot (token exhaustion / malformed JSON
+# from a long context), split the text into overlapping chunks, extract a partial
+# checklist from each, and merge the partials into one final checklist.
+
+CHUNK_SIZE = 4000      # chars per chunk (well within the model's comfort zone)
+CHUNK_OVERLAP = 600    # overlap so section boundaries aren't lost
+
+
+def _chunk_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
+    """Split text into overlapping chunks of ~`size` chars."""
+    text = (text or "").strip()
+    if len(text) <= size:
+        return [text]
+    chunks, i = [], 0
+    while i < len(text):
+        chunks.append(text[i : i + size])
+        if i + size >= len(text):
+            break
+        i += size - overlap
+    return chunks
+
+
+def _call_llm(client: OpenAI, model: str, messages: list[dict], max_tokens: int = MAX_OUTPUT_TOKENS) -> tuple[str, str]:
+    """One LLM call; returns (raw_content, finish_reason). Raises on API error."""
+    resp = client.chat.completions.create(
+        model=model, messages=messages,
+        max_tokens=max_tokens, temperature=0.0, timeout=120.0,
+    )
+    return (resp.choices[0].message.content or "", resp.choices[0].finish_reason or "")
+
+
+def _extract_one_chunk(client, model, chunk: str, pmcid: str) -> dict[str, Any] | None:
+    """Extract a partial JSON object from a single text chunk, with a repair reprompt."""
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": build_user_prompt(chunk)},
+    ]
+    for _ in range(MAX_RETRIES):
+        try:
+            raw, _fr = _call_llm(client, model, messages)
+        except Exception:
+            time.sleep(2)
+            continue
+        obj = extract_json_object(raw)
+        if obj is not None:
+            return obj
+        # repair reprompt: feed the raw back and ask for valid JSON only
+        messages.append({"role": "assistant", "content": raw})
+        messages.append({"role": "user", "content": _corrective_nudge(
+            "Your previous output was not valid JSON (often an unescaped quote "
+            "inside a string value). Re-emit the SAME content as a single valid "
+            "JSON object — escape every inner quote as backslash-quote. "
+            "Start with { and end with }. Nothing else.")})
+    return None
+
+
+_CONF_RANK = {"unclear": 0, "low": 1, "medium": 2, "high": 3}
+
+
+def _merge_partials(partials: list[dict[str, Any]]) -> dict[str, Any]:
+    """Merge per-chunk partial dicts into one combined dict."""
+    def first_str(field: str) -> str:
+        for p in partials:
+            v = p.get(field)
+            if isinstance(v, str) and v.strip() and v.strip().lower() != "n/a":
+                return v
+        return ""
+
+    def union_str_list(field: str) -> list[str]:
+        out: list[str] = []
+        for p in partials:
+            v = p.get(field)
+            if isinstance(v, str):
+                v = [v]
+            if isinstance(v, list):
+                for x in v:
+                    s = str(x).strip()
+                    if s and s not in out:
+                        out.append(s)
+        return out
+
+    # ehr_used = True if any chunk found EHR usage
+    ehr_used = any(bool(p.get("ehr_used")) for p in partials)
+    ehr_evidence = " ".join(
+        str(p.get("ehr_evidence", "")).strip() for p in partials
+        if str(p.get("ehr_evidence", "")).strip()
+    ) or "n/a"
+
+    # confidence: take the highest across chunks
+    conf = "unclear"
+    for p in partials:
+        c = str(p.get("confidence", "")).strip().lower()
+        if _CONF_RANK.get(c, 0) > _CONF_RANK.get(conf, 0):
+            conf = c
+
+    merged: dict[str, Any] = {
+        "ehr_used": ehr_used,
+        "ehr_evidence": ehr_evidence[:500],
+        "summary": first_str("summary"),
+        "key_findings": union_str_list("key_findings"),
+        "captured_features": union_str_list("captured_features"),
+        "pathologies_diseases": union_str_list("pathologies_diseases"),
+        "study_design": first_str("study_design"),
+        "data_source_type": first_str("data_source_type"),
+        "population": first_str("population"),
+        "exposure_domain": first_str("exposure_domain"),
+        "limitations": union_str_list("limitations"),
+        "confidence": conf,
+    }
+    return merged
+
+
+def summarize_chunked(
+    text: str,
+    pmcid: str,
+    title: str,
+    year: str,
+    source_format: str,
+    client: OpenAI | None = None,
+    model: str | None = None,
+) -> ManuscriptChecklist:
+    """Recovery path: split the manuscript into overlapping chunks, extract a
+    partial checklist from each, and merge them into one validated checklist."""
+    own_client = client is None
+    if own_client:
+        client, model = get_client()
+    assert client is not None and model is not None
+
+    chunks = _chunk_text(text)
+    print(f"           ↳ chunked recovery: {len(chunks)} chunks")
+    partials: list[dict[str, Any]] = []
+    for i, chunk in enumerate(chunks, 1):
+        obj = _extract_one_chunk(client, model, chunk, pmcid)
+        if obj is not None:
+            partials.append(obj)
+        else:
+            print(f"           ↳ chunk {i}/{len(chunks)}: no JSON, skipped")
+        time.sleep(0.3)
+
+    if not partials:
+        raise RuntimeError(f"Chunked recovery failed for {pmcid}: no chunk yielded JSON")
+
+    merged = _merge_partials(partials)
+    return ManuscriptChecklist(
+        pmcid=pmcid, title=title, year=year,
+        source_format=source_format, model=model, **merged,
+    )

@@ -7,6 +7,7 @@
 #   make fresh       clean + download (start over)
 #   make summary     print a compact inventory + regenerate paper_summary.md
 #   make summarize   summarize all manuscripts via Gemma 4 12B -> JSON
+#   make results     export readable results/ (SUMMARY.md, checklist.md, combined JSON)
 #   make summarize-paper PMC=PMC7145790   summarize one paper
 #   make test        run the summarizer unit tests
 #
@@ -64,6 +65,10 @@ summarize-paper: ## Summarize a single paper: make summarize-paper PMC=PMC714579
 
 test: $(VENV) ## Run summarizer unit tests (no live API calls)
 	@$(VENV_PYTHON) -m pytest tests/ -q
+
+results: $(COMBINED_JSON) ## Export readable results/ (SUMMARY.md, checklist.md, combined JSON)
+	@$(VENV_PYTHON) build_results.py
+	@echo "✓ wrote results/ (SUMMARY.md, checklist.md, manuscript_summaries.json)"
 
 summary: $(DOWNLOAD_LOG) ## Print a compact inventory + regenerate paper_summary.md
 	@$(VENV_PYTHON) build_summary.py

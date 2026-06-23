@@ -1,0 +1,4165 @@
+{
+  "n": 116,
+  "model": "unsloth/gemma-4-12B-it-qat-GGUF",
+  "summaries": [
+    {
+      "pmcid": "PMC1567781",
+      "title": "Antecedents and correlates of improved cognitive performance in children exposed in utero to low levels of lead.",
+      "year": "1990",
+      "ehr_used": false,
+      "ehr_evidence": "No EHR used; the study is a prospective cohort study using clinical measurements and blood samples.",
+      "summary": "A prospective study investigating the impact of prenatal lead exposure on cognitive development in children from 24 to 57 months of age, identifying factors that correlate with cognitive recovery.",
+      "key_findings": [
+        "High prenatal lead exposure (10-254 µg/dL) is associated with lower cognitive scores at 2 years.",
+        "Children appear to recover or compensate for early lead insults by 57 months.",
+        "Recovery is associated with lower postnatal blood lead, higher socioeconomic status, higher HOME scores, higher maternal IQ, and female gender.",
+        "Risk of persistent cognitive deficit is higher in children with high prenatal exposure combined with high postnatal exposure or less optimal sociodemographic characteristics."
+      ],
+      "captured_features": [
+        "Cord blood lead levels",
+        "Capillary blood lead levels (6, 12, 18, 24 months)",
+        "Venous blood lead levels (57 months)",
+        "Mental Development Index (MDI) scores",
+        "General Cognitive Index (GCI) scores",
+        "Demographics",
+        "Reproductive history",
+        "HOME scores",
+        "Maternal IQ",
+        "Gender",
+        "Ethnicity",
+        "Maternal age"
+      ],
+      "pathologies_diseases": [
+        "Cognitive deficits",
+        "Lead exposure"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Clinical cohort",
+      "population": "170 children (median age 57.8 months)",
+      "exposure_domain": "Lead exposure (prenatal and postnatal)",
+      "limitations": [
+        "Small sample size (170/249)",
+        "Potential measurement artifacts"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1533142",
+      "title": "Semiparametric modeling of age at achieving developmental milestones after prenatal exposure to methylmercury in the Seychelles child development study.",
+      "year": "1998",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a longitudinal cohort (SCDS) with maternal hair mercury measurements and parent interviews.",
+      "summary": "Evaluation of the effects of prenatal methylmercury exposure on the age at which children achieved developmental milestones (walking and talking) using semiparametric generalized additive models in the Seychelles Child Development Study.",
+      "key_findings": [
+        "Very slight delays (<1 day) in walking were seen at mercury levels 0-7 ppm, but did not persist at higher levels.",
+        "No evidence for any association between prenatal exposure and age at talking."
+      ],
+      "captured_features": [
+        "maternal hair mercury concentration",
+        "age at walking",
+        "age at first words"
+      ],
+      "pathologies_diseases": [
+        "developmental milestones",
+        "walking delay",
+        "speech delay"
+      ],
+      "study_design": "Longitudinal cohort study using semiparametric generalized additive models",
+      "data_source_type": "Cohort study",
+      "population": "779 Seychelloian children",
+      "exposure_domain": "methylmercury",
+      "limitations": [
+        "Difficult to conclude causal/effect relationship at low exposure levels"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1566289",
+      "title": "Air pollution and health effects: A study of medical visits among children in Santiago, Chile.",
+      "year": "1999",
+      "ehr_used": true,
+      "ehr_evidence": "Data on morbidity due to respiratory diseases among children under 15 year of age have been collected from a group of public primary health clinics... the total number of child medical visits and respiratory morbidity diagnoses was collected every day.",
+      "summary": "A time-series analysis examining the association between air pollution (PM10 and ozone) and pediatric respiratory morbidity in Santiago, Chile.",
+      "key_findings": [
+        "Significant association between PM10 and lower respiratory symptoms in children ages 3-15 and children under age 2.",
+        "PM10 is associated with medical visits related to upper respiratory symptoms in the older cohort.",
+        "Ozone is associated with visits related to both lower and upper respiratory symptoms in the older cohort.",
+        "A 50-pg/m3 change in PM10 is associated with a 4-12% increase in lower respiratory symptoms for children under age 2."
+      ],
+      "captured_features": [
+        "daily medical visits",
+        "respiratory morbidity diagnoses",
+        "PM10 concentrations",
+        "ozone levels",
+        "meteorological variables"
+      ],
+      "pathologies_diseases": [
+        "lower respiratory symptoms",
+        "upper respiratory symptoms"
+      ],
+      "study_design": "time-series analysis",
+      "data_source_type": "EHR",
+      "population": "children 3-15 years of age and children under age 2 in Santiago, Chile",
+      "exposure_domain": "air pollution (PM10, ozone)",
+      "limitations": [
+        "missing values or insufficient information in some clinics",
+        "exclusion of clinics based on distance from monitoring stations"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1240737",
+      "title": "Evaluation of urinary porphyrin excretion in neonates born to mothers exposed to airborne hexachlorobenzene.",
+      "year": "2002",
+      "ehr_used": false,
+      "ehr_evidence": "No mention of EHR or linked health data; study conducted in a clinical Porphyria Unit at a tertiary care facility.",
+      "summary": "A cross-sectional study evaluating urinary porphyrin excretion and hexachlorobenzene (HCB) levels in maternal serum and fetal cord blood in neonates born in Flix, Spain, to assess the effects of prenatal HCB exposure.",
+      "key_findings": [
+        "The study aimed to detect adverse effects on porphyrin metabolism caused by prenatal HCB exposure; results are not provided in the truncated text."
+      ],
+      "captured_features": [
+        "maternal serum HCB",
+        "fetal cord blood HCB",
+        "urinary porphyrin excretion"
+      ],
+      "pathologies_diseases": [
+        "Porphyria cutanea tarda (PCT)",
+        "coproporphyrinuria"
+      ],
+      "study_design": "cross-sectional study",
+      "data_source_type": "Clinical study",
+      "population": "neonates born in Flix, Spain",
+      "exposure_domain": "airborne hexachlorobenzene (HCB)",
+      "limitations": [
+        "Manuscript text is truncated before results are reported"
+      ],
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1241649",
+      "title": "Metal composition of ambient PM2.5 influences severity of allergic airways disease in mice.",
+      "year": "2003",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "The study investigates whether the composition of PM2.5 from industrial (Hettstedt) and non-industrial (Zerbst) cities influences the severity of allergic airways disease in a mouse model, following previous epidemiological observations in children.",
+      "key_findings": [
+        "Hypothesized that PM2.5 from Hettstedt would enhance allergic sensitization, airway responsiveness, and lung inflammation compared to PM2.5 from Zerbst."
+      ],
+      "captured_features": [
+        "PM2.5 concentrations",
+        "BAL eosinophils",
+        "Th2 allergic cytokines",
+        "airway hyperresponsiveness to methacholine",
+        "sensitization to ovalbumin (OVA)"
+      ],
+      "pathologies_diseases": [
+        "allergic airways disease",
+        "allergic asthma",
+        "allergies",
+        "eczema",
+        "bronchitis",
+        "sinusitis"
+      ],
+      "study_design": "animal model study",
+      "data_source_type": "animal model",
+      "population": "mice",
+      "exposure_domain": "air pollution (PM2.5)",
+      "limitations": [
+        "animal model study"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC9588432",
+      "title": "Traffic-related air pollution and respiratory symptoms in children living along trunk roads in Chiba Prefecture, Japan.",
+      "year": "2003",
+      "ehr_used": false,
+      "ehr_evidence": "None. Data were collected via school surveys and ambient air monitoring stations.",
+      "summary": "A prospective cohort study investigating the association between traffic-related air pollution (NO2, SPM) and respiratory symptoms (asthma) in children living near trunk roads in Chiba Prefecture, Japan.",
+      "key_findings": [
+        "Prevalence of asthma was higher in girls living < 50m from trunk roads.",
+        "Incidence of asthma in boys living in roadside areas significantly increased (OR = 3.75).",
+        "Prevalence of asthma in girls increased significantly with air pollution concentration."
+      ],
+      "captured_features": [
+        "Distance from trunk roads",
+        "NO2 concentrations",
+        "SPM concentrations",
+        "Traffic density",
+        "Asthma prevalence",
+        "Asthma incidence"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "respiratory symptoms"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "Survey and environmental monitoring",
+      "population": "3,234 children (aged 6-9 years) in Chiba Prefecture, Japan",
+      "exposure_domain": "traffic-related air pollution (NO2, SPM, automobile exhaust)",
+      "limitations": [
+        "Not specified"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1247386",
+      "title": "Blood lead secular trend in a cohort of children in Mexico City (1987-2002).",
+      "year": "2004",
+      "ehr_used": false,
+      "ehr_evidence": "The study used a cohort of children followed through structured interviews and direct blood lead measurements, not EHR or linked health data.",
+      "summary": "A cohort study evaluating the secular trend of blood lead concentrations in children in Mexico City (1987–2002) and the relative contributions of various lead sources.",
+      "key_findings": [
+        "Determined secular trend in blood lead concentrations",
+        "Quantified relative contribution of different lead sources (lower limit)"
+      ],
+      "captured_features": [
+        "Biannual blood lead concentrations",
+        "Air lead concentrations from monitoring stations",
+        "Parental interviews",
+        "Psychometric tests"
+      ],
+      "pathologies_diseases": [
+        "lead exposure"
+      ],
+      "study_design": "Cohort study",
+      "data_source_type": "Primary cohort data",
+      "population": "321 children born between 1987 and 1992 in Mexico City",
+      "exposure_domain": "lead exposure",
+      "limitations": [
+        "Difficulty in specifying and measuring different lead sources (only provides lower limit)"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1247567",
+      "title": "Estimated risk for altered fetal growth resulting from exposure to fine particles during pregnancy: an epidemiologic prospective cohort study in Poland.",
+      "year": "2004",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "A prospective cohort study in Poland estimating exposure to fine particulate matter (PM 2.5) in pregnant women and assessing its effects on birth outcomes such as weight, length, and head circumference.",
+      "key_findings": [
+        "Not provided in the excerpt"
+      ],
+      "captured_features": [
+        "PM 2.5 exposure (indoor and outdoor)",
+        "birth weight",
+        "birth length",
+        "head circumference",
+        "maternal height",
+        "prepregnancy weight",
+        "smoking status",
+        "parity",
+        "gestational age",
+        "birth season"
+      ],
+      "pathologies_diseases": [
+        "low birth weight",
+        "premature births",
+        "intrauterine growth retardation"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "prospective cohort",
+      "population": "362 pregnant women in Poland, 18–35 years of age, nonsmoking, singleton pregnancies",
+      "exposure_domain": "fine particulate matter (PM 2.5)",
+      "limitations": [
+        "Not specified in the provided text"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1247613",
+      "title": "Blood lead changes during pregnancy and postpartum with calcium supplementation.",
+      "year": "2004",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "Longitudinal study on lead mobilization from maternal skeleton during pregnancy and postpartum, evaluating the effect of calcium supplementation in immigrants to Australia.",
+      "key_findings": [
+        "Geometric mean blood lead at first sampling was 2.4 µg/dL.",
+        "Blood lead increased by 10-50% (geometric mean 25%) during the third trimester.",
+        "Increases generally occurred at 6-8 months gestation."
+      ],
+      "captured_features": [
+        "Venous blood samples",
+        "Environmental samples",
+        "6-day duplicate diets",
+        "Blood lead levels",
+        "Hematocrit"
+      ],
+      "pathologies_diseases": [
+        "Lead exposure"
+      ],
+      "study_design": "Longitudinal intervention study",
+      "data_source_type": "Direct clinical sampling",
+      "population": "Ten immigrants to Australia (pregnant/postpartum) and two controls",
+      "exposure_domain": "Lead exposure, Calcium supplementation",
+      "limitations": [
+        "Small sample size"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1310931",
+      "title": "Birth outcomes and prenatal exposure to ozone, carbon monoxide, and particulate matter: results from the Children's Health Study.",
+      "year": "2005",
+      "ehr_used": true,
+      "ehr_evidence": "Birth certificate information for California-born children who participated in the CHS was obtained by computerized linkage of participants with the California Department of Health Services Birth Statistical Master Files and Birth Cohort Files.",
+      "summary": "The study investigated the effects of prenatal exposure to air pollutants (O3, CO, PM10, and NO2) on birth weight and intrauterine growth retardation (IUGR) in term newborns in southern California.",
+      "key_findings": [
+        "Investigated associations between birth weight, low birth weight (LBW), and IUGR and air pollution data in term newborns."
+      ],
+      "captured_features": [
+        "birth weight",
+        "gestational age",
+        "reproductive data",
+        "demographic information",
+        "maternal smoking",
+        "socioeconomic status",
+        "air pollution levels (O3, CO, PM10, NO2)"
+      ],
+      "pathologies_diseases": [
+        "low birth weight",
+        "intrauterine growth retardation"
+      ],
+      "study_design": "population-based cohort study",
+      "data_source_type": "linked health data",
+      "population": "children born in California between 1975 and 1987",
+      "exposure_domain": "air pollution",
+      "limitations": [
+        "inconsistent trimester-specific findings in previous studies"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1459938",
+      "title": "Reduced intellectual development in children with prenatal lead exposure.",
+      "year": "2006",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a prospective cohort study using direct measurements (blood draws, psychometric tests) rather than EHR or linked health data.",
+      "summary": "A prospective cohort study investigating the impact of prenatal and postnatal lead exposure on child intellectual development in Mexico City.",
+      "key_findings": [
+        "Hypothesized that prenatal lead exposure would have a more powerful and lasting impact on child development than postnatal exposure."
+      ],
+      "captured_features": [
+        "maternal BPb",
+        "cord blood BPb",
+        "child BPb",
+        "IQ",
+        "psychometric tests",
+        "anthropometric measurements",
+        "demographic/socioeconomic factors"
+      ],
+      "pathologies_diseases": [
+        "intellectual development",
+        "neurobehavioral development"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study",
+      "population": "321 children born in Mexico City (175 followed after 5 years)",
+      "exposure_domain": "Lead (BPb)",
+      "limitations": [
+        "Collinearity among highly correlated BPb variables",
+        "Variable individual lead exposure reduced BPb tracking"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1940095",
+      "title": "Synergistic effects of traffic-related air pollution and exposure to violence on urban asthma etiology.",
+      "year": "2007",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study uses GIS-based models, a nitrogen dioxide passive network, and violence exposure assessments.",
+      "summary": "The study investigates the synergistic effects of traffic-related air pollution and exposure to violence (ETV) as a chronic stressor on asthma etiology in urban communities.",
+      "key_findings": [
+        "Aims to examine the role of ETV in altering susceptibility to traffic-related air pollution in asthma etiology."
+      ],
+      "captured_features": [
+        "GIS-based models",
+        "nitrogen dioxide passive network",
+        "violence exposure assessment"
+      ],
+      "pathologies_diseases": [
+        "asthma"
+      ],
+      "study_design": "retrospective GIS-based modeling",
+      "data_source_type": "GIS and environmental monitoring",
+      "population": "urban communities",
+      "exposure_domain": "traffic-related air pollution and exposure to violence",
+      "limitations": [
+        "Manuscript text is truncated"
+      ],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC1964903",
+      "title": "Secondary sex ratio among women exposed to diethylstilbestrol in utero.",
+      "year": "2007",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "Study investigating the effect of in utero diethylstilbestrol (DES) exposure on the secondary sex ratio in offspring.",
+      "key_findings": [
+        "Results not provided in the snippet."
+      ],
+      "captured_features": [
+        "in utero DES exposure",
+        "secondary sex ratio"
+      ],
+      "pathologies_diseases": [
+        "secondary sex ratio"
+      ],
+      "study_design": "Retrospective cohort study",
+      "data_source_type": "Not specified",
+      "population": "Daughters of women exposed to DES in utero",
+      "exposure_domain": "Endocrine disruptors",
+      "limitations": [
+        "Incomplete manuscript text",
+        "Dose and timing of exposure may be incompletely characterized"
+      ],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2569091",
+      "title": "Association between traffic-related black carbon exposure and lung function among urban women.",
+      "year": "2008",
+      "ehr_used": false,
+      "ehr_evidence": "The study used a prospective cohort (Maternal–Infant Smoking Study of East Boston) with voluntary participants and specific lung function testing.",
+      "summary": "Prospective cohort study examining the relationship between long-term exposure to traffic-related black carbon (BC) and lung function among women of childbearing age in East Boston.",
+      "key_findings": [
+        "Not reported in the provided text"
+      ],
+      "captured_features": [
+        "geocoded home addresses",
+        "BC levels (land-use regression)",
+        "lung function test results",
+        "sociodemographics",
+        "asthma diagnosis",
+        "tobacco smoke exposure"
+      ],
+      "pathologies_diseases": [
+        "lung function",
+        "asthma",
+        "bronchitis"
+      ],
+      "study_design": "prospective urban community-based cohort study",
+      "data_source_type": "Cohort study",
+      "population": "Women of childbearing age in East Boston, Massachusetts",
+      "exposure_domain": "traffic-related black carbon (BC)",
+      "limitations": [
+        "Results not provided in the snippet"
+      ],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2569100",
+      "title": "Prenatal exposure to perfluorooctanoate (PFOA) and perfluorooctanesulfonate (PFOS) and maternally reported developmental milestones in infancy.",
+      "year": "2008",
+      "ehr_used": true,
+      "ehr_evidence": "linking cohort members to the National Hospital Discharge Register (Copenhagen, Denmark) through use of the unique personal identification number",
+      "summary": "Study examining prenatal exposure to PFOA and PFOS and its association with neurodevelopmental and musculoskeletal milestones in infants using the Danish National Birth Cohort.",
+      "key_findings": [],
+      "captured_features": [
+        "PFOA concentrations",
+        "PFOS concentrations",
+        "developmental milestones",
+        "Apgar scores"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental milestones",
+        "musculoskeletal development"
+      ],
+      "study_design": "Birth cohort study",
+      "data_source_type": "Linked health data",
+      "population": "Pregnant women and infants in Denmark",
+      "exposure_domain": "Perfluorinated compounds (PFOA, PFOS)",
+      "limitations": [
+        "Not specified in provided text"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2569844",
+      "title": "Increased reproductive success of women after prenatal undernutrition.",
+      "year": "2008",
+      "ehr_used": true,
+      "ehr_evidence": "birth records have been kept at the Wilhelmina Gasthuis",
+      "summary": "Study of the Dutch Famine Birth Cohort investigating whether prenatal exposure to famine (1944-1945) affected the reproductive success of offspring.",
+      "key_findings": [
+        "Women exposed to famine in utero were more reproductively successful, having more offspring, more twins, and starting reproduction at a younger age.",
+        "In utero exposure to famine did not affect the reproductive success of males."
+      ],
+      "captured_features": [
+        "number of children",
+        "number of twins",
+        "age at delivery",
+        "childlessness",
+        "birthweight",
+        "daily food rations"
+      ],
+      "pathologies_diseases": [
+        "reproductive success",
+        "prenatal undernutrition"
+      ],
+      "study_design": "Cohort study",
+      "data_source_type": "EHR",
+      "population": "Men and women born in Amsterdam (Wilhelmina Gasthuis) between 1943 and 1947",
+      "exposure_domain": "prenatal nutrition (famine)",
+      "limitations": [
+        "Selection bias (55% participation rate)"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2592282",
+      "title": "Influence of glutathione S-transferase polymorphisms on cognitive functioning effects induced by p,p'-DDT among preschoolers.",
+      "year": "2008",
+      "ehr_used": false,
+      "ehr_evidence": "Data collected via questionnaires and field work in a cohort study.",
+      "summary": "Investigation of the relationship between cord serum levels of p,p´-DDT/p,p´-DDE and GST gene polymorphisms as effect modifiers on infant neurodevelopment at 4 years of age.",
+      "key_findings": [
+        "Aim: investigate relationship between cord serum levels of p,p´-DDT/p,p´-DDE and GST gene polymorphisms as effect modifiers on infant neurodevelopment at 4 years of age."
+      ],
+      "captured_features": [
+        "cord serum levels of p,p´-DDT/p,p´-DDE",
+        "GST gene polymorphisms (GSTP1, GSTM1, GSTT1)",
+        "neurodevelopmental outcomes at 4 years"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental effects",
+        "cognitive skills",
+        "neurobehavioral dysfunction"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "cohort study",
+      "population": "470 children in Menorca, Spain",
+      "exposure_domain": "organochlorines (p,p´-DDT/p,p´-DDE)",
+      "limitations": [
+        "Manuscript text is truncated; results and limitations are not provided in the snippet."
+      ],
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2613139",
+      "title": "Traffic-related air pollution and respiratory symptoms among asthmatic children, resident in Mexico City: the EVA cohort study.",
+      "year": "2008",
+      "ehr_used": false,
+      "ehr_evidence": "daily records of symptoms and child's medication",
+      "summary": "Prospective longitudinal study (EVA cohort) evaluating the impact of traffic-related air pollution (PM2.5, NO2, O3) on respiratory symptoms in asthmatic and healthy children in Mexico City.",
+      "key_findings": [
+        "PM2.5 increase (17.4 μg/m3) associated with 8.8% increase in wheezing",
+        "NO2 increase (34 ppb) associated with 9.1% increase in wheezing",
+        "O3 increase (48 ppb) associated with 10% increase in wheezing",
+        "Diesel-fueled motor vehicles associated with wheezing and bronchodilator use"
+      ],
+      "captured_features": [
+        "coughing",
+        "wheezing",
+        "breathing difficulty",
+        "medication use",
+        "PM2.5",
+        "NO2",
+        "O3",
+        "diesel-fueled motor vehicles"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "respiratory symptoms"
+      ],
+      "study_design": "prospective longitudinal panel study",
+      "data_source_type": "Prospective cohort study",
+      "population": "147 asthmatic and 50 healthy children in Mexico City",
+      "exposure_domain": "traffic-related air pollution",
+      "limitations": [
+        "Not specified in text"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2627859",
+      "title": "Windblown lead carbonate as the main source of lead in blood of children from a seaside community: an example of local birds as \"canaries in the mine\".",
+      "year": "2009",
+      "ehr_used": false,
+      "ehr_evidence": "The study used a voluntary blood Pb (PbB) survey of residents and environmental measurements, not electronic health records.",
+      "summary": "An isotopic investigation of blood in children and adults in Esperance, Western Australia, to identify the source of lead poisoning linked to windblown Pb carbonate from the Magellan mine.",
+      "key_findings": [
+        "Isotopic investigation of blood in children and adults to source apportion lead from the Magellan mine."
+      ],
+      "captured_features": [
+        "Blood lead (PbB) levels",
+        "Pb isotope signatures",
+        "rainwater Pb and Ni levels",
+        "soil and sediment Pb levels"
+      ],
+      "pathologies_diseases": [
+        "lead poisoning"
+      ],
+      "study_design": "Retrospective environmental and isotopic investigation",
+      "data_source_type": "Community survey / Environmental measurements",
+      "population": "Children and adults in Esperance, Western Australia",
+      "exposure_domain": "Lead (Pb) from mining and shipping",
+      "limitations": [
+        "Voluntary participation in blood survey",
+        "Environmental investigations subject to litigation"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2661071",
+      "title": "Regional and social differences concerning overweight, participation in health check-ups and vaccination. Analysis of data from a whole birth cohort of 6-year old children in a prosperous German city.",
+      "year": "2009",
+      "ehr_used": true,
+      "ehr_evidence": "data of the medical check-up prior to school enrolment",
+      "summary": "Analysis of social and regional differences in overweight, health check-ups, and vaccinations among 6-year-old children in Munich, Germany.",
+      "key_findings": [
+        "Large variation between school districts concerning overweight, health check-ups, and vaccinations",
+        "Mother tongue of parents is the most pronounced association with overweight and check-ups",
+        "Children from non-German-speaking families tend to be more overweight and have fewer check-ups",
+        "Regional level influences are small when individual level social variables are controlled"
+      ],
+      "captured_features": [
+        "overweight",
+        "participation in health check-ups",
+        "vaccinations",
+        "children's sex",
+        "mother tongue of parents",
+        "Kindergarten visit",
+        "percentage of single-parent households",
+        "percentage of households with low educational level"
+      ],
+      "pathologies_diseases": [
+        "overweight",
+        "vaccinations",
+        "health check-ups"
+      ],
+      "study_design": "cross-sectional analysis of a birth cohort",
+      "data_source_type": "birth cohort / medical check-up data",
+      "population": "9,353 children (6-year-olds) in Munich, Germany",
+      "exposure_domain": "social and regional variables",
+      "limitations": [
+        "limited number and scope of variables",
+        "lack of information on community and health care services",
+        "lack of information on social networks",
+        "lack of information on traffic noise and air pollution"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2702396",
+      "title": "Thyroid hormone levels of pregnant inuit women and their infants exposed to environmental contaminants.",
+      "year": "2009",
+      "ehr_used": false,
+      "ehr_evidence": "No mention of EHR or linked health data; study involves direct participation of Nunavik residents.",
+      "summary": "Study investigating thyroid hormone levels in pregnant Inuit women and their infants exposed to environmental contaminants like PCBs and HCB.",
+      "key_findings": [
+        "Not provided in the truncated text snippet."
+      ],
+      "captured_features": [
+        "Thyroid hormone levels",
+        "environmental contaminant levels"
+      ],
+      "pathologies_diseases": [
+        "thyroid hormone levels",
+        "neurodevelopmental deficits"
+      ],
+      "study_design": "Cohort study",
+      "data_source_type": "Primary research",
+      "population": "Pregnant Inuit women and their infants",
+      "exposure_domain": "Environmental contaminants (PCBs, HCB)",
+      "limitations": [
+        "Text is truncated before methodology and results are fully described."
+      ],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2717127",
+      "title": "Prenatal exposure to cigarette smoke induces diet- and sex-dependent dyslipidemia and weight gain in adult murine offspring.",
+      "year": "2009",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "The study investigates how prenatal exposure to cigarette smoke affects the development of dyslipidemia and weight gain in adult mice, highlighting the roles of diet and sex.",
+      "key_findings": [
+        "Prenatal cigarette smoke exposure induces diet- and sex-dependent dyslipidemia and weight gain in adult murine offspring."
+      ],
+      "captured_features": [
+        "Weight gain",
+        "dyslipidemia",
+        "lipid oxidation",
+        "sex-dependent responses"
+      ],
+      "pathologies_diseases": [
+        "dyslipidemia",
+        "weight gain"
+      ],
+      "study_design": "Experimental murine study",
+      "data_source_type": "Animal model",
+      "population": "Murine offspring",
+      "exposure_domain": "Prenatal cigarette smoke exposure",
+      "limitations": [
+        "Animal model"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2717145",
+      "title": "Childhood lead poisoning: conservative estimates of the social and economic benefits of lead hazard control.",
+      "year": "2009",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses NHANES (a population survey) and U.S. Census Bureau data, not EHR.",
+      "summary": "An economic analysis of the costs and benefits of household lead hazard control, focusing on children ≤ 6 years of age in the United States.",
+      "key_findings": [
+        "24.7% of children ≤ 6 years in the US (2006) have blood lead levels (BLLs) between 2 and 10 μg/dL.",
+        "Lead exposure causes significant neurologic damage even at low levels."
+      ],
+      "captured_features": [
+        "Blood lead levels (BLLs)",
+        "age",
+        "sex",
+        "ethnicity",
+        "socioeconomic status"
+      ],
+      "pathologies_diseases": [
+        "lead poisoning",
+        "neurologic damage",
+        "cognitive impairment",
+        "behavioral impairment"
+      ],
+      "study_design": "Economic cost-effectiveness analysis",
+      "data_source_type": "Population survey and Census data",
+      "population": "Children ≤ 6 years of age in the United States",
+      "exposure_domain": "Lead (housing/paint)",
+      "limitations": [
+        "Limited sample sizes in some data",
+        "Use of upper and lower bounds due to lack of single accurate estimates"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2920902",
+      "title": "Childhood incident asthma and traffic-related air pollution at home and school.",
+      "year": "2010",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a prospective cohort (Southern California Children’s Health Study) and does not mention the use of EHR or linked health data.",
+      "summary": "A prospective longitudinal study evaluating the impact of traffic-related air pollution at home and school on the development of new-onset asthma in children.",
+      "key_findings": [
+        "Study designed to assess exposure before the development of asthma",
+        "Assessment of joint effects of traffic-related pollution at school and home"
+      ],
+      "captured_features": [
+        "NO2",
+        "O3",
+        "PM10",
+        "PM2.5",
+        "residential traffic-related exposure",
+        "school traffic-related exposure",
+        "physician-diagnosed asthma"
+      ],
+      "pathologies_diseases": [
+        "asthma"
+      ],
+      "study_design": "prospective, longitudinal cohort study",
+      "data_source_type": "Cohort study",
+      "population": "school children recruited in kindergarten and first grade",
+      "exposure_domain": "air pollution",
+      "limitations": [
+        "None specified in the provided text"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2957934",
+      "title": "Temporal and spatial patterns of ambient endotoxin concentrations in Fresno, California.",
+      "year": "2010",
+      "ehr_used": false,
+      "ehr_evidence": "The study used ambient monitoring sites, schools, and residences for air sample collection rather than electronic health records.",
+      "summary": "The study characterized the temporal and spatial variability of ambient endotoxin concentrations in Fresno/Clovis, California, to identify correlates and predictors in a cohort of children with asthma.",
+      "key_findings": [
+        "Endotoxin concentration patterns were primarily determined by meteorologic factors, specifically air stagnation.",
+        "Highest concentrations were found in areas immediately downwind from agricultural/pasture land.",
+        "Coarse particulate matter (PMc) was the only pollutant correlated with endotoxin.",
+        "Endotoxin was the most spatially variable pollutant measured."
+      ],
+      "captured_features": [
+        "Daily ambient endotoxin concentrations",
+        "Air pollutants (PMf, EC, PMc)",
+        "Meteorologic factors",
+        "Spatial and temporal variability"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "respiratory symptoms",
+        "atopy"
+      ],
+      "study_design": "Observational environmental monitoring study",
+      "data_source_type": "Environmental monitoring data",
+      "population": "Children with asthma in Fresno/Clovis, California (FACES cohort)",
+      "exposure_domain": "Ambient endotoxin, air pollutants",
+      "limitations": [
+        "Analysis restricted to dry months (May–October)",
+        "Short time periods for some monitoring sites"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC2994234",
+      "title": "Determinants of age at menarche in the UK: analyses from the Breakthrough Generations Study.",
+      "year": "2010",
+      "ehr_used": false,
+      "ehr_evidence": "Data were collected retrospectively by questionnaire; breastfeeding and maternal smoking variables were obtained by record linkage to the mother’s questionnaire.",
+      "summary": "A study investigating the determinants of age at menarche in a large UK cohort to understand its role as a risk factor for breast cancer.",
+      "key_findings": [
+        "Early menarche associated with low birthweight",
+        "singleton status",
+        "prenatal pre-eclampsia",
+        "maternal smoking",
+        "lack of breastfeeding",
+        "non-white ethnicity",
+        "heavy/tall stature",
+        "low childhood exercise",
+        "maternal age at birth"
+      ],
+      "captured_features": [
+        "age at menarche",
+        "birthweight",
+        "singleton status",
+        "prenatal pre-eclampsia",
+        "maternal smoking",
+        "breastfeeding",
+        "ethnicity",
+        "weight",
+        "height",
+        "childhood exercise",
+        "number of siblings",
+        "birth order",
+        "maternal age at birth"
+      ],
+      "pathologies_diseases": [
+        "breast cancer",
+        "menarche"
+      ],
+      "study_design": "Retrospective cohort study",
+      "data_source_type": "Questionnaire",
+      "population": "81,606 women aged 16–98 in the UK",
+      "exposure_domain": "prenatal, postnatal, maternal, and lifestyle factors",
+      "limitations": [
+        "restricted to women whose mothers were also study members for certain variables",
+        "maternal smoking only available for first-born"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3001700",
+      "title": "Impact of air pollution on pulmonary function and respiratory symptoms in children. Longitudinal repeated-measures study.",
+      "year": "2010",
+      "ehr_used": false,
+      "ehr_evidence": "The study recruited a cohort of 464 children and collected data directly via spirometry and surveys; no electronic health records or linked health databases were mentioned.",
+      "summary": "A longitudinal repeated-measures study investigating the impact of air pollution on pulmonary function and respiratory symptoms in school-age children in Salamanca, Mexico.",
+      "key_findings": [
+        "Students in the school closer to stationary air pollution sources had higher frequencies of respiratory symptoms and lung function abnormalities.",
+        "Obstructive lung function patterns were significantly more frequent in students with greater exposure.",
+        "PM10 levels were the most consistent factor negatively related to FVC, FEV1, and PEF."
+      ],
+      "captured_features": [
+        "Spirometry (FVC, FEV1, PEF, FEV1/FVC)",
+        "Respiratory symptoms",
+        "Air pollutants (O3, SO2, NO, NO2, NOx, PM10)"
+      ],
+      "pathologies_diseases": [
+        "pulmonary function alterations",
+        "respiratory symptoms",
+        "obstructive lung function"
+      ],
+      "study_design": "Longitudinal repeated-measures cohort study",
+      "data_source_type": "Primary cohort study",
+      "population": "464 children (6-14 years old) in Salamanca, Mexico",
+      "exposure_domain": "Air pollution (O3, SO2, NO, NO2, NOx, PM10)",
+      "limitations": [
+        "Study limited to two specific schools",
+        "Potential for seasonal confounding"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3072933",
+      "title": "Low-level environmental lead exposure in childhood and adult intellectual function: a follow-up study.",
+      "year": "2011",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a follow-up of a prospective cohort study; data was collected via questionnaires, blood samples, and direct neuropsychological testing.",
+      "summary": "A follow-up study of the Boston prospective cohort to evaluate the impact of childhood lead exposure on adult IQ.",
+      "key_findings": [
+        "Childhood blood-lead concentration (mean of ages 4 and 10 years) had the strongest relationship with Full-Scale IQ.",
+        "Significant associations were found for lead concentrations at 6 months, 4 years, and 10 years."
+      ],
+      "captured_features": [
+        "Blood-lead concentrations (umbilical cord, 6, 12, 18, 24, 57 months, 10 years)",
+        "Full-Scale IQ (WASI)",
+        "Maternal IQ",
+        "Demographic factors",
+        "Socioeconomic status"
+      ],
+      "pathologies_diseases": [
+        "neurocognitive impairment",
+        "intellectual function"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study",
+      "population": "43 adults in the Boston area who were enrolled as newborns in a prospective cohort study",
+      "exposure_domain": "lead exposure",
+      "limitations": [
+        "Small sample size",
+        "Potential confounding effects of maternal IQ"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3073197",
+      "title": "Molecular Epidemiology, prenatal exposure and prevention of cancer.",
+      "year": "2011",
+      "ehr_used": false,
+      "ehr_evidence": "The study used personal air monitors and biological samples (blood, urine) rather than EHR.",
+      "summary": "Molecular epidemiology of prenatal exposure to environmental carcinogens, specifically PAHs, and their role in fetal DNA damage and cancer risk.",
+      "key_findings": [
+        "Cord and maternal white blood cells had equivalent levels of PAH-DNA adducts despite lower fetal dose.",
+        "High prenatal PAH exposure associated with higher frequency of stable chromosomal aberrations in cord blood."
+      ],
+      "captured_features": [
+        "PAH-DNA adducts",
+        "urinary PAH metabolites",
+        "chromosomal aberrations",
+        "DNA methylation"
+      ],
+      "pathologies_diseases": [
+        "cancer",
+        "immune disorders",
+        "obesity"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study",
+      "population": "Pregnant mothers and newborns in New York City",
+      "exposure_domain": "Air pollutants (PAHs), tobacco smoke, pesticides, solvents, radiation, endocrine disruptors",
+      "limitations": [
+        "Limited extent of human data for some endocrine disruptors"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3080943",
+      "title": "Prenatal exposure to perfluorinated chemicals and behavioral or coordination problems at age 7 years.",
+      "year": "2011",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses the Danish National Birth Cohort (DNBC), which involves maternal plasma analysis and validated questionnaires (SDQ), rather than EHR or linked health data.",
+      "summary": "A longitudinal study investigating whether prenatal exposure to perfluorinated compounds (PFOA and PFOS) correlates with neurodevelopmental anomalies and behavioral/coordination problems in children.",
+      "key_findings": [
+        "Prenatal exposure to PFCs was associated with reduced fetal growth.",
+        "No significant association was found between in utero exposure to PFOA and PFOS and neurologic development at 6 and 18 months of age."
+      ],
+      "captured_features": [
+        "Maternal plasma levels of PFOA and PFOS",
+        "Fetal growth",
+        "Developmental milestones at 6 and 18 months",
+        "Behavioral and coordination problems at age 7"
+      ],
+      "pathologies_diseases": [
+        "Attention deficit/hyperactivity disorder (ADHD)",
+        "Developmental coordination disorders (DCDs)",
+        "Reduced fetal growth"
+      ],
+      "study_design": "Longitudinal cohort study",
+      "data_source_type": "Birth Cohort",
+      "population": "Children in the Danish National Birth Cohort",
+      "exposure_domain": "Perfluorinated compounds (PFOA, PFOS)",
+      "limitations": [
+        "Truncated manuscript text",
+        "Reliance on questionnaires for behavioral assessment"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3138772",
+      "title": "Exposure to non-steroidal anti-inflammatory drugs during pregnancy and the risk of selected birth defects: a prospective cohort study.",
+      "year": "2011",
+      "ehr_used": true,
+      "ehr_evidence": "Information on pregnancy outcome was obtained from the Medical Birth Registry of Norway.",
+      "summary": "A prospective cohort study evaluating the risk of selected birth defects associated with maternal exposure to prescribed and over-the-counter non-steroidal anti-inflammatory drugs (NSAIDs) during the first 12 weeks of pregnancy.",
+      "key_findings": [
+        "No associations were observed between overall exposure to NSAIDs during pregnancy and the selected birth defects (adjusted odds ratio 0.7, 95% confidence interval 0.4–1.1).",
+        "No associations were found between maternal use of specific types of NSAIDs and selected birth defects, although small numbers showed increased risk for septal defects and multiple NSAIDs."
+      ],
+      "captured_features": [
+        "NSAID exposure (prescribed and OTC)",
+        "gestational week of exposure",
+        "pregnancy outcomes (birth defects)"
+      ],
+      "pathologies_diseases": [
+        "birth defects",
+        "cardiac septal defects",
+        "orofacial clefts",
+        "midline defects",
+        "diaphragm defects"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study and National Registry",
+      "population": "69,929 women in Norway (1999-2006)",
+      "exposure_domain": "Pharmaceuticals (NSAIDs)",
+      "limitations": [
+        "Small numbers of NSAID-exposed infants for individual birth defect categories",
+        "Self-administered questionnaire for exposure data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3341090",
+      "title": "Poor maternal nutrition programmes a pro-atherosclerotic phenotype in ApoE-/- mice.",
+      "year": "2012",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study uses an experimental animal model (ApoE− / − mice).",
+      "summary": "Study investigating how maternal low-protein (LP) diet during pregnancy and lactation affects the development of atherosclerosis in ApoE− / − mouse offspring.",
+      "key_findings": [
+        "LP offspring showed significantly greater plaque area (P < 0.05)",
+        "Increased cholesterol clefts",
+        "Higher indices of DNA damage",
+        "Increased expression of HMG-CoA reductase and LDL receptor in the liver",
+        "Higher LDL-cholesterol levels",
+        "Trend towards elevated insulin"
+      ],
+      "captured_features": [
+        "Plaque area",
+        "Cholesterol clefts",
+        "DNA damage indices",
+        "HMG-CoA reductase expression",
+        "LDL receptor expression",
+        "LDL-cholesterol levels",
+        "Insulin levels"
+      ],
+      "pathologies_diseases": [
+        "atherosclerosis",
+        "cardiovascular disease",
+        "dyslipidaemia",
+        "high blood pressure",
+        "cardiac dysfunction"
+      ],
+      "study_design": "Experimental animal study",
+      "data_source_type": "Animal model",
+      "population": "Male offspring of ApoE− / − mice",
+      "exposure_domain": "Maternal nutrition (low-protein diet)",
+      "limitations": [
+        "Animal model",
+        "Does not use human EHR data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3364588",
+      "title": "Maternal Distress during Pregnancy and Offspring Childhood Overweight.",
+      "year": "2012",
+      "ehr_used": false,
+      "ehr_evidence": "The study used data from the Danish National Birth Cohort (DNBC) collected via computerised telephone interviews and web-based/posted questionnaires.",
+      "summary": "A prospective cohort study investigating whether maternal distress (anxiety, depression, and stress) during pregnancy is associated with childhood overweight at age 7.",
+      "key_findings": [
+        "Prenatal exposure to maternal distress during pregnancy was not associated with childhood overweight at 7 years of age (adjusted OR 1.06).",
+        "A small tendency of overweight was seen in boys (OR 1.15) but not in girls (OR 0.98)."
+      ],
+      "captured_features": [
+        "Maternal anxiety, depression, stress",
+        "Child height and weight at age 7",
+        "Child sex",
+        "Gestational age"
+      ],
+      "pathologies_diseases": [
+        "childhood overweight"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "37,764 women and child dyads from the Danish National Birth Cohort",
+      "exposure_domain": "maternal psychological distress",
+      "limitations": [
+        "Self-reported maternal distress",
+        "Potential for recall bias in questionnaires"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3405416",
+      "title": "Childhood brain tumours and use of mobile phones: comparison of a case-control study with incidence data.",
+      "year": "2012",
+      "ehr_used": true,
+      "ehr_evidence": "incidence data, Swedish Cancer registry",
+      "summary": "Commentary comparing the CEFALO case-control study on mobile phone use and brain tumour risk in children/adolescents with observed incidence trends.",
+      "key_findings": [
+        "Stable incidence trends for brain tumours despite increased mobile phone use",
+        "Absence of exposure-response relationship argues against causal association"
+      ],
+      "captured_features": [
+        "mobile phone use",
+        "cordless phone use",
+        "brain tumour incidence"
+      ],
+      "pathologies_diseases": [
+        "brain tumours"
+      ],
+      "study_design": "Commentary comparing case-control study with incidence data",
+      "data_source_type": "Linked health data (registry) and Case-control study",
+      "population": "children and adolescents",
+      "exposure_domain": "mobile phone use",
+      "limitations": [
+        "recall bias",
+        "missing survey answers",
+        "case-control study limitations"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3499875",
+      "title": "Pilot study of pesticide knowledge, attitudes, and practices among pregnant women in northern Thailand.",
+      "year": "2012",
+      "ehr_used": false,
+      "ehr_evidence": "The study used surveys administered to 76 pregnant women.",
+      "summary": "A pilot study evaluating pesticide knowledge, attitudes, and practices among pregnant women in northern Thailand to identify factors associated with prenatal pesticide exposure.",
+      "key_findings": [
+        "Lower knowledge scores and earlier pregnancy trimesters were marginally associated with unsafe home pesticide practices.",
+        "Women who worked in agriculture, applied pesticides before pregnancy, or had a previous child were significantly more likely to engage in unsafe home pesticide behaviors."
+      ],
+      "captured_features": [
+        "pesticide knowledge scores",
+        "pregnancy trimester",
+        "pesticide use behavior",
+        "agricultural work history",
+        "previous child history"
+      ],
+      "pathologies_diseases": [
+        "prenatal pesticide exposure"
+      ],
+      "study_design": "Cross-sectional pilot study",
+      "data_source_type": "Survey",
+      "population": "76 pregnant women in northern Thailand",
+      "exposure_domain": "pesticides",
+      "limitations": [
+        "Pilot study",
+        "Small sample size",
+        "Self-reported survey data"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3508998",
+      "title": "Assessment of prenatal exposure to arsenic in Tenerife Island.",
+      "year": "2012",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "A transversal descriptive study evaluating prenatal arsenic exposure via meconium analysis in 96 mother-child pairs in Tenerife, Spain, and its association with maternal diet and neonatal outcomes.",
+      "key_findings": [
+        "Prenatal arsenic exposure was associated with low egg intake (OR 0.56) and frequent vegetable intake (OR 1.31).",
+        "No significant neonatal effects were associated with the detected arsenic levels.",
+        "Arsenic concentrations were too low to be considered a major public health concern in the study area."
+      ],
+      "captured_features": [
+        "Meconium arsenic levels",
+        "Maternal dietary habits (eggs, vegetables, processed meat)",
+        "Sociodemographic data",
+        "Neonatal outcomes"
+      ],
+      "pathologies_diseases": [
+        "neonatal outcomes"
+      ],
+      "study_design": "transversal descriptive study",
+      "data_source_type": "Questionnaire and biomarkers",
+      "population": "96 mother-child pairs in Tenerife, Spain",
+      "exposure_domain": "Arsenic",
+      "limitations": [
+        "Small sample size",
+        "Transversal design"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3570299",
+      "title": "Maternal and offspring fasting glucose and type 2 diabetes-associated genetic variants and cognitive function at age 8: a Mendelian randomization study in the Avon Longitudinal Study of Parents and Children.",
+      "year": "2012",
+      "ehr_used": false,
+      "ehr_evidence": "Avon Longitudinal Study of Parents and Children (ALSPAC) cohort",
+      "summary": "A Mendelian randomization study investigating whether maternal and offspring genetic risk scores for fasting glucose and type 2 diabetes (T2D) are causally linked to child IQ scores at age 8.",
+      "key_findings": [
+        "No association between FGGRS and child IQ.",
+        "Maternal T2DGRS was positively associated with offspring IQ.",
+        "Unlikely causal link between in utero glucose exposure and childhood IQ."
+      ],
+      "captured_features": [
+        "FGGRS (fasting glucose genetic risk score)",
+        "T2DGRS (T2D genetic risk score)",
+        "fasting glucose plasma measurements",
+        "IQ scores"
+      ],
+      "pathologies_diseases": [
+        "type 2 diabetes",
+        "gestational diabetes"
+      ],
+      "study_design": "Mendelian randomization",
+      "data_source_type": "Birth cohort",
+      "population": "Children in the ALSPAC cohort",
+      "exposure_domain": "Metabolic/Nutritional (glucose levels)",
+      "limitations": [
+        "Small subset of children had plasma measurements",
+        "Potential lack of statistical power"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3569679",
+      "title": "Prenatal p,p´-DDE exposure and neurodevelopment among children 3.5-5 years of age.",
+      "year": "2013",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a prospective perinatal cohort study using blood samples and questionnaires, not EHR data.",
+      "summary": "A prospective perinatal cohort study in Morelos, Mexico, investigating the association between prenatal DDE exposure and neurodevelopmental outcomes in children aged 3.5–5 years.",
+      "key_findings": [
+        "The study provides additional analyses of DDE and neurodevelopmental outcomes (based on McCarthy’s Scales) at 42, 48, 54, and 60 months of age."
+      ],
+      "captured_features": [
+        "Maternal DDE serum levels",
+        "McCarthy’s Scales of Children’s Abilities scores",
+        "sociodemographic characteristics",
+        "dietary information",
+        "reproductive history"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental outcomes",
+        "psychomotor development",
+        "attention deficit hyperactivity disorders"
+      ],
+      "study_design": "prospective perinatal cohort study",
+      "data_source_type": "Cohort study",
+      "population": "Children 3.5–5 years of age in Morelos, Mexico",
+      "exposure_domain": "pesticides (DDE)",
+      "limitations": [
+        "The provided text is truncated before the final results are fully detailed."
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3764234",
+      "title": "Environmental factors predicting blood lead levels in pregnant women in the UK: the ALSPAC study.",
+      "year": "2013",
+      "ehr_used": false,
+      "ehr_evidence": "Data were collected via self-completion postal questionnaires and whole blood samples from the ALSPAC cohort.",
+      "summary": "Study identifying factors contributing to maternal blood lead levels (BLL) in a UK birth cohort (ALSPAC) to understand potential fetal exposure.",
+      "key_findings": [
+        "Mean BLL was 3.67 mg/dl.",
+        "Higher educational qualification was an independent predictor of higher BLL.",
+        "Cigarette smoking, alcohol, coffee drinking, and coal fire heating were associated with higher BLL.",
+        "Iron and calcium intake may have protective effects."
+      ],
+      "captured_features": [
+        "Blood lead levels",
+        "educational qualification",
+        "cigarette smoking",
+        "alcohol consumption",
+        "coffee consumption",
+        "home heating type",
+        "iron intake",
+        "calcium intake"
+      ],
+      "pathologies_diseases": [
+        "lead exposure"
+      ],
+      "study_design": "Prospective birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "Pregnant women in the Avon area, UK",
+      "exposure_domain": "Lead exposure",
+      "limitations": [
+        "Self-completion postal questionnaires"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3849930",
+      "title": "Exposure to the Chinese famine in early life and the risk of anaemia in adulthood.",
+      "year": "2013",
+      "ehr_used": false,
+      "ehr_evidence": "Data from the 2002 Chinese National Nutrition and Health Survey.",
+      "summary": "The study investigates the association between early life exposure to the Chinese famine (1959–1961) and the risk of anaemia in adulthood.",
+      "key_findings": [
+        "Fetal exposure to the Chinese famine was associated with a 37% increased risk of anaemia in adulthood (RR 1.37).",
+        "The association was stronger among men, overweight/obese individuals, and those with lower educational levels."
+      ],
+      "captured_features": [
+        "Hb concentration",
+        "famine exposure timing (fetal, early, mid, late childhood)",
+        "income",
+        "education",
+        "place of residence",
+        "smoking",
+        "alcohol drinking",
+        "job",
+        "hypertension",
+        "BMI"
+      ],
+      "pathologies_diseases": [
+        "anaemia",
+        "hypertension"
+      ],
+      "study_design": "Retrospective survey analysis",
+      "data_source_type": "National Survey",
+      "population": "2007 adults born between 1954 and 1964 in Jiangsu province, China",
+      "exposure_domain": "Nutrition / Famine",
+      "limitations": [
+        "Survey-based data",
+        "Retrospective exposure assessment"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4158856",
+      "title": "Deep phenotyping of the unselected COPSAC2010 birth cohort study.",
+      "year": "2013",
+      "ehr_used": true,
+      "ehr_evidence": "The study is a prospective birth cohort study (COPSAC 2010) where data is collected during clinic visits, not from an existing EHR database. The text describes a prospective clinical study of pregnancy cohorts with longitudinal clinical follow-up and objective assessments, but does not mention the use of Electronic Health Records (EHR). The study is a prospective birth cohort (COPSAC 2010) with its own clinical research unit and biobank. All information was obtained by personal interview at clin",
+      "summary": "Longitudinal study of the COPSAC 2010 birth cohort to explore interactions between perinatal exposures (microbiome, maternal nutrition) and genetic predisposition in children's immune modulation and chronic inflammatory diseases like asthma.",
+      "key_findings": [
+        "High adherence rate (95-98%)",
+        "Cohort includes 700 children and 738 mothers",
+        "Provides longitudinal clinical follow-up with specific endpoints and biobanking.",
+        "Aims to replicate and explore findings from the at-risk COPSAC 2000 cohort in an unselected population.",
+        "Hypothesizes that chronic inflammatory disorders are programmed in perinatal life through complex gene-environment interactions.",
+        "The study aims to establish causal relationships between perinatal factors and chronic inflammatory disorders like asthma.",
+        "Primary endpoint is the development of 'recurrent wheeze', to be analyzed when all participating children reach 3 years of age.",
+        "Primary end-points are the development of recurrent wheeze and symptom burden/duration of asthmatic episodes, to be analyzed at 3 years of age.",
+        "The provided text describes the study methodology and data collection rather than the final results.",
+        "No results provided in the snippet.",
+        "High adherence (98% at 1 year, 95% at 2 years)",
+        "Reduction in mothers' smoking and alcohol intake compared to COPSAC 2000",
+        "Higher education levels in COPSAC 2010",
+        "...",
+        "Baseline characteristics of 700 newborns and 738 mothers were recorded, including socio-economic status and maternal atopic history.",
+        "High adherence rates (80% follow-up after 7 years in COPSAC 2000; 98% at age 1 year and 95% at age 2 years in COPSAC 2010)",
+        "Comparison with family practitioner records showed no missing information on atopic disorders and infections",
+        "Altruism was the primary motivation for parent participation (65%)",
+        "Parents find invasive clinical research on infants ethically sound when motivated by altruism and access to specialists",
+        "Potential to identify environmental factors promoting or protecting against future disease",
+        "Promise to improve understanding of processes causing disease in individual patients"
+      ],
+      "captured_features": [
+        "Maternal nutrition",
+        "Human microbiome",
+        "Genetic predisposition",
+        "Clinical phenotyping",
+        "Biological samples",
+        "Vitamin D and fish oil supplement intake",
+        "Azithromycin use",
+        "longitudinal clinical follow-up",
+        "deep phenotyping",
+        "genotyping",
+        "objective assessments of the exposome",
+        "microbiome",
+        "maternal vitamin D and fish oil intake",
+        "maternal diet (vitamin D, n-3 LCPUFA)",
+        "neonatal airway colonization",
+        "recurrent wheeze",
+        "Medical history",
+        "familial history",
+        "environmental history",
+        "socio-economic history",
+        "serum vitamin D levels",
+        "recurrent wheeze episodes",
+        "Serum vitamin D levels",
+        "Whole-blood PUFA levels",
+        "Recurrent wheeze episodes",
+        "Symptom burden",
+        "Duration of asthmatic episode",
+        "Capsule counts",
+        "Daily diary cards (lung symptoms, skin symptoms, infections)",
+        "Physical examinations",
+        "CRP measurement",
+        "Tympanometric evaluation",
+        "Accelerometer data",
+        "Blood pressure",
+        "Lung function",
+        "Airway resistance",
+        "Spirometry",
+        "FeNO",
+        "Anthropometrics",
+        "height",
+        "weight",
+        "head circumference",
+        "abdominal circumference",
+        "body composition (DXA)",
+        "motor development",
+        "language development",
+        "cognitive development",
+        "cytokines",
+        "chemokines",
+        "flow cytometry",
+        "skin prick tests",
+        "specific IgE",
+        "genomics",
+        "exhaled VOCs",
+        "urine biomarkers",
+        "Exhaled VOCs",
+        "Urine biomarkers",
+        "Peripheral blood",
+        "Social status",
+        "Home environment",
+        "Medication adherence",
+        "Hair nicotine/cotinine",
+        "Dust samples",
+        "Microbiome",
+        "Maternal diet",
+        "Breast milk fatty acids",
+        "maternal smoking",
+        "alcohol intake",
+        "education level",
+        "asthma",
+        "eczema",
+        "hayfever",
+        "maternal diet",
+        "...",
+        "Parity",
+        "older children in household",
+        "smoking during pregnancy",
+        "alcohol use",
+        "antibiotics",
+        "furred pets",
+        "breastfeeding duration",
+        "household income",
+        "education",
+        "atopic disposition",
+        "atopic disorders",
+        "infections",
+        "trauma",
+        "socioeconomic factors",
+        "employment",
+        "income level",
+        "mode of delivery",
+        "living with pets",
+        "smoking",
+        "Blood sampling",
+        "Mucosal lining fluid sampling",
+        "Hypopharyngeal aspiration",
+        "VOC sampling in exhaled air",
+        "Genotyping",
+        "Microbiome sequencing",
+        "exposure assessment",
+        "sequencing of the microbiome",
+        "maternal dietary exposures",
+        "human milk fatty acid composition",
+        "asthma outcomes",
+        "rhinitis classification"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "chronic inflammatory diseases",
+        "recurrent wheeze",
+        "eczema",
+        "allergy",
+        "allergies",
+        "allergic rhinitis",
+        "respiratory infections",
+        "influenza",
+        "cough",
+        "wheeze",
+        "dyspnoea",
+        "common cold",
+        "pneumonia",
+        "pharyngitis",
+        "otitis",
+        "fever",
+        "gastrointestinal infection",
+        "acute airway visits",
+        "lung symptoms",
+        "...",
+        "atopic disorders",
+        "infections",
+        "trauma",
+        "allergic disease",
+        "atopic dermatitis",
+        "atopic hand eczema",
+        "bronchiolitis",
+        "rhinitis",
+        "atopic disease"
+      ],
+      "study_design": "Prospective birth cohort study",
+      "data_source_type": "Prospective cohort study",
+      "population": "Pregnant women and their offspring in eastern Denmark",
+      "exposure_domain": "Vitamin D supplementation",
+      "limitations": [
+        "Over-representation of atopic parents",
+        "Not specified",
+        "The text describes the study design and recruitment rather than final results.",
+        "Analysis pending until children reach 3 years of age",
+        "Ongoing study; results to be analyzed when children reach 3 years of age",
+        "Incomplete manuscript snippet provided; results are not included.",
+        "Methods section only; no results or findings provided in the text snippet.",
+        "Not specified in the provided text",
+        "Low accuracy of community doctor and hospital records (mentioned as a general limitation of such data sources)",
+        "...",
+        "Confounding from lifestyle factors in observational studies",
+        "Risk of interaction between treatments in randomized trials",
+        "Recruitment bias (over-representation of asthma, eczema, and allergy)",
+        "Resource-demanding clinic visits",
+        "None specified in the provided text",
+        "The text is a bibliography, not a study description."
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3899298",
+      "title": "Selenium protects neonates against neurotoxicity from prenatal exposure to manganese.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "The study used umbilical cord serum measurements and Neonatal Behavioral Neurological Assessment (NBNA) tests conducted during recruitment, rather than an existing EHR database.",
+      "summary": "An epidemiological study investigating whether Selenium (Se) provides a protective effect against neurotoxicity caused by prenatal Manganese (Mn) exposure in neonates.",
+      "key_findings": [
+        "Mn was negatively associated with NBNA scores at low Se levels",
+        "High Se levels reduced the adverse effects of Mn on NBNA scores",
+        "Mn/Se ratio was moderately correlated with NBNA scores"
+      ],
+      "captured_features": [
+        "Umbilical cord serum Mn concentrations",
+        "Umbilical cord serum Se concentrations",
+        "NBNA scores"
+      ],
+      "pathologies_diseases": [
+        "neurotoxicity",
+        "neurobehavioral dysfunction"
+      ],
+      "study_design": "Epidemiological study",
+      "data_source_type": "Clinical measurements",
+      "population": "933 mother-newborn pairs in Shanghai, China",
+      "exposure_domain": "Manganese and Selenium",
+      "limitations": [
+        "Geographic limitation (Shanghai)",
+        "Specific to term singleton infants"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3923780",
+      "title": "Prenatal exposure to organophosphate pesticides and neurobehavioral development of neonates: a birth cohort study in Shenyang, China.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "None. Data were collected via questionnaires and urine analysis.",
+      "summary": "A birth cohort study investigating the association between prenatal organophosphate pesticide (OP) exposure and neonatal neurobehavioral development in Shenyang, China.",
+      "key_findings": [
+        "Prenatal OP exposure was significantly associated with neonatal neurobehavioral development.",
+        "Prenatal total DAP concentrations were inversely associated with NBNA scores.",
+        "A 10-fold increase in DAP concentrations was associated with a 1.78 decrease in Summary NBNA scores."
+      ],
+      "captured_features": [
+        "Urinary DAP metabolites (DMP, DMTP, DEP, DETP)",
+        "NBNA scores",
+        "maternal questionnaire data"
+      ],
+      "pathologies_diseases": [
+        "neonatal neurobehavioral development"
+      ],
+      "study_design": "birth cohort study",
+      "data_source_type": "primary data collection",
+      "population": "249 pregnant women and their neonates in Shenyang, China",
+      "exposure_domain": "organophosphate pesticides (OPs)",
+      "limitations": [],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC3966323",
+      "title": "Long-term effects of maternal deprivation on cholinergic system in rat brain.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses Wistar rats as an animal model; no human electronic health records were used.",
+      "summary": "The study examines the long-term effects of maternal deprivation (MD) on the cholinergic system in rat brains, specifically measuring acetylcholinesterase (AChE) activity and cholinergic fiber density in the hippocampus and retrosplenial (RS) cortex.",
+      "key_findings": [
+        "Significant decrease of AChE activity in the cortex of MD rats",
+        "Significant increase of AChE activity in the hippocampus of MD rats",
+        "Significant increase in cholinergic fiber density in the CA1 region of the hippocampus",
+        "Significant decrease in cholinergic fiber density in the RS cortex"
+      ],
+      "captured_features": [
+        "AChE activity",
+        "cholinergic fiber density"
+      ],
+      "pathologies_diseases": [
+        "schizophrenia"
+      ],
+      "study_design": "Experimental animal study",
+      "data_source_type": "Animal model",
+      "population": "Male Wistar rats",
+      "exposure_domain": "Maternal deprivation (early life stress)",
+      "limitations": [
+        "Animal model",
+        "Not human data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4026445",
+      "title": "Determining prenatal, early childhood and cumulative long-term lead exposure using micro-spatial deciduous dentine levels.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study uses biological samples (blood, bone, and teeth) from a prospective cohort.",
+      "summary": "The study validates micro-spatial dentine lead (Pb) levels as a biomarker to reconstruct the timing and intensity of prenatal, early childhood, and cumulative long-term lead exposure.",
+      "key_findings": [
+        "Dentine Pb formed at birth was significantly associated with cord blood Pb (r = 0.69).",
+        "Prenatal dentine Pb associated with maternal patella Pb (r = 0.48) and tibia Pb (r = 0.35).",
+        "Dentine Pb formed at 3 months was significantly associated with childhood blood Pb (r = 0.64).",
+        "Secondary dentine correlated positively with the cumulative blood lead index (r = 0.38)."
+      ],
+      "captured_features": [
+        "Micro-spatial dentine Pb levels",
+        "Maternal blood Pb (2nd and 3rd trimesters)",
+        "Maternal bone Pb (patella and tibia)",
+        "Umbilical cord blood Pb",
+        "Childhood serial blood Pb (3 months to 6 years)",
+        "Cumulative blood lead index (CBLI)"
+      ],
+      "pathologies_diseases": [
+        "Lead exposure"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Biological samples",
+      "population": "85 subjects in a prospective pregnancy cohort (mothers and children up to 6 years)",
+      "exposure_domain": "Lead (Pb) exposure",
+      "limitations": [
+        "Small sample size (n=85)"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4113360",
+      "title": "Prenatal exposure to maternal bereavement and childbirths in the offspring: a population-based cohort study.",
+      "year": "2014",
+      "ehr_used": true,
+      "ehr_evidence": "Data is stored at the secure platform of Denmark Statistics, which is the central authority on Danish statistics.",
+      "summary": "A population-based cohort study investigating the association between prenatal exposure to maternal bereavement (stress) and the fertility (age at first child and number of childbirths) of offspring in Denmark and Sweden.",
+      "key_findings": [
+        "No overall association between prenatal exposure to maternal stress and having a child in early adulthood.",
+        "Females born to mothers who lost a parent had a slightly reduced probability of having children (HR 0.97).",
+        "Females born to mothers who lost a spouse (HR 1.29), sibling (HR 1.13), or another child (HR 1.09) had an increased probability of having children."
+      ],
+      "captured_features": [
+        "Maternal bereavement (timing, type of relative deceased)",
+        "Age at first child",
+        "Age-specific mean numbers of childbirths",
+        "Gender",
+        "Covariates"
+      ],
+      "pathologies_diseases": [
+        "fertility",
+        "childbirth"
+      ],
+      "study_design": "Population-based cohort study",
+      "data_source_type": "National registry / Linked health data",
+      "population": "Subjects born in Denmark after 1968 and Sweden after 1973",
+      "exposure_domain": "Prenatal stress (maternal bereavement)",
+      "limitations": [
+        "Longer time of follow-up is necessary in order to reach a firmer conclusion"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4143956",
+      "title": "Quantity and diversity of environmental microbial exposure and development of asthma: a birth cohort study.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a birth cohort with questionnaires and dust samples, not electronic health records.",
+      "summary": "A prospective birth cohort study investigating the association between environmental microbial exposure (quantity and diversity) and the development of asthma, wheezing, and atopic dermatitis in children up to 6 years of age.",
+      "key_findings": [
+        "A score for the total quantity of microbial exposure (ergosterol, muramic acid, and endotoxin) was significantly associated with asthma incidence in an inverted-U shape.",
+        "The microbial diversity score was inversely associated with the risk of wheezing.",
+        "Microbial diversity score was significantly associated with sensitization to inhalant allergens in an inverted-U shape."
+      ],
+      "captured_features": [
+        "Bacterial endotoxin",
+        "3-hydroxy fatty acids",
+        "N-acetyl-muramic acid",
+        "fungal extracellular polysaccharides (EPS)",
+        "b-D-glucan",
+        "ergosterol",
+        "quantitative polymerase chain reactions (qPCRs)",
+        "asthma incidence",
+        "wheezing",
+        "cough",
+        "atopic dermatitis",
+        "specific IgEs"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "wheezing",
+        "cough",
+        "atopic dermatitis",
+        "sensitization to inhalant allergens"
+      ],
+      "study_design": "Prospective birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "410 children born in Eastern and Middle Finland",
+      "exposure_domain": "Environmental microbial exposure (dust)",
+      "limitations": [
+        "Small sample size",
+        "Geographic restriction to Finland"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4184779",
+      "title": "Altered cortical thickness following prenatal sodium valproate exposure.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "Participants were recruited to a prospective long-term cognitive outcomes study and via hospital community advertisements.",
+      "summary": "A study investigating cortical thickness in children with prenatal sodium valproate (VPA) exposure compared to age- and sex-matched controls.",
+      "key_findings": [
+        "Increased left inferior frontal gyrus (IFG) and left pericalcarine sulcus thickness in VPA-exposed children",
+        "Association between VPA dose and right IFG thickness",
+        "Absence of normal asymmetry in the IFG region of VPA-exposed children"
+      ],
+      "captured_features": [
+        "Cortical thickness (MRI)",
+        "VPA dose",
+        "IQ scores",
+        "verbal skills"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental impairments",
+        "epilepsy"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Prospective cohort",
+      "population": "16 children (mean age 7.2) with prenatal VPA exposure; 16 controls",
+      "exposure_domain": "Prenatal medication (sodium valproate)",
+      "limitations": [
+        "Small sample size"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4216164",
+      "title": "Prenatal organochlorine and methylmercury exposure and memory and learning in school-age children in communities near the New Bedford Harbor Superfund site, Massachusetts.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "Assessment of the association between low-level prenatal exposure to PCBs, organochlorines, and methylmercury with memory and learning in school-age children near the New Bedford Harbor Superfund Site.",
+      "key_findings": [],
+      "captured_features": [
+        "Prenatal exposure to PCBs",
+        "Prenatal exposure to organochlorines",
+        "Prenatal exposure to methylmercury",
+        "Memory and learning scores"
+      ],
+      "pathologies_diseases": [
+        "memory and learning",
+        "neurodevelopmental effects"
+      ],
+      "study_design": "Observational study",
+      "data_source_type": "Community-based",
+      "population": "School-age children in communities near the New Bedford Harbor Superfund Site, Massachusetts",
+      "exposure_domain": "Organochlorines (PCBs, DDE) and methylmercury (MeHg)",
+      "limitations": [],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4284714",
+      "title": "Prenatal exposure to arsenic and cadmium impacts infectious disease-related genes within the glucocorticoid receptor signal transduction pathway.",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "None mentioned in the provided text.",
+      "summary": "The text is a collection of research titles and snippets exploring the impacts of prenatal arsenic and cadmium exposure on the human epigenome, immune system, and glucocorticoid receptor signaling.",
+      "key_findings": [
+        "Prenatal arsenic exposure is associated with impaired thymic function and altered DNA methylation.",
+        "Cadmium exposure dysregulates signaling pathways in the thymus.",
+        "Arsenic exposure in pregnancy increases risks of infant infections."
+      ],
+      "captured_features": [
+        "Arsenic exposure",
+        "Cadmium exposure",
+        "DNA methylation",
+        "Glucocorticoid receptor activity",
+        "Birth weight"
+      ],
+      "pathologies_diseases": [
+        "Infectious diseases",
+        "Lower respiratory tract infection",
+        "Diarrhea",
+        "Lung cancer",
+        "Bladder cancer",
+        "Bronchiectasis"
+      ],
+      "study_design": "Mixed (Prospective cohorts, toxicogenomics, animal models)",
+      "data_source_type": "Cohort studies and laboratory data",
+      "population": "Newborns, infants, pregnant women, and adults",
+      "exposure_domain": "Heavy metals (Arsenic, Cadmium)",
+      "limitations": [
+        "The text is a list of titles/snippets, not a single cohesive study.",
+        "No EHR data used."
+      ],
+      "confidence": "low",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4293007",
+      "title": "Prenatal exposure to endocrine disrupting chemicals in relation to thyroid hormone levels in infants - a Dutch prospective cohort study.",
+      "year": "2014",
+      "ehr_used": true,
+      "ehr_evidence": "T4 levels in heel prick blood spots were obtained through the neonatal screening programme in the Netherlands.",
+      "summary": "Prospective cohort study assessing the association between prenatal exposure to endocrine disrupting chemicals (EDCs) and thyroxine (T4) levels in newborns.",
+      "key_findings": [
+        "Girls in the highest quartile of DDE and PFOA exposure showed increased T4 levels.",
+        "Boys showed lower T4 levels in the second quartile of PFOS and PFOA exposure, which were attenuated after adjustment."
+      ],
+      "captured_features": [
+        "DDE",
+        "DEHP metabolites",
+        "HCB",
+        "PCB-153",
+        "PFOS",
+        "PFOA",
+        "T4 levels",
+        "gender"
+      ],
+      "pathologies_diseases": [
+        "thyroxine (T4) levels"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "linked health data",
+      "population": "newborns in a Dutch mother-child cohort",
+      "exposure_domain": "endocrine disrupting chemicals (EDCs)",
+      "limitations": [
+        "relatively small study population"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4559953",
+      "title": "Perinatal Exposure to Traffic-Related Air Pollution and Atopy at 1 Year of Age in a Multi-Center Canadian Birth Cohort Study.",
+      "year": "2015",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a birth cohort study involving participating families, not an EHR-based study.",
+      "summary": "A multi-center Canadian birth cohort study investigating the association between perinatal exposure to traffic-related air pollution (TRAP) and atopy in children at 1 year of age.",
+      "key_findings": [
+        "The study investigates the role of TRAP in allergic sensitization, though specific results are not fully detailed in the provided text."
+      ],
+      "captured_features": [
+        "perinatal TRAP exposure",
+        "atopy at 1 year of age"
+      ],
+      "pathologies_diseases": [
+        "atopy",
+        "allergic sensitization"
+      ],
+      "study_design": "multi-center birth cohort study",
+      "data_source_type": "birth cohort",
+      "population": "Canadian infants",
+      "exposure_domain": "traffic-related air pollution (TRAP)",
+      "limitations": [
+        "mobility of study participants"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4583064",
+      "title": "Association between levels of persistent organic pollutants in adipose tissue and cryptorchidism in early childhood: a case-control study.",
+      "year": "2015",
+      "ehr_used": false,
+      "ehr_evidence": "The study used subcutaneous adipose tissue biopsies taken during surgery, not EHR data.",
+      "summary": "A case-control study investigating the association between prenatal exposure to persistent organic pollutants (PCBs, PCDD/Fs, and PBDEs) in adipose tissue and congenital cryptorchidism in children.",
+      "key_findings": [
+        "Total-TEq (dioxins and dioxin-like PCBs) and sum of PCDD/Fs were positively associated with cryptorchidism (OR 3.21 and 3.69, respectively).",
+        "Sum of PCBs was close to significant (OR 1.92).",
+        "Sum of PBDEs was not significantly associated (OR 0.86)."
+      ],
+      "captured_features": [
+        "37 PCBs",
+        "17 PCDD/Fs",
+        "14 PBDEs",
+        "cryptorchidism",
+        "inguinal hernia",
+        "umbilical hernia",
+        "hydrocele"
+      ],
+      "pathologies_diseases": [
+        "cryptorchidism",
+        "inguinal hernia",
+        "umbilical hernia",
+        "hydrocele"
+      ],
+      "study_design": "case-control study",
+      "data_source_type": "Biological samples (adipose tissue biopsies)",
+      "population": "Children in Finland and Denmark (44 cases, 38 controls)",
+      "exposure_domain": "persistent organic pollutants (PCBs, PCDD/Fs, PBDEs)",
+      "limitations": [
+        "Small sample size",
+        "Case-control design"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4590737",
+      "title": "Obesogen Holdover: Prenatal Exposure Predicts Cardiometabolic Risk Factors in Childhood.",
+      "year": "2015",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study used the Rhea cohort with direct blood samples and physical measurements.",
+      "summary": "A study investigating the association between prenatal exposure to persistent organic pollutants (POPs) and cardiometabolic risk factors in children at age 4.",
+      "key_findings": [
+        "A 10-fold increase in maternal HCB concentrations was associated with higher risks of generalized and abdominal obesity, greater skinfold thickness, higher systolic blood pressure, and a modest increase in child BMI z-score.",
+        "Prenatal DDE exposure was associated with higher BMI z-score, increased risk of abdominal obesity, and higher diastolic blood pressure.",
+        "PCBs were not associated with any of the assessed risk factors."
+      ],
+      "captured_features": [
+        "Maternal blood concentrations of DDE, HCB, and PCBs",
+        "Child body measurements (weight, height, waist circumference, skinfold thickness)",
+        "Child blood pressure",
+        "Child blood lipid levels",
+        "Maternal age, pre-pregnancy BMI, weight gain during pregnancy, breastfeeding duration"
+      ],
+      "pathologies_diseases": [
+        "childhood obesity",
+        "cardiometabolic risk factors",
+        "high blood pressure",
+        "high blood lipids"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study",
+      "population": "Nearly 700 mother-child pairs from the Rhea cohort in Greece",
+      "exposure_domain": "Persistent organic pollutants (POPs): DDE, HCB, PCBs",
+      "limitations": [
+        "Not completely clear what the findings mean for future health outcomes",
+        "Sex-specific effects were not explored in this study"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4643994",
+      "title": "Early-Life Exposure to Clostridium leptum Causes Pulmonary Immunosuppression.",
+      "year": "2015",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study uses an infant mouse model.",
+      "summary": "The study investigates the effects of early-life Clostridium leptum exposure on the development of asthma in infant mice, specifically looking at its role in pulmonary immunosuppression.",
+      "key_findings": [
+        "Early-life C. leptum exposure increased regulatory T (Treg) cells in cesarean-delivered mice.",
+        "Mice exposed to C. leptum and ovalbumin (OVA) did not develop typical asthma phenotypes.",
+        "C. leptum exposure induced an immunosuppressive environment in the lung, inhibiting Th1, Th2, Th9, and Th17 cell responses."
+      ],
+      "captured_features": [
+        "Treg cell counts",
+        "airway hyper-responsiveness",
+        "cell infiltration",
+        "Th1, Th2, Th9, Th17 cell subsets"
+      ],
+      "pathologies_diseases": [
+        "asthma"
+      ],
+      "study_design": "Experimental animal study",
+      "data_source_type": "Animal model",
+      "population": "infant mice",
+      "exposure_domain": "microbiome (Clostridium leptum)",
+      "limitations": [
+        "Animal model",
+        "Not human data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4664544",
+      "title": "Long-term effect of early-life stress from earthquake exposure on working memory in adulthood.",
+      "year": "2015",
+      "ehr_used": false,
+      "ehr_evidence": "No EHR or linked health data mentioned; subjects were enrolled and tested using standardized cognitive assessments (BVMT-R and HVLT-R).",
+      "summary": "A study investigating the long-term effects of early-life stress from the 1976 Tangshan earthquake on working memory performance in adulthood.",
+      "key_findings": [
+        "Infant exposure to earthquake-related stress impairs visuospatial memory in adulthood.",
+        "Fetuses in the second and third trimesters are more vulnerable to stress-induced damage than those in the first trimester.",
+        "Education level and early-life earthquake exposure are independent risk factors for reduced visuospatial memory."
+      ],
+      "captured_features": [
+        "BVMT-R scores",
+        "HVLT-R scores",
+        "education level",
+        "timing of earthquake exposure (prenatal/infant)"
+      ],
+      "pathologies_diseases": [
+        "impaired working memory",
+        "visuospatial memory impairment"
+      ],
+      "study_design": "Cohort study",
+      "data_source_type": "Clinical testing / Cohort study",
+      "population": "907 subjects born and raised in Tangshan, China",
+      "exposure_domain": "Natural disaster (earthquake) / Early-life stress",
+      "limitations": [
+        "Not specified in the provided text"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4693436",
+      "title": "Effectiveness of introducing point of care capillary testing and linking screening with routine appointments for increasing blood lead screening rates of young children: a before-after study.",
+      "year": "2015",
+      "ehr_used": true,
+      "ehr_evidence": "Screening rates were determined from routinely collected service data",
+      "summary": "A before-after study evaluating the effectiveness of introducing point-of-care capillary testing and linking blood lead screening with routine child health programs (like immunizations) to increase screening rates in children in Broken Hill, Australia.",
+      "key_findings": [
+        "Annual screening rate increased from 0.39 in 2008 to 0.75 in 2012.",
+        "Greatest increases were observed in children aged 11–23 and 48–59 months.",
+        "Linking screening with well-accepted mainstream child health programs is an effective strategy to improve participation."
+      ],
+      "captured_features": [
+        "Screening rates",
+        "Age",
+        "Service data"
+      ],
+      "pathologies_diseases": [
+        "Lead exposure"
+      ],
+      "study_design": "before-after study",
+      "data_source_type": "EHR",
+      "population": "Pre-school aged children in Broken Hill, Australia",
+      "exposure_domain": "Lead exposure",
+      "limitations": [
+        "Before-after study design",
+        "Geographically specific to a mining town"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4744686",
+      "title": "Exposure to grass pollen--but not birch pollen--affects lung function in Swedish children.",
+      "year": "2015",
+      "ehr_used": true,
+      "ehr_evidence": "Swedish birth cohort BAMSE clinical examination",
+      "summary": "Study investigating the impact of pollen exposure (grass vs birch) and air pollutants on lung function in Swedish children.",
+      "key_findings": [
+        "Grass pollen exposure the day before testing was associated with reduced FEV1 in 8-year-olds.",
+        "The negative effect was stronger in children sensitized to pollen allergens.",
+        "Birch pollen did not show a similar effect."
+      ],
+      "captured_features": [
+        "FEV1",
+        "FVC",
+        "FEV1/FVC ratio",
+        "serum IgE",
+        "pollen counts",
+        "ozone",
+        "NO2",
+        "PM10",
+        "PM2.5"
+      ],
+      "pathologies_diseases": [
+        "lung function",
+        "pollen allergy"
+      ],
+      "study_design": "birth cohort study",
+      "data_source_type": "birth cohort",
+      "population": "Swedish children (8 and 16 years old)",
+      "exposure_domain": "pollen, air pollution",
+      "limitations": [
+        "geographic limitation (Stockholm region)",
+        "specific age groups"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5598540",
+      "title": "Effects of 4-nonylphenol on oxidant/antioxidant balance system inducing hepatic steatosis in male rat.",
+      "year": "2015",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study is an experimental animal model using Sprague-Dawley rats.",
+      "summary": "Experimental study investigating the effects of 4-nonylphenol (4-NP) on hepatic steatosis, oxidative stress, and gene expression in male rats.",
+      "key_findings": [
+        "4-NP induces hepatic steatosis and apoptosis in rats.",
+        "Up-regulated genes involved in apoptosis, hepatotoxicity, and oxidative stress were observed.",
+        "Increased ROS and decreased antioxidant enzymes were found in 4-NP exposed rats.",
+        "Elevated serum GOT, GPT, LDH, and gamma-GT were observed."
+      ],
+      "captured_features": [
+        "Liver histology",
+        "Biochemical analysis",
+        "Gene expression profiling",
+        "Serum enzymes (GOT, GPT, LDH, gamma-GT)",
+        "ROS levels"
+      ],
+      "pathologies_diseases": [
+        "hepatic steatosis",
+        "NAFLD",
+        "NASH",
+        "oxidative stress"
+      ],
+      "study_design": "Experimental animal study",
+      "data_source_type": "Laboratory experiment",
+      "population": "24 male Sprague-Dawley rats",
+      "exposure_domain": "4-nonylphenol (4-NP)",
+      "limitations": [
+        "Animal model (not human data)",
+        "Small sample size"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4719654",
+      "title": "Mitochondrial oxidative DNA damage and exposure to particulate air pollution in mother-newborn pairs.",
+      "year": "2016",
+      "ehr_used": false,
+      "ehr_evidence": "The study used the ENVIRONAGE birth cohort, which is a prospective birth cohort, not an EHR or linked health database.",
+      "summary": "Study investigating the association between particulate matter (PM) exposure during pregnancy and mitochondrial oxidative DNA damage (8-OHdG) in mothers and newborns.",
+      "key_findings": [
+        "PM10 exposure during entire pregnancy and last trimester associated with increased maternal 8-OHdG.",
+        "PM2.5 exposure during entire pregnancy and third trimester associated with increased maternal 8-OHdG.",
+        "PM10 exposure during first and second trimesters associated with increased cord blood 8-OHdG."
+      ],
+      "captured_features": [
+        "Maternal blood 8-OHdG levels",
+        "Cord blood 8-OHdG levels",
+        "PM10 exposure",
+        "PM2.5 exposure"
+      ],
+      "pathologies_diseases": [
+        "oxidative stress",
+        "mitochondrial DNA damage"
+      ],
+      "study_design": "Prospective birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "Mother-newborn pairs (singletons) in Genk, Belgium",
+      "exposure_domain": "Air pollution (PM10, PM2.5)",
+      "limitations": [
+        "Single center study",
+        "Small sample size"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4905664",
+      "title": "Is There a Causal Relation between Maternal Acetaminophen Administration and ADHD?",
+      "year": "2016",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study uses a murine model.",
+      "summary": "An experimental study using a murine model to investigate whether prenatal acetaminophen (APAP) exposure causes hyperkinetic dysfunction (ADHD-like behavior) in offspring.",
+      "key_findings": [
+        "No significant differences in locomotor activity, brain volumes, or neuronal quantifications were found in offspring exposed to APAP."
+      ],
+      "captured_features": [
+        "Maternal serum APAP concentration",
+        "Serum ALT concentrations",
+        "Offspring locomotor activity (LMA)",
+        "Brain MRI volumes",
+        "Neuronal quantification (Nissl stain)"
+      ],
+      "pathologies_diseases": [
+        "ADHD",
+        "hyperkinetic dysfunction"
+      ],
+      "study_design": "Experimental murine model",
+      "data_source_type": "Animal model",
+      "population": "Pregnant CD1 mice and offspring",
+      "exposure_domain": "Maternal acetaminophen (APAP) administration",
+      "limitations": [
+        "Lack of accurate assessment of ADHD in murine models",
+        "Results should be taken with caution when compared to clinical data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4937858",
+      "title": "Prenatal Exposure to Phthalates and Anogenital Distance in Male Infants from a Low-Exposed Danish Cohort (2010-2012).",
+      "year": "2016",
+      "ehr_used": true,
+      "ehr_evidence": "Odense Patient data Exploratory Network (OPEN) and Odense University Hospital",
+      "summary": "Prospective study investigating the association between maternal urinary phthalate metabolites during pregnancy and anogenital distance (AGD) and penile width in male offspring in a Danish cohort.",
+      "key_findings": [
+        "Not provided in the snippet"
+      ],
+      "captured_features": [
+        "maternal urinary phthalate metabolites",
+        "male offspring anogenital distance (AGD)",
+        "penile width"
+      ],
+      "pathologies_diseases": [
+        "anogenital distance (AGD)"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "linked health data / cohort study",
+      "population": "273 mother-son pairs in the Odense Child Cohort study (Denmark)",
+      "exposure_domain": "phthalates",
+      "limitations": [
+        "Results not provided in the snippet"
+      ],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC4997457",
+      "title": "Severe and Moderate Asthma Exacerbations in Asthmatic Children and Exposure to Ambient Air Pollutants.",
+      "year": "2016",
+      "ehr_used": true,
+      "ehr_evidence": "Exacerbations of asthma... were deﬁned as one hospitalization or emergency room visit with a diagnosis of asthma... from a population-based cohort of asthmatic children in the province of Quebec (Canada).",
+      "summary": "The study assessed the association between birth and annual exposure to outdoor air pollutants (O3, NO2, and PM2.5) and severe asthma exacerbations in a population-based cohort of asthmatic children in Quebec, Canada.",
+      "key_findings": [
+        "Time-dependent exposure to NO2, O3, and PM2.5 was significantly associated with asthma exacerbations.",
+        "No associations were found between exposure at birth to NO2 or O3 and asthma exacerbations."
+      ],
+      "captured_features": [
+        "hospitalization",
+        "emergency room visit",
+        "asthma diagnosis",
+        "residential postal code",
+        "O3 levels",
+        "NO2 levels",
+        "PM2.5 levels"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "asthma exacerbation"
+      ],
+      "study_design": "population-based cohort study",
+      "data_source_type": "linked health data",
+      "population": "asthmatic children born between 1 April 1996 and 31 March 2011 in Quebec, Canada",
+      "exposure_domain": "ambient air pollutants",
+      "limitations": [
+        "residential postal code estimation for pollutant levels"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5047776",
+      "title": "Bisphenol A and Adiposity in an Inner-City Birth Cohort.",
+      "year": "2016",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a prospective birth cohort (CCCEH) with direct urine samples and anthropometric measurements.",
+      "summary": "A prospective birth cohort study investigating the association between prenatal and early-childhood bisphenol A (BPA) exposure and childhood adiposity measures (FMI, %BF, WC) in a New York City birth cohort.",
+      "key_findings": [
+        "Prenatal urinary BPA concentrations were positively associated with child age 7 FMI, %BF, and WC.",
+        "Child urinary BPA concentrations were not associated with childhood anthropometric outcomes."
+      ],
+      "captured_features": [
+        "Prenatal urinary BPA concentrations",
+        "Child urinary BPA concentrations (ages 3 and 5)",
+        "Body mass index z-scores (BMIZ)",
+        "Fat mass index (FMI)",
+        "Percent body fat (%BF)",
+        "Waist circumference (WC)"
+      ],
+      "pathologies_diseases": [
+        "obesity",
+        "adiposity"
+      ],
+      "study_design": "Prospective birth cohort",
+      "data_source_type": "Prospective birth cohort",
+      "population": "African American and Dominican women (ages 18-35) and their children in Northern Manhattan and the South Bronx, NYC",
+      "exposure_domain": "Bisphenol A (BPA)",
+      "limitations": [
+        "Not explicitly stated"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5111596",
+      "title": "Moderate Prenatal Cadmium Exposure and Adverse Birth Outcomes: a Role for Sex-Specific Differences?",
+      "year": "2016",
+      "ehr_used": false,
+      "ehr_evidence": "The sample was derived from the ALSPAC study, a population-based study investigating environmental and genetic influences on the health, behaviour, and development of children.",
+      "summary": "Study investigating the association between moderate prenatal cadmium exposure and birth outcomes (birthweight, head circumference, and crown-heel length) in a large cohort of pregnant women, highlighting potential sex-specific differences.",
+      "key_findings": [
+        "Maternal blood cadmium was adversely associated with birthweight and crown-heel length in the whole group.",
+        "Sex-specific analysis revealed adverse associations with birthweight, head circumference, and crown-heel length in girls, but not in boys."
+      ],
+      "captured_features": [
+        "maternal blood cadmium levels",
+        "birthweight",
+        "crown-heel length",
+        "head circumference",
+        "gestational age",
+        "smoking status"
+      ],
+      "pathologies_diseases": [
+        "low birthweight",
+        "preterm delivery"
+      ],
+      "study_design": "population-based longitudinal cohort study",
+      "data_source_type": "Cohort study",
+      "population": "Pregnant women in the ALSPAC cohort",
+      "exposure_domain": "heavy metals (cadmium)",
+      "limitations": [
+        "Sex-specific effects may mask associations in mixed-sex studies"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5630203",
+      "title": "Effects of low-level prenatal lead exposure on child IQ at 4 and 8 years in a UK birth cohort study.",
+      "year": "2017",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses biological samples (whole blood) and clinical assessments from the ALSPAC birth cohort, not electronic health records.",
+      "summary": "A longitudinal birth cohort study investigating the association between prenatal lead exposure and child IQ at ages 4 and 8 in a UK population.",
+      "key_findings": [
+        "No association of prenatal lead exposure with child IQ at 4 or 8 years in adjusted regression models.",
+        "Positive association for IQ at age 8 in girls (verbal 0.71, performance 0.57, total 0.73).",
+        "Evidence suggesting boys may be more susceptible to prenatal lead exposure than girls."
+      ],
+      "captured_features": [
+        "Prenatal blood lead concentrations (B-Pb)",
+        "Child IQ at age 4 (WPPSI)",
+        "Child IQ at age 8 (WISC-III)",
+        "Sex of child"
+      ],
+      "pathologies_diseases": [
+        "Cognitive function",
+        "IQ"
+      ],
+      "study_design": "Longitudinal birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "Pregnant women and offspring in the ALSPAC cohort (UK)",
+      "exposure_domain": "Heavy metals (Lead)",
+      "limitations": [
+        "Small sample size of offspring at 30 months (n=235)"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5643117",
+      "title": "Reduction of in utero lead exposures in South African populations: Positive impact of unleaded petrol.",
+      "year": "2017",
+      "ehr_used": false,
+      "ehr_evidence": "None. Data were collected from biological fluids (maternal blood, urine, and cord blood) measured using Inductive Coupled Plasma Mass spectrometry (ICP-MS).",
+      "summary": "The study assessed in utero lead (Pb) exposure and birth outcomes in a South African population following the removal of lead from petrol.",
+      "key_findings": [
+        "Positive correlation between maternal blood Pb and cord blood Pb.",
+        "Geographical differences in gestational age, birth length, head circumference, Apgar score, and parity.",
+        "Positive association between cord blood Pb and head circumference in female neonates.",
+        "Maternal Pb levels correlated with race, educational status, water sources, cooking fuels, and pesticide use."
+      ],
+      "captured_features": [
+        "Maternal blood Pb",
+        "Cord blood Pb",
+        "Maternal urine Pb",
+        "Gestational age",
+        "Birth length",
+        "Head circumference",
+        "Apgar score",
+        "Parity",
+        "Race",
+        "Educational status",
+        "Water sources",
+        "Cooking fuels",
+        "Pesticide use"
+      ],
+      "pathologies_diseases": [
+        "congenital anomalies",
+        "premature labour",
+        "neurotoxicity"
+      ],
+      "study_design": "Cohort study",
+      "data_source_type": "Biological samples",
+      "population": "Pregnant women and neonates in South Africa",
+      "exposure_domain": "Lead (Pb) exposure (petrol, paint, pesticides)",
+      "limitations": [
+        "Study does not evaluate effects in young children or adults",
+        "Geographical differences in birth outcomes may be influenced by multiple confounding factors"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5664568",
+      "title": "The Hokkaido Birth Cohort Study on Environment and Children's Health: cohort profile-updated 2017.",
+      "year": "2017",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a prospective birth cohort study using direct specimen collection (blood, hair, breast milk) and face-to-face tests, not EHR or linked health data.",
+      "summary": "A profile and update of the Hokkaido Study on Environment and Children’s Health, a prospective birth cohort study investigating the effects of low-level environmental chemical exposures on birth outcomes and child development.",
+      "key_findings": [
+        "Demonstrated effects of environmental chemical exposures on genetically susceptible populations and DNA methylation.",
+        "Identified associations between chemical exposure and birth size, neonatal hormone levels, neurobehavioral development, asthma, allergies, and infectious diseases."
+      ],
+      "captured_features": [
+        "Maternal and cord blood",
+        "Maternal hair",
+        "Breast milk",
+        "Neurobehavioral development tests",
+        "Genetic and epigenetic analysis",
+        "Birth outcomes (miscarriage, stillbirth, low birth weight, preterm birth, small for gestational age)"
+      ],
+      "pathologies_diseases": [
+        "birth defects",
+        "growth retardation",
+        "allergies",
+        "infectious diseases",
+        "neurobehavioral developmental disorders",
+        "asthma"
+      ],
+      "study_design": "Prospective birth cohort study",
+      "data_source_type": "Prospective birth cohort",
+      "population": "Pregnant women and children in Sapporo and Hokkaido, Japan",
+      "exposure_domain": "dioxins, PCBs, organochlorine pesticides, PFAS, phthalates, bisphenol A, methylmercury, tobacco smoking",
+      "limitations": [
+        "Ongoing study",
+        "Report is a cohort profile/update rather than a final comprehensive analysis"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5708015",
+      "title": "Body Burden of Dichlorodiphenyl Dichloroethene (DDE) and Childhood Pulmonary Function.",
+      "year": "2017",
+      "ehr_used": false,
+      "ehr_evidence": "The study used data from an environmental epidemiologic study, not an EHR.",
+      "summary": "A longitudinal study in central Germany investigating the relationship between blood DDE levels and pulmonary function (FVC and FEV1) in children aged 8-10 years, specifically assessing whether the association is mediated by height and weight.",
+      "key_findings": [
+        "DDE measured at eight years had significant, inverse, indirect, and total effects on FVC at ten years and FEV1 at ten years, mediated through effects of DDE on height and weight."
+      ],
+      "captured_features": [
+        "Blood DDE levels",
+        "FVC",
+        "FEV1",
+        "height",
+        "weight",
+        "age",
+        "sex"
+      ],
+      "pathologies_diseases": [
+        "pulmonary function",
+        "asthma",
+        "respiratory tract infections"
+      ],
+      "study_design": "Longitudinal environmental epidemiologic study",
+      "data_source_type": "Primary data collection",
+      "population": "Children aged 8-10 years in central Germany",
+      "exposure_domain": "Persistent organic pollutants (DDE)",
+      "limitations": [
+        "Need for validation in regions with ongoing, high DDT application"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5784619",
+      "title": "Proteomic Biomarkers for Bisphenol A-Early Exposure and Women's Thyroid Cancer.",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses laboratory mice and clinical samples from 28 women thyroid cancer patients, not EHR.",
+      "summary": "The study investigates the effects of early-life Bisphenol A (BPA) exposure on thyroid proteins in mice and identifies ANXA6 and VCP as potential proteomic biomarkers in human thyroid cancer patients.",
+      "key_findings": [
+        "17 proteins were altered in a BPA dose-dependent manner in mouse thyroid tissues.",
+        "ANXA6 and VCP were identified as potential proteomic biomarkers.",
+        "Positive association between blood BPA levels and mRNA expression of ANXA6 and VCP in human thyroid cancer tissues."
+      ],
+      "captured_features": [
+        "BPA dose (15, 75, 300 mg/L)",
+        "Proteomic profiles (2D gel electrophoresis, mass spectrometry)",
+        "mRNA expression levels",
+        "Blood BPA levels"
+      ],
+      "pathologies_diseases": [
+        "thyroid cancer"
+      ],
+      "study_design": "Experimental animal study and clinical biomarker analysis",
+      "data_source_type": "Laboratory/Clinical samples",
+      "population": "Female ICR mice and 28 women thyroid cancer patients",
+      "exposure_domain": "Bisphenol A (BPA)",
+      "limitations": [
+        "Small human sample size (n=28)",
+        "Reliance on animal models for initial protein identification"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5800156",
+      "title": "Assessment of Nutritional Status of Infants Living in Arsenic-Contaminated Areas in Bangladesh and Its Association with Arsenic Exposure.",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "None; data was collected via direct anthropometric measurements and water testing.",
+      "summary": "A prospective cohort study of 120 infants in arsenic-contaminated areas of Bangladesh to assess the association between drinking water arsenic levels and nutritional status (stunting, wasting, underweight) over 9 months.",
+      "key_findings": [
+        "Significant association between stunting at 9 months and household drinking water arsenic exposure ≥50 μg/L (p = 0.009).",
+        "No significant changes in other nutritional indices over time or with arsenic levels."
+      ],
+      "captured_features": [
+        "Weight and height measurements (WAZ, HAZ, WHZ)",
+        "Tube well drinking water arsenic concentration",
+        "Infant age"
+      ],
+      "pathologies_diseases": [
+        "stunting",
+        "wasting",
+        "underweight",
+        "malnutrition"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Primary data collection",
+      "population": "120 infants (birth to 9 months) in rural Bangladesh",
+      "exposure_domain": "Arsenic in drinking water",
+      "limitations": [
+        "Small sample size",
+        "Short follow-up",
+        "Potential statistical incongruity"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5840817",
+      "title": "Correction to: Early-life exposure to PM2.5 and risk of acute asthma clinical encounters among children in Massachusetts: a case-crossover analysis.",
+      "year": "2018",
+      "ehr_used": true,
+      "ehr_evidence": "acute asthma clinical encounters",
+      "summary": "Correction to a study on early-life PM2.5 exposure and risk of acute asthma clinical encounters among children in Massachusetts.",
+      "key_findings": [
+        "Correction of Maternal Language Preference count from 240 (0.7%) to 886 (2.7%)"
+      ],
+      "captured_features": [
+        "Maternal Language Preference",
+        "PM2.5 exposure",
+        "acute asthma clinical encounters"
+      ],
+      "pathologies_diseases": [
+        "asthma"
+      ],
+      "study_design": "case-crossover analysis",
+      "data_source_type": "EHR",
+      "population": "children in Massachusetts",
+      "exposure_domain": "PM2.5",
+      "limitations": [
+        "Correction notice only"
+      ],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5907299",
+      "title": "Local- and regional-scale air pollution modelling (PM(10)) and exposure assessment for pregnancy trimesters, infancy, and childhood to age 15 years: Avon Longitudinal Study of Parents And Children (ALSPAC).",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses the Avon Longitudinal Study of Parents And Children (ALSPAC) birth cohort and residential address history; no EHR or linked health data are mentioned.",
+      "summary": "Development and evaluation of PM10 air pollution modelling and exposure assessment for pregnancy trimesters, infancy, and childhood (up to age 15) using the ALSPAC birth cohort.",
+      "key_findings": [
+        "PM10 exposures fell from 31.2 μg/m3 at age 1 to 19.6 μg/m3 at age 15.",
+        "Local sources contributed 18.5%–19.5% during pregnancy and infancy.",
+        "Main roads contributed ~3.0% to total PM10 exposures in all periods."
+      ],
+      "captured_features": [
+        "PM10 concentrations (μg/m3)",
+        "residential address history",
+        "local and regional/long-range sources"
+      ],
+      "pathologies_diseases": [
+        "respiratory health",
+        "lung function",
+        "asthma",
+        "bronchial responsiveness",
+        "sensitization to allergens"
+      ],
+      "study_design": "Prospective birth cohort study with dispersion modelling",
+      "data_source_type": "Birth cohort",
+      "population": "Children and mothers in the ALSPAC birth cohort (South West England)",
+      "exposure_domain": "Air pollution (PM10)",
+      "limitations": [
+        "Lack of fixed-site PM10 monitoring sites during the study period",
+        "Reliance on dispersion modelling for historic sub-annual periods"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC5993870",
+      "title": "Total mercury exposure in early pregnancy has no adverse association with scholastic ability of the offspring particularly if the mother eats fish.",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses data from the Avon Longitudinal Study of Parents and Children (ALSPAC), which is a birth cohort study.",
+      "summary": "Analysis of prenatal mercury exposure and its impact on the scholastic abilities (reading, spelling, math, science) of children in the ALSPAC cohort.",
+      "key_findings": [
+        "No adverse association between prenatal mercury and scholastic abilities, provided the mother ate fish.",
+        "Math and science skills were unaffected by maternal mercury levels when fish was consumed."
+      ],
+      "captured_features": [
+        "maternal blood mercury concentrations",
+        "fish consumption",
+        "scholastic test results (reading, spelling, phoneme awareness, mathematics, science)",
+        "child sex"
+      ],
+      "pathologies_diseases": [
+        "scholastic ability",
+        "cognitive function",
+        "behavioral development"
+      ],
+      "study_design": "longitudinal cohort study",
+      "data_source_type": "birth cohort study",
+      "population": "children in the UK (ALSPAC cohort)",
+      "exposure_domain": "mercury exposure",
+      "limitations": [
+        "varying number of participants with complete data (1500 to 2200)"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6062867",
+      "title": "Occupational exposure to organic solvents during pregnancy and childhood behavior: findings from the PELAGIE birth cohort (France, 2002-2013).",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a prospective birth cohort (PELAGIE) with self-reported exposure and questionnaire-based behavioral assessments.",
+      "summary": "A prospective birth cohort study investigating the longitudinal association between prenatal occupational exposure to organic solvents by mothers and the behavioral traits of their children at ages 2 and 6.",
+      "key_findings": [
+        "Increased externalizing behavior at age 2 associated with prenatal solvent exposure.",
+        "Association attenuated by age 6.",
+        "No association observed for internalizing behavior."
+      ],
+      "captured_features": [
+        "Self-reported occupational solvent exposure",
+        "Child Behavior Checklist",
+        "Preschool Social Behavior Questionnaire",
+        "Strength and Difficulties Questionnaire"
+      ],
+      "pathologies_diseases": [
+        "externalizing behavior",
+        "internalizing behavior"
+      ],
+      "study_design": "Prospective birth cohort",
+      "data_source_type": "Birth cohort",
+      "population": "Children of pregnant women in the PELAGIE cohort (France)",
+      "exposure_domain": "Occupational exposure to organic solvents",
+      "limitations": [
+        "Self-reported exposure",
+        "Attenuation of effect with age",
+        "Potential dilution by postnatal predictors"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6210236",
+      "title": "Sex-Dependent Impact of Low-Level Lead Exposure during Prenatal Period on Child Psychomotor Functions.",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "The study used the Polish Mother and Child Cohort (REPRO_PL), which collected questionnaire data and biological samples.",
+      "summary": "Evaluation of low-level prenatal lead exposure on child psychomotor development (up to 24 months) in a Polish cohort, focusing on sex-dependent susceptibility.",
+      "key_findings": [
+        "No significant impact on girls' psychomotor abilities.",
+        "Boys showed lower cognitive scores associated with increasing cord blood lead levels (β = -2.07; p = 0.04).",
+        "No significant impact on language or motor abilities."
+      ],
+      "captured_features": [
+        "Blood lead levels (20-24 weeks pregnancy)",
+        "Cord blood lead levels",
+        "Bayley Scales of Infant and Toddler Development scores"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental impairment",
+        "cognitive functions",
+        "psychomotor functions"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "research cohort",
+      "population": "402 children from the Polish Mother and Child Cohort (REPRO_PL)",
+      "exposure_domain": "lead exposure",
+      "limitations": [
+        "Not specified in the text"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6245767",
+      "title": "Is intrauterine exposure to acetaminophen associated with emotional and hyperactivity problems during childhood? Findings from the 2004 Pelotas birth cohort.",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "The study used data from the 2004 Pelotas birth cohort and the Strengths and Difficulties Questionnaire (SDQ).",
+      "summary": "A prospective longitudinal study investigating the association between intrauterine acetaminophen exposure and emotional and hyperactivity problems in children at ages 6 and 11 in a Brazilian birth cohort.",
+      "key_findings": [
+        "Acetaminophen was used by 27.5% of mothers during pregnancy.",
+        "Intrauterine exposure increased the odds of emotional problems (OR 1.47) and hyperactivity/inattention (OR 1.42) in 6-year-old boys.",
+        "No association was observed for girls at either age.",
+        "The effect size for boys decreased slightly at age 11."
+      ],
+      "captured_features": [
+        "Acetaminophen use during pregnancy",
+        "SDQ scores",
+        "Sex",
+        "Age"
+      ],
+      "pathologies_diseases": [
+        "emotional problems",
+        "hyperactivity/inattention problems"
+      ],
+      "study_design": "prospective longitudinal population-based birth cohort",
+      "data_source_type": "Birth cohort",
+      "population": "Children in the 2004 Pelotas birth cohort (Brazil)",
+      "exposure_domain": "pharmaceuticals (acetaminophen)",
+      "limitations": [
+        "No association observed in girls",
+        "Effect size decreased at age 11"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6260681",
+      "title": "Quantitative characterization of the urine and serum metabolomes of children is essential for 'omics' studies.",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "The study was part of HELIX, a collaborative project between six longitudinal birth cohort studies.",
+      "summary": "Commentary on a study by Lau et al. characterizing serum and urine metabolomes of European children to establish a reference for future exposome studies.",
+      "key_findings": [
+        "Metabolites were associated with age, sex, body mass index (BMI), and dietary intake.",
+        "Novel association between urinary 4-deoxyerythronic acid and body mass index was uncovered."
+      ],
+      "captured_features": [
+        "Serum metabolomes",
+        "Urine metabolomes",
+        "Age",
+        "Sex",
+        "BMI",
+        "Dietary intake"
+      ],
+      "pathologies_diseases": [
+        "Obesity",
+        "Metabolic syndrome",
+        "Cardiovascular disease",
+        "Type 2 diabetes"
+      ],
+      "study_design": "Longitudinal birth cohort studies",
+      "data_source_type": "Birth cohort studies",
+      "population": "European children",
+      "exposure_domain": "Early-life physical and chemical exposures (e.g., pollution, diet)",
+      "limitations": [
+        "Lack of existing metabolomic reference profiles for children"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6381819",
+      "title": "Prenatal Exposure to Select Phthalates and Phenols and Associations with Fetal and Placental Weight among Male Births in the EDEN Cohort (France).",
+      "year": "2019",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a prospective cohort (EDEN) with urine samples, not EHR or linked health data.",
+      "summary": "Investigation of maternal prenatal exposure to phthalates and phenols and its association with fetal and placental weight in a French cohort.",
+      "key_findings": [
+        "Triclosan and MCNP negatively associated with placental weight",
+        "Benzophenone-3 and sum of parabens positively associated with placental weight",
+        "MCNP and MCOP negatively associated with PFR"
+      ],
+      "captured_features": [
+        "9 phenols",
+        "11 phthalate metabolites",
+        "placental weight",
+        "birth weight",
+        "PFR"
+      ],
+      "pathologies_diseases": [
+        "placental weight",
+        "birth weight",
+        "placental-to-birth weight ratio (PFR)"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study",
+      "population": "473 mother-son pairs in the EDEN cohort (France)",
+      "exposure_domain": "phthalates and phenols",
+      "limitations": [
+        "Preliminary evidence",
+        "hypothesis generating"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6543203",
+      "title": "Dietary Patterns Are Not Consistently Associated with Variability in Blood Lead Concentrations in Pregnant British Women.",
+      "year": "2019",
+      "ehr_used": false,
+      "ehr_evidence": "Data were derived from the Avon Longitudinal Study of Parents and Children (ALSPAC) birth cohort, which used blood samples and food-frequency questionnaires.",
+      "summary": "Evaluation of dietary patterns and food groups associated with blood lead concentrations (B-Pb) in pregnant women.",
+      "key_findings": [
+        "Negative association between 'confectionery' pattern and B-Pb ≥5 µg/dL",
+        "Positive association between 'all leafy green and green vegetables' and B-Pb ≥5 µg/dL",
+        "Negative association between 'cakes and biscuits' and B-Pb ≥5 µg/dL",
+        "Positive association of 'healthy' diet pattern after multiple imputation"
+      ],
+      "captured_features": [
+        "Blood lead concentrations (B-Pb)",
+        "Dietary pattern scores (PCA)",
+        "Food group frequency"
+      ],
+      "pathologies_diseases": [
+        "Lead exposure"
+      ],
+      "study_design": "Birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "Pregnant women in the UK (ALSPAC cohort)",
+      "exposure_domain": "Dietary patterns, food groups, blood lead",
+      "limitations": [
+        "Limited evidence of association between typical diet and B-Pb",
+        "Lack of extensive food composition data"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6579766",
+      "title": "Mitotically heritable effects of BMAA on striatal neural stem cell proliferation and differentiation.",
+      "year": "2019",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "An in vitro study investigating the effects of the cyanobacterial toxin BMAA on the proliferation, differentiation, and mitotic heritability of neural stem cells (NSCs).",
+      "key_findings": [
+        "BMAA exposure at 250 µM reduced NSC proliferation through apoptosis and G2/M arrest.",
+        "BMAA exposure at 50–100 µM reduced the differentiation of NSCs into astrocytes, oligodendrocytes, and neurons.",
+        "BMAA-induced changes in neurons derived from treated NSCs were mitotically heritable to daughter cells.",
+        "BMAA-induced morphological alterations included reduced neurite length and decreased number of processes."
+      ],
+      "captured_features": [
+        "NSC proliferation rates",
+        "differentiation into astrocytes, oligodendrocytes, and neurons",
+        "morphological alterations (neurite length, processes, branches)",
+        "mitotic heritability"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental disorders",
+        "neurodegenerative disease",
+        "ALS/PDC",
+        "Alzheimer's disease"
+      ],
+      "study_design": "In vitro laboratory study",
+      "data_source_type": "Laboratory experiment",
+      "population": "Primary striatal neurons and embryonic neural stem cells",
+      "exposure_domain": "BMAA (cyanobacterial toxin)",
+      "limitations": [
+        "In vitro study",
+        "Lack of human epidemiological data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC6911906",
+      "title": "Repeated holdout validation for weighted quantile sum regression.",
+      "year": "2019",
+      "ehr_used": false,
+      "ehr_evidence": "Data from the Swedish Environmental Longitudinal, Mother and Child, Asthma and Allergy (SELMA) study.",
+      "summary": "The study proposes and validates a 'repeated holdout validation' method for Weighted Quantile Sum (WQS) regression to assess chemical mixtures in small environmental epidemiology samples, using prenatal exposure to 26 endocrine disrupting chemicals and child IQ.",
+      "key_findings": [
+        "Repeated holdout validation improves the stability of WQS estimates in finite study samples.",
+        "WQS index estimate was significant without partitioning but attenuated and became nonsignificant using repeated holdout validation.",
+        "Repeated holdout can characterize uncertainty in identifying chemicals of concern."
+      ],
+      "captured_features": [
+        "prenatal exposure to 26 endocrine disrupting chemicals",
+        "child Intelligence Quotient (IQ)"
+      ],
+      "pathologies_diseases": [
+        "Intelligence Quotient (IQ)"
+      ],
+      "study_design": "Methodological validation using a cohort study",
+      "data_source_type": "Cohort study",
+      "population": "718 mother-child pairs",
+      "exposure_domain": "endocrine disrupting chemicals",
+      "limitations": [
+        "Small sample size"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC7057264",
+      "title": "Early-life inhalant allergen exposure, filaggrin genotype, and the development of sensitization from infancy to adolescence.",
+      "year": "2020",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a population-based birth cohort and home dust samples, not electronic health records.",
+      "summary": "A longitudinal birth cohort study investigating how filaggrin (FLG) mutations modify the relationship between early-life inhalant allergen exposure (mite, cat, dog) and the development of allergic sensitization from infancy to adolescence.",
+      "key_findings": [
+        "Significant interaction between FLG mutations and Fel d 1 exposure on cat sensitization, with higher risk in children with mutations.",
+        "Mite sensitization risk with Der p 1 exposure was consistently greater in children with FLG mutations.",
+        "Significant interaction between FLG mutations and dog ownership, where children with mutations exposed to dogs in infancy had significantly lower risk of sensitization."
+      ],
+      "captured_features": [
+        "Mite, cat, and dog allergen levels in home dust",
+        "FLG mutations",
+        "Sensitization status at 6 time points"
+      ],
+      "pathologies_diseases": [
+        "allergic sensitization"
+      ],
+      "study_design": "Longitudinal birth cohort",
+      "data_source_type": "Birth cohort",
+      "population": "1184 subjects in a population-based birth cohort (infancy to age 16 years)",
+      "exposure_domain": "Inhalant allergens (house dust mite, cat, dog)",
+      "limitations": [
+        "Not specified in the provided text"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC7145790",
+      "title": "Childhood type 1 diabetes: an environment-wide association study across England.",
+      "year": "2020",
+      "ehr_used": true,
+      "ehr_evidence": "We obtained type 1 diabetes data from National Health Service (NHS) Digital hospital episode statistics (HES) records",
+      "summary": "An ecological environment-wide association study (EnW AS) assessing associations between various environmental, demographic, and meteorological factors and childhood type 1 diabetes incidence in England.",
+      "key_findings": [
+        "15 out of 53 demographic and environmental risk factors were significantly associated with diabetes incidence",
+        "Air pollutants (PM10, NO2, NOx, CO) were inversely associated with incidence",
+        "Significant associations found with lead in soil, radon, outdoor light at night, overcrowding, population density, and ethnicity",
+        "Association found between type 1 diabetes and Index of Multiple Deprivation (IMD) and radon potential class"
+      ],
+      "captured_features": [
+        "HES incident type 1 diabetes records",
+        "LAD level demographic data",
+        "meteorological variables",
+        "land use variables",
+        "environmental pollution variables",
+        "Index of Multiple Deprivation (IMD)"
+      ],
+      "pathologies_diseases": [
+        "type 1 diabetes"
+      ],
+      "study_design": "ecological environment-wide association study (EnW AS)",
+      "data_source_type": "EHR / Linked health data",
+      "population": "children aged 0–9 years in England",
+      "exposure_domain": "air pollution, soil lead, radon, outdoor light at night, demographics, meteorological factors",
+      "limitations": [
+        "ecological design"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC7395399",
+      "title": "Unilateral morning glory disc anomaly in a patient with prenatal Zika virus exposure.",
+      "year": "2020",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study is a single case report.",
+      "summary": "A case report describing a 3-year-old male child with morning glory disc anomaly (MGDA) and other neurological defects following prenatal Zika virus (ZIKV) exposure.",
+      "key_findings": [
+        "First report suggesting an association between prenatal ZIKV exposure and MGDA.",
+        "Prenatal ZIKV exposure may be associated with a wider pathologic spectrum than previously reported."
+      ],
+      "captured_features": [
+        "Visual acuity",
+        "Intraocular pressure",
+        "RT-PCR results",
+        "Neuroimaging (base of skull encephalocele, callosal dysgenesis)"
+      ],
+      "pathologies_diseases": [
+        "morning glory disc anomaly",
+        "Zika virus",
+        "encephalocele",
+        "callosal dysgenesis",
+        "strabismus",
+        "cleft lip"
+      ],
+      "study_design": "Case report",
+      "data_source_type": "Clinical records",
+      "population": "3-year-old male child",
+      "exposure_domain": "Infectious disease (Zika virus)",
+      "limitations": [
+        "Single case report",
+        "Small sample size"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC7428621",
+      "title": "Early-Life Famine Exposure and Risk of Cardiovascular Diseases in Later Life: Findings From the REACTION Study.",
+      "year": "2020",
+      "ehr_used": false,
+      "ehr_evidence": "The study used data from the REACTION (Risk Evaluation of Cancers in Chinese Diabetic Individuals: A Longitudinal) Study, which recruited community-dwelling adults.",
+      "summary": "The study investigated the association between early-life exposure to the Chinese famine (1959-1962) and the risk of cardiovascular diseases (CVD) in adulthood.",
+      "key_findings": [
+        "Early-life famine exposure (fetal, childhood, and adolescent) significantly increased the risk of total CVD, myocardial infarction, stroke, and coronary heart disease.",
+        "Individuals in severely affected famine areas had a significantly increased risk of total CVD in all three exposed groups."
+      ],
+      "captured_features": [
+        "famine exposure (fetal, childhood, adolescent)",
+        "total CVD",
+        "myocardial infarction",
+        "stroke",
+        "coronary heart disease",
+        "geographic famine severity"
+      ],
+      "pathologies_diseases": [
+        "cardiovascular diseases",
+        "myocardial infarction",
+        "stroke",
+        "coronary heart disease"
+      ],
+      "study_design": "longitudinal cohort study",
+      "data_source_type": "cohort study",
+      "population": "259,657 community-dwelling adults aged 40 years or older from mainland China",
+      "exposure_domain": "early-life nutrition (famine)",
+      "limitations": [
+        "historical cohort study"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC7785392",
+      "title": "Long-Term Effects of Environmental Lead on Erythropoietin Production in Young Adults: A Follow-Up Study of a Prospective Cohort in Kosovo.",
+      "year": "2020",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a prospective birth cohort and a biorepository for blood samples, not EHR or linked health data.",
+      "summary": "A follow-up study of a prospective birth cohort in Kosovo to evaluate the long-term effects of prenatal, early childhood, and concurrent lead (Pb) exposure on erythropoietin (EPO) production in young adulthood.",
+      "key_findings": [
+        "Participants exposed to high Pb levels required increased EPO production to maintain normal hemoglobin (Hgb) at ages 4.5 and 6.5.",
+        "By ages 9.5 and 12, participants were no longer capable of hyper-production of EPO, suggesting cumulative toxicity to renal peritubular cells.",
+        "Reduction in Pb exposure may allow for a reversal of the impact on EPO production."
+      ],
+      "captured_features": [
+        "Blood lead concentration (BPb)",
+        "Serum EPO",
+        "Hemoglobin (Hgb)",
+        "Erythrocyte protoporphyrin (EP)",
+        "Serum ferritin (SF)"
+      ],
+      "pathologies_diseases": [
+        "anemia",
+        "lead toxicity"
+      ],
+      "study_design": "Prospective birth cohort follow-up",
+      "data_source_type": "Prospective cohort / Biorepository",
+      "population": "101 participants (mean age 24.9 years) from a prospective birth cohort in Kosovo",
+      "exposure_domain": "Environmental lead (Pb)",
+      "limitations": [
+        "Challenges in recruiting participants from Prishtina due to city expansion and demographic changes."
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC7813870",
+      "title": "DNA methylome signatures of prenatal exposure to synthetic glucocorticoids in hippocampus and peripheral whole blood of female guinea pigs in early life.",
+      "year": "2021",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study uses a guinea pig animal model.",
+      "summary": "The study examines DNA methylation signatures in the hippocampus and whole blood of guinea pig offspring following prenatal exposure to synthetic glucocorticoids (sGC) to assess epigenetic biomarkers of common molecular pathways.",
+      "key_findings": [
+        "Identified tissue-specific and common methylation signatures of prenatal sGC exposure.",
+        "134 genes were modified in both hippocampus and blood, with 61 showing changes at identical CpG sites.",
+        "Prenatal sGC exposure alters the methylation status of gene clusters involved in brain development."
+      ],
+      "captured_features": [
+        "DNA methylation signatures",
+        "CpG sites",
+        "gene pathway analysis"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental impairment",
+        "behavioral phenotypes",
+        "endocrine and metabolic dysregulation"
+      ],
+      "study_design": "Animal model study",
+      "data_source_type": "Laboratory experiment",
+      "population": "Female guinea pig offspring",
+      "exposure_domain": "Synthetic glucocorticoids (sGC)",
+      "limitations": [
+        "Animal model (guinea pigs)",
+        "Not human data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC7930470",
+      "title": "Assessment of chronic bronchitis and risk factors in young adults: results from BAMSE.",
+      "year": "2021",
+      "ehr_used": false,
+      "ehr_evidence": "The study used questionnaire data and clinical measures from the Swedish BAMSE birth cohort, not electronic health records.",
+      "summary": "Assessment of the prevalence and early-life risk factors (e.g., air pollution, breastfeeding) for chronic bronchitis in young adults using the Swedish BAMSE birth cohort.",
+      "key_findings": [
+        "Prevalence of chronic bronchitis in young adults was 5.5%.",
+        "Daily smoking (aOR 3.85) and air pollution (black carbon at ages 1-4y, aOR 1.71) were associated with chronic bronchitis.",
+        "Exclusive breastfeeding for $\\ge$4 months was associated with a lower risk of chronic bronchitis (aOR 0.66)."
+      ],
+      "captured_features": [
+        "Questionnaire data",
+        "Clinical measures",
+        "Spirometry",
+        "Black carbon exposure (ages 1-4y)",
+        "Exclusive breastfeeding duration",
+        "Smoking status"
+      ],
+      "pathologies_diseases": [
+        "chronic bronchitis"
+      ],
+      "study_design": "Population-based birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "Young adults in a Swedish population-based birth cohort",
+      "exposure_domain": "air pollution, breastfeeding",
+      "limitations": [
+        "Not specified in the provided text"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC8042911",
+      "title": "Aspartame and cancer - new evidence for causation.",
+      "year": "2021",
+      "ehr_used": false,
+      "ehr_evidence": "None. The study is a toxicological analysis of rodent models.",
+      "summary": "A commentary and re-evaluation of Ramazzini Institute studies confirming that aspartame is a chemical carcinogen in rodents, with significant risks from prenatal exposure.",
+      "key_findings": [
+        "Aspartame causes dose-related increases in malignant tumors in rodents.",
+        "Prenatal exposure to aspartame increases cancer risk in rodent offspring.",
+        "Immunohistochemical and morphological re-evaluation confirmed malignancy in 92.3% of cases."
+      ],
+      "captured_features": [
+        "Aspartame dose levels",
+        "Tumor morphology",
+        "Immunohistochemical markers"
+      ],
+      "pathologies_diseases": [
+        "malignant tumors",
+        "lymphoma",
+        "leukemia"
+      ],
+      "study_design": "Toxicological laboratory studies",
+      "data_source_type": "Experimental laboratory data",
+      "population": "Sprague-Dawley rats and Swiss mice",
+      "exposure_domain": "Artificial sweeteners (aspartame)",
+      "limitations": [
+        "Animal study (rodent models)"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC8474164",
+      "title": "Maternal high-fat diet modifies myelin organization, microglial interactions, and results in social memory and sensorimotor gating deficits in adolescent mouse offspring.",
+      "year": "2021",
+      "ehr_used": false,
+      "ehr_evidence": "None. The study uses a mouse model.",
+      "summary": "Investigation of how maternal high-fat diet (mHFD) affects myelin organization, microglial interactions, and behavioral outcomes in adolescent mouse offspring.",
+      "key_findings": [
+        "mHFD results in neuroinflammation and hypomyelination",
+        "increased myelin density with reduced cytosolic myelin channels in the corpus callosum of male offspring",
+        "lower transcripts of myelination-associated genes (e.g., Igf1) in the hippocampus of male offspring",
+        "microglia in the corpus callosum showed reduced mature lysosomes and increased synaptic contacts",
+        "mHFD-exposed offspring exhibited deficits in social memory and sensorimotor gating"
+      ],
+      "captured_features": [
+        "myelin density",
+        "cytosolic myelin channels",
+        "microglial phenotype",
+        "Igf1 transcripts",
+        "social memory",
+        "sensorimotor gating"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental alterations",
+        "hypomyelination",
+        "neuroinflammation"
+      ],
+      "study_design": "Experimental animal study",
+      "data_source_type": "Laboratory experiment",
+      "population": "Adolescent mouse offspring",
+      "exposure_domain": "Maternal high-fat diet",
+      "limitations": [
+        "Animal model study",
+        "Not human data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC9216597",
+      "title": "The association between in utero exposure to maternal psychological stress and female reproductive function in adolescence: A prospective cohort study.",
+      "year": "2021",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a population-based pregnancy cohort study (The Raine Study) using prospective reporting and clinical examinations, not EHR.",
+      "summary": "A prospective cohort study investigating the association between maternal psychological stress during pregnancy and reproductive function in female offspring during adolescence.",
+      "key_findings": [
+        "Maternal stress in late gestation was associated with greater uterine volume and higher ovarian antral follicle count (AFC) in adolescents.",
+        "No associations were found between maternal stress and circulating AMH or Inhibin B."
+      ],
+      "captured_features": [
+        "maternal stressful life events (early and late gestation)",
+        "uterine volume",
+        "ovarian antral follicle count (AFC)",
+        "circulating AMH",
+        "inhibin B"
+      ],
+      "pathologies_diseases": [
+        "reproductive function",
+        "infertility"
+      ],
+      "study_design": "prospective cohort study",
+      "data_source_type": "population-based cohort study",
+      "population": "228 female offspring (age 14-16 years)",
+      "exposure_domain": "maternal psychological stress",
+      "limitations": [
+        "small sample size (n=228)",
+        "prospective cohort study"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC8738138",
+      "title": "Early life exposure to house dust mite allergen prevents experimental allergic asthma requiring mitochondrial H(2)O(2).",
+      "year": "2022",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study is an experimental animal model using mice.",
+      "summary": "The study investigates the role of mitochondrial H2O2 in establishing airway tolerance to house dust mite (HDM) allergens in mice, demonstrating that early-life low-dose exposure prevents later allergic airway inflammation.",
+      "key_findings": [
+        "Early-life exposure to low-dose HDM prevents allergic airway inflammation in later life.",
+        "Depletion of mitochondrial H2O2 in MCAT mice abrogated HDM-induced airway tolerance.",
+        "Low-dose HDM exposure constrains lung dendritic cell numbers to establish tolerance."
+      ],
+      "captured_features": [
+        "Lung histology",
+        "Bronchoalveolar lavage (BAL) fluid cellularity",
+        "Dendritic cell subsets",
+        "Mitochondrial H2O2 production"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "allergic airway inflammation"
+      ],
+      "study_design": "Experimental animal study",
+      "data_source_type": "Laboratory/Experimental",
+      "population": "Newborn and young mice",
+      "exposure_domain": "House dust mite (HDM) allergen",
+      "limitations": [
+        "Animal model (mice)",
+        "Experimental setting"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC8943283",
+      "title": "Characterisation of lung function trajectories and associated early-life predictors in an Australian birth cohort study.",
+      "year": "2022",
+      "ehr_used": false,
+      "ehr_evidence": "The Raine Study is a large prospective cohort of 2900 pregnant women recruited from King Edward Memorial Hospital... Clinical and demographic data were collected during pregnancy and offspring assessed before birth and at 1, 2, 3, 5, 8, 10, 14, 17, 18, 20, 22, 27 and 28 years of age.",
+      "summary": "Characterization of lung function trajectories (FEV1, FVC, FEV1/FVC) from 6 to 22 years and identification of early-life predictors in an Australian birth cohort.",
+      "key_findings": [
+        "Four lung function trajectories identified",
+        "Asthma and maternal smoking identified as risk factors for low lung function trajectories",
+        "Early-life exposure to PM2.5 associated with low lung function trajectories"
+      ],
+      "captured_features": [
+        "FEV1",
+        "FVC",
+        "FEV1/FVC",
+        "asthma status",
+        "maternal smoking",
+        "PM2.5 exposure"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "chronic respiratory diseases"
+      ],
+      "study_design": "Prospective birth cohort study",
+      "data_source_type": "Prospective birth cohort",
+      "population": "1512 participants (children/young adults) from the Raine Study, Australia",
+      "exposure_domain": "maternal smoking and PM2.5 exposure",
+      "limitations": [
+        "Not explicitly stated"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC9005249",
+      "title": "Prenatal exposure to insecticides and child cardiometabolic risk factors in the VHEMBE birth cohort.",
+      "year": "2022",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses a birth cohort (VHEMBE) and peripartum biological samples, not EHR.",
+      "summary": "Study investigating the impact of prenatal exposure to DDT and pyrethroid insecticides on cardiometabolic health markers in children at 5 years of age in South Africa.",
+      "key_findings": [
+        "Maternal pyrethroid metabolites were associated with lower adiposity (reduced BMI z-scores, smaller waist circumferences, and decreased body fat percentages).",
+        "Maternal p,p’-DDT concentrations were associated with a reduction in body fat percentage."
+      ],
+      "captured_features": [
+        "Serum DDT and DDE",
+        "Urinary pyrethroid metabolites (cis-DBCA, cis-DCCA, trans-DCCA, 3-PBA)",
+        "Child height",
+        "Child weight",
+        "BMI z-scores",
+        "Body fat percentage",
+        "Waist circumference",
+        "Blood pressure"
+      ],
+      "pathologies_diseases": [
+        "Adiposity",
+        "Cardiometabolic risk factors"
+      ],
+      "study_design": "Birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "Children in Limpopo, South Africa",
+      "exposure_domain": "Insecticides (DDT, pyrethroids)",
+      "limitations": [
+        "Not specified"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC9169631",
+      "title": "Early-life exposure to hardship increased risk tolerance and entrepreneurship in adulthood with gender differences.",
+      "year": "2022",
+      "ehr_used": false,
+      "ehr_evidence": "None; the study uses geographical differences in famine intensity and weather shocks.",
+      "summary": "The study investigates how early-life hardship during China's Great Famine (1959-1961) affected adult risk tolerance and entrepreneurship, specifically looking at gender differences and the mechanism of conditioning.",
+      "key_findings": [
+        "Hardship during formative years increased risk tolerance in both men and women.",
+        "Hardship increased business ownership only among men.",
+        "The increase in entrepreneurship was at least partly due to conditioning rather than selection."
+      ],
+      "captured_features": [
+        "Famine intensity (proxied by weather shocks)",
+        "Risk tolerance",
+        "Entrepreneurship status (self-employed/business owners)",
+        "Gender"
+      ],
+      "pathologies_diseases": [],
+      "study_design": "Quasinatural experiment",
+      "data_source_type": "Geographical/Economic data",
+      "population": "Chinese population (Great Famine cohort)",
+      "exposure_domain": "Socioeconomic hardship (Great Famine)",
+      "limitations": [
+        "Specific to the historical context of China's Great Famine"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC9376253",
+      "title": "Repeatable enhancement of healthcare data with social determinants of health.",
+      "year": "2022",
+      "ehr_used": true,
+      "ehr_evidence": "linking compiled consumer data to patient records in Electronic Health Records",
+      "summary": "Development of a repeatable process to enrich Electronic Health Records (EHR) with social determinants of health (SDOH) data from commercial consumer sources.",
+      "key_findings": [
+        "SDOH factors like home-ownership, marital-status, presence of children, number of members per household, economic stability, and education were significantly different between COVID-19 positive and negative groups.",
+        "Estimated family-income and home market-value were not significantly different."
+      ],
+      "captured_features": [
+        "home-ownership",
+        "marital-status",
+        "presence of children",
+        "number of members per household",
+        "economic stability",
+        "education",
+        "family-income",
+        "home market-value"
+      ],
+      "pathologies_diseases": [
+        "COVID-19"
+      ],
+      "study_design": "proof-of-concept study",
+      "data_source_type": "EHR and commercial consumer data",
+      "population": "patients (COVID-19 positive and negative groups)",
+      "exposure_domain": "social determinants of health (SDOH)",
+      "limitations": [
+        "preliminary analysis",
+        "consumer data coverage ranged from 90% to 54%"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC9693808",
+      "title": "Maternal use of methamphetamine induces sex-dependent changes in myocardial gene expression in adult offspring.",
+      "year": "2022",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "Investigation into how prenatal methamphetamine exposure affects myocardial gene expression in adult offspring, showing sex-dependent changes.",
+      "key_findings": [
+        "Prenatal methamphetamine exposure induces sex-dependent changes in myocardial gene expression in adult offspring.",
+        "Female offspring exhibited 184 gene expression changes compared to 74 in males.",
+        "Dimethylarginine dimethylaminohydrolase 2 and 3-hydroxybutyrate dehydrogenase 1 were under-expressed in females."
+      ],
+      "captured_features": [
+        "Myocardial gene expression",
+        "Western Blot analysis",
+        "Sex-dependent differences"
+      ],
+      "pathologies_diseases": [
+        "cardiovascular disorders",
+        "heart failure",
+        "ischemic injury"
+      ],
+      "study_design": "Laboratory animal study",
+      "data_source_type": "Experimental",
+      "population": "Prenatally exposed rat offspring",
+      "exposure_domain": "Prenatal methamphetamine exposure",
+      "limitations": [
+        "Animal model study"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC9890274",
+      "title": "Quantile regression to examine the association of air pollution with subclinical atherosclerosis in an adolescent population.",
+      "year": "2022",
+      "ehr_used": true,
+      "ehr_evidence": "Dutch PIAMA birth cohort",
+      "summary": "Cross-sectional study using quantile regression to examine the association between air pollution (NO2, PM2.5, PM2.5 absorbance, PMcoarse, and ultrafine particles) and carotid intima-media thickness (CIMT) in adolescents.",
+      "key_findings": [
+        "Not provided in the text snippet"
+      ],
+      "captured_features": [
+        "CIMT",
+        "NO2",
+        "PM2.5",
+        "PM2.5 absorbance",
+        "PMcoarse",
+        "ultrafine particles",
+        "residential addresses"
+      ],
+      "pathologies_diseases": [
+        "subclinical atherosclerosis"
+      ],
+      "study_design": "cross-sectional",
+      "data_source_type": "birth cohort",
+      "population": "363 adolescents (age 16 years)",
+      "exposure_domain": "air pollution",
+      "limitations": [
+        "Results not provided in the snippet"
+      ],
+      "confidence": "medium",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10022854",
+      "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
+      "year": "2023",
+      "ehr_used": false,
+      "ehr_evidence": "The study used a neurocognitive test battery and parent-report behavioral questionnaires rather than EHR.",
+      "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes of 9-year-old children prenatally exposed to maternal cancer and its treatment.",
+      "key_findings": [
+        "Mean cognitive and behavioral outcomes were within normal ranges.",
+        "Gestational age at birth showed a positive association with Full Scale Intelligence Quotient (FSIQ).",
+        "No difference in FSIQ was found between treatment types.",
+        "Associations were observed with preterm birth, maternal death, and maternal education."
+      ],
+      "captured_features": [
+        "Full Scale Intelligence Quotient (FSIQ)",
+        "neurocognitive test scores",
+        "behavioral questionnaire results",
+        "gestational age",
+        "treatment types (chemotherapy, surgery, radiotherapy, trastuzumab)"
+      ],
+      "pathologies_diseases": [
+        "maternal cancer",
+        "preterm birth"
+      ],
+      "study_design": "multicenter cohort study (cross-sectional analysis)",
+      "data_source_type": "clinical cohort",
+      "population": "151 children (mean age 9.3 years) prenatally exposed to maternal cancer",
+      "exposure_domain": "maternal cancer and treatment during pregnancy",
+      "limitations": [
+        "Cross-sectional analysis at age 9"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10085515",
+      "title": "Evaluating Demographic Data to Improve Confidence in Equity Analytics in a Children's Hospital.",
+      "year": "2023",
+      "ehr_used": true,
+      "ehr_evidence": "the electronic health record team standardized race and ethnicity fields... all fields are sourced from the same electronic health record field.",
+      "summary": "Evaluation of demographic data collection, analysis, and visualization infrastructure to improve health equity analytics at Akron Children’s Hospital.",
+      "key_findings": [
+        "Fields were not consistently accessible across reporting tools.",
+        "All fields were sourced from the same electronic health record field when present.",
+        "Identified inconsistencies in demographic data visualization."
+      ],
+      "captured_features": [
+        "race",
+        "ethnicity",
+        "language",
+        "Child Opportunity Index 2.0",
+        "social determinants of health (SDOH)"
+      ],
+      "pathologies_diseases": [
+        "None"
+      ],
+      "study_design": "Quality improvement project",
+      "data_source_type": "EHR",
+      "population": "Pediatric patients at Akron Children’s Hospital",
+      "exposure_domain": "Demographic data and social determinants of health (SDOH)",
+      "limitations": [
+        "limitations to a seldom-populated Race 2 field"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10292782",
+      "title": "The exposome in respiratory diseases: multiple preventable risk factors from early life to adulthood.",
+      "year": "2023",
+      "ehr_used": false,
+      "ehr_evidence": "The studies reviewed use the INMA, RHINESSA, and NutriNet-Santé cohorts, which are population-based cohorts.",
+      "summary": "A journal club review of three studies investigating the impact of environmental exposures (phthalates, air pollution, and exposome profiles) on respiratory health outcomes from early life to adulthood.",
+      "key_findings": [
+        "Regulation and reduction of phthalates and air pollution are supported.",
+        "Risk reduction requires a multi-interventional approach targeting early-life factors and healthy lifestyles in adulthood."
+      ],
+      "captured_features": [
+        "Gestational phthalate exposure",
+        "air pollution",
+        "greenness",
+        "exposome profiles",
+        "lung function",
+        "asthma",
+        "rhinitis"
+      ],
+      "pathologies_diseases": [
+        "respiratory diseases",
+        "asthma",
+        "rhinitis",
+        "lung function"
+      ],
+      "study_design": "Journal club review",
+      "data_source_type": "Cohort studies",
+      "population": "Children and adults",
+      "exposure_domain": "phthalates, air pollution, greenness, exposome",
+      "limitations": [
+        "Review of only three studies",
+        "Exposome research in respiratory diseases is still in its infancy"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10373157",
+      "title": "Parental, gestational, and early-life exposure to indoor environmental hazardous factors on allergic rhinitis among preschool children in Urumqi City: a case-control study.",
+      "year": "2023",
+      "ehr_used": false,
+      "ehr_evidence": "The study used parental reports and a case-control survey design rather than electronic health records.",
+      "summary": "A case-control study investigating the association between early-life indoor environmental exposures (maternal exposure during pregnancy and child's first year) and allergic rhinitis in preschool children in Urumqi City, China.",
+      "key_findings": [
+        "Cesarean section (OR = 1.31)",
+        "Father with AR (OR = 2.67)",
+        "Mother with AR (OR = 3.70)",
+        "Mother with asthma (OR = 3.11)",
+        "Mother with newly purchased furniture during pregnancy (OR = 1.49)"
+      ],
+      "captured_features": [
+        "Parental reports of AR",
+        "Parental history of respiratory disease",
+        "Indoor environmental correlates of maternal exposure",
+        "Mode of birth",
+        "Family history of AR/asthma"
+      ],
+      "pathologies_diseases": [
+        "allergic rhinitis",
+        "asthma"
+      ],
+      "study_design": "case-control study",
+      "data_source_type": "Survey / Parental reports",
+      "population": "Preschool children in Urumqi City, China",
+      "exposure_domain": "indoor environment-related factors",
+      "limitations": [
+        "Reliance on parental reports",
+        "Case-control design"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10312866",
+      "title": "Associations of longitudinal BMI percentile classification patterns in early childhood with neighborhood-level social determinants of health.",
+      "year": "2024",
+      "ehr_used": true,
+      "ehr_evidence": "We extracted EHR data from 2012-2019 for a children’s health system that includes 2 hospitals and wide network of outpatient clinics spanning 5 East Coast states in the US.",
+      "summary": "Longitudinal analysis of BMI-percentile patterns in children aged 0-7 years and their association with neighborhood-level social determinants of health (SDOH) using EHR data.",
+      "key_findings": [
+        "Five BMI-percentile classification groups identified: always obesity, overweight most of the time, increasing, decreasing, and always normal weight.",
+        "Children in the first three groups were more likely to live in neighborhoods with higher poverty, unemployment, crowded households, single-parent households, and lower preschool enrollment."
+      ],
+      "captured_features": [
+        "BMI-percentile",
+        "27 neighborhood SDOHs",
+        "EHR data"
+      ],
+      "pathologies_diseases": [
+        "childhood obesity"
+      ],
+      "study_design": "longitudinal clustering and multinomial logistic regression",
+      "data_source_type": "EHR",
+      "population": "36,910 children aged 0-7 years in 5 East Coast states, US",
+      "exposure_domain": "neighborhood-level social determinants of health (SDOH)",
+      "limitations": [
+        "Not specified in the provided text"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10833547",
+      "title": "Correction: Neonatal blood lead concentration predicts medium term lead-related outcomes in children ≤5 years old with congenital lead poisoning: A retrospective cohort study in Northern Nigeria.",
+      "year": "2024",
+      "ehr_used": false,
+      "ehr_evidence": "None mentioned in the correction notice.",
+      "summary": "Correction notice for a retrospective cohort study on neonatal blood lead concentration and medium-term outcomes in children <5 years old in Northern Nigeria.",
+      "key_findings": [],
+      "captured_features": [],
+      "pathologies_diseases": [
+        "congenital lead poisoning"
+      ],
+      "study_design": "retrospective cohort study",
+      "data_source_type": "not specified",
+      "population": "children <5 years old with congenital lead poisoning in Northern Nigeria",
+      "exposure_domain": "lead",
+      "limitations": [],
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10870542",
+      "title": "Association between prenatal exposure to alkylphenols and intelligence quotient among preschool children: sex-specific effects.",
+      "year": "2024",
+      "ehr_used": false,
+      "ehr_evidence": "The study used the Guangxi Zhuang Birth Cohort, which is a prospective birth cohort, not an EHR or linked health data source.",
+      "summary": "The study investigated the association between prenatal exposure to alkylphenols (APs) and the intelligence quotient (IQ) of preschool children, exploring sex-specific and nonmonotonic effects.",
+      "key_findings": [
+        "Prenatal exposure to NP and 4-T-OP (second tertile) showed an inverse association with full-scale IQ (FSIQ) and working memory index (WMI).",
+        "Prenatal exposure to 4-N-NP (third tertile) showed a positive association with the fluid reasoning index in total children and girls.",
+        "A U-shaped relationship was observed between maternal 4-T-OP and WMI in total children and girls.",
+        "Combined AP mixtures above the 50th percentile exhibited an inverse trend on FSIQ in total children and girls."
+      ],
+      "captured_features": [
+        "Maternal serum concentrations of NP, 4-T-OP, 4-N-NP, and 4-n-octylphenol",
+        "Childhood IQ scores (FSIQ, WMI, fluid reasoning index)"
+      ],
+      "pathologies_diseases": [
+        "neurodevelopmental impairments",
+        "intelligence quotient (IQ)"
+      ],
+      "study_design": "Prospective birth cohort study",
+      "data_source_type": "Birth cohort",
+      "population": "221 mother-child pairs from the Guangxi Zhuang Birth Cohort",
+      "exposure_domain": "alkylphenols (APs)",
+      "limitations": [
+        "Small sample size (221 pairs)",
+        "Geographically specific cohort"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC10959921",
+      "title": "Activated fibroblasts modify keratinocyte stem niche through TET1 and IL-6 to promote their rapid transformation in a mouse model of prenatal arsenic exposure.",
+      "year": "2024",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "This study investigates the mechanism by which prenatal arsenic exposure promotes skin tumorigenesis in mouse offspring by activating dermal fibroblasts to create a pro-tumorigenic niche for keratinocyte stem cells.",
+      "key_findings": [
+        "Prenatal arsenic exposure induces activation markers (α-SMA, Fibronectin, Collagen IV) and TET1 in dermal fibroblasts.",
+        "Activated fibroblasts secrete high levels of IL-6, driven by TET1-mediated epigenetic changes.",
+        "IL-6 promotes proliferation, migration, and survival of keratinocyte stem cells via JAK2-STAT3 signaling.",
+        "IL-6 induces epithelial-to-mesenchymal transition (EMT) in keratinocyte stem cells, facilitating skin tumor development."
+      ],
+      "captured_features": [
+        "α-SMA",
+        "Fibronectin",
+        "Collagen IV",
+        "TET1",
+        "IL-6",
+        "JAK2-STAT3 signaling",
+        "EMT markers",
+        "KSC proliferation/migration/survival"
+      ],
+      "pathologies_diseases": [
+        "skin tumorigenesis",
+        "cancer"
+      ],
+      "study_design": "Experimental mouse model (in vivo/in vitro)",
+      "data_source_type": "Laboratory/Experimental",
+      "population": "BALB/c mouse offspring",
+      "exposure_domain": "arsenic",
+      "limitations": [
+        "Animal model study",
+        "Not a human epidemiological study"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC11266634",
+      "title": "Association between prenatal glucocorticoid exposure and adolescent neurodevelopment: An observational follow-up study.",
+      "year": "2024",
+      "ehr_used": false,
+      "ehr_evidence": "The study is a prospective observational follow-up study using clinical measurements rather than EHR or linked health data.",
+      "summary": "A prospective observational follow-up study investigating the long-term effects of prenatal betamethasone exposure on neurodevelopmental outcomes in adolescents.",
+      "key_findings": [
+        "No significant differences in global IQ, ADHD symptoms, metabolic markers, HPAA, or ANS activity.",
+        "Reduced electrocortical activity in the frontal brain region in the betamethasone group."
+      ],
+      "captured_features": [
+        "IQ",
+        "ADHD symptoms",
+        "metabolic markers",
+        "electrocortical activity (EEG)",
+        "HPAA activity",
+        "ANS activity"
+      ],
+      "pathologies_diseases": [
+        "ADHD",
+        "neurodevelopmental changes",
+        "metabolic markers"
+      ],
+      "study_design": "Prospective observational follow-up study",
+      "data_source_type": "Clinical study",
+      "population": "21 adolescents (14-15 years old) exposed to prenatal betamethasone and 35 reference children",
+      "exposure_domain": "Prenatal synthetic glucocorticoid (betamethasone) exposure",
+      "limitations": [
+        "Small sample size"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC11388157",
+      "title": "Newborn glomerular function and gestational particulate air pollution.",
+      "year": "2024",
+      "ehr_used": false,
+      "ehr_evidence": "The study uses the ENVIRONAGE cohort and a Dutch questionnaire rather than EHR data.",
+      "summary": "The study investigates the impact of gestational particulate air pollution (black carbon and PM2.5) on newborn glomerular function, using cord blood cystatin C as a biomarker.",
+      "key_findings": [
+        "Gestational exposure to black carbon (BC) and fine particulate matter (PM2.5) was associated with increased cord blood cystatin C levels (p < 0.01).",
+        "The strongest associations were observed from the third trimester onwards."
+      ],
+      "captured_features": [
+        "Cord blood cystatin C levels",
+        "Gestational black carbon (BC) exposure",
+        "Gestational fine particulate matter (PM2.5) exposure",
+        "Maternal covariates"
+      ],
+      "pathologies_diseases": [
+        "Glomerular function",
+        "Kidney health"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study",
+      "population": "1484 mother-child pairs in Genk, Belgium",
+      "exposure_domain": "Gestational particulate air pollution",
+      "limitations": [
+        "Single-center study",
+        "Reliance on questionnaire data"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC11502856",
+      "title": "Associations between gestational exposure to perfluoroalkyl substances, fetal growth, and the mediation effect of thyroid hormones.",
+      "year": "2024",
+      "ehr_used": false,
+      "ehr_evidence": "The study used data from the Ezhou birth cohort study, which is a cohort study, not an EHR.",
+      "summary": "The study investigated the association between maternal serum perfluoroalkyl and polyfluoroalkyl substances (PFASs) and neonatal growth metrics, specifically examining the mediating role of maternal thyroid hormones.",
+      "key_findings": [
+        "PFNA and PFHxS were negatively associated with birth length.",
+        "PFOA and PFHxS were negatively associated with birth head circumference.",
+        "Maternal free triiodothyronine (FT3) mediated 36.7% of the negative association between PFNA and birth length.",
+        "Maternal free thyroxine (FT4) mediated 30.8% of the effect of PFOA on head circumference."
+      ],
+      "captured_features": [
+        "Maternal serum PFAS concentrations",
+        "Maternal thyroid hormone levels (FT3, FT4, TSH, TT4, TT3, TG)",
+        "Birth weight",
+        "Birth length",
+        "Head circumference",
+        "Gestational age"
+      ],
+      "pathologies_diseases": [
+        "fetal growth",
+        "birth weight",
+        "birth length",
+        "head circumference"
+      ],
+      "study_design": "Cohort study",
+      "data_source_type": "Cohort study",
+      "population": "374 mother-infant pairs from the Ezhou birth cohort study (2019-2020)",
+      "exposure_domain": "perfluoroalkyl and polyfluoroalkyl substances (PFASs)",
+      "limitations": [
+        "Single cohort study"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC12362212",
+      "title": "Early Life Exposure to Manure-Fertilized Soil Shapes the Gut Antibiotic Resistome.",
+      "year": "2025",
+      "ehr_used": false,
+      "ehr_evidence": "None. The study is an experimental animal study using mice.",
+      "summary": "Experimental study investigating how early life exposure to manure-fertilized soil shapes the gut antibiotic resistome in mice.",
+      "key_findings": [
+        "Manure fertilization enriched tetracycline-resistant ARGs in both red and black soils.",
+        "Mice in these environments harbored markedly higher abundances of ARGs, particularly the tet(Q) gene.",
+        "Muribaculaceae and Bacteroidaceae were identified as key hosts of tet(Q)."
+      ],
+      "captured_features": [
+        "Gut microbiome composition",
+        "ARG abundance",
+        "tet(Q) gene abundance",
+        "soil types"
+      ],
+      "pathologies_diseases": [
+        "Antimicrobial resistance (AMR)"
+      ],
+      "study_design": "Experimental animal study",
+      "data_source_type": "Laboratory experiment",
+      "population": "Mice",
+      "exposure_domain": "Manure-fertilized soil",
+      "limitations": [
+        "Animal model",
+        "Laboratory setting"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC12381536",
+      "title": "A comprehensive atlas of the bonobo gut bacteriome and its associated host and exposome factors.",
+      "year": "2025",
+      "ehr_used": false,
+      "ehr_evidence": "No EHR used; data were collected from 644 fecal samples and direct host/exposome measurements from wild and zoo-housed bonobos.",
+      "summary": "A comprehensive atlas of the bonobo gut bacteriome and its associated host and exposome factors, comparing wild and zoo-housed populations to understand the effects of industrialization and social contact.",
+      "key_findings": [
+        "Clear differences in gut bacterial diversity and composition between wild and captive bonobos",
+        "Social contact is a stronger predictor of bacteriome similarity than genetics or other exposome factors",
+        "Maternal effects persist even in non-cohabiting mother-offspring dyads"
+      ],
+      "captured_features": [
+        "644 gut bacteriome profiles",
+        "104 host and exposome factors",
+        "age",
+        "transit time",
+        "diet",
+        "early life adversity",
+        "medication use",
+        "social contact",
+        "maternal kinship"
+      ],
+      "pathologies_diseases": [
+        "gut inflammation",
+        "metabolic disorders"
+      ],
+      "study_design": "Comparative cross-sectional study / Atlas construction",
+      "data_source_type": "Primary data collection (fecal samples and host/exposome data)",
+      "population": "212 wild and zoo-housed bonobos (Pan paniscus)",
+      "exposure_domain": "Exposome (diet, transit time, early life adversity, medication use, social contact, maternal effects)",
+      "limitations": [
+        "Non-human study (bonobos)"
+      ],
+      "confidence": "high",
+      "source_format": "xml",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC12629229",
+      "title": "Using machine learning to predict future foster care admission.",
+      "year": "2025",
+      "ehr_used": true,
+      "ehr_evidence": "We use claims data for children enrolled in a Medicaid health plan in Ohio as well as for linked adults, along with data on individual and geographic social determinants of health (SDOH) factors.",
+      "summary": "The study evaluates the use of machine learning (gradient-boosted trees) to predict future foster care admissions in children by utilizing Medicaid claims data and social determinants of health (SDOH) factors.",
+      "key_findings": [
+        "The gradient-boosted tree model identified 2408 children (1.32%) at risk of foster care admission.",
+        "The model outperformed logistic regression.",
+        "The inclusion of SDOH data significantly improved predictive accuracy, increasing the positive predictive value (PPV) from 27.44% to 84.72%."
+      ],
+      "captured_features": [
+        "Medicaid claims data",
+        "individual and geographic social determinants of health (SDOH) factors"
+      ],
+      "pathologies_diseases": [
+        "foster care admission"
+      ],
+      "study_design": "Predictive modeling using machine learning",
+      "data_source_type": "Claims data",
+      "population": "Children enrolled in a Medicaid health plan in Ohio",
+      "exposure_domain": "Social determinants of health (SDOH)",
+      "limitations": [
+        "Ethical and legal concerns regarding the use of such tools for selecting families for child welfare investigations",
+        "SDOH data was only available for 85% of the children"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC12723992",
+      "title": "Moderate prenatal alcohol exposure differentially alters acute ethanol sensitivity of GABAergic transmission in CRFR1- and CRFR1+ CeM Neurons.",
+      "year": "2025",
+      "ehr_used": false,
+      "ehr_evidence": "None",
+      "summary": "Laboratory study investigating how moderate prenatal alcohol exposure (PAE) alters acute ethanol's modulation of GABAergic neurotransmission in the central amygdala (CeM) of adult rats.",
+      "key_findings": [
+        "PAE alters acute EtOH modulation of GABA transmission in a cell-type and concentration-dependent manner.",
+        "Effects are sex-specific in adult offspring."
+      ],
+      "captured_features": [
+        "GABAergic transmission",
+        "CRFR1+ and CRFR1- neurons",
+        "acute EtOH effects",
+        "PAE effects"
+      ],
+      "pathologies_diseases": [
+        "Alcohol use disorder (AUD)",
+        "Fetal Alcohol Spectrum Disorder (FASD)"
+      ],
+      "study_design": "Laboratory animal experiment",
+      "data_source_type": "Experimental (Animal model)",
+      "population": "Adult male and female rats (P80-105)",
+      "exposure_domain": "Prenatal alcohol exposure (PAE)",
+      "limitations": [
+        "Animal model"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC12799378",
+      "title": "Sugar restriction in the first 1000 days after conception, and long-term respiratory health: a quasi-experiment study.",
+      "year": "2025",
+      "ehr_used": true,
+      "ehr_evidence": "Outcomes included incident asthma, COPD, and IPF (ascertained by health records)",
+      "summary": "A quasi-experimental study investigating the long-term impact of early-life sugar restriction (based on the 1953 UK sugar rationing) on adult respiratory health and lung function using UK Biobank data.",
+      "key_findings": [
+        "Early-life sugar rationing associated with lower risks of asthma (HR 0.75) and COPD (HR 0.73).",
+        "Delayed disease onset by ≤ 3.6 years.",
+        "Rationed participants showed higher mean FEV1%, FVC%, and FEV1/FVC ratio.",
+        "Diabetes and hypertension mediated 18.2% of the effect."
+      ],
+      "captured_features": [
+        "incident asthma",
+        "COPD",
+        "IPF",
+        "FEV1%",
+        "FVC%",
+        "FEV1/FVC ratio",
+        "demographic, socioeconomic, lifestyle, and clinical factors"
+      ],
+      "pathologies_diseases": [
+        "asthma",
+        "chronic obstructive pulmonary disease (COPD)",
+        "idiopathic pulmonary fibrosis (IPF)"
+      ],
+      "study_design": "quasi-experiment",
+      "data_source_type": "EHR / Linked health data",
+      "population": "58,670 UK Biobank participants born 1951–1956",
+      "exposure_domain": "early-life sugar restriction",
+      "limitations": [
+        "quasi-experimental design"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    },
+    {
+      "pmcid": "PMC12924340",
+      "title": "Impact of maternal fasting blood glucose in pregnancy on body composition, anthropometric, and metabolic outcomes in newborns and 3-Year-Old offspring: results from the lifestyle in pregnancy and offspring study.",
+      "year": "2026",
+      "ehr_used": false,
+      "ehr_evidence": "The analysis used data from the Lifestyle in Pregnancy (LiP) study and its 3-year follow-up, the LiPO study.",
+      "summary": "Study investigating whether maternal fasting glucose predicts offspring body composition, anthropometry, and metabolic outcomes at birth and at 3 years.",
+      "key_findings": [
+        "Higher maternal fasting glucose was associated with a higher birth weight z-score.",
+        "Glucose ≥ 5.6 mmol/L predicted higher birth weight.",
+        "No significant associations were found for BMI z-score or metabolic markers at 3 years."
+      ],
+      "captured_features": [
+        "Maternal fasting plasma glucose",
+        "Birth weight",
+        "Birth weight z-score",
+        "BMI z-score",
+        "Fat and fat-free mass",
+        "Lipids",
+        "Blood pressure"
+      ],
+      "pathologies_diseases": [
+        "Gestational diabetes mellitus",
+        "Macrosomia",
+        "Neonatal hypoglycemia",
+        "Obesity",
+        "Metabolic disorders"
+      ],
+      "study_design": "Prospective cohort study",
+      "data_source_type": "Cohort study",
+      "population": "301 women in LiP study, 157 in LiPO study, 75 children with DXA assessments",
+      "exposure_domain": "Maternal fasting glucose",
+      "limitations": [
+        "Small sample size for DXA assessments (n=75)",
+        "Non-significant trends at 3 years"
+      ],
+      "confidence": "high",
+      "source_format": "pdf",
+      "model": "unsloth/gemma-4-12B-it-qat-GGUF"
+    }
+  ]
+}

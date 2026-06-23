@@ -31,7 +31,7 @@ except Exception:
     pass
 
 from .extract import extract, pmcid_from_filename
-from .llm_client import get_client, summarize_text
+from .llm_client import get_client, summarize_text, summarize_chunked
 from .schema import ManuscriptChecklist, SummaryBatch
 
 PAPERS_DIR = Path("papers")
@@ -57,26 +57,40 @@ def discover_files() -> list[Path]:
     return files
 
 
+def find_failed() -> list[Path]:
+    """Files whose PMCID has no summary JSON yet (the failed/missing set)."""
+    done = {p.stem for p in SUMMARY_DIR.glob("*.json")}
+    return [f for f in discover_files() if pmcid_from_filename(f) not in done]
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--pmcid", help="Summarize a single paper by PMCID.")
     ap.add_argument("--limit", type=int, help="Only process the first N papers.")
     ap.add_argument("--force", action="store_true",
                     help="Re-summarize even if a cached JSON exists.")
+    ap.add_argument("--recover", action="store_true",
+                    help="Only process papers without a summary yet; fall back to "
+                         "chunked (dissect-into-two) extraction when single-shot fails.")
+    ap.add_argument("--chunked", action="store_true",
+                    help="Always use chunked extraction (dissect into chunks + merge).")
     args = ap.parse_args()
 
     SUMMARY_DIR.mkdir(parents=True, exist_ok=True)
     meta = load_metadata()
 
-    files = discover_files()
-    if args.pmcid:
+    if args.recover:
+        files = find_failed()
+    elif args.pmcid:
         pmcid = args.pmcid.upper()
         if not pmcid.startswith("PMC"):
             pmcid = f"PMC{pmcid}"
-        files = [f for f in files if pmcid_from_filename(f) == pmcid]
+        files = [f for f in discover_files() if pmcid_from_filename(f) == pmcid]
         if not files:
             print(f"No downloaded file found for {pmcid}", file=sys.stderr)
             return 1
+    else:
+        files = discover_files()
     if args.limit:
         files = files[: args.limit]
 
@@ -118,10 +132,27 @@ def main() -> int:
         print(f"  [{idx:>3}/{len(files)}] {pmcid}  {title[:50]}")
         try:
             text, src_fmt = extract(path)
-            checklist = summarize_text(
-                text=text, pmcid=pmcid, title=title, year=year,
-                source_format=src_fmt, client=client, model=model,
-            )
+            if args.chunked:
+                checklist = summarize_chunked(
+                    text=text, pmcid=pmcid, title=title, year=year,
+                    source_format=src_fmt, client=client, model=model,
+                )
+            else:
+                try:
+                    checklist = summarize_text(
+                        text=text, pmcid=pmcid, title=title, year=year,
+                        source_format=src_fmt, client=client, model=model,
+                    )
+                except Exception as single_err:
+                    if not args.recover:
+                        raise
+                    # recovery: dissect into chunks and merge
+                    print(f"           ↳ single-shot failed ({type(single_err).__name__}); "
+                          f"trying chunked recovery")
+                    checklist = summarize_chunked(
+                        text=text, pmcid=pmcid, title=title, year=year,
+                        source_format=src_fmt, client=client, model=model,
+                    )
             out_path.write_text(checklist.model_dump_json(indent=2))
             checklists.append(checklist)
             ehr = "EHR" if checklist.ehr_used else "no-EHR"
