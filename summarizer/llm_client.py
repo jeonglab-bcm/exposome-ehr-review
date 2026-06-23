@@ -31,7 +31,9 @@ DEFAULT_MODEL = "unsloth/gemma-4-12B-it-qat-GGUF"
 PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
 
 MAX_RETRIES = 3
-MAX_OUTPUT_TOKENS = 3072
+# Output token budget. Generous default so the reasoning-heavy model never
+# truncates mid-JSON; override with GEMMA_MAX_TOKENS. (Server context is 256K.)
+MAX_OUTPUT_TOKENS = int(os.environ.get("GEMMA_MAX_TOKENS", "32768"))
 # Approximate char budget for the source text sent to the model. The model
 # reasons heavily, so a tighter budget leaves tokens for the JSON output.
 SOURCE_CHAR_BUDGET = 6000
