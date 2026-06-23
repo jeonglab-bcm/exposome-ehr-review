@@ -11,15 +11,56 @@ produces a structured inventory for systematic-review work.
 ## Quick start
 
 ```bash
-make setup      # create .venv and install requests
+make setup      # create .venv and install all deps (requests, openai, pypdf, pydantic)
 make download   # run the pediatric PMC fetcher (incremental — skips what's on disk)
 make summary    # regenerate paper_summary.md + print a compact inventory
 make fresh      # clean + re-download from scratch
-make clean      # remove downloaded PDFs/XML + download log
+make clean      # remove downloaded PDFs/XML + download log + summaries
 ```
 
 `papers/` (PDFs, XML, `download_log.json`) is gitignored — only the scripts,
 Makefile, and `paper_summary.md` are tracked.
+
+## Manuscript summarization (Gemma 4 12B → Pydantic JSON)
+
+Each downloaded manuscript is summarized into a structured **checklist** by
+**Gemma 4 12B** via an external OpenAI-compatible endpoint, and validated with
+a Pydantic schema. The checklist captures the existence of EHR usage, a
+summary, key findings, captured EHR features, pathologies/diseases, and
+extended review fields.
+
+```bash
+cp .env.example .env        # fill in GEMMA_API_KEY (never committed)
+make summarize              # summarize all manuscripts -> per-paper + combined JSON
+make summarize-paper PMC=PMC7145790   # summarize one paper
+make test                   # unit tests (no live API calls)
+```
+
+**Output:**
+
+- `papers/summaries/<pmcid>.json` — one checklist per paper
+- `papers/manuscript_summaries.json` — combined file with all checklists
+
+**Checklist schema** (`summarizer/schema.py`, `ManuscriptChecklist`):
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `pmcid` / `title` / `year` | str | identity (from download log) |
+| `ehr_used` | bool | does the study use EHR/EMR/claims/admin data? |
+| `ehr_evidence` | str | sentence(s) justifying `ehr_used` |
+| `summary` | str | 2-4 sentence summary |
+| `key_findings` | list[str] | main results |
+| `captured_features` | list[str] | EHR features/variables captured |
+| `pathologies_diseases` | list[str] | disease(s)/outcome(s) |
+| `study_design` / `data_source_type` / `population` / `exposure_domain` | str | review fields |
+| `limitations` | list[str] | stated limitations |
+| `confidence` | high\|medium\|low\|unclear | fit for a pediatric EHR/exposome review |
+| `source_format` / `model` | str | provenance |
+
+The model is reasoning-heavy and wraps JSON in chain-of-thought, so the client
+uses a strict fixed-key prompt, robust fenced/balanced-JSON extraction with
+light repair for truncated responses, lenient field validators (e.g. `"Yes"` →
+`true`), and a retry-with-nudge loop on validation failure.
 
 ## Data-collection process
 
@@ -139,5 +180,6 @@ filter are discarded rather than counted as papers.
 |------|---------|
 | `fetch_pmc_papers.py` | Search + filter + download pipeline |
 | `build_summary.py` | Regenerates `paper_summary.md` from the download log |
-| `Makefile` | `setup` / `download` / `clean` / `fresh` / `summary` targets |
+| `summarizer/` | Manuscript summarization pipeline (Pydantic schema + Gemma client + extractor + runner) |
+| `Makefile` | `setup` / `download` / `clean` / `fresh` / `summary` / `summarize` / `test` targets |
 | `paper_summary.md` | Generated inventory (do not hand-edit) |
