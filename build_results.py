@@ -32,6 +32,21 @@ def top(counter: Counter, n: int = 15) -> list[tuple[str, int]]:
     return counter.most_common(n)
 
 
+def _clip(text: str, width: int) -> str:
+    """Truncate at a word boundary (never mid-word) and escape table pipes.
+
+    Avoids ugly chops like 'carbon monoxi…'; instead yields 'carbon…'.
+    """
+    s = (text or "").replace("|", "/").strip()
+    if len(s) <= width:
+        return s or "—"
+    cut = s[:width]
+    # back up to the last space so we don't split a word
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0].rstrip(" ,;:.-")
+    return cut + "…"
+
+
 def main() -> None:
     summaries = load()
     OUT_DIR.mkdir(exist_ok=True)
@@ -80,7 +95,7 @@ def main() -> None:
     for s in sorted(ehr_papers, key=lambda x: (x.get("year", ""), x["pmcid"])):
         dis = "; ".join(s.get("pathologies_diseases", []) or ["—"])
         src = (s.get("data_source_type") or "—")
-        L.append(f"| {s['pmcid']} | {s.get('year','')} | {dis[:60]} | {src[:30]} | {s['title'][:60].replace('|','/')} |")
+        L.append(f"| {s['pmcid']} | {s.get('year','')} | {dis[:60]} | {src[:30]} | {_clip(s['title'], 70)} |")
     L.append("")
     L.append("## Top pathologies / diseases")
     L.append("")
@@ -124,9 +139,9 @@ def main() -> None:
         dis = "; ".join((s.get("pathologies_diseases") or [])[:3]) or "—"
         C.append(
             f"| {i} | {s['pmcid']} | {s.get('year','')} | "
-            f"{'✓' if s.get('ehr_used') else ''} | {dis[:40]} | "
-            f"{(s.get('data_source_type') or '—')[:24]} | "
-            f"{(s.get('summary') or '')[:80].replace('|','/')} |"
+            f"{'✓' if s.get('ehr_used') else ''} | {_clip(dis, 50)} | "
+            f"{_clip(s.get('data_source_type') or '—', 30)} | "
+            f"{_clip(s.get('summary') or '', 110)} |"
         )
     C.append("")
     (OUT_DIR / "checklist.md").write_text("\n".join(C) + "\n")
