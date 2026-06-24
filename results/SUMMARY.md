@@ -13,28 +13,28 @@
 
 | PMCID | Year | Disease(s) | Data source | Title |
 |-------|------|-----------|-------------|-------|
-| PMC1566289 | 1999 | lower respiratory symptoms; upper respiratory symptoms | EHR | Air pollution and health effects: A study of medical visits  |
-| PMC1310931 | 2005 | low birth weight; intrauterine growth retardation | linked health data | Birth outcomes and prenatal exposure to ozone, carbon monoxi |
-| PMC2569100 | 2008 | neurodevelopmental milestones; musculoskeletal development | Linked health data | Prenatal exposure to perfluorooctanoate (PFOA) and perfluoro |
-| PMC2569844 | 2008 | reproductive success; prenatal undernutrition | EHR | Increased reproductive success of women after prenatal under |
-| PMC2661071 | 2009 | overweight; vaccinations; health check-ups | birth cohort / medical check-u | Regional and social differences concerning overweight, parti |
-| PMC3138772 | 2011 | birth defects; cardiac septal defects; orofacial clefts; mid | Cohort study and National Regi | Exposure to non-steroidal anti-inflammatory drugs during pre |
-| PMC3405416 | 2012 | brain tumours | Linked health data (registry)  | Childhood brain tumours and use of mobile phones: comparison |
-| PMC4158856 | 2013 | asthma; chronic inflammatory diseases; recurrent wheeze; ecz | Prospective cohort study | Deep phenotyping of the unselected COPSAC2010 birth cohort s |
-| PMC4113360 | 2014 | fertility; childbirth | National registry / Linked hea | Prenatal exposure to maternal bereavement and childbirths in |
-| PMC4293007 | 2014 | thyroxine (T4) levels | linked health data | Prenatal exposure to endocrine disrupting chemicals in relat |
-| PMC4693436 | 2015 | Lead exposure | EHR | Effectiveness of introducing point of care capillary testing |
-| PMC4744686 | 2015 | lung function; pollen allergy | birth cohort | Exposure to grass pollen--but not birch pollen--affects lung |
-| PMC4937858 | 2016 | anogenital distance (AGD) | linked health data / cohort st | Prenatal Exposure to Phthalates and Anogenital Distance in M |
-| PMC4997457 | 2016 | asthma; asthma exacerbation | linked health data | Severe and Moderate Asthma Exacerbations in Asthmatic Childr |
-| PMC5840817 | 2018 | asthma | EHR | Correction to: Early-life exposure to PM2.5 and risk of acut |
-| PMC7145790 | 2020 | type 1 diabetes | EHR / Linked health data | Childhood type 1 diabetes: an environment-wide association s |
-| PMC9376253 | 2022 | COVID-19 | EHR and commercial consumer da | Repeatable enhancement of healthcare data with social determ |
-| PMC9890274 | 2022 | subclinical atherosclerosis | birth cohort | Quantile regression to examine the association of air pollut |
-| PMC10085515 | 2023 | None | EHR | Evaluating Demographic Data to Improve Confidence in Equity  |
-| PMC10312866 | 2024 | childhood obesity | EHR | Associations of longitudinal BMI percentile classification p |
-| PMC12629229 | 2025 | foster care admission | Claims data | Using machine learning to predict future foster care admissi |
-| PMC12799378 | 2025 | asthma; chronic obstructive pulmonary disease (COPD); idiopa | EHR / Linked health data | Sugar restriction in the first 1000 days after conception, a |
+| PMC1566289 | 1999 | lower respiratory symptoms; upper respiratory symptoms | EHR | Air pollution and health effects: A study of medical visits among… |
+| PMC1310931 | 2005 | low birth weight; intrauterine growth retardation | linked health data | Birth outcomes and prenatal exposure to ozone, carbon monoxide, and… |
+| PMC2569100 | 2008 | neurodevelopmental milestones; musculoskeletal development | linked health data | Prenatal exposure to perfluorooctanoate (PFOA) and… |
+| PMC2569844 | 2008 | reproductive success; prenatal undernutrition | EHR | Increased reproductive success of women after prenatal undernutrition. |
+| PMC2661071 | 2009 | overweight; vaccinations; health check-ups | birth cohort / medical check-u | Regional and social differences concerning overweight, participation… |
+| PMC3138772 | 2011 | birth defects; cardiac septal defects; orofacial clefts; mid | Cohort study and National Regi | Exposure to non-steroidal anti-inflammatory drugs during pregnancy… |
+| PMC3405416 | 2012 | brain tumours | Linked health data (registry)  | Childhood brain tumours and use of mobile phones: comparison of a… |
+| PMC4158856 | 2013 | asthma; chronic inflammatory diseases; recurrent wheeze; ecz | Prospective cohort study | Deep phenotyping of the unselected COPSAC2010 birth cohort study. |
+| PMC4113360 | 2014 | fertility; childbirth | National registry / Linked hea | Prenatal exposure to maternal bereavement and childbirths in the… |
+| PMC4293007 | 2014 | thyroxine (T4) levels | linked health data | Prenatal exposure to endocrine disrupting chemicals in relation to… |
+| PMC4693436 | 2015 | Lead exposure | EHR | Effectiveness of introducing point of care capillary testing and… |
+| PMC4744686 | 2015 | lung function; pollen allergy | birth cohort | Exposure to grass pollen--but not birch pollen--affects lung function… |
+| PMC4937858 | 2016 | anogenital distance (AGD) | linked health data / cohort st | Prenatal Exposure to Phthalates and Anogenital Distance in Male… |
+| PMC4997457 | 2016 | asthma; asthma exacerbation | linked health data | Severe and Moderate Asthma Exacerbations in Asthmatic Children and… |
+| PMC5840817 | 2018 | asthma | EHR | Correction to: Early-life exposure to PM2.5 and risk of acute asthma… |
+| PMC7145790 | 2020 | type 1 diabetes | EHR / Linked health data | Childhood type 1 diabetes: an environment-wide association study… |
+| PMC9376253 | 2022 | COVID-19 | EHR and commercial consumer da | Repeatable enhancement of healthcare data with social determinants of… |
+| PMC9890274 | 2022 | subclinical atherosclerosis | birth cohort | Quantile regression to examine the association of air pollution with… |
+| PMC10085515 | 2023 | None | EHR | Evaluating Demographic Data to Improve Confidence in Equity Analytics… |
+| PMC10312866 | 2024 | childhood obesity | EHR | Associations of longitudinal BMI percentile classification patterns… |
+| PMC12629229 | 2025 | foster care admission | Claims data | Using machine learning to predict future foster care admission. |
+| PMC12799378 | 2025 | asthma; chronic obstructive pulmonary disease (COPD); idiopa | EHR / Linked health data | Sugar restriction in the first 1000 days after conception, and… |
 
 ## Top pathologies / diseases
 
@@ -51,7 +51,6 @@
 | low birth weight | 2 |
 | intrauterine growth retardation | 2 |
 | neurodevelopmental effects | 2 |
-| neurobehavioral dysfunction | 2 |
 | lead poisoning | 2 |
 | atopy | 2 |
 | cancer | 2 |
@@ -60,6 +59,7 @@
 | high blood pressure | 2 |
 | type 2 diabetes | 2 |
 | allergic rhinitis | 2 |
+| cough | 2 |
 
 ## Top captured EHR features / variables
 
@@ -90,8 +90,8 @@
 
 | Confidence | Papers |
 |------------|--------|
-| high | 104 |
-| medium | 3 |
+| high | 103 |
+| medium | 4 |
 | low | 9 |
 | unclear | 0 |
 
@@ -102,9 +102,9 @@
 | Cohort study | 14 |
 | Birth cohort | 14 |
 | EHR | 6 |
-| Animal model | 5 |
+| Animal model | 6 |
 | Laboratory experiment | 5 |
-| linked health data | 3 |
+| linked health data | 4 |
 | birth cohort | 3 |
 | Prospective birth cohort | 3 |
 | Clinical study | 2 |

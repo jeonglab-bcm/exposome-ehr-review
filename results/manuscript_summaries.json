@@ -483,26 +483,27 @@
       "year": "2008",
       "ehr_used": true,
       "ehr_evidence": "linking cohort members to the National Hospital Discharge Register (Copenhagen, Denmark) through use of the unique personal identification number",
-      "summary": "Study examining prenatal exposure to PFOA and PFOS and its association with neurodevelopmental and musculoskeletal milestones in infants using the Danish National Birth Cohort.",
-      "key_findings": [],
+      "summary": "Study of prenatal PFOA and PFOS exposure and its association with neurodevelopmental and musculoskeletal development in infants using the Danish National Birth Cohort.",
+      "key_findings": [
+        "Results not provided in the manuscript snippet"
+      ],
       "captured_features": [
-        "PFOA concentrations",
-        "PFOS concentrations",
-        "developmental milestones",
+        "PFOA and PFOS concentrations",
+        "maternally reported developmental milestones",
         "Apgar scores"
       ],
       "pathologies_diseases": [
         "neurodevelopmental milestones",
         "musculoskeletal development"
       ],
-      "study_design": "Birth cohort study",
-      "data_source_type": "Linked health data",
-      "population": "Pregnant women and infants in Denmark",
-      "exposure_domain": "Perfluorinated compounds (PFOA, PFOS)",
+      "study_design": "birth cohort study",
+      "data_source_type": "linked health data",
+      "population": "Danish National Birth Cohort (pregnant women and infants)",
+      "exposure_domain": "perfluorinated compounds (PFOA, PFOS)",
       "limitations": [
-        "Not specified in provided text"
+        "Results section missing from provided text"
       ],
-      "confidence": "high",
+      "confidence": "medium",
       "source_format": "pdf",
       "model": "unsloth/gemma-4-12B-it-qat-GGUF"
     },
@@ -545,27 +546,26 @@
       "title": "Influence of glutathione S-transferase polymorphisms on cognitive functioning effects induced by p,p'-DDT among preschoolers.",
       "year": "2008",
       "ehr_used": false,
-      "ehr_evidence": "Data collected via questionnaires and field work in a cohort study.",
-      "summary": "Investigation of the relationship between cord serum levels of p,p´-DDT/p,p´-DDE and GST gene polymorphisms as effect modifiers on infant neurodevelopment at 4 years of age.",
+      "ehr_evidence": "The study describes a prospective cohort (Menorca, Spain, cohort) rather than an EHR or linked health data extraction.",
+      "summary": "Study investigating the relationship between cord serum levels of p,p´-DDT/p,p´-DDE and GST gene polymorphisms as effect modifiers on infant neurodevelopment at 4 years of age.",
       "key_findings": [
-        "Aim: investigate relationship between cord serum levels of p,p´-DDT/p,p´-DDE and GST gene polymorphisms as effect modifiers on infant neurodevelopment at 4 years of age."
+        "Investigated the relationship between cord serum levels of p,p´-DDT/p,p´-DDE and GST gene polymorphisms as effect modifiers on infant neurodevelopment at 4 years of age."
       ],
       "captured_features": [
         "cord serum levels of p,p´-DDT/p,p´-DDE",
-        "GST gene polymorphisms (GSTP1, GSTM1, GSTT1)",
-        "neurodevelopmental outcomes at 4 years"
+        "GST gene polymorphisms",
+        "cognitive skills at 4 years"
       ],
       "pathologies_diseases": [
         "neurodevelopmental effects",
-        "cognitive skills",
-        "neurobehavioral dysfunction"
+        "cognitive skills impairment"
       ],
       "study_design": "prospective cohort study",
       "data_source_type": "cohort study",
       "population": "470 children in Menorca, Spain",
-      "exposure_domain": "organochlorines (p,p´-DDT/p,p´-DDE)",
+      "exposure_domain": "organochlorines (p,p´-DDT)",
       "limitations": [
-        "Manuscript text is truncated; results and limitations are not provided in the snippet."
+        "Results section is truncated in the provided text"
       ],
       "confidence": "medium",
       "source_format": "pdf",
@@ -3809,13 +3809,12 @@
       "title": "Activated fibroblasts modify keratinocyte stem niche through TET1 and IL-6 to promote their rapid transformation in a mouse model of prenatal arsenic exposure.",
       "year": "2024",
       "ehr_used": false,
-      "ehr_evidence": "None",
-      "summary": "This study investigates the mechanism by which prenatal arsenic exposure promotes skin tumorigenesis in mouse offspring by activating dermal fibroblasts to create a pro-tumorigenic niche for keratinocyte stem cells.",
+      "ehr_evidence": "None; the study is a mouse model.",
+      "summary": "The study examines how prenatal arsenic exposure leads to skin tumorigenesis in mouse offspring by activating dermal fibroblasts to create a pro-tumorigenic niche for keratinocyte stem cells.",
       "key_findings": [
-        "Prenatal arsenic exposure induces activation markers (α-SMA, Fibronectin, Collagen IV) and TET1 in dermal fibroblasts.",
-        "Activated fibroblasts secrete high levels of IL-6, driven by TET1-mediated epigenetic changes.",
-        "IL-6 promotes proliferation, migration, and survival of keratinocyte stem cells via JAK2-STAT3 signaling.",
-        "IL-6 induces epithelial-to-mesenchymal transition (EMT) in keratinocyte stem cells, facilitating skin tumor development."
+        "Prenatal arsenic exposure increases epidermal stem cell proliferation and skin tumorigenesis.",
+        "As-conditioned dermal fibroblasts show increased activation markers and IL-6 secretion.",
+        "IL-6 promotes epithelial-to-mesenchymal transition (EMT) in keratinocyte stem cells via JAK2-STAT3 signaling."
       ],
       "captured_features": [
         "α-SMA",
@@ -3824,20 +3823,19 @@
         "TET1",
         "IL-6",
         "JAK2-STAT3 signaling",
-        "EMT markers",
-        "KSC proliferation/migration/survival"
+        "EMT"
       ],
       "pathologies_diseases": [
         "skin tumorigenesis",
         "cancer"
       ],
-      "study_design": "Experimental mouse model (in vivo/in vitro)",
-      "data_source_type": "Laboratory/Experimental",
+      "study_design": "Experimental mouse model",
+      "data_source_type": "Animal model",
       "population": "BALB/c mouse offspring",
       "exposure_domain": "arsenic",
       "limitations": [
-        "Animal model study",
-        "Not a human epidemiological study"
+        "Animal model",
+        "Lack of human EHR data"
       ],
       "confidence": "high",
       "source_format": "pdf",
