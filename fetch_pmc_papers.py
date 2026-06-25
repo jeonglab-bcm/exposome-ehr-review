@@ -82,6 +82,11 @@ _PED_TERMS = (
     '"pediatrics"[Title/Abstract]'
 )
 _PEDIATRIC_TA = f'({_PED_TERMS})'
+_VACCINE_EXPOSURE_ONLY = (
+    'NOT (uptake[Title/Abstract] OR coverage[Title/Abstract] OR hesitancy[Title/Abstract] '
+    'OR attitudes[Title/Abstract] OR perceptions[Title/Abstract] OR acceptance[Title/Abstract] '
+    'OR knowledge[Title/Abstract])'
+)
 
 SEARCH_QUERIES = [
     # ── Tier 1: explicit EWAS / exposome-wide in pediatric populations ─────
@@ -117,9 +122,9 @@ SEARCH_QUERIES = [
     # asthma, BMI, infection, fever, neurodevelopment, autoimmune, SIDS).
     # No EHR term required: vaccine studies are often registry/claims/cohort
     # based and don't name 'EHR' in the abstract (same rationale as Tier 4).
-    f'(vaccine[Title/Abstract] OR vaccination[Title/Abstract] OR immunization[Title/Abstract] OR immunisation[Title/Abstract]) ({_PED_TERMS}) ("adverse event"[Title/Abstract] OR "febrile seizure"[Title/Abstract] OR "vaccine safety"[Title/Abstract] OR "vaccine-associated"[Title/Abstract]) {_FILTERS}',
-    f'(MMR[Title/Abstract] OR DTaP[Title/Abstract] OR "BCG vaccine"[Title/Abstract] OR "rotavirus vaccine"[Title/Abstract] OR "HPV vaccine"[Title/Abstract] OR "human papillomavirus vaccine"[Title/Abstract] OR "human papillomavirus vaccination"[Title/Abstract] OR "influenza vaccine"[Title/Abstract]) ({_PED_TERMS}) (febrile seizure[Title/Abstract] OR fever[Title/Abstract] OR asthma[Title/Abstract] OR infection[Title/Abstract] OR neurodevelopment[Title/Abstract] OR autoimmune[Title/Abstract]) {_FILTERS}',
-    f'("vaccine safety"[Title/Abstract] OR "vaccine schedule"[Title/Abstract] OR "vaccination schedule"[Title/Abstract]) ({_PED_TERMS}) (cohort[Title/Abstract] OR "linked data"[Title/Abstract] OR "administrative data"[Title/Abstract] OR claims[Title/Abstract]) {_FILTERS}',
+    f'(vaccine[Title/Abstract] OR vaccination[Title/Abstract] OR immunization[Title/Abstract] OR immunisation[Title/Abstract]) ({_PED_TERMS}) ("adverse event"[Title/Abstract] OR "febrile seizure"[Title/Abstract] OR "vaccine safety"[Title/Abstract] OR "vaccine-associated"[Title/Abstract]) {_VACCINE_EXPOSURE_ONLY} {_FILTERS}',
+    f'(MMR[Title] OR DTaP[Title] OR "BCG vaccine"[Title] OR "rotavirus vaccine"[Title] OR "HPV vaccine"[Title] OR "human papillomavirus vaccine"[Title] OR "human papillomavirus vaccination"[Title] OR "influenza vaccine"[Title]) ({_PED_TERMS}) ("vaccine safety"[Title/Abstract] OR safety[Title/Abstract] OR reactogenicity[Title/Abstract] OR "adverse event"[Title/Abstract] OR "febrile seizure"[Title/Abstract] OR "following immunization"[Title/Abstract]) {_VACCINE_EXPOSURE_ONLY} {_FILTERS}',
+    f'("vaccine safety"[Title/Abstract] OR "vaccine schedule"[Title/Abstract] OR "vaccination schedule"[Title/Abstract]) ({_PED_TERMS}) (cohort[Title/Abstract] OR "linked data"[Title/Abstract] OR "administrative data"[Title/Abstract] OR claims[Title/Abstract]) {_VACCINE_EXPOSURE_ONLY} {_FILTERS}',
 ]
 
 MAX_PER_QUERY = 200  # high enough to capture every hit from the broadest query
