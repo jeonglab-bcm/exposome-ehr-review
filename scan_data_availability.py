@@ -52,23 +52,47 @@ _ACCESSION_PATTERNS = [
     re.compile(r"\b(ENA[:\s]*PRJ\w+)\b", re.I),
     re.compile(r"(https?://(?:dx\.)?doi\.org/10\.5281/zenodo\.\d+)", re.I),
     re.compile(r"(https?://zenodo\.org/(?:record/|records/)?\d+)", re.I),
-    re.compile(r"(https?://github\.com/[\w.-]+/[\w.-]+)", re.I),
+    re.compile(r"(https?://github\.com/[\w.-]+/[\w.-]+(?:-[\w.-]+)*)", re.I),
     re.compile(r"(https?://figshare\.com/\S+)", re.I),
     re.compile(r"(https?://datadryad\.org/\S+)", re.I),
     re.compile(r"\b(ArrayExpress\s*E-[A-Z]{4}-\d+)\b", re.I),
 ]
 
 
+def _normalize_url_text(s: str) -> str:
+    """Repair URLs broken across PDF line wraps before matching.
+
+    pypdf often splits a URL like 'early-life-sugar-rationing-respiratory-health'
+    across lines as 'early-life-sugar -\nrationing-respiratory-health' (a hyphen
+    that belongs to the URL, surrounded by spaces and a newline). Collapse those
+    line-wrap artifacts so the URL matches as one token.
+    """
+    # 'word - \n word' inside a URL -> 'word-word' (hyphen was a URL char; drop only spaces+newline)
+    s = re.sub(r"([\w])\s*-\s*\n\s*([\w])", r"\1-\2", s)
+    # 'word-\n word' (hyphen immediately before newline) -> 'wordword' (hyphen was a wrap artifact)
+    s = re.sub(r"-\s*\n\s*", "", s)
+    return s
+
+
 def _extract_accession_links(text: str) -> list[str]:
     """Deterministic scan for accession IDs / repository URLs in the text."""
+    # Repair line-wrapped URLs across the WHOLE text first (cheap, one pass), so
+    # patterns match full URLs that pypdf split across lines.
+    text = _normalize_url_text(text)
     found: list[str] = []
     for pat in _ACCESSION_PATTERNS:
         for m in pat.finditer(text):
             val = m.group(1) if m.groups() else m.group(0)
-            val = val.strip().replace("\n", " ")
-            # normalize github blob/raw urls to the repo root
+            val = val.strip()
+            # drop a trailing blob/raw/tree/commit path segment -> repo root, but keep
+            # the full repo name (incl. hyphenated suffixes like 'early-life-sugar-...').
             if "github.com" in val:
-                val = "/".join(val.split("/")[:5])  # https://github.com/owner/repo
+                parts = val.split("/")
+                # https://github.com/owner/repo  -> keep first 5 segments (scheme+host+owner+repo)
+                # but strip trailing blob/raw/tree/etc. paths
+                if len(parts) > 5 and parts[5] in {"blob", "raw", "tree", "commit", "releases", "archive"}:
+                    parts = parts[:5]
+                val = "/".join(parts)
             if val not in found:
                 found.append(val)
     return found
@@ -352,7 +376,26 @@ def main(argv: list[str] | None = None) -> int:
     cats: Counter[str] = Counter()
     ok = failed = 0
 
+    total = len(files)
+    completed = 0
+    started = 0
+    lock = __import__("threading").Lock()
+
+    def _print_start(pmcid: str) -> None:
+        nonlocal started
+        with lock:
+            started += 1
+            print(f"  start {started:>3}/{total} {pmcid} ...", flush=True)
+
+    def _print_progress(pmcid: str, cat: str) -> None:
+        nonlocal completed
+        with lock:
+            completed += 1
+            print(f"  done  [{completed:>3}/{total}] {pmcid:<13} {cat}", flush=True)
+            cats[cat] += 1
+
     def _do(p: Path) -> tuple[str, str]:
+        _print_start(pmcid_from_filename(p))
         try:
             r = scan_one(p, summary_dir=SUMMARY_DIR, meta=meta, client=client, model=model)
             return r["pmcid"], r.get("data_availability", "not-stated")
@@ -362,8 +405,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.workers <= 1:
         for p in files:
             pmcid, cat = _do(p)
-            print(f"  {pmcid}  {cat}")
-            cats[cat] += 1
+            _print_progress(pmcid, cat)
             ok += 0 if cat.startswith("ERROR") else 1
             failed += 1 if cat.startswith("ERROR") else 0
     else:
@@ -371,8 +413,7 @@ def main(argv: list[str] | None = None) -> int:
             futs = {pool.submit(_do, p): p for p in files}
             for fut in as_completed(futs):
                 pmcid, cat = fut.result()
-                print(f"  {pmcid}  {cat}")
-                cats[cat] += 1
+                _print_progress(pmcid, cat)
                 ok += 0 if cat.startswith("ERROR") else 1
                 failed += 1 if cat.startswith("ERROR") else 0
 

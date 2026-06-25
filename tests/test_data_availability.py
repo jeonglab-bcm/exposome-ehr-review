@@ -128,3 +128,47 @@ def test_ask_llm_returns_none_on_failure(tmp_path: Path):
     out = sda.ask_llm_data_availability(client=mock_client, model="m", text="x",
                                         pmcid="PMC1", title="t", year="2020")
     assert out is None
+
+
+def test_ask_llm_recovers_markdown_field_response():
+    """Gemma sometimes ignores JSON instructions and emits markdown fields."""
+    import scan_data_availability as sda
+
+    raw = """
+* `data_availability`: "public-repository"
+* `data_accession_links`:
+  * ENA: PRJEB86099
+  * Zenodo: https://doi.org/10.5281/zenodo.14913431
+* `data_availability_statement`:
+  * "Sequencing data have been deposited at the European Nucleotide Archive under project ENA: PRJEB86099."
+"""
+    mock_client = MagicMock()
+    mock_client.chat.completions.create.return_value.choices = [
+        MagicMock(message=MagicMock(content=raw))
+    ]
+
+    out = sda.ask_llm_data_availability(
+        client=mock_client,
+        model="m",
+        text="The paper says data details are described in the availability section.",
+        pmcid="PMC1",
+        title="t",
+        year="2020",
+    )
+
+    assert out["data_availability"] == "public-repository"
+    assert "PRJEB86099" in out["data_accession_links"]
+    assert "https://doi.org/10.5281/zenodo.14913431" in out["data_accession_links"]
+    assert "Sequencing data have been deposited" in out["data_availability_statement"]
+
+
+def test_accession_link_repairs_pdf_line_wrap():
+    """A GitHub URL split across a PDF line wrap (hyphen+spaces+newline) is recovered whole."""
+    import scan_data_availability as sda
+    text = (
+        "Data availability The code is publicly available at: "
+        "https://github.com/benny817817/early-life-sugar - \n"
+        "rationing-respiratory-health . Appendix A."
+    )
+    links = sda._extract_accession_links(text)
+    assert links == ["https://github.com/benny817817/early-life-sugar-rationing-respiratory-health"]
