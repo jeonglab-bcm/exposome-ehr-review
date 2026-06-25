@@ -321,10 +321,56 @@ def pdf_from_tgz(data: bytes) -> bytes | None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def main():
+def _load_log(log_path: Path) -> dict:
+    """Load the shared download log with an advisory file lock (fcntl) so parallel
+    per-query jobs don't clobber each other. Returns the parsed dict (or {})."""
+    import fcntl
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    # ponytail: fcntl.LOCK_SH on the log file serializes reads across per-query jobs.
+    with open(log_path, "a+") as fh:
+        fcntl.flock(fh, fcntl.LOCK_SH)
+        fh.seek(0)
+        try:
+            return json.loads(fh.read() or "{}")
+        finally:
+            fcntl.flock(fh, fcntl.LOCK_UN)
+
+
+def _save_log(log_path: Path, log: dict) -> None:
+    """Write the shared log under an exclusive lock (merges per-query results)."""
+    import fcntl
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(log_path, "a+") as fh:
+        fcntl.flock(fh, fcntl.LOCK_EX)
+        fh.seek(0); existing = fh.read().strip()
+        base = json.loads(existing) if existing else {}
+        # union each list/set field so concurrent per-query runs merge
+        for k in ("downloaded","xml_only","excluded","failed","abstract_only","papers"):
+            if k in log:
+                seen = set()
+                merged = list(base.get(k, []))
+                if isinstance(log[k], list):
+                    for item in log[k]:
+                        key = json.dumps(item, sort_keys=True)
+                        if key not in seen:
+                            seen.add(key); merged.append(item)
+                base[k] = merged
+        base.update({k: v for k, v in log.items() if k not in ("downloaded","xml_only","excluded","failed","abstract_only","papers")})
+        fh.seek(0); fh.truncate(); fh.write(json.dumps(base, indent=2))
+        fcntl.flock(fh, fcntl.LOCK_UN)
+
+
+def main(argv=None):
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--query-index", type=int, default=None,
+                    help="Run ONLY SEARCH_QUERIES[N] (0-based). Lets each query run as its "
+                         "own isolated job; the shared download log converges via file locks.")
+    args = ap.parse_args(argv)
+
     OUTPUT_DIR.mkdir(exist_ok=True)
     log_path = OUTPUT_DIR / "download_log.json"
-    log = json.loads(log_path.read_text()) if log_path.exists() else {}
+    log = _load_log(log_path)
     already_done = set(log.get("downloaded", []))
 
     # ── 1. Search ──────────────────────────────────────────────────────────
@@ -332,7 +378,8 @@ def main():
     print("  SEARCHING PubMed Central (open-access filter)")
     print("=" * 65)
     all_ids: set = set()
-    for q in SEARCH_QUERIES:
+    queries = SEARCH_QUERIES if args.query_index is None else [SEARCH_QUERIES[args.query_index]]
+    for q in queries:
         label = q.split(" open access[filter]")[0].strip()
         print(f"\n  Query: {label!r}")
         all_ids.update(search_pmc(q))
@@ -505,7 +552,7 @@ def main():
         {"pmcid": f"PMC{uid}", "title": t, "journal": j, "year": y, "authors": a}
         for uid, t, j, y, a in papers
     ]
-    log_path.write_text(json.dumps(log, indent=2))
+    _save_log(log_path, log)
 
     print(f"\n{'=' * 50}")
     print(f"  Downloaded    : {downloaded}")
