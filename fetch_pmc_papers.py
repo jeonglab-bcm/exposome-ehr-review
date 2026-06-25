@@ -32,7 +32,8 @@ DELAY      = 0.4   # seconds between API calls (NCBI limit ≈ 3/sec without key
 
 # ── Search strategy ──────────────────────────────────────────────────────────
 # Goal: primary research studies that examine ENVIRONMENTAL FACTOR EXPOSURES
-# using EHR/administrative health data as the primary data source.
+# using EHR/administrative health data as the primary data source, plus
+# pediatric vaccine/immunization as an exposure (Tier 5).
 #
 # All terms use [Title/Abstract] so the concepts must appear in the abstract,
 # not just in references or acknowledgements.
@@ -109,6 +110,16 @@ SEARCH_QUERIES = [
     f'("air pollution"[Title/Abstract] OR "particulate matter"[Title/Abstract] OR PM2.5[Title/Abstract]) ({_PED_TERMS}) ("birth cohort"[Title/Abstract] OR cohort[Title/Abstract] OR "linked data"[Title/Abstract]) (asthma[Title/Abstract] OR respiratory[Title/Abstract] OR birth[Title/Abstract]) {_FILTERS}',
     f'("blood lead"[Title/Abstract] OR "chemical exposure"[Title/Abstract] OR "endocrine disruptor"[Title/Abstract]) ({_PED_TERMS}) (cohort[Title/Abstract] OR "linked data"[Title/Abstract] OR "administrative data"[Title/Abstract]) {_FILTERS}',
     f'({ _EHR_TA }) ("birth cohort"[Title/Abstract] OR "linked data"[Title/Abstract]) ({_PED_TERMS}) exposure[Title/Abstract] {_FILTERS}',
+
+    # ── Tier 5: pediatric vaccine / immunization as the exposure ──
+    # Vaccination is treated as an exposure (vaccine type / schedule / timing)
+    # predicting a pediatric health/biomarker outcome (safety, febrile seizure,
+    # asthma, BMI, infection, fever, neurodevelopment, autoimmune, SIDS).
+    # No EHR term required: vaccine studies are often registry/claims/cohort
+    # based and don't name 'EHR' in the abstract (same rationale as Tier 4).
+    f'(vaccine[Title/Abstract] OR vaccination[Title/Abstract] OR immunization[Title/Abstract] OR immunisation[Title/Abstract]) ({_PED_TERMS}) ("adverse event"[Title/Abstract] OR "febrile seizure"[Title/Abstract] OR "vaccine safety"[Title/Abstract] OR "vaccine-associated"[Title/Abstract]) {_FILTERS}',
+    f'(MMR[Title/Abstract] OR DTaP[Title/Abstract] OR "BCG vaccine"[Title/Abstract] OR rotavirus[Title/Abstract] OR HPV[Title/Abstract] OR "influenza vaccine"[Title/Abstract]) ({_PED_TERMS}) (febrile seizure[Title/Abstract] OR fever[Title/Abstract] OR asthma[Title/Abstract] OR infection[Title/Abstract] OR neurodevelopment[Title/Abstract] OR autoimmune[Title/Abstract]) {_FILTERS}',
+    f'("vaccine safety"[Title/Abstract] OR "vaccine schedule"[Title/Abstract] OR "vaccination schedule"[Title/Abstract]) ({_PED_TERMS}) (cohort[Title/Abstract] OR "linked data"[Title/Abstract] OR "administrative data"[Title/Abstract] OR claims[Title/Abstract]) {_FILTERS}',
 ]
 
 MAX_PER_QUERY = 200  # high enough to capture every hit from the broadest query

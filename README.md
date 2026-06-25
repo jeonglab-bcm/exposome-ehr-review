@@ -1,10 +1,11 @@
 # Pediatric Exposome / EWAS Literature Collection
 
 A reproducible pipeline that searches PubMed Central for **pediatric / childhood
-environmental-exposure (exposome / EWAS) studies** using EHR, administrative /
-claims, or linked cohort data, downloads the open-access full text, summarizes
-each manuscript with **Gemma 4 12B**, and captures **data-availability**
-(accession numbers / repository links) for systematic-review work.
+environmental-exposure (exposome / EWAS) studies** and **pediatric
+vaccine/immunization-exposure studies**, using EHR, administrative / claims, or
+linked cohort data, downloads the open-access full text, summarizes each
+manuscript with **Gemma 4 12B**, and captures **data-availability** (accession
+numbers / repository links) for systematic-review work.
 
 > **Current collection: 122 full-text papers**, 1990–2026, **22 EHR-based**.
 > See [`paper_summary.md`](./paper_summary.md) for the inventory.
@@ -219,6 +220,7 @@ leaking in via incidental "child" mentions.
 | 2 | Environmental exposure × EHR/claims/admin data × pediatric (all in abstract) |
 | 3 | Geospatial / area-deprivation exposure linked to pediatric EHR |
 | 4 | Birth-cohort / linked-data pediatric exposome — broadened because most pediatric exposome research does not name "EHR" in the abstract |
+| 5 | Pediatric **vaccine / immunization as the exposure** → health outcome (safety, febrile seizure, fever, asthma, infection, neurodevelopment, autoimmune); named vaccines MMR/DTaP/BCG/rotavirus/HPV/flu; exposure_domain tag `vaccine / immunization`. No EHR term required — vaccine studies are often registry/claims/cohort based |
 
 ## Full-text resolution & validation
 
