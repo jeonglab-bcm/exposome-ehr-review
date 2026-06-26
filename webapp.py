@@ -13,6 +13,7 @@ Routes:
   /api/summaries   - raw combined JSON
   /api/stats       - counts (by ehr_used, data_availability, exposure, confidence)
   /api/summary/PMC1234567 - one paper's record (from the TinyDB store)
+  /paper/PMC1234567 - local downloaded PDF/XML full text
   /search?q=asthma          - filter the table by title/summary/pmcid/disease
 """
 from __future__ import annotations
@@ -51,6 +52,15 @@ def store_record(pmcid: str) -> dict | None:
     with Store(DB_PATH) as s:
         rec = s.get(pmcid)
     return rec
+
+
+def paper_file(pmcid: str) -> Path | None:
+    pmcid = pmcid.upper()
+    for ext in ("pdf", "xml"):
+        hits = sorted((REPO_ROOT / "papers").glob(f"*{pmcid}*.{ext}"))
+        if hits:
+            return hits[0]
+    return None
 
 
 def _is_vaccine(r: dict) -> bool:
@@ -125,9 +135,14 @@ def render_table(combined: dict, q: str = "") -> str:
     def yes(v: bool) -> str:
         return "✓" if v else ""
 
+    def file_link(r: dict) -> str:
+        pmcid = str(r.get("pmcid", ""))
+        return f'<a href="/paper/{ESCAPE(pmcid)}" target="_blank">file</a>' if paper_file(pmcid) else "—"
+
     body_rows = "\n".join(
         f"<tr>"
         f'<td style="font-family:monospace"><a href="/api/summary/{r.get("pmcid","")}">{ESCAPE(str(r.get("pmcid","")))}</a></td>'
+        f"<td>{file_link(r)}</td>"
         f"<td>{ESCAPE(str(r.get('year','')))}</td>"
         f'<td>{r.get("ehr_used") and "✓ EHR" or ""}</td>'
         f"<td>{ESCAPE(str(r.get('title','')))[:90]}</td>"
@@ -185,11 +200,11 @@ def render_table(combined: dict, q: str = "") -> str:
   </form>
   <table>
     <thead><tr>
-      <th>PMCID</th><th>Year</th><th>EHR</th><th>Title</th>
+      <th>PMCID</th><th>File</th><th>Year</th><th>EHR</th><th>Title</th>
       <th>Data avail.</th><th>Mention</th><th>Available</th><th>Open</th>
       <th>Accession / links</th><th>Diseases</th><th>Exposure</th><th>Conf.</th>
     </tr></thead>
-    <tbody>{body_rows or '<tr><td colspan="12">no papers</td></tr>'}</tbody>
+    <tbody>{body_rows or '<tr><td colspan="13">no papers</td></tr>'}</tbody>
   </table>
 </main>
 </body></html>"""
@@ -229,6 +244,18 @@ class Handler(BaseHTTPRequestHandler):
                 self._json({"error": "not found", "pmcid": pmcid}, 404)
             else:
                 self._html(f"<pre>{ESCAPE(json.dumps(rec, indent=2, sort_keys=True))}</pre>")
+        elif u.path.startswith("/paper/"):
+            path = paper_file(u.path.split("/paper/", 1)[1])
+            if path is None:
+                self._json({"error": "not found"}, 404)
+                return
+            body = path.read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/pdf" if path.suffix == ".pdf" else "application/xml; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Content-Disposition", f'inline; filename="{path.name}"')
+            self.end_headers()
+            self.wfile.write(body)
         else:
             self._json({"error": "not found"}, 404)
 
