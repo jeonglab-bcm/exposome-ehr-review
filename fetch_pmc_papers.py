@@ -32,7 +32,8 @@ DELAY      = 0.4   # seconds between API calls (NCBI limit ≈ 3/sec without key
 
 # ── Search strategy ──────────────────────────────────────────────────────────
 # Goal: primary research studies that examine ENVIRONMENTAL FACTOR EXPOSURES
-# using EHR/administrative health data as the primary data source.
+# using EHR/administrative health data as the primary data source, plus
+# pediatric vaccine/immunization as an exposure (Tier 5).
 #
 # All terms use [Title/Abstract] so the concepts must appear in the abstract,
 # not just in references or acknowledgements.
@@ -81,6 +82,11 @@ _PED_TERMS = (
     '"pediatrics"[Title/Abstract]'
 )
 _PEDIATRIC_TA = f'({_PED_TERMS})'
+_VACCINE_EXPOSURE_ONLY = (
+    'NOT (uptake[Title/Abstract] OR coverage[Title/Abstract] OR hesitancy[Title/Abstract] '
+    'OR attitudes[Title/Abstract] OR perceptions[Title/Abstract] OR acceptance[Title/Abstract] '
+    'OR knowledge[Title/Abstract])'
+)
 
 SEARCH_QUERIES = [
     # ── Tier 1: explicit EWAS / exposome-wide in pediatric populations ─────
@@ -109,6 +115,16 @@ SEARCH_QUERIES = [
     f'("air pollution"[Title/Abstract] OR "particulate matter"[Title/Abstract] OR PM2.5[Title/Abstract]) ({_PED_TERMS}) ("birth cohort"[Title/Abstract] OR cohort[Title/Abstract] OR "linked data"[Title/Abstract]) (asthma[Title/Abstract] OR respiratory[Title/Abstract] OR birth[Title/Abstract]) {_FILTERS}',
     f'("blood lead"[Title/Abstract] OR "chemical exposure"[Title/Abstract] OR "endocrine disruptor"[Title/Abstract]) ({_PED_TERMS}) (cohort[Title/Abstract] OR "linked data"[Title/Abstract] OR "administrative data"[Title/Abstract]) {_FILTERS}',
     f'({ _EHR_TA }) ("birth cohort"[Title/Abstract] OR "linked data"[Title/Abstract]) ({_PED_TERMS}) exposure[Title/Abstract] {_FILTERS}',
+
+    # ── Tier 5: pediatric vaccine / immunization as the exposure ──
+    # Vaccination is treated as an exposure (vaccine type / schedule / timing)
+    # predicting a pediatric health/biomarker outcome (safety, febrile seizure,
+    # asthma, BMI, infection, fever, neurodevelopment, autoimmune, SIDS).
+    # No EHR term required: vaccine studies are often registry/claims/cohort
+    # based and don't name 'EHR' in the abstract (same rationale as Tier 4).
+    f'(vaccine[Title/Abstract] OR vaccination[Title/Abstract] OR immunization[Title/Abstract] OR immunisation[Title/Abstract]) ({_PED_TERMS}) ("adverse event"[Title/Abstract] OR "febrile seizure"[Title/Abstract] OR "vaccine safety"[Title/Abstract] OR "vaccine-associated"[Title/Abstract]) {_VACCINE_EXPOSURE_ONLY} {_FILTERS}',
+    f'(MMR[Title] OR DTaP[Title] OR "BCG vaccine"[Title] OR "rotavirus vaccine"[Title] OR "HPV vaccine"[Title] OR "human papillomavirus vaccine"[Title] OR "human papillomavirus vaccination"[Title] OR "influenza vaccine"[Title]) ({_PED_TERMS}) ("vaccine safety"[Title/Abstract] OR safety[Title/Abstract] OR reactogenicity[Title/Abstract] OR "adverse event"[Title/Abstract] OR "febrile seizure"[Title/Abstract] OR "following immunization"[Title/Abstract]) {_VACCINE_EXPOSURE_ONLY} {_FILTERS}',
+    f'("vaccine safety"[Title/Abstract] OR "vaccine schedule"[Title/Abstract] OR "vaccination schedule"[Title/Abstract]) ({_PED_TERMS}) (cohort[Title/Abstract] OR "linked data"[Title/Abstract] OR "administrative data"[Title/Abstract] OR claims[Title/Abstract]) {_VACCINE_EXPOSURE_ONLY} {_FILTERS}',
 ]
 
 MAX_PER_QUERY = 200  # high enough to capture every hit from the broadest query
@@ -310,10 +326,55 @@ def pdf_from_tgz(data: bytes) -> bytes | None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def main():
+def _load_log(log_path: Path) -> dict:
+    """Load the shared download log with an advisory file lock (fcntl) so parallel
+    per-query jobs don't clobber each other. Returns the parsed dict (or {})."""
+    import fcntl
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    # ponytail: fcntl.LOCK_SH on the log file serializes reads across per-query jobs.
+    with open(log_path, "a+") as fh:
+        fcntl.flock(fh, fcntl.LOCK_SH)
+        fh.seek(0)
+        try:
+            return json.loads(fh.read() or "{}")
+        finally:
+            fcntl.flock(fh, fcntl.LOCK_UN)
+
+
+def _save_log(log_path: Path, log: dict) -> None:
+    """Write the shared log under an exclusive lock (merges per-query results)."""
+    import fcntl
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(log_path, "a+") as fh:
+        fcntl.flock(fh, fcntl.LOCK_EX)
+        fh.seek(0); existing = fh.read().strip()
+        base = json.loads(existing) if existing else {}
+        # union each list/set field so concurrent per-query runs merge
+        for k in ("downloaded","xml_only","excluded","failed","abstract_only","papers"):
+            if k in log:
+                merged = []
+                seen = set()
+                for item in list(base.get(k, [])) + list(log[k] if isinstance(log[k], list) else []):
+                    key = json.dumps(item, sort_keys=True)
+                    if key not in seen:
+                        seen.add(key); merged.append(item)
+                base[k] = merged
+        base.update({k: v for k, v in log.items() if k not in ("downloaded","xml_only","excluded","failed","abstract_only","papers")})
+        fh.seek(0); fh.truncate(); fh.write(json.dumps(base, indent=2))
+        fcntl.flock(fh, fcntl.LOCK_UN)
+
+
+def main(argv=None):
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--query-index", type=int, default=None,
+                    help="Run ONLY SEARCH_QUERIES[N] (0-based). Lets each query run as its "
+                         "own isolated job; the shared download log converges via file locks.")
+    args = ap.parse_args(argv)
+
     OUTPUT_DIR.mkdir(exist_ok=True)
     log_path = OUTPUT_DIR / "download_log.json"
-    log = json.loads(log_path.read_text()) if log_path.exists() else {}
+    log = _load_log(log_path)
     already_done = set(log.get("downloaded", []))
 
     # ── 1. Search ──────────────────────────────────────────────────────────
@@ -321,7 +382,8 @@ def main():
     print("  SEARCHING PubMed Central (open-access filter)")
     print("=" * 65)
     all_ids: set = set()
-    for q in SEARCH_QUERIES:
+    queries = SEARCH_QUERIES if args.query_index is None else [SEARCH_QUERIES[args.query_index]]
+    for q in queries:
         label = q.split(" open access[filter]")[0].strip()
         print(f"\n  Query: {label!r}")
         all_ids.update(search_pmc(q))
@@ -494,7 +556,7 @@ def main():
         {"pmcid": f"PMC{uid}", "title": t, "journal": j, "year": y, "authors": a}
         for uid, t, j, y, a in papers
     ]
-    log_path.write_text(json.dumps(log, indent=2))
+    _save_log(log_path, log)
 
     print(f"\n{'=' * 50}")
     print(f"  Downloaded    : {downloaded}")
