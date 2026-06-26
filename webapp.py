@@ -58,6 +58,15 @@ def _is_vaccine(r: dict) -> bool:
     return "vacc" in haystack or "immuniz" in haystack or "immunis" in haystack
 
 
+def _data_flags(r: dict) -> tuple[bool, bool, bool]:
+    da = r.get("data_availability", "not-stated")
+    links = bool(r.get("data_accession_links"))
+    mentioned = bool(r.get("data_mentioned", da != "not-stated" or links))
+    available = bool(r.get("data_available", da in {"public-repository", "supplementary-only", "available-upon-request"} or links))
+    open_access = bool(r.get("data_open_access", da in {"public-repository", "supplementary-only"} or links))
+    return mentioned, available, open_access
+
+
 def stats(combined: dict) -> dict:
     rows = combined.get("summaries", [])
     from collections import Counter
@@ -66,6 +75,9 @@ def stats(combined: dict) -> dict:
         "ehr_used_true": sum(1 for r in rows if r.get("ehr_used") is True),
         "ehr_used_false": sum(1 for r in rows if r.get("ehr_used") is False),
         "vaccine_like": sum(1 for r in rows if _is_vaccine(r)),
+        "data_mentioned": sum(_data_flags(r)[0] for r in rows),
+        "data_available": sum(_data_flags(r)[1] for r in rows),
+        "data_open_access": sum(_data_flags(r)[2] for r in rows),
         "by_data_availability": dict(Counter(r.get("data_availability", "not-stated") for r in rows)),
         "by_exposure_domain": dict(Counter(r.get("exposure_domain", "unclear") for r in rows)),
         "by_confidence": dict(Counter(r.get("confidence", "unclear") for r in rows)),
@@ -110,6 +122,9 @@ def render_table(combined: dict, q: str = "") -> str:
     def diseases(r: dict) -> str:
         return ESCAPE("; ".join(r.get("pathologies_diseases", []))) or "—"
 
+    def yes(v: bool) -> str:
+        return "✓" if v else ""
+
     body_rows = "\n".join(
         f"<tr>"
         f'<td style="font-family:monospace"><a href="/api/summary/{r.get("pmcid","")}">{ESCAPE(str(r.get("pmcid","")))}</a></td>'
@@ -117,6 +132,9 @@ def render_table(combined: dict, q: str = "") -> str:
         f'<td>{r.get("ehr_used") and "✓ EHR" or ""}</td>'
         f"<td>{ESCAPE(str(r.get('title','')))[:90]}</td>"
         f"<td>{_chip(r.get('data_availability','not-stated'))}</td>"
+        f"<td>{yes(_data_flags(r)[0])}</td>"
+        f"<td>{yes(_data_flags(r)[1])}</td>"
+        f"<td>{yes(_data_flags(r)[2])}</td>"
         f"<td>{links_cell(r)}</td>"
         f"<td>{diseases(r)}</td>"
         f"<td>{ESCAPE(str(r.get('exposure_domain','')))[:24]}</td>"
@@ -168,9 +186,10 @@ def render_table(combined: dict, q: str = "") -> str:
   <table>
     <thead><tr>
       <th>PMCID</th><th>Year</th><th>EHR</th><th>Title</th>
-      <th>Data avail.</th><th>Accession / links</th><th>Diseases</th><th>Exposure</th><th>Conf.</th>
+      <th>Data avail.</th><th>Mention</th><th>Available</th><th>Open</th>
+      <th>Accession / links</th><th>Diseases</th><th>Exposure</th><th>Conf.</th>
     </tr></thead>
-    <tbody>{body_rows or '<tr><td colspan="9">no papers</td></tr>'}</tbody>
+    <tbody>{body_rows or '<tr><td colspan="12">no papers</td></tr>'}</tbody>
   </table>
 </main>
 </body></html>"""
