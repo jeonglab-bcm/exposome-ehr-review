@@ -8,7 +8,7 @@ failure.
 
 Configuration is entirely env-based so no API key is ever committed:
 
-    GEMMA_BASE_URL   default http://bioinfolder.com:8000/v1
+    GEMMA_BASE_URL   default https://llm.bioinfolder.com/v1
     GEMMA_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
     GEMMA_MODEL      default unsloth/gemma-4-12B-it-qat-GGUF
 """
@@ -26,7 +26,7 @@ from pydantic import ValidationError
 from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 
 # ── config ───────────────────────────────────────────────────────────────────
-DEFAULT_BASE_URL = "http://bioinfolder.com:8000/v1"
+DEFAULT_BASE_URL = "https://llm.bioinfolder.com/v1"
 DEFAULT_MODEL = "unsloth/gemma-4-12B-it-qat-GGUF"
 PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
 

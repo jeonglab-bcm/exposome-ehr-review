@@ -10,7 +10,7 @@ Usage:
     python -m summarizer.run --force          # re-summarize even if cached
 
 Env:
-    GEMMA_BASE_URL  default http://bioinfolder.com:8000/v1
+    GEMMA_BASE_URL  default https://llm.bioinfolder.com/v1
     GEMMA_API_KEY    required
     GEMMA_MODEL      default unsloth/gemma-4-12B-it-qat-GGUF
 """
