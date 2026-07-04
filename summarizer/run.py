@@ -12,7 +12,7 @@ Usage:
 Env:
     GEMMA_BASE_URL  default https://llm.bioinfolder.com/v1
     GEMMA_API_KEY    required
-    GEMMA_MODEL      default unsloth/gemma-4-12B-it-qat-GGUF
+    GEMMA_MODEL      default gemma4-12b-qat-gguf
 """
 from __future__ import annotations
 

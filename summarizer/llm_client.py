@@ -10,7 +10,7 @@ Configuration is entirely env-based so no API key is ever committed:
 
     GEMMA_BASE_URL   default https://llm.bioinfolder.com/v1
     GEMMA_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
-    GEMMA_MODEL      default unsloth/gemma-4-12B-it-qat-GGUF
+    GEMMA_MODEL      default gemma4-12b-qat-gguf
 """
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 
 # ── config ───────────────────────────────────────────────────────────────────
 DEFAULT_BASE_URL = "https://llm.bioinfolder.com/v1"
-DEFAULT_MODEL = "unsloth/gemma-4-12B-it-qat-GGUF"
+DEFAULT_MODEL = "gemma4-12b-qat-gguf"
 PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
 
 MAX_RETRIES = 3
