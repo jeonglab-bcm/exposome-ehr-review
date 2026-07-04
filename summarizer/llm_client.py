@@ -55,7 +55,13 @@ def get_client() -> tuple[OpenAI, str]:
     base_url = _env("GEMMA_BASE_URL", DEFAULT_BASE_URL)
     model = _env("GEMMA_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
-    return OpenAI(base_url=base_url, api_key=api_key, timeout=120.0), model
+    # Cloudflare (fronting llm.bioinfolder.com) blocks the openai SDK's default
+    # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),
+    # even with a valid API key — override it to a benign value.
+    return OpenAI(
+        base_url=base_url, api_key=api_key, timeout=120.0,
+        default_headers={"User-Agent": "exposome-ehr-review-pipeline/1.0"},
+    ), model
 
 
 # ── prompt ───────────────────────────────────────────────────────────────────
