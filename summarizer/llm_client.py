@@ -8,9 +8,9 @@ failure.
 
 Configuration is entirely env-based so no API key is ever committed:
 
-    GEMMA_BASE_URL   default http://bioinfolder.com:8000/v1
+    GEMMA_BASE_URL   default https://llm.bioinfolder.com/v1
     GEMMA_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
-    GEMMA_MODEL      default unsloth/gemma-4-12B-it-qat-GGUF
+    GEMMA_MODEL      default gemma4-12b-qat-gguf
 """
 from __future__ import annotations
 
@@ -26,8 +26,8 @@ from pydantic import ValidationError
 from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 
 # ── config ───────────────────────────────────────────────────────────────────
-DEFAULT_BASE_URL = "http://bioinfolder.com:8000/v1"
-DEFAULT_MODEL = "unsloth/gemma-4-12B-it-qat-GGUF"
+DEFAULT_BASE_URL = "https://llm.bioinfolder.com/v1"
+DEFAULT_MODEL = "gemma4-12b-qat-gguf"
 PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
 
 MAX_RETRIES = 3
@@ -55,7 +55,13 @@ def get_client() -> tuple[OpenAI, str]:
     base_url = _env("GEMMA_BASE_URL", DEFAULT_BASE_URL)
     model = _env("GEMMA_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
-    return OpenAI(base_url=base_url, api_key=api_key, timeout=120.0), model
+    # Cloudflare (fronting llm.bioinfolder.com) blocks the openai SDK's default
+    # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),
+    # even with a valid API key — override it to a benign value.
+    return OpenAI(
+        base_url=base_url, api_key=api_key, timeout=120.0,
+        default_headers={"User-Agent": "exposome-ehr-review-pipeline/1.0"},
+    ), model
 
 
 # ── prompt ───────────────────────────────────────────────────────────────────

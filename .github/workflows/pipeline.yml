@@ -24,18 +24,6 @@ jobs:
         with:
           lfs: true
 
-      # bioinfolder.com (the Gemma endpoint) is on BCM's internal network and
-      # is not reachable from GitHub-hosted runners directly. Tailscale joins
-      # this runner to the tailnet for the job's duration so it can be reached
-      # as if it were on the LAN. Requires the endpoint host (or a subnet
-      # router covering it) to already be on the tailnet — see README.
-      - name: Connect to Tailscale
-        uses: tailscale/github-action@v2
-        with:
-          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          tags: tag:ci
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -45,6 +33,8 @@ jobs:
         run: pip install requests openai pypdf pydantic python-dotenv pytest tinydb dagster
 
       - name: Run tests
+        env:
+          GEMMA_API_KEY: ${{ secrets.GEMMA_API_KEY }}
         run: pytest tests/ -q
 
       - name: Materialize pipeline (download -> summarize -> data availability -> results)

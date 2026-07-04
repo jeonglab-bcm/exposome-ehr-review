@@ -141,18 +141,13 @@ GitHub-hosted runner, triggered manually from the Actions tab (or
 pushes the updated `papers/`, `results/`, and `paper_summary.md` back to the
 branch that triggered it.
 
-The Gemma endpoint (`bioinfolder.com:8000`) is on BCM's internal network and
-not reachable from a GitHub-hosted runner directly, so the workflow joins the
-runner to a Tailscale tailnet for the duration of the job. **One-time setup
-required before the workflow can run:**
+The Gemma endpoint is served publicly at `https://llm.bioinfolder.com/v1`
+(behind Cloudflare), so a GitHub-hosted runner can reach it directly — no
+VPN/tunnel needed. **One-time setup required before the workflow can run:**
 
-1. Join the `bioinfolder.com` host (or a subnet router covering it) to a
-   Tailscale tailnet, and approve the route in the Tailscale admin console.
-2. Create a Tailscale OAuth client scoped to a tag (e.g. `tag:ci`).
-3. Add these as **repo secrets** (Settings → Secrets and variables → Actions):
-   - `GEMMA_API_KEY` — the real Gemma endpoint key
-   - `TS_OAUTH_CLIENT_ID` / `TS_OAUTH_SECRET` — the Tailscale OAuth client
-4. Optionally set `GEMMA_BASE_URL` / `GEMMA_MODEL` as repo **variables** if
+1. Add `GEMMA_API_KEY` as a **repo secret** (Settings → Secrets and
+   variables → Actions) — the real Gemma endpoint key.
+2. Optionally set `GEMMA_BASE_URL` / `GEMMA_MODEL` as repo **variables** if
    they should differ from the code defaults.
 
 `papers/*.pdf`/`*.xml`/`db.json` are tracked via **Git LFS**

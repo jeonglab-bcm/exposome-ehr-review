@@ -1,0 +1,38 @@
+{
+  "pmcid": "PMC10022854",
+  "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
+  "year": "2023",
+  "ehr_used": false,
+  "ehr_evidence": "None; the study used a neurocognitive test battery and parent-report behavioral questionnaires.",
+  "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes in 9-year-old children prenatally exposed to maternal cancer and its treatment (chemotherapy, surgery, radiotherapy).",
+  "key_findings": [
+    "Mean cognitive and behavioral outcomes were within normal ranges.",
+    "Gestational age at birth showed a positive association with Full Scale Intelligence Quotient (FSIQ).",
+    "No difference in FSIQ was found between treatment types or chemotherapeutic agents.",
+    "Associations were observed with preterm birth, maternal death, and maternal education."
+  ],
+  "captured_features": [
+    "Full Scale Intelligence Quotient (FSIQ)",
+    "neurocognitive test scores",
+    "behavioral questionnaire results",
+    "gestational age",
+    "treatment type (chemotherapy, surgery, radiotherapy, trastuzumab)"
+  ],
+  "pathologies_diseases": [
+    "maternal cancer",
+    "preterm birth"
+  ],
+  "study_design": "multicenter cohort study (cross-sectional analysis)",
+  "data_source_type": "Prospective cohort study",
+  "population": "151 children (mean age 9.3 years) prenatally exposed to maternal cancer",
+  "exposure_domain": "maternal cancer and treatment during pregnancy",
+  "limitations": [
+    "Cross-sectional analysis at a single time point (age 9)"
+  ],
+  "data_availability": "supplementary-only",
+  "data_accession_links": [],
+  "data_availability_statement": "Multiple linear regression (Data Supplement) with GA, death of mother, and parental (maternal and paternal) education level as explanatory variables shows that GA (P = .006) and maternal education level (P = .005) remained to explain FSIQ. An overview of the reported medical problems is enlisted in the Data Supplement.",
+  "confidence": "high",
+  "source_format": "xml",
+  "model": "gemma4-12b-qat-gguf"
+}

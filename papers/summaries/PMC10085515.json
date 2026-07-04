@@ -1,0 +1,37 @@
+{
+  "pmcid": "PMC10085515",
+  "title": "Evaluating Demographic Data to Improve Confidence in Equity Analytics in a Children's Hospital.",
+  "year": "2023",
+  "ehr_used": true,
+  "ehr_evidence": "the electronic health record team standardized race and ethnicity fields... all fields are sourced from the same electronic health record field.",
+  "summary": "Evaluation of demographic data collection and infrastructure at Akron Children’s Hospital to improve health equity analytics.",
+  "key_findings": [
+    "Standardized race and ethnicity fields with federal definitions.",
+    "Identified inconsistencies in reporting tools.",
+    "Provided 7 recommendations for aligning health equity data analytics."
+  ],
+  "captured_features": [
+    "race",
+    "ethnicity",
+    "language",
+    "Child Opportunity Index 2.0",
+    "social determinants of health (SDOH)"
+  ],
+  "pathologies_diseases": [
+    "health equity",
+    "social determinants of health"
+  ],
+  "study_design": "Quality improvement (QI) project / data infrastructure evaluation",
+  "data_source_type": "EHR",
+  "population": "Children at Akron Children’s Hospital",
+  "exposure_domain": "Demographic data (race, ethnicity, language, SDOH)",
+  "limitations": [
+    "limitations to a seldom-populated Race 2 field"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "high",
+  "source_format": "pdf",
+  "model": "gemma4-12b-qat-gguf"
+}
