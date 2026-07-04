@@ -1,0 +1,1905 @@
+{
+  "downloaded": [
+    "3966323",
+    "3899298",
+    "8943283",
+    "10699697",
+    "3080943",
+    "4584713",
+    "11225456",
+    "6911906",
+    "6701777",
+    "5111596",
+    "10870542",
+    "7145790",
+    "3849930",
+    "11252050",
+    "2569091",
+    "5841381",
+    "9673084",
+    "3405416",
+    "3569679",
+    "6543203",
+    "7543330",
+    "9196675",
+    "9348236",
+    "3256242",
+    "1247613",
+    "4381500",
+    "9169631",
+    "7018092",
+    "1566710",
+    "9376253",
+    "13138588",
+    "8962891",
+    "2592282",
+    "8474164",
+    "2920902",
+    "4905664",
+    "12381536",
+    "12924340",
+    "4173946",
+    "7785392",
+    "6062867",
+    "3923780",
+    "6381819",
+    "8986305",
+    "2943584",
+    "12629229",
+    "1459938",
+    "2957934",
+    "7813870",
+    "4026445",
+    "10022854",
+    "4693436",
+    "10344887",
+    "10085515",
+    "3138772",
+    "9588432",
+    "3764234",
+    "10265926",
+    "7428621",
+    "9351419",
+    "3001700",
+    "4143956",
+    "4941394",
+    "5993870",
+    "4907756",
+    "4113360",
+    "12799378",
+    "2717127",
+    "2569844",
+    "9033373",
+    "3314967",
+    "7082382",
+    "4584899",
+    "11036636",
+    "3073197",
+    "10959921",
+    "7930470",
+    "3508998",
+    "3341090",
+    "1241649",
+    "11153867",
+    "4604872",
+    "5800156",
+    "10472280",
+    "5630203",
+    "5598540",
+    "4744686",
+    "8042911",
+    "2702396",
+    "4559953",
+    "10715317",
+    "9216597",
+    "6245767",
+    "4719654",
+    "5708015",
+    "1310931",
+    "7057264",
+    "11388157",
+    "3570299",
+    "2627859",
+    "8357047",
+    "4590737",
+    "5840817",
+    "12362212",
+    "9574808",
+    "1247386",
+    "9890274",
+    "12723992",
+    "8482027",
+    "2994234",
+    "2661071",
+    "2569100",
+    "9005249",
+    "10292782",
+    "1533142",
+    "5784619",
+    "1940095",
+    "3851820",
+    "11502856",
+    "3500352",
+    "4664544",
+    "2613139",
+    "3499875",
+    "4184779",
+    "4643994",
+    "4293007",
+    "5664568",
+    "2717145",
+    "8738138",
+    "7395399",
+    "2693609",
+    "1964903",
+    "6210236",
+    "2720982",
+    "11266634",
+    "5047776",
+    "6260681",
+    "1240737",
+    "1247567",
+    "6128858",
+    "6579766",
+    "8590342",
+    "4997457",
+    "3364588",
+    "4583064",
+    "10833547",
+    "4896787",
+    "1566289",
+    "9489473",
+    "10312866",
+    "5643117",
+    "4216164",
+    "3665553",
+    "6398688",
+    "1567781",
+    "4284714",
+    "7094439",
+    "4937858",
+    "4158856",
+    "10373157",
+    "6538825",
+    "3602114",
+    "5907299",
+    "4550476",
+    "9693808",
+    "3072933"
+  ],
+  "xml_only": [
+    "PMC8943283",
+    "PMC11225456",
+    "PMC6543203",
+    "PMC9196675",
+    "PMC3256242",
+    "PMC1566710",
+    "PMC12381536",
+    "PMC7785392",
+    "PMC2957934",
+    "PMC10022854",
+    "PMC10344887",
+    "PMC5993870",
+    "PMC2569844",
+    "PMC11153867",
+    "PMC5800156",
+    "PMC10715317",
+    "PMC7057264",
+    "PMC9890274",
+    "PMC3499875",
+    "PMC8738138",
+    "PMC6210236",
+    "PMC5047776",
+    "PMC4284714",
+    "PMC5907299",
+    "PMC4550476"
+  ],
+  "excluded": [
+    {
+      "pmcid": "PMC12543987",
+      "title": "SAT-118 Untargeted Profiling of the Second Trimester Pregnancy Exposome Reveals an External Toxin Linked to Third Trimester Endocrine Disruption and Maternal Breast Cancer.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC10677646",
+      "title": "1637. Safety Evaluation of the Novel Oral Polio Vaccine Type 2 during a National Supplementary Immunisation Activity in Uganda, a Multipronged Approach: January\u2013March 2022.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6810853",
+      "title": "2592. Lung Function as an Indicator of Vaccine Enhanced RSV Disease in Cotton Rats.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6593088",
+      "title": "Phthalate Exposures, DNA Methylation and Adiposity in Mexican Children Through Adolescence.",
+      "reason": "epigenome-wide (not environment-wide)"
+    },
+    {
+      "pmcid": "PMC6545381",
+      "title": "LINE1 and Mecp2 methylation of the adult striatum and prefrontal cortex exposed to prenatal immune activation.",
+      "reason": "epigenome-wide (not environment-wide)"
+    },
+    {
+      "pmcid": "PMC7776529",
+      "title": "1393. Factors Associated with Co-administration of Pentavalent DTaP-IPV/Hib and Monovalent Hepatitis B Vaccine in the United States (US).",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC3543477",
+      "title": "Gestational environment programs adult depression-like behavior through methylation of the calcitonin gene-related peptide gene.",
+      "reason": "epigenome-wide (not environment-wide)"
+    },
+    {
+      "pmcid": "PMC11778910",
+      "title": "P-1128. Pilot Cross Sectional Demographic Study of Pediatric Patients with Reported Penicillin Allergy in a Tertiary Rural Regional Health Center.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC12864901",
+      "title": "Correction: Association between prenatal exposure to antihypertensive medication and neurodevelopmental and educational outcomes in children.",
+      "reason": "review"
+    },
+    {
+      "pmcid": "PMC11455264",
+      "title": "8347 EARLY CHILDHOOD GROWTH FOLLOWING PRE-PREGNANCY METABOLIC AND BARIATRIC SURGERY.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC8643776",
+      "title": "74. Maternal Dolutegravir (DTG) Use During Pregnancy and Birth Outcomes: The Antiretroviral Pregnancy Registry (APR).",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC13173063",
+      "title": "10 Prenatal exposure to phthalates, parabens, and phenols disrupts the neonatal metabolome measured in umbilical cord plasma.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC7208004",
+      "title": "SUN-055 Prenatal Exposure to Artificial Sweeteners.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC10166264",
+      "title": "571. A Report of the Postmarketing Spontaneous Safety Data over 24 Years for GSK\u2019s Measles-Mumps-Rubella (MMR) Vaccine.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC11454726",
+      "title": "9358 Maternal Blood Glucose And Hypothalamus Volume: Novel Insights For Intergenerational Transmission Of Endocrine Traits.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC10555343",
+      "title": "OR15-04 Accelerated Longitudinal Weight Gain Among Infants With In Utero COVID-19 Exposure.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC10678368",
+      "title": "1144. Dissociative Neurological Symptom Reactions Following COVID-19 Vaccination in Adolescents in Japan.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC12900796",
+      "title": "Poster Session II - A230\u2003CHILDHOOD EXPOSURE TO A SIBLING WITH CROHN\u2019S DISEASE ALTERS GUT MICROBIOME AND INCREASES DISEASE SUSCEPTIBILITY.",
+      "reason": "review"
+    },
+    {
+      "pmcid": "PMC5606645",
+      "title": "Intergenerational Effect of Early Life Exposure to Permethrin: Changes in Global DNA Methylation and in Nurr1 Gene Expression.",
+      "reason": "epigenome-wide (not environment-wide)"
+    },
+    {
+      "pmcid": "PMC6809165",
+      "title": "1668. No Impact of Nutritional Status on Oral Polio Vaccine shedding after Vaccination of Under 5 Children in Rural Mexico.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC10736471",
+      "title": "EARLY-LIFE EXPOSURE TO THE GREAT DEPRESSION AND THE PACE OF BIOLOGICAL AGING.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC8822921",
+      "title": "4309 Ascertaining the Medical Needs of Galveston County.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC12791222",
+      "title": "P-1600. Relationships between Anti-spike SARS-CoV-2 IgG Antibodies at Delivery, Timing of COVID-19 Vaccine Booster Doses in Pregnancy and Risk of Maternal and Infant Infections \u2013 The UK Preg-CoV Study.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6254636",
+      "title": "LB19. Progress Toward a Vaccine for Maternal Immunization to Prevent Respiratory Syncytial Virus (RSV) Lower Respiratory Tract Illness (LRTI) in Infants.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC5781383",
+      "title": "1089: Safety and Immunogenicity of DTaP-IPV (Diphtheria and Tetanus Toxoids and Acellular Pertussis Vaccine Adsorbed Combined with Inactivated Poliovirus Vaccine) Compared to DAPTACEL(\u00ae) (Diphtheria and Tetanus Toxoids and Acellular Pertussis Vaccine Adsorbed) + IPOL(\u00ae) (Poliovirus Vaccine Inactivated) as the 5th Dose in Children 4 to 6 Years of Age.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6553105",
+      "title": "SUN-093 Early Life Exposure to High Fat Diet Induces Extensive Changes in the Adult Brain.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC8089659",
+      "title": "Mechanisms Involved in Intrauterine Growth Restriction in Patients With Polycystic Ovary Syndrome: Primary and Secondary Prevention of Metabolic Syndrome and Cancer Risk in the Adult Life of Offspring.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC12900863",
+      "title": "Poster Session I \u2013 Poster of Distinction I - A78\u2003RISK OF CELIAC DISEASE AUTOIMMUNITY FROM EARLY-LIFE INFECTIONS AND ANTIMICROBIAL USE: A 10-YEAR RETROSPECTIVE BIRTH COHORT STUDY.",
+      "reason": "review"
+    },
+    {
+      "pmcid": "PMC7777369",
+      "title": "177. Safety of Measles and Pertussis-containing Vaccines in School-age Children Previously Diagnosed with Autism Spectrum Disorders.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6808991",
+      "title": "1146. Antibiotic Use in Infants Predicts Asthma Rate in Children 1\u20134 years at Fine Geographic Scale.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC11690599",
+      "title": "THE ROLE OF SOCIAL DISCONNECTION AND THE NEIGHBORHOOD EXPOSOME IN COGNITIVE DECLINE AMONG BLACK AMERICANS.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6551113",
+      "title": "MON-217 Maternal Androgen Excess and Obesity Induce Cardiac Hypertrophy and Left Ventricular Dysfunction in Female Offspring.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6809823",
+      "title": "2702. Infants Vaccinated with a Fully-Liquid DTaP-IPV-Hib-HepB Vaccine Are Protected During the High-Risk Period for Haemophilus Influenzae Type B Disease.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC12792099",
+      "title": "408. Safety and Immunogenicity of Meningococcal Serogroup B Vaccine (4CMenB) and 13-Valent Pneumococcal Vaccine (PCV13) Administered Concomitantly with Routine Infant Vaccines (RIVs) to Healthy United States (US) Infants: A Randomized Controlled Study.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC5409746",
+      "title": "Prenatal Exposure to a Maternal High-Fat Diet Affects Histone Modification of Cardiometabolic Genes in Newborn Rats.",
+      "reason": "epigenome-wide (not environment-wide)"
+    },
+    {
+      "pmcid": "PMC5632062",
+      "title": "Preventing Polio Post-eradication: Revertant Proportion Patterns of OPV Serotypes.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC12050816",
+      "title": "433 Uncovering an unexpected therapeutic target for motivational deficits following early-life exposure to SSRIs.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6253904",
+      "title": "2514. Pediatric Medically Attended Shingles in Alberta, Canada 2016; Preliminary Results.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC10735651",
+      "title": "BIODEMOGRAPHY OF AGING: INSIGHTS FROM TWINS AND THE OLDEST-OLD IN DENMARK.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC11691328",
+      "title": "LONG-TERM AND INTERGENERATIONAL EFFECTS OF EARLY-LIFE EXPOSURE TO THE 1959\u20131961 CHINESE FAMINE ON HEALTH.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC12726244",
+      "title": "Ponderal index at birth and late life DNA methylation signature and its influence in cognition function: insights from the Age, Gene/Environment Susceptibility\u2013Reykjavik Study.",
+      "reason": "epigenome-wide (not environment-wide)"
+    },
+    {
+      "pmcid": "PMC10677020",
+      "title": "2357. Descriptive Analyses of mRNA-1273 (Moderna COVID-19 vaccine) Spontaneous Reports by Geographic Regions.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC10678920",
+      "title": "1141. Incidence of adolescent syncope and related injuries following vaccination and routine venipuncture.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC11777369",
+      "title": "221. Immunogenicity and Safety Study of a Quadrivalent Meningococcal Conjugate Vaccine (MenACYW-TT) when Co-administered with Routine Pediatric Vaccines in Healthy Infants and Toddlers in the US and Puerto Rico.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC6805015",
+      "title": "2110 Prenatal near roadway air pollution exposure and early neurodevelopment in young Mexican-American children: Findings from the CHAMACOS prospective birth cohort study.",
+      "reason": "conference abstract"
+    },
+    {
+      "pmcid": "PMC7585576",
+      "title": "Hippocampal neural stem cells are more susceptible to the neurotoxin BMAA than primary neurons: effects on apoptosis, cellular differentiation, neurite outgrowth, and DNA methylation.",
+      "reason": "epigenome-wide (not environment-wide)"
+    }
+  ],
+  "failed": [
+    {
+      "pmcid": "PMC13311582",
+      "title": "326 Physician Approach to Indeterminate Clostridioides difficile Test Results."
+    },
+    {
+      "pmcid": "PMC13308082",
+      "title": "Before Birth, Beyond Childhood: Understanding the Influence of Prenatal Substance Exposure on Psychiatric Diagnoses."
+    },
+    {
+      "pmcid": "PMC8501912",
+      "title": "Adverse effects of fetal exposure of electronic-cigarettes and high-fat diet on male neonatal hearts."
+    }
+  ],
+  "abstract_only": [
+    {
+      "pmcid": "PMC12557061",
+      "title": "Prenatal Exposure to Green Spaces and Stress Levels in Toddlers: Using Hair Cortisol as a Biomarker."
+    },
+    {
+      "pmcid": "PMC10595334",
+      "title": "Asthma prevalence and environmental exposure in children and adolescent in Slovenia \u2013 a pilot study."
+    },
+    {
+      "pmcid": "PMC10595797",
+      "title": "Associations between prenatal exposure to outdoor PM2.5 and NO2 and childhood respiratory symptoms."
+    },
+    {
+      "pmcid": "PMC12557204",
+      "title": "Maternal exposome and risk of very preterm birth or fetal growth restriction: a case\u2013control study."
+    },
+    {
+      "pmcid": "PMC9193335",
+      "title": "Paradoxical Influences of Dietary Obesity in the Early Life on the Mammary Microenvironment Towards Breast Tumorigenesis in Mice."
+    },
+    {
+      "pmcid": "PMC9129669",
+      "title": "Impact of social disparities on risk factors for suicidal ideation and suicide attempt among commercially insured youth and adults in the US."
+    },
+    {
+      "pmcid": "PMC9515853",
+      "title": "P61\u2003SARS-CoV-2 vaccine safety in adolescents with inflammatory rheumatic and musculoskeletal diseases and adults with juvenile idiopathic arthritis: data from the EULAR COVAX physician-reported registry."
+    },
+    {
+      "pmcid": "PMC12555125",
+      "title": "Holistic evaluation of the urbane exposome on wheezing and chest infections: Outcome-wide approach."
+    },
+    {
+      "pmcid": "PMC12359347",
+      "title": "603. CONVERGING HUMAN-SPECIFIC EVIDENCE IMPLICATES ASTROCYTIC GLUTAMATE REGULATION IN STRESS-RELATED PSYCHIATRIC DISORDERS."
+    },
+    {
+      "pmcid": "PMC10595847",
+      "title": "Early-life droughts and cognitive performance among children in rural India."
+    },
+    {
+      "pmcid": "PMC9593734",
+      "title": "A Holistic Approach to Urban and Children\u2019s Mental Health."
+    },
+    {
+      "pmcid": "PMC10871940",
+      "title": "A18 EARLY LIFE EXPOSURE TO PARENTAL CROHN'S DISEASE IS ASSOCIATED WITH GUT MICROBIAL COMPOSITION AND FUNCTION, GUT PERMEABILITY AND INCREASED RISK OF FUTURE CROHN'S DISEASE."
+    },
+    {
+      "pmcid": "PMC9833430",
+      "title": "Predictors of delayed vaccination in infants born in Tuscany, Italy: an area based cohort study."
+    },
+    {
+      "pmcid": "PMC6258300",
+      "title": "Early-life antibiotics attenuate regulatory T cell generation and increase the severity of murine house dust mite-induced asthma."
+    },
+    {
+      "pmcid": "PMC11517623",
+      "title": "1.Y.2. Children\u2019s mental health problems explode. Can exposome research offer a solution?"
+    },
+    {
+      "pmcid": "PMC11517925",
+      "title": "Association between bisphenol A exposure and cardiometabolic outcomes: a longitudinal approach."
+    },
+    {
+      "pmcid": "PMC12556974",
+      "title": "Adverse childhood experiences and physiological wear-and-tear in adolescence."
+    },
+    {
+      "pmcid": "PMC10186940",
+      "title": "ANALYSIS OF BENEFITS AND POTENTIAL DAMAGE FROM COVID-19 VACCINATION."
+    },
+    {
+      "pmcid": "PMC10597025",
+      "title": "Exposure to sunlight and allergic morbidity in children (Pollution and Asthma Risk: an Infant Study)."
+    },
+    {
+      "pmcid": "PMC9189960",
+      "title": "Correction to: Prenatal exposure to nitrofurantoin and risk of childhood leukaemia: a registry-based cohort study in four Nordic countries."
+    },
+    {
+      "pmcid": "PMC10596984",
+      "title": "Prenatal particulate matter exposure is linked with neurobehavioral development in early life."
+    },
+    {
+      "pmcid": "PMC11518177",
+      "title": "Persistent organic pollutants and developmental trajectories of ADHD symptoms: The Rhea cohort study."
+    },
+    {
+      "pmcid": "PMC11516901",
+      "title": "Prenatal exposure to phthalates and children\u2019s mental health trajectories: Rhea Cohort, Greece."
+    },
+    {
+      "pmcid": "PMC12556682",
+      "title": "Children\u2019s respiratory symptoms and London\u2019s Ultra Low Emission Zone: the CHILL cohort study."
+    },
+    {
+      "pmcid": "PMC5887572",
+      "title": "T134. EXPOSURE TO NITROGEN DIOXIDE DURING CHILDHOOD IS ASSOCIATED WITH INCREASED RISK OF SCHIZOPHRENIA."
+    }
+  ],
+  "papers": [
+    {
+      "pmcid": "PMC3966323",
+      "title": "Long-term effects of maternal deprivation on cholinergic system in rat brain.",
+      "journal": "Biomed Res Int",
+      "year": "2014",
+      "authors": "Markovi\u0107 B, Radonji\u0107 NV"
+    },
+    {
+      "pmcid": "PMC3899298",
+      "title": "Selenium protects neonates against neurotoxicity from prenatal exposure to manganese.",
+      "journal": "PLoS One",
+      "year": "2014",
+      "authors": "Yang X, Bao Y"
+    },
+    {
+      "pmcid": "PMC8943283",
+      "title": "Characterisation of lung function trajectories and associated early-life predictors in an Australian birth cohort study.",
+      "journal": "ERJ Open Res",
+      "year": "2022",
+      "authors": "Sanna F, Locatelli F"
+    },
+    {
+      "pmcid": "PMC10699697",
+      "title": "Laboratory response to an infant with suspected measles vaccine associated fever and rash in Sri Lanka.",
+      "journal": "Infect Med (Beijing)",
+      "year": "2023",
+      "authors": "Samaraweera B, Thrimavithana MG"
+    },
+    {
+      "pmcid": "PMC3080943",
+      "title": "Prenatal exposure to perfluorinated chemicals and behavioral or coordination problems at age 7 years.",
+      "journal": "Environ Health Perspect",
+      "year": "2011",
+      "authors": "Fei C, Olsen J"
+    },
+    {
+      "pmcid": "PMC12557061",
+      "title": "Prenatal Exposure to Green Spaces and Stress Levels in Toddlers: Using Hair Cortisol as a Biomarker.",
+      "journal": "Eur J Public Health",
+      "year": "2025",
+      "authors": "Chao WC, Zou ML"
+    },
+    {
+      "pmcid": "PMC4584713",
+      "title": "Interim CDC guidance for polio vaccination for travel to and from countries affected by wild poliovirus.",
+      "journal": "MMWR Morb Mortal Wkly Rep",
+      "year": "2014",
+      "authors": "Wallace GS, Seward JF"
+    },
+    {
+      "pmcid": "PMC11225456",
+      "title": "Nasopharyngeal carriage and antibiotic susceptibility patterns of streptococcus pneumoniae, haemophilus influenzae, moraxella catarrhalis and staphylococcus aureus among urban Ugandan children post-PCV10 introduction: a cross-sectional study.",
+      "journal": "Afr Health Sci",
+      "year": "2023",
+      "authors": "Nshimiyimana T, Najjuka CF"
+    },
+    {
+      "pmcid": "PMC6911906",
+      "title": "Repeated holdout validation for weighted quantile sum regression.",
+      "journal": "MethodsX",
+      "year": "2019",
+      "authors": "Tanner EM, Bornehag CG"
+    },
+    {
+      "pmcid": "PMC6701777",
+      "title": "The effect of H1N1 vaccination on serum miRNA expression in children: A tale of caution for microRNA microarray studies.",
+      "journal": "PLoS One",
+      "year": "2019",
+      "authors": "Drury RE, Pollard AJ"
+    },
+    {
+      "pmcid": "PMC5111596",
+      "title": "Moderate Prenatal Cadmium Exposure and Adverse Birth Outcomes: a Role for Sex-Specific Differences?",
+      "journal": "Paediatr Perinat Epidemiol",
+      "year": "2016",
+      "authors": "Taylor CM, Golding J"
+    },
+    {
+      "pmcid": "PMC10870542",
+      "title": "Association between prenatal exposure to alkylphenols and intelligence quotient among preschool children: sex-specific effects.",
+      "journal": "Environ Health",
+      "year": "2024",
+      "authors": "Long J, Liang J"
+    },
+    {
+      "pmcid": "PMC10595334",
+      "title": "Asthma prevalence and environmental exposure in children and adolescent in Slovenia \u2013 a pilot study.",
+      "journal": "Eur J Public Health",
+      "year": "2023",
+      "authors": "Rejc T, Kukec A"
+    },
+    {
+      "pmcid": "PMC7145790",
+      "title": "Childhood type 1 diabetes: an environment-wide association study across England.",
+      "journal": "Diabetologia",
+      "year": "2020",
+      "authors": "Sheehan A, Freni Sterrantino A"
+    },
+    {
+      "pmcid": "PMC3849930",
+      "title": "Exposure to the Chinese famine in early life and the risk of anaemia in adulthood.",
+      "journal": "BMC Public Health",
+      "year": "2013",
+      "authors": "Shi Z, Zhang C"
+    },
+    {
+      "pmcid": "PMC13311582",
+      "title": "326 Physician Approach to Indeterminate Clostridioides difficile Test Results.",
+      "journal": "Antimicrob Steward Healthc Epidemiol",
+      "year": "2026",
+      "authors": "Mazade M, Rychlik S"
+    },
+    {
+      "pmcid": "PMC11252050",
+      "title": "The Epidemiological Characteristics and Spatiotemporal Clustering of Measles - China, 2005-2022.",
+      "journal": "China CDC Wkly",
+      "year": "2024",
+      "authors": "Liu Q, Li J"
+    },
+    {
+      "pmcid": "PMC2569091",
+      "title": "Association between traffic-related black carbon exposure and lung function among urban women.",
+      "journal": "Environ Health Perspect",
+      "year": "2008",
+      "authors": "Franco Suglia S, Gryparis A"
+    },
+    {
+      "pmcid": "PMC5841381",
+      "title": "Low-fidelity Venezuelan equine encephalitis virus polymerase mutants to improve live-attenuated vaccine safety and efficacy.",
+      "journal": "Virus Evol",
+      "year": "2018",
+      "authors": "Kautz TF, Guerbois M"
+    },
+    {
+      "pmcid": "PMC9673084",
+      "title": "Open-label phase I/II clinical trial of SARS-CoV-2 receptor binding domain-tetanus toxoid conjugate vaccine (FINLAY-FR-2) in combination with receptor binding domain-protein vaccine (FINLAY-FR-1A) in children.",
+      "journal": "Int J Infect Dis",
+      "year": "2023",
+      "authors": "Puga-G\u00f3mez R, Ricardo-Delgado Y"
+    },
+    {
+      "pmcid": "PMC3405416",
+      "title": "Childhood brain tumours and use of mobile phones: comparison of a case-control study with incidence data.",
+      "journal": "Environ Health",
+      "year": "2012",
+      "authors": "Aydin D, Feychting M"
+    },
+    {
+      "pmcid": "PMC3569679",
+      "title": "Prenatal p,p\u00b4-DDE exposure and neurodevelopment among children 3.5-5 years of age.",
+      "journal": "Environ Health Perspect",
+      "year": "2013",
+      "authors": "Torres-S\u00e1nchez L, Schnaas L"
+    },
+    {
+      "pmcid": "PMC10595797",
+      "title": "Associations between prenatal exposure to outdoor PM2.5 and NO2 and childhood respiratory symptoms.",
+      "journal": "Eur J Public Health",
+      "year": "2023",
+      "authors": "Patlan Hernandez AR, Audureau E"
+    },
+    {
+      "pmcid": "PMC6543203",
+      "title": "Dietary Patterns Are Not Consistently Associated with Variability in Blood Lead Concentrations in Pregnant British Women.",
+      "journal": "J Nutr",
+      "year": "2019",
+      "authors": "Taylor CM, Doerner R"
+    },
+    {
+      "pmcid": "PMC7543330",
+      "title": "Warp Speed for Coronavirus Disease 2019 (COVID-19) Vaccines: Why Are Children Stuck in Neutral?",
+      "journal": "Clin Infect Dis",
+      "year": "2021",
+      "authors": "Anderson EJ, Campbell JD"
+    },
+    {
+      "pmcid": "PMC9196675",
+      "title": "Willingness toward COVID-19 vaccination, coadministration with other vaccines and receive a COVID-19 vaccine booster: a cross-sectional study on the guardians of children in China.",
+      "journal": "Hum Vaccin Immunother",
+      "year": "2022",
+      "authors": "Ma L, Yang J"
+    },
+    {
+      "pmcid": "PMC9348236",
+      "title": "Acute appendicitis in a patient immunised with COVID-19 vaccine: A case report with morphological analysis.",
+      "journal": "Br J Clin Pharmacol",
+      "year": "2023",
+      "authors": "Marconi E, Crescioli G"
+    },
+    {
+      "pmcid": "PMC3256242",
+      "title": "An integrated, multistudy analysis of the safety of Ann Arbor strain live attenuated influenza vaccine in children aged 2-17 years.",
+      "journal": "Influenza Other Respir Viruses",
+      "year": "2011",
+      "authors": "Ambrose CS, Yi T"
+    },
+    {
+      "pmcid": "PMC12557204",
+      "title": "Maternal exposome and risk of very preterm birth or fetal growth restriction: a case\u2013control study.",
+      "journal": "Eur J Public Health",
+      "year": "2025",
+      "authors": "Farina S, Maio A"
+    },
+    {
+      "pmcid": "PMC1247613",
+      "title": "Blood lead changes during pregnancy and postpartum with calcium supplementation.",
+      "journal": "Environ Health Perspect",
+      "year": "2004",
+      "authors": "Gulson BL, Mizon KJ"
+    },
+    {
+      "pmcid": "PMC4381500",
+      "title": "Gender-specific mortality in DTP-IPV- and MMR\u00b1MenC-eligible age groups to determine possible sex-differential effects of vaccination: an observational study.",
+      "journal": "BMC Infect Dis",
+      "year": "2015",
+      "authors": "Schurink-van't Klooster TM, Knol MJ"
+    },
+    {
+      "pmcid": "PMC9169631",
+      "title": "Early-life exposure to hardship increased risk tolerance and entrepreneurship in adulthood with gender differences.",
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": "2022",
+      "authors": "Yi J, Chu J"
+    },
+    {
+      "pmcid": "PMC7018092",
+      "title": "Serious adverse event: late neurotropic disease associated with yellow fever vaccine.",
+      "journal": "Einstein (Sao Paulo)",
+      "year": "2020",
+      "authors": "Oliveira HSB, Araujo PP"
+    },
+    {
+      "pmcid": "PMC1566710",
+      "title": "Minority children at risk from ETS.",
+      "journal": "Environ Health Perspect",
+      "year": "1999",
+      "authors": ""
+    },
+    {
+      "pmcid": "PMC9376253",
+      "title": "Repeatable enhancement of healthcare data with social determinants of health.",
+      "journal": "Front Big Data",
+      "year": "2022",
+      "authors": "Greer ML, Zayas CE"
+    },
+    {
+      "pmcid": "PMC13138588",
+      "title": "Maternal exposure to cyclophosphamide during prepubertal life does not affect the cryosusceptibility of in vitro derived mouse embryos.",
+      "journal": "Reprod Fertil",
+      "year": "2026",
+      "authors": "Predheepan D, Salian SR"
+    },
+    {
+      "pmcid": "PMC8962891",
+      "title": "Vaccine-Associated Measles Encephalitis in Immunocompromised Child, California, USA.",
+      "journal": "Emerg Infect Dis",
+      "year": "2022",
+      "authors": "Costales C, Sahoo MK"
+    },
+    {
+      "pmcid": "PMC9193335",
+      "title": "Paradoxical Influences of Dietary Obesity in the Early Life on the Mammary Microenvironment Towards Breast Tumorigenesis in Mice.",
+      "journal": "Curr Dev Nutr",
+      "year": "2022",
+      "authors": "Tang Y, Lin TC"
+    },
+    {
+      "pmcid": "PMC2592282",
+      "title": "Influence of glutathione S-transferase polymorphisms on cognitive functioning effects induced by p,p'-DDT among preschoolers.",
+      "journal": "Environ Health Perspect",
+      "year": "2008",
+      "authors": "Morales E, Sunyer J"
+    },
+    {
+      "pmcid": "PMC8474164",
+      "title": "Maternal high-fat diet modifies myelin organization, microglial interactions, and results in social memory and sensorimotor gating deficits in adolescent mouse offspring.",
+      "journal": "Brain Behav Immun Health",
+      "year": "2021",
+      "authors": "Bordeleau M, Fern\u00e1ndez de Coss\u00edo L"
+    },
+    {
+      "pmcid": "PMC2920902",
+      "title": "Childhood incident asthma and traffic-related air pollution at home and school.",
+      "journal": "Environ Health Perspect",
+      "year": "2010",
+      "authors": "McConnell R, Islam T"
+    },
+    {
+      "pmcid": "PMC4905664",
+      "title": "Is There a Causal Relation between Maternal Acetaminophen Administration and ADHD?",
+      "journal": "PLoS One",
+      "year": "2016",
+      "authors": "Saad A, Hegde S"
+    },
+    {
+      "pmcid": "PMC12381536",
+      "title": "A comprehensive atlas of the bonobo gut bacteriome and its associated host and exposome factors.",
+      "journal": "Cell Rep",
+      "year": "2025",
+      "authors": "Torfs JRR, Kreyer M"
+    },
+    {
+      "pmcid": "PMC12924340",
+      "title": "Impact of maternal fasting blood glucose in pregnancy on body composition, anthropometric, and metabolic outcomes in newborns and 3-Year-Old offspring: results from the lifestyle in pregnancy and offspring study.",
+      "journal": "BMC Pregnancy Childbirth",
+      "year": "2026",
+      "authors": "Luef BM, Stentebjerg LL"
+    },
+    {
+      "pmcid": "PMC4173946",
+      "title": "An unusual case of vaccine-associated paralytic poliomyelitis.",
+      "journal": "Can J Infect Dis Med Microbiol",
+      "year": "2014",
+      "authors": "Desai S, Diener T"
+    },
+    {
+      "pmcid": "PMC7785392",
+      "title": "Long-Term Effects of Environmental Lead on Erythropoietin Production in Young Adults: A Follow-Up Study of a Prospective Cohort in Kosovo.",
+      "journal": "J Environ Public Health",
+      "year": "2020",
+      "authors": "Camaj PR, Graziano JH"
+    },
+    {
+      "pmcid": "PMC6062867",
+      "title": "Occupational exposure to organic solvents during pregnancy and childhood behavior: findings from the PELAGIE birth cohort (France, 2002-2013).",
+      "journal": "Environ Health",
+      "year": "2018",
+      "authors": "Costet N, B\u00e9ranger R"
+    },
+    {
+      "pmcid": "PMC3923780",
+      "title": "Prenatal exposure to organophosphate pesticides and neurobehavioral development of neonates: a birth cohort study in Shenyang, China.",
+      "journal": "PLoS One",
+      "year": "2014",
+      "authors": "Zhang Y, Han S"
+    },
+    {
+      "pmcid": "PMC6381819",
+      "title": "Prenatal Exposure to Select Phthalates and Phenols and Associations with Fetal and Placental Weight among Male Births in the EDEN Cohort (France).",
+      "journal": "Environ Health Perspect",
+      "year": "2019",
+      "authors": "Philippat C, Heude B"
+    },
+    {
+      "pmcid": "PMC8986305",
+      "title": "Safety profile comparison of chimeric live attenuated and Vero cell-derived inactivated Japanese encephalitis vaccines through an active surveillance system in Australia.",
+      "journal": "Hum Vaccin Immunother",
+      "year": "2022",
+      "authors": "Islam N, Lau C"
+    },
+    {
+      "pmcid": "PMC2943584",
+      "title": "Efficacy of the pentavalent rotavirus vaccine, RotaTeq\u00ae, in Finnish infants up to 3\u00a0years of age: the Finnish Extension Study.",
+      "journal": "Eur J Pediatr",
+      "year": "2010",
+      "authors": "Vesikari T, Karvonen A"
+    },
+    {
+      "pmcid": "PMC12629229",
+      "title": "Using machine learning to predict future foster care admission.",
+      "journal": "Health Aff Sch",
+      "year": "2025",
+      "authors": "Ne'eman A, Brooks A"
+    },
+    {
+      "pmcid": "PMC1459938",
+      "title": "Reduced intellectual development in children with prenatal lead exposure.",
+      "journal": "Environ Health Perspect",
+      "year": "2006",
+      "authors": "Schnaas L, Rothenberg SJ"
+    },
+    {
+      "pmcid": "PMC2957934",
+      "title": "Temporal and spatial patterns of ambient endotoxin concentrations in Fresno, California.",
+      "journal": "Environ Health Perspect",
+      "year": "2010",
+      "authors": "Tager IB, Lurmann FW"
+    },
+    {
+      "pmcid": "PMC7813870",
+      "title": "DNA methylome signatures of prenatal exposure to synthetic glucocorticoids in hippocampus and peripheral whole blood of female guinea pigs in early life.",
+      "journal": "Transl Psychiatry",
+      "year": "2021",
+      "authors": "Sasaki A, Eng ME"
+    },
+    {
+      "pmcid": "PMC4026445",
+      "title": "Determining prenatal, early childhood and cumulative long-term lead exposure using micro-spatial deciduous dentine levels.",
+      "journal": "PLoS One",
+      "year": "2014",
+      "authors": "Arora M, Austin C"
+    },
+    {
+      "pmcid": "PMC10022854",
+      "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
+      "journal": "J Clin Oncol",
+      "year": "2023",
+      "authors": "Van Assche IA, Huis In 't Veld EA"
+    },
+    {
+      "pmcid": "PMC4693436",
+      "title": "Effectiveness of introducing point of care capillary testing and linking screening with routine appointments for increasing blood lead screening rates of young children: a before-after study.",
+      "journal": "Arch Public Health",
+      "year": "2015",
+      "authors": "Boreland F, Lyle D"
+    },
+    {
+      "pmcid": "PMC10344887",
+      "title": "Memory-like innate response to booster vaccination with MF-59 adjuvanted influenza vaccine in children.",
+      "journal": "NPJ Vaccines",
+      "year": "2023",
+      "authors": "Kazmin D, Clutterbuck EA"
+    },
+    {
+      "pmcid": "PMC13308082",
+      "title": "Before Birth, Beyond Childhood: Understanding the Influence of Prenatal Substance Exposure on Psychiatric Diagnoses.",
+      "journal": "medRxiv",
+      "year": "2026",
+      "authors": "Caola L, Dastin-Van Rijn E"
+    },
+    {
+      "pmcid": "PMC9129669",
+      "title": "Impact of social disparities on risk factors for suicidal ideation and suicide attempt among commercially insured youth and adults in the US.",
+      "journal": "Indian J Psychiatry",
+      "year": "2022",
+      "authors": "Xi W, Banerjee S"
+    },
+    {
+      "pmcid": "PMC10085515",
+      "title": "Evaluating Demographic Data to Improve Confidence in Equity Analytics in a Children's Hospital.",
+      "journal": "Pediatr Qual Saf",
+      "year": "2023",
+      "authors": "Straus AM, Hayes A"
+    },
+    {
+      "pmcid": "PMC3138772",
+      "title": "Exposure to non-steroidal anti-inflammatory drugs during pregnancy and the risk of selected birth defects: a prospective cohort study.",
+      "journal": "PLoS One",
+      "year": "2011",
+      "authors": "van Gelder MM, Roeleveld N"
+    },
+    {
+      "pmcid": "PMC9588432",
+      "title": "Traffic-related air pollution and respiratory symptoms in children living along trunk roads in Chiba Prefecture, Japan.",
+      "journal": "J Epidemiol",
+      "year": "2003",
+      "authors": "Shima M, Nitta Y"
+    },
+    {
+      "pmcid": "PMC3764234",
+      "title": "Environmental factors predicting blood lead levels in pregnant women in the UK: the ALSPAC study.",
+      "journal": "PLoS One",
+      "year": "2013",
+      "authors": "Taylor CM, Golding J"
+    },
+    {
+      "pmcid": "PMC10265926",
+      "title": "Evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women.",
+      "journal": "IJID Reg",
+      "year": "2023",
+      "authors": "Terezia H, Zuzana K"
+    },
+    {
+      "pmcid": "PMC7428621",
+      "title": "Early-Life Famine Exposure and Risk of Cardiovascular Diseases in Later Life: Findings From the REACTION Study.",
+      "journal": "J Am Heart Assoc",
+      "year": "2020",
+      "authors": "Du R, Zheng R"
+    },
+    {
+      "pmcid": "PMC9351419",
+      "title": "Active surveillance of adverse events after immunization (AEFI) from the Local Health Unitof Ferrara, Italy.",
+      "journal": "J Prev Med Hyg",
+      "year": "2022",
+      "authors": "Marra A, Donzelli A"
+    },
+    {
+      "pmcid": "PMC9515853",
+      "title": "P61\u2003SARS-CoV-2 vaccine safety in adolescents with inflammatory rheumatic and musculoskeletal diseases and adults with juvenile idiopathic arthritis: data from the EULAR COVAX physician-reported registry.",
+      "journal": "Rheumatol Adv Pract",
+      "year": "2022",
+      "authors": "Lawson-Tovey S, Machado P"
+    },
+    {
+      "pmcid": "PMC3001700",
+      "title": "Impact of air pollution on pulmonary function and respiratory symptoms in children. Longitudinal repeated-measures study.",
+      "journal": "BMC Pulm Med",
+      "year": "2010",
+      "authors": "Linares B, Guizar JM"
+    },
+    {
+      "pmcid": "PMC4143956",
+      "title": "Quantity and diversity of environmental microbial exposure and development of asthma: a birth cohort study.",
+      "journal": "Allergy",
+      "year": "2014",
+      "authors": "Karvonen AM, Hyv\u00e4rinen A"
+    },
+    {
+      "pmcid": "PMC4941394",
+      "title": "Safety and immunogenicity of an inactivated thimerosal-free influenza vaccine in infants and children.",
+      "journal": "Influenza Other Respir Viruses",
+      "year": "2009",
+      "authors": "Nolan T, Richmond PC"
+    },
+    {
+      "pmcid": "PMC5993870",
+      "title": "Total mercury exposure in early pregnancy has no adverse association with scholastic ability of the offspring particularly if the mother eats fish.",
+      "journal": "Environ Int",
+      "year": "2018",
+      "authors": "Hibbeln J, Gregory S"
+    },
+    {
+      "pmcid": "PMC4907756",
+      "title": "Feasibility and acceptability of oral cholera vaccine mass vaccination campaign in response to an outbreak and floods in Malawi.",
+      "journal": "Pan Afr Med J",
+      "year": "2016",
+      "authors": "Msyamboza KP, M'bang'ombe M"
+    },
+    {
+      "pmcid": "PMC4113360",
+      "title": "Prenatal exposure to maternal bereavement and childbirths in the offspring: a population-based cohort study.",
+      "journal": "PLoS One",
+      "year": "2014",
+      "authors": "Plana-Ripoll O, Olsen J"
+    },
+    {
+      "pmcid": "PMC12555125",
+      "title": "Holistic evaluation of the urbane exposome on wheezing and chest infections: Outcome-wide approach.",
+      "journal": "Eur J Public Health",
+      "year": "2025",
+      "authors": "Sinsamala RM, Anguita-Ruiz A"
+    },
+    {
+      "pmcid": "PMC12799378",
+      "title": "Sugar restriction in the first 1000 days after conception, and long-term respiratory health: a quasi-experiment study.",
+      "journal": "Am J Clin Nutr",
+      "year": "2025",
+      "authors": "Zheng J, Yang C"
+    },
+    {
+      "pmcid": "PMC2717127",
+      "title": "Prenatal exposure to cigarette smoke induces diet- and sex-dependent dyslipidemia and weight gain in adult murine offspring.",
+      "journal": "Environ Health Perspect",
+      "year": "2009",
+      "authors": "Ng SP, Conklin DJ"
+    },
+    {
+      "pmcid": "PMC2569844",
+      "title": "Increased reproductive success of women after prenatal undernutrition.",
+      "journal": "Hum Reprod",
+      "year": "2008",
+      "authors": "Painter RC, Westendorp RG"
+    },
+    {
+      "pmcid": "PMC9033373",
+      "title": "COVID-19 mRNA Vaccine-Associated Myocarditis Presenting as STEMI in a 48-Year-Old Male.",
+      "journal": "Case Rep Cardiol",
+      "year": "2022",
+      "authors": "Dlewati M, Park K"
+    },
+    {
+      "pmcid": "PMC12359347",
+      "title": "603. CONVERGING HUMAN-SPECIFIC EVIDENCE IMPLICATES ASTROCYTIC GLUTAMATE REGULATION IN STRESS-RELATED PSYCHIATRIC DISORDERS.",
+      "journal": "Int J Neuropsychopharmacol",
+      "year": "2025",
+      "authors": "Kaul D, Curry A"
+    },
+    {
+      "pmcid": "PMC10595847",
+      "title": "Early-life droughts and cognitive performance among children in rural India.",
+      "journal": "Eur J Public Health",
+      "year": "2023",
+      "authors": "Pradella F, Gabrysch S"
+    },
+    {
+      "pmcid": "PMC9593734",
+      "title": "A Holistic Approach to Urban and Children\u2019s Mental Health.",
+      "journal": "Eur J Public Health",
+      "year": "2022",
+      "authors": "Van Den Hazel P, Ristovska G"
+    },
+    {
+      "pmcid": "PMC3314967",
+      "title": "The influence of BCG vaccine strain on mycobacteria-specific and non-specific immune responses in a prospective cohort of infants in Uganda.",
+      "journal": "Vaccine",
+      "year": "2012",
+      "authors": "Anderson EJ, Webb EL"
+    },
+    {
+      "pmcid": "PMC7082382",
+      "title": "BCG Moreau Vaccine Safety Profile and NK Cells-Double Protection Against Disseminated BCG Infection in Retrospective Study of BCG Vaccination in 52 Polish Children with Severe Combined Immunodeficiency.",
+      "journal": "J Clin Immunol",
+      "year": "2020",
+      "authors": "Bernatowska E, Skomska-Pawliszak M"
+    },
+    {
+      "pmcid": "PMC10871940",
+      "title": "A18 EARLY LIFE EXPOSURE TO PARENTAL CROHN'S DISEASE IS ASSOCIATED WITH GUT MICROBIAL COMPOSITION AND FUNCTION, GUT PERMEABILITY AND INCREASED RISK OF FUTURE CROHN'S DISEASE.",
+      "journal": "J Can Assoc Gastroenterol",
+      "year": "2024",
+      "authors": "Bushra M, Shao J"
+    },
+    {
+      "pmcid": "PMC8501912",
+      "title": "Adverse effects of fetal exposure of electronic-cigarettes and high-fat diet on male neonatal hearts.",
+      "journal": "Exp Mol Pathol",
+      "year": "2021",
+      "authors": "Hasan KM, Munoz A"
+    },
+    {
+      "pmcid": "PMC4584899",
+      "title": "Notes from the field: rotavirus vaccine administration errors--United States, 2006-2013.",
+      "journal": "MMWR Morb Mortal Wkly Rep",
+      "year": "2014",
+      "authors": "Hibbs BF, Miller ER"
+    },
+    {
+      "pmcid": "PMC11036636",
+      "title": "Genetic exploration of Dravet syndrome: two case report.",
+      "journal": "J Med Case Rep",
+      "year": "2024",
+      "authors": "Triono A, Herini ES"
+    },
+    {
+      "pmcid": "PMC3073197",
+      "title": "Molecular Epidemiology, prenatal exposure and prevention of cancer.",
+      "journal": "Environ Health",
+      "year": "2011",
+      "authors": "Perera F"
+    },
+    {
+      "pmcid": "PMC10959921",
+      "title": "Activated fibroblasts modify keratinocyte stem niche through TET1 and IL-6 to promote their rapid transformation in a mouse model of prenatal arsenic exposure.",
+      "journal": "Sci Rep",
+      "year": "2024",
+      "authors": "Chauhan A, Gangopadhyay S"
+    },
+    {
+      "pmcid": "PMC7930470",
+      "title": "Assessment of chronic bronchitis and risk factors in young adults: results from BAMSE.",
+      "journal": "Eur Respir J",
+      "year": "2021",
+      "authors": "Wang G, Hallberg J"
+    },
+    {
+      "pmcid": "PMC3508998",
+      "title": "Assessment of prenatal exposure to arsenic in Tenerife Island.",
+      "journal": "PLoS One",
+      "year": "2012",
+      "authors": "Vall O, G\u00f3mez-Culebras M"
+    },
+    {
+      "pmcid": "PMC9833430",
+      "title": "Predictors of delayed vaccination in infants born in Tuscany, Italy: an area based cohort study.",
+      "journal": "Eur J Public Health",
+      "year": "2022",
+      "authors": "Lastrucci V, Puglia M"
+    },
+    {
+      "pmcid": "PMC6258300",
+      "title": "Early-life antibiotics attenuate regulatory T cell generation and increase the severity of murine house dust mite-induced asthma.",
+      "journal": "Pediatr Res",
+      "year": "2018",
+      "authors": "Adami AJ, Bracken SJ"
+    },
+    {
+      "pmcid": "PMC3341090",
+      "title": "Poor maternal nutrition programmes a pro-atherosclerotic phenotype in ApoE-/- mice.",
+      "journal": "Clin Sci (Lond)",
+      "year": "2012",
+      "authors": "Blackmore HL, Piekarz AV"
+    },
+    {
+      "pmcid": "PMC1241649",
+      "title": "Metal composition of ambient PM2.5 influences severity of allergic airways disease in mice.",
+      "journal": "Environ Health Perspect",
+      "year": "2003",
+      "authors": "Gavett SH, Haykal-Coates N"
+    },
+    {
+      "pmcid": "PMC11153867",
+      "title": "Comparison of 1 Versus 2 Doses of Quadrivalent Influenza Vaccine in 3-8-Year-Old Children with Different Immunological States - Jiangsu Province, China, 2021.",
+      "journal": "China CDC Wkly",
+      "year": "2024",
+      "authors": "Liu Q, Jin P"
+    },
+    {
+      "pmcid": "PMC11517623",
+      "title": "1.Y.2. Children\u2019s mental health problems explode. Can exposome research offer a solution?",
+      "journal": "Eur J Public Health",
+      "year": "2024",
+      "authors": "Organised by: EUPHA-ENV, -CAPH, -PMH, INCHES, Chair persons: Marija Jevtic (EUPHA-ENV), Peter Van Den Hazel (EUPHA-ENV)"
+    },
+    {
+      "pmcid": "PMC4604872",
+      "title": "Progress in immunization information systems--United States, 2011.",
+      "journal": "MMWR Morb Mortal Wkly Rep",
+      "year": "2013",
+      "authors": "Centers for Disease Control and Prevention (CDC)"
+    },
+    {
+      "pmcid": "PMC5800156",
+      "title": "Assessment of Nutritional Status of Infants Living in Arsenic-Contaminated Areas in Bangladesh and Its Association with Arsenic Exposure.",
+      "journal": "Int J Environ Res Public Health",
+      "year": "2018",
+      "authors": "Milton AH, Attia J"
+    },
+    {
+      "pmcid": "PMC10472280",
+      "title": "Updated report of COVID-19 vaccine safety monitoring in Japan: booster doses for Omicron variants and vaccinations for infants and young children.",
+      "journal": "Lancet Reg Health West Pac",
+      "year": "2023",
+      "authors": "Yamaguchi T, Iwagami M"
+    },
+    {
+      "pmcid": "PMC5630203",
+      "title": "Effects of low-level prenatal lead exposure on child IQ at 4 and 8 years in a UK birth cohort study.",
+      "journal": "Neurotoxicology",
+      "year": "2017",
+      "authors": "Taylor CM, Kordas K"
+    },
+    {
+      "pmcid": "PMC5598540",
+      "title": "Effects of 4-nonylphenol on oxidant/antioxidant balance system inducing hepatic steatosis in male rat.",
+      "journal": "Toxicol Rep",
+      "year": "2015",
+      "authors": "Kourouma A, Keita H"
+    },
+    {
+      "pmcid": "PMC4744686",
+      "title": "Exposure to grass pollen--but not birch pollen--affects lung function in Swedish children.",
+      "journal": "Allergy",
+      "year": "2015",
+      "authors": "Gruzieva O, Pershagen G"
+    },
+    {
+      "pmcid": "PMC8042911",
+      "title": "Aspartame and cancer - new evidence for causation.",
+      "journal": "Environ Health",
+      "year": "2021",
+      "authors": "Landrigan PJ, Straif K"
+    },
+    {
+      "pmcid": "PMC2702396",
+      "title": "Thyroid hormone levels of pregnant inuit women and their infants exposed to environmental contaminants.",
+      "journal": "Environ Health Perspect",
+      "year": "2009",
+      "authors": "Dallaire R, Muckle G"
+    },
+    {
+      "pmcid": "PMC4559953",
+      "title": "Perinatal Exposure to Traffic-Related Air Pollution and Atopy at 1 Year of Age in a Multi-Center Canadian Birth Cohort Study.",
+      "journal": "Environ Health Perspect",
+      "year": "2015",
+      "authors": "Sbihi H, Allen RW"
+    },
+    {
+      "pmcid": "PMC10715317",
+      "title": "Adverse event following immunization or vaccination in children in Minas Gerais: 2015 to 2020.",
+      "journal": "Rev Bras Epidemiol",
+      "year": "2023",
+      "authors": "Camargos SM, Oliveira MLS"
+    },
+    {
+      "pmcid": "PMC9216597",
+      "title": "The association between in utero exposure to maternal psychological stress and female reproductive function in adolescence: A prospective cohort study.",
+      "journal": "Compr Psychoneuroendocrinol",
+      "year": "2021",
+      "authors": "Br\u00e4uner EV, Koch T"
+    },
+    {
+      "pmcid": "PMC6245767",
+      "title": "Is intrauterine exposure to acetaminophen associated with emotional and hyperactivity problems during childhood? Findings from the 2004 Pelotas birth cohort.",
+      "journal": "BMC Psychiatry",
+      "year": "2018",
+      "authors": "Tovo-Rodrigues L, Schneider BC"
+    },
+    {
+      "pmcid": "PMC4719654",
+      "title": "Mitochondrial oxidative DNA damage and exposure to particulate air pollution in mother-newborn pairs.",
+      "journal": "Environ Health",
+      "year": "2016",
+      "authors": "Grevendonk L, Janssen BG"
+    },
+    {
+      "pmcid": "PMC5708015",
+      "title": "Body Burden of Dichlorodiphenyl Dichloroethene (DDE) and Childhood Pulmonary Function.",
+      "journal": "Int J Environ Res Public Health",
+      "year": "2017",
+      "authors": "Balte PP, K\u00fchr J"
+    },
+    {
+      "pmcid": "PMC1310931",
+      "title": "Birth outcomes and prenatal exposure to ozone, carbon monoxide, and particulate matter: results from the Children's Health Study.",
+      "journal": "Environ Health Perspect",
+      "year": "2005",
+      "authors": "Salam MT, Millstein J"
+    },
+    {
+      "pmcid": "PMC7057264",
+      "title": "Early-life inhalant allergen exposure, filaggrin genotype, and the development of sensitization from infancy to adolescence.",
+      "journal": "J Allergy Clin Immunol",
+      "year": "2020",
+      "authors": "Simpson A, Brough HA"
+    },
+    {
+      "pmcid": "PMC11388157",
+      "title": "Newborn glomerular function and gestational particulate air pollution.",
+      "journal": "EBioMedicine",
+      "year": "2024",
+      "authors": "Rasking L, Van Pee T"
+    },
+    {
+      "pmcid": "PMC3570299",
+      "title": "Maternal and offspring fasting glucose and type 2 diabetes-associated genetic variants and cognitive function at age 8: a Mendelian randomization study in the Avon Longitudinal Study of Parents and Children.",
+      "journal": "BMC Med Genet",
+      "year": "2012",
+      "authors": "Bonilla C, Lawlor DA"
+    },
+    {
+      "pmcid": "PMC11517925",
+      "title": "Association between bisphenol A exposure and cardiometabolic outcomes: a longitudinal approach.",
+      "journal": "Eur J Public Health",
+      "year": "2024",
+      "authors": "Costa SA, Severo M"
+    },
+    {
+      "pmcid": "PMC2627859",
+      "title": "Windblown lead carbonate as the main source of lead in blood of children from a seaside community: an example of local birds as \"canaries in the mine\".",
+      "journal": "Environ Health Perspect",
+      "year": "2009",
+      "authors": "Gulson B, Korsch M"
+    },
+    {
+      "pmcid": "PMC8357047",
+      "title": "Immunogenicity and Safety of AS03-adjuvanted H5N1 Influenza Vaccine in Children 6-35 Months of Age: Results From a Phase 2, Randomized, Observer-blind, Multicenter, Dose-ranging Study.",
+      "journal": "Pediatr Infect Dis J",
+      "year": "2021",
+      "authors": "Kim JH, Drame M"
+    },
+    {
+      "pmcid": "PMC4590737",
+      "title": "Obesogen Holdover: Prenatal Exposure Predicts Cardiometabolic Risk Factors in Childhood.",
+      "journal": "Environ Health Perspect",
+      "year": "2015",
+      "authors": "Konkel L"
+    },
+    {
+      "pmcid": "PMC5840817",
+      "title": "Correction to: Early-life exposure to PM2.5 and risk of acute asthma clinical encounters among children in Massachusetts: a case-crossover analysis.",
+      "journal": "Environ Health",
+      "year": "2018",
+      "authors": "Khalili R, Bartell SM"
+    },
+    {
+      "pmcid": "PMC12362212",
+      "title": "Early Life Exposure to Manure-Fertilized Soil Shapes the Gut Antibiotic Resistome.",
+      "journal": "Environ Health (Wash)",
+      "year": "2025",
+      "authors": "Zhai ZQ, Yang LK"
+    },
+    {
+      "pmcid": "PMC9574808",
+      "title": "COVID-19 Vaccination Responses with Different Vaccine Platforms in Patients with Inborn Errors of Immunity.",
+      "journal": "J Clin Immunol",
+      "year": "2023",
+      "authors": "Erra L, Uriarte I"
+    },
+    {
+      "pmcid": "PMC1247386",
+      "title": "Blood lead secular trend in a cohort of children in Mexico City (1987-2002).",
+      "journal": "Environ Health Perspect",
+      "year": "2004",
+      "authors": "Schnaas L, Rothenberg SJ"
+    },
+    {
+      "pmcid": "PMC9890274",
+      "title": "Quantile regression to examine the association of air pollution with subclinical atherosclerosis in an adolescent population.",
+      "journal": "Environ Int",
+      "year": "2022",
+      "authors": "Peralta AA, Schwartz J"
+    },
+    {
+      "pmcid": "PMC12723992",
+      "title": "Moderate prenatal alcohol exposure differentially alters acute ethanol sensitivity of GABAergic transmission in CRFR1- and CRFR1+ CeM Neurons.",
+      "journal": "bioRxiv",
+      "year": "2025",
+      "authors": "Winchester SE, Diaz MR"
+    },
+    {
+      "pmcid": "PMC8482027",
+      "title": "The Rotavirus Vaccine Story: From Discovery to the Eventual Control of Rotavirus Disease.",
+      "journal": "J Infect Dis",
+      "year": "2021",
+      "authors": "Glass RI, Tate JE"
+    },
+    {
+      "pmcid": "PMC2994234",
+      "title": "Determinants of age at menarche in the UK: analyses from the Breakthrough Generations Study.",
+      "journal": "Br J Cancer",
+      "year": "2010",
+      "authors": "Morris DH, Jones ME"
+    },
+    {
+      "pmcid": "PMC2661071",
+      "title": "Regional and social differences concerning overweight, participation in health check-ups and vaccination. Analysis of data from a whole birth cohort of 6-year old children in a prosperous German city.",
+      "journal": "BMC Public Health",
+      "year": "2009",
+      "authors": "Koller D, Mielck A"
+    },
+    {
+      "pmcid": "PMC2569100",
+      "title": "Prenatal exposure to perfluorooctanoate (PFOA) and perfluorooctanesulfonate (PFOS) and maternally reported developmental milestones in infancy.",
+      "journal": "Environ Health Perspect",
+      "year": "2008",
+      "authors": "Fei C, McLaughlin JK"
+    },
+    {
+      "pmcid": "PMC9005249",
+      "title": "Prenatal exposure to insecticides and child cardiometabolic risk factors in the VHEMBE birth cohort.",
+      "journal": "Environ Epidemiol",
+      "year": "2022",
+      "authors": "Kim J, Yang S"
+    },
+    {
+      "pmcid": "PMC12556974",
+      "title": "Adverse childhood experiences and physiological wear-and-tear in adolescence.",
+      "journal": "Eur J Public Health",
+      "year": "2025",
+      "authors": "Abrahamyan A, Severo M"
+    },
+    {
+      "pmcid": "PMC10292782",
+      "title": "The exposome in respiratory diseases: multiple preventable risk factors from early life to adulthood.",
+      "journal": "Breathe (Sheff)",
+      "year": "2023",
+      "authors": "Savour\u00e9 M, Eminson K"
+    },
+    {
+      "pmcid": "PMC1533142",
+      "title": "Semiparametric modeling of age at achieving developmental milestones after prenatal exposure to methylmercury in the Seychelles child development study.",
+      "journal": "Environ Health Perspect",
+      "year": "1998",
+      "authors": "Axtell CD, Myers GJ"
+    },
+    {
+      "pmcid": "PMC10186940",
+      "title": "ANALYSIS OF BENEFITS AND POTENTIAL DAMAGE FROM COVID-19 VACCINATION.",
+      "journal": "Int J Infect Dis",
+      "year": "2023",
+      "authors": "Park Y, Cho YK"
+    },
+    {
+      "pmcid": "PMC5784619",
+      "title": "Proteomic Biomarkers for Bisphenol A-Early Exposure and Women's Thyroid Cancer.",
+      "journal": "Cancer Res Treat",
+      "year": "2018",
+      "authors": "Lee HS, Kang Y"
+    },
+    {
+      "pmcid": "PMC1940095",
+      "title": "Synergistic effects of traffic-related air pollution and exposure to violence on urban asthma etiology.",
+      "journal": "Environ Health Perspect",
+      "year": "2007",
+      "authors": "Clougherty JE, Levy JI"
+    },
+    {
+      "pmcid": "PMC3851820",
+      "title": "Monitoring the immune response to vaccination with an inactivated vaccine associated to bovine neonatal pancytopenia by deep sequencing transcriptome analysis in cattle.",
+      "journal": "Vet Res",
+      "year": "2013",
+      "authors": "Demasius W, Weikard R"
+    },
+    {
+      "pmcid": "PMC11502856",
+      "title": "Associations between gestational exposure to perfluoroalkyl substances, fetal growth, and the mediation effect of thyroid hormones.",
+      "journal": "Sci Rep",
+      "year": "2024",
+      "authors": "Wang Z, Yang W"
+    },
+    {
+      "pmcid": "PMC3500352",
+      "title": "Early metabolic defects in dexamethasone-exposed and undernourished intrauterine growth restricted rats.",
+      "journal": "PLoS One",
+      "year": "2012",
+      "authors": "Somm E, Vauthay DM"
+    },
+    {
+      "pmcid": "PMC4664544",
+      "title": "Long-term effect of early-life stress from earthquake exposure on working memory in adulthood.",
+      "journal": "Neuropsychiatr Dis Treat",
+      "year": "2015",
+      "authors": "Li N, Wang Y"
+    },
+    {
+      "pmcid": "PMC2613139",
+      "title": "Traffic-related air pollution and respiratory symptoms among asthmatic children, resident in Mexico City: the EVA cohort study.",
+      "journal": "Respir Res",
+      "year": "2008",
+      "authors": "Escamilla-Nu\u00f1ez MC, Barraza-Villarreal A"
+    },
+    {
+      "pmcid": "PMC3499875",
+      "title": "Pilot study of pesticide knowledge, attitudes, and practices among pregnant women in northern Thailand.",
+      "journal": "Int J Environ Res Public Health",
+      "year": "2012",
+      "authors": "Lorenz AN, Prapamontol T"
+    },
+    {
+      "pmcid": "PMC4184779",
+      "title": "Altered cortical thickness following prenatal sodium valproate exposure.",
+      "journal": "Ann Clin Transl Neurol",
+      "year": "2014",
+      "authors": "Wood AG, Chen J"
+    },
+    {
+      "pmcid": "PMC4643994",
+      "title": "Early-Life Exposure to Clostridium leptum Causes Pulmonary Immunosuppression.",
+      "journal": "PLoS One",
+      "year": "2015",
+      "authors": "Huang F, Qiao HM"
+    },
+    {
+      "pmcid": "PMC10597025",
+      "title": "Exposure to sunlight and allergic morbidity in children (Pollution and Asthma Risk: an Infant Study).",
+      "journal": "Eur J Public Health",
+      "year": "2023",
+      "authors": "Lefebvre L, Ranci\u00e8re F"
+    },
+    {
+      "pmcid": "PMC4293007",
+      "title": "Prenatal exposure to endocrine disrupting chemicals in relation to thyroid hormone levels in infants - a Dutch prospective cohort study.",
+      "journal": "Environ Health",
+      "year": "2014",
+      "authors": "de Cock M, de Boer MR"
+    },
+    {
+      "pmcid": "PMC5664568",
+      "title": "The Hokkaido Birth Cohort Study on Environment and Children's Health: cohort profile-updated 2017.",
+      "journal": "Environ Health Prev Med",
+      "year": "2017",
+      "authors": "Kishi R, Araki A"
+    },
+    {
+      "pmcid": "PMC2717145",
+      "title": "Childhood lead poisoning: conservative estimates of the social and economic benefits of lead hazard control.",
+      "journal": "Environ Health Perspect",
+      "year": "2009",
+      "authors": "Gould E"
+    },
+    {
+      "pmcid": "PMC9189960",
+      "title": "Correction to: Prenatal exposure to nitrofurantoin and risk of childhood leukaemia: a registry-based cohort study in four Nordic countries.",
+      "journal": "Int J Epidemiol",
+      "year": "2022",
+      "authors": "Hjorth S, Potteg\u00e5rd A"
+    },
+    {
+      "pmcid": "PMC10596984",
+      "title": "Prenatal particulate matter exposure is linked with neurobehavioral development in early life.",
+      "journal": "Eur J Public Health",
+      "year": "2023",
+      "authors": "Cosemans C, Sleurs H"
+    },
+    {
+      "pmcid": "PMC8738138",
+      "title": "Early life exposure to house dust mite allergen prevents experimental allergic asthma requiring mitochondrial H(2)O(2).",
+      "journal": "Mucosal Immunol",
+      "year": "2022",
+      "authors": "Yuan H, Chen J"
+    },
+    {
+      "pmcid": "PMC7395399",
+      "title": "Unilateral morning glory disc anomaly in a patient with prenatal Zika virus exposure.",
+      "journal": "Int J Retina Vitreous",
+      "year": "2020",
+      "authors": "Muns SM, Gonz\u00e1lez MP"
+    },
+    {
+      "pmcid": "PMC2693609",
+      "title": "Vaccine-associated paralytic poliomyelitis: a case report of flaccid monoparesis after oral polio vaccine.",
+      "journal": "J Korean Med Sci",
+      "year": "2007",
+      "authors": "Kim SJ, Kim SH"
+    },
+    {
+      "pmcid": "PMC1964903",
+      "title": "Secondary sex ratio among women exposed to diethylstilbestrol in utero.",
+      "journal": "Environ Health Perspect",
+      "year": "2007",
+      "authors": "Wise LA, Palmer JR"
+    },
+    {
+      "pmcid": "PMC6210236",
+      "title": "Sex-Dependent Impact of Low-Level Lead Exposure during Prenatal Period on Child Psychomotor Functions.",
+      "journal": "Int J Environ Res Public Health",
+      "year": "2018",
+      "authors": "Polanska K, Hanke W"
+    },
+    {
+      "pmcid": "PMC2720982",
+      "title": "Satisfactory safety and immunogenicity of MSP3 malaria vaccine candidate in Tanzanian children aged 12-24 months.",
+      "journal": "Malar J",
+      "year": "2009",
+      "authors": "Lusingu JP, Gesase S"
+    },
+    {
+      "pmcid": "PMC11266634",
+      "title": "Association between prenatal glucocorticoid exposure and adolescent neurodevelopment: An observational follow-up study.",
+      "journal": "Acta Obstet Gynecol Scand",
+      "year": "2024",
+      "authors": "Rakers F, Schleussner E"
+    },
+    {
+      "pmcid": "PMC5047776",
+      "title": "Bisphenol A and Adiposity in an Inner-City Birth Cohort.",
+      "journal": "Environ Health Perspect",
+      "year": "2016",
+      "authors": "Hoepner LA, Whyatt RM"
+    },
+    {
+      "pmcid": "PMC6260681",
+      "title": "Quantitative characterization of the urine and serum metabolomes of children is essential for 'omics' studies.",
+      "journal": "BMC Med",
+      "year": "2018",
+      "authors": "DiBattista A, Chakraborty P"
+    },
+    {
+      "pmcid": "PMC1240737",
+      "title": "Evaluation of urinary porphyrin excretion in neonates born to mothers exposed to airborne hexachlorobenzene.",
+      "journal": "Environ Health Perspect",
+      "year": "2002",
+      "authors": "Ozalla D, Herrero C"
+    },
+    {
+      "pmcid": "PMC1247567",
+      "title": "Estimated risk for altered fetal growth resulting from exposure to fine particles during pregnancy: an epidemiologic prospective cohort study in Poland.",
+      "journal": "Environ Health Perspect",
+      "year": "2004",
+      "authors": "Jedrychowski W, Bendkowska I"
+    },
+    {
+      "pmcid": "PMC6128858",
+      "title": "Analysis By Deep Sequencing of Discontinued Neurotropic Yellow Fever Vaccine Strains.",
+      "journal": "Sci Rep",
+      "year": "2018",
+      "authors": "Beck AS, Wood TG"
+    },
+    {
+      "pmcid": "PMC6579766",
+      "title": "Mitotically heritable effects of BMAA on striatal neural stem cell proliferation and differentiation.",
+      "journal": "Cell Death Dis",
+      "year": "2019",
+      "authors": "Pierozan P, Karlsson O"
+    },
+    {
+      "pmcid": "PMC8590342",
+      "title": "Nasal spray live attenuated influenza vaccine: the first experience in Italy in children and adolescents during the 2020-21 season.",
+      "journal": "Ital J Pediatr",
+      "year": "2021",
+      "authors": "Gasparini C, Acunzo M"
+    },
+    {
+      "pmcid": "PMC4997457",
+      "title": "Severe and Moderate Asthma Exacerbations in Asthmatic Children and Exposure to Ambient Air Pollutants.",
+      "journal": "Int J Environ Res Public Health",
+      "year": "2016",
+      "authors": "T\u00e9treault LF, Doucet M"
+    },
+    {
+      "pmcid": "PMC11518177",
+      "title": "Persistent organic pollutants and developmental trajectories of ADHD symptoms: The Rhea cohort study.",
+      "journal": "Eur J Public Health",
+      "year": "2024",
+      "authors": "Mouatsou C, Margetaki K"
+    },
+    {
+      "pmcid": "PMC3364588",
+      "title": "Maternal Distress during Pregnancy and Offspring Childhood Overweight.",
+      "journal": "J Obes",
+      "year": "2012",
+      "authors": "Ingstrup KG, Schou Andersen C"
+    },
+    {
+      "pmcid": "PMC11516901",
+      "title": "Prenatal exposure to phthalates and children\u2019s mental health trajectories: Rhea Cohort, Greece.",
+      "journal": "Eur J Public Health",
+      "year": "2024",
+      "authors": "Mouatsou C, Margetaki K"
+    },
+    {
+      "pmcid": "PMC4583064",
+      "title": "Association between levels of persistent organic pollutants in adipose tissue and cryptorchidism in early childhood: a case-control study.",
+      "journal": "Environ Health",
+      "year": "2015",
+      "authors": "Koskenniemi JJ, Virtanen HE"
+    },
+    {
+      "pmcid": "PMC12556682",
+      "title": "Children\u2019s respiratory symptoms and London\u2019s Ultra Low Emission Zone: the CHILL cohort study.",
+      "journal": "Eur J Public Health",
+      "year": "2025",
+      "authors": "Mitchell JE, Wood HE"
+    },
+    {
+      "pmcid": "PMC10833547",
+      "title": "Correction: Neonatal blood lead concentration predicts medium term lead-related outcomes in children \u22645 years old with congenital lead poisoning: A retrospective cohort study in Northern Nigeria.",
+      "journal": "PLOS Glob Public Health",
+      "year": "2024",
+      "authors": "Thurtle N, Kirby KA"
+    },
+    {
+      "pmcid": "PMC4896787",
+      "title": "Reactogenicity and safety of the human rotavirus vaccine, Rotarix\u2122 in The Philippines, Sri Lanka, and India: a post-marketing surveillance study.",
+      "journal": "Hum Vaccin Immunother",
+      "year": "2014",
+      "authors": "Bravo L, Chitraka A"
+    },
+    {
+      "pmcid": "PMC1566289",
+      "title": "Air pollution and health effects: A study of medical visits among children in Santiago, Chile.",
+      "journal": "Environ Health Perspect",
+      "year": "1999",
+      "authors": "Ostro BD, Eskeland GS"
+    },
+    {
+      "pmcid": "PMC9489473",
+      "title": "Updated report of COVID-19 vaccine safety monitoring in Japan: Booster shots and paediatric vaccinations.",
+      "journal": "Lancet Reg Health West Pac",
+      "year": "2022",
+      "authors": "Yamaguchi T, Iwagami M"
+    },
+    {
+      "pmcid": "PMC5887572",
+      "title": "T134. EXPOSURE TO NITROGEN DIOXIDE DURING CHILDHOOD IS ASSOCIATED WITH INCREASED RISK OF SCHIZOPHRENIA.",
+      "journal": "Schizophr Bull",
+      "year": "2018",
+      "authors": "Antonsen S, Mok PLH"
+    },
+    {
+      "pmcid": "PMC10312866",
+      "title": "Associations of longitudinal BMI percentile classification patterns in early childhood with neighborhood-level social determinants of health.",
+      "journal": "medRxiv",
+      "year": "2024",
+      "authors": "Gupta M, Phan TT"
+    },
+    {
+      "pmcid": "PMC5643117",
+      "title": "Reduction of in utero lead exposures in South African populations: Positive impact of unleaded petrol.",
+      "journal": "PLoS One",
+      "year": "2017",
+      "authors": "R\u00f6llin HB, Olutola B"
+    },
+    {
+      "pmcid": "PMC4216164",
+      "title": "Prenatal organochlorine and methylmercury exposure and memory and learning in school-age children in communities near the New Bedford Harbor Superfund site, Massachusetts.",
+      "journal": "Environ Health Perspect",
+      "year": "2014",
+      "authors": "Orenstein ST, Thurston SW"
+    },
+    {
+      "pmcid": "PMC3665553",
+      "title": "Clonal expansion within pneumococcal serotype 6C after use of seven-valent vaccine.",
+      "journal": "PLoS One",
+      "year": "2013",
+      "authors": "Loman NJ, Gladstone RA"
+    },
+    {
+      "pmcid": "PMC6398688",
+      "title": "Correction: Evaluation of the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions: a population-based prospective cohort study conducted in England with the Clinical Practice Research Datalink.",
+      "journal": "BMJ Open",
+      "year": "2019",
+      "authors": ""
+    },
+    {
+      "pmcid": "PMC1567781",
+      "title": "Antecedents and correlates of improved cognitive performance in children exposed in utero to low levels of lead.",
+      "journal": "Environ Health Perspect",
+      "year": "1990",
+      "authors": "Bellinger D, Leviton A"
+    },
+    {
+      "pmcid": "PMC4284714",
+      "title": "Prenatal exposure to arsenic and cadmium impacts infectious disease-related genes within the glucocorticoid receptor signal transduction pathway.",
+      "journal": "Int J Mol Sci",
+      "year": "2014",
+      "authors": "Rager JE, Yosim A"
+    },
+    {
+      "pmcid": "PMC7094439",
+      "title": "Protection of newborn animals through maternal immunization.",
+      "journal": "J Comp Pathol",
+      "year": "2007",
+      "authors": "Pravieux JJ, Poulet H"
+    },
+    {
+      "pmcid": "PMC4937858",
+      "title": "Prenatal Exposure to Phthalates and Anogenital Distance in Male Infants from a Low-Exposed Danish Cohort (2010-2012).",
+      "journal": "Environ Health Perspect",
+      "year": "2016",
+      "authors": "Jensen TK, Frederiksen H"
+    },
+    {
+      "pmcid": "PMC4158856",
+      "title": "Deep phenotyping of the unselected COPSAC2010 birth cohort study.",
+      "journal": "Clin Exp Allergy",
+      "year": "2013",
+      "authors": "Bisgaard H, Vissing NH"
+    },
+    {
+      "pmcid": "PMC10373157",
+      "title": "Parental, gestational, and early-life exposure to indoor environmental hazardous factors on allergic rhinitis among preschool children in Urumqi City: a case-control study.",
+      "journal": "J Pediatr (Rio J)",
+      "year": "2023",
+      "authors": "Wang T, Shi H"
+    },
+    {
+      "pmcid": "PMC6538825",
+      "title": "Development of a novel multiplex electrochemiluminescent-based immunoassay to aid enterotoxigenic Escherichia coli vaccine development and evaluations.",
+      "journal": "J Immunol Methods",
+      "year": "2019",
+      "authors": "Chakraborty S, Brubaker J"
+    },
+    {
+      "pmcid": "PMC3602114",
+      "title": "Prospective surveillance study of acute respiratory infections, influenza-like illness and seasonal influenza vaccine in a cohort of juvenile idiopathic arthritis patients.",
+      "journal": "Pediatr Rheumatol Online J",
+      "year": "2013",
+      "authors": "Carvalho LM, de Paula FE"
+    },
+    {
+      "pmcid": "PMC5907299",
+      "title": "Local- and regional-scale air pollution modelling (PM(10)) and exposure assessment for pregnancy trimesters, infancy, and childhood to age 15\u202fyears: Avon Longitudinal Study of Parents And Children (ALSPAC).",
+      "journal": "Environ Int",
+      "year": "2018",
+      "authors": "Gulliver J, Elliott P"
+    },
+    {
+      "pmcid": "PMC4550476",
+      "title": "In vitro and in vivo growth alter the population dynamic and properties of a Jeryl Lynn mumps vaccine.",
+      "journal": "Vaccine",
+      "year": "2015",
+      "authors": "Connaughton SM, Wheeler JX"
+    },
+    {
+      "pmcid": "PMC9693808",
+      "title": "Maternal use of methamphetamine induces sex-dependent changes in myocardial gene expression in adult offspring.",
+      "journal": "Physiol Rep",
+      "year": "2022",
+      "authors": "Dague A, Chavva H"
+    },
+    {
+      "pmcid": "PMC3072933",
+      "title": "Low-level environmental lead exposure in childhood and adult intellectual function: a follow-up study.",
+      "journal": "Environ Health",
+      "year": "2011",
+      "authors": "Mazumdar M, Bellinger DC"
+    }
+  ]
+}
