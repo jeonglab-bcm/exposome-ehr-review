@@ -64,7 +64,7 @@ PAGE = """<!doctype html>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
 
 <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 backdrop-blur sticky top-0 z-10">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
     <div>
       <h1 class="text-lg sm:text-xl font-bold tracking-tight">Pediatric Exposome / EWAS Literature Collection</h1>
       <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Summarized with Gemma 4&nbsp;12B · %%YMIN%%–%%YMAX%%</p>
@@ -73,7 +73,7 @@ PAGE = """<!doctype html>
   </div>
 </header>
 
-<main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+<main class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
 
   <section class="grid grid-cols-2 sm:grid-cols-4 gap-4">
     <div class="rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5">
@@ -176,7 +176,7 @@ function render() {
       <td class="px-4 py-3 whitespace-nowrap tabular-nums">${esc(r.year)}</td>
       <td class="px-4 py-3 whitespace-nowrap"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/${esc(r.pmcid)}/" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline" onclick="event.stopPropagation()">${esc(r.pmcid)}</a></td>
       <td class="px-4 py-3 max-w-md">${esc(r.title)}</td>
-      <td class="px-4 py-3 text-slate-500 dark:text-slate-400 whitespace-nowrap">${esc(r.exposure_domain||'—')}</td>
+      <td class="px-4 py-3 text-slate-500 dark:text-slate-400 max-w-xs">${esc(r.exposure_domain||'—')}</td>
       <td class="px-4 py-3">${r.ehr_used ? '<span class="inline-block px-2 py-0.5 rounded-full text-xs bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">EHR</span>' : '<span class="text-slate-400">—</span>'}</td>
       <td class="px-4 py-3"><span class="inline-block px-2 py-0.5 rounded-full text-xs ${availStyle[av]}">${esc(av)}</span></td>
     </tr>
