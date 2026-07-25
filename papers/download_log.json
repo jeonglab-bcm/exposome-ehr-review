@@ -165,7 +165,10 @@
     "5907299",
     "4550476",
     "9693808",
-    "3072933"
+    "3072933",
+    "8015385",
+    "6445781",
+    "6258300"
   ],
   "xml_only": [
     "PMC8943283",
@@ -1900,6 +1903,20 @@
       "journal": "Environ Health",
       "year": "2011",
       "authors": "Mazumdar M, Bellinger DC"
+    },
+    {
+      "pmcid": "PMC8015385",
+      "title": "Vaccination Rates and Family Barriers Among Children with Inflammatory Bowel Disease.",
+      "journal": "Crohns Colitis 360",
+      "year": "2020",
+      "authors": "Holland KJ, Wilkinson TA"
+    },
+    {
+      "pmcid": "PMC6445781",
+      "title": "SSRIs target prefrontal to\u00a0raphe circuits during development modulating synaptic connectivity and emotional behavior.",
+      "journal": "Mol Psychiatry",
+      "year": "2019",
+      "authors": "Soiza-Reilly M, Meye FJ"
     }
   ]
 }
