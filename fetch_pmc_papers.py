@@ -59,7 +59,10 @@ _FILTERS = (
     'OR "postmenopausal"[Title/Abstract] OR "late-onset"[Title/Abstract])'
 )
 
-# EHR synonyms — with [Title/Abstract] to require it in core text
+# EHR synonyms — text terms plus MeSH terms (broadens beyond literal
+# "EHR"/"claims data" phrasing in the abstract, since PMC indexing often
+# tags a paper with these MeSH terms even when the author never writes
+# "EHR" or "administrative data" as a literal phrase).
 _EHR_TA = (
     '"electronic health record"[Title/Abstract] OR '
     '"electronic medical record"[Title/Abstract] OR '
@@ -67,7 +70,10 @@ _EHR_TA = (
     '"EMR"[Title/Abstract] OR '
     '"claims data"[Title/Abstract] OR '
     '"administrative health data"[Title/Abstract] OR '
-    '"health records"[Title/Abstract]'
+    '"health records"[Title/Abstract] OR '
+    '"Electronic Health Records"[MeSH] OR '
+    '"Medical Records Systems, Computerized"[MeSH] OR '
+    '"Registries"[MeSH]'
 )
 
 # Pediatric / childhood population constraint — required in title/abstract.
