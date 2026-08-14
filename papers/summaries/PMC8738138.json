@@ -3,34 +3,32 @@
   "title": "Early life exposure to house dust mite allergen prevents experimental allergic asthma requiring mitochondrial H(2)O(2).",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "The study is an experimental animal model using mice, not human electronic health records.",
-  "summary": "An experimental study investigating the role of mitochondrial H2O2 in establishing airway tolerance to house dust mite (HDM) allergens in mice.",
+  "ehr_evidence": "None. The study uses mouse models and laboratory assays (e.g., forced oscillation technique).",
+  "summary": "Experimental study investigating airway hyperresponsiveness (AHR) and immune responses in mice, focusing on dendritic cell development and inflammatory pathways.",
   "key_findings": [
-    "Early-life exposure to low-dose HDM prevents allergic airway inflammation in later life.",
-    "Depletion of mitochondrial H2O2 in MCAT mice abrogates HDM-induced airway tolerance.",
-    "Mitochondrial H2O2 plays a role in constraining lung dendritic cell numbers to establish early-life airway tolerance."
+    "Not explicitly stated in the provided snippet (methods and references only)."
   ],
   "captured_features": [
-    "Lung histology",
-    "BAL fluid cellularity",
-    "Th2 response",
-    "mitochondrial H2O2 production",
-    "dendritic cell (DC) subsets"
+    "Airway responsiveness (FOT)",
+    "H2O2 levels",
+    "Dendritic cell markers"
   ],
   "pathologies_diseases": [
-    "allergic asthma"
+    "Asthma",
+    "Allergic sensitization",
+    "Respiratory syncytial virus infection"
   ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Animal model",
-  "population": "Newborn and young mice",
-  "exposure_domain": "House dust mite (HDM) allergen",
+  "study_design": "Experimental laboratory study (animal model)",
+  "data_source_type": "Laboratory/Experimental",
+  "population": "Mice",
+  "exposure_domain": "Inhaled methacholine, house dust mite allergens",
   "limitations": [
     "Animal model (mice)",
     "Not human data"
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Associated DataSupplementary Materials1",
+  "data_availability_statement": "",
   "confidence": "high",
   "source_format": "xml",
   "model": "gemma4-12b-qat-gguf"

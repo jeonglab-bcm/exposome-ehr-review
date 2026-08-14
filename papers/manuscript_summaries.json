@@ -4818,34 +4818,32 @@
       "title": "Early life exposure to house dust mite allergen prevents experimental allergic asthma requiring mitochondrial H(2)O(2).",
       "year": "2022",
       "ehr_used": false,
-      "ehr_evidence": "The study is an experimental animal model using mice, not human electronic health records.",
-      "summary": "An experimental study investigating the role of mitochondrial H2O2 in establishing airway tolerance to house dust mite (HDM) allergens in mice.",
+      "ehr_evidence": "None. The study uses mouse models and laboratory assays (e.g., forced oscillation technique).",
+      "summary": "Experimental study investigating airway hyperresponsiveness (AHR) and immune responses in mice, focusing on dendritic cell development and inflammatory pathways.",
       "key_findings": [
-        "Early-life exposure to low-dose HDM prevents allergic airway inflammation in later life.",
-        "Depletion of mitochondrial H2O2 in MCAT mice abrogates HDM-induced airway tolerance.",
-        "Mitochondrial H2O2 plays a role in constraining lung dendritic cell numbers to establish early-life airway tolerance."
+        "Not explicitly stated in the provided snippet (methods and references only)."
       ],
       "captured_features": [
-        "Lung histology",
-        "BAL fluid cellularity",
-        "Th2 response",
-        "mitochondrial H2O2 production",
-        "dendritic cell (DC) subsets"
+        "Airway responsiveness (FOT)",
+        "H2O2 levels",
+        "Dendritic cell markers"
       ],
       "pathologies_diseases": [
-        "allergic asthma"
+        "Asthma",
+        "Allergic sensitization",
+        "Respiratory syncytial virus infection"
       ],
-      "study_design": "Experimental animal study",
-      "data_source_type": "Animal model",
-      "population": "Newborn and young mice",
-      "exposure_domain": "House dust mite (HDM) allergen",
+      "study_design": "Experimental laboratory study (animal model)",
+      "data_source_type": "Laboratory/Experimental",
+      "population": "Mice",
+      "exposure_domain": "Inhaled methacholine, house dust mite allergens",
       "limitations": [
         "Animal model (mice)",
         "Not human data"
       ],
-      "data_availability": "supplementary-only",
+      "data_availability": "not-stated",
       "data_accession_links": [],
-      "data_availability_statement": "Associated DataSupplementary Materials1",
+      "data_availability_statement": "",
       "confidence": "high",
       "source_format": "xml",
       "model": "gemma4-12b-qat-gguf"
@@ -4929,96 +4927,33 @@
       "title": "Safety profile comparison of chimeric live attenuated and Vero cell-derived inactivated Japanese encephalitis vaccines through an active surveillance system in Australia.",
       "year": "2022",
       "ehr_used": false,
-      "ehr_evidence": "Data from SmartVax, an active surveillance system for monitoring vaccine safety Not mentioned None mentioned The study uses a surveillance system (SmartVax) that sends automated SMS messages, rather than an EHR. The study used active vaccine safety surveillance data (SmartVax) rather than EHR. No explicit mention of EHR; data from SmartVax program and clinics. None No mention of EHR or linked health data in the provided references. None",
-      "summary": "Comparison of safety profiles (AEFIs) between two Japanese encephalitis (JE) vaccines (Imojev and JEspect) in Australia.",
+      "ehr_evidence": "active vaccine safety surveillance data",
+      "summary": "Safety evaluation of Imojev and JEspect vaccines for Japanese encephalitis using the SmartVax active surveillance program in Australia.",
       "key_findings": [
-        "No significant differences in odds of overall, systemic, or local AEFIs between Imojev and JEspect.",
-        "Increased odds of overall AEFI in patients aged <5 years compared to those aged >50 years.",
-        "Both vaccines are safe and well tolerated.",
-        "No significant difference in AEFI rates between Imojev and JEspect.",
-        "Higher odds of overall and local AEFIs in patients aged <5 years compared to those >50 years.",
-        "Trend of increased AEFI in females when the number of concomitant vaccines increased.",
-        "Both JE vaccines have good post-marketing acute safety profiles.",
-        "Imojev presented ~30% higher odds of AEFI compared to JEspect (not statistically significant).",
-        "AEFIs are age-dependent and more frequent in children <5 years.",
-        "AEFIs were more common in children aged <5 years",
-        "No significant increase in AEFI risk in healthy adults receiving concomitant Vero cell-derived inactivated JE and rabies vaccines",
-        "Higher risk of AEFIs in females who received $\\ge$3 vaccines in addition to JE vaccine",
         "Both Imojev and JEspect vaccines had low rates of AEFIs and were well tolerated.",
-        "Higher risk of AEFIs identified in females who received ≥3 vaccines in addition to JE vaccine.",
-        "Children aged <5 years should be carefully observed for AEFIs after vaccination.",
-        "Both Imojev and JEspect vaccines had low rates of AEFIs.",
-        "Imojev is more widely used in Australia due to its one-dose schedule.",
-        "Children <5 years should be carefully observed for AEFIs.",
-        "Safety and immunogenicity of IXIARO and IMOJEV vaccines were evaluated.",
-        "Concomitant administration of JE vaccines with MMR and HAVRIX1440 was studied."
+        "Children aged <5 years should be carefully observed for AEFIs after vaccination."
       ],
       "captured_features": [
-        "AEFIs (overall, systemic, local)",
-        "patient age",
+        "AEFI (adverse events following immunization)",
         "vaccine type",
-        "Age",
-        "Sex",
-        "Number of other vaccines received",
-        "AEFI type (systemic/local)",
-        "Time to onset of symptoms",
-        "Specific reactions (tiredness, headache, pain, swelling)",
-        "AEFI reports",
+        "patient sex",
         "age",
-        "gender",
-        "concomitant vaccines",
-        "symptoms",
-        "AEFI symptoms (tiredness, headache, fever, irritability, sleep disturbance, diarrhea, vomiting, rigors, pain, swelling, rash)",
-        "Vaccine types",
-        "AEFI types (overall, local, systemic)",
-        "age group",
-        "sex",
-        "number of other vaccines received",
-        "AEFIs",
-        "vaccine type (Imojev, JEspect)",
-        "Adverse events",
-        "Immunogenicity markers"
+        "concurrent vaccines"
       ],
       "pathologies_diseases": [
-        "Japanese encephalitis",
-        "adverse events following immunizations (AEFIs)",
-        "Adverse events following immunization (AEFI)",
-        "Systemic reactions",
-        "Local reactions",
-        "adverse events following immunization (AEFI)",
-        "measles",
-        "mumps",
-        "rubella",
-        "hepatitis A",
-        "rabies"
+        "Japanese encephalitis"
       ],
-      "study_design": "Active surveillance study",
-      "data_source_type": "Active surveillance system",
-      "population": "2756 patients in Australia",
-      "exposure_domain": "Vaccination",
+      "study_design": "Active vaccine safety surveillance",
+      "data_source_type": "Surveillance registry",
+      "population": "Patients in Australia",
+      "exposure_domain": "Japanese encephalitis vaccines",
       "limitations": [
-        "Data scarce for JE vaccines in non-endemic areas",
-        "Small sample size for specific vaccine combinations",
-        "Lack of statistical significance in some comparisons",
-        "Not statistically significant difference between vaccine types",
-        "Sparse evidence on specific vaccine combinations",
-        "Small sample size for children <5 years",
-        "Severity of symptoms not recorded in the system",
-        "Potential reporting bias by parents",
-        "SMS follow-up limited to 3-5 days post-immunization",
-        "Potential for missing late-onset AEFIs",
-        "Small sample size for some subgroups (e.g., specific combination of vaccines and by sex)",
-        "Need for further studies to verify sex differences and determine if AEFIs are driven by vaccine combination or reactogenicity",
-        "Snippet is incomplete",
-        "The provided text is a list of references, not a primary study.",
-        "Not an environmental exposure (exposome) study",
-        "Focuses on vaccine safety/immunogenicity",
-        "The text is a bibliography and does not contain a study description."
+        "None stated"
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
       "data_availability_statement": "",
-      "confidence": "high",
+      "confidence": "medium",
       "source_format": "pdf",
       "model": "gemma4-12b-qat-gguf"
     },
@@ -5142,34 +5077,52 @@
       "title": "Willingness toward COVID-19 vaccination, coadministration with other vaccines and receive a COVID-19 vaccine booster: a cross-sectional study on the guardians of children in China.",
       "year": "2022",
       "ehr_used": false,
-      "ehr_evidence": "The study used a self-administered questionnaire distributed through the 'Xiao Dou Miao' app.",
-      "summary": "A cross-sectional study investigating the willingness of guardians in China to vaccinate children against COVID-19, including coadministration and booster doses.",
+      "ehr_evidence": "The study used a self-administered questionnaire distributed through the 'Xiao Dou Miao' app. The study used online questionnaires and self-administered surveys.",
+      "summary": "A cross-sectional study investigating the willingness of guardians in China to vaccinate children against COVID-19, coadminister vaccines, and receive booster doses.",
       "key_findings": [
         "86.68% of guardians were willing to vaccinate their children with the COVID-19 vaccine.",
-        "77% were willing toward coadministration of COVID-19 and influenza vaccines.",
-        "82% were willing to vaccinate their children with a COVID-19 vaccine booster."
+        "Guardians aged ≥40 years, healthcare workers, and those with children aged ≥3 years were more willing to vaccinate their children.",
+        "Approximately 77% of the guardians were willing toward the coadministration of COVID-19 and influenza vaccines.",
+        "86.68% of guardians were willing to vaccinate children with COVID-19 vaccine",
+        "77% were willing toward coadministration of influenza and COVID-19 vaccines",
+        "64% were willing toward coadministration of nonimmunization program vaccines",
+        "82% were willing to vaccinate children with a COVID-19 vaccine booster"
       ],
       "captured_features": [
-        "Guardian demographics (age, education, occupation, income)",
-        "Child characteristics (age, gender)",
-        "Vaccination willingness scores"
+        "Guardian age",
+        "Guardian education",
+        "Guardian occupation",
+        "Guardian income",
+        "Child's age",
+        "Child's gender",
+        "Child's underlying disease status",
+        "Vaccination willingness scores",
+        "Guardian willingness",
+        "Education level",
+        "Occupation",
+        "Child age",
+        "Vaccination status of guardians",
+        "Income"
       ],
       "pathologies_diseases": [
-        "COVID-19"
+        "COVID-19",
+        "influenza"
       ],
-      "study_design": "cross-sectional study",
-      "data_source_type": "Survey",
-      "population": "9424 guardians of children in China",
+      "study_design": "Cross-sectional study",
+      "data_source_type": "Survey / Questionnaire",
+      "population": "Guardians of children aged <6 years in China",
       "exposure_domain": "None",
       "limitations": [
-        "Cross-sectional design",
-        "Self-reported questionnaire data"
+        "Self-reported questionnaire data",
+        "Potential selection bias from app users",
+        "Online questionnaire prevents effective random sampling",
+        "Not representative of the whole population in China",
+        "Privacy prevented individual follow-up",
+        "Self-administered questionnaires may have information deviation"
       ],
-      "data_availability": "supplementary-only",
-      "data_accession_links": [
-        "https://doi.org/10.1080/21645515.2022.2049169"
-      ],
-      "data_availability_statement": "Supplementary data for this article can be accessed on the publisher’s website at https://doi.org/10.1080/21645515.2022.2049169.",
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
       "confidence": "high",
       "source_format": "xml",
       "model": "gemma4-12b-qat-gguf"
@@ -5369,24 +5322,23 @@
       "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
       "year": "2023",
       "ehr_used": false,
-      "ehr_evidence": "The study uses a multicenter cohort study with neurocognitive test batteries and parent-report behavioral questionnaires; no mention of EHR or linked health data.",
+      "ehr_evidence": "The study is a multicenter cohort study using standardized test batteries and parent-report questionnaires, not EHR or linked health data.",
       "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes of 9-year-old children prenatally exposed to maternal cancer and its treatments (chemotherapy, surgery, radiotherapy).",
       "key_findings": [
         "Mean cognitive and behavioral outcomes were within normal ranges.",
-        "No significant differences in FSIQ based on treatment type, cancer stage, or sex.",
-        "Positive association between gestational age and FSIQ.",
-        "Maternal bereavement before age 2 was associated with lower FSIQ when adjusted for GA.",
-        "Maternal education level was a significant predictor of FSIQ."
+        "FSIQ was positively associated with gestational age and maternal education.",
+        "No significant differences in FSIQ were found between different treatment types.",
+        "Maternal bereavement before age 2 was associated with lower FSIQ when not adjusted for gestational age."
       ],
       "captured_features": [
         "Full Scale Intelligence Quotient (FSIQ)",
-        "verbal and visuospatial memory",
+        "verbal and visuospatial memory scores",
         "attentional function",
         "behavioral questionnaire results",
         "gestational age",
-        "maternal education",
-        "maternal death",
-        "treatment type (chemotherapy, surgery, radiotherapy, trastuzumab)"
+        "maternal education level",
+        "treatment type (chemotherapy, surgery, radiotherapy)",
+        "maternal death"
       ],
       "pathologies_diseases": [
         "maternal cancer",
@@ -5394,17 +5346,17 @@
         "autism spectrum disorder"
       ],
       "study_design": "Prospective multicenter cohort study (cross-sectional analysis of 9-year-olds)",
-      "data_source_type": "Cohort study (direct assessment)",
+      "data_source_type": "Cohort study",
       "population": "151 children (mean age 9.3 years) from Belgium, Netherlands, Italy, Czech Republic, and New Jersey",
-      "exposure_domain": "maternal cancer and treatment during pregnancy",
+      "exposure_domain": "Maternal cancer and treatments (chemotherapy, surgery, radiotherapy) during pregnancy",
       "limitations": [
         "Small sample size for specific subgroups",
-        "Potential confounding from maternal stress or insecure attachment",
+        "Potential for underpowered analysis in the chemotherapy subgroup",
         "Lack of general population comparison for remedial support rates"
       ],
-      "data_availability": "supplementary-only",
+      "data_availability": "not-stated",
       "data_accession_links": [],
-      "data_availability_statement": "We report a cross-sectional analysis of the 9-year-old children (Data Supplement, online only).",
+      "data_availability_statement": "",
       "confidence": "high",
       "source_format": "xml",
       "model": "gemma4-12b-qat-gguf"
@@ -5581,38 +5533,37 @@
       "title": "Parental, gestational, and early-life exposure to indoor environmental hazardous factors on allergic rhinitis among preschool children in Urumqi City: a case-control study.",
       "year": "2023",
       "ehr_used": false,
-      "ehr_evidence": "None. The study used parental reports and kindergarten-based selection.",
+      "ehr_evidence": "The study used questionnaires developed for parents/guardians to collect data, rather than EHR or linked health data.",
       "summary": "A case-control study investigating the association between early-life indoor environmental factors and allergic rhinitis (AR) in preschool children in Urumqi City, China.",
       "key_findings": [
-        "Cesarean section (OR=1.31)",
-        "Father with AR (OR=2.67)",
-        "Mother with AR (OR=3.70)",
-        "Mother with asthma (OR=3.11)",
-        "Mother with newly purchased furniture during pregnancy (OR=1.49)"
+        "Cesarean section (OR=1.31), father with AR (OR=2.67), mother with AR (OR=3.70), mother with asthma (OR=3.11), and newly purchased furniture during pregnancy (OR=1.49) were significant risk factors for childhood AR.",
+        "Univariate analysis suggested renovation, dampness/mold, and passive smoking as contributing factors."
       ],
       "captured_features": [
-        "Parental reports of AR",
-        "Parental history of respiratory disease",
-        "Indoor environmental correlates of maternal exposure",
+        "Parental reports of AR and asthma",
         "Mode of birth",
-        "Family history of AR/asthma",
-        "Newly purchased furniture"
+        "Indoor environment (renovation, furniture, dampness, mold)",
+        "Living habits (smoking, pets, plants)",
+        "Feeding status",
+        "Demographics (sex, ethnicity, age)"
       ],
       "pathologies_diseases": [
         "allergic rhinitis",
         "asthma"
       ],
       "study_design": "case-control study",
-      "data_source_type": "Survey / Parental reports",
-      "population": "Preschool children in Urumqi City, China",
+      "data_source_type": "Questionnaire",
+      "population": "2020 preschool children in Urumqi City, China",
       "exposure_domain": "indoor environment",
       "limitations": [
+        "Case-control design",
         "Reliance on parental reports",
-        "Case-control design"
+        "Potential for recall bias",
+        "Conservative case selection (only physician-diagnosed AR)"
       ],
-      "data_availability": "available-upon-request",
+      "data_availability": "not-stated",
       "data_accession_links": [],
-      "data_availability_statement": "The datasets generated and/or analyzed during the current study are not publicly available due to the data belonging to the School of Public Health of Fudan University but are available from the corresponding author upon reasonable request.",
+      "data_availability_statement": "",
       "confidence": "high",
       "source_format": "pdf",
       "model": "gemma4-12b-qat-gguf"
@@ -5622,19 +5573,19 @@
       "title": "Updated report of COVID-19 vaccine safety monitoring in Japan: booster doses for Omicron variants and vaccinations for infants and young children.",
       "year": "2023",
       "ehr_used": false,
-      "ehr_evidence": "Japanese systems for COVID-19 vaccines safety monitoring and case safety reports from healthcare professionals and the marketing authorisation holder (MAH).",
-      "summary": "Update on COVID-19 vaccine safety in Japan, including booster doses for Omicron variants and vaccinations for infants and young children.",
+      "ehr_evidence": "The study uses spontaneous reporting data from healthcare professionals and marketing authorization holders (MAH).",
+      "summary": "An update on COVID-19 vaccine safety monitoring in Japan, specifically regarding booster doses for Omicron variants in adults and vaccinations for infants and young children.",
       "key_findings": [
-        "Confirmed cases of myocarditis and pericarditis for Pfizer and Moderna booster doses.",
-        "Reporting rates for anaphylaxis and death were documented."
+        "Reporting rates of serious adverse events (myocarditis, pericarditis, anaphylaxis, and death) for bivalent vaccines were generally not higher than for any booster doses.",
+        "The reporting rate of serious adverse events was low in children aged 6 months to 4 years."
       ],
       "captured_features": [
-        "number of doses",
-        "age",
-        "sex",
-        "manufacturer",
-        "vaccine type",
-        "safety reports"
+        "Number of doses",
+        "Age",
+        "Sex",
+        "Manufacturer",
+        "Vaccine type (monovalent/bivalent)",
+        "Adverse event reports (myocarditis, pericarditis, anaphylaxis, death)"
       ],
       "pathologies_diseases": [
         "myocarditis",
@@ -5642,19 +5593,16 @@
         "anaphylaxis",
         "death"
       ],
-      "study_design": "Pharmacovigilance / safety monitoring report",
-      "data_source_type": "Pharmacovigilance reporting system",
-      "population": "Japanese infants (6 months to 4 years) and adults (>=12 years)",
-      "exposure_domain": "COVID-19 vaccines",
+      "study_design": "Pharmacovigilance surveillance / safety monitoring report",
+      "data_source_type": "Spontaneous reporting system",
+      "population": "Infants and young children (6 months to 4 years) and adults (>=12 years) in Japan",
+      "exposure_domain": "COVID-19 vaccination",
       "limitations": [
-        "Not an environmental exposure study",
-        "No confirmed causal relationship for deaths"
+        "Potential underestimation of the numbers and incidence rates of adverse events by using spontaneous reporting data."
       ],
-      "data_availability": "public-repository",
-      "data_accession_links": [
-        "https://www.mhlw.go.jp/stf/shingi/shingi-kousei_284075.html"
-      ],
-      "data_availability_statement": "The data for this report are available to the public (Japanese language only) in the webpage of the Ministry of Health, Labour and Welfare of Japan ( https://www.mhlw.go.jp/stf /shingi/shingi-kousei_284075.html).",
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
       "confidence": "high",
       "source_format": "pdf",
       "model": "gemma4-12b-qat-gguf"
@@ -5927,7 +5875,7 @@
       "year": "2024",
       "ehr_used": false,
       "ehr_evidence": "None mentioned in the correction notice.",
-      "summary": "Correction notice for a retrospective cohort study investigating how neonatal blood lead concentration predicts medium-term outcomes in children under 5 years old with congenital lead poisoning in Northern Nigeria.",
+      "summary": "Correction notice for a retrospective cohort study investigating how neonatal blood lead concentration predicts medium-term lead-related outcomes in children under 5 years old with congenital lead poisoning in Northern Nigeria.",
       "key_findings": [],
       "captured_features": [],
       "pathologies_diseases": [

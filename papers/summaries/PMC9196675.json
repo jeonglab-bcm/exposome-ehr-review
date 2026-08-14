@@ -3,34 +3,52 @@
   "title": "Willingness toward COVID-19 vaccination, coadministration with other vaccines and receive a COVID-19 vaccine booster: a cross-sectional study on the guardians of children in China.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "The study used a self-administered questionnaire distributed through the 'Xiao Dou Miao' app.",
-  "summary": "A cross-sectional study investigating the willingness of guardians in China to vaccinate children against COVID-19, including coadministration and booster doses.",
+  "ehr_evidence": "The study used a self-administered questionnaire distributed through the 'Xiao Dou Miao' app. The study used online questionnaires and self-administered surveys.",
+  "summary": "A cross-sectional study investigating the willingness of guardians in China to vaccinate children against COVID-19, coadminister vaccines, and receive booster doses.",
   "key_findings": [
     "86.68% of guardians were willing to vaccinate their children with the COVID-19 vaccine.",
-    "77% were willing toward coadministration of COVID-19 and influenza vaccines.",
-    "82% were willing to vaccinate their children with a COVID-19 vaccine booster."
+    "Guardians aged ≥40 years, healthcare workers, and those with children aged ≥3 years were more willing to vaccinate their children.",
+    "Approximately 77% of the guardians were willing toward the coadministration of COVID-19 and influenza vaccines.",
+    "86.68% of guardians were willing to vaccinate children with COVID-19 vaccine",
+    "77% were willing toward coadministration of influenza and COVID-19 vaccines",
+    "64% were willing toward coadministration of nonimmunization program vaccines",
+    "82% were willing to vaccinate children with a COVID-19 vaccine booster"
   ],
   "captured_features": [
-    "Guardian demographics (age, education, occupation, income)",
-    "Child characteristics (age, gender)",
-    "Vaccination willingness scores"
+    "Guardian age",
+    "Guardian education",
+    "Guardian occupation",
+    "Guardian income",
+    "Child's age",
+    "Child's gender",
+    "Child's underlying disease status",
+    "Vaccination willingness scores",
+    "Guardian willingness",
+    "Education level",
+    "Occupation",
+    "Child age",
+    "Vaccination status of guardians",
+    "Income"
   ],
   "pathologies_diseases": [
-    "COVID-19"
+    "COVID-19",
+    "influenza"
   ],
-  "study_design": "cross-sectional study",
-  "data_source_type": "Survey",
-  "population": "9424 guardians of children in China",
+  "study_design": "Cross-sectional study",
+  "data_source_type": "Survey / Questionnaire",
+  "population": "Guardians of children aged <6 years in China",
   "exposure_domain": "None",
   "limitations": [
-    "Cross-sectional design",
-    "Self-reported questionnaire data"
+    "Self-reported questionnaire data",
+    "Potential selection bias from app users",
+    "Online questionnaire prevents effective random sampling",
+    "Not representative of the whole population in China",
+    "Privacy prevented individual follow-up",
+    "Self-administered questionnaires may have information deviation"
   ],
-  "data_availability": "supplementary-only",
-  "data_accession_links": [
-    "https://doi.org/10.1080/21645515.2022.2049169"
-  ],
-  "data_availability_statement": "Supplementary data for this article can be accessed on the publisher’s website at https://doi.org/10.1080/21645515.2022.2049169.",
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
   "confidence": "high",
   "source_format": "xml",
   "model": "gemma4-12b-qat-gguf"

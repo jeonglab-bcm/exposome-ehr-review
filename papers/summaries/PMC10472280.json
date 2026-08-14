@@ -3,19 +3,19 @@
   "title": "Updated report of COVID-19 vaccine safety monitoring in Japan: booster doses for Omicron variants and vaccinations for infants and young children.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "Japanese systems for COVID-19 vaccines safety monitoring and case safety reports from healthcare professionals and the marketing authorisation holder (MAH).",
-  "summary": "Update on COVID-19 vaccine safety in Japan, including booster doses for Omicron variants and vaccinations for infants and young children.",
+  "ehr_evidence": "The study uses spontaneous reporting data from healthcare professionals and marketing authorization holders (MAH).",
+  "summary": "An update on COVID-19 vaccine safety monitoring in Japan, specifically regarding booster doses for Omicron variants in adults and vaccinations for infants and young children.",
   "key_findings": [
-    "Confirmed cases of myocarditis and pericarditis for Pfizer and Moderna booster doses.",
-    "Reporting rates for anaphylaxis and death were documented."
+    "Reporting rates of serious adverse events (myocarditis, pericarditis, anaphylaxis, and death) for bivalent vaccines were generally not higher than for any booster doses.",
+    "The reporting rate of serious adverse events was low in children aged 6 months to 4 years."
   ],
   "captured_features": [
-    "number of doses",
-    "age",
-    "sex",
-    "manufacturer",
-    "vaccine type",
-    "safety reports"
+    "Number of doses",
+    "Age",
+    "Sex",
+    "Manufacturer",
+    "Vaccine type (monovalent/bivalent)",
+    "Adverse event reports (myocarditis, pericarditis, anaphylaxis, death)"
   ],
   "pathologies_diseases": [
     "myocarditis",
@@ -23,19 +23,16 @@
     "anaphylaxis",
     "death"
   ],
-  "study_design": "Pharmacovigilance / safety monitoring report",
-  "data_source_type": "Pharmacovigilance reporting system",
-  "population": "Japanese infants (6 months to 4 years) and adults (>=12 years)",
-  "exposure_domain": "COVID-19 vaccines",
+  "study_design": "Pharmacovigilance surveillance / safety monitoring report",
+  "data_source_type": "Spontaneous reporting system",
+  "population": "Infants and young children (6 months to 4 years) and adults (>=12 years) in Japan",
+  "exposure_domain": "COVID-19 vaccination",
   "limitations": [
-    "Not an environmental exposure study",
-    "No confirmed causal relationship for deaths"
+    "Potential underestimation of the numbers and incidence rates of adverse events by using spontaneous reporting data."
   ],
-  "data_availability": "public-repository",
-  "data_accession_links": [
-    "https://www.mhlw.go.jp/stf/shingi/shingi-kousei_284075.html"
-  ],
-  "data_availability_statement": "The data for this report are available to the public (Japanese language only) in the webpage of the Ministry of Health, Labour and Welfare of Japan ( https://www.mhlw.go.jp/stf /shingi/shingi-kousei_284075.html).",
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
   "confidence": "high",
   "source_format": "pdf",
   "model": "gemma4-12b-qat-gguf"
