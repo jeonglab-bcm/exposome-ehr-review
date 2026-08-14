@@ -57,6 +57,12 @@ jobs:
         run: dagster asset materialize -m pipeline --select "*"
 
       - name: Commit and push results
+        # always(): a full forced pass runs for hours, and each paper writes its
+        # own JSON as it completes. Without this, a materialize that dies late
+        # (job timeout, one bad paper) throws away every extraction that did
+        # succeed. Committing partial progress is safe — the combined file and
+        # results/ are rebuilt from whatever per-paper JSONs exist on disk.
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
