@@ -3,35 +3,42 @@
   "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None; the study used a neurocognitive test battery and parent-report behavioral questionnaires.",
-  "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes in 9-year-old children prenatally exposed to maternal cancer and its treatment (chemotherapy, surgery, radiotherapy).",
+  "ehr_evidence": "The study uses a multicenter cohort study with neurocognitive test batteries and parent-report behavioral questionnaires; no mention of EHR or linked health data.",
+  "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes of 9-year-old children prenatally exposed to maternal cancer and its treatments (chemotherapy, surgery, radiotherapy).",
   "key_findings": [
     "Mean cognitive and behavioral outcomes were within normal ranges.",
-    "Gestational age at birth showed a positive association with Full Scale Intelligence Quotient (FSIQ).",
-    "No difference in FSIQ was found between treatment types or chemotherapeutic agents.",
-    "Associations were observed with preterm birth, maternal death, and maternal education."
+    "No significant differences in FSIQ based on treatment type, cancer stage, or sex.",
+    "Positive association between gestational age and FSIQ.",
+    "Maternal bereavement before age 2 was associated with lower FSIQ when adjusted for GA.",
+    "Maternal education level was a significant predictor of FSIQ."
   ],
   "captured_features": [
     "Full Scale Intelligence Quotient (FSIQ)",
-    "neurocognitive test scores",
+    "verbal and visuospatial memory",
+    "attentional function",
     "behavioral questionnaire results",
     "gestational age",
+    "maternal education",
+    "maternal death",
     "treatment type (chemotherapy, surgery, radiotherapy, trastuzumab)"
   ],
   "pathologies_diseases": [
     "maternal cancer",
-    "preterm birth"
+    "ADHD",
+    "autism spectrum disorder"
   ],
-  "study_design": "multicenter cohort study (cross-sectional analysis)",
-  "data_source_type": "Prospective cohort study",
-  "population": "151 children (mean age 9.3 years) prenatally exposed to maternal cancer",
+  "study_design": "Prospective multicenter cohort study (cross-sectional analysis of 9-year-olds)",
+  "data_source_type": "Cohort study (direct assessment)",
+  "population": "151 children (mean age 9.3 years) from Belgium, Netherlands, Italy, Czech Republic, and New Jersey",
   "exposure_domain": "maternal cancer and treatment during pregnancy",
   "limitations": [
-    "Cross-sectional analysis at a single time point (age 9)"
+    "Small sample size for specific subgroups",
+    "Potential confounding from maternal stress or insecure attachment",
+    "Lack of general population comparison for remedial support rates"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Multiple linear regression (Data Supplement) with GA, death of mother, and parental (maternal and paternal) education level as explanatory variables shows that GA (P = .006) and maternal education level (P = .005) remained to explain FSIQ. An overview of the reported medical problems is enlisted in the Data Supplement.",
+  "data_availability_statement": "We report a cross-sectional analysis of the 9-year-old children (Data Supplement, online only).",
   "confidence": "high",
   "source_format": "xml",
   "model": "gemma4-12b-qat-gguf"

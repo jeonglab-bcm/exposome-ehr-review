@@ -3,34 +3,42 @@
   "title": "Evaluating Demographic Data to Improve Confidence in Equity Analytics in a Children's Hospital.",
   "year": "2023",
   "ehr_used": true,
-  "ehr_evidence": "the electronic health record team standardized race and ethnicity fields... all fields are sourced from the same electronic health record field.",
-  "summary": "Evaluation of demographic data collection and infrastructure at Akron Children’s Hospital to improve health equity analytics.",
+  "ehr_evidence": "The electronic health record team standardized race and ethnicity fields... all fields are sourced from the same electronic health record field.",
+  "summary": "Evaluation of demographic data collection, standardization, and visualization for health equity analytics at Akron Children’s Hospital.",
   "key_findings": [
-    "Standardized race and ethnicity fields with federal definitions.",
-    "Identified inconsistencies in reporting tools.",
-    "Provided 7 recommendations for aligning health equity data analytics."
+    "Inconsistent accessibility of demographic fields across reporting tools.",
+    "Data sourced from the same EHR field across most tools.",
+    "High percentage of missing payer information in the Appointment Universe.",
+    "Identified 7 recommendations for standardizing health equity data."
   ],
   "captured_features": [
     "race",
+    "sex",
     "ethnicity",
     "language",
+    "zip code",
+    "payer",
+    "patient age",
     "Child Opportunity Index 2.0",
-    "social determinants of health (SDOH)"
+    "SDOH"
   ],
   "pathologies_diseases": [
-    "health equity",
-    "social determinants of health"
+    "asthma",
+    "diabetes",
+    "suicide risk"
   ],
-  "study_design": "Quality improvement (QI) project / data infrastructure evaluation",
+  "study_design": "Quality Improvement (QI) project",
   "data_source_type": "EHR",
-  "population": "Children at Akron Children’s Hospital",
-  "exposure_domain": "Demographic data (race, ethnicity, language, SDOH)",
+  "population": "Pediatric patients at Akron Children’s Hospital",
+  "exposure_domain": "Demographic data and Social Determinants of Health (SDOH)",
   "limitations": [
-    "limitations to a seldom-populated Race 2 field"
+    "Tools and technical infrastructure may be unique to ACH",
+    "Limited to 7 prioritized fields",
+    "Upstream data collection accuracy is necessary"
   ],
-  "data_availability": "not-stated",
+  "data_availability": "in-house",
   "data_accession_links": [],
-  "data_availability_statement": "",
+  "data_availability_statement": "the Clinical Universe (the data mart software used internally for data reporting and analytics; SAP America, Newtown Square, PA) displays one single race category",
   "confidence": "high",
   "source_format": "pdf",
   "model": "gemma4-12b-qat-gguf"

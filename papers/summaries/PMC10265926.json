@@ -3,34 +3,46 @@
   "title": "Evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None; data were collected via an online questionnaire.",
-  "summary": "Safety evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women.",
+  "ehr_evidence": "Data were collected via an anonymous online questionnaire created via Google Forms.",
+  "summary": "Evaluation of the safety experience of SARS-CoV-2 vaccination in pregnant and breastfeeding women in Slovakia and the Czech Republic.",
   "key_findings": [
-    "Breastfeeding women experienced higher rates of adverse events (AEs) compared to pregnant women.",
-    "93.1% of pregnancies were carried to term.",
+    "Safety profile of SARS-CoV-2 vaccines in pregnant and breastfeeding women was similar to the general population.",
+    "Breastfeeding women experienced higher rates of adverse events (AEs) than pregnant women.",
     "Vaccine efficacy was 96.3%.",
-    "No pattern of serious AEs emerged."
+    "No pattern of serious adverse events (SAEs) emerged."
   ],
   "captured_features": [
+    "Age",
+    "Health care background",
+    "SARS-CoV-2 infection history",
+    "Vaccine types",
     "Adverse events (AEs)",
-    "pregnancy outcomes",
-    "confirmed SARS-CoV-2 infection",
-    "vaccine efficacy"
+    "Pregnancy outcomes",
+    "Vaccine efficacy"
   ],
   "pathologies_diseases": [
     "SARS-CoV-2",
-    "pregnancy complications"
+    "congenital defects",
+    "acute appendicitis",
+    "autoimmune disorder",
+    "cardiac arrhythmia",
+    "acute nephritis",
+    "menstrual cycle bleeding disorders"
   ],
-  "study_design": "Online questionnaire study",
+  "study_design": "Cross-sectional online survey",
   "data_source_type": "Online questionnaire",
-  "population": "2192 pregnant or breastfeeding women",
+  "population": "2192 pregnant or breastfeeding women from Slovakia and Czech Republic",
   "exposure_domain": "SARS-CoV-2 vaccination",
   "limitations": [
-    "Self-reported data via online questionnaire"
+    "Convenience data sample",
+    "Self-reported data",
+    "No inclusion/exclusion criteria",
+    "Data recorded before the Omicron variant",
+    "Original monovalent vaccines only"
   ],
-  "data_availability": "not-stated",
+  "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "",
+  "data_availability_statement": "Supplementary material associated with this article can be found, in the online version, at doi: 10.1016/j.ijregi.2023.06.002.",
   "confidence": "high",
   "source_format": "pdf",
   "model": "gemma4-12b-qat-gguf"

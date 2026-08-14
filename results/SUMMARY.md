@@ -29,7 +29,7 @@
 | PMC7082382 | 2020 | severe combined immunodeficiency (SCID); disseminated BCG in | EHR | BCG Moreau Vaccine Safety Profile and NK Cells-Double Protection… |
 | PMC7145790 | 2020 | type 1 diabetes | EHR | Childhood type 1 diabetes: an environment-wide association study… |
 | PMC9376253 | 2022 | COVID-19 | EHR and commercial consumer da | Repeatable enhancement of healthcare data with social determinants of… |
-| PMC10085515 | 2023 | health equity; social determinants of health | EHR | Evaluating Demographic Data to Improve Confidence in Equity Analytics… |
+| PMC10085515 | 2023 | asthma; diabetes; suicide risk | EHR | Evaluating Demographic Data to Improve Confidence in Equity Analytics… |
 | PMC10312866 | 2024 | childhood obesity | EHR | Associations of longitudinal BMI percentile classification patterns… |
 | PMC12629229 | 2025 | foster care admission | claims data | Using machine learning to predict future foster care admission. |
 | PMC12799378 | 2025 | asthma; chronic obstructive pulmonary disease (COPD); idiopa | EHR and linked health data | Sugar restriction in the first 1000 days after conception, and… |
@@ -38,19 +38,19 @@
 
 | Disease | Papers |
 |----------|--------|
-| asthma | 20 |
+| asthma | 21 |
 | lead exposure | 7 |
 | respiratory symptoms | 6 |
 | obesity | 6 |
 | influenza | 6 |
 | lung function | 4 |
 | cardiovascular disease | 4 |
+| adhd | 4 |
 | diarrhea | 4 |
 | covid-19 | 4 |
 | low birth weight | 3 |
 | birth weight | 3 |
 | neurodevelopmental impairment | 3 |
-| adhd | 3 |
 | birth defects | 3 |
 | type 2 diabetes | 3 |
 | sars-cov-2 | 3 |
@@ -63,8 +63,8 @@
 
 | Feature | Papers |
 |---------|--------|
-| age | 13 |
-| sex | 10 |
+| age | 14 |
+| sex | 11 |
 | gender | 9 |
 | gestational age | 8 |
 | birth weight | 6 |
@@ -106,7 +106,7 @@
 | Clinical records | 4 |
 | Laboratory/Experimental | 4 |
 | cohort study | 3 |
-| Prospective cohort study | 3 |
 | Birth cohort study | 3 |
 | Laboratory animal data | 3 |
+| Primary data collection | 3 |
 

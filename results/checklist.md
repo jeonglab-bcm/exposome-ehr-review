@@ -140,9 +140,9 @@ All 166 summarized papers. See `SUMMARY.md` for the executive summary.
 | 134 | PMC9489473 | 2022 |  | myocarditis; pericarditis; anaphylaxis | Pharmacovigilance reports | Safety monitoring report on COVID-19 booster shots and pediatric vaccinations in Japan from December 2021 to… |
 | 135 | PMC9693808 | 2022 |  | cardiovascular disorders; heart failure | Laboratory/Experimental | This study investigates the effects of prenatal methamphetamine exposure on myocardial gene expression in… |
 | 136 | PMC9890274 | 2022 |  | subclinical atherosclerosis; carotid intima-media… | Birth cohort | Cross-sectional study using quantile regression to examine the association between ambient air pollution… |
-| 137 | PMC10022854 | 2023 |  | maternal cancer; preterm birth | Prospective cohort study | A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes in 9-year-old children… |
-| 138 | PMC10085515 | 2023 | ✓ | health equity; social determinants of health | EHR | Evaluation of demographic data collection and infrastructure at Akron Children’s Hospital to improve health… |
-| 139 | PMC10265926 | 2023 |  | SARS-CoV-2; pregnancy complications | Online questionnaire | Safety evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women. |
+| 137 | PMC10022854 | 2023 |  | maternal cancer; ADHD; autism spectrum disorder | Cohort study (direct… | A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes of 9-year-old children… |
+| 138 | PMC10085515 | 2023 | ✓ | asthma; diabetes; suicide risk | EHR | Evaluation of demographic data collection, standardization, and visualization for health equity analytics at… |
+| 139 | PMC10265926 | 2023 |  | SARS-CoV-2; congenital defects; acute appendicitis | Online questionnaire | Evaluation of the safety experience of SARS-CoV-2 vaccination in pregnant and breastfeeding women in Slovakia… |
 | 140 | PMC10292782 | 2023 |  | asthma; rhinitis; lung function | Population-based cohorts | Journal club review of three studies investigating environmental exposures (phthalates, air pollution… |
 | 141 | PMC10344887 | 2023 |  | influenza | Clinical/Laboratory data | A systems-level analysis of immune responses to the trivalent inactivated influenza vaccine adjuvanted with… |
 | 142 | PMC10373157 | 2023 |  | allergic rhinitis; asthma | Survey / Parental reports | A case-control study investigating the association between early-life indoor environmental factors and… |

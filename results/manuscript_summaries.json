@@ -5369,35 +5369,42 @@
       "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
       "year": "2023",
       "ehr_used": false,
-      "ehr_evidence": "None; the study used a neurocognitive test battery and parent-report behavioral questionnaires.",
-      "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes in 9-year-old children prenatally exposed to maternal cancer and its treatment (chemotherapy, surgery, radiotherapy).",
+      "ehr_evidence": "The study uses a multicenter cohort study with neurocognitive test batteries and parent-report behavioral questionnaires; no mention of EHR or linked health data.",
+      "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes of 9-year-old children prenatally exposed to maternal cancer and its treatments (chemotherapy, surgery, radiotherapy).",
       "key_findings": [
         "Mean cognitive and behavioral outcomes were within normal ranges.",
-        "Gestational age at birth showed a positive association with Full Scale Intelligence Quotient (FSIQ).",
-        "No difference in FSIQ was found between treatment types or chemotherapeutic agents.",
-        "Associations were observed with preterm birth, maternal death, and maternal education."
+        "No significant differences in FSIQ based on treatment type, cancer stage, or sex.",
+        "Positive association between gestational age and FSIQ.",
+        "Maternal bereavement before age 2 was associated with lower FSIQ when adjusted for GA.",
+        "Maternal education level was a significant predictor of FSIQ."
       ],
       "captured_features": [
         "Full Scale Intelligence Quotient (FSIQ)",
-        "neurocognitive test scores",
+        "verbal and visuospatial memory",
+        "attentional function",
         "behavioral questionnaire results",
         "gestational age",
+        "maternal education",
+        "maternal death",
         "treatment type (chemotherapy, surgery, radiotherapy, trastuzumab)"
       ],
       "pathologies_diseases": [
         "maternal cancer",
-        "preterm birth"
+        "ADHD",
+        "autism spectrum disorder"
       ],
-      "study_design": "multicenter cohort study (cross-sectional analysis)",
-      "data_source_type": "Prospective cohort study",
-      "population": "151 children (mean age 9.3 years) prenatally exposed to maternal cancer",
+      "study_design": "Prospective multicenter cohort study (cross-sectional analysis of 9-year-olds)",
+      "data_source_type": "Cohort study (direct assessment)",
+      "population": "151 children (mean age 9.3 years) from Belgium, Netherlands, Italy, Czech Republic, and New Jersey",
       "exposure_domain": "maternal cancer and treatment during pregnancy",
       "limitations": [
-        "Cross-sectional analysis at a single time point (age 9)"
+        "Small sample size for specific subgroups",
+        "Potential confounding from maternal stress or insecure attachment",
+        "Lack of general population comparison for remedial support rates"
       ],
       "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "Multiple linear regression (Data Supplement) with GA, death of mother, and parental (maternal and paternal) education level as explanatory variables shows that GA (P = .006) and maternal education level (P = .005) remained to explain FSIQ. An overview of the reported medical problems is enlisted in the Data Supplement.",
+      "data_availability_statement": "We report a cross-sectional analysis of the 9-year-old children (Data Supplement, online only).",
       "confidence": "high",
       "source_format": "xml",
       "model": "gemma4-12b-qat-gguf"
@@ -5407,34 +5414,42 @@
       "title": "Evaluating Demographic Data to Improve Confidence in Equity Analytics in a Children's Hospital.",
       "year": "2023",
       "ehr_used": true,
-      "ehr_evidence": "the electronic health record team standardized race and ethnicity fields... all fields are sourced from the same electronic health record field.",
-      "summary": "Evaluation of demographic data collection and infrastructure at Akron Children’s Hospital to improve health equity analytics.",
+      "ehr_evidence": "The electronic health record team standardized race and ethnicity fields... all fields are sourced from the same electronic health record field.",
+      "summary": "Evaluation of demographic data collection, standardization, and visualization for health equity analytics at Akron Children’s Hospital.",
       "key_findings": [
-        "Standardized race and ethnicity fields with federal definitions.",
-        "Identified inconsistencies in reporting tools.",
-        "Provided 7 recommendations for aligning health equity data analytics."
+        "Inconsistent accessibility of demographic fields across reporting tools.",
+        "Data sourced from the same EHR field across most tools.",
+        "High percentage of missing payer information in the Appointment Universe.",
+        "Identified 7 recommendations for standardizing health equity data."
       ],
       "captured_features": [
         "race",
+        "sex",
         "ethnicity",
         "language",
+        "zip code",
+        "payer",
+        "patient age",
         "Child Opportunity Index 2.0",
-        "social determinants of health (SDOH)"
+        "SDOH"
       ],
       "pathologies_diseases": [
-        "health equity",
-        "social determinants of health"
+        "asthma",
+        "diabetes",
+        "suicide risk"
       ],
-      "study_design": "Quality improvement (QI) project / data infrastructure evaluation",
+      "study_design": "Quality Improvement (QI) project",
       "data_source_type": "EHR",
-      "population": "Children at Akron Children’s Hospital",
-      "exposure_domain": "Demographic data (race, ethnicity, language, SDOH)",
+      "population": "Pediatric patients at Akron Children’s Hospital",
+      "exposure_domain": "Demographic data and Social Determinants of Health (SDOH)",
       "limitations": [
-        "limitations to a seldom-populated Race 2 field"
+        "Tools and technical infrastructure may be unique to ACH",
+        "Limited to 7 prioritized fields",
+        "Upstream data collection accuracy is necessary"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "in-house",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "the Clinical Universe (the data mart software used internally for data reporting and analytics; SAP America, Newtown Square, PA) displays one single race category",
       "confidence": "high",
       "source_format": "pdf",
       "model": "gemma4-12b-qat-gguf"
@@ -5444,34 +5459,46 @@
       "title": "Evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women.",
       "year": "2023",
       "ehr_used": false,
-      "ehr_evidence": "None; data were collected via an online questionnaire.",
-      "summary": "Safety evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women.",
+      "ehr_evidence": "Data were collected via an anonymous online questionnaire created via Google Forms.",
+      "summary": "Evaluation of the safety experience of SARS-CoV-2 vaccination in pregnant and breastfeeding women in Slovakia and the Czech Republic.",
       "key_findings": [
-        "Breastfeeding women experienced higher rates of adverse events (AEs) compared to pregnant women.",
-        "93.1% of pregnancies were carried to term.",
+        "Safety profile of SARS-CoV-2 vaccines in pregnant and breastfeeding women was similar to the general population.",
+        "Breastfeeding women experienced higher rates of adverse events (AEs) than pregnant women.",
         "Vaccine efficacy was 96.3%.",
-        "No pattern of serious AEs emerged."
+        "No pattern of serious adverse events (SAEs) emerged."
       ],
       "captured_features": [
+        "Age",
+        "Health care background",
+        "SARS-CoV-2 infection history",
+        "Vaccine types",
         "Adverse events (AEs)",
-        "pregnancy outcomes",
-        "confirmed SARS-CoV-2 infection",
-        "vaccine efficacy"
+        "Pregnancy outcomes",
+        "Vaccine efficacy"
       ],
       "pathologies_diseases": [
         "SARS-CoV-2",
-        "pregnancy complications"
+        "congenital defects",
+        "acute appendicitis",
+        "autoimmune disorder",
+        "cardiac arrhythmia",
+        "acute nephritis",
+        "menstrual cycle bleeding disorders"
       ],
-      "study_design": "Online questionnaire study",
+      "study_design": "Cross-sectional online survey",
       "data_source_type": "Online questionnaire",
-      "population": "2192 pregnant or breastfeeding women",
+      "population": "2192 pregnant or breastfeeding women from Slovakia and Czech Republic",
       "exposure_domain": "SARS-CoV-2 vaccination",
       "limitations": [
-        "Self-reported data via online questionnaire"
+        "Convenience data sample",
+        "Self-reported data",
+        "No inclusion/exclusion criteria",
+        "Data recorded before the Omicron variant",
+        "Original monovalent vaccines only"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Supplementary material associated with this article can be found, in the online version, at doi: 10.1016/j.ijregi.2023.06.002.",
       "confidence": "high",
       "source_format": "pdf",
       "model": "gemma4-12b-qat-gguf"
