@@ -54,7 +54,22 @@ jobs:
           git add papers results paper_summary.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "Update pipeline outputs ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
-            git push origin HEAD:${{ github.ref_name }}
+            exit 0
           fi
+          git commit -m "Update pipeline outputs ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+          # The materialize step runs for a long time, so the branch may have
+          # moved on while it worked. A plain push is then rejected as
+          # non-fast-forward and the whole run fails after all the LLM spend —
+          # rebase onto the current tip and retry instead.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:${{ github.ref_name }}; then
+              echo "Pushed pipeline outputs (attempt $attempt)."
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt; rebasing onto origin/${{ github.ref_name }}."
+            git fetch origin ${{ github.ref_name }}
+            git rebase FETCH_HEAD || { git rebase --abort; exit 1; }
+            sleep $((attempt * 5))
+          done
+          echo "::error::Could not push pipeline outputs after 3 attempts."
+          exit 1

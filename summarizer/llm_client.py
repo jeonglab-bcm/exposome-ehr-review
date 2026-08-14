@@ -110,7 +110,10 @@ def build_user_prompt(text: str) -> str:
 
 
 # ── JSON extraction ──────────────────────────────────────────────────────────
-_FENCED_RE = re.compile(r"```(?:json)?\s*(\{.*\})\s*```", re.DOTALL)
+# Non-greedy: a greedy `.*` spans from the first fence to the last one when the
+# model emits several blocks, yielding a candidate that contains the fence
+# markers themselves and never parses.
+_FENCED_RE = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL)
 
 
 def extract_json_object(raw: str) -> dict[str, Any] | None:
@@ -133,10 +136,30 @@ def extract_json_object(raw: str) -> dict[str, Any] | None:
     if best is not None:
         return _try_parse_repair(best)
 
-    # last resort: first '{' to last '}' (handles reasoning prefix + trailing junk)
-    if "{" in raw and "}" in raw:
-        return _try_parse_repair(raw[raw.index("{") : raw.rindex("}") + 1])
-    return None
+    # last resort: from the first '{' onward (handles a reasoning prefix and
+    # trailing junk; also the truncated case, where no '}' was ever emitted and
+    # _largest_balanced_object therefore found nothing to return)
+    if "{" not in raw:
+        return None
+    tail = raw[raw.index("{") :]
+    if "}" in tail:
+        obj = _try_parse_repair(tail[: tail.rindex("}") + 1])
+        if obj is not None:
+            return obj
+    return _try_parse_repair(tail)
+
+
+def _ends_inside_string(s: str) -> bool:
+    """True if ``s`` stops in the middle of an unclosed JSON string literal."""
+    in_str = esc = False
+    for ch in s:
+        if esc:
+            esc = False
+        elif ch == "\\":
+            esc = True
+        elif ch == '"':
+            in_str = not in_str
+    return in_str
 
 
 def _try_parse_repair(s: str) -> dict[str, Any] | None:
@@ -146,17 +169,23 @@ def _try_parse_repair(s: str) -> dict[str, Any] | None:
         return json.loads(s)
     except json.JSONDecodeError:
         pass
-    # truncated mid-object: append the missing closing braces
+    # Truncated mid-object: append the missing closing braces. Try the least
+    # destructive repair first — closing `{"a": "b"` as-is recovers it, whereas
+    # stripping the trailing quote would corrupt it into `{"a": "b}`.
     opens = s.count("{") - s.count("}")
-    if opens > 0:
+    if opens <= 0:
+        return None
+    candidates = [s]
+    if _ends_inside_string(s):
+        candidates.append(s + '"')          # cut mid-value: close the string
+    trimmed = s.rstrip().rstrip(",")
+    if trimmed != s:
+        candidates.append(trimmed)          # dangling comma before the cut
+    for cand in candidates:
         try:
-            # drop a trailing incomplete key/value, then close
-            trimmed = s.rstrip()
-            if trimmed.endswith(",") or trimmed.endswith('"'):
-                trimmed = trimmed.rstrip(',"')
-            return json.loads(trimmed + ("}" * opens))
+            return json.loads(cand + ("}" * opens))
         except json.JSONDecodeError:
-            pass
+            continue
     return None
 
 
@@ -341,10 +370,18 @@ def _merge_partials(partials: list[dict[str, Any]]) -> dict[str, Any]:
 
     # ehr_used = True if any chunk found EHR usage
     ehr_used = any(bool(p.get("ehr_used")) for p in partials)
-    ehr_evidence = " ".join(
-        str(p.get("ehr_evidence", "")).strip() for p in partials
-        if str(p.get("ehr_evidence", "")).strip()
-    ) or "n/a"
+
+    # Evidence must justify the merged verdict: when some chunk found EHR use,
+    # only those chunks supply evidence — a chunk that saw no EHR contributes
+    # "n/a"-style prose that reads as a contradiction. Chunks overlap by
+    # CHUNK_OVERLAP chars, so the same sentence recurs; dedupe before joining.
+    sources = [p for p in partials if bool(p.get("ehr_used"))] if ehr_used else partials
+    evidence: list[str] = []
+    for p in sources:
+        e = str(p.get("ehr_evidence", "")).strip()
+        if e and e.lower() != "n/a" and e not in evidence:
+            evidence.append(e)
+    ehr_evidence = " ".join(evidence) or "n/a"
 
     # confidence: take the highest across chunks
     conf = "unclear"

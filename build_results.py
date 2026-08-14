@@ -55,6 +55,11 @@ def main() -> None:
     shutil.copyfile(COMBINED, OUT_DIR / "manuscript_summaries.json")
 
     n = len(summaries)
+    if n == 0:
+        raise SystemExit(
+            f"{COMBINED} contains no summaries — refusing to overwrite results/ "
+            "with an empty report. Run `make summarize` (or the pipeline) first."
+        )
     ehr_papers = [s for s in summaries if s.get("ehr_used")]
     n_ehr = len(ehr_papers)
     years = sorted({s.get("year", "?") for s in summaries})

@@ -87,6 +87,7 @@ def test_scan_preserves_existing_fields(tmp_path: Path):
         "data_availability_statement": "Data available in dbGaP.",
     }
     with patch("scan_data_availability.extract", return_value=("text", "text")), \
+         patch("scan_data_availability.get_client", return_value=(MagicMock(), "m")), \
          patch("scan_data_availability.ask_llm_data_availability", return_value=scan_result):
         result = sda.scan_one(txt, summary_dir=tmp_path)
 
@@ -109,6 +110,7 @@ def test_scan_handles_no_existing_summary(tmp_path: Path):
     scan_result = {"data_availability": "in-house", "data_accession_links": [],
                    "data_availability_statement": "In-house cohort."}
     with patch("scan_data_availability.extract", return_value=("text", "text")), \
+         patch("scan_data_availability.get_client", return_value=(MagicMock(), "m")), \
          patch("scan_data_availability.ask_llm_data_availability", return_value=scan_result):
         result = sda.scan_one(txt, summary_dir=tmp_path, meta={"PMC99": {"title": "T", "year": "2021"}})
 
@@ -120,14 +122,51 @@ def test_scan_handles_no_existing_summary(tmp_path: Path):
     assert "ehr_used" not in on_disk
 
 
-def test_ask_llm_returns_none_on_failure(tmp_path: Path):
-    """ask_llm_data_availability returns None (graceful) instead of raising."""
+def test_ask_llm_raises_when_endpoint_never_answers(tmp_path: Path):
+    """An unreachable endpoint must surface, not pass as 'no statement found'.
+
+    Swallowing the error here made a total outage look like a clean run: every
+    record untouched, every paper counted ok, exit status 0.
+    """
     import scan_data_availability as sda
     mock_client = MagicMock()
     mock_client.chat.completions.create.side_effect = RuntimeError("boom")
+    with patch("scan_data_availability.time.sleep"):
+        try:
+            sda.ask_llm_data_availability(client=mock_client, model="m", text="x",
+                                          pmcid="PMC1", title="t", year="2020")
+        except RuntimeError as e:
+            assert "PMC1" in str(e) and "boom" in str(e)
+        else:
+            raise AssertionError("expected the API failure to propagate")
+    assert mock_client.chat.completions.create.call_count == sda.DA_MAX_RETRIES
+
+
+def test_ask_llm_still_degrades_gracefully_when_the_net_catches_a_link(tmp_path: Path):
+    """If the regex safety net finds a real accession, an API error is survivable."""
+    import scan_data_availability as sda
+    mock_client = MagicMock()
+    mock_client.chat.completions.create.side_effect = RuntimeError("boom")
+    with patch("scan_data_availability.time.sleep"):
+        out = sda.ask_llm_data_availability(
+            client=mock_client, model="m",
+            text="Data availability: deposited at https://doi.org/10.5281/zenodo.14913431 .",
+            pmcid="PMC1", title="t", year="2020",
+        )
+    assert out["data_availability"] == "public-repository"
+
+
+def test_ask_llm_returns_none_when_model_answers_unparseably():
+    """A garbage answer is the model's verdict, not an outage — no raise."""
+    import scan_data_availability as sda
+    mock_client = MagicMock()
+    mock_client.chat.completions.create.return_value.choices = [
+        MagicMock(message=MagicMock(content="I could not determine this."))
+    ]
     out = sda.ask_llm_data_availability(client=mock_client, model="m", text="x",
                                         pmcid="PMC1", title="t", year="2020")
     assert out is None
+    assert mock_client.chat.completions.create.call_count == 1  # not retried
 
 
 def test_ask_llm_recovers_markdown_field_response():

@@ -19,6 +19,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from typing import Literal
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -209,6 +210,12 @@ DA_SYSTEM_PROMPT = (
 )
 
 
+# Retries for the data-availability call. Transport failures are retried with a
+# linear backoff; a parse/validation failure is the model's answer, not an
+# outage, and is not retried.
+DA_MAX_RETRIES = 3
+
+
 def _da_window(text: str, size: int = 6000) -> str:
     """Pull the data-availability section from full text; fall back to the tail.
 
@@ -245,26 +252,32 @@ def ask_llm_data_availability(*, client, model, text, pmcid, title, year):
         {"role": "user", "content": f"Title: {title}\nYear: {year}\nPMCID: {pmcid}\n\nManuscript text:\n{window}"},
     ]
     result = None
-    try:
-        resp = client.chat.completions.create(
-            model=model, messages=messages, max_tokens=MAX_OUTPUT_TOKENS,
-            temperature=0.0, timeout=180.0,
-            extra_body={"enable_thinking": False},
-        )
-        raw = resp.choices[0].message.content or ""
-        obj = extract_json_object(raw)
-        if obj is None:
-            obj = _extract_markdown_da_response(raw)
-        if obj is not None:
-            # validate through pydantic — enforces the enum + coerces links,
-            # and rejects garbage the model might emit.
-            try:
-                da = DataAvailabilityResult.model_validate(obj)
-                result = da.model_dump()
-            except Exception:
-                result = None
-    except Exception:
-        result = None
+    api_error: Exception | None = None
+    for attempt in range(1, DA_MAX_RETRIES + 1):
+        try:
+            resp = client.chat.completions.create(
+                model=model, messages=messages, max_tokens=MAX_OUTPUT_TOKENS,
+                temperature=0.0, timeout=180.0,
+                extra_body={"enable_thinking": False},
+            )
+            api_error = None
+            raw = resp.choices[0].message.content or ""
+            obj = extract_json_object(raw)
+            if obj is None:
+                obj = _extract_markdown_da_response(raw)
+            if obj is not None:
+                # validate through pydantic — enforces the enum + coerces links,
+                # and rejects garbage the model might emit.
+                try:
+                    da = DataAvailabilityResult.model_validate(obj)
+                    result = da.model_dump()
+                except Exception:
+                    result = None
+            break
+        except Exception as e:  # transport / API error → back off and retry
+            api_error = e
+            if attempt < DA_MAX_RETRIES:
+                time.sleep(2 * attempt)
 
     # SAFETY NET: harvest any real accession/URL the LLM dropped. If the model
     # missed a link that's plainly in the text, add it; and if it said
@@ -285,6 +298,15 @@ def ask_llm_data_availability(*, client, model, text, pmcid, title, year):
             result["data_accession_links"] = list(existing | set(extra))
             if result.get("data_availability") != "public-repository":
                 result["data_availability"] = "public-repository"
+
+    # An unreachable endpoint must not read as "no statement found": without
+    # this the scan reports ok for every paper, leaves the records untouched,
+    # and the pipeline succeeds having asked the LLM nothing at all.
+    if result is None and api_error is not None:
+        raise RuntimeError(
+            f"data-availability call failed for {pmcid} after {DA_MAX_RETRIES} "
+            f"attempts: {type(api_error).__name__}: {api_error}"
+        ) from api_error
     return result
 
 

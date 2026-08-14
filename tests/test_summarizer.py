@@ -7,7 +7,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from summarizer.schema import ManuscriptChecklist
-from summarizer.llm_client import extract_json_object
+from summarizer.llm_client import extract_json_object, _merge_partials
+from summarizer.run import load_all_summaries
 
 
 # ── schema ─────────────────────────────────────────────────────────────────
@@ -72,6 +73,76 @@ def test_extract_json_picks_largest_balanced():
     obj = extract_json_object(raw)
     assert obj["b"] == 2
     assert obj["c"]["d"] == 3
+
+
+def test_extract_json_takes_last_of_several_fenced_blocks():
+    """A model that revises itself emits several blocks; the last is the answer."""
+    raw = (
+        'First attempt:\n```json\n{"ehr_used": false, "summary": "draft"}\n```\n'
+        'On reflection:\n```json\n{"ehr_used": true, "summary": "final"}\n```\n'
+    )
+    obj = extract_json_object(raw)
+    assert obj == {"ehr_used": True, "summary": "final"}
+
+
+def test_extract_json_repairs_truncated_response():
+    """Output cut at max_tokens: close the object without eating the last value."""
+    assert extract_json_object('{"summary": "ok", "study_design": "cohort"') == {
+        "summary": "ok", "study_design": "cohort",
+    }
+    # cut mid-string
+    assert extract_json_object('{"summary": "ok", "population": "children ag')[
+        "population"
+    ].startswith("children ag")
+    # cut just after a comma
+    assert extract_json_object('{"summary": "ok",') == {"summary": "ok"}
+
+
+# ── chunked merge ───────────────────────────────────────────────────────────
+def test_merge_partials_evidence_only_from_ehr_chunks():
+    """Chunks that saw no EHR must not contribute evidence for ehr_used=True."""
+    merged = _merge_partials([
+        {"ehr_used": False, "ehr_evidence": "n/a", "summary": "intro",
+         "key_findings": ["a"], "confidence": "low"},
+        {"ehr_used": True, "ehr_evidence": "We used Hospital Episode Statistics.",
+         "key_findings": ["b"], "confidence": "high"},
+    ])
+    assert merged["ehr_used"] is True
+    assert merged["ehr_evidence"] == "We used Hospital Episode Statistics."
+    assert merged["summary"] == "intro"      # first non-empty wins
+    assert merged["key_findings"] == ["a", "b"]
+    assert merged["confidence"] == "high"    # highest across chunks
+
+
+def test_merge_partials_dedupes_overlapping_evidence():
+    """Chunks overlap, so the same sentence arrives twice — join it once."""
+    sentence = "Diagnoses were drawn from the EHR problem list."
+    merged = _merge_partials([
+        {"ehr_used": True, "ehr_evidence": sentence},
+        {"ehr_used": True, "ehr_evidence": sentence},
+    ])
+    assert merged["ehr_evidence"] == sentence
+
+
+def test_merge_partials_no_ehr_anywhere():
+    merged = _merge_partials([{"ehr_used": False, "ehr_evidence": "n/a"}])
+    assert merged["ehr_used"] is False
+    assert merged["ehr_evidence"] == "n/a"
+
+
+# ── combined-file assembly ──────────────────────────────────────────────────
+def test_load_all_summaries_reads_whole_dir(tmp_path):
+    """The combined batch covers the corpus, not just the papers a run touched."""
+    for pmcid, year in (("PMC1", "2019"), ("PMC2", "2021")):
+        c = ManuscriptChecklist(
+            pmcid=pmcid, title="t", year=year, ehr_used=True,
+            ehr_evidence="e", summary="s",
+        )
+        (tmp_path / f"{pmcid}.json").write_text(c.model_dump_json(indent=2))
+    (tmp_path / "broken.json").write_text("{not json")
+
+    loaded = load_all_summaries(tmp_path)
+    assert sorted(c.pmcid for c in loaded) == ["PMC1", "PMC2"]  # invalid skipped
 
 
 # ── extraction (PDF/XML) ────────────────────────────────────────────────────

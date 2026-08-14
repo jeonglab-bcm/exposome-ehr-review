@@ -67,6 +67,25 @@ def discover_files() -> list[Path]:
     return files
 
 
+def load_all_summaries(summary_dir: Path = SUMMARY_DIR) -> list[ManuscriptChecklist]:
+    """Every valid per-paper checklist on disk, not just this run's.
+
+    The combined file describes the whole corpus, so it is rebuilt from
+    ``papers/summaries/`` rather than from the papers this invocation happened
+    to touch — otherwise ``--recover`` / ``--pmcid`` / ``--limit`` runs (and
+    fully-cached re-runs, where every paper is skipped) would overwrite it with
+    a near-empty batch.
+    """
+    out: list[ManuscriptChecklist] = []
+    for f in sorted(summary_dir.glob("*.json")):
+        try:
+            out.append(ManuscriptChecklist.model_validate_json(f.read_text()))
+        except Exception as e:
+            print(f"  ! skipping unreadable summary {f.name}: {type(e).__name__}",
+                  file=sys.stderr)
+    return out
+
+
 def find_failed() -> list[Path]:
     """Files whose PMCID has no summary JSON yet (the failed/missing set)."""
     done = {p.stem for p in SUMMARY_DIR.glob("*.json")}
@@ -179,7 +198,6 @@ def main(argv: list[str] | None = None) -> int:
     print("=" * 60)
 
     ok = failed = skipped = 0
-    checklists: list[ManuscriptChecklist] = []
 
     def _handle(result: PaperResult) -> None:
         nonlocal ok, failed, skipped
@@ -188,7 +206,6 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  {result.pmcid}  [skip — cached]")
         elif result.status == "ok":
             ok += 1
-            checklists.append(result.checklist)
             ehr = "EHR" if result.checklist.ehr_used else "no-EHR"
             print(f"  {result.pmcid}  ✓ {ehr} | "
                   f"{len(result.checklist.pathologies_diseases)} disease(s) | "
@@ -218,6 +235,9 @@ def main(argv: list[str] | None = None) -> int:
                 _handle(fut.result())
 
     # ── combined file ───────────────────────────────────────────────────
+    # rebuilt from every per-paper JSON on disk, so a partial run never drops
+    # papers it did not process out of the combined artifact
+    checklists = load_all_summaries()
     checklists.sort(key=lambda c: (c.year, c.pmcid))
     batch = SummaryBatch(n=len(checklists), model=model, summaries=checklists)
     COMBINED_PATH.write_text(batch.model_dump_json(indent=2))
