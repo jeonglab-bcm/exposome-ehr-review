@@ -169,6 +169,25 @@ def test_summarize_sends_the_whole_paper_not_just_the_intro():
     assert "DISCUSSION_MARKER" in sent
 
 
+def test_request_timeout_is_sized_for_the_budget():
+    """A 100K-char prompt takes minutes to prefill. At the old 120s every call
+    timed out, burned its retries, and fell through to chunked recovery whose
+    calls timed out too — 62 minutes of no progress on a 10-paper run."""
+    from unittest.mock import MagicMock
+    from summarizer.llm_client import summarize_text, REQUEST_TIMEOUT
+
+    assert REQUEST_TIMEOUT >= 600
+
+    client = MagicMock()
+    client.chat.completions.create.return_value.choices = [
+        MagicMock(message=MagicMock(content='{"ehr_used": false, "ehr_evidence": "n/a", '
+                                            '"summary": "s"}'))
+    ]
+    summarize_text(text="paper", pmcid="PMC1", title="t", year="2020",
+                   source_format="pdf", client=client, model="m")
+    assert client.chat.completions.create.call_args.kwargs["timeout"] == REQUEST_TIMEOUT
+
+
 def test_chunking_scales_with_the_budget():
     """Chunks sized for a 6k budget would dissect a full paper into ~30 calls."""
     from summarizer.llm_client import _chunk_text, SOURCE_CHAR_BUDGET

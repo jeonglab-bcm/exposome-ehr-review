@@ -42,6 +42,13 @@ MAX_OUTPUT_TOKENS = int(os.environ.get("GEMMA_MAX_TOKENS", "32768"))
 # empty key_findings). 100K chars covers a full paper and still leaves room in
 # the server's 256K context for the reasoning and the JSON output.
 SOURCE_CHAR_BUDGET = 100_000
+# Per-request timeout. It has to scale with SOURCE_CHAR_BUDGET: a 100K-char
+# prompt is ~25K tokens and prefill at that size takes minutes on the
+# self-hosted endpoint, where 120s was sized for 6K-char prompts. Too low and
+# every call raises, burns MAX_RETRIES, and then falls through to chunked
+# recovery whose calls time out in turn — a 10-paper run that should take
+# minutes spent 62 of them making no progress. Override with GEMMA_TIMEOUT.
+REQUEST_TIMEOUT = float(os.environ.get("GEMMA_TIMEOUT", "600"))
 
 
 def _env(key: str, default: str) -> str:
@@ -64,7 +71,7 @@ def get_client() -> tuple[OpenAI, str]:
     # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),
     # even with a valid API key — override it to a benign value.
     return OpenAI(
-        base_url=base_url, api_key=api_key, timeout=120.0,
+        base_url=base_url, api_key=api_key, timeout=REQUEST_TIMEOUT,
         default_headers={"User-Agent": "exposome-ehr-review-pipeline/1.0"},
     ), model
 
@@ -252,7 +259,7 @@ def summarize_text(
                 messages=messages,
                 max_tokens=MAX_OUTPUT_TOKENS,
                 temperature=0.0,
-                timeout=120.0,
+                timeout=REQUEST_TIMEOUT,
                 extra_body={"enable_thinking": False},
             )
             raw = resp.choices[0].message.content or ""
@@ -319,7 +326,7 @@ def _call_llm(client: OpenAI, model: str, messages: list[dict], max_tokens: int 
     """One LLM call; returns (raw_content, finish_reason). Raises on API error."""
     resp = client.chat.completions.create(
         model=model, messages=messages,
-        max_tokens=max_tokens, temperature=0.0, timeout=120.0,
+        max_tokens=max_tokens, temperature=0.0, timeout=REQUEST_TIMEOUT,
         extra_body={"enable_thinking": False},
     )
     return (resp.choices[0].message.content or "", resp.choices[0].finish_reason or "")

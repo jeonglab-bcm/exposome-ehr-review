@@ -16,6 +16,7 @@ import os
 import subprocess
 import sys
 import warnings
+from collections import deque
 from pathlib import Path
 
 from summarizer.schema import ManuscriptChecklist, SummaryBatch
@@ -46,12 +47,31 @@ DATA_AVAILABILITY_ARGS = ["--workers", os.environ.get("SCAN_WORKERS", "4")]
 
 
 def _run(cmd: list[str], *, label: str) -> int:
-    """Run ``cmd`` in the repo root; raise RuntimeError on non-zero exit."""
-    proc = subprocess.run(cmd, cwd=str(REPO_ROOT), text=True, capture_output=True)
-    if proc.returncode != 0:
-        tail = (proc.stderr or proc.stdout or "").strip().splitlines()[-6:]
-        raise RuntimeError(f"{label} failed (exit {proc.returncode})\n" + "\n".join(tail))
-    return proc.returncode
+    """Run ``cmd`` in the repo root, streaming its output; raise on non-zero exit.
+
+    Streams rather than capturing: these stages make one LLM call per paper and
+    can run for hours, and capture_output buffered every progress line until the
+    process ended. A cancelled 62-minute summarize run showed nothing at all
+    between "step started" and the cancellation, so there was no way to tell
+    slow progress from no progress. The tail is still kept for the error.
+    """
+    # PYTHONUNBUFFERED: a piped child block-buffers its stdout, so without this
+    # the progress lines arrive in 8K clumps and streaming buys nothing.
+    proc = subprocess.Popen(
+        cmd, cwd=str(REPO_ROOT), text=True, bufsize=1,
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        env={**os.environ, "PYTHONUNBUFFERED": "1"},
+    )
+    tail: deque[str] = deque(maxlen=20)
+    assert proc.stdout is not None
+    for line in proc.stdout:
+        line = line.rstrip("\n")
+        tail.append(line)
+        print(f"[{label}] {line}", flush=True)
+    returncode = proc.wait()
+    if returncode != 0:
+        raise RuntimeError(f"{label} failed (exit {returncode})\n" + "\n".join(tail))
+    return returncode
 
 
 def fetch_papers() -> int:

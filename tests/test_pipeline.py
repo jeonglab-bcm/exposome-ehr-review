@@ -7,7 +7,7 @@ is pure Python.
 import json
 import sys
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 # allow `pytest` from repo root
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -51,9 +51,16 @@ def test_asset_lineage_is_wired():
 # ── subprocess wrappers (mocked — no network / no LLM) ───────────────────────
 
 
+def _fake_proc(returncode: int = 0, lines: tuple[str, ...] = ()):
+    """Stand-in for Popen: _run streams stdout line by line, then waits."""
+    proc = MagicMock()
+    proc.stdout = iter([f"{line}\n" for line in lines])
+    proc.wait.return_value = returncode
+    return proc
+
+
 def test_fetch_papers_invokes_fetcher_module():
-    with patch("pipeline_ops.subprocess.run") as run:
-        run.return_value.returncode = 0
+    with patch("pipeline_ops.subprocess.Popen", return_value=_fake_proc()) as run:
         pipeline_ops.fetch_papers()
     assert run.called
     cmd = run.call_args[0][0]
@@ -62,8 +69,7 @@ def test_fetch_papers_invokes_fetcher_module():
 
 
 def test_summarize_papers_invokes_summarizer_run():
-    with patch("pipeline_ops.subprocess.run") as run:
-        run.return_value.returncode = 0
+    with patch("pipeline_ops.subprocess.Popen", return_value=_fake_proc()) as run:
         pipeline_ops.summarize_papers()
     cmd = run.call_args[0][0]
     assert cmd[:3] == [sys.executable, "-m", "summarizer.run"]
@@ -71,8 +77,7 @@ def test_summarize_papers_invokes_summarizer_run():
 
 
 def test_scan_data_availability_invokes_scan_script():
-    with patch("pipeline_ops.subprocess.run") as run:
-        run.return_value.returncode = 0
+    with patch("pipeline_ops.subprocess.Popen", return_value=_fake_proc()) as run:
         pipeline_ops.scan_data_availability()
     cmd = run.call_args[0][0]
     assert cmd[:2] == [sys.executable, str(REPO_ROOT / "scan_data_availability.py")]
@@ -94,16 +99,26 @@ def test_summarize_data_availability_counts_reports_parse_failures(tmp_path: Pat
 
 
 def test_build_results_invokes_build_results_script():
-    with patch("pipeline_ops.subprocess.run") as run:
-        run.return_value.returncode = 0
+    with patch("pipeline_ops.subprocess.Popen", return_value=_fake_proc()) as run:
         pipeline_ops.build_results()
     cmd = run.call_args[0][0]
     assert cmd[:2] == [sys.executable, str(REPO_ROOT / "build_results.py")]
 
 
+def test_run_streams_progress_and_keeps_the_tail_on_failure(capsys):
+    """Stages run for hours making one LLM call per paper; buffering their
+    output until exit made a stalled run indistinguishable from a slow one."""
+    import pytest
+
+    with patch("pipeline_ops.subprocess.Popen",
+               return_value=_fake_proc(1, ("PMC1 ok", "PMC2 failed"))):
+        with pytest.raises(RuntimeError, match="PMC2 failed"):
+            pipeline_ops.fetch_papers()
+    assert "PMC1 ok" in capsys.readouterr().out
+
+
 def test_ops_propagate_nonzero_exit_as_runtimeerror():
-    with patch("pipeline_ops.subprocess.run") as run:
-        run.return_value.returncode = 1
+    with patch("pipeline_ops.subprocess.Popen", return_value=_fake_proc(1)) as run:
         import pytest
         with pytest.raises(RuntimeError, match="fetch_pmc_papers"):
             pipeline_ops.fetch_papers()

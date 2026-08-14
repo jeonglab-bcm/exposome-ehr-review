@@ -441,6 +441,18 @@
     {
       "pmcid": "PMC8501912",
       "title": "Adverse effects of fetal exposure of electronic-cigarettes and high-fat diet on male neonatal hearts."
+    },
+    {
+      "pmcid": "PMC13398776",
+      "title": "Early-life high-fat diet exposure increases Achilles tendon stiffness and induces transcriptomic alterations."
+    },
+    {
+      "pmcid": "PMC13426629",
+      "title": "Risk of youth homelessness after contact with the children\u2019s social care system: a population-wide, retrospective cohort study in Northern Ireland."
+    },
+    {
+      "pmcid": "PMC13426614",
+      "title": "The impact of early life exposure to green space on mental health-related service use for mood or anxiety disorders in adolescence and early adulthood: A population-based birth cohort study in Ontario, Canada."
     }
   ],
   "abstract_only": [
@@ -1917,6 +1929,27 @@
       "journal": "Mol Psychiatry",
       "year": "2019",
       "authors": "Soiza-Reilly M, Meye FJ"
+    },
+    {
+      "pmcid": "PMC13398776",
+      "title": "Early-life high-fat diet exposure increases Achilles tendon stiffness and induces transcriptomic alterations.",
+      "journal": "FEBS Open Bio",
+      "year": "2026",
+      "authors": "Yin H, Yuan Z"
+    },
+    {
+      "pmcid": "PMC13426629",
+      "title": "Risk of youth homelessness after contact with the children\u2019s social care system: a population-wide, retrospective cohort study in Northern Ireland.",
+      "journal": "Int J Popul Data Sci",
+      "year": "2026",
+      "authors": "McKenna S, Kent L"
+    },
+    {
+      "pmcid": "PMC13426614",
+      "title": "The impact of early life exposure to green space on mental health-related service use for mood or anxiety disorders in adolescence and early adulthood: A population-based birth cohort study in Ontario, Canada.",
+      "journal": "Int J Popul Data Sci",
+      "year": "2026",
+      "authors": "Mizen A, Rotenburg M"
     }
   ]
 }

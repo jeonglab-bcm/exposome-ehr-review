@@ -31,7 +31,8 @@ except Exception:
     pass
 
 from summarizer.extract import extract, pmcid_from_filename
-from summarizer.llm_client import get_client, extract_json_object, MAX_OUTPUT_TOKENS
+from summarizer.llm_client import (get_client, extract_json_object,
+                                   MAX_OUTPUT_TOKENS, REQUEST_TIMEOUT)
 from summarizer.schema import ManuscriptChecklist
 from pydantic import BaseModel, Field, field_validator
 
@@ -262,7 +263,7 @@ def ask_llm_data_availability(*, client, model, text, pmcid, title, year):
         try:
             resp = client.chat.completions.create(
                 model=model, messages=messages, max_tokens=MAX_OUTPUT_TOKENS,
-                temperature=0.0, timeout=180.0,
+                temperature=0.0, timeout=REQUEST_TIMEOUT,
                 extra_body={"enable_thinking": False},
             )
             api_error = None
