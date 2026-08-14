@@ -33,6 +33,12 @@ DOWNLOAD_LOG = PAPERS_DIR / "download_log.json"
 # workflow_dispatch inputs) without touching the Dagster asset graph.
 SUMMARIZE_ARGS = ["--recover", "--workers", os.environ.get("SUMMARIZE_WORKERS", "4")]
 
+# Set SUMMARIZE_FORCE=1 to re-extract every paper instead of only the missing
+# ones. Needed whenever extraction itself changes (e.g. the source char budget),
+# since cached per-paper JSONs are otherwise kept as-is forever.
+if os.environ.get("SUMMARIZE_FORCE", "").strip().lower() in {"1", "true", "yes"}:
+    SUMMARIZE_ARGS.append("--force")
+
 # Focused data-availability pass. This updates the already-created per-paper
 # JSONs with data_availability/accession fields before the combined artifact is
 # rebuilt. Keeping it as a separate Dagster asset makes the lineage explicit.

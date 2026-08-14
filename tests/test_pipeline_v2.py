@@ -128,6 +128,30 @@ def test_process_one_skips_cached(tmp_path: Path):
     assert result.checklist is not None
 
 
+def test_process_one_force_reextracts_cached(tmp_path: Path):
+    """--force must re-extract a cached paper, or an extraction change (a wider
+    source char budget, a prompt fix) can never reach the 166 existing records."""
+    from summarizer.run import _process_one
+
+    fake = tmp_path / "PMC9999999.txt"; fake.write_text("x")
+    cached = ManuscriptChecklist(
+        pmcid="PMC9999999", title="T", year="2020",
+        ehr_used=False, ehr_evidence="n/a", summary="stale",
+    )
+    (tmp_path / "PMC9999999.json").write_text(cached.model_dump_json(indent=2))
+
+    fresh = cached.model_copy(update={"summary": "re-extracted"})
+    with patch("summarizer.run.extract", return_value=("full text", "text")), \
+         patch("summarizer.run.summarize_text", return_value=fresh) as mock_summ:
+        result = _process_one(
+            path=fake, meta={}, client=MagicMock(), model="m",
+            chunked=False, recover=False, summary_dir=tmp_path, force=True,
+        )
+    mock_summ.assert_called_once()
+    assert result.status == "ok"
+    assert json.loads((tmp_path / "PMC9999999.json").read_text())["summary"] == "re-extracted"
+
+
 def test_process_one_handles_failure(tmp_path: Path):
     """If summarize_text raises, _process_one returns status='failed', no crash."""
     from summarizer.run import _process_one

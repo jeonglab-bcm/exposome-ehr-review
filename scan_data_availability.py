@@ -40,7 +40,12 @@ SUMMARY_DIR = PAPERS_DIR / "summaries"
 COMBINED_PATH = PAPERS_DIR / "manuscript_summaries.json"
 LOG_PATH = PAPERS_DIR / "download_log.json"
 
-SOURCE_CHAR_BUDGET = 12000  # data-availability statements are usually near the end
+# Char budget for the window handed to the data-availability call. Statements
+# usually sit near the end, but at 6000 chars a paper whose heading the regex
+# below misses was judged on its last few pages alone — issue #31 flags 127/166
+# records as not-stated and 126/166 with an empty statement, a rate that reads
+# like a windowing artifact rather than 127 papers genuinely saying nothing.
+SOURCE_CHAR_BUDGET = 100_000
 
 # Deterministic accession / repository patterns. For the specific thing we want
 # to capture (accession numbers / links), a regex is more reliable than the LLM,
@@ -216,7 +221,7 @@ DA_SYSTEM_PROMPT = (
 DA_MAX_RETRIES = 3
 
 
-def _da_window(text: str, size: int = 6000) -> str:
+def _da_window(text: str, size: int = SOURCE_CHAR_BUDGET) -> str:
     """Pull the data-availability section from full text; fall back to the tail.
 
     DA statements live under headings like 'Data availability' / 'Data and code

@@ -145,6 +145,36 @@ def test_load_all_summaries_reads_whole_dir(tmp_path):
     assert sorted(c.pmcid for c in loaded) == ["PMC1", "PMC2"]  # invalid skipped
 
 
+# ── source budget ───────────────────────────────────────────────────────────
+def test_summarize_sends_the_whole_paper_not_just_the_intro():
+    """A 6k budget showed the model the abstract and intro and nothing else, so
+    it reported the aim as the finding and the truncation as a limitation
+    (issues #32-#39). The Results/Discussion must reach the model."""
+    from unittest.mock import MagicMock
+    from summarizer.llm_client import summarize_text, SOURCE_CHAR_BUDGET
+
+    body = "Methods. " + ("filler text " * 4000)          # ~48k chars
+    paper = body + "\nDISCUSSION_MARKER: the association was significant."
+    assert len(paper) < SOURCE_CHAR_BUDGET               # fits in one shot now
+
+    client = MagicMock()
+    client.chat.completions.create.return_value.choices = [
+        MagicMock(message=MagicMock(content='{"ehr_used": true, "ehr_evidence": "e", '
+                                            '"summary": "s", "confidence": "high"}'))
+    ]
+    summarize_text(text=paper, pmcid="PMC1", title="t", year="2020",
+                   source_format="pdf", client=client, model="m")
+
+    sent = client.chat.completions.create.call_args.kwargs["messages"][-1]["content"]
+    assert "DISCUSSION_MARKER" in sent
+
+
+def test_chunking_scales_with_the_budget():
+    """Chunks sized for a 6k budget would dissect a full paper into ~30 calls."""
+    from summarizer.llm_client import _chunk_text, SOURCE_CHAR_BUDGET
+    assert len(_chunk_text("x" * SOURCE_CHAR_BUDGET)) <= 6
+
+
 # ── extraction (PDF/XML) ────────────────────────────────────────────────────
 def test_pmcid_from_filename():
     from summarizer.extract import pmcid_from_filename

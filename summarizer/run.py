@@ -100,6 +100,7 @@ def _process_one(
     chunked: bool,
     recover: bool,
     summary_dir: Path,
+    force: bool = False,
 ) -> PaperResult:
     """Process a single paper: extract -> summarize -> write per-paper JSON.
 
@@ -109,8 +110,8 @@ def _process_one(
     pmcid = pmcid_from_filename(path)
     out_path = summary_dir / f"{pmcid}.json"
 
-    # Skip if a valid cached summary exists
-    if out_path.exists():
+    # Skip if a valid cached summary exists (unless --force re-extracts)
+    if not force and out_path.exists():
         try:
             checklist = ManuscriptChecklist.model_validate_json(out_path.read_text())
             return PaperResult(pmcid=pmcid, status="skipped", checklist=checklist)
@@ -167,8 +168,11 @@ def main(argv: list[str] | None = None) -> int:
     SUMMARY_DIR.mkdir(parents=True, exist_ok=True)
     meta = load_metadata()
 
-    if args.recover:
+    if args.recover and not args.force:
         files = find_failed()
+    elif args.force and not args.pmcid:
+        # --force re-extracts everything, including papers --recover would skip
+        files = discover_files()
     elif args.pmcid:
         pmcid = args.pmcid.upper()
         if not pmcid.startswith("PMC"):
@@ -219,7 +223,7 @@ def main(argv: list[str] | None = None) -> int:
             result = _process_one(
                 path=path, meta=meta, client=client, model=model,
                 chunked=args.chunked, recover=args.recover,
-                summary_dir=SUMMARY_DIR,
+                summary_dir=SUMMARY_DIR, force=args.force,
             )
             _handle(result)
     else:
@@ -228,7 +232,7 @@ def main(argv: list[str] | None = None) -> int:
                 pool.submit(
                     _process_one, path=p, meta=meta, client=client, model=model,
                     chunked=args.chunked, recover=args.recover,
-                    summary_dir=SUMMARY_DIR,
+                    summary_dir=SUMMARY_DIR, force=args.force,
                 ): p for p in files
             }
             for fut in as_completed(futures):

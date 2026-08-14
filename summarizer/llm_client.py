@@ -34,9 +34,14 @@ MAX_RETRIES = 3
 # Output token budget. Generous default so the reasoning-heavy model never
 # truncates mid-JSON; override with GEMMA_MAX_TOKENS. (Server context is 256K.)
 MAX_OUTPUT_TOKENS = int(os.environ.get("GEMMA_MAX_TOKENS", "32768"))
-# Approximate char budget for the source text sent to the model. The model
-# reasons heavily, so a tighter budget leaves tokens for the JSON output.
-SOURCE_CHAR_BUDGET = 6000
+# Approximate char budget for the source text sent to the model. At 6000 the
+# model saw roughly the abstract and introduction and nothing else, so it
+# reported the aim as the finding and the truncation as a limitation — the
+# manual review in issues #32-#39 is full of exactly that ("Manuscript text is
+# truncated at the end", "Results not provided in the manuscript snippet",
+# empty key_findings). 100K chars covers a full paper and still leaves room in
+# the server's 256K context for the reasoning and the JSON output.
+SOURCE_CHAR_BUDGET = 100_000
 
 
 def _env(key: str, default: str) -> str:
@@ -290,8 +295,10 @@ def _corrective_nudge(msg: str) -> str:
 # from a long context), split the text into overlapping chunks, extract a partial
 # checklist from each, and merge the partials into one final checklist.
 
-CHUNK_SIZE = 4000      # chars per chunk (well within the model's comfort zone)
-CHUNK_OVERLAP = 600    # overlap so section boundaries aren't lost
+# Scaled with SOURCE_CHAR_BUDGET: at the old 4000 a full-length paper would
+# dissect into ~30 chunks, i.e. ~30 LLM calls per recovery.
+CHUNK_SIZE = 25_000    # chars per chunk (well within the model's comfort zone)
+CHUNK_OVERLAP = 2_000  # overlap so section boundaries aren't lost
 
 
 def _chunk_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
