@@ -3,30 +3,36 @@
   "title": "Memory-like innate response to booster vaccination with MF-59 adjuvanted influenza vaccine in children.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None mentioned; the study uses transcriptional, cellular, and antibody responses from blood samples.",
-  "summary": "A systems-level analysis of immune responses to the trivalent inactivated influenza vaccine adjuvanted with MF-59 in children (15–24 months old) and young, healthy adults.",
+  "ehr_evidence": "Blood for transcriptomics, HAI and cellular response was collected at all of the time points indicated in Fig. 1a.",
+  "summary": "Clinical study comparing transcriptional, cellular, and antibody responses to MF59-adjuvanted trivalent inactivated influenza vaccine in children (15–24 months) and young adults.",
   "key_findings": [
-    "Primary vaccination induced a persistent transcriptional signature of innate immunity."
+    "Post-boost vaccination induced a stronger transcriptional response with 221 significantly regulated genes (FDR < 0.05, fold-change > 1.5) in children.",
+    "Adults showed a stronger response with 678 significantly regulated genes.",
+    "Seroconversion rates for children were 23/24 for H1N1, 22/24 for H3N2, and 19/24 for B/Phuket.",
+    "Seroprotection (HAI ≥ 1:629) was achieved in 6/24 for H1N1, 20/24 for H3N2, and 0/24 for B/Phuket.",
+    "Elevated interferon response pathways correlated with early-onset local reactogenicity (erythema/swelling), but no correlates were found for fever."
   ],
   "captured_features": [
-    "transcriptional responses",
-    "cellular responses",
-    "antibody responses"
+    "peripheral blood transcriptomics (Affymetrix)",
+    "flow cytometry (monocyte subsets, CD40 expression)",
+    "hemagglutination inhibition (HAI) titers",
+    "adverse effects (fever, redness, swelling, pain)"
   ],
-  "pathologies_diseases": [
-    "influenza"
-  ],
-  "study_design": "Systems biology analysis",
-  "data_source_type": "Clinical/Laboratory data",
-  "population": "children (15–24 months old) and young, healthy adults",
-  "exposure_domain": "vaccination (MF-59 adjuvanted influenza vaccine)",
+  "pathologies_diseases": [],
+  "study_design": "Prospective clinical trial with staggered sample collection",
+  "data_source_type": "Clinical trial",
+  "population": "90 children aged 15–24 months and 30 healthy young adults aged 25–40 years",
+  "exposure_domain": "MF59-adjuvanted trivalent inactivated influenza vaccine",
   "limitations": [
-    "Not specified in the provided text"
+    "Staggered sample collection design limited blood draw frequency per child.",
+    "Cohorts B and C lacked pre-vaccination baseline at day 1 and 3 post boost.",
+    "Small adult cohort size (n=30).",
+    "Most innate immunity module correlations with HAI titers did not reach statistical significance."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

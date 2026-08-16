@@ -3,28 +3,41 @@
   "title": "Thyroid hormone levels of pregnant inuit women and their infants exposed to environmental contaminants.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "No mention of EHR; study involves direct participation and biological matrices (blood, plasma, placenta, or breast milk).",
-  "summary": "Study investigating thyroid hormone levels in pregnant Inuit women and their infants exposed to environmental contaminants such as PCBs, HCB, and CPCs.",
-  "key_findings": [],
+  "ehr_evidence": "Blood samples were collected in vials containing EDTA as the anticoagulant and centrifuged (10 min, 5,000 rpm), and the plasma transferred into glass vials prewashed with hexane.",
+  "summary": "Prospective mother-infant cohort study examining the association between prenatal and postnatal exposure to organochlorine and chlorinated phenolic compounds and thyroid hormone status in pregnant Inuit women and their infants.",
+  "key_findings": [
+    "In pregnant women, a positive association was found between HO-PCBs and T3 concentrations (β = 0.57, p = 0.02).",
+    "In umbilical cord blood, PCB-153 concentrations were negatively associated with TBG levels (β = –0.26, p = 0.01).",
+    "In a subsample analysis, a negative relationship was found between maternal PCP levels and cord fT4 concentrations in neonates (β = –0.59, p = 0.02).",
+    "No association was observed between contaminants and thyroid hormones at 7 months of age.",
+    "A significant negative association between PCB-153 and TSH was found in simple regression for 7-month-old infants, but was no longer significant after adjustment for breast-feeding status."
+  ],
   "captured_features": [
-    "Thyroid hormone levels",
-    "PCBs",
-    "HCB",
-    "CPC"
+    "maternal plasma PCB-153, HCB, ΣHO-PCBs, PCP, TSH, fT4, T3, TBG, selenium, lipids",
+    "cord plasma PCB-153, HCB, ΣHO-PCBs, PCP, TSH, fT4, T3, TBG, selenium",
+    "infant plasma PCB-153, HCB, TSH, fT4, T3, TBG",
+    "maternal age, parity, socioeconomic status, alcohol/cigarette consumption, fish consumption, gestational age, birth weight, sex, breast-feeding status"
   ],
   "pathologies_diseases": [
-    "thyroid hormone levels",
-    "neurodevelopmental deficits"
+    "thyroid hormone status",
+    "hypothyroxinemia",
+    "postpartum thyroid dysfunction"
   ],
-  "study_design": "Not specified in snippet",
-  "data_source_type": "Primary data",
-  "population": "Pregnant Inuit women and their infants (Nunavik residents)",
-  "exposure_domain": "Environmental contaminants (PCBs, HCB, CPCs)",
-  "limitations": [],
+  "study_design": "Prospective mother-infant cohort study",
+  "data_source_type": "Cohort with direct biological sampling",
+  "population": "Pregnant Inuit women from Nunavik, Québec, Canada, and their infants at birth and 7 months postpartum",
+  "exposure_domain": "Environmental contaminants (organochlorines and chlorinated phenolic compounds: PCBs, HCB, HO-PCBs, PCP)",
+  "limitations": [
+    "Small sample size for CPC analysis limits statistical power",
+    "Potential selection bias in subsample analyses (e.g., higher birth weight, lower selenium)",
+    "Lack of association with cord blood PCP despite high correlation with maternal levels",
+    "Unmeasured confounding by iodine intake",
+    "Differential thyroid hormone metabolism between fetuses and adults"
+  ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

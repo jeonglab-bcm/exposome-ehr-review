@@ -3,38 +3,46 @@
   "title": "DNA methylome signatures of prenatal exposure to synthetic glucocorticoids in hippocampus and peripheral whole blood of female guinea pigs in early life.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "This study investigated the DNA methylation signatures in the hippocampus and whole blood of guinea pig offspring following prenatal exposure to synthetic glucocorticoids (sGC) to assess the concordance of epigenetic programming across different tissues.",
+  "ehr_evidence": "At PND 14, one female juvenile offspring per litter was randomly selected and euthanized by an unblinded experimenter. Animals were euthanized via isoﬂurane inhalation, and hippocampus and whole blood samples were immediately collected via cardiac puncture from each subject (1/litter, n = 6/tissue type/treatment: Suppl Fig. 1A).",
+  "summary": "Experimental study examining DNA methylation signatures in the hippocampus and whole blood of juvenile female guinea pigs following prenatal exposure to synthetic glucocorticoids.",
   "key_findings": [
-    "Over 90% of common methylation signatures associated with sGC exposure showed the same directionality of change.",
-    "134 genes were modified in both hippocampus and blood, of which 61 showed methylation changes at identical CpG sites.",
-    "Prenatal sGC exposure alters the methylation status of gene clusters involved in brain development."
+    "Identified 7004 differentially methylated CpG sites (DMCs) in the hippocampus (79.9% hypermethylated, 20.3% hypomethylated).",
+    "Identified 16,740 DMCs in whole blood (62.7% hypermethylated, 37.3% hypomethylated).",
+    "Found 1044 DMCs at identical CpG sites in both tissues, representing 14.9% of hippocampal and 6.2% of blood DMCs.",
+    "Positive correlation between methylation difference percent in hippocampus and blood (R = 0.31, n = 1044, P < .0001).",
+    "134 genes showed differential methylation in both tissues, with 61 genes showing changes at identical CpG sites.",
+    "Gene pathway enrichment indicated alterations in clusters involved in brain development and neurogenesis.",
+    "No enrichment of glucocorticoid regulatory element (GRE) motifs was observed at differentially methylated sites."
   ],
   "captured_features": [
-    "DNA methylation signatures",
-    "CpG sites",
-    "gene pathway analysis"
+    "DNA methylation levels at single-nucleotide resolution via RRBS",
+    "Differentially methylated CpG sites (DMCs) and regions (DMRs)",
+    "Gene ontology (GO) pathway enrichment scores",
+    "Spearman correlation coefficients for methylation concordance"
   ],
   "pathologies_diseases": [
-    "behavioral dysregulation",
-    "endocrine dysregulation",
-    "metabolic dysregulation",
-    "neurodevelopmental impairment"
+    "multiple sclerosis",
+    "schizophrenia",
+    "bipolar disorder",
+    "autism spectrum disorder"
   ],
-  "study_design": "Animal model study",
-  "data_source_type": "Experimental/Laboratory",
-  "population": "Female guinea pig offspring",
-  "exposure_domain": "Prenatal synthetic glucocorticoids (sGC)",
+  "study_design": "experimental animal model study with reduced representation bisulfite sequencing (RRBS)",
+  "data_source_type": "tissue samples (hippocampus and whole blood) from guinea pigs",
+  "population": "juvenile female guinea pigs (Hartley strain), offspring of mothers treated with betamethasone or saline during late gestation",
+  "exposure_domain": "prenatal synthetic glucocorticoid exposure",
   "limitations": [
-    "Animal model study",
-    "Not human data"
+    "animal model limits direct human translational applicability",
+    "small sample size (n=6 per treatment group)",
+    "only female offspring examined",
+    "tissue-specific methylation patterns limit blood as a universal proxy for brain epigenetics",
+    "lack of GRE motif enrichment suggests indirect molecular mechanisms"
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
     "GSE163447"
   ],
   "data_availability_statement": "The data discussed in this publication have been deposited in NCBI ’s Gene Expression Omnibus 48 and are accessible through GEO Series accession number GSE163447.",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

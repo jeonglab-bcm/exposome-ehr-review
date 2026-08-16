@@ -3,33 +3,42 @@
   "title": "Prenatal exposure to cigarette smoke induces diet- and sex-dependent dyslipidemia and weight gain in adult murine offspring.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "This study investigates the effects of prenatal cigarette smoke exposure on lipid metabolism and weight gain in adult mice, exploring how these effects are influenced by diet and sex.",
+  "ehr_evidence": "The study used B6C3F1 mice exposed to mainstream cigarette smoke via whole-body inhalation from gestational day 4 to parturition.",
+  "summary": "Controlled experimental study investigating whether prenatal exposure to cigarette smoke alters body weight and plasma lipid profiles in adult murine offspring, with diet and sex as modifying factors.",
   "key_findings": [
-    "Prenatal exposure to cigarette smoke induces diet- and sex-dependent dyslipidemia and weight gain in adult murine offspring."
+    "Adult female mice prenatally exposed to MCS demonstrated significantly higher body weight and plasma HDL and LDL levels than air-exposed counterparts.",
+    "MCS-exposed dams showed a 31% decrease in triglyceride levels compared to air-exposed dams.",
+    "Male offspring prenatally exposed to MCS gained substantially more weight when fed a high-fat diet compared to sex-matched air-exposed controls.",
+    "NMR analysis showed significantly increased total LDL particle concentrations in MCS-exposed female offspring (air vs. MCS: 5.9 ± 5.9 vs. 56.6 ± 3.0 nmol/L).",
+    "Male offspring exposed to MCS had higher plasma HDL levels on a normal diet (air vs. MCS: 45.5 ± 3.2 vs. 63.6 ± 4.0 mg/dL).",
+    "No significant differences were observed in total antioxidant capacity between air- and smoke-exposed groups in either sex."
   ],
   "captured_features": [
-    "lipid levels",
-    "weight gain",
-    "sex",
-    "dietary intake"
+    "body weight",
+    "plasma lipid parameters (total cholesterol, HDL, LDL, triglycerides, phospholipids, albumin, total protein)",
+    "lipoprotein subclass particle numbers and sizes (NMR)",
+    "total antioxidant capacity",
+    "organ weights (heart, liver, kidneys, lungs)"
   ],
   "pathologies_diseases": [
+    "cardiovascular disease",
     "dyslipidemia",
-    "weight gain",
-    "cardiovascular disease"
+    "atherosclerosis"
   ],
-  "study_design": "Experimental study (murine model)",
-  "data_source_type": "Animal model",
-  "population": "Adult murine offspring",
-  "exposure_domain": "Cigarette smoke",
+  "study_design": "controlled experimental animal study with in utero exposure and postnatal diet intervention",
+  "data_source_type": "animal study",
+  "population": "B6C3F1 mice (pregnant dams and adult offspring, both sexes)",
+  "exposure_domain": "prenatal cigarette smoke exposure (mainstream cigarette smoke via whole-body inhalation)",
   "limitations": [
-    "Animal model (murine)"
+    "small sample size for NMR analysis (n=3)",
+    "protein content differed between normal and high-fat diets, potentially confounding metabolic outcomes",
+    "findings are based on a murine model and may not fully translate to human physiology",
+    "exact biological mechanisms underlying the observed changes remain unknown"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

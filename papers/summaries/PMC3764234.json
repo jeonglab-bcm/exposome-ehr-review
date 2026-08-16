@@ -3,38 +3,44 @@
   "title": "Environmental factors predicting blood lead levels in pregnant women in the UK: the ALSPAC study.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "Data were collected via self-completion postal questionnaires and whole blood samples.",
-  "summary": "A study identifying factors contributing to maternal blood lead levels (BLL) in a large cohort of pregnant women in the UK.",
+  "ehr_evidence": "The study sample was derived from the ALSPAC study, a population-based study investigating environmental and genetic influences on the health, behaviour and development of children.",
+  "summary": "Observational cohort study assessing environmental, lifestyle, and socioeconomic factors associated with blood lead levels in pregnant women and their children in the UK.",
   "key_findings": [
-    "Higher educational qualification was a strong independent predictor of higher BLL.",
-    "Cigarette smoking, alcohol and coffee drinking, and heating the home with a coal fire were predictive factors for higher BLL.",
-    "Iron and calcium intake showed evidence of protective effects against higher BLL."
+    "Mean maternal blood lead level was 3.67 ± 1.47 mg/dl (n=4285).",
+    "Higher educational qualification was a strong independent predictor of BLL ≥5 mg/dl (OR 1.26, 95% CI 1.12–1.42; p<0.001).",
+    "Cigarette smoking, alcohol consumption, coffee drinking, and coal fire heating were independently associated with increased BLL.",
+    "Dietary calcium intake and iron supplementation showed protective effects against high lead levels.",
+    "Maternal and child BLL at 30 months were significantly correlated (r = 0.278, n = 233; p<0.001)."
   ],
   "captured_features": [
-    "Blood lead levels (BLL)",
+    "maternal blood lead levels",
+    "child blood lead levels",
     "educational qualification",
-    "cigarette smoking",
-    "alcohol drinking",
-    "coffee drinking",
-    "home heating type",
-    "iron intake",
-    "calcium intake"
+    "smoking status",
+    "alcohol consumption",
+    "coffee consumption",
+    "coal fire use",
+    "dietary calcium and iron intake",
+    "haemoglobin levels",
+    "parity",
+    "gestational age",
+    "neighbourhood quality index"
   ],
-  "pathologies_diseases": [
-    "lead exposure",
-    "hypertension in pregnancy"
-  ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Birth cohort study",
-  "population": "Pregnant women resident in the Avon area of the UK",
-  "exposure_domain": "Lead exposure",
+  "pathologies_diseases": [],
+  "study_design": "prospective cohort study",
+  "data_source_type": "cohort study",
+  "population": "pregnant women in the Avon area of the UK (n=4285) and their children at 30 months",
+  "exposure_domain": "environmental lead exposure, lifestyle factors, diet, and socioeconomic status",
   "limitations": [
-    "Reliance on self-completion postal questionnaires"
+    "selection bias (women with BLL data were older and more educated than the full cohort)",
+    "lack of data on housing age and renovation activities",
+    "modest effect sizes (odds ratios)",
+    "child BLL samples analyzed using different methods and at different times than maternal samples"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

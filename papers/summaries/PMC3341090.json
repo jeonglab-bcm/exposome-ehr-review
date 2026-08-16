@@ -3,43 +3,49 @@
   "title": "Poor maternal nutrition programmes a pro-atherosclerotic phenotype in ApoE-/- mice.",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "None. The study uses an experimental animal model (ApoE− / − mice).",
-  "summary": "The study investigates the effects of maternal low-protein (LP) diet during pregnancy and lactation on the development of atherosclerosis in ApoE− / − mouse offspring.",
+  "ehr_evidence": "Experimental animal model using pregnant ApoE− / − mice and their male offspring.",
+  "summary": "Experimental study investigating the effect of maternal low-protein diet on atherosclerotic lesion development and progression in 6-month-old male ApoE− / − mice.",
   "key_findings": [
-    "LP offspring showed significantly greater plaque area (P < 0.05)",
-    "increased cholesterol clefts",
-    "significantly higher indices of DNA damage",
-    "increased expression of HMG-CoA reductase and LDL receptor in the liver",
-    "higher LDL-cholesterol levels",
-    "trend towards elevated insulin"
+    "LP offspring had significantly greater total plaque area per animal compared with controls (P<0.05).",
+    "LP offspring had significantly greater total cholesterol cleft containing area (P<0.05).",
+    "LP offspring showed significantly reduced vascular smooth muscle cell content (SMA staining: control 5.7%, LP 2.8%, P<0.05).",
+    "DNA damage marker p-H2AX was significantly increased in plaques of LP offspring (control 14, LP 36 cells/100,000 μm2, P<0.05).",
+    "Total and LDL-cholesterol levels were significantly higher in LP offspring (Total: control 6.73±1.01, LP 9.77±0.78 mmol/l, P<0.05; LDL: control 4.62±0.70, LP 8.65±0.70 mmol/l, P<0.01).",
+    "HMG-CoA reductase expression was significantly increased in the livers of LP offspring (P<0.05).",
+    "No significant differences were observed in HDL-cholesterol, triacylglycerol, non-esterified fatty acids, fasting glucose, Mac3, or p-ATM between groups."
   ],
   "captured_features": [
     "plaque area",
-    "cholesterol clefts",
-    "DNA damage indices",
+    "cholesterol cleft content",
+    "SMA staining",
+    "Mac3 staining",
+    "p-ATM cells",
+    "p-H2AX cells",
+    "total cholesterol",
+    "LDL-cholesterol",
+    "HDL-cholesterol",
+    "triacylglycerol",
+    "fasting glucose",
+    "insulin",
     "HMG-CoA reductase expression",
-    "LDL receptor expression",
-    "LDL-cholesterol levels",
-    "insulin levels"
+    "LDL receptor expression"
   ],
   "pathologies_diseases": [
-    "atherosclerosis",
-    "cardiovascular disease",
-    "dyslipidaemia",
-    "high blood pressure"
+    "atherosclerosis"
   ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Animal model",
-  "population": "Male offspring of pregnant dams",
-  "exposure_domain": "Maternal nutrition (low-protein diet)",
+  "study_design": "experimental animal study",
+  "data_source_type": "animal model",
+  "population": "male ApoE− / − mice at 6 months of age",
+  "exposure_domain": "maternal low-protein diet",
   "limitations": [
-    "Animal model (not human)",
-    "Experimental design"
+    "limited to male offspring",
+    "animal model may not fully replicate human pathophysiology",
+    "mechanisms linking in utero exposure to atherosclerosis require further elucidation"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -3,35 +3,45 @@
   "title": "Body Burden of Dichlorodiphenyl Dichloroethene (DDE) and Childhood Pulmonary Function.",
   "year": "2017",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "Longitudinal study investigating the relationship between blood DDE levels and pulmonary function in children aged 8-10 in Germany, specifically looking at mediation by height and weight.",
+  "ehr_evidence": "Data were collected via blood samples, pulmonary function tests, and self-administered questionnaires from a primary cohort of school children in Hesse, Germany.",
+  "summary": "Longitudinal study assessing the association between blood DDE levels and pulmonary function (FVC, FEV1) in children aged 8-10 years, examining mediation by height and weight.",
   "key_findings": [
-    "DDE measured at 8 years had significant, inverse, indirect, and total effects on FVC and FEV1 at 10 years, mediated through effects on height and weight."
+    "Linear mixed models showed no significant associations between DDE and pulmonary function parameters after adjustment.",
+    "Path analysis demonstrated DDE at age 8 had significant inverse indirect and total effects on FVC at age 10 (−0.18 L per µg/L) and FEV1 at age 10 (−0.17 L per µg/L), mediated by height and weight.",
+    "DDE had negative total effects on height (−0.28 cm per µg/L) and weight (−0.24 kg per µg/L).",
+    "Sex-stratified analyses showed significant indirect negative effects of DDE on FVC (−0.25 L/µg/L in females, −0.21 L/µg/L in males) and FEV1 (−0.24 L/µg/L in females, −0.19 L/µg/L in males)."
   ],
   "captured_features": [
-    "Blood DDE levels",
-    "FVC",
-    "FEV1",
+    "blood DDE levels",
+    "pulmonary function tests (FVC, FEV1, FEV1/FVC)",
     "height",
-    "weight"
+    "weight",
+    "age",
+    "sex",
+    "birth weight",
+    "parental smoking",
+    "breastfeeding duration",
+    "environmental tobacco smoke",
+    "asthma history"
   ],
   "pathologies_diseases": [
-    "pulmonary function",
     "asthma",
     "respiratory tract infections"
   ],
-  "study_design": "Longitudinal environmental epidemiologic study",
-  "data_source_type": "Primary research study",
-  "population": "Children aged 8-10 years in central Germany",
-  "exposure_domain": "DDE (dichlorodiphenyl dichloroethene)",
+  "study_design": "Longitudinal cohort study with repeated measurements and structural equation modeling (path analysis)",
+  "data_source_type": "Primary cohort study / field data collection",
+  "population": "Children aged 8-10 years in Hesse, Germany (n=328-344 with complete DDE and PFT data)",
+  "exposure_domain": "Persistent organic pollutants / organochlorines (DDE blood levels)",
   "limitations": [
-    "Small sample size (n=328)",
-    "Need for studies in regions with ongoing, high DDT application"
+    "DDE exposure not measured at age 9 years (values carried forward from age 8)",
+    "Missing data required multiple imputation",
+    "Reduced statistical power in sex-stratified analyses due to smaller sample sizes",
+    "Potential residual confounding from unmeasured immune markers or other environmental factors"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

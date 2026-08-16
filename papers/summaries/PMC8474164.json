@@ -3,40 +3,42 @@
   "title": "Maternal high-fat diet modifies myelin organization, microglial interactions, and results in social memory and sensorimotor gating deficits in adolescent mouse offspring.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "None. The study uses a laboratory mouse model.",
-  "summary": "The study investigates the effects of maternal high-fat diet (mHFD) on myelin organization, microglial interactions, and behavioral outcomes in adolescent mouse offspring.",
+  "ehr_evidence": "C57BL/6N female mice aged 5 – 6 weeks were obtained from Charles River and habituated to pair-housing for one week.",
+  "summary": "Preclinical study investigating how maternal high-fat diet modifies myelin organization, microglial interactions, and behavioral outcomes in adolescent mouse offspring.",
   "key_findings": [
-    "mHFD results in neuroinflammation and hypomyelination in offspring",
-    "mHFD-exposed male offspring showed increased myelin density with reduced cytosolic myelin channel area in the corpus callosum",
-    "lower transcripts of myelination-associated genes (e.g., Igf1) in the hippocampus of male offspring",
-    "mHFD-exposed offspring presented loss of social memory and sensorimotor gating deficits"
+    "Increased myelin optical density in mHFD-exposed male offspring compared to female mHFD-exposed offspring (p=0.0082).",
+    "Reduced area of cytosolic myelin channels in mHFD-exposed male offspring compared to control males (p=0.0016).",
+    "Lower hippocampal expression of Mbp, Cspg4, Olig2, and Igf1 in mHFD-exposed males (Mbp p=0.0014 vs male CD).",
+    "mHFD-exposed microglia exhibited reduced numbers of mature tertiary lysosomes and increased synaptic contacts.",
+    "mHFD-exposed offspring of both sexes showed decreased social novelty preference and reduced prepulse inhibition at 9 dB prepulse.",
+    "No significant differences in oligodendrocyte density, distribution, or maturation between diet groups."
   ],
   "captured_features": [
-    "myelin density",
-    "cytosolic myelin channel area",
-    "myelination-associated gene transcripts",
-    "microglial lysosome numbers",
-    "synaptic contacts",
-    "social memory scores",
-    "sensorimotor gating scores"
+    "myelin optical density",
+    "cytosolic myelin channel area and ratio",
+    "gene expression (Mbp, Cspg4, Olig2, Igf1, Gpnmb)",
+    "microglial ultrastructure (lysosomes, synaptic contacts)",
+    "behavioral metrics (social preference, social novelty preference, anxiety index, prepulse inhibition)"
   ],
   "pathologies_diseases": [
     "neurodevelopmental alterations",
-    "hypomyelination",
     "social memory deficits",
     "sensorimotor gating deficits"
   ],
-  "study_design": "Laboratory animal study (mouse model)",
-  "data_source_type": "Laboratory animal data",
-  "population": "Adolescent mouse offspring",
-  "exposure_domain": "Maternal high-fat diet (mHFD)",
+  "study_design": "experimental animal study",
+  "data_source_type": "animal model",
+  "population": "adolescent C57BL/6N mouse offspring (male and female)",
+  "exposure_domain": "maternal high-fat diet",
   "limitations": [
-    "Animal model study (not human data)"
+    "preclinical mouse model limits direct human translation",
+    "small sample sizes per group (n=4-5 animals)",
+    "lack of direct microglial modulation to establish causality",
+    "sex-specific mechanisms not fully elucidated beyond male/female dichotomy"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

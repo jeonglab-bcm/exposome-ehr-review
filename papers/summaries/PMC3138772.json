@@ -2,35 +2,53 @@
   "pmcid": "PMC3138772",
   "title": "Exposure to non-steroidal anti-inflammatory drugs during pregnancy and the risk of selected birth defects: a prospective cohort study.",
   "year": "2011",
-  "ehr_used": true,
-  "ehr_evidence": "Information on pregnancy outcome was obtained from the Medical Birth Registry of Norway.",
-  "summary": "A prospective cohort study evaluating the risk of selected birth defects associated with maternal exposure to non-steroidal anti-inflammatory drugs (NSAIDs) during the first 12 weeks of pregnancy.",
+  "ehr_used": false,
+  "ehr_evidence": "Data on NSAID exposure were available from a self-administered questionnaire completed around gestational week 17. Information on pregnancy outcome was obtained from the Medical Birth Registry of Norway.",
+  "summary": "Prospective cohort study evaluating associations between maternal NSAID use during the first 12 weeks of gestation and selected birth defects using data from the Norwegian Mother and Child Cohort Study linked to the Medical Birth Registry of Norway.",
   "key_findings": [
-    "No associations were observed between overall exposure to NSAIDs during pregnancy and the selected birth defects (adjusted odds ratio 0.7, 95% confidence interval 0.4–1.1).",
-    "No associations were found between maternal use of specific types of NSAIDs and the selected birth defects."
+    "No significant association between overall NSAID exposure and selected birth defects (adjusted OR 0.7, 95% CI 0.4–1.1).",
+    "No significant associations found for specific NSAID types or congenital heart defects, septal defects, ventricular septal defects, or atrial septal defects.",
+    "Increased risk observed for septal defects with multiple NSAID exposure (crude OR 3.9, 95% CI 0.9–15.7), but based on only 2 exposed cases."
   ],
   "captured_features": [
-    "NSAID exposure (prescribed and over-the-counter)",
-    "gestational week 17 questionnaire data",
-    "Medical Birth Registry outcomes"
+    "maternal age",
+    "education",
+    "parity",
+    "pregnancy history",
+    "prepregnancy BMI",
+    "folic acid use",
+    "fever",
+    "smoking",
+    "NSAID type and timing",
+    "birth defect diagnoses"
   ],
   "pathologies_diseases": [
-    "birth defects",
-    "cardiac septal defects",
-    "orofacial clefts"
+    "neural tube defects",
+    "congenital heart defects",
+    "septal defects",
+    "ventricular septal defects",
+    "atrial septal defects",
+    "orofacial clefts",
+    "esophageal defects",
+    "anorectal malformations",
+    "diaphragmatic hernia",
+    "abdominal wall defects"
   ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Cohort study / National Registry",
-  "population": "69,929 women in Norway (1999-2006)",
-  "exposure_domain": "pharmaceuticals (NSAIDs)",
+  "study_design": "prospective cohort study",
+  "data_source_type": "questionnaire and national birth registry",
+  "population": "pregnant women in Norway enrolled in the MoBa cohort (1999-2006), n=67,891 after exclusions",
+  "exposure_domain": "maternal NSAID use during gestational weeks 0-12",
   "limitations": [
-    "small numbers of NSAID-exposed infants for individual birth defect categories",
-    "self-administered questionnaire for exposure"
+    "self-reported exposure via questionnaire",
+    "small number of exposed cases for specific birth defects",
+    "low participation rate (43.5%)",
+    "potential outcome misclassification in registry",
+    "confounding by indication"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

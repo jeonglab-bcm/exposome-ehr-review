@@ -3,38 +3,50 @@
   "title": "Early-Life Famine Exposure and Risk of Cardiovascular Diseases in Later Life: Findings From the REACTION Study.",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "The study used data from the REACTION Study, which recruited community-dwelling adults.",
-  "summary": "A longitudinal study investigating the association between early-life exposure to the Chinese famine (1959-1962) and the risk of cardiovascular diseases (CVD) in adults.",
+  "ehr_evidence": "We used data from REACTION (Risk Evaluation of Cancers in Chinese Diabetic Individuals: A Longitudinal) Study, which recruited a total of 259 657 community-dwelling adults aged 40 years or older from 25 centers across mainland China between 2011 and 2012.",
+  "summary": "Observational study examining the association between early-life exposure to the Chinese famine (1959-1962) and the risk of cardiovascular diseases in adulthood among a large Chinese cohort.",
   "key_findings": [
-    "Early-life famine exposure (fetal, childhood, and adolescent) significantly increased the risk of total CVD, myocardial infarction, stroke, and coronary heart disease.",
-    "Individuals in severely affected famine areas had a significantly increased risk of total CVD across all three exposed groups."
+    "Fetal famine exposure was associated with increased risk of total CVD (OR 1.35, 95% CI 1.20–1.52), MI (OR 1.59, 95% CI 1.08–2.35), stroke (OR 1.40, 95% CI 1.11–1.78), and CHD (OR 1.44, 95% CI 1.26–1.65).",
+    "Childhood famine exposure was associated with increased risk of total CVD (OR 1.59, 95% CI 1.40–1.81), MI (OR 2.20, 95% CI 1.52–3.20), stroke (OR 1.82, 95% CI 1.45–2.28), and CHD (OR 1.80, 95% CI 1.56–2.09).",
+    "Adolescent famine exposure was associated with increased risk of total CVD (OR 1.52, 95% CI 1.27–1.81), MI (OR 2.07, 95% CI 1.28–3.35), stroke (OR 1.92, 95% CI 1.42–2.58), and CHD (OR 1.83, 95% CI 1.50–2.24).",
+    "Individuals in severely affected famine areas had significantly increased risk of total CVD compared to those in less severely affected areas across all exposure groups.",
+    "The association between early-life famine exposure and CVD risk was stronger in women, non-smokers, non-drinkers, and those without moderate-to-vigorous physical activity.",
+    "Part of the impact of famine exposure on CVD was mediated via metabolic syndrome."
   ],
   "captured_features": [
-    "fetal famine exposure",
-    "childhood famine exposure",
-    "adolescent famine exposure",
-    "total CVD",
-    "myocardial infarction",
-    "stroke",
-    "coronary heart disease"
+    "sociodemographic characteristics",
+    "lifestyle factors (smoking, drinking, physical activity, diet)",
+    "anthropometric measurements (height, weight, BMI, waist circumference)",
+    "blood pressure",
+    "serum lipids (total cholesterol, LDL, HDL, triglycerides)",
+    "fasting insulin",
+    "glycated hemoglobin",
+    "self-reported cardiovascular disease history"
   ],
   "pathologies_diseases": [
-    "cardiovascular diseases",
+    "cardiovascular disease",
     "myocardial infarction",
     "stroke",
-    "coronary heart disease"
+    "coronary heart disease",
+    "metabolic syndrome"
   ],
-  "study_design": "longitudinal cohort study",
-  "data_source_type": "cohort study",
-  "population": "259,657 community-dwelling adults aged 40 years or older from mainland China",
-  "exposure_domain": "nutrition / famine",
+  "study_design": "cross-sectional analysis of baseline cohort data",
+  "data_source_type": "prospective cohort survey",
+  "population": "234,219 community-dwelling Chinese adults aged 40 years or older from 25 centers across mainland China",
+  "exposure_domain": "early-life famine exposure / undernutrition",
   "limitations": [
-    "retrospective cohort study"
+    "misclassification bias due to defining exposure by birth date",
+    "famine severity index based on excess death rate did not account for other causes of mortality",
+    "age differences among exposure groups",
+    "self-reported cardiovascular disease leading to recall bias",
+    "lack of birth weight data",
+    "cross-sectional design precludes assessment of CVD incidence and mortality",
+    "lack of early-life lifestyle data"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

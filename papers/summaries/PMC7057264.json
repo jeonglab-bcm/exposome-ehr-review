@@ -3,32 +3,42 @@
   "title": "Early-life inhalant allergen exposure, filaggrin genotype, and the development of sensitization from infancy to adolescence.",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "The study uses a population-based birth cohort with direct measurements (dust samples, genotyping) rather than EHR or linked health data.",
-  "summary": "Longitudinal study investigating how filaggrin (FLG) mutations modify the effect of early-life inhalant allergen exposure on allergic sensitization in a birth cohort.",
+  "ehr_evidence": "The Manchester Asthma and Allergy Study is an unselected birth cohort described in detail elsewhere. The source actually consisted of prospectively collected home dust samples, skin prick test results, genotyping data, and questionnaire responses.",
+  "summary": "Longitudinal birth cohort study examining how early-life inhalant allergen exposure interacts with filaggrin (FLG) loss-of-function mutations to influence the development of allergic sensitization from infancy to age 16.",
   "key_findings": [
-    "Significant interaction between FLG and Fel d 1 exposure on cat sensitization (greater effect in children with FLG mutations).",
-    "Mite sensitization risk with Der p 1 exposure was consistently greater in children with FLG mutations.",
-    "Significant interaction between FLG and dog ownership, with lower risk of sensitization in children with FLG mutations exposed to dogs in infancy."
+    "Significant interaction between FLG mutations and Fel d 1 exposure on cat sensitization (OR, 1.36; 95% CI, 1.02-1.80; P = .035), with a greater effect in children with FLG mutations.",
+    "Increased risk of mite sensitization with Der p 1 exposure was consistently greater among children with FLG mutations, but the interaction did not reach statistical significance.",
+    "Significant interaction between FLG mutations and dog ownership on sensitization to any allergen (OR, 0.16; 95% CI, 0.03-0.86; P = .03), with significantly lower risk in children with FLG mutations exposed to a dog in infancy.",
+    "No significant interaction was found between FLG mutations and Can f 1 exposure on dog sensitization."
   ],
   "captured_features": [
-    "dust allergen levels (mite, cat, dog)",
+    "Dust allergen concentrations (Der p 1, Fel d 1, Can f 1)",
+    "Skin prick test results",
     "FLG genotype",
-    "sensitization status at 6 time points"
+    "Pet ownership status",
+    "Demographic and confounding variables (sex, socioeconomic status, breast-feeding)"
   ],
   "pathologies_diseases": [
-    "allergic sensitization"
+    "Allergic sensitization",
+    "Atopic dermatitis",
+    "Asthma",
+    "Eczema"
   ],
-  "study_design": "longitudinal birth cohort",
-  "data_source_type": "birth cohort",
-  "population": "1184 subjects, infancy to age 16 years",
-  "exposure_domain": "inhalant allergens (house dust mite, cat, dog)",
+  "study_design": "Population-based prospective birth cohort with longitudinal follow-up from infancy to age 16 years",
+  "data_source_type": "Prospective birth cohort",
+  "population": "1051 children from the Manchester Asthma and Allergy Study observational cohort, followed from infancy to age 16 years (predominantly white)",
+  "exposure_domain": "Early-life inhalant allergen exposure (house dust mite, cat, dog) and pet ownership",
   "limitations": [
-    "Not specified in the provided text"
+    "Lack of a replication population",
+    "Exclusion of non-white participants due to FLG mutation prevalence",
+    "Reduced sample size due to missing dust samples and genotyping data",
+    "Inability to assess relative importance of exposure in infancy versus later childhood",
+    "Smaller sample size at age 1 year and in some subgroups"
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Associated DataSupplementary MaterialsOnline Repository",
-  "confidence": "high",
+  "data_availability_statement": "",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

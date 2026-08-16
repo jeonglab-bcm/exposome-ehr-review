@@ -3,37 +3,51 @@
   "title": "Association between prenatal glucocorticoid exposure and adolescent neurodevelopment: An observational follow-up study.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "The study is a prospective observational follow-up using direct clinical measurements (IQ tests, EEG, stress paradigms) rather than EHR or linked health data.",
-  "summary": "A prospective observational follow-up study investigating the long-term effects of prenatal betamethasone exposure on neurodevelopmental, metabolic, and autonomic outcomes in adolescents.",
+  "ehr_evidence": "Pregnancy and birth data were obtained from hospital records or the German maternity passport.",
+  "summary": "Prospective observational follow-up study assessing the long-term effects of prenatal betamethasone exposure on cognitive performance, neuroendocrine stress reactivity, autonomic nervous system activity, and electrocortical activity in 14- to 15-year-old adolescents.",
   "key_findings": [
-    "No statistically significant group difference in global IQ, ADHD symptoms, metabolic markers, HPAA activity, or ANS activity.",
-    "Reduced electrocortical activity in the frontal brain region in the betamethasone group."
+    "No statistically significant difference in global IQ between betamethasone-exposed and unexposed groups (adjusted mean difference −2.0, 95% CI: −7.12 to 3.12, p = 0.44).",
+    "No significant differences in ADHD symptoms, BMI, or HOMA-IR between groups.",
+    "No significant differences in HPAA or ANS activity overall.",
+    "Betamethasone-exposed adolescents exhibited reduced electrocortical activity in the frontal brain region compared to controls (adjusted SEF 16.0 Hz vs 17.8 Hz, mean difference −1.83 Hz, 95% CI: −3.21 to −0.45, p = 0.01)."
   ],
   "captured_features": [
-    "IQ (RIAS)",
+    "IQ scores",
     "ADHD symptoms",
-    "metabolic markers (HOMA-IR)",
-    "electrocortical activity (EEG)",
-    "HPAA activity",
-    "ANS activity"
+    "BMI",
+    "HOMA-IR",
+    "salivary cortisol",
+    "salivary α-amylase",
+    "heart rate variability",
+    "EEG spectral edge frequency",
+    "socioeconomic status",
+    "gestational age",
+    "birth weight",
+    "maternal/paternal age",
+    "life events"
   ],
   "pathologies_diseases": [
     "ADHD",
-    "metabolic markers",
-    "neurodevelopmental changes"
+    "insulin resistance",
+    "metabolic syndrome markers",
+    "neurodevelopmental outcomes"
   ],
-  "study_design": "Prospective observational follow-up study",
-  "data_source_type": "Clinical study",
-  "population": "21 adolescents (14-15 years old) exposed to prenatal betamethasone; 35 reference children",
-  "exposure_domain": "Prenatal synthetic glucocorticoid (betamethasone) exposure",
+  "study_design": "Prospective observational follow-up cohort study",
+  "data_source_type": "Direct clinical assessments, questionnaires, biological sampling, and historical hospital/maternity records",
+  "population": "56 adolescents aged 14–15 years (21 exposed to prenatal betamethasone, 35 unexposed controls), born at term or near-term in Germany",
+  "exposure_domain": "Prenatal glucocorticoid (betamethasone) exposure",
   "limitations": [
-    "Small sample size",
-    "Observational design"
+    "Small sample size and reduced statistical power",
+    "Selective participation and loss to follow-up",
+    "Potential residual confounding",
+    "Observational design limits causal inference",
+    "No adjustment for multiple comparisons",
+    "Possible confounding by tocolytic treatment and late preterm birth"
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Additional supporting information can be found online in the Supporting Information section at the end of this article.",
-  "confidence": "high",
+  "data_availability_statement": "",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

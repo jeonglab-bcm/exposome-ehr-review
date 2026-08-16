@@ -2,35 +2,30 @@
   "pmcid": "PMC3405416",
   "title": "Childhood brain tumours and use of mobile phones: comparison of a case-control study with incidence data.",
   "year": "2012",
-  "ehr_used": true,
-  "ehr_evidence": "Swedish Cancer registry",
-  "summary": "Commentary on the CEFALO case-control study regarding mobile phone use and brain tumour risk in children, highlighting the inconsistency between case-control results and stable incidence trends in registries.",
+  "ehr_used": false,
+  "ehr_evidence": "Rates are shown for the age group 5 –19 years living in the Nordic Countries obtained from NORDCAN",
+  "summary": "Commentary responding to a previous critique, arguing that stable childhood brain tumour incidence trends in the Nordic countries are inconsistent with the increased risk suggested by the CEFALO case-control study on mobile phone use.",
   "key_findings": [
-    "No clear exposure-response relationship found.",
-    "Incidence trends for brain tumours in children remain stable despite increased mobile phone use.",
-    "Potential risk may be restricted to heavy users or very early life exposure."
+    "Commentary presents no new primary quantitative results; argues that stable childhood brain tumour incidence trends in the Nordic countries over the last 20 years are inconsistent with the increased risk suggested by the CEFALO case-control study."
   ],
-  "captured_features": [
-    "mobile phone use",
-    "cordless phone use",
-    "brain tumour incidence"
-  ],
+  "captured_features": [],
   "pathologies_diseases": [
-    "brain tumours"
+    "brain tumours",
+    "central nervous system tumours"
   ],
-  "study_design": "Commentary on a case-control study",
-  "data_source_type": "Registry data",
-  "population": "children and adolescents",
+  "study_design": "commentary",
+  "data_source_type": "cancer registry / case-control study",
+  "population": "children and adolescents aged 5-19 years in the Nordic countries",
   "exposure_domain": "mobile phone use",
   "limitations": [
-    "case-control study limitations",
-    "recall bias",
-    "missing data"
+    "reliance on retrospective self-reported exposure in the referenced case-control study",
+    "ecological comparison limitations",
+    "potential age-specific underreporting in cancer registry data"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

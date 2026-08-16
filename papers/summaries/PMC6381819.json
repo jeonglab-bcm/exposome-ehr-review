@@ -3,36 +3,47 @@
   "title": "Prenatal Exposure to Select Phthalates and Phenols and Associations with Fetal and Placental Weight among Male Births in the EDEN Cohort (France).",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "The study uses the EDEN cohort, which involves spot urine samples collected during gestation, not EHR.",
-  "summary": "A prospective cohort study investigating the associations between maternal prenatal exposure to phthalates and phenols and placental weight and placental-to-birth weight ratio (PFR) in male births in France.",
+  "ehr_evidence": "Placental and birth weight were obtained at birth from hospital maternity records. Phenol and phthalate metabolite urinary concentrations were assessed in spot urine samples collected during pregnancy.",
+  "summary": "Prospective birth cohort study examining associations between prenatal urinary concentrations of phenols and phthalates and placental weight, birth weight, and placental-to-birth weight ratio among 473 male births in France.",
   "key_findings": [
-    "Triclosan and MCNP were negatively associated with placental weight",
-    "Benzophenone-3 and the sum of parabens were positively associated with placental weight",
-    "MCNP and MCOP were negatively associated with the placental-to-birth weight ratio (PFR)"
+    "Sum of parabens positively associated with placental weight (b = 7.12 g, 95% CI: 0.41, 13.9).",
+    "Benzophenone-3 positively associated with placental weight (b = 4.76 g, 95% CI: -1.77, 11.3).",
+    "Triclosan negatively associated with placental weight (b = -4.11 g, 95% CI: -8.26, 0.05).",
+    "MCNP negatively associated with placental weight (b = -10.9 g, 95% CI: -21.8, 0.09).",
+    "Benzophenone-3 positively associated with birth weight (b = 21.0 g, 95% CI: -3.45, 45.5).",
+    "MCOP and MCNP negatively associated with PFR (MCOP: b = -0.23, 95% CI: -0.58, 0.11; MCNP: b = -0.20, 95% CI: -0.54, 0.13).",
+    "No associations remained significant after FDR correction in sensitivity analyses (lowest corrected p-value = 0.39)."
   ],
   "captured_features": [
+    "Urinary phenol and phthalate metabolite concentrations",
     "placental weight",
     "birth weight",
-    "placental-to-birth weight ratio (PFR)",
-    "phthalate metabolites",
-    "phenols"
+    "placental-to-birth weight ratio",
+    "maternal age",
+    "maternal BMI",
+    "maternal education",
+    "smoking status",
+    "parity",
+    "gestational duration",
+    "recruitment center"
   ],
-  "pathologies_diseases": [
-    "placental weight",
-    "birth weight"
-  ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Cohort study",
-  "population": "473 mother-son pairs in the EDEN cohort (France)",
-  "exposure_domain": "phthalates and phenols",
+  "pathologies_diseases": [],
+  "study_design": "Prospective mother-child birth cohort study",
+  "data_source_type": "Cohort / Biospecimen / Hospital maternity records",
+  "population": "473 mother-son pairs from the EDEN cohort in France, recruited before 24 weeks gestation",
+  "exposure_domain": "Prenatal exposure to phenols and phthalates",
   "limitations": [
-    "Preliminary evidence",
-    "hypothesis generating"
+    "Single spot urine sample leading to potential exposure misclassification",
+    "Missing placental weight data requiring inverse probability weighting",
+    "Restricted to male births limiting generalizability to females",
+    "Lack of detailed placental characteristics (e.g., thickness, vascularization)",
+    "Potential for chance findings despite penalized regression",
+    "Center-specific effect modifications observed"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

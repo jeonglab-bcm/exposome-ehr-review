@@ -1,0 +1,41 @@
+{
+  "pmcid": "PMC6445781",
+  "title": "SSRIs target prefrontal to raphe circuits during development modulating synaptic connectivity and emotional behavior.",
+  "year": "2019",
+  "ehr_used": false,
+  "ehr_evidence": "The study used genetically modified and wild-type mice (C57BL/6 background) for behavioral, histological, and electrophysiological experiments.",
+  "summary": "Preclinical study investigating the role of transient serotonin transporter (SERT) expression in prefrontal cortex neurons during early postnatal development and its impact on synaptic connectivity and emotional behavior in adult mice.",
+  "key_findings": [
+    "SERT-KO mice have a 40% increase in the number of VGLUT1+ axon boutons in the DRN compared to SERT+/- mice at 4 weeks of age.",
+    "Postnatal fluoxetine induces a 47% increase in the number of VGLUT1+ cortical synaptic innervations in the DRN.",
+    "Cortex-specific conditional SERT invalidation led to a 30% increase in the number of VGLUT1+ synaptic boutons in the DRN.",
+    "67 ± 8.0% of the VGLUT1+/synapsin+ terminals in the DRN were colabeled with TdTomato, indicating they arise from PFC-SERT+ neurons.",
+    "Acute inhibition of PFC-SERT+ neurons increased immobility time in the forced swim test and latency to feed in the novelty-suppressed feeding test, while activation rescued these behavioral deficits."
+  ],
+  "captured_features": [
+    "VGLUT1+ synaptic bouton density",
+    "electrophysiological AMPA/NMDA ratios",
+    "forced swim test immobility time",
+    "novelty-suppressed feeding latency",
+    "RNA-sequencing read counts"
+  ],
+  "pathologies_diseases": [
+    "anxiety",
+    "depression"
+  ],
+  "study_design": "preclinical animal study",
+  "data_source_type": "animal models",
+  "population": "mice (C57BL/6, SERT-KO, SERT-Cre)",
+  "exposure_domain": "SSRI exposure (fluoxetine), genetic SERT knockout",
+  "limitations": [
+    "preclinical animal model limits direct translational relevance to humans",
+    "focus on a single brain circuit may not capture whole-brain effects",
+    "behavioral tests may not fully model complex human psychiatric disorders"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

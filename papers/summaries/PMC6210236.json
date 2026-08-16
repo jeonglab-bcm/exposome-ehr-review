@@ -3,34 +3,40 @@
   "title": "Sex-Dependent Impact of Low-Level Lead Exposure during Prenatal Period on Child Psychomotor Functions.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "The study uses the Polish Mother and Child Cohort (REPRO_PL), which involves questionnaire data and biological samples (blood), not electronic health records.",
-  "summary": "Evaluation of the impact of low-level prenatal lead exposure on psychomotor development in children up to 24 months, specifically looking at sex-dependent susceptibility.",
+  "ehr_evidence": "The study utilized the Polish Mother and Child Cohort (REPRO_PL), collecting questionnaire data, biological samples, and neurodevelopmental assessments directly from participants.",
+  "summary": "Prospective mother-child cohort study evaluating the sex-dependent impact of low-level prenatal lead exposure on child psychomotor and cognitive development up to 24 months of age.",
   "key_findings": [
-    "No significant impact on girls' psychomotor abilities.",
-    "Boys showed lower cognitive scores associated with increasing cord blood lead levels (β = -2.07; p = 0.04).",
-    "Language and motor abilities were not significantly affected."
+    "Among boys, increasing cord blood lead levels were associated with lower cognitive function scores (β = −2.07; p = 0.04).",
+    "No statistically significant impact of prenatal lead exposure on girls' psychomotor abilities was observed.",
+    "For language and motor abilities, results were not statistically significant for either sex (p > 0.05)."
   ],
   "captured_features": [
-    "Blood lead levels (20-24 weeks pregnancy, cord blood)",
-    "Bayley Scales of Infant and Toddler Development scores",
-    "Sex"
+    "blood lead levels (2nd trimester and cord blood)",
+    "Bayley cognitive, language, and motor scores",
+    "maternal age and education",
+    "socioeconomic status",
+    "child sex",
+    "cotinine levels",
+    "pregnancy complications",
+    "delivery type",
+    "breastfeeding",
+    "day care attendance"
   ],
-  "pathologies_diseases": [
-    "neurodevelopmental impairment",
-    "cognitive functions",
-    "psychomotor functions"
-  ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Cohort study",
-  "population": "402 children from the Polish Mother and Child Cohort (REPRO_PL)",
-  "exposure_domain": "Lead exposure",
+  "pathologies_diseases": [],
+  "study_design": "prospective mother-child cohort study",
+  "data_source_type": "birth cohort",
+  "population": "402 children from the Polish Mother and Child Cohort (REPRO_PL) in Poland, assessed up to 24 months of age",
+  "exposure_domain": "prenatal lead exposure",
   "limitations": [
-    "Not specified"
+    "no measurement of lead levels in children's blood",
+    "lack of data on home environment quality, parent-child relationship, parental roles, and maternal IQ",
+    "potential selection bias as sample represents urban population with high SES",
+    "lack of measurement/inclusion of other neurotoxic elements (As, Cd, Hg)"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Associated Data Supplementary Materials Click here for additional data file.",
-  "confidence": "high",
+  "data_availability_statement": "Associated DataSupplementary MaterialsClick here for additional data file.",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -1,0 +1,44 @@
+{
+  "pmcid": "PMC6190029",
+  "title": "2018_PMC6190029_A_rapid_qualitative_assessment_of_oral_cholera_vaccine_anticipat",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "Questionnaires, in-depth interviews, and focus group discussions, as well as observations, were conducted before the campaign.",
+  "summary": "Rapid qualitative anthropological assessment of oral cholera vaccine acceptability in Nampula, Mozambique, assessing barriers and levers for vaccine acceptance amid political resistance and mistrust.",
+  "key_findings": [
+    "95% of participants reported knowledge about cholera.",
+    "66% identified dirtiness as the principal cause of cholera.",
+    "26% reported previous negative experiences associated with immunization.",
+    "55% preferred injectable vaccines over oral delivery.",
+    "95% expressed willingness to be vaccinated.",
+    "83% preferred administration by health professionals rather than community health workers.",
+    "75% favored public health center-based delivery over home-based delivery."
+  ],
+  "captured_features": [
+    "perceptions of cholera origins",
+    "experiences of conflict linked to interventions",
+    "attitudes towards vaccines",
+    "anticipated OCV attitude",
+    "intent to be vaccinated",
+    "preferred immunization strategies",
+    "communication strategies"
+  ],
+  "pathologies_diseases": [
+    "cholera"
+  ],
+  "study_design": "Rapid qualitative anthropological assessment with mixed-methods data collection",
+  "data_source_type": "Qualitative interviews and questionnaires",
+  "population": "Community members, health workers, political leaders, and government officials in Nampula City, Mozambique",
+  "exposure_domain": "Socio-political context, vaccine acceptability, public health intervention resistance, perceived institutional negligence",
+  "limitations": [
+    "Purposive sampling technique limits representativeness",
+    "Findings may not be generalizable to other populations or later time periods",
+    "Context-specific cultural, social, and historical determinants"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "low",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

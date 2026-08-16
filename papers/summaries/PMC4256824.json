@@ -1,0 +1,58 @@
+{
+  "pmcid": "PMC4256824",
+  "title": "2014_PMC4256824_Determinants_of_vaccination_coverage_and_adherence_to_the_Greek_",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "The infant was considered as immunized or not based on the immunization card, as provided by the National Greek Health Care System.",
+  "summary": "Cross-sectional survey evaluating vaccination coverage and socioeconomic determinants among infants aged 2-24 months in Athens, Greece during 2009-2011.",
+  "key_findings": [
+    "4.9% (95% CI 3.9%-6.0%) of parents admitted omitting a vaccine due to beliefs.",
+    "Infants were less likely to be fully vaccinated if they belonged to a minority group, had >1 sibling, young/illiterate parents, non-public insurance, or unemployed parents.",
+    "Appropriate hepatitis B immunization was strongly associated with hexavalent vaccine use (97.5% vs 54.2% at 6 months, 92.8% vs 25.7% at 12 months, p<0.01).",
+    "Multivariate analysis confirmed parental age, educational/occupational status, and family size (>3 children) as independent predictors of immunization status.",
+    "Lack of insurance was not associated with missed vaccine doses (57.8% vs 57.8%, p=NS)."
+  ],
+  "captured_features": [
+    "immunization card status",
+    "parental age, education, occupation",
+    "family size",
+    "health insurance status",
+    "vaccination coverage rates",
+    "minority/immigrant status"
+  ],
+  "pathologies_diseases": [
+    "vaccine-preventable diseases",
+    "hepatitis B",
+    "diphtheria",
+    "tetanus",
+    "pertussis",
+    "polio",
+    "Haemophilus influenzae type b",
+    "pneumococcal disease",
+    "meningococcal C",
+    "measles",
+    "mumps",
+    "rubella",
+    "varicella",
+    "hepatitis A",
+    "rotavirus",
+    "tuberculosis"
+  ],
+  "study_design": "cross-sectional survey",
+  "data_source_type": "questionnaire and immunization cards",
+  "population": "infants aged 2-24 months visiting a tertiary public outpatient clinic in Athens, Greece (2009-2011)",
+  "exposure_domain": "socioeconomic status, parental demographics, economic crisis period",
+  "limitations": [
+    "convenience sample not representative of general population",
+    "overrepresentation of minority and low-SES children",
+    "underrepresentation of high-SES and rural families",
+    "less stringent criteria used to define complete vaccination",
+    "potential selection bias from outpatient clinic recruitment"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

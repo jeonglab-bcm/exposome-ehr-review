@@ -3,33 +3,41 @@
   "title": "Maternal exposure to cyclophosphamide during prepubertal life does not affect the cryosusceptibility of in vitro derived mouse embryos.",
   "year": "2026",
   "ehr_used": false,
-  "ehr_evidence": "The study uses a mouse model, not human electronic health records.",
-  "summary": "A mouse model study evaluating whether prepubertal exposure to the chemotherapy drug cyclophosphamide (CY) affects the cryosusceptibility and developmental quality of embryos derived via in vitro fertilization (IVF).",
+  "ehr_evidence": "Using a mouse model, this study evaluated the impact of prepubertal CY exposure (2 successive weekly doses of 75 mg/kg body weight at 2 weeks of age) on the cryosusceptibility of embryos derived via in vitro fertilization (IVF) at their reproductive phase.",
+  "summary": "Experimental study using a prepubertal female Swiss albino mouse model to evaluate the impact of cyclophosphamide exposure on the cryosusceptibility, developmental competence, and pluripotency marker expression of in vitro derived embryos.",
   "key_findings": [
-    "No significant differences were found between CY-exposed and control groups in terms of post-warming survival or pluripotency marker expression."
+    "Cyclophosphamide exposure caused a significant (P <0.0001) decline in total ovarian follicle count compared to controls.",
+    "Fertilization rates were comparable between control (84.3 ± 6.8) and CY (88.3 ± 4.9) groups.",
+    "Post-warming embryo survival rates were comparable between control (99.5 ± 0.5) and CY (99 ± 1) groups.",
+    "Blastocyst formation, apoptotic index, ICM outgrowth rates, and mRNA levels of Oct4, Sox2, and Nanog showed no significant differences between vitrified and non-vitrified CY embryos compared to controls."
   ],
   "captured_features": [
-    "post-warming survival",
-    "blastocyst formation",
-    "inner cell mass (ICM) proliferation",
-    "pluripotency markers (Oct4, Sox2, Nanog)"
+    "ovarian follicle count",
+    "fertilization rate",
+    "embryo survival rate",
+    "blastocyst formation rate",
+    "apoptotic index",
+    "ICM outgrowth rate",
+    "mRNA expression of Oct4, Sox2, Nanog"
   ],
   "pathologies_diseases": [
-    "childhood cancer",
+    "gonadotoxicity",
     "infertility"
   ],
-  "study_design": "Experimental mouse model",
-  "data_source_type": "Laboratory experiment",
-  "population": "Mouse model",
-  "exposure_domain": "Chemotherapy (cyclophosphamide)",
+  "study_design": "experimental animal study",
+  "data_source_type": "animal model",
+  "population": "prepubertal female Swiss albino mice",
+  "exposure_domain": "chemotherapy (cyclophosphamide)",
   "limitations": [
-    "Mouse model (not human data)",
-    "In vitro derived embryos"
+    "inability to assess in vivo implantation potential",
+    "restricted to a single chemotherapeutic agent and specific dosage",
+    "mouse model limitations for direct human translation",
+    "lack of direct dosage equivalence between mice and humans"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -1,0 +1,46 @@
+{
+  "pmcid": "PMC5945909",
+  "title": "2018_PMC5945909_Parents_attitudes_towards_topical_fluoride_and_vaccines_for_chil",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "We analyzed data collected from 2011 to 12 for 361 children from three Washington state dental clinics.",
+  "summary": "Case-control study examining the overlap between parental attitudes and internet use regarding topical fluoride and vaccines, and their association with refusal of these preventive treatments.",
+  "key_findings": [
+    "51.5% of parents refused fluoride, only 27.7% reported refusing vaccinations.",
+    "Topical fluoride and vaccine refusal are modestly correlated (r = 0.23).",
+    "In adjusted models, only not using fluoride toothpaste was significantly associated with fluoride refusal (PR = 1.36, 95% CI 1.02–1.89).",
+    "For vaccine refusal, in the full adjusted model, vaccine safety concerns (PR = 1.81, 95% CI 1.49–2.20), internet use for vaccine information (PR = 2.84, 95% CI 2.09–3.87), and perceived severity of preventable cavities (PR = 1.29, 95% CI 1.04–1.60) remained significant predictors.",
+    "White respondents reported 62% higher likelihood of vaccine refusal (PR = 1.62, 95% CI 1.24–2.70)."
+  ],
+  "captured_features": [
+    "parental demographics",
+    "dental insurance status",
+    "topical fluoride refusal",
+    "vaccine refusal",
+    "safety concerns",
+    "perceived disease severity",
+    "internet use for health information",
+    "attitudes towards dental procedures",
+    "fluoride toothpaste use"
+  ],
+  "pathologies_diseases": [
+    "dental caries",
+    "vaccine-preventable diseases"
+  ],
+  "study_design": "case-control study",
+  "data_source_type": "Survey and dental chart records",
+  "population": "361 parents and children from three dental clinics in Washington state, USA",
+  "exposure_domain": "Parental attitudes and internet use for health information",
+  "limitations": [
+    "Limited to three dental clinics in Washington state",
+    "Vaccine refusal based on self-report",
+    "Lack of data on parental dental and medical history",
+    "Incomplete coverage of theoretical model domains"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

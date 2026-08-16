@@ -3,33 +3,35 @@
   "title": "Proteomic Biomarkers for Bisphenol A-Early Exposure and Women's Thyroid Cancer.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "None. The study uses mouse models and clinical samples from patients.",
-  "summary": "The study investigates the effects of early-life Bisphenol A (BPA) exposure on thyroid proteins in mice and identifies ANXA6 and VCP as potential proteomic biomarkers associated with thyroid cancer in women.",
+  "ehr_evidence": "Matched pairs of thyroid tumor and adjacent non-tumor tissues were collected from women thyroid cancer patients (n=28; age, 47.4±11.6 years; papillary carcinoma, 100%; metasatasis, 10.4% of the subjects), who received a surgical treatment at Hanyang University Hospital, Seoul, Korea.",
+  "summary": "Experimental study using in utero BPA-exposed mice and human thyroid tissue samples to identify proteomic biomarkers associated with early-life BPA exposure and women's thyroid cancer.",
   "key_findings": [
-    "17 proteins were altered in a dose-dependent manner in the thyroid tissues of offspring mice.",
-    "Positive association between blood BPA levels and mRNA expression of ANXA6 and VCP in thyroid cancer tissues (but not in normal tissues)."
+    "17 proteins were altered in a dose-dependent manner in mouse thyroid tissues following prenatal BPA exposure.",
+    "No significant differences were found in mRNA expression of ANXA6, ATP5B, HSPA5, or VCP between tumor and adjacent non-tumor thyroid tissues in women (p > 0.05).",
+    "Blood BPA was detected in 90% of thyroid cancer patients (range 0-10.32 ng/mL).",
+    "Strong positive associations were observed between blood BPA levels and mRNA expression of VCP (r2=0.47, p=0.02) and ANXA6 (r2=0.37, p=0.03) specifically in thyroid tumor tissues, but not in normal tissues."
   ],
   "captured_features": [
-    "BPA dose (15, 75, and 300 mg/L)",
-    "protein expression levels",
-    "mRNA expression of ANXA6 and VCP",
-    "blood BPA levels"
+    "blood BPA levels",
+    "mRNA expression of ANXA6, ATP5B, HSPA5, VCP",
+    "2D-PAGE proteomic protein spots",
+    "thyroid tumor and adjacent non-tumor tissues"
   ],
   "pathologies_diseases": [
-    "thyroid cancer"
+    "thyroid cancer",
+    "papillary carcinoma"
   ],
-  "study_design": "Experimental (mouse model) and clinical biomarker analysis",
-  "data_source_type": "Laboratory and clinical samples",
-  "population": "Female ICR mice (offspring) and 28 women thyroid cancer patients",
+  "study_design": "In utero animal exposure study with ex vivo human tissue validation",
+  "data_source_type": "Biospecimen assays",
+  "population": "Female ICR mice offspring and women with papillary thyroid cancer (n=28, mean age 47.4 years)",
   "exposure_domain": "Bisphenol A (BPA)",
   "limitations": [
-    "Small human sample size (n=28)",
-    "Reliance on animal models to establish early-life exposure mechanisms"
+    "small sample size of human tissues (n=28)"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

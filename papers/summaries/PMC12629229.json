@@ -3,31 +3,37 @@
   "title": "Using machine learning to predict future foster care admission.",
   "year": "2025",
   "ehr_used": true,
-  "ehr_evidence": "We use claims data for children enrolled in a Medicaid health plan in Ohio as well as for linked adults, along with data on individual and geographic social determinants of health (SDOH) factors.",
-  "summary": "A study using machine learning to predict foster care admission in Ohio children by analyzing Medicaid claims data and social determinants of health (SDOH).",
+  "ehr_evidence": "We make use of data from CareSource Ohio, a nonprofit health plan with the largest Medicaid enrollment in the state of Ohio.",
+  "summary": "Machine learning predictive modeling study using Medicaid claims and social determinants of health data to identify children at risk of future foster care admission.",
   "key_findings": [
-    "Gradient-boosted tree model identified 2408 children at risk of foster care admission.",
-    "SDOH data significantly improved predictive accuracy (PPV of 84.72% compared to 27.44% without SDOH)."
+    "The gradient-boosted tree model classified 2408 children as at risk, with 1599 (66.4%) actually transitioning into foster care.",
+    "The SDOH model achieved a positive predictive value (PPV) of 84.72%, compared to 27.44% for the non-SDOH model.",
+    "Logistic regression yielded a PPV of 0% without SDOH variables and 12.7% with SDOH variables, both substantially worse than the gradient-boosted tree model.",
+    "Average precision was 0.75 for the SDOH model and 0.16 for the non-SDOH model."
   ],
   "captured_features": [
     "Medicaid claims data",
-    "SDOH factors",
-    "geographic social determinants of health"
+    "clinical diagnoses",
+    "healthcare utilization",
+    "linked parental adult diagnoses and utilization",
+    "Johns Hopkins ACG System health analytics scores",
+    "21 SDOH risk scores (geographic and household-level factors)"
   ],
-  "pathologies_diseases": [
-    "foster care admission"
-  ],
-  "study_design": "predictive modeling",
-  "data_source_type": "claims data",
-  "population": "children enrolled in a Medicaid health plan in Ohio",
-  "exposure_domain": "social determinants of health (SDOH)",
+  "pathologies_diseases": [],
+  "study_design": "Predictive modeling study comparing gradient-boosted tree machine learning to logistic regression",
+  "data_source_type": "Claims data",
+  "population": "Children under 18 years enrolled in CareSource Medicaid plan in Ohio (2019-2022), with linked parental adult data",
+  "exposure_domain": "Social determinants of health (SDOH) and clinical/healthcare utilization factors",
   "limitations": [
-    "ethical and legal concerns regarding the use of such tools for selecting families for child welfare investigations"
+    "Potential missing foster care admissions due to enrollment in different health plans",
+    "Model may not generalize to demographically or clinically distinct populations",
+    "Lack of sibling status data preventing proper training/validation split",
+    "Risk of replicating racial, disability, and socioeconomic biases in the existing child welfare system"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

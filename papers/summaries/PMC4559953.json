@@ -3,31 +3,43 @@
   "title": "Perinatal Exposure to Traffic-Related Air Pollution and Atopy at 1 Year of Age in a Multi-Center Canadian Birth Cohort Study.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The study is a birth cohort study (CHILD study) and does not mention the use of electronic health records.",
-  "summary": "A multi-center Canadian birth cohort study investigating the association between perinatal exposure to traffic-related air pollution (TRAP) and atopy in children at 1 year of age.",
+  "ehr_evidence": "The CHILD study (http://www.canadianchildstudy.ca) is a prospective longitudinal national birth cohort that recruited over 3,600 families between 2008 and 2012 in four Canadian cities.",
+  "summary": "Prospective multi-center birth cohort study examining the association between perinatal traffic-related air pollution (NO2) exposure and atopy at 1 year of age in Canadian children.",
   "key_findings": [
-    "The study aims to assess the association between perinatal TRAP exposure and atopy at 1 year of age (results not fully detailed in the provided snippet)."
+    "TRAP exposure after birth increased risk for atopy to any allergens (aOR = 1.16 per 10 μg/m3 NO2; 95% CI: 1.00, 1.41).",
+    "No association was found during pregnancy (aOR = 1.02; 95% CI: 0.86, 1.22).",
+    "Association was stronger among non-daycare attendees (aOR = 1.61; 95% CI: 1.28, 2.01) compared to daycare attendees (aOR = 1.05; 95% CI: 0.81, 1.28).",
+    "Positive but non-significant trends were found for food (aOR = 1.17; 95% CI: 0.95, 1.47) and inhalant allergens (aOR = 1.28; 95% CI: 0.93, 1.76)."
   ],
   "captured_features": [
-    "Perinatal traffic-related air pollution (TRAP) exposure",
-    "Atopy at 1 year of age"
+    "Skin-prick test results for 10 allergens",
+    "Residential addresses and mobility history",
+    "Time-activity patterns and daycare attendance",
+    "Home ventilation/infiltration estimates",
+    "Maternal atopy, asthma, smoking, and SES",
+    "Diet and breastfeeding practices",
+    "Modeled NO2 exposure concentrations"
   ],
   "pathologies_diseases": [
     "atopy",
     "allergic sensitization"
   ],
-  "study_design": "Multi-center birth cohort study",
-  "data_source_type": "Birth cohort",
-  "population": "Canadian infants",
-  "exposure_domain": "Traffic-related air pollution (TRAP)",
+  "study_design": "prospective multi-center birth cohort study",
+  "data_source_type": "birth cohort",
+  "population": "2,477 children approximately 1 year of age from four Canadian cities",
+  "exposure_domain": "traffic-related air pollution (NO2)",
   "limitations": [
-    "Mobility of study participants",
-    "Limitations of land use regression (LUR) models in capturing fine-scale seasonal variability"
+    "Exposure assessment derived from modeled estimates rather than direct measurements",
+    "Reliance on self-reported environmental and parental risk factors",
+    "Cohort bias toward higher socioeconomic status",
+    "Infiltration model developed for US cities applied to Canadian homes",
+    "Missing covariate data reduced sample sizes for some analyses",
+    "Lack of sufficient power for certain subgroup analyses"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

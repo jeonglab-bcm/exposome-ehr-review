@@ -3,38 +3,44 @@
   "title": "Activated fibroblasts modify keratinocyte stem niche through TET1 and IL-6 to promote their rapid transformation in a mouse model of prenatal arsenic exposure.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "Study investigating how prenatal arsenic exposure activates dermal fibroblasts to modify the keratinocyte stem cell niche, promoting skin tumorigenesis in a mouse model.",
+  "ehr_evidence": "BALB/c female mice, aged five weeks, were acquired from the animal rearing facility at the CSIR- Indian Institute of Toxicology Research.",
+  "summary": "In vivo and in vitro study examining how prenatal arsenic exposure in mice activates dermal fibroblasts to secrete IL-6, which modifies the keratinocyte stem cell niche via TET1-mediated epigenetic changes and JAK2/STAT3 signaling, promoting epithelial-mesenchymal transition and skin tumorigenesis.",
   "key_findings": [
-    "Prenatal arsenic exposure increases activation markers (α-SMA, Fibronectin, Collagen IV) in dermal fibroblasts.",
-    "As-conditioned fibroblasts induce TET1 and secrete high levels of IL-6.",
-    "IL-6 promotes EMT, proliferation, and migration in keratinocyte stem cells via JAK2-STAT3 signaling.",
-    "Inhibition of pSTAT3 reduces EMT and KSC proliferation."
+    "Prenatal arsenic exposure increased α-SMA positive cells in offspring skin at PND 2 (37 ± 2.7) and 18 weeks (26.2 ± 2.6) compared to controls.",
+    "Conditioned media from exposed fibroblasts increased IL-6 levels (MFI 7919 ± 350.4 vs 4086 ± 50.4) and reduced KSC apoptosis (2 ± 0.3% vs 10.4 ± 0.5%).",
+    "KSCs cultured in exposed fibroblast media showed increased proliferation (BrdU uptake 11.2 ± 0.7% vs 3 ± 0.8%) and EMT markers (N-cadherin 1.6 ± 1.2 fold, Vimentin 2.9 ± 1.8 fold).",
+    "TET1 protein increased 1.8 ± 0.06 fold and IL-6 mRNA increased 8.1 ± 1.4 fold in exposed fibroblasts, with an 8.4 ± 1.5% rise in 5-hmC/5-mC ratio at the IL-6 promoter."
   ],
   "captured_features": [
-    "α-SMA",
-    "Fibronectin",
-    "Collagen IV",
-    "TET1",
-    "IL-6",
-    "JAK2-STAT3 signaling",
-    "EMT"
+    "EMT markers (E-cadherin, N-cadherin, Vimentin, Fibronectin)",
+    "α-SMA, Collagen IV",
+    "IL-6 levels (lysate and supernatant)",
+    "JAK2/STAT3 pathway proteins (GP130, pJAK2, pSTAT3)",
+    "BrdU proliferation",
+    "TET1 expression",
+    "5-hmC/5-mC methylation ratio",
+    "colony formation and migration assays"
   ],
   "pathologies_diseases": [
     "skin tumorigenesis",
-    "cancer"
+    "basal cell carcinoma",
+    "squamous cell carcinoma",
+    "epithelial-mesenchymal transition"
   ],
-  "study_design": "Experimental mouse model",
-  "data_source_type": "Laboratory",
-  "population": "BALB/c mouse offspring",
-  "exposure_domain": "arsenic",
+  "study_design": "in vivo mouse model and in vitro cell culture study",
+  "data_source_type": "animal model / in vitro cell culture",
+  "population": "BALB/c mice (prenatally exposed to arsenic and control offspring), primary dermal fibroblasts and keratinocyte stem cells",
+  "exposure_domain": "prenatal arsenic exposure",
   "limitations": [
-    "Animal model"
+    "animal model may not fully recapitulate human pathophysiology",
+    "in vitro conditioned media does not fully replicate the complex in vivo microenvironment",
+    "small sample sizes (n=3-5 per group)",
+    "lack of human clinical validation"
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "The datasets generated and analyzed during the current study are submitted to CSIR-IITR repository and will be made available by corresponding author on request.",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -3,33 +3,43 @@
   "title": "Blood lead changes during pregnancy and postpartum with calcium supplementation.",
   "year": "2004",
   "ehr_used": false,
-  "ehr_evidence": "The study used monthly venous blood samples, quarterly environmental samples, and 6-day duplicate diets rather than electronic health records.",
-  "summary": "A longitudinal study investigating the effect of calcium supplementation on lead mobilization from the maternal skeleton during pregnancy and 6 months postpartum in immigrant women in Australia.",
+  "ehr_evidence": "Blood and urine samples were obtained monthly during pregnancy and the postpregnancy period for ≥ 6 months. Environmental samples of 6-day duplicate diet, drinking water, house dust, gasoline, and ambient air were collected quarterly.",
+  "summary": "Longitudinal study of blood lead changes and lead mobilization from bone during pregnancy and postpartum in immigrant women, evaluating the effect of calcium supplementation.",
   "key_findings": [
-    "Blood lead levels increased by a geometric mean of 25% during the third trimester.",
-    "Calcium supplementation was provided to evaluate its protective effect against lead mobilization."
+    "Geometric mean blood lead at first sampling was 2.4 µg/dL (range, 1.4–6.5).",
+    "Hematocrit-corrected blood lead increased by 10 to 50% (geometric mean 25%) during the third trimester.",
+    "Postpartum blood lead increased by 30 to 95% (geometric mean 65%; n = 8) from the late pregnancy minimum.",
+    "Significant increases in lead isotopic ratios from late pregnancy minimum occurred in 3 of 8 subjects (p < 0.01).",
+    "Extra lead flux mobilized from bone during late pregnancy and postpartum ranged from 50 to 380 µg (geometric mean 145 µg).",
+    "Cord:maternal blood lead geometric mean ratio was 0.72 (range 0.55–0.93; r² = 0.93).",
+    "Calcium supplementation delayed the timing of blood lead increases to 6–8 months gestation and halved the extra bone flux compared to a low-calcium cohort, but provided limited benefit for lead toxicity during lactation."
   ],
   "captured_features": [
-    "blood lead levels",
+    "monthly venous blood lead concentrations",
+    "lead isotopic ratios (206Pb:204Pb, 207Pb:206Pb)",
     "hematocrit",
-    "calcium intake",
-    "environmental samples",
-    "duplicate diets"
+    "creatinine",
+    "6-day duplicate diet samples",
+    "environmental samples (dust, water, air)",
+    "cord blood lead",
+    "breastfeeding duration",
+    "calcium supplement compliance"
   ],
-  "pathologies_diseases": [
-    "lead exposure"
-  ],
-  "study_design": "longitudinal intervention study",
-  "data_source_type": "clinical study",
-  "population": "10 immigrant women in Australia (pregnant/lactating) and 2 controls",
-  "exposure_domain": "lead exposure",
+  "pathologies_diseases": [],
+  "study_design": "prospective longitudinal cohort study",
+  "data_source_type": "primary biological and environmental sampling",
+  "population": "pregnant and postpartum female immigrants to Australia (aged 19–32 years) and two nonpregnant controls",
+  "exposure_domain": "lead exposure and mobilization from bone; calcium supplementation",
   "limitations": [
-    "small sample size"
+    "small sample size (n=10 pregnant subjects, n=2 controls)",
+    "absence of a placebo control group",
+    "reliance on self-reported supplement compliance",
+    "potential unmeasured acute lead exposure sources (e.g., dietary changes at ethnic events)"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

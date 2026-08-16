@@ -3,35 +3,47 @@
   "title": "Evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None; data were collected via an online questionnaire.",
-  "summary": "Safety evaluation of SARS-CoV-2 vaccination in pregnant and breastfeeding women.",
+  "ehr_evidence": "An anonymous online questionnaire created via Google Forms was addressed to vaccinated women from Slovakia and Czech Republic, and was used to collect data.",
+  "summary": "Evaluation of SARS-CoV-2 vaccine safety and efficacy in pregnant and breastfeeding women using a self-reported online questionnaire.",
   "key_findings": [
-    "Breastfeeding women experienced higher rates of adverse events (AEs) compared to pregnant women.",
-    "93.1% of pregnancies were carried to term.",
-    "Vaccine efficacy was 96.3%.",
-    "No pattern of serious AEs emerged."
+    "Breastfeeding women experienced higher adverse event rates than pregnant women.",
+    "Significant differences in adverse event incidence were observed for fatigue (RR 1.230, 95% CI 1.051-1.444, P=0.0098), headache (RR 1.822, 95% CI 1.379-2.418, P<0.0001), myalgia (RR 1.633, 95% CI 1.269-2.110, P<0.0001), chills (RR 2.027, P<0.0001), subfebrile temperature ≤38°C (RR 1.697, 95% CI 1.240-2.335, P=0.0007), arthralgia (RR 1.924, 95% CI 1.340-2.776, P=0.0002), fever >38°C (RR 6.410, 95% CI 2.890-14.30, P<0.0001), and shivers (RR 2.204, 95% CI 1.264-3.863, P=0.0049).",
+    "Menstrual cycle bleeding disorders occurred in 0.7% of breastfeeding women after the first dose and 0.5% after the second dose.",
+    "93.1% of pregnancies were carried to term, 5.6% late preterm, 0.9% moderate preterm, and 0.3% very preterm.",
+    "Vaccine efficacy against SARS-CoV-2 infection was 96.3%.",
+    "Serious adverse event incidence was 0.3% (7 SAEs in 2165 respondents)."
   ],
   "captured_features": [
-    "Adverse events (AEs)",
+    "adverse event incidence",
     "pregnancy outcomes",
-    "confirmed SARS-CoV-2 infection",
-    "vaccine efficacy"
+    "gestational age at birth",
+    "vaccine efficacy",
+    "menstrual cycle disorders",
+    "serious adverse events"
   ],
   "pathologies_diseases": [
-    "SARS-CoV-2",
-    "pregnancy complications"
+    "SARS-CoV-2 infection",
+    "adverse events",
+    "menstrual cycle disorders",
+    "spontaneous abortion",
+    "congenital defects"
   ],
-  "study_design": "Online questionnaire study",
-  "data_source_type": "Online questionnaire",
-  "population": "2192 pregnant or breastfeeding women",
-  "exposure_domain": "SARS-CoV-2 vaccination",
+  "study_design": "cross-sectional survey",
+  "data_source_type": "Questionnaire",
+  "population": "pregnant and breastfeeding women (n=2192) from Slovakia and Czech Republic",
+  "exposure_domain": "vaccination",
   "limitations": [
-    "Self-reported data via online questionnaire"
+    "convenience sample with voluntary participation",
+    "no inclusion/exclusion criteria",
+    "self-reported data without trained personnel verification",
+    "efficacy analysis limited by voluntary post-vaccination isolation",
+    "data collected before the Omicron variant era",
+    "only original monovalent mRNA vaccines assessed"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

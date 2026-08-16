@@ -3,37 +3,47 @@
   "title": "Childhood lead poisoning: conservative estimates of the social and economic benefits of lead hazard control.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "The study utilizes NHANES (National Health and Nutritional Examination Survey), U.S. Census Bureau data, and state child blood lead surveillance data, which are population surveys and surveillance data rather than EHRs.",
-  "summary": "An economic analysis evaluating the cost-effectiveness of household lead hazard control for children $\\le$ 6 years of age in the United States, focusing on the societal and health impacts of lead paint.",
+  "ehr_evidence": "Data for children with BLLs < 10 μg/dL are estimated from CDC NHANES 2003–2006. Data for > 10 μg/dL are from state-level surveillance and assume uniform distribution of cases within each BLL group.",
+  "summary": "Cost-benefit analysis quantifying the social and economic benefits of household lead paint hazard control compared to investment costs for children ≤ 6 years in the US.",
   "key_findings": [
-    "Children with blood lead levels (BLLs) between 2 and 10 $\\mu$g/dL are likely to benefit from aggressive intervention.",
-    "Approximately 6.9 million children $\\le$ 6 years in the US had BLLs between 2 and 10 $\\mu$g/dL in 2006.",
-    "Lead exposure causes significant neurologic and cognitive damage even at low levels."
+    "Each dollar invested in lead paint hazard control results in a return of $17–$221 or a net savings of $181–269 billion.",
+    "Total costs of lead hazard control range from $1.2 to $11.0 billion, while total benefits range from $192 to $270 billion.",
+    "Lead exposure is associated with 9.3–13.1 million points of IQ loss, translating to $165–233 billion in lost lifetime earnings."
   ],
   "captured_features": [
-    "Blood lead levels (BLLs)",
-    "demographic patterns (gender, ethnicity, poverty level)",
-    "estimated costs of lead paint abatement"
+    "blood lead levels (BLLs)",
+    "demographic characteristics",
+    "health care costs",
+    "lifetime earnings loss",
+    "special education costs",
+    "ADHD costs",
+    "crime costs"
   ],
   "pathologies_diseases": [
     "lead poisoning",
+    "attention deficit–hyperactivity disorder (ADHD)",
     "cognitive impairment",
-    "behavioral impairment",
-    "neurologic damage"
+    "hypertension",
+    "heart disease",
+    "stroke",
+    "kidney malfunction",
+    "osteoporosis"
   ],
-  "study_design": "Economic cost-effectiveness analysis",
-  "data_source_type": "Population survey and surveillance data",
-  "population": "Children $\\le$ 6 years of age in the United States",
-  "exposure_domain": "Lead exposure (specifically lead paint in housing)",
+  "study_design": "cost-benefit analysis",
+  "data_source_type": "NHANES survey data and state surveillance data",
+  "population": "children ≤ 6 years of age in the United States",
+  "exposure_domain": "lead exposure",
   "limitations": [
-    "Variability in actual expense of lead paint abatement",
-    "Range of reported children with lead exposure",
-    "Limited sample sizes in some data"
+    "restricts analysis to lead-based paint as the primary source",
+    "uses conservative lower bounds for prevalence",
+    "excludes indirect crime costs and long-term adult health effects",
+    "assumes uniform distribution of BLLs within groups",
+    "small sample sizes prevent accurate categorizing of children into each BLL subgroup"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

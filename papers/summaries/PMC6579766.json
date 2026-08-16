@@ -3,37 +3,40 @@
   "title": "Mitotically heritable effects of BMAA on striatal neural stem cell proliferation and differentiation.",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "An in vitro laboratory study investigating the direct and mitotically inherited effects of the cyanobacterial toxin BMAA on neural stem cell (NSC) proliferation, differentiation, and morphology.",
+  "ehr_evidence": "We used primary neuronal cell cultures and embryonic neural stem cells from rat striatum.",
+  "summary": "In vitro study investigating the direct and mitotically heritable effects of the cyanobacterial neurotoxin BMAA on rat striatal neural stem cell proliferation, differentiation, and morphology.",
   "key_findings": [
-    "Neural stem cells are more susceptible to BMAA than primary neurons.",
-    "250 µM BMAA reduces NSC proliferation through apoptosis and G2/M arrest.",
-    "50-100 µM BMAA reduces differentiation of NSCs into astrocytes, oligodendrocytes, and neurons.",
-    "BMAA-induced changes are mitotically heritable to daughter cells."
+    "250 µM BMAA reduced neural stem cell proliferation through apoptosis and G2/M arrest.",
+    "50-100 µM BMAA reduced differentiation into neurons, astrocytes, and oligodendrocytes.",
+    "BMAA-induced morphological alterations (reduced neurite length, processes, and branches) were mitotically heritable to daughter cells (D1 and D2).",
+    "P1 cells treated with 100 µM BMAA showed decreased neuron percentage (31.72% to 16.66%, p<0.001), astrocyte percentage (34.38% to 15.49%, p<0.01), and oligodendrocyte percentage (15.75% to 9.42%, p<0.05).",
+    "Glutamate antagonists MK-801 and MCPG completely protected against BMAA-induced decreases in cell viability, proliferation, and morphological alterations."
   ],
   "captured_features": [
-    "NSC proliferation rates",
-    "differentiation rates",
-    "neurite length",
-    "number of processes and branches"
+    "cell viability (MTT assay)",
+    "cell proliferation (DAPI staining)",
+    "cell cycle distribution (flow cytometry)",
+    "apoptosis/necrosis (Annexin V-PI assay)",
+    "differentiation markers (β III-tubulin, GFAP, Oligo4, nestin)",
+    "neurite morphometry (length, processes, branches)"
   ],
   "pathologies_diseases": [
     "neurodevelopmental disorders",
-    "neurodegenerative disease",
-    "ALS/PDC",
-    "Alzheimer's disease"
+    "neurodegenerative disease (ALS/PDC, Alzheimer's)"
   ],
-  "study_design": "In vitro laboratory study",
-  "data_source_type": "Laboratory/Experimental",
-  "population": "Embryonic neural stem cells and primary striatal neurons",
-  "exposure_domain": "BMAA (cyanobacterial toxin)",
+  "study_design": "in vitro mechanistic cell culture study",
+  "data_source_type": "in vitro cell culture",
+  "population": "embryonic rat striatal neural stem cells and primary neurons",
+  "exposure_domain": "cyanobacterial neurotoxin (BMAA)",
   "limitations": [
-    "In vitro study, not human epidemiological data"
+    "in vitro model limitations",
+    "lack of randomization",
+    "extrapolation to human development requires caution"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

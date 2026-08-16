@@ -3,35 +3,39 @@
   "title": "Aspartame and cancer - new evidence for causation.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "None; the study uses laboratory animal data from the Ramazzini Institute.",
-  "summary": "A re-evaluation of toxicological studies by the Ramazzini Institute confirming that aspartame causes dose-related increases in malignant tumors in rodents, including increased risk in offspring following prenatal exposure.",
+  "ehr_evidence": "RI subjected all HLTs from aspartame-exposed animals to immunohistochemical analysis using a battery of markers and to morphological reassessment using the most recent Internationally Harmonized Nomenclature and Diagnostic (INHAND) criteria.",
+  "summary": "Commentary re-evaluating Ramazzini Institute rodent toxicology studies, confirming aspartame-induced hematolymphatic malignancies and prenatal carcinogenic effects through immunohistochemical and morphological reassessment.",
   "key_findings": [
-    "92.3% of cases confirmed as malignancy",
-    "Prenatal exposure to aspartame increases cancer risk in rodent offspring",
-    "No evidence of Mycoplasma infection"
+    "Immunohistochemical and morphological re-evaluation confirmed malignancy in 92.3% of originally diagnosed hematopoietic and lymphoid tissue tumors.",
+    "Six lesions originally diagnosed as lymphoma were reclassified: 3 to lymphoid hyperplasia and 3 to chronic inflammation with fibrosis.",
+    "No histological evidence of Mycoplasma pulmonis infection was found.",
+    "Statistically significant increase in incidence of all hematolymphatic malignancies (p = 0.006), including lymphomas (p = 0.032) and leukemias (p = 0.031).",
+    "Positive dose-response relationship observed between aspartame exposure and hematolymphatic malignancy incidence.",
+    "Prenatal exposures produced dose-related increases in malignancies at lower exposure levels and shorter latency than adult exposures."
   ],
   "captured_features": [
-    "Immunohistochemical markers",
-    "INHAND criteria",
-    "morphological reassessment"
+    "immunohistochemical markers (Ki67, CD3, PAX5, CD20, CD68, TdT, CD45, CD14, CD33)",
+    "morphological reassessment using INHAND criteria",
+    "hematopoietic and lymphoid tissue tumor diagnoses"
   ],
   "pathologies_diseases": [
-    "malignant tumors",
+    "hematopoietic and lymphoid tissue tumors",
     "lymphoma",
-    "leukemia"
+    "leukemia",
+    "malignant tumors"
   ],
-  "study_design": "Toxicological laboratory study (animal model re-evaluation)",
-  "data_source_type": "Laboratory animal data",
-  "population": "Rodents (Sprague-Dawley rats and Swiss mice)",
-  "exposure_domain": "Artificial sweeteners (aspartame)",
+  "study_design": "re-evaluation of animal toxicology bioassays",
+  "data_source_type": "animal toxicology data / histopathology",
+  "population": "Sprague-Dawley rats and Swiss mice",
+  "exposure_domain": "aspartame (artificial sweetener)",
   "limitations": [
-    "Animal study",
-    "Not human data"
+    "re-evaluation based on existing rodent bioassay data",
+    "extrapolation of rodent findings to human health risks"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

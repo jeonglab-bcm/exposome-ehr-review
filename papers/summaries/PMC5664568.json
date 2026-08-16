@@ -3,43 +3,58 @@
   "title": "The Hokkaido Birth Cohort Study on Environment and Children's Health: cohort profile-updated 2017.",
   "year": "2017",
   "ehr_used": false,
-  "ehr_evidence": "The study is a prospective birth cohort study using direct specimen collection (blood, hair, breast milk) and face-to-face tests, not EHR or linked health data.",
-  "summary": "An update on the Hokkaido Study on Environment and Children’s Health, a prospective birth cohort study in Japan investigating the effects of environmental chemical exposures on birth outcomes, child development, and genetic/epigenetic markers.",
+  "ehr_evidence": "Parent and infant medical records were obtained from physicians at the participating hospitals or clinics.",
+  "summary": "Cohort profile of the Hokkaido Birth Cohort Study on Environment and Children’s Health, detailing two prospective cohorts investigating prenatal environmental chemical exposures on birth outcomes, child development, allergies, and epigenetic modifications.",
   "key_findings": [
-    "Environmental chemical exposures demonstrate effects on genetically susceptible populations and on DNA methylation."
+    "PCDD/PCDFs significantly decreased birth weight (2,3,4,7,8-PeCDF: β = −24.5 g, 95% CI −387.4 to −61.5).",
+    "PFOS was negatively correlated with birth weight (per log10 unit: β = −269.4 g, 95% CI −465.7 to −73.0).",
+    "PFOA was negatively associated with ponderal index (per log10 unit: β = −0.73 kg/m3, 95% CI −1.44 to −0.02).",
+    "DEHP significantly decreased ponderal index (per log10 unit: β = −1.28, 95% CI −2.43 to −0.13).",
+    "PFOA was negatively associated with mental development in 6-month-old girls (per log10 unit: β = −0.296, 95% CI −11.96 to −0.682).",
+    "Polychlorinated dibenzofuran was associated with increased risk of otitis media in male infants (OR 2.5, 95% CI 1.1–5.9).",
+    "PFTrDA decreased the risk of eczema at 24 months (OR 0.62, 95% CI 0.45–0.86).",
+    "PFOS was associated with reduced cortisol and cortisone levels in cord blood (Q4 vs Q1: β = −23.98 ng/mL, 95% CI −47.12 to −11.99).",
+    "Prenatal PFOA exposure was significantly inversely associated with IGF2 methylation, mediating reduced ponderal index."
   ],
   "captured_features": [
-    "maternal and cord blood",
-    "maternal hair",
-    "breast milk",
-    "face-to-face neurobehavioral development tests",
-    "genetic and epigenetic analysis",
-    "pregnancy outcomes (miscarriage, stillbirth, low birth weight, preterm birth, small for gestational age)"
+    "maternal and infant demographics",
+    "pregnancy complications and birth outcomes",
+    "environmental chemical concentrations (blood, hair, milk, dust, urine)",
+    "hormone and fatty acid levels",
+    "genetic polymorphisms",
+    "DNA methylation",
+    "neurobehavioral test scores",
+    "allergy and infection prevalence"
   ],
   "pathologies_diseases": [
     "birth defects",
-    "growth retardation",
-    "allergies",
-    "infectious diseases",
-    "neurobehavioral developmental disorders",
-    "asthma",
-    "miscarriage",
-    "stillbirth",
     "low birth weight",
     "preterm birth",
-    "small for gestational age"
+    "small for gestational age",
+    "asthma",
+    "allergies",
+    "otitis media",
+    "infectious diseases",
+    "neurobehavioral developmental disorders",
+    "ADHD",
+    "autism spectrum disorder"
   ],
-  "study_design": "Prospective birth cohort study",
-  "data_source_type": "Cohort study",
-  "population": "Pregnant women and children in Japan (Sapporo and Hokkaido cohorts)",
-  "exposure_domain": "Environmental chemicals (dioxins, PCBs, organochlorine pesticides, PFAS, phthalates, BPA, methylmercury, tobacco smoking)",
+  "study_design": "prospective birth cohort study with nested case-cohort design",
+  "data_source_type": "birth cohort",
+  "population": "pregnant women and their offspring in Hokkaido, Japan (Sapporo cohort n=514, Hokkaido cohort n=20,926), followed from pregnancy through childhood",
+  "exposure_domain": "environmental chemicals (dioxins, PCBs, PFASs, organochlorine pesticides, phthalates, bisphenol A, methylmercury, tobacco smoke)",
   "limitations": [
-    "Ongoing study; continuous follow-up necessary to elucidate combined effects of chemical exposure"
+    "cohort profile design limits primary hypothesis testing",
+    "loss to follow-up at birth",
+    "reliance on self-reported questionnaires for some covariates",
+    "potential residual confounding",
+    "low environmental chemical exposure levels in Japan may limit generalizability",
+    "multiple comparisons without strict correction in some analyses"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

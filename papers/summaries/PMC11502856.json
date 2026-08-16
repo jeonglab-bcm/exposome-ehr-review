@@ -3,40 +3,43 @@
   "title": "Associations between gestational exposure to perfluoroalkyl substances, fetal growth, and the mediation effect of thyroid hormones.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "The study used data from the Ezhou birth cohort study, which is a primary cohort study.",
-  "summary": "The study investigates the associations between maternal serum PFAS concentrations and neonatal growth metrics, specifically examining the mediating role of thyroid hormones (FT3 and FT4).",
+  "ehr_evidence": "Study participants were selected among subjects of the Ezhou birth cohort study, which is an ongoing longitudinal study initiated in January 2019 that aims to evaluate the impact of environmental factors on the health of pregnant women and their children.",
+  "summary": "Prospective birth cohort study evaluating associations between prenatal PFAS exposure, maternal thyroid hormones, and fetal growth outcomes in China.",
   "key_findings": [
-    "PFNA and PFHxS were negatively associated with birth length.",
-    "PFOA and PFHxS were negatively associated with birth head circumference.",
-    "FT3 mediated 36.7% of the negative association between PFNA and birth length.",
-    "FT4 mediated 30.8% of the effect of PFOA on head circumference."
+    "Increasing PFNA concentration was associated with decreased birth length (β = -0.54 cm; 95% CI: -0.90, -0.18).",
+    "Increasing PFHxS concentration was associated with decreased birth length (β = -0.64 cm; 95% CI: -0.86, -0.42).",
+    "Increasing PFOA concentration was associated with decreased head circumference (β = -0.73 cm; 95% CI: -1.19, -0.27).",
+    "Increasing PFHpS concentration was associated with decreased head circumference (β = -0.30 cm; 95% CI: -0.53, -0.07).",
+    "Increasing PFDA concentration was associated with decreased gestational age (β = -0.18 week; 95% CI: -0.26, -0.10).",
+    "Maternal FT3 mediated 36.7% of the effect of PFNA on birth length, and FT4 mediated 30.8% of the effect of PFOA on head circumference.",
+    "No significant mediation by thyroid hormones was observed for birth weight or gestational age.",
+    "In female infants, higher PFOA was associated with lower birth weight (β = -53.6 g; 95% CI: -77.8, -29.4)."
   ],
   "captured_features": [
-    "Maternal serum PFAS levels",
-    "Maternal serum thyroid hormones",
-    "Neonatal birth weight",
-    "Neonatal birth length",
-    "Neonatal head circumference",
-    "Gestational age"
-  ],
-  "pathologies_diseases": [
-    "fetal growth",
+    "maternal serum PFAS concentrations",
+    "maternal thyroid hormone levels (TSH, FT3, FT4, TT3, TT4, TG)",
     "birth weight",
     "birth length",
-    "head circumference"
+    "head circumference",
+    "gestational age",
+    "infant sex",
+    "maternal demographics and lifestyle factors"
   ],
-  "study_design": "Birth cohort study",
-  "data_source_type": "Cohort study",
-  "population": "374 mother-infant pairs from the Ezhou birth cohort study (2019-2020)",
-  "exposure_domain": "perfluoroalkyl and polyfluoroalkyl substances (PFASs)",
+  "pathologies_diseases": [],
+  "study_design": "prospective birth cohort study with mediation analysis",
+  "data_source_type": "birth cohort",
+  "population": "379 mother-infant pairs from Ezhou City, Hubei Province, China, recruited in early pregnancy (2019-2020)",
+  "exposure_domain": "per- and polyfluoroalkyl substances (PFASs)",
   "limitations": [
-    "Small sample size",
-    "Geographic limitation"
+    "PFAS-thyroid hormone associations are cross-sectional, limiting causal inference",
+    "single first-trimester measurement may lead to exposure misclassification",
+    "only 8 of over 23 detectable PFASs were measured",
+    "single-city cohort limits generalizability to other populations"
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
-  "data_availability_statement": "The datasets used and/or analysed during the current study available from the corresponding author on reasonable request.",
-  "confidence": "high",
+  "data_availability_statement": "The datasets used and/or analysed during the current study available from the corresponding author on reason-able request.",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

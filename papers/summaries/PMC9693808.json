@@ -3,34 +3,41 @@
   "title": "Maternal use of methamphetamine induces sex-dependent changes in myocardial gene expression in adult offspring.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "None. The study is an experimental laboratory study using rat models.",
-  "summary": "This study investigates the effects of prenatal methamphetamine exposure on myocardial gene expression in adult offspring, specifically examining sex-dependent changes in cardiac gene expression.",
+  "ehr_evidence": "The study utilized adult Sprague-Dawley rat offspring from pregnant dams administered methamphetamine or saline during gestation.",
+  "summary": "Experimental study examining sex-dependent changes in myocardial gene expression in adult rat offspring following prenatal methamphetamine exposure.",
   "key_findings": [
-    "Prenatal methamphetamine exposure induces sex-dependent changes in myocardial gene expression in adult offspring.",
-    "Female offspring exhibited 184 changes in gene expression compared to 74 in males.",
-    "Dimethylarginine dimethylaminohydrolase 2 and 3-hydroxybutyrate dehydrogenase 1 were under-expressed in females prenatally exposed to methamphetamine."
+    "RNA sequencing identified 346 differentially expressed mRNAs in adult hearts.",
+    "184 changes occurred only in females, 89 only in males, and 74 were common to both sexes.",
+    "BDH1 protein expression was significantly decreased in both male (p < 0.01) and female (p < 0.05) offspring.",
+    "DDAH2 protein expression was significantly decreased in female hearts (p < 0.01) but not in male hearts."
   ],
   "captured_features": [
-    "Myocardial gene expression",
-    "Western Blot results",
-    "Sex-dependent expression changes"
+    "RNA sequencing data",
+    "differentially expressed gene counts",
+    "Log2 fold changes",
+    "FDR-adjusted p-values",
+    "Western blot protein densities",
+    "DDAH2 and BDH1 expression levels"
   ],
   "pathologies_diseases": [
+    "heart failure",
     "cardiovascular disorders",
-    "heart failure"
+    "ischemic injury"
   ],
-  "study_design": "Experimental laboratory study",
-  "data_source_type": "Laboratory/Experimental",
-  "population": "Prenatally exposed rat offspring",
-  "exposure_domain": "Prenatal methamphetamine exposure",
+  "study_design": "Experimental animal study",
+  "data_source_type": "Animal model",
+  "population": "Adult Sprague-Dawley rat offspring",
+  "exposure_domain": "Prenatal methamphetamine",
   "limitations": [
-    "Animal model study",
-    "Lack of human clinical data"
+    "Animal model limits direct translation to human physiology",
+    "Small sample sizes per group (N=5-6)",
+    "Lack of in vivo functional cardiac outcome measures",
+    "Cross-sectional assessment without longitudinal follow-up"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

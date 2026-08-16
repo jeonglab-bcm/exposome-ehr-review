@@ -1,0 +1,47 @@
+{
+  "pmcid": "PMC8015385",
+  "title": "Vaccination Rates and Family Barriers Among Children with Inflammatory Bowel Disease.",
+  "year": "2020",
+  "ehr_used": true,
+  "ehr_evidence": "Indiana utilizes an online registry, the Children and Hoosier Immunization Program (CHIRP), which was used by research assistants to access vaccination records for each participant.",
+  "summary": "Cross-sectional study comparing vaccination rates and parental attitudes toward vaccine safety and effectiveness between children with IBD and non-IBD controls.",
+  "key_findings": [
+    "IBD families reported higher concern about vaccine safety (40% vs 16%, P=0.03) and effectiveness (34% vs 12%, P<0.01) compared to non-IBD families.",
+    "36% of IBD families worried vaccines would worsen their child's symptoms vs 10% of non-IBD (P≤0.01).",
+    "96% of IBD children on biologics were missing the PPSV23 booster.",
+    "51% of IBD children were missing at least one HPV-9 vaccine or had never received one.",
+    "56% of IBD children were missing an influenza vaccine from the 2018-2019 season.",
+    "0% of IBD children were missing HBV vaccines compared to 11% of non-IBD (P=0.022).",
+    "14% of IBD parents changed their vaccine opinion after diagnosis vs 3% of non-IBD parents (P=0.06)."
+  ],
+  "captured_features": [
+    "parent survey responses",
+    "CHIRP registry vaccination records",
+    "demographic data",
+    "clinical data (IBD type, medications, surgery history)"
+  ],
+  "pathologies_diseases": [
+    "inflammatory bowel disease",
+    "Crohn disease",
+    "ulcerative colitis"
+  ],
+  "study_design": "cross-sectional study",
+  "data_source_type": "Registry and survey",
+  "population": "Children aged 10–25 years with IBD (n=50) and non-IBD GI controls (n=58) from a tertiary children's hospital in Indianapolis, IN",
+  "exposure_domain": "N/A",
+  "limitations": [
+    "single tertiary care center setting",
+    "small sample size and convenience sampling",
+    "control group consisted of non-IBD GI clinic patients rather than healthy controls",
+    "CHIRP registry data may miss early childhood vaccinations due to 2015 mandate start date",
+    "demographically homogenous cohort (mostly white, high education)"
+  ],
+  "data_availability": "public-repository",
+  "data_accession_links": [
+    "https://doi.org/10.6084/m9.figshare.12442757.v1"
+  ],
+  "data_availability_statement": "Data stored and supported on figshare.com at https://doi.org/10.6084/m9.figshare.12442757.v1.",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

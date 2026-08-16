@@ -3,38 +3,37 @@
   "title": "Local- and regional-scale air pollution modelling (PM(10)) and exposure assessment for pregnancy trimesters, infancy, and childhood to age 15 years: Avon Longitudinal Study of Parents And Children (ALSPAC).",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "The study uses the Avon Longitudinal Study of Parents And Children (ALSPAC) birth cohort and residential address history, not electronic health records.",
-  "summary": "The study establishes air pollution modelling (PM10) to assess exposures during pregnancy, infancy, and childhood (up to age 15) for the ALSPAC birth cohort using local and regional/long-range models.",
+  "ehr_evidence": "The study used residential address history from the ALSPAC contact database and hourly PM10 measurements from the UK Automatic Urban and Rural Network (AURN) monitoring sites.",
+  "summary": "Development and evaluation of local and regional-scale PM10 dispersion models to estimate individual-level historical air pollution exposures from pregnancy through age 15 years for the ALSPAC birth cohort.",
   "key_findings": [
-    "PM10 exposures fell from 31.2 μg/m³ at age 1 to 19.6 μg/m³ at age 15.",
-    "Local sources contributed 18.5%–19.5% to total PM10 during pregnancy and infancy.",
-    "Main roads contributed approximately 3.0% to total PM10 exposures across all periods."
+    "PM10 exposures declined on average by 11.6 μg/m3 from the first year of life (mean 31.2 μg/m3) to age ~15 (mean 19.6 μg/m3).",
+    "Intra-subject exposure contrasts were largest between pregnancy trimesters (5th to 95th centile: 24.4–37.3 μg/m3).",
+    "Local sources contributed 18.5%–19.5% during pregnancy/infancy and 14.4%–17.0% for longer periods, with main roads contributing ~3.0%.",
+    "Model evaluation showed good correlation with measured weekly PM10 concentrations (r = 0.71, p < 0.001), though the model underestimated concentrations (MB = -4.1 μg/m3, MPB = 21%)."
   ],
   "captured_features": [
-    "PM10 concentrations (μg/m³)",
-    "residential address history",
-    "local source contributions",
-    "regional/long-range source contributions"
+    "residential addresses",
+    "PM10 concentrations (total, local, regional)",
+    "traffic flow and emissions data",
+    "meteorological variables",
+    "model performance metrics (correlation, bias, RMSE)"
   ],
-  "pathologies_diseases": [
-    "asthma",
-    "lung function",
-    "bronchial responsiveness",
-    "allergen sensitization"
-  ],
-  "study_design": "Prospective birth cohort / Exposure modeling",
-  "data_source_type": "Birth cohort",
-  "population": "Children and mothers in the ALSPAC birth cohort (pregnancy to age ~15)",
-  "exposure_domain": "Air pollution (PM10)",
+  "pathologies_diseases": [],
+  "study_design": "Methodological exposure assessment study using dispersion modelling within a prospective birth cohort",
+  "data_source_type": "Birth cohort (ALSPAC) with environmental monitoring and dispersion modelling data",
+  "population": "Children in the ALSPAC birth cohort from pregnancy through age ~15 years, residing in the Avon region/south west England",
+  "exposure_domain": "Air pollution (PM10), including local (traffic, industry, housing) and regional/long-range sources",
   "limitations": [
-    "Lack of fixed-site PM10 monitoring during pregnancy",
-    "Partial coverage for infancy monitoring",
-    "Reliance on dispersion modelling for historic sub-annual periods"
+    "Single monitoring site used for model evaluation",
+    "Lack of historic emissions data for specific industrial and domestic sources",
+    "Inability to model terrain, buildings, and wet deposition effects",
+    "Use of constant value for natural PM10 sources due to lack of pre-1993 monitoring data",
+    "Potential overestimation of background concentrations from imputed central site data"
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Supplementary Materials",
-  "confidence": "high",
+  "data_availability_statement": "",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

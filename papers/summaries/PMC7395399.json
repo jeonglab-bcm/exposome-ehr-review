@@ -3,38 +3,36 @@
   "title": "Unilateral morning glory disc anomaly in a patient with prenatal Zika virus exposure.",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "None. The study is a clinical case report.",
-  "summary": "A case report describing a 3-year-old male child with unilateral morning glory disc anomaly (MGDA) following prenatal Zika virus (ZIKV) exposure.",
+  "ehr_evidence": "A complete ophthalmological exam was performed. Magnetic resonance imaging (MRI) and computed tomography (CT) were performed and were remarkable for a base of skull encephalocele and callosal dysgenesis.",
+  "summary": "Case report describing a 3-year-old male with confirmed prenatal Zika virus exposure who presented with unilateral morning glory disc anomaly and associated midline brain defects.",
   "key_findings": [
-    "First report to suggest an association between prenatal ZIKV exposure and MGDA.",
-    "Prenatal ZIKV exposure may be associated with a wider pathologic spectrum than previously reported."
+    "Visual acuity was 20/200 in the right eye (OD) and 20/20 in the left eye (OS).",
+    "Neuroimaging revealed a base of skull encephalocele and callosal dysgenesis."
   ],
   "captured_features": [
-    "Visual acuity",
-    "Intraocular pressure",
-    "Extraocular muscle ductions",
-    "RT-PCR results",
-    "Neuroimaging"
+    "ophthalmological exam findings",
+    "RT-PCR test results",
+    "MRI and CT imaging results"
   ],
   "pathologies_diseases": [
     "morning glory disc anomaly",
-    "Zika virus exposure",
-    "base of skull encephalocele",
-    "callosal dysgenesis",
-    "strabismus",
-    "cleft lip"
+    "congenital Zika syndrome",
+    "encephalocele",
+    "callosal dysgenesis"
   ],
-  "study_design": "Case report",
-  "data_source_type": "Clinical records",
+  "study_design": "case report",
+  "data_source_type": "clinical examination and imaging",
   "population": "3-year-old male child",
-  "exposure_domain": "Zika virus (ZIKV)",
+  "exposure_domain": "prenatal Zika virus exposure",
   "limitations": [
-    "Single case report"
+    "single case report (N=1)",
+    "cannot demonstrate causal relationship",
+    "lack of comparative control group"
   ],
-  "data_availability": "in-house",
+  "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "All data generated or analyzed during this study are included in this manuscript.",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -3,36 +3,47 @@
   "title": "COVID-19 Vaccination Responses with Different Vaccine Platforms in Patients with Inborn Errors of Immunity.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "The study used laboratory assays (ELISA, ELISPOT, and flow cytometry) on a clinical cohort rather than electronic health records.",
-  "summary": "The study evaluated the safety and immunogenicity of various COVID-19 vaccines (Sputnik, AstraZeneca, Sinopharm, Moderna, and Pfizer) in patients with inborn errors of immunity (IEI) in Argentina.",
+  "ehr_evidence": "Blood samples from patients and healthy adult donors were collected prior to vaccination (T0), 28 days (+ / − 3 days) after the first (T1) and the second (T2) doses.",
+  "summary": "Observational study evaluating the safety and immunogenicity (humoral and cellular responses) of different COVID-19 vaccine platforms in patients with inborn errors of immunity and healthy controls in Argentina.",
   "key_findings": [
-    "No moderate/severe vaccine-associated adverse events were observed.",
-    "Anti-S/RBD titers and neutralizing antibodies were significantly lower in IEI patients compared to age-matched healthy controls.",
-    "Moderna vaccines elicited a stronger humoral response in the pediatric population.",
-    "84.5% of IEI patients showed a positive S-specific IFN-γ response."
+    "No moderate or severe adverse events were observed in IEI patients following vaccination.",
+    "Anti-S/RBD IgG titers were significantly lower in IEI patients compared to healthy controls (p < 0.05 for adults, p < 0.005 for pediatrics).",
+    "Neutralizing antibody IC80 titers were significantly lower in IEI patients than in healthy controls (p < 0.01 for pediatrics, p < 0.05 for adults).",
+    "Positive S-specific IFN-γ response was observed in 84.5% of IEI patients, and 82.1% presented S-specific TFH cells.",
+    "Moderna vaccines elicited significantly stronger humoral responses and neutralization capacity compared to other platforms (p < 0.01 and p < 0.005, respectively).",
+    "No significant difference in humoral response was observed between vaccinated patients with or without previous SARS-CoV-2 infection."
   ],
   "captured_features": [
-    "IgG anti-spike/receptor binding domain (S/RBD) titers",
-    "anti-nucleocapsid (N) antibodies",
-    "neutralization antibodies",
-    "IFN-γ secretion",
-    "S-specific circulating T follicular-helper cells (TFH) frequency"
+    "IgG anti-S/RBD and anti-N antibodies by ELISA",
+    "Neutralizing antibody IC50/IC80 via pseudo-virus assay",
+    "IFN-γ secretion by ELISPOT",
+    "S-specific circulating TFH cell frequency by flow cytometry",
+    "Vaccine-associated adverse events",
+    "SARS-CoV-2 infection status"
   ],
   "pathologies_diseases": [
-    "inborn errors of immunity (IEI)"
+    "inborn errors of immunity (IEI)",
+    "COVID-19",
+    "common variable immunodeficiency (CVID)",
+    "X-linked agammaglobulinemia (XLA)",
+    "specific antibody deficiency (SAD)",
+    "combined immunodeficiency (CID)",
+    "Down syndrome"
   ],
-  "study_design": "Clinical cohort study",
-  "data_source_type": "Clinical cohort",
-  "population": "118 adults and pediatric patients with inborn errors of immunity (IEI) and 37 age-matched healthy controls in Argentina",
-  "exposure_domain": "COVID-19 vaccination",
+  "study_design": "Observational prospective cohort study",
+  "data_source_type": "Biospecimen and clinical follow-up",
+  "population": "118 patients with inborn errors of immunity (79 adults aged 19-78, 39 pediatrics aged 12-18) and 37 age-matched healthy controls in Argentina",
+  "exposure_domain": "COVID-19 vaccination (mRNA, adenoviral vector, inactivated platforms)",
   "limitations": [
-    "Small sample size",
-    "Not an EHR-based study"
+    "Small sample size for specific IEI subtypes",
+    "Lack of long-term follow-up for immunogenicity",
+    "Observational design without randomization",
+    "Limited PBMC samples for healthy pediatric controls prevented cellular response comparison"
   ],
-  "data_availability": "not-stated",
+  "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "",
-  "confidence": "high",
+  "data_availability_statement": "All data generated or analyzed during this study are included in this published article (and its supplementary information files).",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

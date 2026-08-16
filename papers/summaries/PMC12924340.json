@@ -3,41 +3,51 @@
   "title": "Impact of maternal fasting blood glucose in pregnancy on body composition, anthropometric, and metabolic outcomes in newborns and 3-Year-Old offspring: results from the lifestyle in pregnancy and offspring study.",
   "year": "2026",
   "ehr_used": false,
-  "ehr_evidence": "The study used data from the Lifestyle in Pregnancy (LiP) study and its 3-year follow-up, the LiPO study, which are research cohorts.",
-  "summary": "This study investigated whether maternal fasting glucose during pregnancy predicts offspring body composition, anthropometry, and metabolic outcomes at birth and at 3 years of age.",
+  "ehr_evidence": "The analysis used data from the Lifestyle in Pregnancy (LiP) study and its 3-year follow-up, the LiPO study.",
+  "summary": "Secondary analysis of the LiP RCT and LiPO follow-up examining associations between maternal fasting glucose at 28 weeks gestation and offspring body composition, anthropometry, and metabolic outcomes at birth and 3 years.",
   "key_findings": [
-    "Higher maternal fasting glucose was associated with a higher birth weight z-score.",
-    "At 3 years, no significant associations were found for BMI z-score or metabolic markers.",
-    "Glucose levels ≥ 5.6 mmol/L predicted higher birth weight."
+    "Higher maternal fasting plasma glucose at 28 weeks was associated with a significantly higher birth weight z-score (β = 0.48, 95% CI 0.20 to 0.75, p = 0.001).",
+    "The association with birth weight in grams was not statistically significant (β = 103 g, 95% CI −43 to 249, p = 0.167).",
+    "At 3 years of age, maternal fasting glucose was not significantly associated with BMI z-score or other cardiometabolic measures.",
+    "Newborns to women meeting WHO2013 GDM criteria had higher birth weight z-scores compared to those who did not (0.474 vs. 0.135, p = 0.01).",
+    "Fasting glucose ≥5.6 mmol/L was associated with a higher proportion of large-for-gestational-age infants (p = 0.01).",
+    "Fasting glucose >5.3 mmol/L was associated with higher cord c-peptide levels (592 pmol/L vs. 430 pmol/L, p = 0.01).",
+    "Fat mass at 3 years did not differ significantly between children of mothers meeting WHO2013 GDM criteria versus those who did not."
   ],
   "captured_features": [
-    "Maternal fasting plasma glucose",
-    "Birth weight",
-    "Birth weight z-score",
+    "maternal fasting plasma glucose",
+    "birth weight",
+    "birth weight z-score",
+    "umbilical cord c-peptide",
+    "3-year fat mass",
+    "fat-free mass",
     "BMI z-score",
-    "Fat and fat-free mass",
-    "Lipids",
-    "Blood pressure"
+    "lipid profile",
+    "HbA1c",
+    "blood pressure",
+    "DXA body composition",
+    "large-for-gestational-age status"
   ],
   "pathologies_diseases": [
-    "Gestational diabetes mellitus",
-    "Macrosomia",
-    "Neonatal hypoglycemia",
-    "Obesity",
-    "Metabolic disorders"
+    "gestational diabetes mellitus",
+    "macrosomia",
+    "neonatal hypoglycemia",
+    "metabolic disorders"
   ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Research cohort",
-  "population": "301 women in LiP study, 157 in LiPO study, 75 children with DXA assessments",
-  "exposure_domain": "Maternal fasting blood glucose",
+  "study_design": "Secondary analysis of a randomized controlled trial and 3-year follow-up cohort",
+  "data_source_type": "Clinical trial/primary research data",
+  "population": "301 obese pregnant women (pre-pregnancy BMI ≥30 kg/m2) and their offspring assessed at birth and 3 years",
+  "exposure_domain": "Maternal fasting blood glucose / gestational hyperglycemia",
   "limitations": [
-    "Small sample size for DXA assessments (n=75)",
-    "No significant associations found at 3 years for primary metabolic markers"
+    "Approximately 50% follow-up rate at 3 years",
+    "Missing DXA data due to scan quality issues",
+    "Small subgroup sample sizes limiting statistical power",
+    "Potential type II error for non-significant outcomes"
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "The data that support the findings of this study are available from C.A.V., but restrictions apply to their availability. The data were used under license for the current study and include unpublished results that are still being analyzed. Therefore, they are not publicly available. However, data may be obtained from the corresponding author on reasonable request and with permission from C.A.V.",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

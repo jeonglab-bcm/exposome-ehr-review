@@ -3,44 +3,46 @@
   "title": "A comprehensive atlas of the bonobo gut bacteriome and its associated host and exposome factors.",
   "year": "2025",
   "ehr_used": false,
-  "ehr_evidence": "The study uses fecal samples and host/exposome data from wild and zoo-housed bonobos, not EHR.",
-  "summary": "A comprehensive atlas of the gut bacteriome and associated host and exposome factors in 212 wild and zoo-housed bonobos (Pan paniscus).",
+  "ehr_evidence": "Data were collected using observations, historical records retrieved from the studbook or from the Zoological Information Management System (ZIMS), questionnaires and diet sheets filled in by zoo staff.",
+  "summary": "Comprehensive atlas of the bonobo gut bacteriome and its associated host and exposome factors, comparing wild and zoo-housed populations to identify drivers of microbiome composition and social transmission.",
   "key_findings": [
-    "Differences in gut bacterial diversity between wild and captive bonobos.",
-    "Social contact is a stronger predictor of bacteriome similarity than genetics or other exposome factors.",
-    "Maternal effects persist even in non-cohabiting mother-offspring dyads."
+    "Gut bacterial beta diversity was significantly associated with captive vs wild lifestyle (PERMANOVA: R2 = 28.7%, p < 0.001).",
+    "Wild bonobo alpha diversity was higher than zoo-housed bonobos (LMM: β = 0.935 ± 0.311 SE, p = 0.020).",
+    "Dietary diversity was negatively correlated with alpha diversity in wild bonobos (LMM: β = −0.353 ± 0.077 SE, padj < 0.001).",
+    "Antibiotic use was associated with lower similarity to the wild phenotype (posterior mean = −0.298, 95% CI: [−0.407, −0.189]).",
+    "Current cohabitation led to the highest gut bacteria sharing (36.5% Bray-Curtis similarity on average), followed by past cohabitation (30.1% similarity).",
+    "Grooming bond strength strongly correlated with gut bacteriome similarity (posterior mean = 1.055, 95% CI: [0.496, 1.609])."
   ],
   "captured_features": [
-    "644 gut bacteriome profiles",
-    "104 host and exposome factors",
-    "age",
-    "transit time",
-    "diet",
-    "early life adversity",
-    "medication use",
-    "social contact",
-    "maternal kinship"
+    "16S rRNA amplicon sequencing",
+    "dietary intake and diversity",
+    "antibiotic and medication use",
+    "grooming and proximity bond strength",
+    "cohabitation history and tenure",
+    "age class and sex",
+    "Bristol stool score",
+    "genetic relatedness and maternal kinship"
   ],
-  "pathologies_diseases": [
-    "gut inflammation",
-    "metabolic disorders"
-  ],
-  "study_design": "Comparative atlas",
-  "data_source_type": "Primary data collection",
-  "population": "212 wild and zoo-housed bonobos (Pan paniscus)",
-  "exposure_domain": "Exposome (diet, medication use, social contact, early life adversity, transit time)",
+  "pathologies_diseases": [],
+  "study_design": "Cross-sectional observational study with dyadic analyses comparing wild and zoo-housed bonobos",
+  "data_source_type": "Fecal microbiome sequencing and field/zoo observational data",
+  "population": "212 bonobos (Pan paniscus) from European zoos and two wild communities in the Democratic Republic of the Congo",
+  "exposure_domain": "Diet, antibiotic use, social contact, cohabitation, age, maternal effects, and environmental conditions",
   "limitations": [
-    "Non-human study"
+    "Assumes wild bonobo bacteriome represents a native baseline",
+    "Relies on 16S rRNA sequencing rather than metagenomics, limiting strain-level resolution",
+    "Dietary intake estimated from group distribution rather than individual consumption",
+    "Cross-sectional design limits causal inference for social transmission"
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
-    "https://doi.org/10.5281/zenodo.14911049",
-    "ENA: PRJEB86099",
     "https://doi.org/10.5281/zenodo.14913431",
+    "ENA: PRJEB86099",
+    "https://doi.org/10.5281/zenodo.14911049",
     "PRJEB86099"
   ],
   "data_availability_statement": "Sequencing data have been deposited at the European Nucleotide Archive under project ENA: PRJEB86099 and are publicly available as of the date of publication. Pseudonymized sample data have been deposited and are publicly available as of the data of publication at Zenodo: https://doi.org/10.5281/zenodo.14913431. All original code has been deposited and is publicly available as of the date of publication at Zenodo: https://doi.org/10.5281/zenodo.14911049.",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

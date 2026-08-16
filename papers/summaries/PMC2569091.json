@@ -3,34 +3,47 @@
   "title": "Association between traffic-related black carbon exposure and lung function among urban women.",
   "year": "2008",
   "ehr_used": false,
-  "ehr_evidence": "No EHR mentioned; study used a prospective cohort with voluntary participants and specific lung function testing.",
-  "summary": "A prospective urban community-based cohort study examining the relationship between long-term exposure to traffic-related black carbon (BC) and lung function among women of childbearing age in East Boston.",
+  "ehr_evidence": "Women were voluntary participants in the Maternal–Infant Smoking Study of East Boston, a prospective cohort originally designed to study the effects of pre- and postnatal tobacco smoke exposure on childhood lung growth and development and respiratory health.",
+  "summary": "Prospective cohort study examining the association between long-term traffic-related black carbon exposure and lung function among urban women in Boston.",
   "key_findings": [
-    "Not provided in the truncated text."
+    "BC per IQR increase was associated with a 1.1% decrease in FEV1 (95% CI, –2.5 to 0.3%), a 0.6% decrease in FVC (95% CI, –1.9 to 0.6%), and a 3.0% decrease in FEF25-75% (95% CI, –5.8 to –0.2%).",
+    "Former smokers experienced significant reductions in FEV1 (–4.4%), FVC (–3.1%), and FEF25-75% (–8.9%), while current smokers showed no significant effects.",
+    "Summer IQR increase in BC was associated with a –1.32% decrease in FEV1 (95% CI, –2.8 to 0.2%), –0.70% in FVC (95% CI, –2.1 to 0.2%), and –3.34% in FEF25-75% (95% CI, –6.3 to –0.4%)."
   ],
   "captured_features": [
-    "Black carbon (BC) levels",
-    "lung function test results",
-    "sociodemographics",
-    "asthma diagnosis",
-    "tobacco smoke exposure"
+    "spirometry measures (FEV1, FVC, FEF25-75%)",
+    "self-reported smoking status",
+    "race/ethnicity",
+    "education level",
+    "occupational dust exposure",
+    "cooking fuel type",
+    "length of residence",
+    "asthma/chronic bronchitis diagnosis",
+    "neighborhood-level SES markers",
+    "predicted residential black carbon exposure"
   ],
   "pathologies_diseases": [
-    "lung function",
     "asthma",
-    "bronchitis"
+    "chronic bronchitis",
+    "COPD",
+    "small-airway disease"
   ],
-  "study_design": "Prospective urban community-based cohort study",
-  "data_source_type": "Cohort study",
-  "population": "Women of childbearing age in East Boston, Massachusetts",
-  "exposure_domain": "Traffic-related black carbon (BC)",
+  "study_design": "prospective community-based cohort study",
+  "data_source_type": "prospective cohort",
+  "population": "272 urban women aged 18-42 years recruited from an East Boston community health center during pregnancy",
+  "exposure_domain": "traffic-related black carbon (BC) exposure",
   "limitations": [
-    "Text is truncated; study focuses on maternal lung function rather than pediatric outcomes."
+    "significant sample attrition over longitudinal follow-up",
+    "potential unmeasured or residual confounding, particularly regarding socioeconomic status",
+    "restricted variability in individual-level SES due to single-site recruitment",
+    "potential exposure misclassification from unmeasured work and other locations",
+    "use of predicted rather than observed exposure measurements introducing Berkson-type measurement error",
+    "lack of data on other spatially variable pollutants like NO2 and ozone"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

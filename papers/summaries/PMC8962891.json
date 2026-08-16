@@ -3,34 +3,38 @@
   "title": "Vaccine-Associated Measles Encephalitis in Immunocompromised Child, California, USA.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "None. The manuscript is a single case report and does not mention the use of Electronic Health Records (EHR) or linked health data.",
-  "summary": "A case report of a fatal vaccine-associated measles encephalitis in an immunocompromised child in California, USA, who developed the infection following MMR ProQuad vaccination and a stem cell transplant.",
+  "ehr_evidence": "Clinical case report of a single 1-year-old infant in California, USA, with laboratory confirmation via brain tissue sequencing and nasopharyngeal swab.",
+  "summary": "Case report of a fatal vaccine-associated measles encephalitis in an immunocompromised 1-year-old child in California, USA, confirmed by whole-genome RNA sequencing of brain tissue showing biased matrix-gene hypermutation.",
   "key_findings": [
-    "Confirmed measles virus (MV) infection in brain tissue via whole-genome RNA sequencing.",
-    "Observed biased matrix-gene hypermutation consistent with persistent measles virus central nervous system infection."
+    "38.0% (68/179) of uracil-containing codons in the matrix (M) gene contained >1 uracil-to-cytosine mutation at levels ≥5%.",
+    "Metagenomic RNA sequencing of brain tissue acquired 50.7 million reads, 190,303 of which aligned to Edmonston-Enders (Moraten) MV.",
+    "The patient experienced persistent dysautonomia, respiratory failure, and myoclonus, and died shortly after extubation."
   ],
   "captured_features": [
-    "Clinical symptoms",
-    "Laboratory results (PCR, RNA sequencing)",
-    "Imaging (MRI, PET)",
-    "Histology"
+    "nasopharyngeal swab RT-PCR",
+    "brain tissue FFPE sections",
+    "metagenomic RNA sequencing",
+    "MRI/PET imaging",
+    "histology"
   ],
   "pathologies_diseases": [
     "measles encephalitis",
     "acute myeloid leukemia"
   ],
-  "study_design": "Case report",
-  "data_source_type": "Clinical case report",
-  "population": "One immunocompromised child (infant)",
-  "exposure_domain": "Vaccine (MMR ProQuad)",
+  "study_design": "case report",
+  "data_source_type": "clinical case report / biospecimen analysis",
+  "population": "1-year-old infant, California, USA",
+  "exposure_domain": "MMR vaccine",
   "limitations": [
-    "Single case report",
-    "Small sample size"
+    "single case report",
+    "family declined autopsy",
+    "limited to one patient",
+    "observational nature"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

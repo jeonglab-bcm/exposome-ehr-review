@@ -1,0 +1,41 @@
+{
+  "pmcid": "PMC3469560",
+  "title": "2012_PMC3469560_Attitudes_of_the_general_public_and_general_practitioners_in_fiv",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "In December 2009/January 2010 and April 2010, 500 randomly selected members of the general public in Germany, France, the United States, China, and Mexico were surveyed by telephone about vaccination for seasonal and A/H1N1 pandemic influenza. Also, in April 2010, 100 randomly selected general practitioners were surveyed.",
+  "summary": "Cross-sectional survey of the general public and general practitioners in five countries examining attitudes, perceptions, and vaccination coverage rates for seasonal and A/H1N1 pandemic influenza during the 2009/2010 season.",
+  "key_findings": [
+    "Adult A/H1N1 pandemic influenza vaccination coverage in Dec 2009/Jan 2010 was 12% in France, 11% in Germany, 41% in the US, 13% in Mexico, and 12% in China.",
+    "Adult seasonal influenza vaccination coverage in Dec 2009/Jan 2010 was 29% in France, 25% in Germany, 46% in the US, 30% in Mexico, and 10% in China.",
+    "Inclusion of the A/H1N1 pandemic strain increased willingness to be vaccinated for seasonal influenza in the US, Mexico, and China but not in Germany or France.",
+    "The 2009/2010 A/H1N1 pandemic increased seasonal influenza vaccine uptake in Mexico but had little effect in other countries.",
+    "GP recommendation was a common reason for receiving the pandemic vaccine, while lack of risk perception and safety concerns were common reasons for not being vaccinated."
+  ],
+  "captured_features": [
+    "vaccination coverage rates",
+    "public and GP threat perceptions",
+    "vaccination decision drivers",
+    "future vaccination willingness"
+  ],
+  "pathologies_diseases": [
+    "influenza (seasonal and A/H1N1 pandemic)"
+  ],
+  "study_design": "cross-sectional telephone and internet surveys",
+  "data_source_type": "telephone and internet survey",
+  "population": "general public (adults and parents) and general practitioners in France, Germany, the US, Mexico, and China",
+  "exposure_domain": "influenza vaccination, pandemic/seasonal influenza exposure, media coverage, GP recommendations",
+  "limitations": [
+    "small sample size (500 public, 100 GPs per country)",
+    "low survey response rates leading to potential selection bias",
+    "geographic limitation in China and Mexico (only 3 largest cities surveyed)",
+    "self-reported vaccination status subject to recall and honesty bias",
+    "cross-sectional design limits causal inference"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "low",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

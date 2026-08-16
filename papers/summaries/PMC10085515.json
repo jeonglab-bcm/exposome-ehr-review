@@ -3,35 +3,37 @@
   "title": "Evaluating Demographic Data to Improve Confidence in Equity Analytics in a Children's Hospital.",
   "year": "2023",
   "ehr_used": true,
-  "ehr_evidence": "the electronic health record team standardized race and ethnicity fields... all fields are sourced from the same electronic health record field.",
-  "summary": "Evaluation of demographic data collection and infrastructure at Akron Children’s Hospital to improve health equity analytics.",
+  "ehr_evidence": "Before we assessed any analyses or revision of analyst procedures, it was necessary to understand how we collect the data in Epic (Epic Systems, Verona, WI), ACH’s electronic health record (EHR).",
+  "summary": "Evaluation of demographic data collection, standardization, and visualization across multiple reporting tools at a children's hospital to improve health equity analytics.",
   "key_findings": [
-    "Standardized race and ethnicity fields with federal definitions.",
-    "Identified inconsistencies in reporting tools.",
-    "Provided 7 recommendations for aligning health equity data analytics."
+    "Race 2 was missing in 95% of EDW universe encounters.",
+    "Payer data was missing in 28% of appointment universe encounters.",
+    "Including null values significantly altered the distribution of race categories across all reporting tools."
   ],
   "captured_features": [
-    "race",
-    "ethnicity",
-    "language",
-    "Child Opportunity Index 2.0",
-    "social determinants of health (SDOH)"
+    "Race 1",
+    "Race 2",
+    "Sex",
+    "Ethnicity",
+    "Language",
+    "Zip Code",
+    "Payer",
+    "Age"
   ],
-  "pathologies_diseases": [
-    "health equity",
-    "social determinants of health"
-  ],
-  "study_design": "Quality improvement (QI) project / data infrastructure evaluation",
+  "pathologies_diseases": [],
+  "study_design": "Cross-sectional data evaluation",
   "data_source_type": "EHR",
-  "population": "Children at Akron Children’s Hospital",
-  "exposure_domain": "Demographic data (race, ethnicity, language, SDOH)",
+  "population": "Pediatric patients and encounters at Akron Children's Hospital, Ohio (January 1, 2021 to June 30, 2021)",
+  "exposure_domain": "Demographic and health equity data",
   "limitations": [
-    "limitations to a seldom-populated Race 2 field"
+    "Tools and technical infrastructure may be unique to ACH",
+    "Limited to 7 prioritized demographic fields",
+    "Upstream data collection accuracy was not fully assessed"
   ],
-  "data_availability": "not-stated",
+  "data_availability": "in-house",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

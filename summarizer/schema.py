@@ -23,13 +23,28 @@ class ManuscriptChecklist(BaseModel):
     # ── existence-of-EHR checklist (the core question) ────────────────────
     ehr_used: bool = Field(
         ...,
-        description="True if the study actually uses EHR / EMR / claims / "
-                    "administrative health records as a data source.",
+        description="True only if the study analyses data that is ALL THREE of: "
+                    "(1) electronic/computerised, (2) individual-level (per-person "
+                    "records, not aggregate counts), and (3) routinely collected "
+                    "for clinical care, billing, or public-health administration "
+                    "— i.e. it already existed before this study. "
+                    "INCLUDES: EHR/EMR systems; insurance or administrative claims; "
+                    "hospital discharge/episode databases; national or regional "
+                    "health registries (birth, patient, immunization, cancer, "
+                    "prescription); record-linkage studies joining any of these. "
+                    "EXCLUDES: manual or paper chart review and abstraction done by "
+                    "study staff; research-cohort questionnaires, interviews, or "
+                    "clinical exams performed for this study; biospecimen assays; "
+                    "environmental monitoring; aggregate-only tallies with no "
+                    "individual records.",
     )
     ehr_evidence: str = Field(
         ...,
-        description="The sentence(s) from the manuscript that justify the "
-                    "ehr_used decision; 'n/a' if not EHR-based.",
+        description="Verbatim sentence(s) from the manuscript naming the data "
+                    "source that justify the ehr_used decision — quote the source, "
+                    "not a list of variables. If ehr_used is false, briefly state "
+                    "what the data source actually was (e.g. 'parent questionnaires "
+                    "and personal air monitoring'); 'n/a' only if undeterminable.",
     )
 
     # ── narrative summary + findings ───────────────────────────────────────

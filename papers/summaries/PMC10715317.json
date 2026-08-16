@@ -2,37 +2,49 @@
   "pmcid": "PMC10715317",
   "title": "Adverse event following immunization or vaccination in children in Minas Gerais: 2015 to 2020.",
   "year": "2023",
-  "ehr_used": false,
-  "ehr_evidence": "based on event notifications available in the National Immunization Program Information System (SI-PNI)",
-  "summary": "Descriptive study of immunization errors and adverse events in children aged 0-9 in Minas Gerais, Brazil, from 2015 to 2020.",
+  "ehr_used": true,
+  "ehr_evidence": "Data for this study were collected in January 2022, using ESAVI notifications resulting from immunization errors registered in SI-PNI.",
+  "summary": "Ecological descriptive study analyzing immunization errors and adverse events following immunization in children aged 0-9 years in Minas Gerais, Brazil, from 2015 to 2020 using national immunization registry data.",
   "key_findings": [
-    "3,259 immunization errors recorded (0.008% of total doses)",
-    "91.86% of errors did not result in adverse events",
-    "Most frequent error: application outside recommended age (29.12%)",
-    "Fever was the most common manifestation (40.85%)"
+    "3,259 immunization error events were recorded out of 39,903,277 doses administered (0.008%).",
+    "91.86% of immunization errors did not result in adverse events.",
+    "56.02% of errors occurred in children under 1 year of age.",
+    "The most frequent error diagnosis was application outside the recommended age (29.12%).",
+    "Fever was the most common manifestation (40.85%), with 71.91% of events being local or systemic.",
+    "Incidence rates were 7.50/100,000 doses for errors without adverse events and 0.66/100,000 for errors with adverse events.",
+    "2019 recorded the highest incidence rates for both error categories."
   ],
   "captured_features": [
-    "immunization errors",
-    "adverse events",
+    "immunization error type",
+    "gender",
     "age",
-    "manifestation type"
+    "immunobiological administered",
+    "health macro-region",
+    "route of administration",
+    "type of event",
+    "clinical manifestations",
+    "diagnosis",
+    "medical care",
+    "case evolution"
   ],
   "pathologies_diseases": [
-    "immunization errors",
-    "adverse events following immunization"
+    "adverse events following immunization",
+    "immunization errors"
   ],
-  "study_design": "ecological, descriptive study",
-  "data_source_type": "Public health surveillance system",
+  "study_design": "ecological descriptive study",
+  "data_source_type": "EHR",
   "population": "children aged 0-9 years in Minas Gerais, Brazil",
   "exposure_domain": "immunization errors",
   "limitations": [
-    "ecological design",
-    "descriptive study"
+    "underreporting of adverse events following immunization",
+    "inadequate completion of notification records",
+    "lack of simultaneous implementation of the notification system across all macro-regions",
+    "potential underreporting due to fear of professional reprimand"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

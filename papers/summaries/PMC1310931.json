@@ -3,36 +3,47 @@
   "title": "Birth outcomes and prenatal exposure to ozone, carbon monoxide, and particulate matter: results from the Children's Health Study.",
   "year": "2005",
   "ehr_used": true,
-  "ehr_evidence": "computerized linkage of participants with the California Department of Health Services Birth Statistical Master Files and Birth Cohort Files",
-  "summary": "Study investigating the effects of ambient air pollutants (O3, CO, PM10, NO2) on birth weight and intrauterine growth retardation (IUGR) in term infants born in southern California.",
+  "ehr_evidence": "Birth certificate information for California-born children who participated in the CHS was obtained by computerized linkage of participants with the California Department of Health Services Birth Statistical Master Files and Birth Cohort Files.",
+  "summary": "Population-based cohort study examining associations between prenatal ambient air pollution exposure and birth weight, low birth weight, and intrauterine growth retardation in term infants in California.",
   "key_findings": [
-    "Investigated associations between birth weight, LBW, and IUGR in term newborns and air pollution data."
+    "A 12-ppb increase in 24-hr ozone averaged over the entire pregnancy was associated with 47.2 g lower birth weight (95% CI, 27.4–67.0 g).",
+    "A 1.4-ppm difference in first-trimester carbon monoxide exposure was associated with 21.7 g lower birth weight (95% CI, 1.1–42.3 g) and a 20% increased risk of intrauterine growth retardation (95% CI, 1.0–1.4).",
+    "A 20-µg/m3 difference in PM10 during the third trimester was associated with a 21.7-g lower birth weight (95% CI, 1.1–42.2 g), but this association was reduced and not significant after adjusting for ozone.",
+    "A 17-ppb difference in third-trimester ozone exposure increased the risk of intrauterine growth retardation by 20% (95% CI, 1.0–1.3).",
+    "NO2 levels were not associated with birth weight in this study."
   ],
   "captured_features": [
     "birth weight",
     "gestational age",
-    "reproductive data",
-    "demographic information",
-    "respiratory health",
+    "maternal age at birth",
+    "maternal residence ZIP code",
+    "parity",
+    "maternal smoking during pregnancy",
     "socioeconomic status",
-    "air pollution levels"
+    "race/ethnicity",
+    "ambient air pollutant levels (O3, CO, PM10, NO2)",
+    "intrauterine growth retardation",
+    "low birth weight"
   ],
   "pathologies_diseases": [
-    "reduced birth weight",
-    "low birth weight (LBW)",
-    "intrauterine growth retardation (IUGR)"
+    "intrauterine growth retardation",
+    "low birth weight"
   ],
-  "study_design": "population-based cohort study",
-  "data_source_type": "linked health data",
-  "population": "children born in California between 1975 and 1987",
-  "exposure_domain": "air pollution",
+  "study_design": "prospective cohort study",
+  "data_source_type": "Birth certificates (linked registry), environmental monitoring, questionnaires",
+  "population": "3,901 term infants (gestational age 37-44 weeks) born in California between 1975 and 1987",
+  "exposure_domain": "Ambient air pollution (ozone, carbon monoxide, PM10, nitrogen dioxide)",
   "limitations": [
-    "trimester-specific findings from previous studies are inconsistent"
+    "Exposure assigned based on ZIP code centroid at childbirth, which may not reflect actual exposure during the entire pregnancy due to residential mobility.",
+    "Lack of data on maternal employment location and commuting patterns.",
+    "Potential misclassification of gestational age based on maternal recall of last menstrual period.",
+    "Low prevalence of low birth weight limits statistical power for categorical outcomes.",
+    "Correlation between pollutants and environmental factors (temperature, elevation) may affect multipollutant model estimates."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

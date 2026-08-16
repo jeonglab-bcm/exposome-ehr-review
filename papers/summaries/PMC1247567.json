@@ -3,36 +3,42 @@
   "title": "Estimated risk for altered fetal growth resulting from exposure to fine particles during pregnancy: an epidemiologic prospective cohort study in Poland.",
   "year": "2004",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A prospective cohort study in Poland to estimate exposure to fine particulate matter (PM 2.5) in pregnant women and assess its effects on birth outcomes such as weight, length, and head circumference.",
-  "key_findings": [],
+  "ehr_evidence": "The study relied on personal air monitoring, questionnaires, and reviewed maternal and child hospital records.",
+  "summary": "Prospective cohort study in Poland assessing the association between personal prenatal exposure to fine particulate matter (PM2.5) and environmental tobacco smoke (ETS) and fetal growth outcomes.",
+  "key_findings": [
+    "Higher personal PM2.5 exposure was associated with significantly lower birth weight (β = –200.8, p = 0.03), birth length (β = –1.44, p = 0.01), and head circumference (β = –0.73, p = 0.02).",
+    "An increase in PM2.5 exposure from 10 to 50 µg/m3 was predicted to reduce birth weight by 140.3 g, birth length by 1.0 cm, and head circumference by 0.5 cm.",
+    "No significant association was found between PM2.5 or ETS and gestational age.",
+    "The effect of ETS on birth outcomes was insignificant in all regression models."
+  ],
   "captured_features": [
-    "PM 2.5 concentrations (indoor and outdoor)",
-    "maternal anthropometric characteristics",
+    "personal PM2.5 levels via air monitoring",
+    "self-reported ETS exposure",
+    "birth weight, length, and head circumference",
+    "gestational age",
+    "maternal height and prepregnancy weight",
     "parity",
     "sex of child",
-    "gestational age",
-    "birth season"
+    "season of birth"
   ],
   "pathologies_diseases": [
-    "low birth weight",
-    "premature births",
-    "intrauterine growth retardation",
-    "birth weight",
-    "birth length",
-    "head circumference"
+    "adverse birth outcomes",
+    "fetal growth restriction"
   ],
   "study_design": "prospective cohort study",
-  "data_source_type": "prospective cohort",
-  "population": "362 pregnant women in Poland, ages 18-35",
-  "exposure_domain": "air pollution (PM 2.5)",
+  "data_source_type": "prospective cohort with personal air monitoring and chart review",
+  "population": "362 pregnant women aged 18-35 years in Poland, nonsmoking, singleton pregnancies",
+  "exposure_domain": "fine particulate matter (PM2.5), environmental tobacco smoke",
   "limitations": [
-    "Results not provided in the manuscript snippet"
+    "Personal exposure monitoring was limited to a short 48-hour period during the second trimester.",
+    "ETS exposure was based on self-reported questionnaires, which may be subject to recall or reporting bias.",
+    "PM2.5 may act as a proxy for a complex mixture of other toxic environmental agents.",
+    "Ambient monitor correlations may not perfectly capture individual exposure variability."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

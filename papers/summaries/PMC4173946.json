@@ -3,34 +3,37 @@
   "title": "An unusual case of vaccine-associated paralytic poliomyelitis.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A case report of a child who developed vaccine-associated paralytic poliomyelitis after receiving oral polio vaccine (OPV) in China.",
+  "ehr_evidence": "Data were derived from clinical case presentation, MRI findings, cerebrospinal fluid analysis, stool cultures, and immunization records from a public health unit and hospital.",
+  "summary": "Case report describing an immunocompetent child who developed vaccine-associated paralytic poliomyelitis after receiving oral polio vaccine in China, despite prior inactivated polio vaccine doses.",
   "key_findings": [
-    "Child developed flaccid paralysis after OPV",
-    "MRI and EMG confirmed poliomyelitis",
-    "Stool culture showed poliovirus type 3"
+    "Stool culture and sequencing identified Sabin poliovirus type 3 strain with 99.7% homology to the parent OPV strain.",
+    "MRI revealed bilateral symmetric increased signal within the anterior horns of the spinal cord gray matter.",
+    "Polio antibody titres were <1:8 for type 1, 1:32 for type 2, and 1:128 for type 3."
   ],
   "captured_features": [
-    "clinical symptoms",
-    "MRI findings",
-    "EMG results",
-    "stool culture"
+    "MRI spinal cord imaging",
+    "cerebrospinal fluid white blood cell count and protein",
+    "stool culture and viral sequencing",
+    "polio antibody titres",
+    "immunization history"
   ],
   "pathologies_diseases": [
     "vaccine-associated paralytic poliomyelitis",
-    "Guillain-Barré syndrome"
+    "poliomyelitis"
   ],
   "study_design": "case report",
-  "data_source_type": "clinical records",
-  "population": "one child (almost one year old)",
-  "exposure_domain": "vaccine (oral polio vaccine)",
+  "data_source_type": "clinical case report",
+  "population": "single immunocompetent child, almost one year of age",
+  "exposure_domain": "oral polio vaccine (OPV)",
   "limitations": [
-    "single case report"
+    "single case report limits generalizability",
+    "no CSF viral culture or PCR conducted initially",
+    "potential for recall bias in immunization history"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -4,29 +4,35 @@
   "year": "2008",
   "ehr_used": true,
   "ehr_evidence": "We obtained data on Apgar scores by linking cohort members to the National Hospital Discharge Register (Copenhagen, Denmark) through use of the unique personal identification number assigned to all Danish residents at birth or immigration.",
-  "summary": "A study investigating the association between prenatal exposure to perfluorooctanoate (PFOA) and perfluorooctanesulfonate (PFOS) and neurodevelopmental/musculoskeletal development (Apgar scores) in infants using the Danish National Birth Cohort.",
+  "summary": "Prospective birth cohort study investigating associations between maternal plasma PFOA/PFOS levels in early pregnancy and infant motor/mental developmental milestones at 6 and 18 months.",
   "key_findings": [
-    "The study examined the association between prenatal PFOA/PFOS exposure and Apgar scores in infants."
+    "No significant association was found between PFC levels and Apgar score (OR for Apgar < 10: 1.20 [95% CI, 0.67–2.14] for PFOS and 1.14 [95% CI, 0.57–2.25] for PFOA).",
+    "Children whose mothers had higher PFOS levels were more likely to start sitting without support at a later age (adjusted HR: 0.85 [95% CI, 0.72–0.99] for Q3 and 0.86 [95% CI, 0.73–1.01] for Q4 vs Q1; p for trend = 0.041).",
+    "Women with higher PFOS levels were more likely to have babies who did not use word-like sounds (OR for Q4 vs Q1 = 2.93; 95% CI, 1.00–8.56; p for trend = 0.04).",
+    "No significant associations were observed between PFOA or PFOS levels and the age when children could walk, or with most other developmental milestones at 6 or 18 months."
   ],
   "captured_features": [
-    "Maternal blood PFOA and PFOS concentrations",
-    "Apgar scores (heart rate, respiratory effort, reflex irritability, muscle tone, and skin color)"
+    "maternal plasma PFOA and PFOS concentrations",
+    "Apgar scores",
+    "developmental milestone achievement (sitting, walking, language, fine motor, attention, cognition)",
+    "maternal and infant demographic and lifestyle covariates"
   ],
-  "pathologies_diseases": [
-    "neurodevelopmental development",
-    "musculoskeletal development"
-  ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Linked health data",
-  "population": "Pregnant women and infants in the Danish National Birth Cohort",
-  "exposure_domain": "Perfluorinated compounds (PFOA, PFOS)",
+  "pathologies_diseases": [],
+  "study_design": "prospective birth cohort study",
+  "data_source_type": "Birth cohort with national registry linkage",
+  "population": "1,400 pregnant women and their infants from the Danish National Birth Cohort",
+  "exposure_domain": "Prenatal PFOA and PFOS exposure",
   "limitations": [
-    "Not specified in the provided text snippet"
+    "potential nondifferential misclassification of exposure and outcomes",
+    "residual confounding by childhood exposure variables",
+    "multi-collinearity between PFOA and PFOS",
+    "strong confounding by parity",
+    "lack of highly sensitive developmental measures to rule out subtle effects"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

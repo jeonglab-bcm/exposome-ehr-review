@@ -2,39 +2,44 @@
   "pmcid": "PMC7082382",
   "title": "BCG Moreau Vaccine Safety Profile and NK Cells-Double Protection Against Disseminated BCG Infection in Retrospective Study of BCG Vaccination in 52 Polish Children with Severe Combined Immunodeficiency.",
   "year": "2020",
-  "ehr_used": true,
-  "ehr_evidence": "hospitalized in Children’s Memorial Health Institute, Warsaw (CMHI), in the years 1980–2015",
-  "summary": "A retrospective study evaluating the safety profile and reactogenicity of the BCG Moreau vaccine in Polish children with severe combined immunodeficiency (SCID), comparing them to an international cohort.",
+  "ehr_used": false,
+  "ehr_evidence": "Retrospective hospital clinical records from the Children’s Memorial Health Institute (CMHI), Warsaw. 'The profiles of 52 SCID patients vaccinated at birth with BCG, hospitalized in Children’s Memorial Health Institute, Warsaw (CMHI), in the years 1980–2015 were compared with those of 349 BCG-vaccinated SCID patients from other countries analyzed by Beatriz E. Marciano et al. in a retrospective study.'",
+  "summary": "Retrospective study evaluating the safety profile and clinical outcomes of the BCG Moreau vaccine in 52 Polish children with severe combined immunodeficiency (SCID) hospitalized at the Children’s Memorial Health Institute in Warsaw between 1980 and 2015, compared with an international cohort.",
   "key_findings": [
-    "Significantly lower rate of disseminated BCG infections (19% vs 34% in the Marciano study).",
-    "No deaths in patients treated with anti-TB drugs except one with low NK cell counts.",
-    "Significantly higher number of hematopoietic stem cell transplantations (HSCT) in the CMHI study."
+    "Disseminated BCG infection occurred in 10 out of 52 SCID patients (19%), significantly lower than the 34% rate in the external Marciano cohort (p = 0.0028).",
+    "Localized BCG complications were observed in 12 patients (24%), not significantly different from the external cohort's 17% (p = 0.2417).",
+    "Disseminated BCG complications were exclusively found in SCID patients with low NK cell counts (p < 0.000001), while T cell counts showed no significant impact (p = 0.0915).",
+    "Hematopoietic stem cell transplantation (HSCT) was performed in 43 patients (83%), significantly higher than the 54% rate in the external cohort (p = 0.0001).",
+    "Mortality from BCG complications was 5% (3 deaths) in the CMHI cohort versus 13% (46 deaths) in the external cohort (p = 0.1724)."
   ],
   "captured_features": [
-    "NK cell counts",
-    "HSCT status",
-    "Anti-TB treatment",
-    "disseminated BCG infection status",
-    "vaccination history"
+    "clinical symptoms and infection localization",
+    "microbiological and histopathological findings",
+    "immunological cell counts (T, B, and NK cells)",
+    "genetic mutation status (e.g., IL2RG, JAK3, RAG1/2)",
+    "treatment records (anti-TB therapy, HSCT)",
+    "vaccination details and substrain"
   ],
   "pathologies_diseases": [
     "severe combined immunodeficiency (SCID)",
     "disseminated BCG infection",
-    "osteitis",
-    "lymphadenitis"
+    "localized BCG infection",
+    "primary immunodeficiency diseases (PID)"
   ],
-  "study_design": "retrospective study",
-  "data_source_type": "EHR",
-  "population": "52 Polish children with severe combined immunodeficiency (SCID)",
-  "exposure_domain": "vaccination (BCG Moreau vaccine)",
+  "study_design": "retrospective comparative cohort study",
+  "data_source_type": "Hospital clinical records",
+  "population": "52 Polish children with SCID, hospitalized at Children’s Memorial Health Institute, Warsaw (1980–2015)",
+  "exposure_domain": "BCG Moreau vaccine",
   "limitations": [
-    "Small sample size",
-    "Retrospective study design"
+    "retrospective single-center design",
+    "small sample size (n=52)",
+    "comparison with an external historical cohort rather than an internal control group",
+    "long study period (1980–2015) with potential variations in diagnostic and treatment practices over time"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

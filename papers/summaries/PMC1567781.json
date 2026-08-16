@@ -3,44 +3,43 @@
   "title": "Antecedents and correlates of improved cognitive performance in children exposed in utero to low levels of lead.",
   "year": "1990",
   "ehr_used": false,
-  "ehr_evidence": "None; the study used clinical measurements, blood samples, and standardized cognitive scales from a prospective cohort.",
-  "summary": "A prospective study investigating the relationship between prenatal lead exposure and cognitive development in children from 24 to 57 months of age, identifying factors that facilitate cognitive recovery or compensation.",
+  "ehr_evidence": "Capillary blood samples were collected when the children were 6, 12, 18, and 24 months old and venous samples when they were 57 months old. Data were collected prospectively for this research study, not from routine clinical records.",
+  "summary": "Prospective longitudinal cohort study examining cognitive recovery between 24 and 57 months in children with varying prenatal and postnatal lead exposures, finding that higher prenatal exposure predicts greater relative improvement, moderated by postnatal lead levels and sociodemographic factors.",
   "key_findings": [
-    "High prenatal lead exposure (10-254 µg/dL) is associated with significantly lower cognitive scores at 2 years of age.",
-    "Children appear to recover from or compensate for early lead insults by age 5.",
-    "Recovery is associated with lower blood lead levels at 57 months, higher socioeconomic status, higher HOME scores, higher maternal IQ, and female gender.",
-    "Risk of persistent cognitive deficit is increased in children with high prenatal exposure and either high postnatal exposure or less optimal sociodemographic characteristics."
+    "Higher prenatal lead exposure (cord blood) was associated with greater relative cognitive improvement between 24 and 57 months (beta=0.03, p=0.016 adjusted).",
+    "Postnatal blood lead levels at 18, 24, and 57 months were inversely associated with cognitive improvement (e.g., 24-month level: beta=-0.22, p=0.005 adjusted).",
+    "Among children with high prenatal exposure, girls showed significantly greater cognitive improvement than boys (difference of 7.7 points, p=0.017).",
+    "Higher HOME scores, social class, maternal IQ, and older maternal age were associated with greater cognitive improvement.",
+    "No significant association was found between cognitive improvement and ethnicity (p=0.57 adjusted)."
   ],
   "captured_features": [
     "cord blood lead levels",
-    "capillary blood lead levels",
-    "venous blood lead levels",
-    "Mental Development Index (MDI) scores",
-    "General Cognitive Index (GCI) scores",
-    "demographics",
-    "reproductive history",
-    "HOME scores",
+    "postnatal blood lead levels (6, 12, 18, 24, 57 months)",
+    "Bayley MDI at 24 months",
+    "McCarthy GCI at 57 months",
+    "HOME score",
+    "social class",
     "maternal IQ",
+    "maternal age",
     "gender",
-    "ethnicity",
-    "maternal age"
+    "ethnicity"
   ],
-  "pathologies_diseases": [
-    "cognitive deficit",
-    "lead exposure"
-  ],
-  "study_design": "prospective cohort study",
-  "data_source_type": "clinical cohort",
-  "population": "170 children (median age 57.8 months)",
-  "exposure_domain": "lead exposure",
+  "pathologies_diseases": [],
+  "study_design": "prospective longitudinal cohort study",
+  "data_source_type": "prospective research cohort with direct data collection",
+  "population": "children followed from birth, assessed at 24 and 57 months (n=170 at 57 months)",
+  "exposure_domain": "lead exposure (prenatal and postnatal)",
   "limitations": [
-    "small sample size",
-    "specific to a single clinical cohort"
+    "restricted range of prenatal exposures in low/medium groups",
+    "potential regression to the mean",
+    "observational design with residual confounding",
+    "relatively advantaged cohort limits generalizability",
+    "cognitive tests measure different skills at different ages"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

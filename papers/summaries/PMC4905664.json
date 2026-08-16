@@ -3,36 +3,40 @@
   "title": "Is There a Causal Relation between Maternal Acetaminophen Administration and ADHD?",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "None. The study uses a murine model (CD1 mice).",
-  "summary": "An experimental study using a murine model to investigate whether prenatal exposure to acetaminophen (APAP) causes hyperkinetic dysfunction (ADHD-like behavior) in offspring.",
+  "ehr_evidence": "Pregnant CD1 mice (N = 8/group) were allocated to receive by gavage either APAP (150 mg/kg/day, equivalent to the FDA-approved maximum human clinical dose), or 0.5% carboxymethylcellulose (control group), starting on embryonic day 7 until delivery.",
+  "summary": "Preclinical experimental study investigating whether prenatal acetaminophen exposure causes hyperkinetic dysfunction/ADHD-like behavior in mouse offspring using behavioral, MRI, and histological assessments.",
   "key_findings": [
-    "No significant differences in locomotor activity between APAP-exposed and control mouse offspring.",
-    "No differences in volumes of 29 brain areas of interest on MRI.",
-    "No differences in neuronal quantifications between groups."
+    "Maternal serum APAP concentration peaked at 30 min after gavage, reaching a mean of 117 μg/ml.",
+    "No significant differences in maternal serum ALT concentrations between groups (P = 0.3 and P = 0.5).",
+    "No significant differences in locomotor activity parameters between groups (all P > 0.008).",
+    "No significant differences in volumes of 29 brain areas on MRI or neuronal quantification between groups."
   ],
   "captured_features": [
-    "Maternal serum APAP concentration",
-    "Serum ALT concentrations",
-    "Open field locomotor activity (LMA)",
-    "Brain volumes (MRI)",
-    "Neuronal quantification (Nissl stain)"
+    "serum APAP concentration",
+    "serum ALT concentration",
+    "locomotor activity parameters",
+    "brain volumes (29 areas via MRI)",
+    "neuronal density (Nissl stain)"
   ],
   "pathologies_diseases": [
     "ADHD",
     "hyperkinetic dysfunction"
   ],
-  "study_design": "Experimental murine model",
-  "data_source_type": "Animal model",
-  "population": "Pregnant CD1 mice and offspring",
-  "exposure_domain": "Maternal acetaminophen (APAP) administration",
+  "study_design": "experimental murine model study",
+  "data_source_type": "animal model",
+  "population": "pregnant CD1 mice and postnatal day 30 offspring",
+  "exposure_domain": "maternal acetaminophen administration",
   "limitations": [
-    "Lack of accurate assessment of ADHD in murine models",
-    "Results should be taken with caution when compared to clinical data"
+    "lack of established animal model for ADHD",
+    "oral gavage may act as a stressor",
+    "absence of 24hr home cage activity monitoring",
+    "narrow focus on hyperkinetic behavior only",
+    "intervention limited to pregnancy without lactation period"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
   "data_availability_statement": "All relevant data are within the paper and its Supporting Information files.",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

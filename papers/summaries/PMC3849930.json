@@ -3,40 +3,47 @@
   "title": "Exposure to the Chinese famine in early life and the risk of anaemia in adulthood.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "The data are based on a subsample from Jiangsu province... from the 2002 Chinese National Nutrition and Health Survey.",
-  "summary": "This study investigated the association between early life exposure to the Chinese famine (1959–1961) and the risk of anaemia in adulthood using data from a national nutrition and health survey.",
+  "ehr_evidence": "We used the data of 2007 adults born between 1954 and 1964 in Jiangsu province from the 2002 Chinese National Nutrition and Health Survey.",
+  "summary": "Cross-sectional analysis examining the association between early life exposure to the Chinese famine (1959–1961) and the risk of anaemia in adulthood.",
   "key_findings": [
-    "Fetal exposure to the Chinese famine was associated with a 37% increased risk of anaemia in adulthood (RR 1.37).",
-    "The association was significantly stronger among men (RR 1.87), overweight or obese individuals (RR 1.75), and those with lower educational levels (RR 2.07)."
+    "Fetal exposure to famine was associated with a 37% increased risk of anaemia compared to non-exposed (RR 1.37, 95% CI 1.09-1.71).",
+    "The association was stronger in men (RR 1.87, 95% CI 1.21-2.87), overweight/obese individuals (RR 1.75, 95% CI 1.20-2.56), and those with low education (RR 2.07, 95% CI 1.37-3.12).",
+    "No significant association between famine exposure and anaemia was found among urban residents.",
+    "Total iron intake did not differ significantly across famine exposure groups."
   ],
   "captured_features": [
-    "haemoglobin concentration",
-    "famine exposure timing (fetal, early-childhood, mid-childhood, late-childhood)",
+    "Haemoglobin concentration",
+    "BMI",
+    "blood pressure",
+    "smoking status",
+    "alcohol consumption",
+    "education level",
+    "occupation",
+    "residence (urban/rural)",
     "income",
-    "education",
-    "place of residence",
-    "smoking",
-    "alcohol drinking",
-    "job",
-    "hypertension",
-    "BMI"
+    "dietary iron intake",
+    "serum ferritin"
   ],
   "pathologies_diseases": [
     "anaemia",
-    "hypertension"
+    "hypertension",
+    "overweight/obesity"
   ],
-  "study_design": "Retrospective survey analysis",
-  "data_source_type": "National Survey",
+  "study_design": "cross-sectional survey study",
+  "data_source_type": "national health survey",
   "population": "2007 adults born between 1954 and 1964 in Jiangsu province, China",
-  "exposure_domain": "Nutritional exposure (famine)",
+  "exposure_domain": "early life famine exposure (Chinese famine 1959–1961)",
   "limitations": [
-    "Cross-sectional survey design",
-    "Potential recall bias regarding famine exposure"
+    "Lack of iron metabolism biomarkers and menstruation status data",
+    "Unassessed regional variation in famine severity",
+    "Small sample size in fetal-exposed group limiting subgroup power",
+    "Potential selection bias from selective mortality or reduced fertility",
+    "Absence of inflammation biomarkers to explore anaemia aetiology"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

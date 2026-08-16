@@ -3,35 +3,37 @@
   "title": "Satisfactory safety and immunogenicity of MSP3 malaria vaccine candidate in Tanzanian children aged 12-24 months.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A phase Ib dose-escalating clinical trial assessing the safety and immunogenicity of the Merozoite Surface Protein-3 (MSP3) malaria vaccine candidate in children aged 12–24 months in Tanzania.",
+  "ehr_evidence": "Participant information was captured on paper case report forms (CRFs), which were double-entered into a Microsoft Access data base.",
+  "summary": "Phase Ib dose-escalation trial evaluating the safety and immunogenicity of the MSP3 malaria vaccine candidate in Tanzanian children aged 12–24 months.",
   "key_findings": [
-    "The MSP3 vaccine was safe and well-tolerated with no serious adverse events related to the vaccine.",
-    "Vaccination induced strong cytophilic IgG responses (subclasses IgG1 and IgG3).",
-    "Vaccination induced seroconversion in all vaccinees.",
-    "Titers reached were similar to those from African adults having reached a state of premunition."
+    "Grade 3 adverse events were infrequent, with only five detected throughout the study, all transient and resolved without sequelae.",
+    "Both 15 μg and 30 μg MSP3 dose regimens elicited strong cytophilic IgG1 and IgG3 antibody responses.",
+    "At day 84, 100% (15/15) and 83.3% (10/12) of children in the 15 μg and 30 μg MSP3 groups, respectively, showed an 8-fold increase in IgG1 antibodies.",
+    "All infants in the comparative analysis seroconverted with a mean titre of 10.68 ± 4.64 AU."
   ],
   "captured_features": [
-    "Safety and reactogenicity data",
-    "Cytophilic IgG responses (IgG1, IgG3)",
-    "Seroconversion status"
+    "solicited local and systemic adverse events",
+    "haematological parameters (Hb, WBC, platelets)",
+    "biochemical parameters (ALT, creatinine, bilirubin)",
+    "anti-MSP3 antibody titres (IgG, IgG1, IgG3, IgG2, IgG4, IgM)"
   ],
   "pathologies_diseases": [
-    "malaria",
-    "Plasmodium falciparum"
+    "malaria (Plasmodium falciparum)"
   ],
-  "study_design": "double-blind, randomized, controlled, dose escalation phase Ib trial",
-  "data_source_type": "Clinical trial",
+  "study_design": "randomized, double-blind, dose-escalation phase Ib clinical trial",
+  "data_source_type": "Clinical trial data",
   "population": "children aged 12–24 months in Korogwe, Tanzania",
-  "exposure_domain": "vaccine (MSP3)",
+  "exposure_domain": "malaria vaccine (MSP3 antigen)",
   "limitations": [
-    "Small sample size (n=45)",
-    "Phase Ib study (not an efficacy study)"
+    "small sample size (N=45)",
+    "subcutaneous administration route for MSP3 versus intramuscular for control may confound reactogenicity comparison",
+    "short follow-up period (84 days)",
+    "no efficacy or protective outcome data collected"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

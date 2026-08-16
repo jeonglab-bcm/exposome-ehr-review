@@ -3,30 +3,41 @@
   "title": "Prenatal Exposure to Phthalates and Anogenital Distance in Male Infants from a Low-Exposed Danish Cohort (2010-2012).",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "The study is a prospective cohort study (Odense Child Cohort) and does not mention using EHR data.",
-  "summary": "Prospective study investigating the association between maternal urinary phthalate metabolite concentrations during pregnancy and anogenital distance (AGD) and penile width in male offspring in a Danish cohort.",
+  "ehr_evidence": "The study was based on data from the Odense Child Cohort. Fasting spot urine samples were collected at approximately GA 28 weeks before 0930 hours and stored in freezers at the Odense Patient data Explorative Network (OPEN).",
+  "summary": "Prospective cohort study investigating the association between maternal urinary phthalate metabolite concentrations during pregnancy and anogenital distance (AGD) and penile width in male offspring at 3 months of age.",
   "key_findings": [
-    "Not provided in the snippet."
+    "No dose-dependent association was found between any prenatal phthalate metabolite and AGD or penile width (p > 0.05).",
+    "Mean AGDas was lower for boys in the second, third, and fourth quartiles of MEP compared with the first quartile [–0.64 mm (95% CI: –2.52, 1.23), –1.68 mm (95% CI: –3.56, 0.20), and –1.37 mm (95% CI: –3.27, 0.54)], but differences were not statistically significant.",
+    "Maternal ∑DiNPm and ∑DEHPm levels in higher quartiles were associated with shorter AGD compared to the first quartile, but associations were not statistically significant (p > 0.05)."
   ],
   "captured_features": [
-    "maternal urinary phthalate metabolites",
-    "male offspring anogenital distance (AGD)",
-    "penile width"
+    "maternal urinary phthalate metabolite concentrations",
+    "anogenital distance (AGDas, AGDap)",
+    "penile width",
+    "birth weight",
+    "gestational age",
+    "maternal age",
+    "BMI",
+    "parity",
+    "smoking status",
+    "urinary osmolality"
   ],
-  "pathologies_diseases": [
-    "anogenital distance (AGD)"
-  ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Cohort study",
-  "population": "273 mother-son pairs in the Odense Child Cohort study, Denmark",
-  "exposure_domain": "phthalates",
+  "pathologies_diseases": [],
+  "study_design": "prospective cohort study",
+  "data_source_type": "cohort biospecimen collection and clinical examination",
+  "population": "pregnant women and male infants in Odense, Denmark (2010–2012)",
+  "exposure_domain": "prenatal phthalate exposure (maternal urinary metabolites)",
   "limitations": [
-    "Text is incomplete; results section is missing."
+    "single spot urine sample may not reflect fetal exposure in sensitive developmental windows",
+    "potential residual confounding by co-exposure to other environmental chemicals, lifestyle, or health behavior",
+    "selection bias with only 42% participation and better-educated participants",
+    "temporal and seasonal variation in phthalate levels",
+    "fasting state may affect urine concentration"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

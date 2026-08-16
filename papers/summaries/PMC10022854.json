@@ -3,36 +3,54 @@
   "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None; the study used a neurocognitive test battery and parent-report behavioral questionnaires.",
-  "summary": "A multicenter cohort study evaluating the long-term cognitive and behavioral outcomes in 9-year-old children prenatally exposed to maternal cancer and its treatment (chemotherapy, surgery, radiotherapy).",
+  "ehr_evidence": "The INCIP Child Follow-up study evaluates the general health and neurocognitive development after prenatal exposure to maternal cancer (treatment) using age-adapted standardized test batteries.",
+  "summary": "Long-term follow-up study assessing cognitive and behavioral outcomes at age 9 in children prenatally exposed to maternal cancer and its treatment.",
   "key_findings": [
-    "Mean cognitive and behavioral outcomes were within normal ranges.",
-    "Gestational age at birth showed a positive association with Full Scale Intelligence Quotient (FSIQ).",
-    "No difference in FSIQ was found between treatment types or chemotherapeutic agents.",
-    "Associations were observed with preterm birth, maternal death, and maternal education."
+    "Full Scale Intelligence Quotient (FSIQ) increased by 1.6 points (95% CI, 0.7 to 2.5; P < .001) for each week increase in gestational age.",
+    "No difference in FSIQ was found between treatment types (F[4,140] = 0.45, P = .776).",
+    "No associations were found between FSIQ and chemotherapeutic agent, exposure level, or timing during pregnancy.",
+    "FSIQ was lower in children with a deceased mother before age 2 years (93.13 ± 12.65) than in children with a surviving mother (104.08 ± 14.88), but this association disappeared after adjusting for gestational age (P > .3).",
+    "Maternal education level remained a significant predictor of FSIQ (P = .005).",
+    "Four children were diagnosed with attention-deficit hyperactivity disorder and one with autism spectrum disorder.",
+    "Thirty-one children (24.4%) received remedial care."
   ],
   "captured_features": [
     "Full Scale Intelligence Quotient (FSIQ)",
-    "neurocognitive test scores",
+    "verbal intelligence",
+    "performance intelligence",
+    "processing speed",
+    "attention and memory scores",
     "behavioral questionnaire results",
-    "gestational age",
-    "treatment type (chemotherapy, surgery, radiotherapy, trastuzumab)"
+    "gestational age at birth",
+    "maternal education level",
+    "maternal death/bereavement status",
+    "chemotherapy exposure and timing",
+    "treatment type",
+    "cancer stage",
+    "ADHD diagnosis",
+    "autism spectrum disorder diagnosis",
+    "remedial care need"
   ],
   "pathologies_diseases": [
     "maternal cancer",
-    "preterm birth"
+    "attention-deficit hyperactivity disorder",
+    "autism spectrum disorder"
   ],
-  "study_design": "multicenter cohort study (cross-sectional analysis)",
-  "data_source_type": "Prospective cohort study",
-  "population": "151 children (mean age 9.3 years) prenatally exposed to maternal cancer",
-  "exposure_domain": "maternal cancer and treatment during pregnancy",
+  "study_design": "Prospective multicenter cohort study (cross-sectional analysis at age 9)",
+  "data_source_type": "Clinical assessment and parent-reported questionnaires",
+  "population": "151 children (mean age 9.3 years) born to mothers diagnosed with cancer during pregnancy",
+  "exposure_domain": "Prenatal exposure to maternal cancer and oncologic treatment (chemotherapy, surgery, radiotherapy)",
   "limitations": [
-    "Cross-sectional analysis at a single time point (age 9)"
+    "Cross-sectional analysis at a single timepoint (age 9)",
+    "Small sample size, particularly in the chemotherapy-exposed subgroup",
+    "Multicollinearity between prematurity and maternal bereavement effects",
+    "Lack of comparison with general population rates for remedial support",
+    "Potential underpowered analysis for detecting chemotherapy effects on cognition"
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Multiple linear regression (Data Supplement) with GA, death of mother, and parental (maternal and paternal) education level as explanatory variables shows that GA (P = .006) and maternal education level (P = .005) remained to explain FSIQ. An overview of the reported medical problems is enlisted in the Data Supplement.",
-  "confidence": "high",
+  "data_availability_statement": "",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

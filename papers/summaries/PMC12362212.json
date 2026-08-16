@@ -3,37 +3,42 @@
   "title": "Early Life Exposure to Manure-Fertilized Soil Shapes the Gut Antibiotic Resistome.",
   "year": "2025",
   "ehr_used": false,
-  "ehr_evidence": "None. This is an experimental animal study.",
-  "summary": "An experimental study investigating how early life exposure to manure-fertilized soil (red and black soils) shapes the gut antibiotic resistome in mice.",
+  "ehr_evidence": "Soil samples were collected from two distinct locations: red soil (RS, classified as Ultisols) from Xinhui District, Jiangmen City, Guangdong Province and black soil (BS, classified as Mollisols) from Hailun City, Suihua, Heilongjiang Province.",
+  "summary": "Experimental study investigating how early life exposure to manure-fertilized soil alters the gut antibiotic resistome and microbiome composition in mice.",
   "key_findings": [
-    "Manure fertilization significantly enriched tetracycline-resistant ARGs in both red and black soils.",
-    "Mice in manure-fertilized environments harbored markedly higher abundances of ARGs, particularly the tet(Q) gene.",
-    "Muribaculaceae and Bacteroidaceae were identified as key hosts of tet(Q).",
-    "Evidence suggests horizontal gene transfer between Muribaculaceae and Bacteroidaceae."
+    "Manured red soil ARG abundance was 0.63 ± 0.03 copies/cell, a 10.5% increase over unfertilized soil (0.57 ± 0.005 copies/cell, P < 0.05).",
+    "Manured black soil ARG abundance was 0.45 ± 0.02 copies/cell, a 12.5% increase over unfertilized soil (0.40 ± 0.02 copies/cell, P < 0.05).",
+    "Mouse gut ARG abundance in the manured red soil group was 3.34 ± 0.34 copies/cell, a 48.4% increase over the control group (2.25 ± 0.37 copies/cell).",
+    "Mouse gut ARG abundance in the manured black soil group was 3.89 ± 0.62 copies/cell, a 109% increase over the control group (1.86 ± 0.54 copies/cell).",
+    "Tetracycline resistance genes comprised 84.9% of gut ARGs, with tet(Q) constituting 90% of tetracycline ARGs.",
+    "MGE abundance was significantly higher in manured groups (Manured RS: 34.21 ± 2.47 copies/cell, 12.5% increase; Manured BS: 36.07 ± 4.43 copies/cell, 19.8% increase).",
+    "Virulence factor abundance was elevated in manured groups (Manured RS: 12.78 ± 1.09 copies/cell, 8.7% increase; Manured BS: 11.61 ± 0.61 copies/cell, 13.44% increase)."
   ],
   "captured_features": [
-    "Gut microbiome composition",
-    "ARG abundance",
-    "tet(Q) gene abundance",
-    "soil ARG profiles"
+    "ARG abundance and diversity (Shannon index)",
+    "Mobile genetic element (MGE) abundance",
+    "Virulence factor (VF) abundance",
+    "Gut microbiome composition (phylum and family level)",
+    "Metagenome-assembled genomes (MAGs)",
+    "tet(Q) gene relative abundance"
   ],
-  "pathologies_diseases": [
-    "Antimicrobial resistance (AMR)"
-  ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Laboratory/Experimental",
-  "population": "Mice (laboratory animals)",
-  "exposure_domain": "Soil environment (manure fertilization)",
+  "pathologies_diseases": [],
+  "study_design": "controlled experimental animal study",
+  "data_source_type": "metagenomic sequencing of soil and fecal samples",
+  "population": "BALB/c mice (pregnant dams and offspring from birth to 8 weeks)",
+  "exposure_domain": "manure-fertilized soil",
   "limitations": [
-    "Animal model (mice) may not perfectly replicate human gut microbiome dynamics",
-    "Experimental setting"
+    "animal model (mice) limits direct human translatability",
+    "small sample size per group (n=3 pregnant mice)",
+    "controlled laboratory conditions may not reflect real-world agricultural environments",
+    "cross-sectional sampling at a single timepoint (8 weeks)"
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
     "PRJNA1206751"
   ],
   "data_availability_statement": "The raw metagenomic sequence data are publicly available under the accession number PRJNA1206751.",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

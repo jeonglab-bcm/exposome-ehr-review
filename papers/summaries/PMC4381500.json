@@ -2,36 +2,48 @@
   "pmcid": "PMC4381500",
   "title": "Gender-specific mortality in DTP-IPV- and MMR±MenC-eligible age groups to determine possible sex-differential effects of vaccination: an observational study.",
   "year": "2015",
-  "ehr_used": false,
-  "ehr_evidence": "None mentioned",
-  "summary": "An observational study investigating whether there are gender-specific differences in mortality among Dutch children based on the type of last vaccination received (DTP-IPV vs. MMR ± MenC).",
+  "ehr_used": true,
+  "ehr_evidence": "The data were available from Statistics Netherlands, who linked demographic data of persons included in the Municipal Personal Records Database (GBA) with causes of death derived from Statistics Netherlands.",
+  "summary": "Observational study of gender-specific mortality among Dutch children aged 0-11 years (2000-2011) to assess sex-differential effects of DTP-IPV and MMR ± MenC vaccinations.",
   "key_findings": [
-    "No significant differences in gender-specific mortality related to the type of last vaccination received were observed.",
-    "Mortality for natural causes was higher among boys than girls in all age groups.",
-    "Adjusted IRRs for girls compared with boys ranged between 0.81 and 0.91."
+    "Mortality rate for natural causes was higher among boys than girls in all age groups.",
+    "Adjusted IRRs for girls compared with boys ranged between 0.81 (95% CI 0.74-0.89) and 0.91 (95% CI 0.77-1.07) across age groups.",
+    "No statistically significant differences in IRRs were observed between vaccine-related age groups (p = 0.723, p = 0.493, p = 0.868).",
+    "Sensitivity analyses including only indigenous Dutch children, specific death categories, and time periods yielded no statistically significant differences in IRR between vaccine-related age groups."
   ],
   "captured_features": [
+    "demographic data",
     "age",
     "gender",
-    "vaccination status",
-    "mortality (natural causes)"
+    "vaccination schedule/age groups",
+    "causes of death",
+    "mortality rates",
+    "incidence rate ratios",
+    "calendar year"
   ],
   "pathologies_diseases": [
-    "mortality",
-    "natural causes of death"
+    "natural causes of death",
+    "infectious and parasitic diseases",
+    "perinatal conditions",
+    "congenital anomalies",
+    "neoplasms",
+    "diseases of the nervous, circulatory, and respiratory systems"
   ],
-  "study_design": "retrospective population-based observational study",
-  "data_source_type": "population-based registry",
-  "population": "Dutch children aged 0-11 years (2000-2011)",
-  "exposure_domain": "vaccination",
+  "study_design": "population-based observational cohort study",
+  "data_source_type": "national registry / administrative database",
+  "population": "all Dutch children aged 0-11 years from 2000 to 2011 (N=6,261,472)",
+  "exposure_domain": "routine childhood vaccinations (DTP-IPV, MMR ± MenC, and boosters)",
   "limitations": [
-    "retrospective design",
-    "inability to detect small non-specific effects if they were not reflected in mortality differences"
+    "individual vaccination status could not be verified and was assumed based on national schedule",
+    "changes in vaccination schedule during the study period",
+    "low overall childhood mortality limits statistical power to detect non-specific effects",
+    "potential selection and survival bias",
+    "BCG vaccination for specific subgroups could interfere with results"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

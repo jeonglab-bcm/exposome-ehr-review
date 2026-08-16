@@ -3,36 +3,42 @@
   "title": "Pilot study of pesticide knowledge, attitudes, and practices among pregnant women in northern Thailand.",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A pilot study evaluating pesticide knowledge, attitudes, and practices among 76 pregnant women in northern Thailand to identify factors associated with prenatal pesticide exposure.",
+  "ehr_evidence": "Questionnaires were administered via face-to-face interview in Thai language by two study nurses trained in basic interview techniques.",
+  "summary": "Pilot cross-sectional survey assessing pesticide knowledge, attitudes, and practices among 76 pregnant women in northern Thailand to identify factors associated with unsafe pesticide use behaviors.",
   "key_findings": [
-    "Lower knowledge scores and early pregnancy trimesters were marginally associated with unsafe home pesticide practices.",
-    "Women who worked in agriculture, applied pesticides before pregnancy, or had a previous child were significantly more likely to engage in unsafe home pesticide behaviors."
+    "Lower knowledge score and earliest trimester of pregnancy were marginally (p < 0.1) associated with unsafe practices in the home, but not at work.",
+    "Women who worked in agriculture or applied pesticides before becoming pregnant, or who had a previous child were significantly (p < 0.05) more likely to engage in unsafe behaviors in the home during their current pregnancy.",
+    "Risky behaviors at home were marginally associated with knowledge score (OR=0.9, 95% CI 0.7-1.0, p=0.10).",
+    "Risky behaviors at home were significantly associated with first trimester in univariate analysis (OR=5.0, 95% CI 1.1-23.9, p=0.04).",
+    "Risky behaviors at home were significantly associated with farmwork before pregnancy (OR=9.5, 95% CI 2.2-41.8, p<0.01), pesticide application before pregnancy (OR=12.2, 95% CI 2.0-75.1, p=0.01), previous child (OR=4.1, 95% CI 1.0-15.7, p=0.04), and child susceptibility score (OR=5.8, 95% CI 1.4-24.7, p=0.02).",
+    "Risky behaviors at work were significantly associated with risky behaviors at home (OR=2.2, 95% CI 1.1-4.5, p=0.03)."
   ],
   "captured_features": [
-    "pesticide knowledge scores",
+    "knowledge scores",
+    "attitude scores",
+    "risky behavior scores",
     "pregnancy trimester",
-    "pesticide use behavior",
-    "agricultural work history",
-    "previous child history"
+    "agricultural occupation",
+    "education level",
+    "number of previous children",
+    "pesticide application history"
   ],
-  "pathologies_diseases": [
-    "prenatal pesticide exposure",
-    "neurodevelopmental outcomes"
-  ],
+  "pathologies_diseases": [],
   "study_design": "Pilot cross-sectional survey",
-  "data_source_type": "Survey",
-  "population": "76 pregnant women in northern Thailand",
-  "exposure_domain": "pesticides",
+  "data_source_type": "Questionnaire/Survey",
+  "population": "76 pregnant women in Fang District, Chiang Mai Province, Thailand",
+  "exposure_domain": "Pesticide exposure (knowledge, attitudes, practices, and unsafe behaviors)",
   "limitations": [
-    "Pilot study",
-    "small sample size",
-    "self-reported survey data"
+    "Small sample size (n=76)",
+    "Self-reported data subject to social desirability and reporting bias",
+    "Lack of full validation study for questionnaire",
+    "Proxy measures for exposure rather than direct biomonitoring",
+    "Cross-sectional design limits causal inference"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Supplementary File 1:PDF-Document (PDF, 721 KB)",
-  "confidence": "high",
+  "data_availability_statement": "Associated DataSupplementary MaterialsSupplementary File 1:PDF-Document (PDF, 721 KB)Click here for additional data file.",
+  "confidence": "low",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

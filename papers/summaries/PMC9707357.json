@@ -1,0 +1,41 @@
+{
+  "pmcid": "PMC9707357",
+  "title": "2022_PMC9707357_Sociodemographic_Variation_in_Early_Uptake_of_COVID-19_Vaccine_a",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "CDC analyzed data from 4,496 National Immunization Survey-Child COVID Module (NIS-CCM) interviews conducted during July 1–29, 2022",
+  "summary": "Cross-sectional analysis of COVID-19 vaccine uptake and parental intent and attitudes among children aged 6 months–4 years in the United States.",
+  "key_findings": [
+    "3.5% of children aged 6 months–4 years had received ≥1 dose of COVID-19 vaccine.",
+    "59.3% of children were unvaccinated but parents were open to vaccination.",
+    "37.2% of children were unvaccinated and parents were reluctant to vaccinate.",
+    "Parental openness to vaccination was higher among parents of Asian (83.1%), Black (61.1%), and Hispanic (66.2%) children compared to White children (52.9%).",
+    "Parental openness was lower in rural areas (45.8%) than urban areas (64.1%).",
+    "Provider recommendation for vaccination was reported by 24.6% of unvaccinated children with open parents versus 62.7% of vaccinated children."
+  ],
+  "captured_features": [
+    "parent-reported vaccination status",
+    "parental intent to vaccinate",
+    "parental attitudes (safety, importance, concern)",
+    "place of vaccination",
+    "sociodemographic characteristics (age, race/ethnicity, income, education, urban/rural residence, HHS region, social vulnerability index)"
+  ],
+  "pathologies_diseases": [
+    "COVID-19"
+  ],
+  "study_design": "cross-sectional survey analysis",
+  "data_source_type": "survey",
+  "population": "children aged 6 months–4 years and their parents/guardians in the United States",
+  "exposure_domain": "sociodemographic factors, parental attitudes, provider recommendations, and vaccination setting",
+  "limitations": [
+    "low survey response rate of 20%",
+    "potential bias from nonresponse and misclassification despite calibration weights",
+    "parent-reported vaccination status and intent subject to recall and social desirability biases"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

@@ -1,0 +1,47 @@
+{
+  "pmcid": "PMC6258300",
+  "title": "Early-life antibiotics attenuate regulatory T cell generation and increase the severity of murine house dust mite-induced asthma.",
+  "year": "2018",
+  "ehr_used": false,
+  "ehr_evidence": "C57BL/6J nursing mothers with 3-week-old female pups were purchased from the Jackson Laboratory (Bar Harbor, ME, USA).",
+  "summary": "Experimental murine study investigating how early-life pulsed antibiotic exposure affects the severity of house dust mite-induced allergic airway disease, microbiome diversity, and regulatory T cell generation.",
+  "key_findings": [
+    "HDM+ABX Mix animals exhibited threefold higher BAL leukocytosis (29.0 × 10^5 vs. 9.0 × 10^5 cells, p < 0.01).",
+    "HDM+ABX Mix had twofold higher relative eosinophilia (43% vs. 20%, p < 0.01) and over fivefold higher total eosinophils (14.0 × 10^5 vs. 2.4 × 10^5, p < 0.01).",
+    "HDM+ABX Mix had significantly higher HDM-specific IgE (0.95 vs. 0.50 mean AUC, p < 0.05).",
+    "HDM+ABX Mix showed more severe lung histopathology (2.5 vs. 1.5 median score, p < 0.01).",
+    "HDM+ABX Mix had significantly higher respiratory system resistance AUC (5.1 vs. 3.8, p < 0.05).",
+    "ABX exposure reduced fecal microbiome diversity (Simpson index 0.747 vs. 0.954, p < 0.01).",
+    "HDM+ABX Mix had lower pulmonary Treg proportions (8.9% vs. 11.1%, p < 0.05).",
+    "Microbiome diversity positively correlated with Treg proportion (Spearman's r = 0.7109, p < 0.01)."
+  ],
+  "captured_features": [
+    "BAL leukocyte counts",
+    "eosinophil counts",
+    "serum HDM-specific IgE levels",
+    "lung histopathology scores",
+    "respiratory system resistance (Rrs)",
+    "fecal microbiome diversity (Simpson index, 16S rRNA sequencing)",
+    "pulmonary regulatory T cell proportions"
+  ],
+  "pathologies_diseases": [
+    "asthma",
+    "allergic airway disease"
+  ],
+  "study_design": "experimental murine model",
+  "data_source_type": "animal model",
+  "population": "C57BL/6J mice",
+  "exposure_domain": "antibiotics",
+  "limitations": [
+    "ABX cocktail combination is unlikely to be utilized clinically.",
+    "Study does not conclusively establish that immunologic changes are exclusively derived from microbiome disruption.",
+    "Limited sample size for some Treg assessments.",
+    "Results may not directly translate to other diseases."
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "low",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

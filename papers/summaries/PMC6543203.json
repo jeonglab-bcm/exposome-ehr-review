@@ -3,36 +3,40 @@
   "title": "Dietary Patterns Are Not Consistently Associated with Variability in Blood Lead Concentrations in Pregnant British Women.",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "The study used data from the Avon Longitudinal Study of Parents and Children (ALSPAC) birth cohort, specifically whole blood samples and food-frequency questionnaires (FFQ).",
-  "summary": "The study evaluated whether dietary patterns and specific food groups are associated with blood lead (B-Pb) concentrations in pregnant women to identify potential dietary factors influencing fetal lead exposure.",
+  "ehr_evidence": "The primary source of data collection was self-completed questionnaires sent to the mother. Blood samples were collected by midwives during pregnancy.",
+  "summary": "Observational analysis of the ALSPAC birth cohort evaluating associations between maternal dietary patterns/food groups and blood lead concentrations during pregnancy.",
   "key_findings": [
-    "Negative association between the 'confectionery' dietary pattern and the likelihood of B-Pb ≥5 µg/dL",
-    "Positive association between the food group 'all leafy green and green vegetables' and the likelihood of B-Pb ≥5 µg/dL",
-    "Negative association between the food group 'cakes and biscuits' and the likelihood of B-Pb ≥5 µg/dL",
-    "Positive association of the 'healthy' diet pattern with B-Pb after multiple imputation"
+    "Negative association between the 'confectionery' dietary pattern and likelihood of B-Pb ≥5 µg/dL (OR: 0.62; 95% CI: 0.41, 0.94).",
+    "Positive association between 'all leafy green and green vegetables' consumption and likelihood of B-Pb ≥5 µg/dL (OR: 1.45; 95% CI: 1.04, 2.01).",
+    "Negative association between 'cakes and biscuits' consumption and likelihood of B-Pb ≥5 µg/dL (OR: 0.63; 95% CI: 0.43, 0.93).",
+    "After multiple imputation, a positive association was found for the 'healthy' diet pattern (OR: 1.58; 95% CI: 1.27, 1.97) and a negative association for milk consumption (OR: 0.77; 95% CI: 0.61, 0.98).",
+    "No significant associations were found for other dietary patterns or food groups in adjusted models."
   ],
   "captured_features": [
-    "Blood lead concentrations (B-Pb)",
-    "Dietary pattern scores (PCA)",
-    "Food group frequency of consumption"
+    "Dietary pattern scores derived from FFQ",
+    "Food group consumption frequencies",
+    "Blood lead concentration (B-Pb)",
+    "Maternal sociodemographic and lifestyle covariates"
   ],
   "pathologies_diseases": [
-    "lead exposure"
+    "Elevated blood lead concentration (≥5 µg/dL)"
   ],
-  "study_design": "Birth cohort study",
-  "data_source_type": "Birth cohort",
-  "population": "Pregnant women in the Avon Longitudinal Study of Parents and Children (ALSPAC) birth cohort, UK",
-  "exposure_domain": "Dietary patterns, food groups, blood lead",
+  "study_design": "Prospective birth cohort study with cross-sectional dietary and biomarker analysis",
+  "data_source_type": "Cohort study (questionnaires and biospecimens)",
+  "population": "Pregnant British women (ALSPAC cohort), n=2167 complete cases",
+  "exposure_domain": "Dietary patterns and food groups",
   "limitations": [
-    "Lack of extensive food composition data",
-    "Variations in the lead content of foods due to growing and processing conditions"
+    "Urban UK population limits generalizability",
+    "Temporal mismatch between first-trimester blood sampling and third-trimester dietary data collection",
+    "Self-reported dietary data subject to misreporting",
+    "Selection bias due to subsample characteristics",
+    "Residual confounding possible",
+    "Inconsistency between complete-case and multiple-imputation results"
   ],
   "data_availability": "supplementary-only",
-  "data_accession_links": [
-    "nxz023_Supplemental_File"
-  ],
+  "data_accession_links": [],
   "data_availability_statement": "Associated DataSupplementary Materialsnxz023_Supplemental_FileClick here for additional data file.",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

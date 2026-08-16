@@ -3,36 +3,47 @@
   "title": "Assessment of chronic bronchitis and risk factors in young adults: results from BAMSE.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "None; data were obtained from the Swedish BAMSE population-based birth cohort using questionnaire data and clinical measures.",
-  "summary": "The study assesses the prevalence and early-life risk factors (e.g., air pollution, breastfeeding) for chronic bronchitis in young adults using the Swedish BAMSE birth cohort.",
+  "ehr_evidence": "Questionnaire data and clinical measures from the 24-year follow-up of the Swedish BAMSE (Child (Barn), Allergy, Milieu, Stockholm, Epidemiological) cohort were used.",
+  "summary": "Assessment of chronic bronchitis prevalence and early-life risk factors in young adults from the Swedish BAMSE birth cohort.",
   "key_findings": [
-    "Prevalence of chronic bronchitis (CB) was 5.5%",
-    "Daily smoking associated with CB (aOR 3.85)",
-    "Air pollution (black carbon at ages 1-4y) associated with CB (aOR 1.71)",
-    "Exclusive breastfeeding for >=4 months associated with lower CB risk (aOR 0.66)"
+    "Overall prevalence of chronic bronchitis at 24 years was 5.5% (n=158).",
+    "Daily smoking was associated with chronic bronchitis (aOR 3.85, 95% CI 2.32–6.39, p<0.001).",
+    "Black carbon exposure at ages 1–4 years was associated with chronic bronchitis (aOR 1.71 per 1 μg·m−3 increase, 95% CI 1.14–2.57, p=0.009).",
+    "Exclusive breastfeeding for ≥4 months was protective (aOR 0.66, 95% CI 0.44–0.99, p=0.044).",
+    "Childhood asthma at age 1–16 years was a strong risk factor (OR 3.08, 95% CI 2.17–4.35, p<0.001).",
+    "49% of chronic bronchitis cases experienced >3 respiratory infections in the past year versus 18% of non-cases (p<0.001)."
   ],
   "captured_features": [
-    "Questionnaire data",
-    "clinical measures",
-    "spirometry",
-    "black carbon exposure",
-    "smoking status",
-    "breastfeeding duration"
+    "Parental and participant questionnaires",
+    "Spirometry (FEV1, FVC, FEV1/FVC)",
+    "Reversibility test",
+    "Fractional exhaled nitric oxide (FeNO)",
+    "IgE sensitization",
+    "Geocoded residential, day-care, and school addresses",
+    "Modeled air pollution concentrations (NOx, black carbon)"
   ],
   "pathologies_diseases": [
-    "chronic bronchitis"
+    "chronic bronchitis",
+    "childhood asthma",
+    "respiratory infections",
+    "pneumonia"
   ],
-  "study_design": "population-based birth cohort study",
-  "data_source_type": "Birth cohort",
-  "population": "Young adults in Sweden",
-  "exposure_domain": "air pollution, smoking, breastfeeding",
+  "study_design": "Population-based birth cohort study",
+  "data_source_type": "Birth cohort / Questionnaire and clinical measurements",
+  "population": "Young adults (mean age 22.4 years) from the Swedish BAMSE birth cohort, originally recruited 1994–1996",
+  "exposure_domain": "Early-life environmental exposures (traffic-related air pollution: black carbon, NOx), smoking, breastfeeding",
   "limitations": [
-    "Not specified in the provided text"
+    "Chronic bronchitis definition based on questionnaire without specified time period",
+    "Exploratory analyses without multiple testing correction",
+    "Potential misclassification of asthma as chronic bronchitis",
+    "Self-reported respiratory health events",
+    "Lack of laboratory workup for infections",
+    "Critically ill newborns excluded"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

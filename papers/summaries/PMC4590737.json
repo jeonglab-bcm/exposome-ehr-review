@@ -3,40 +3,39 @@
   "title": "Obesogen Holdover: Prenatal Exposure Predicts Cardiometabolic Risk Factors in Childhood.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The study used the Rhea mother-child cohort, which involved direct blood samples and physical measurements, rather than EHR or linked health data.",
-  "summary": "A study investigating the link between prenatal exposure to persistent organic pollutants (POPs) and cardiometabolic risk factors in children aged 4 in Greece.",
+  "ehr_evidence": "The study included nearly 700 mother–child pairs from the Rhea cohort in Greece.",
+  "summary": "Observational birth cohort study examining the association between prenatal exposure to persistent organic pollutants (POPs) and cardiometabolic risk factors in 4-year-old children in Greece.",
   "key_findings": [
     "A 10-fold increase in maternal HCB concentrations was associated with higher risks of generalized and abdominal obesity, greater skinfold thickness, higher systolic blood pressure, and a modest increase in child BMI z-score.",
     "Prenatal DDE exposure was associated with higher BMI z-score, increased risk of abdominal obesity, and higher diastolic blood pressure.",
-    "PCBs were not associated with any of the risk factors assessed."
+    "PCBs were not associated with any of the assessed cardiometabolic risk factors."
   ],
   "captured_features": [
     "maternal blood concentrations of DDE, HCB, and PCBs",
-    "child weight",
-    "child height",
-    "child waist circumference",
-    "child skinfold thickness",
-    "child blood pressure",
-    "child blood lipid levels",
-    "child BMI z-score"
+    "child weight, height, waist circumference, skinfold thickness",
+    "child blood pressure and blood lipid levels",
+    "child BMI z-scores"
   ],
   "pathologies_diseases": [
-    "obesity",
-    "high blood pressure",
-    "high blood lipids"
+    "childhood obesity",
+    "generalized obesity",
+    "abdominal obesity",
+    "cardiometabolic risk factors"
   ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Cohort study",
-  "population": "Nearly 700 mother-child pairs from the Rhea cohort in Greece",
-  "exposure_domain": "Persistent organic pollutants (POPs)",
+  "study_design": "prospective birth cohort study",
+  "data_source_type": "birth cohort",
+  "population": "nearly 700 mother-child pairs from the Rhea cohort in Greece, children assessed at age 4",
+  "exposure_domain": "prenatal persistent organic pollutants (POPs)",
   "limitations": [
-    "Unclear implications for future health outcomes",
-    "Sex-specific effects not explored"
+    "observational design limits causal inference",
+    "lack of sex-stratified analysis despite potential effect modification",
+    "unclear long-term health implications",
+    "single regional cohort may limit generalizability"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

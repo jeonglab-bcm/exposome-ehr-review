@@ -3,37 +3,49 @@
   "title": "Association between levels of persistent organic pollutants in adipose tissue and cryptorchidism in early childhood: a case-control study.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The study used subcutaneous adipose tissue biopsies taken during surgery, not electronic health records.",
-  "summary": "A case-control study investigating the association between prenatal exposure to persistent organic pollutants (PCBs, PCDD/Fs, and PBDEs) in adipose tissue and the risk of cryptorchidism in children.",
+  "ehr_evidence": "Adipose tissue biopsies were taken during surgery, and chemical concentrations were measured by gas chromatography-high-resolution mass spectrometry. Obstetric data were obtained from medical records, and breastfeeding data were collected via questionnaires.",
+  "summary": "Case-control study assessing the association between prenatal exposure to persistent organic pollutants (PCBs, PCDD/Fs, PBDEs) measured in adipose tissue and congenital cryptorchidism in early childhood.",
   "key_findings": [
-    "Total-TEq (dioxins and dioxin-like PCBs) and sum of PCDD/Fs were positively associated with cryptorchidism (OR 3.21 and 3.69, respectively).",
-    "Sum of PCBs was close to significant (OR 1.92).",
-    "Sum of PBDEs was not significantly associated (OR 0.86)."
+    "Total-TEq was positively associated with cryptorchidism after adjustment [OR 3.21 (95% CI 1.29–9.09), p=0.02].",
+    "Sum of PCDD/Fs was positively associated with cryptorchidism after adjustment [OR 3.69 (95% CI 1.45–10.9), p=0.01].",
+    "Sum of PCBs was close to significant [OR 1.92 (95% CI 0.98–4.01), p=0.07].",
+    "Sum of PBDEs was not associated with cryptorchidism [OR 0.86 (95% CI 0.47–1.54), p=0.61].",
+    "Unadjusted chemical concentrations showed no significant associations with cryptorchidism risk."
   ],
   "captured_features": [
-    "37 PCBs",
-    "17 PCDD/Fs",
-    "14 PBDEs",
-    "adipose tissue concentrations"
+    "Adipose tissue concentrations of PCBs, PCDD/Fs, PBDEs, and total-TEq",
+    "duration of breastfeeding",
+    "age at operation",
+    "country of origin",
+    "maternal age",
+    "gestational diabetes",
+    "parity",
+    "birth weight",
+    "length of gestation"
   ],
   "pathologies_diseases": [
-    "cryptorchidism",
+    "congenital cryptorchidism",
     "inguinal hernia",
     "umbilical hernia",
     "hydrocele"
   ],
   "study_design": "case-control study",
-  "data_source_type": "biopsy",
-  "population": "children (44 cryptorchid cases, 38 controls) in Finland and Denmark",
+  "data_source_type": "biospecimen analysis and questionnaires",
+  "population": "boys operated for cryptorchidism (cases) or inguinal/umbilical hernia or hydrocele (controls) in Finland and Denmark, aged 0-5 years (Finland) or no limit (Denmark)",
   "exposure_domain": "persistent organic pollutants (PCBs, PCDD/Fs, PBDEs)",
   "limitations": [
     "small sample size",
-    "case-control design"
+    "control group included boys with inguinal hernia which is associated with cryptorchidism",
+    "recruitment at surgical departments limits generalizability to mild cases",
+    "potential inclusion of acquired undescended testes in cases",
+    "inability to adjust for lipid content of adipose samples",
+    "recall bias for Danish mothers' data collected ~10 years later",
+    "lack of data on children's body size"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

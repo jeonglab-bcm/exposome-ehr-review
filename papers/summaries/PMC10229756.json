@@ -1,0 +1,57 @@
+{
+  "pmcid": "PMC10229756",
+  "title": "2023_PMC10229756_Adverse_Events_Following_Immunization_Among_Children_Under_Two_",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "Data was collected using a pretested, semi-structured questionnaire that contained 20 questions regarding the socio-demographic characteristics of the participants, vaccination details, and the AEFI history of the child.",
+  "summary": "Prospective community-based observational study assessing the incidence and pattern of adverse events following immunization (AEFI) among children under two years of age in Uttarakhand, North India.",
+  "key_findings": [
+    "The incidence of AEFI was 33.0 per 100 doses of vaccines administered.",
+    "212 AEFIs were reported from 152 of 255 vaccinated subjects.",
+    "The most common AEFI was fever (101, 47.6%), followed by swelling at the injection site (53, 25.0%).",
+    "Pentavalent + OPV had the highest AEFI incidence (48.8 per 100 doses), followed by DPT + MR + OPV (46.6 per 100 doses).",
+    "No AEFI was reported after BCG + Hepatitis B + OPV administration.",
+    "No significant association of AEFI with age or gender was found (p > 0.05).",
+    "All reported AEFIs were minor, and no serious AEFIs were identified."
+  ],
+  "captured_features": [
+    "socio-demographic characteristics",
+    "vaccination details",
+    "AEFI history",
+    "fever",
+    "swelling",
+    "pain",
+    "redness",
+    "nodule",
+    "excessive cry",
+    "age group",
+    "gender",
+    "birth weight",
+    "socioeconomic status"
+  ],
+  "pathologies_diseases": [
+    "adverse events following immunization (AEFI)",
+    "fever",
+    "swelling",
+    "pain",
+    "redness",
+    "nodule",
+    "excessive cry"
+  ],
+  "study_design": "Prospective community-based observational study",
+  "data_source_type": "Questionnaire and home visit survey",
+  "population": "Children aged less than two years receiving vaccines under the Universal Immunization Program in Uttarakhand, North India",
+  "exposure_domain": "Routine childhood vaccines (Pentavalent, OPV, IPV, DPT, MR, BCG, Hepatitis B)",
+  "limitations": [
+    "Conducted in a single block, limiting generalizability.",
+    "Recall bias due to reliance on maternal history for AEFI identification.",
+    "Inability to attribute specific AEFIs to individual vaccines due to co-administration.",
+    "Small sample size due to declined participation and loss to follow-up, introducing potential selection bias."
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}
