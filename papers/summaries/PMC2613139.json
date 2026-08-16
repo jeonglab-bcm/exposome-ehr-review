@@ -3,38 +3,42 @@
   "title": "Traffic-related air pollution and respiratory symptoms among asthmatic children, resident in Mexico City: the EVA cohort study.",
   "year": "2008",
   "ehr_used": false,
-  "ehr_evidence": "The study was a prospective longitudinal panel study where children were invited to participate and followed up for an average of 22 weeks with daily records of symptoms and medication.",
-  "summary": "A prospective longitudinal study (EVA cohort) evaluating the impact of traffic-related air pollution (PM2.5, NO2, O3, and diesel-fueled vehicles) on respiratory symptoms and medication use in asthmatic and healthy children in Mexico City.",
+  "ehr_evidence": "Information concerning allergy test results, medication, and medical visits during the 2 preceding years was obtained from the medical record. The study primarily relied on daily symptom diaries, environmental monitoring stations (RAMA), and traffic counts.",
+  "summary": "Prospective longitudinal panel study evaluating the association between traffic-related air pollution and respiratory symptoms/medication use among asthmatic and healthy children in Mexico City.",
   "key_findings": [
-    "Wheezing was significantly associated with PM2.5, NO2, and O3.",
-    "Diesel-fueled motor vehicles were significantly associated with wheezing and bronchodilator use."
+    "An increase of 17.4 μg/m3 (IQR) in PM2.5 was associated with an 8.8% increase in wheezing (95% CI: 2.4% to 15.5%).",
+    "An increase of 34 ppb (IQR) in NO2 was associated with a 9.1% increase in wheezing (95% CI: 2.3% to 16.4%).",
+    "An increase of 48 ppb (IQR) in O3 was associated with a 10% increase in wheezing (95% CI: 3.2% to 17.3%).",
+    "Diesel-fueled vehicles were significantly associated with wheezing (IRR = 1.29; 95% CI: 1.03 to 1.62) and bronchodilator use (IRR = 1.32; 95% CI: 0.99 to 1.77) per 130 vehicles hourly increase.",
+    "Asthmatic children had a 3-fold higher incidence of coughing (IRR = 3.1) and 8.5-fold higher incidence of wheezing (IRR = 8.5) compared to healthy children.",
+    "Among healthy children, only NO2 was significantly associated with coughing (OR = 1.22; 95% CI: 1.03 to 1.45)."
   ],
   "captured_features": [
-    "coughing",
-    "wheezing",
-    "breathing difficulty",
-    "medication use",
-    "PM2.5",
-    "NO2",
-    "O3",
-    "diesel-fueled motor vehicle counts"
+    "daily symptom diaries (coughing, wheezing, breathing difficulty)",
+    "medication use (corticosteroids, bronchodilators)",
+    "allergy test results",
+    "environmental pollutant concentrations (PM2.5, NO2, O3)",
+    "traffic density and vehicle type counts",
+    "meteorological data (temperature, humidity)"
   ],
   "pathologies_diseases": [
     "asthma",
-    "respiratory symptoms"
+    "respiratory symptoms (coughing, wheezing, breathing difficulty)"
   ],
   "study_design": "prospective longitudinal panel study",
-  "data_source_type": "Prospective cohort study",
-  "population": "147 asthmatic and 50 healthy children in Mexico City",
-  "exposure_domain": "traffic-related air pollution",
+  "data_source_type": "environmental monitoring, daily symptom diaries, traffic counts, questionnaires",
+  "population": "147 asthmatic and 50 healthy children aged 6-14 years residing in Mexico City",
+  "exposure_domain": "traffic-related air pollution (PM2.5, NO2, O3, diesel exhaust, traffic density)",
   "limitations": [
-    "Small sample size",
-    "Geographic limitation to Mexico City"
+    "exposure assessed via fixed-site monitors potentially causing misclassification",
+    "voluntary recruitment not representative of general pediatric population",
+    "small subsample for PM2.5 absorbance analysis",
+    "high correlation between traffic vehicle types complicating effect separation"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

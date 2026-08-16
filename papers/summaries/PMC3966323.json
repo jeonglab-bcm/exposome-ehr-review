@@ -3,32 +3,36 @@
   "title": "Long-term effects of maternal deprivation on cholinergic system in rat brain.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "The study uses an animal model (Wistar rats) and laboratory measurements, not electronic health records.",
-  "summary": "The study investigates the long-term effects of maternal deprivation (MD) on the cholinergic system in the brains of Wistar rats, specifically measuring acetylcholinesterase (AChE) activity and cholinergic fiber density in the hippocampus and retrosplenial (RS) cortex.",
+  "ehr_evidence": "The study used Wistar rats and brain tissue for biochemical and immunohistochemical analysis.",
+  "summary": "Experimental study examining the long-term effects of maternal separation on acetylcholinesterase activity and cholinergic fiber density in the brains of Wistar rats.",
   "key_findings": [
-    "Significant decrease of AChE activity in the cortex and increase in the hippocampus of MD rats.",
-    "Density of cholinergic fibers significantly increased in CA1 region of hippocampus and decreased in RS cortex."
+    "AChE activity significantly decreased in the cortex (P<0.05) and significantly increased in the hippocampus (P<0.05) compared to controls.",
+    "No significant change in AChE activity was observed in the thalamus or caudate nuclei.",
+    "ChAT positive fiber density significantly increased in the hippocampal CA1 region, with no change in CA3 or dentate gyrus.",
+    "ChAT positive fiber density significantly decreased in the retrosplenial cortex."
   ],
   "captured_features": [
-    "AChE activity",
-    "cholinergic fiber density",
-    "morphometric analysis"
+    "AChE activity (mol/mg)",
+    "ChAT positive fiber density (10^3/mm^3)",
+    "brain region morphology"
   ],
   "pathologies_diseases": [
-    "schizophrenia (animal model)"
+    "schizophrenia (animal model context)"
   ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Laboratory animal data",
-  "population": "Male Wistar rats",
+  "study_design": "experimental animal study",
+  "data_source_type": "animal model",
+  "population": "male Wistar rats, postnatal day 9 to 60",
   "exposure_domain": "maternal deprivation (early life stress)",
   "limitations": [
-    "Animal model",
-    "limited to male rats"
+    "small sample size (n=5-8 per group)",
+    "single 24-hour maternal separation protocol on postnatal day 9",
+    "only male animals tested",
+    "limited to specific brain regions and cholinergic markers"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

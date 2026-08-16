@@ -3,35 +3,41 @@
   "title": "Early life exposure to house dust mite allergen prevents experimental allergic asthma requiring mitochondrial H(2)O(2).",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "The study is an experimental animal model using mice, not human electronic health records.",
-  "summary": "An experimental study investigating the role of mitochondrial H2O2 in establishing airway tolerance to house dust mite (HDM) allergens in mice.",
+  "ehr_evidence": "The study utilized wild-type and MCAT transgenic mice purchased from Jackson Laboratories and housed at the University of Pittsburgh.",
+  "summary": "Experimental mouse study demonstrating that early-life low-dose house dust mite (HDM) exposure induces airway tolerance via mitochondrial H2O2 production in lung dendritic cells, preventing allergic asthma.",
   "key_findings": [
-    "Early-life exposure to low-dose HDM prevents allergic airway inflammation in later life.",
-    "Depletion of mitochondrial H2O2 in MCAT mice abrogates HDM-induced airway tolerance.",
-    "Mitochondrial H2O2 plays a role in constraining lung dendritic cell numbers to establish early-life airway tolerance."
+    "Early-life exposure to low-dose HDM (0.5 µg) at 2 weeks prevented airway inflammation and mucus upon challenge at 6 weeks, whereas high-dose HDM (5 µg) did not.",
+    "Low-dose HDM reduced BAL fluid cellularity and significantly decreased IL-13- and IL-5-producing CD4+ T cells compared to the inflammation group.",
+    "WT tolerant mice showed a 50% decrease in total lung dendritic cell numbers compared to naïve mice.",
+    "MCAT mice (mitochondrial H2O2-depleted) failed to establish tolerance and harbored approximately 3-fold more total DCs and cDC1/cDC2 subsets than WT tolerant mice.",
+    "Depletion of mitochondrial H2O2 abolished tolerance, resulting in increased airway hyperreactivity, eosinophil-dominated inflammation, and elevated serum IgE levels.",
+    "RT-qPCR revealed 2-fold higher S100a4:Irf8 and 1.5-fold higher Irf4:Irf8 expression ratios in DCs from tolerant MCAT mice compared to tolerant WT mice."
   ],
   "captured_features": [
-    "Lung histology",
-    "BAL fluid cellularity",
-    "Th2 response",
-    "mitochondrial H2O2 production",
-    "dendritic cell (DC) subsets"
+    "BAL fluid differential cell counts",
+    "lung histology inflammation and mucus scores",
+    "serum total IgE levels",
+    "airway hyperreactivity (Newtonian resistance)",
+    "lung tissue cytokine and gene expression (Ifng, Il13, Il17a, Irf4, Irf8, S100a4)",
+    "flow cytometry quantification of T cell subsets and DC/macrophage populations"
   ],
   "pathologies_diseases": [
-    "allergic asthma"
+    "allergic asthma",
+    "airway inflammation",
+    "allergic airway disease"
   ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Animal model",
-  "population": "Newborn and young mice",
-  "exposure_domain": "House dust mite (HDM) allergen",
+  "study_design": "experimental in vivo mouse model",
+  "data_source_type": "animal model",
+  "population": "2-week-old and 6-week-old wild-type and MCAT transgenic mice",
+  "exposure_domain": "house dust mite (HDM) allergen",
   "limitations": [
-    "Animal model (mice)",
-    "Not human data"
+    "Inability to assess DC functional capacity using T cells with TCR specificity for HDM antigen Der p 1.",
+    "Findings are derived from a murine model, limiting direct translation to human clinical settings."
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Associated DataSupplementary Materials1",
-  "confidence": "high",
+  "data_availability_statement": "",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

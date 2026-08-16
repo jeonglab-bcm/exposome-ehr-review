@@ -3,33 +3,40 @@
   "title": "Prenatal p,p´-DDE exposure and neurodevelopment among children 3.5-5 years of age.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "The study is a prospective perinatal cohort study using direct data collection (interviews, blood samples, and monitoring) rather than EHR.",
-  "summary": "A prospective perinatal cohort study in Morelos, Mexico, investigating the association between prenatal DDE exposure and neurodevelopmental outcomes in children aged 3.5–5 years.",
+  "ehr_evidence": "In 2001 we started a perinatal cohort study in four municipalities in the state of Morelos, Mexico, an endemic area for malaria where DDT was used until 1998 as part of an anti-malaria campaign.",
+  "summary": "Prospective perinatal cohort study assessing the association between prenatal DDE exposure and child neurodevelopment at 42–60 months of age in Morelos, Mexico.",
   "key_findings": [
-    "The study evaluates neurodevelopmental outcomes at 42, 48, 54, and 60 months of age based on prenatal DDE exposure."
+    "A doubling of serum DDE in the third trimester was associated with statistically significant reductions of –1.37, –0.88, –0.84, and –0.80 points in the general cognitive index, quantitative, verbal, and memory components, respectively.",
+    "Among children with DDE measurements in all three trimesters, third-trimester DDE was significantly associated with reductions of –2.01, –2.06, –1.14, and –1.26 points in GCI, quantitative, verbal, and memory components, respectively.",
+    "Average DDE exposure during pregnancy was significantly associated with a –1.78 point reduction in the quantitative component (95% CI: –3.2, –0.4; p = 0.01).",
+    "No significant statistical interactions with sex or breastfeeding were observed."
   ],
   "captured_features": [
-    "DDE serum levels",
-    "maternal anthropometry",
-    "dietary information",
-    "sociodemographic characteristics",
-    "McCarthy’s Scales of Children’s Abilities scores"
+    "maternal DDE serum levels",
+    "McCarthy Scales of Children’s Abilities components",
+    "HOME scale scores",
+    "maternal IQ",
+    "blood lead levels",
+    "sociodemographic and clinical covariates"
   ],
   "pathologies_diseases": [
-    "neurodevelopmental disorders",
-    "psychomotor development"
+    "child neurodevelopment"
   ],
   "study_design": "prospective perinatal cohort study",
-  "data_source_type": "Cohort study",
-  "population": "Children aged 3.5–5 years in Morelos, Mexico",
-  "exposure_domain": "pesticides (DDE)",
+  "data_source_type": "Cohort study / Biospecimen assays",
+  "population": "203 children aged 3.5–5 years (42–60 months) and their mothers from Morelos, Mexico",
+  "exposure_domain": "Prenatal DDE (organochlorine) exposure",
   "limitations": [
-    "The provided text is incomplete and does not list specific limitations."
+    "Lack of information regarding postnatal DDE exposure",
+    "Lack of validation of the McCarthy Scale in the Mexican population",
+    "Potential residual confounding",
+    "Attrition rate of about 30% before 42 months",
+    "Lack of information on postnatal lead exposure or infant nutrition"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

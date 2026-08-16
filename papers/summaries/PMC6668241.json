@@ -1,0 +1,41 @@
+{
+  "pmcid": "PMC6668241",
+  "title": "2019_PMC6668241_Identification_of_the_determinants_of_incomplete_vaccination_in_",
+  "year": "",
+  "ehr_used": true,
+  "ehr_evidence": "Vaccination status was determined from the Australian Childhood Immunisation Register and deemed either “complete” (no doses overdue) or “incomplete” (1 or more doses overdue) at the time of questionnaire completion.",
+  "summary": "Cross-sectional study assessing sociodemographic and parental belief factors associated with incomplete childhood vaccination status in Western Australia.",
+  "key_findings": [
+    "20% (116/589) of children had incomplete vaccination status.",
+    "Children with incomplete status were more likely born overseas (OR: 3.52, 95% CI: 1.54 to 8.05).",
+    "More likely to have a healthcare professional advise delaying or not vaccinating (OR: 4.25, 95% CI: 2.07 to 8.69).",
+    "Associated with lower parental education (<Year 10 high school) (OR: 2.92, 95% CI: 1.34 to 6.39).",
+    "Associated with larger family size (OR: 1.39 per child increase, 95% CI: 1.03 to 1.87).",
+    "No significant association between parental beliefs/attitudes and vaccination status remained after adjusting for sociodemographic factors."
+  ],
+  "captured_features": [
+    "parental demographics",
+    "child demographics",
+    "parental vaccination beliefs (7-point Likert scale)",
+    "vaccination status from national register",
+    "hospital outpatient visit history"
+  ],
+  "pathologies_diseases": [],
+  "study_design": "cross-sectional",
+  "data_source_type": "Registry & Survey",
+  "population": "children <6 years old attending outpatient clinics in Perth, Western Australia, and their parents",
+  "exposure_domain": "sociodemographic factors, parental beliefs, healthcare access",
+  "limitations": [
+    "convenience sample from hospital setting may underrepresent high SES, fathers, and ethnic minorities",
+    "self-reported survey data subject to recall and social desirability bias",
+    "cross-sectional design precludes causal inference",
+    "immunisation register may not accurately reflect status for overseas-born children",
+    "unverified healthcare professional advice on vaccine delay"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

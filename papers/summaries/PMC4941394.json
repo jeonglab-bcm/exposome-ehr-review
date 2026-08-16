@@ -3,34 +3,39 @@
   "title": "Safety and immunogenicity of an inactivated thimerosal-free influenza vaccine in infants and children.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "None. The study is a prospective, open-label, phase III clinical trial.",
-  "summary": "A prospective phase III clinical trial evaluating the safety, reactogenicity, and immunogenicity of a thimerosal-free inactivated influenza vaccine (Fluvax/C210) in children aged 6 months to <9 years in Australia.",
+  "ehr_evidence": "An AE diary card was used to record solicited local and systemic AEs during the 6 days following the day of vaccination.",
+  "summary": "Prospective, open-label, phase III clinical trial evaluating the safety, reactogenicity, and immunogenicity of a thimerosal-free inactivated influenza vaccine in healthy children aged 6 months to <9 years.",
   "key_findings": [
-    "No withdrawals due to adverse events.",
-    "Majority of solicited local and systemic adverse events were of mild severity.",
-    "Over 95% of both younger and older children achieved seroprotection after dose 2."
+    "A maximum intensity of severe was reported for injection site pain and fever by only 3.0% and 3.4% of participants, respectively.",
+    "≥95% of both younger and older children achieved seroprotection after dose 2.",
+    "Of those seronegative at baseline, 97% became seroprotected after dose 1 against A/H3N2 versus 15% for A/H1N1 and 22% for B.",
+    "Only one participant had a confirmed case of influenza B after the booster vaccination, but the specimen was compromised during transportation."
   ],
   "captured_features": [
-    "adverse events",
-    "local and systemic reactions",
-    "hemagglutination inhibition",
-    "single radial hemolysis assays",
-    "seroprotection rates"
+    "solicited local and systemic adverse events",
+    "hemagglutination inhibition (HI) antibody titers",
+    "single radial hemolysis (SRH) assay results",
+    "geometric mean titers (GMTs)",
+    "seroprotection rates (HI titer ≥1:40)"
   ],
   "pathologies_diseases": [
-    "influenza"
+    "influenza",
+    "influenza-like illness"
   ],
-  "study_design": "prospective, multi-center, open-label, phase III clinical trial",
-  "data_source_type": "clinical trial",
-  "population": "298 healthy children aged 6 months to <9 years in Australia",
-  "exposure_domain": "influenza vaccine",
+  "study_design": "prospective, open-label, phase III clinical trial",
+  "data_source_type": "primary clinical trial data collection",
+  "population": "healthy children aged 6 months to <9 years",
+  "exposure_domain": "influenza vaccination",
   "limitations": [
-    "None explicitly stated"
+    "lack of a placebo control group",
+    "open-label design",
+    "single geographic region (Australia)",
+    "compromised laboratory specimen for one confirmed influenza case"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -3,32 +3,34 @@
   "title": "The effect of H1N1 vaccination on serum miRNA expression in children: A tale of caution for microRNA microarray studies.",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "None. The study used serum samples obtained from children enrolled in an open-label randomised control trial.",
-  "summary": "The study investigated changes in serum microRNA expression in children 21 days after receiving a pandemic influenza (H1N1) vaccination using microarray profiling and RT-qPCR.",
+  "ehr_evidence": "Serum samples were obtained from children aged 6 months to 12 years enrolled in an open label randomised control trial of two pandemic influenza (H1N1) vaccines, in which participants received either ASO3B adjuvanted split virion or a whole virion non-adjuvanted vaccine.",
+  "summary": "A randomized controlled trial sub-study profiling serum microRNA expression in children before and 21 days after H1N1 vaccination using microarray and RT-qPCR, highlighting validation challenges.",
   "key_findings": [
-    "19 microRNAs were differentially expressed after vaccination in the discovery cohort.",
-    "miR-142-3p was downregulated in the discovery cohort but not replicated in the validation cohort.",
-    "Many microRNAs detected by microarray could not be validated by RT-qPCR."
+    "Microarray analysis identified 19 differentially expressed miRNAs post-vaccination (fold-change >1.2, adjusted p<0.05).",
+    "RT-qPCR confirmed significant downregulation of miR-142-3p in the discovery cohort (mean log2 fold-change = -0.312, p = 0.003).",
+    "Downregulation of miR-142-3p was not replicated in the validation cohort (mean log2 fold-change = 0.15, p = 0.89).",
+    "Only 3 out of 19 differentially expressed miRNAs were detectable by RT-qPCR, with many showing no amplification or high background."
   ],
   "captured_features": [
-    "Serum microRNA expression",
-    "H1N1 vaccination status"
+    "serum miRNA expression levels",
+    "microarray fluorescence values",
+    "RT-qPCR Ct values"
   ],
-  "pathologies_diseases": [
-    "H1N1 influenza"
-  ],
-  "study_design": "Open-label randomised control trial",
-  "data_source_type": "Clinical trial",
-  "population": "Children aged 6 months to 12 years",
-  "exposure_domain": "Vaccination",
+  "pathologies_diseases": [],
+  "study_design": "randomized controlled trial sub-study with microarray and RT-qPCR validation",
+  "data_source_type": "biospecimen / omics",
+  "population": "children aged 6 months to 12 years",
+  "exposure_domain": "H1N1 influenza vaccination",
   "limitations": [
-    "Small sample size in validation cohort (n=22)",
-    "Microarray findings were not consistently replicated by RT-qPCR"
+    "lack of replication in independent validation cohort",
+    "potential false positives from microarray cross-hybridization",
+    "single microarray platform used",
+    "limited to one post-vaccination timepoint"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

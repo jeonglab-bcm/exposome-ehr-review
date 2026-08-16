@@ -3,38 +3,30 @@
   "title": "Protection of newborn animals through maternal immunization.",
   "year": "2007",
   "ehr_used": false,
-  "ehr_evidence": "None mentioned; the manuscript focuses on veterinary medicine and maternal immunization in animals.",
-  "summary": "The manuscript provides an overview of maternal vaccination as a method to provide passive immunity to neonatal animals, discussing placental transport mechanisms and specific examples in cattle, dogs, and pigs.",
+  "ehr_evidence": "Narrative review of veterinary literature on maternal immunization in animals.",
+  "summary": "Narrative review discussing the use of maternal vaccination to provide passive immunity to neonatal animals (calves, puppies, piglets) against infectious diseases, highlighting safety, efficacy, and immunological mechanisms.",
   "key_findings": [
-    "Maternal vaccination is a successful approach for providing early life protection against infectious diseases in animals.",
-    "Passive immunity is transferred to neonates via the placenta or colostrum.",
-    "Vaccines for calf diarrhoea are well-established and safe in the field."
+    "No original empirical results reported; narrative review summarizing existing veterinary studies on maternal vaccine efficacy and passive immunity transfer."
   ],
-  "captured_features": [
-    "Maternal vaccine types",
-    "Antibody titers in colostrum and milk",
-    "Neonatal disease incidence"
-  ],
+  "captured_features": [],
   "pathologies_diseases": [
-    "neonatal diarrhoea",
-    "Escherichia coli",
-    "rotavirus",
-    "coronavirus",
-    "Cryptosporidium parvum"
+    "neonatal calf diarrhoea",
+    "canine herpesvirus-1 disease",
+    "post-weaning multisystemic syndrome (PWMS)"
   ],
-  "study_design": "Review/Overview",
-  "data_source_type": "Literature review",
-  "population": "Neonatal animals (cattle, dogs, pigs)",
-  "exposure_domain": "Maternal immunization",
+  "study_design": "narrative review",
+  "data_source_type": "literature review",
+  "population": "neonatal animals (calves, puppies, piglets)",
+  "exposure_domain": "maternal vaccination/immunization",
   "limitations": [
-    "Not a human pediatric study",
-    "Not an EWAS study",
-    "Focuses on veterinary medicine"
+    "narrative review format",
+    "no original quantitative data",
+    "focuses on veterinary models rather than human/pediatric populations"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

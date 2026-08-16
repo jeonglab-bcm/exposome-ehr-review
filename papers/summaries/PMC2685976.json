@@ -1,0 +1,43 @@
+{
+  "pmcid": "PMC2685976",
+  "title": "2009_PMC2685976_A_liposome-based_mycobacterial_vaccine_induces_potent_adult_and_",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "Specific pathogen-free C57BL/6 mice (7 days of age (1-week-old, neonates) or 8–12 weeks old (adult), Charles River) were bred and kept under specific pathogen-free conditions in the university zootechnology unit.",
+  "summary": "Preclinical murine study evaluating the immunogenicity, dendritic cell targeting, and protective efficacy of the CAF01 liposome-based adjuvant against tuberculosis in neonatal and adult mice.",
+  "key_findings": [
+    "Ag85B-ESAT-6/CAF01 significantly reduced post-challenge M. bovis BCG bacterial counts in spleen and lungs compared to Alum control (p<0.05).",
+    "Ag85B-ESAT-6/Alum did not confer protective efficacy, with CFU counts as high as in unimmunized controls.",
+    "Twenty-four hours post-immunization, 84.2 ± 4.8% of adjuvant-bearing cells in adult draining lymph nodes were CD11c+ DCs.",
+    "The proportion of total DCs bearing antigen and adjuvant was low (0.09 ± 0.04%), translating to 523 ± 254 Ag+Adj+ DCs per adult mouse.",
+    "In neonates, adjuvant-bearing cells were 71.2 ± 9.8% CD11c+ DCs, with a lower Ag+Adj+ proportion (28.6 ± 8.6%) and count (151 ± 119 DCs per mouse).",
+    "Vaccine-associated DCs peaked around Day 5 and were not detected by Day 21 post-immunization.",
+    "CAF01 induced sustained adult-like Th1 (IFN-γ, TNF-α) and Th17 (IL-17) responses in neonates comparable to adults (p>0.05)."
+  ],
+  "captured_features": [
+    "Cytokine production (IFN-γ, TNF-α, IL-2, IL-17, IL-5)",
+    "Dendritic cell surface markers (CD11c, CD40, CD86, CD205)",
+    "Bacterial colony-forming units (CFU) in spleen and lungs",
+    "T cell activation markers (CD44)",
+    "Fluorochrome-labeled antigen and adjuvant uptake"
+  ],
+  "pathologies_diseases": [
+    "Tuberculosis (Mycobacterium tuberculosis / M. bovis BCG infection)"
+  ],
+  "study_design": "Preclinical murine immunization and challenge model",
+  "data_source_type": "Animal model / experimental immunology",
+  "population": "C57BL/6 mice (neonates at 1 week of age and adults at 8-12 weeks)",
+  "exposure_domain": "Vaccine adjuvant (CAF01 formulation)",
+  "limitations": [
+    "Mouse model limitations in predicting human vaccine efficacy",
+    "Fluorochrome labeling intensity may not capture all labeled cell populations in vivo",
+    "Detection limits of the method may affect DC migration timing estimates",
+    "Short half-life of activated DCs complicates duration estimation of the phenomenon"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

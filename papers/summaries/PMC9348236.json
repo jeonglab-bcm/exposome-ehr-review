@@ -3,34 +3,36 @@
   "title": "Acute appendicitis in a patient immunised with COVID-19 vaccine: A case report with morphological analysis.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "Case report of a 58-year-old female who presented with acute appendicitis approximately 48 hours after receiving the first dose of the Pfizer-BioNTech COVID-19 vaccine.",
+  "ehr_evidence": "Clinical case presentation and hospital records of a single 58-year-old female patient at Careggi University Hospital.",
+  "summary": "Case report describing acute appendicitis occurring approximately 48 hours after the first dose of the Pfizer-BioNTech COVID-19 vaccine in a 58-year-old female, with histological evidence of Th1-driven granulomatous inflammation.",
   "key_findings": [
-    "Acute appendicitis occurred 48 hours after first dose of Pfizer-BioNTech vaccine.",
-    "Histology showed Th-1 driven granulomatous inflammation."
+    "A 58-year-old female developed acute appendicitis approximately 48 hours after her first Pfizer-BioNTech vaccine dose.",
+    "Histopathology revealed diffuse acute and chronic inflammatory infiltrates with non-necrotizing granulomas.",
+    "WHO causality assessment indicated a B1 rating (temporal relation consistent but insufficient definitive evidence)."
   ],
   "captured_features": [
-    "Symptoms (pain, fever, nausea, vomiting)",
-    "Abdominal ultrasound findings",
-    "CT scan findings",
-    "Histopathology"
+    "clinical symptoms",
+    "imaging findings",
+    "laboratory values",
+    "histopathology"
   ],
   "pathologies_diseases": [
     "acute appendicitis"
   ],
-  "study_design": "Case report",
-  "data_source_type": "Clinical case report",
-  "population": "58-year-old female",
-  "exposure_domain": "COVID-19 vaccine",
+  "study_design": "case report",
+  "data_source_type": "clinical case report / hospital records",
+  "population": "single 58-year-old female",
+  "exposure_domain": "COVID-19 mRNA vaccine",
   "limitations": [
-    "Single case report",
-    "Not a systematic study",
-    "Adult population"
+    "single case design",
+    "no control group",
+    "temporal association only",
+    "insufficient evidence for causality"
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "Data are available upon reasonable request to the corresponding author.",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

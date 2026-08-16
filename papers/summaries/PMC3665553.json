@@ -3,39 +3,43 @@
   "title": "Clonal expansion within pneumococcal serotype 6C after use of seven-valent vaccine.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "The study uses whole-genome sequences of 19 isolates rather than EHR or linked health data.",
-  "summary": "Genomic analysis of S. pneumoniae serotype 6C isolates to investigate clonal expansion and genetic plasticity following the introduction of the seven-valent pneumococcal conjugate vaccine (PCV7).",
+  "ehr_evidence": "Nasopharyngeal swabs were collected from children aged four years and under with written parental/guardian informed consent... All serotype 6C invasive disease isolates (n = 4) from blood or cerebrospinal fluid specimens received by the HPA South East regional microbiology laboratory between 2006 and 2010 were included",
+  "summary": "Genomic epidemiology study investigating clonal expansion and genetic diversity of Streptococcus pneumoniae serotype 6C following PCV7 vaccine introduction in Southampton, England.",
   "key_findings": [
-    "Four broad phylogenetically distinct lineages were identified.",
-    "Rapid clonal expansion occurred within a single MLST clonal complex (CC395).",
-    "Plasticity exists within current and potential vaccine-associated loci."
+    "Serotype 6C carriage increased fourfold from 3.8% in 2006/7 to 13.5% and 13.7% in subsequent winters.",
+    "The largest clonal complex (CC395) comprised 12 isolates and was uniquely characterized by a lantibiotic synthesis locus.",
+    "Single nucleotide polymorphisms separating isolates from the reference strain ranged from 8 to 19,829, with up to 172 SNPs within the CC395 clonal complex.",
+    "One carriage isolate (SOT2029) showed resistance to erythromycin and tetracycline and carried ermB and tetM resistance genes.",
+    "Two invasive isolates clustered together despite being collected two years apart, indicating persistence of a virulent clone."
   ],
   "captured_features": [
-    "Whole-genome sequences",
-    "MLST clonal complex",
-    "capsular locus",
-    "surface protein genes"
+    "whole-genome sequences",
+    "single nucleotide polymorphisms (SNPs)",
+    "multi-locus sequence types (MLST)",
+    "serotype 6C capsular locus",
+    "antibiotic resistance genes (ermB, tetM)",
+    "clinical status (carriage vs invasive disease)"
   ],
   "pathologies_diseases": [
     "invasive pneumococcal disease",
     "pneumonia",
     "septicaemia",
     "meningitis",
-    "sinusitis",
-    "acute otitis media"
+    "COPD exacerbation"
   ],
-  "study_design": "Genomic analysis and phylogenetic network construction",
-  "data_source_type": "Laboratory isolates",
-  "population": "Pediatric and adult population (implied by vaccine context)",
-  "exposure_domain": "Vaccination (PCV7)",
+  "study_design": "Genomic epidemiology study using whole-genome sequencing and phylogenetic network analysis",
+  "data_source_type": "Clinical bacterial isolates",
+  "population": "Children aged ≤4 years (carriage) and adult patients (invasive disease) in Southampton, England",
+  "exposure_domain": "PCV7 vaccine introduction",
   "limitations": [
-    "Small sample size (n=19)",
-    "Single geographical site"
+    "Small sample size (n=19 sequenced isolates)",
+    "Single geographical location (Southampton, England)",
+    "Cross-sectional collection limits temporal causal inference"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

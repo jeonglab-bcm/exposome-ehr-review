@@ -3,42 +3,42 @@
   "title": "Regional and social differences concerning overweight, participation in health check-ups and vaccination. Analysis of data from a whole birth cohort of 6-year old children in a prosperous German city.",
   "year": "2009",
   "ehr_used": true,
-  "ehr_evidence": "data of the medical check-up prior to school enrolment",
-  "summary": "Analysis of regional and social differences concerning overweight, participation in health check-ups, and vaccination among 6-year-old children in Munich, Germany.",
+  "ehr_evidence": "The main basis for the analyses are the data from the medical check-up of the cohort starting school in 2004, provided by the Department for Health and Environment of the City of Munich, Germany.",
+  "summary": "Analysis of a whole birth cohort of 6-year-old children in Munich, Germany, examining regional and social differences in overweight, preventive health check-up participation, and vaccination coverage.",
   "key_findings": [
-    "Large variation between school districts concerning overweight, health check-ups, and vaccinations",
-    "Mother tongue of parents is the most pronounced association with overweight and low check-up rates",
-    "Regional level influences are small when individual level social variables are controlled for"
+    "Children with non-German speaking parents had a 2.96 times higher risk of overweight (OR 2.96, 95% CI 2.56–3.42) compared to German-speaking parents.",
+    "Non-German speaking parents were associated with higher odds of incomplete health check-ups (OR 2.94, 95% CI 2.63–3.28) but lower odds of incomplete immunizations (OR 0.60, 95% CI 0.55–0.66).",
+    "School districts with a high percentage of low-education households showed increased odds of overweight (OR 1.81, 95% CI 1.47–2.24) and incomplete check-ups (OR 1.63, 95% CI 1.40–1.90), but decreased odds of incomplete immunizations (OR 0.77, 95% CI 0.68–0.88).",
+    "Children without kindergarten attendance had higher odds of incomplete check-ups (OR 2.07, 95% CI 1.67–2.56) and incomplete immunizations (OR 1.31, 95% CI 1.07–1.59)."
   ],
   "captured_features": [
-    "children's sex",
-    "mother tongue of the parents",
-    "Kindergarten visit",
-    "percentage of single-parent households",
-    "percentage of households with low educational level",
-    "overweight status",
-    "participation in health check-ups",
-    "vaccination status"
+    "BMI/overweight status",
+    "preventive health check-up participation (U1-U9)",
+    "vaccination status",
+    "child sex",
+    "parental mother tongue",
+    "kindergarten attendance",
+    "percentage of single-parent households per school district",
+    "percentage of low-education households per school district"
   ],
   "pathologies_diseases": [
-    "overweight",
-    "vaccination status",
-    "health check-up participation"
+    "overweight"
   ],
-  "study_design": "multilevel analysis of a birth cohort",
-  "data_source_type": "EHR",
-  "population": "9,353 children (6-year-olds) in Munich, Germany",
-  "exposure_domain": "social and regional variables",
+  "study_design": "Cross-sectional multilevel analysis",
+  "data_source_type": "School-entry medical check-up registry",
+  "population": "9,353 children starting school in 2004 in Munich, Germany",
+  "exposure_domain": "Socioeconomic and regional deprivation factors",
   "limitations": [
-    "limited number and scope of variables",
-    "lack of information on community and health care services",
-    "lack of information on social networks",
-    "lack of information on traffic noise and air pollution"
+    "Limited number of social and health indicators in the dataset",
+    "Lack of environmental exposure data (e.g., air pollution, traffic noise, green spaces)",
+    "Overweight classification based on German-specific 90th percentile cutoff",
+    "Regional variables act as ecological surrogates",
+    "Cross-sectional design limits causal inference"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

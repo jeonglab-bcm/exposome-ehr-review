@@ -3,37 +3,47 @@
   "title": "Deep phenotyping of the unselected COPSAC2010 birth cohort study.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "The study describes a prospective clinical cohort where data is collected during clinic visits and biobanking, rather than from an existing EHR database.",
-  "summary": "The COPSAC 2010 birth cohort study investigates the interaction between perinatal exposures (microbiome, maternal nutrition) and genetic factors in the development of chronic inflammatory diseases like asthma in children.",
+  "ehr_evidence": "All information was obtained by personal interview at clinical visits by medical doctors (MDs) and research assistants both with paediatric training. Medical, familial, environmental, and socio-economic histories were assessed by predeﬁned questions and closed response categories and entered online into a dedicated database running an audit trail (Oracle database on a Novel SQL server).",
+  "summary": "Cohort description of the COPSAC 2010 birth study, detailing recruitment, deep phenotyping protocols, biobanking, and embedded randomized controlled trials investigating perinatal exposures and genetic interactions on childhood allergic and inflammatory diseases.",
   "key_findings": [
-    "High adherence rate (95-98%) for clinic visits.",
-    "Recruitment of 738 mothers and 700 children.",
-    "Establishment of a longitudinal framework for deep phenotyping and biobanking."
+    "738 mothers were recruited from week 24 of gestation, and 700 of their children were included in the birth cohort.",
+    "Adherence was high with 685 children (98%) attending the 1 year clinic visit and 667 children (95%) attending the 2 year visit.",
+    "Participants had a higher prevalence of asthma, eczema, and hayfever, and higher income/education levels compared to non-participants."
   ],
   "captured_features": [
-    "Deep clinical phenotyping",
-    "biological samples",
-    "microbiome assessments",
-    "nutritional intake (vitamin D, fish oil)",
-    "clinical follow-up visits"
+    "clinical visit data",
+    "symptom diaries",
+    "physical examinations",
+    "lung function tests",
+    "biomarkers and cytokines",
+    "genomic data",
+    "microbiome sequencing",
+    "dietary questionnaires",
+    "environmental exposure history",
+    "national medication register data"
   ],
   "pathologies_diseases": [
     "asthma",
     "eczema",
-    "allergy"
+    "allergy",
+    "recurrent wheeze",
+    "allergic rhinitis",
+    "respiratory infections"
   ],
-  "study_design": "Prospective birth cohort study with clinical follow-up and randomized controlled trials",
-  "data_source_type": "Prospective clinical cohort",
-  "population": "Pregnant women and their offspring (children up to age 3) in eastern Denmark",
-  "exposure_domain": "human microbiome, maternal nutrition (vitamin D, fish oil), perinatal exposures",
+  "study_design": "prospective longitudinal birth cohort study with embedded randomized controlled trials",
+  "data_source_type": "prospective clinical cohort",
+  "population": "unselected cohort of pregnant women and their offspring in eastern Denmark, followed from pregnancy/infancy to age 3+ years",
+  "exposure_domain": "perinatal exposures, human microbiome, maternal nutrition, environmental factors, medications",
   "limitations": [
-    "Over-representation of atopic parents",
-    "Follow-up limited to age 3"
+    "over-representation of atopic parents",
+    "recruitment bias towards higher socioeconomic status",
+    "intensive follow-up schedule",
+    "primary outcome data not yet analyzed"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

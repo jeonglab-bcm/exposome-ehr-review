@@ -3,35 +3,42 @@
   "title": "Altered cortical thickness following prenatal sodium valproate exposure.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "No mention of EHR or linked health data; participants were recruited via hospital and community advertisements for a prospective study.",
-  "summary": "A study investigating the effects of prenatal sodium valproate (VPA) exposure on cortical thickness in children using MRI and neuropsychological assessments.",
+  "ehr_evidence": "Magnetic resonance imaging (MRI) scans were acquired on the 3T Siemens Magnetom Trio at Murdoch Childrens Research Institute, Melbourne, using a 12-channel coil.",
+  "summary": "Neuroimaging study comparing cortical thickness and verbal abilities in 16 children prenatally exposed to valproate versus 16 matched controls.",
   "key_findings": [
-    "Increased left inferior frontal gyrus (IFG) and left pericalcarine sulcus thickness in VPA-exposed children.",
-    "Association between VPA dose and right IFG thickness.",
-    "Absence of normal asymmetry in the IFG region of VPA-exposed children.",
-    "Relationship between verbal skills and left IFG thickness."
+    "Increased cortical thickness in left inferior frontal gyrus and left medial occipital cortex (P < 0.05, corrected).",
+    "Significant interaction between group and hemispheric thickness in inferior frontal region (F(1, 29) = 12.38, P = 0.001), showing absence of normal right-left asymmetry in exposed children.",
+    "VPA dose significantly correlated with right inferior frontal gyrus thickness (r = 0.57, P = 0.02).",
+    "No significant correlation between VPA dose and left inferior frontal gyrus thickness (r = -0.17, P = 0.53).",
+    "No significant difference in total cortical white and grey matter between groups (both P > 0.1).",
+    "Trend towards poorer verbal abilities and greater left inferior frontal gyrus thickness in exposed children (r = -0.42, P = 0.12)."
   ],
   "captured_features": [
-    "Cortical thickness",
-    "VPA dose",
-    "IQ scores",
-    "verbal skills",
-    "hemispheric asymmetry"
+    "MRI cortical thickness measurements",
+    "maternal VPA dose",
+    "hemispheric asymmetry",
+    "verbal comprehension index scores",
+    "IQ scores"
   ],
   "pathologies_diseases": [
-    "neurodevelopmental impairments"
+    "maternal epilepsy",
+    "neurodevelopmental impairment",
+    "language impairment"
   ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Clinical study",
-  "population": "Children (mean age 7.2-8.1 years)",
-  "exposure_domain": "Prenatal medication (sodium valproate)",
+  "study_design": "prospective case-control neuroimaging study",
+  "data_source_type": "MRI imaging and neuropsychological testing",
+  "population": "16 children (mean age 7.2 years) prenatally exposed to valproate and 16 age- and sex-matched controls (mean age 8.1 years)",
+  "exposure_domain": "prenatal antiepileptic drug exposure (sodium valproate)",
   "limitations": [
-    "Small sample size"
+    "small sample size (16 cases, 16 controls)",
+    "minor age discrepancy between groups",
+    "cross-sectional design limits causal inference",
+    "limited dose range (relatively low average dose)"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

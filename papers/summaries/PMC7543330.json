@@ -3,31 +3,28 @@
   "title": "Warp Speed for Coronavirus Disease 2019 (COVID-19) Vaccines: Why Are Children Stuck in Neutral?",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A viewpoint article advocating for the immediate initiation of phase 2 clinical trials for COVID-19 vaccines in children to address health, economic, and equity impacts.",
+  "ehr_evidence": "This is a viewpoint article synthesizing published literature and public health reports; no primary data source was used.",
+  "summary": "Viewpoint article advocating for the accelerated initiation of phase 2 clinical trials for COVID-19 vaccines in children, discussing potential direct and indirect benefits, safety concerns, and regulatory pathways.",
   "key_findings": [
-    "Pediatric COVID-19 vaccine trials are lagging behind adult trials.",
-    "Children face significant hospitalization and mortality risks from SARS-CoV-2.",
-    "Racial disparities exist in COVID-19 severity among children."
+    "No original empirical results; the manuscript is a narrative commentary."
   ],
   "captured_features": [],
   "pathologies_diseases": [
     "COVID-19",
-    "SARS-CoV-2",
     "multisystem inflammatory syndrome in children (MIS-C)"
   ],
-  "study_design": "Viewpoint",
-  "data_source_type": "None",
-  "population": "Children in the United States",
-  "exposure_domain": "None",
+  "study_design": "viewpoint/commentary",
+  "data_source_type": "published literature and public health reports",
+  "population": "children and adolescents",
+  "exposure_domain": "COVID-19 vaccination",
   "limitations": [
-    "Opinion piece",
-    "Not a primary research study"
+    "narrative viewpoint without primary data analysis",
+    "relies on cited literature and public health surveillance data"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

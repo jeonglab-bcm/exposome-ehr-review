@@ -3,33 +3,40 @@
   "title": "Genetic exploration of Dravet syndrome: two case report.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A case series of two Indonesian children with Dravet syndrome, focusing on genetic analysis using next-generation sequencing to identify mutations in the SCN1A gene and other genes.",
+  "ehr_evidence": "Whole genome sequencing (WGS), whole exome sequencing (WES), and Sanger sequencing were performed at 3Billion (Seoul, Korea).",
+  "summary": "Case series of two Indonesian children with Dravet syndrome, detailing clinical presentations, genetic findings via NGS, and treatment outcomes.",
   "key_findings": [
-    "Patient 1 had heterozygous deletion mutations in TTC21B, SCN1A, and SCN9A.",
-    "Patient 2 had a mutation in the SCN1A gene.",
-    "Clinical severity correlated with genetic mutation severity."
+    "Patient 1 (n=1) had a 552.9 Kb heterozygous deletion spanning TTC21B, SCN1A, and SCN9A, experiencing 6-7 seizures per day.",
+    "Patient 2 (n=1) had a heterozygous splice site mutation in SCN1A (c.4003-2A>G), with seizures reduced to one per year after medication adjustment.",
+    "Greater genetic mutation severity correlated with more severe clinical manifestations and poorer seizure control (n=2)."
   ],
   "captured_features": [
-    "Next-generation sequencing (NGS) results",
-    "clinical symptoms",
-    "developmental delay"
+    "clinical seizure characteristics",
+    "EEG findings",
+    "neuroimaging results",
+    "NGS genetic variants",
+    "treatment regimens",
+    "seizure frequency and outcomes"
   ],
   "pathologies_diseases": [
-    "Dravet syndrome"
+    "Dravet syndrome",
+    "developmental and epileptic encephalopathy",
+    "severe myoclonic epilepsy of infancy"
   ],
-  "study_design": "Case series",
-  "data_source_type": "Clinical records",
-  "population": "Two Indonesian children",
-  "exposure_domain": "None",
+  "study_design": "case series",
+  "data_source_type": "clinical case series and genetic testing",
+  "population": "two Indonesian children (aged 11 years 2 months and 1 year 4 months) with Javanese ethnicity",
+  "exposure_domain": "genetic mutations / next-generation sequencing",
   "limitations": [
-    "Small sample size",
-    "Case series design"
+    "small sample size (n=2)",
+    "lack of parental genetic testing for inheritance confirmation",
+    "single-center design",
+    "no control group"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

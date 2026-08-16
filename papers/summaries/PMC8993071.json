@@ -1,0 +1,36 @@
+{
+  "pmcid": "PMC8993071",
+  "title": "2022_PMC8993071_COVID-19_vaccination_in_5-11_years_old_children_Drivers_of_vacci",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "four focus group discussions were conducted with 28 vaccine-hesitant parents on November 8 and 9, 2021, three weeks after the submission of Pfizer-BioNTech’ application to Health Canada for approval of its pediatric formulation of its COVID-19 vaccine.",
+  "summary": "Qualitative study exploring drivers of COVID-19 vaccine hesitancy among parents of 5-11 year old children in Quebec using focus group discussions.",
+  "key_findings": [
+    "Out of 28 participants, seven intended to vaccinate their child(ren) while the remaining were unsure or unwilling.",
+    "Parents perceived vaccination as unnecessary due to low child risk and were concerned about side effects and political pressure.",
+    "Focus group findings may not be representative of most parents due to recruitment of vaccine-hesitant participants."
+  ],
+  "captured_features": [
+    "focus group transcripts",
+    "parental vaccination intentions",
+    "perceptions of vaccine safety and necessity"
+  ],
+  "pathologies_diseases": [
+    "COVID-19"
+  ],
+  "study_design": "qualitative focus group study",
+  "data_source_type": "focus group interviews",
+  "population": "parents of 5-11 year old children in Quebec, Canada",
+  "exposure_domain": "N/A",
+  "limitations": [
+    "recruited only vaccine-hesitant parents, limiting representativeness",
+    "small sample size (N=28)",
+    "qualitative design limits generalizability"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "low",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

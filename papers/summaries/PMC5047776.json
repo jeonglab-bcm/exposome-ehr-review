@@ -3,35 +3,49 @@
   "title": "Bisphenol A and Adiposity in an Inner-City Birth Cohort.",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "The study uses a prospective birth cohort (CCCEH) with urine samples and anthropometric measurements, not EHR.",
-  "summary": "A prospective birth cohort study examining the association between prenatal and early-childhood bisphenol A (BPA) exposure and childhood adiposity measures (FMI, %BF, WC) in a New York City birth cohort.",
+  "ehr_evidence": "Study subjects are participants in the prospective birth cohort of the Columbia Center for Children’s Environmental Health (CCCEH) in Northern Manhattan and the South Bronx, New York.",
+  "summary": "Longitudinal birth cohort study examining associations between prenatal and early-childhood urinary bisphenol A (BPA) exposures and childhood adiposity measures (FMI, %BF, WC, BMIZ) in an inner-city NYC population.",
   "key_findings": [
-    "Prenatal urinary BPA concentrations were positively associated with child age 7 FMI, %BF, and WC.",
-    "Child urinary BPA concentrations were not associated with child anthropometric outcomes."
+    "Prenatal urinary BPA was positively associated with age 7 FMI (β = 0.31 kg/m2; 95% CI: 0.01, 0.60, p = 0.04), %BF (β = 0.79; 95% CI: 0.03, 1.55, p = 0.04), and WC (β = 1.29 cm; 95% CI: 0.29, 2.30, p = 0.01).",
+    "Prenatal BPA was not associated with BMIZ at ages 5 or 7, or change in BMIZ between ages 5 and 7 (all p > 0.1).",
+    "The association between prenatal BPA and FMI was sex-specific, with positive associations observed in girls but not boys.",
+    "Child urinary BPA concentrations were not associated with childhood anthropometric outcomes (all p > 0.05).",
+    "Child BPA concentrations showed a borderline negative association with ΔBMIZ from 5 to 7 years (β = –0.10; 95% CI: –0.02, 0.005, p = 0.06)."
   ],
   "captured_features": [
-    "Prenatal urinary BPA concentrations",
-    "Child urinary BPA concentrations",
-    "BMIZ",
-    "FMI",
-    "%BF",
-    "WC"
+    "Urinary BPA concentrations",
+    "Urinary DEHP metabolites",
+    "Specific gravity",
+    "Height and weight",
+    "Body mass index z-scores (BMIZ)",
+    "Fat mass index (FMI)",
+    "Percent body fat (%BF)",
+    "Waist circumference (WC)",
+    "Birth weight",
+    "Gestational age",
+    "Maternal prepregnancy BMI and obesity status",
+    "Child sex and race/ethnicity"
   ],
   "pathologies_diseases": [
-    "obesity",
-    "adiposity"
+    "Adiposity",
+    "Overweight",
+    "Obesity"
   ],
-  "study_design": "Prospective birth cohort",
-  "data_source_type": "Birth cohort",
-  "population": "African American and Dominican women and children in Northern Manhattan and the South Bronx, NYC",
-  "exposure_domain": "Bisphenol A (BPA)",
+  "study_design": "Prospective longitudinal birth cohort study",
+  "data_source_type": "Prospective birth cohort / Biospecimen collection",
+  "population": "African American and Dominican mother-child pairs in Northern Manhattan and the South Bronx, New York (children followed to age 7 years)",
+  "exposure_domain": "Chemical exposure (Bisphenol A / endocrine disruptor)",
   "limitations": [
-    "Specific to an inner-city birth cohort"
+    "Use of spot urine samples leading to potential exposure misclassification due to low intraclass correlation",
+    "Lack of dietary data during pregnancy and childhood",
+    "Body composition assessed via bioelectrical impedance analysis rather than gold-standard methods",
+    "Lack of pubertal timing data to account for sex-specific developmental differences",
+    "Missing anthropometric and biomarker data due to loss to follow-up"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Associated Data Supplementary Materials(177 KB) PDF Click here for additional data file.",
-  "confidence": "high",
+  "data_availability_statement": "Associated DataSupplementary Materials(177 KB) PDFClick here for additional data file.",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

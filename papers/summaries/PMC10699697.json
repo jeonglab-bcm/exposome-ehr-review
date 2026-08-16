@@ -3,37 +3,41 @@
   "title": "Laboratory response to an infant with suspected measles vaccine associated fever and rash in Sri Lanka.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A laboratory-based case investigation of an infant in Sri Lanka who presented with fever and rash following a measles-containing vaccine, aimed at differentiating vaccine-associated illness from wild-type measles.",
+  "ehr_evidence": "This single center, laboratory-based case investigation was carried out in NML, Department of Virolgy at MRI, SL.",
+  "summary": "Laboratory investigation of a single 9-month-old infant in Sri Lanka who developed fever and rash following MMR vaccination, identifying vaccine-type measles virus and influenza A co-infection.",
   "key_findings": [
-    "Measles vaccine type A (Edmonston-strain) detected via sequencing in throat swab.",
-    "Influenza A RNA detected in throat swab at day three.",
-    "ParvoB19 IgM detected in blood sample at six weeks post-onset."
+    "Measles vaccine-type A (Edmonston-strain) virus was detected in 1 throat swab via RT-PCR and sequencing.",
+    "Measles IgM and IgG were positive at the sixth week of illness onset.",
+    "Influenza A RNA was detected in 1 throat swab at day three.",
+    "Parvovirus B19 IgM was detected in serum at the sixth week.",
+    "No evidence of human-to-human measles transmission was detected."
   ],
   "captured_features": [
-    "Blood sample",
-    "Throat swab",
-    "Measles IgM and IgG",
-    "RT-PCR results",
-    "Genotyping results"
+    "throat swab RT-PCR results",
+    "serum IgM/IgG serology",
+    "viral genotyping/sequencing data",
+    "clinical symptom timeline",
+    "vaccination history"
   ],
   "pathologies_diseases": [
     "measles",
     "influenza",
-    "parvovirus B19"
+    "parvovirus B19 infection"
   ],
-  "study_design": "Laboratory-based case investigation",
-  "data_source_type": "Laboratory samples",
-  "population": "One immunocompetent child (infant) in Sri Lanka",
-  "exposure_domain": "Vaccination (MMR vaccine)",
+  "study_design": "case report",
+  "data_source_type": "laboratory testing",
+  "population": "9-month-old immunocompetent infant in Sri Lanka",
+  "exposure_domain": "MMR vaccination",
   "limitations": [
-    "Single case study",
-    "Laboratory-based only"
+    "single case report (n=1)",
+    "potential confounding from concurrent influenza A infection",
+    "limited clinical and laboratory data due to sample volume constraints",
+    "resource-limited setting"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "Data sharing not applicable to this article as no datasets were generated or analyzed during the current study.",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

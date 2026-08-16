@@ -3,35 +3,40 @@
   "title": "Quantile regression to examine the association of air pollution with subclinical atherosclerosis in an adolescent population.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "Cross-sectional study using quantile regression to examine the association between ambient air pollution (NO2, PM2.5, PMcoarse, ultrafine particles) and carotid intima-media thickness (CIMT) in a Dutch adolescent birth cohort.",
+  "ehr_evidence": "Participants included in this study were part of the Prevention and Incidence of Asthma and Mite Allergy (PIAMA) population-based birth cohort established in the Netherlands in 1996.",
+  "summary": "Cross-sectional analysis using quantile regression to examine associations between early-life ambient air pollution exposure and carotid intima-media thickness (CIMT) at age 16 in a Dutch birth cohort.",
   "key_findings": [
-    "The study aims to explore if associations occur at different percentiles of the CIMT distribution."
+    "PM2.5 absorbance exposure at birth was significantly associated with a 6.23 μm (95% CI: 0.15, 12.3) higher CIMT per IQR increment at the 10th quantile of CIMT.",
+    "No significant associations were found for NO2, PM2.5, PMcoarse, or ultrafine particles at other quantiles after false discovery rate correction.",
+    "PM2.5 exposure at birth was weakly associated with higher CIMT at the 10th quantile (estimate: 4.85 μm, 95% CI: −0.41, 10.10) and 20th quantile (estimate: 3.73 μm, 95% CI: −0.74, 8.20).",
+    "PMcoarse and ultrafine particles did not display any consistent patterns across CIMT deciles."
   ],
   "captured_features": [
-    "CIMT",
-    "NO2",
-    "PM2.5",
-    "PM2.5 absorbance",
-    "PMcoarse",
-    "ultrafine particles",
-    "residential addresses"
+    "Carotid intima-media thickness (CIMT) measured via ultrasound",
+    "Annual average air pollution concentrations (NO2, PM2.5, PM2.5 absorbance, PMcoarse, ultrafine particles)",
+    "Covariates (age, sex, BMI, cholesterol, blood pressure, parental education, indoor smoke, maternal smoking/BMI, breastfeeding, nationality)",
+    "Residential addresses"
   ],
   "pathologies_diseases": [
-    "subclinical atherosclerosis",
-    "carotid intima-media thickness"
+    "Subclinical atherosclerosis",
+    "Carotid intima-media thickness (CIMT)",
+    "Cardiovascular disease risk"
   ],
-  "study_design": "Cross-sectional",
+  "study_design": "Cross-sectional analysis within a prospective birth cohort using quantile regression",
   "data_source_type": "Birth cohort",
-  "population": "363 adolescents (age 16) in the Dutch PIAMA birth cohort",
-  "exposure_domain": "air pollution",
+  "population": "363 adolescents aged 16 years from the PIAMA birth cohort in the Netherlands",
+  "exposure_domain": "Ambient air pollution (NO2, PM2.5, PM2.5 absorbance, PMcoarse, ultrafine particles)",
   "limitations": [
-    "Cross-sectional design"
+    "Cross-sectional design with only one CIMT measurement",
+    "Air pollution exposure estimated only at residential addresses, missing school/outdoor exposure",
+    "Low model R2 for PMcoarse (38%)",
+    "Relatively small sample size",
+    "Findings limited to the lowest decile of CIMT distribution"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

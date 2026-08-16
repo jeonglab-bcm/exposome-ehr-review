@@ -3,39 +3,49 @@
   "title": "The exposome in respiratory diseases: multiple preventable risk factors from early life to adulthood.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "Journal club review of three studies investigating environmental exposures (phthalates, air pollution, exposome profiles) and their impact on respiratory health (asthma, lung function) from early life to adulthood.",
+  "ehr_evidence": "This journal club article reviews three recent publications investigating the effects of environmental exposures... using data from the INMA and RHINESSA cohorts... NutriNet-Santé cohort. The actual sources were prospective/retrospective cohort data, questionnaires, biospecimen assays (urine), and environmental monitoring/GIS, not EHR.",
+  "summary": "Journal club commentary reviewing three cohort studies investigating the impact of environmental exposures (phthalates, air pollution, greenness, lifestyle factors) on respiratory health outcomes (lung function, asthma, rhinitis) from early life to adulthood.",
   "key_findings": [
-    "Regulation and reduction of phthalates and air pollution are supported.",
-    "Risk reduction requires a multi-interventional approach targeting early-life factors and healthy lifestyles in adulthood.",
-    "Exposome approach highlights complex relationships between multiple environmental exposures."
+    "Gestational phthalate exposure associated with lower FVC and FEV1 in children, especially early childhood (e.g., FEV1 z-score coefficient at age 4: −0.024 for 10% increase in MiBP).",
+    "Air pollutants associated with increased risk of asthma attacks (adjusted OR 1.60–2.46), rhinitis, and impaired lung function.",
+    "Greenness not associated with asthma or rhinitis, but associated with impaired lung function (adjusted OR 1.68–1.53).",
+    "Three early-life and one lifestyle exposure profiles associated with increased risk of asthma symptoms (mean score ratio 1.11–1.96) and uncontrolled asthma (OR 1.45–2.88)."
   ],
   "captured_features": [
-    "phthalate exposure",
-    "air pollution",
-    "greenness",
-    "exposome profiles",
-    "lung function",
-    "asthma",
-    "rhinitis"
+    "phthalate metabolites in urine",
+    "spirometry measures (FVC, FEV1)",
+    "air pollution levels (NO2, PM10, PM2.5, black carbon, O3)",
+    "greenness (NDVI)",
+    "physician-diagnosed asthma",
+    "asthma attacks",
+    "rhinitis",
+    "impaired lung function",
+    "87 exposome factors",
+    "asthma symptom score",
+    "asthma control status"
   ],
   "pathologies_diseases": [
     "asthma",
     "rhinitis",
-    "lung function"
+    "impaired lung function",
+    "reduced lung function"
   ],
-  "study_design": "Journal club review of prospective cohort studies",
-  "data_source_type": "Population-based cohorts",
-  "population": "Children and adults",
-  "exposure_domain": "phthalates, air pollution, green spaces, exposome",
+  "study_design": "journal club commentary reviewing cohort and cross-sectional studies",
+  "data_source_type": "cohort study data, questionnaires, biospecimen assays, environmental monitoring, spirometry",
+  "population": "mother-child pairs from Spain, adults from Norway and Sweden, and adults from France",
+  "exposure_domain": "phthalates, air pollution, greenness, socioeconomic, early-life environment, lifestyle-anthropometric factors",
   "limitations": [
-    "Review of only three studies",
-    "Exposome research in respiratory diseases is still in its infancy"
+    "small sample size and sociodemographic differences (INMA)",
+    "low response rate and selection bias (RHINESSA)",
+    "highly correlated exposures and lack of multi-pollutant models (RHINESSA)",
+    "health-conscious participant bias and lack of generalizability (NutriNet-Santé)",
+    "missing indoor/aeroallergen exposures",
+    "classification bias using symptom scores"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

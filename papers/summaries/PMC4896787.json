@@ -3,40 +3,45 @@
   "title": "Reactogenicity and safety of the human rotavirus vaccine, Rotarix™ in The Philippines, Sri Lanka, and India: a post-marketing surveillance study.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "None mentioned; the study is described as a post-marketing surveillance study.",
-  "summary": "A post-marketing surveillance study evaluating the reactogenicity and safety of the Rotarix™ rotavirus vaccine in infants in The Philippines, Sri Lanka, and India.",
+  "ehr_evidence": "Baseline demographic data was reported on the case report form by the investigators at the time of enrolment/first visit. AEs were recorded on diary cards after each vaccine dose.",
+  "summary": "Post-marketing surveillance study evaluating the reactogenicity and safety of the Rotarix™ rotavirus vaccine in healthy infants across The Philippines, Sri Lanka, and India.",
   "key_findings": [
-    "14.7% of infants in the Philippines, 14.9% in Sri Lanka, and 12.7% in India recorded at least Grade 2/3 solicited adverse events.",
-    "Most common solicited adverse events were irritability (Philippines and India) and fever (Sri Lanka).",
-    "41 serious adverse events (SAEs) were recorded in the Philippines, with 6 considered causally related to vaccination.",
-    "One vaccine-unrelated SAE occurred in a Sri Lankan infant."
+    "In The Philippines, 14.7% (95% CI: 12.9–16.7) of infants reported at least one Grade 2/3 solicited adverse event, with irritability most common (32.2% post-Dose-1; 23.5% post-Dose-2).",
+    "In Sri Lanka, 14.9% (95% CI: 12.0–18.3) reported Grade 2/3 solicited AEs, with fever most common (18.0% post-Dose-1; 20.2% post-Dose-2).",
+    "In India, 12.7% (95% CI: 9.3–16.7) reported Grade 2/3 solicited AEs, with irritability most common (23.0% post-Dose-1; 13.2% post-Dose-2).",
+    "Unsolicited AEs were reported in 24.5% of infants in The Philippines, 4.8% in Sri Lanka, and 6.9% in India.",
+    "Forty-one serious adverse events occurred in The Philippines, with six in four infants considered causally related to vaccination; no SAEs were reported in Sri Lanka or India."
   ],
   "captured_features": [
-    "solicited adverse events (fever, vomiting, diarrhea)",
+    "solicited adverse events (fever, vomiting, diarrhea, irritability, cough/runny nose, loss of appetite)",
     "unsolicited adverse events",
-    "serious adverse events (SAEs)",
-    "vaccine doses"
+    "serious adverse events",
+    "baseline demographics (age, gender, heritage)",
+    "case report forms",
+    "diary cards"
   ],
   "pathologies_diseases": [
     "rotavirus gastroenteritis",
-    "fever",
-    "vomiting",
-    "diarrhea",
+    "intussusception",
     "pneumonia",
     "urinary tract infection",
-    "intussusception"
+    "gastroenteritis"
   ],
-  "study_design": "post-marketing surveillance study",
-  "data_source_type": "surveillance study",
-  "population": "infants in The Philippines, Sri Lanka, and India",
-  "exposure_domain": "vaccination (Rotarix™)",
+  "study_design": "open, single-group, multi-center post-marketing surveillance study",
+  "data_source_type": "clinical trial",
+  "population": "healthy infants aged at least 6 weeks at first dose in The Philippines, Sri Lanka, and India",
+  "exposure_domain": "rotavirus vaccine (Rotarix™)",
   "limitations": [
-    "Not specified in the provided text"
+    "low sample size limiting detection of rare AEs",
+    "open, single-group design without controls",
+    "passive reporting leading to potential underreporting of AEs and SAEs",
+    "varying exclusion criteria across countries",
+    "loss to follow-up for the infant who developed intussusception"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

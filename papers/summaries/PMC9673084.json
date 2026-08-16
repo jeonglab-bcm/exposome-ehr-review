@@ -3,35 +3,42 @@
   "title": "Open-label phase I/II clinical trial of SARS-CoV-2 receptor binding domain-tetanus toxoid conjugate vaccine (FINLAY-FR-2) in combination with receptor binding domain-protein vaccine (FINLAY-FR-1A) in children.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "None; the study is a clinical trial.",
-  "summary": "A phase I/II open-label clinical trial evaluating the safety and immunogenicity of a heterologous SARS-CoV-2 vaccine scheme (FINLAY-FR-2 and FINLAY-FR-1A) in children aged 3-18 in Havana, Cuba.",
+  "ehr_evidence": "Data were collected through physical examinations, parent interviews, and clinical laboratory assays (PCR, ELISA, neutralization titers, T-cell response) conducted as part of the clinical trial.",
+  "summary": "Open-label phase I/II clinical trial evaluating the safety and immunogenicity of a heterologous SARS-CoV-2 vaccine regimen in children aged 3-18 years in Cuba.",
   "key_findings": [
-    "Local pain was the only adverse event with frequency > 10% and was not serious.",
-    "Two doses of FINLAY-FR-2 followed by a third dose of FINLAY-FR-1A increased the humoral immune response in all children.",
-    "Neutralizing titers were measured against Alpha, Delta, Beta, and Omicron variants."
+    "Local pain was the most common adverse event (47.7%), with no serious or severe vaccine-associated adverse events.",
+    "Two doses of FINLAY-FR-2 induced seroconversion in 96.2% (95% CI 93.5; 98.0) of participants.",
+    "The third heterologous dose increased seroconversion to 100% and anti-RBD IgG to 325.7 UA/ml.",
+    "Geometric mean neutralizing titers were 173.8 (95% CI 131.7; 229.5) vs Alpha, 142 (95% CI 101.3; 198.9) vs Delta, 24.8 (95% CI 16.8; 36.6) vs Beta, and 99.2 (95% CI 67.8; 145.4) vs Omicron.",
+    "Predicted clinical efficacy against D614G was 91.3% (95% CI 84.6; 95.1) after two doses and 97.4% (95% CI 91.5; 99.2) after three doses.",
+    "Immune response was non-inferior to young adults (cVNT50 GMT ratio 1.25, 95% CI 0.77; 2.02)."
   ],
   "captured_features": [
-    "anti-RBD immunoglobulin (Ig)G ELISA",
-    "molecular and live-virus neutralization titers",
-    "specific T-cells response",
-    "adverse events"
+    "adverse events",
+    "anti-RBD IgG titers",
+    "neutralizing antibody titers (mVNT50, cVNT50)",
+    "RBD-hACE2 inhibition",
+    "T-cell response (IFN-γ, IL-4)",
+    "demographic characteristics",
+    "PCR results"
   ],
   "pathologies_diseases": [
-    "COVID-19",
-    "SARS-CoV-2"
+    "SARS-CoV-2 infection",
+    "COVID-19"
   ],
-  "study_design": "Open-label phase I/II clinical trial",
-  "data_source_type": "Clinical trial",
-  "population": "350 children 3-18 years old in Havana, Cuba",
-  "exposure_domain": "Vaccination",
+  "study_design": "Open-label, adaptive, multicenter phase I/II clinical trial",
+  "data_source_type": "Primary clinical trial data",
+  "population": "Children and adolescents aged 3-18 years in Havana, Cuba",
+  "exposure_domain": "SARS-CoV-2 vaccination (FINLAY-FR-2 and FINLAY-FR-1A)",
   "limitations": [
-    "Not an environmental exposure study",
-    "Phase I/II trial"
+    "Lack of a placebo-controlled design due to ethical concerns",
+    "No concurrent reference population for immunobridging",
+    "Approximate comparison of viral neutralization titers between children and adults due to different sampling timepoints"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

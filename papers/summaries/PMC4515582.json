@@ -1,0 +1,56 @@
+{
+  "pmcid": "PMC4515582",
+  "title": "2013_PMC4515582_Are_Recent_Medical_Graduates_More_Skeptical_of_Vaccines",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "Surveys covering vaccine knowledge, attitudes, and beliefs were mailed in 2005 to 712 of these parent-identified providers.",
+  "summary": "Cross-sectional survey investigating the association between US primary care provider graduation year and beliefs regarding vaccine safety, efficacy, and disease susceptibility.",
+  "key_findings": [
+    "Recent graduates had 15% decreased odds of believing vaccines are efficacious compared to the preceding 5-year cohort (OR: 0.85, 95% CI: 0.73–0.99).",
+    "For every 5-year increase in graduation year, there was a 24% reduced odds of believing immunizations are one of the safest forms of medicine (OR: 0.76, 95% CI: 0.67–0.87).",
+    "Recent graduates had 1.3 times higher odds of believing immunizations do more harm than good (OR: 1.3, 95% CI: 1.0–1.8).",
+    "3.7% of recent graduates believed that immunizations do more harm than good.",
+    "Significant decreased odds of believing polio vaccines (IPV and OPV) were safe for recent compared to older graduates."
+  ],
+  "captured_features": [
+    "Provider graduation year",
+    "Vaccine efficacy beliefs",
+    "Vaccine safety beliefs",
+    "Disease susceptibility beliefs",
+    "Disease severity beliefs",
+    "Provider exemption status",
+    "Provider professional type"
+  ],
+  "pathologies_diseases": [
+    "polio",
+    "diphtheria",
+    "pertussis",
+    "tetanus",
+    "measles",
+    "mumps",
+    "rubella",
+    "Haemophilus influenzae type b",
+    "varicella",
+    "hepatitis B",
+    "invasive pneumococcal disease",
+    "influenza"
+  ],
+  "study_design": "cross-sectional survey",
+  "data_source_type": "survey",
+  "population": "primary care health care providers in the United States",
+  "exposure_domain": "provider graduation year (cohort effect)",
+  "limitations": [
+    "cross-sectional design prevents causal inference",
+    "graduation year used as proxy for age",
+    "non-representative sample nested within a case-control study",
+    "small sample size for some analyses",
+    "data collected in 2005 may not reflect current provider beliefs",
+    "limited patient sample per provider used to categorize exemption status"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "xml",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

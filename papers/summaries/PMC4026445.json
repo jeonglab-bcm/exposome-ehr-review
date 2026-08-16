@@ -3,36 +3,38 @@
   "title": "Determining prenatal, early childhood and cumulative long-term lead exposure using micro-spatial deciduous dentine levels.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "The study uses biological samples (blood, bone, and teeth) from a prospective cohort, not EHR.",
-  "summary": "Validation of micro-spatial dentine lead (Pb) levels as a biomarker for estimating prenatal, early childhood, and cumulative long-term lead exposure.",
+  "ehr_evidence": "Mother–child pairs in this study were drawn from the longitudinal birth cohort studies in Mexico City that comprise the Early Life Exposures in MExico and NeuroToxicology (ELEMENT) project.",
+  "summary": "Validation study assessing micro-spatial dentine lead levels as a biomarker for accurately estimating prenatal, early childhood, and long-term cumulative lead exposure by comparing them with maternal blood, bone, cord blood, and serial childhood blood samples.",
   "key_findings": [
-    "Dentine Pb at birth significantly associated with cord blood Pb (r=0.69).",
-    "Prenatal dentine Pb associated with maternal patella and tibia Pb.",
-    "Dentine Pb at 3 months associated with childhood blood Pb (r=0.64).",
-    "Secondary dentine Pb correlated with cumulative blood lead index (r=0.38)."
+    "Dentine Pb at birth significantly associated with cord blood Pb (Spearman r = 0.69; n = 27; p<0.0001).",
+    "Prenatal dentine Pb associated with maternal patella Pb (r = 0.48; n = 59; p<0.0001) and tibia Pb (r = 0.35; n = 41; p<0.03).",
+    "Dentine Pb at 3 months significantly associated with concurrent child blood Pb (r = 0.64; n = 55; p<0.0001).",
+    "Secondary dentine Pb correlated positively with cumulative blood lead index (CBLI) (r = 0.38; n = 75; p<0.0007).",
+    "Birth dentine Pb not significantly associated with child blood Pb after 2 years of age.",
+    "Secondary dentine Pb correlations with maternal bone and blood during pregnancy were weaker and statistically insignificant."
   ],
   "captured_features": [
-    "Dentine Pb levels",
-    "Maternal blood Pb",
-    "Maternal bone Pb",
-    "Umbilical cord blood Pb",
-    "Childhood serial blood Pb",
-    "Cumulative blood lead index (CBLI)"
+    "Dentine Pb levels (micro-spatial LA-ICP-MS)",
+    "maternal blood Pb",
+    "maternal bone Pb (tibia/patella)",
+    "umbilical cord blood Pb",
+    "serial childhood blood Pb",
+    "cumulative blood lead index (CBLI)"
   ],
-  "pathologies_diseases": [
-    "Lead exposure"
-  ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Biological samples",
-  "population": "Children (3 months to 6 years) and mothers in a prospective pregnancy cohort",
-  "exposure_domain": "Lead (Pb) exposure",
+  "pathologies_diseases": [],
+  "study_design": "prospective cohort biomarker validation study",
+  "data_source_type": "prospective birth cohort / biospecimen analysis",
+  "population": "85 mother-child pairs from the ELEMENT cohort in Mexico City, children followed from birth to 6-11 years",
+  "exposure_domain": "lead (Pb)",
   "limitations": [
-    "Small sub-sample size (n=85)"
+    "Incomplete biomarker data on all participants due to incomplete follow-up and sample collection",
+    "Only one tooth per participant analyzed, preventing assessment of tooth type influence",
+    "Small sample sizes for some specific comparisons"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

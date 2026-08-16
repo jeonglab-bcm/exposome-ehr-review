@@ -3,34 +3,38 @@
   "title": "Comparison of 1 Versus 2 Doses of Quadrivalent Influenza Vaccine in 3-8-Year-Old Children with Different Immunological States - Jiangsu Province, China, 2021.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A clinical trial assessing the immunogenicity and safety of one versus two doses of the quadrivalent influenza vaccine (QIV) in children aged 3–8 years in China, stratified by previous vaccination history.",
+  "ehr_evidence": "In this open-label, self-paired clinical trial conducted in Donghai County, Jiangsu Province, China (ClinicalTrials.gov number: NCT05313893), we enrolled healthy children aged 3–8 years.",
+  "summary": "Open-label, self-paired clinical trial comparing immunogenicity and safety of one versus two doses of quadrivalent influenza vaccine in children aged 3–8 years, stratified by prior vaccination history.",
   "key_findings": [
-    "Evidence supports a single dose of QIV for children aged 3–8 years who have previously received two or more doses of influenza vaccine.",
-    "Children who have not been previously vaccinated should still adhere to the recommended schedule of receiving two doses."
+    "Group A (previously vaccinated) showed GMT fold increases of 4.84–8.51 after dose 1, with slight decreases after dose 2 for H1N1 (0.92-fold, 95% CI: 0.85, 0.99) and BV (0.86-fold, 95% CI: 0.80, 0.93).",
+    "Group B (vaccine-naive) showed GMT fold increases of 6.09–20.41 after dose 1, with further increases after dose 2 for H1N1 (1.48-fold, 95% CI: 1.04, 1.31), BY (2.15-fold, 95% CI: 1.74, 2.66), and BV (1.57-fold, 95% CI: 1.33, 1.84).",
+    "Baseline serostatus significantly impacted antibody titers, with seropositive individuals consistently exhibiting higher titers regardless of dosage.",
+    "Adverse reaction incidence was 38.8% in Group A and 22.5% in Group B over 28 days, with no serious adverse events reported."
   ],
   "captured_features": [
-    "HI antibody titers",
-    "GMT",
-    "GMFI",
-    "SPR",
-    "SCR",
-    "adverse reactions"
+    "geometric mean titers (GMT)",
+    "seroconversion rate (SCR)",
+    "seroprotection rate (SPR)",
+    "adverse event incidence",
+    "baseline serostatus",
+    "vaccination history"
   ],
   "pathologies_diseases": [
     "influenza"
   ],
   "study_design": "open-label, self-paired clinical trial",
-  "data_source_type": "Clinical trial",
-  "population": "healthy children aged 3–8 years, Jiangsu Province, China",
-  "exposure_domain": "influenza vaccine",
+  "data_source_type": "clinical trial",
+  "population": "children aged 3–8 years in Jiangsu Province, China",
+  "exposure_domain": "influenza vaccination",
   "limitations": [
-    "Not specified"
+    "failure to investigate the durability of immune responses following vaccination",
+    "did not assess vaccine efficacy",
+    "lack of randomized comparison between one and two doses for long-term durability"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
   "data_availability_statement": "Supplementary data to this article can be found online.",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

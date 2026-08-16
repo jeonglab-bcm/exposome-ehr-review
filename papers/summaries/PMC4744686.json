@@ -3,39 +3,39 @@
   "title": "Exposure to grass pollen--but not birch pollen--affects lung function in Swedish children.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The study uses the Swedish birth cohort BAMSE, which involves clinical examinations and blood sampling, but does not mention the use of electronic health records (EHR).",
-  "summary": "A study investigating the impact of nine types of pollen and air pollution on lung function in Swedish children aged 8 and 16.",
+  "ehr_evidence": "Children belonging to the Swedish birth cohort BAMSE underwent clinical examination including lung-function testing and blood sampling for measuring serum immunoglobulin E (IgE) against common airborne and food allergens (ImmunoCAP System; Phadia AB, Uppsala, Sweden) at eight (N = 1838) and sixteen years of age (N = 2063) (year 2003 – 2004 and 2011 –2012, respectively).",
+  "summary": "Investigation of the effect of grass and birch pollen exposure on lung function in 8- and 16-year-old children from the Swedish BAMSE birth cohort.",
   "key_findings": [
-    "Exposure to grass pollen the day before testing was associated with reduced FEV1 in 8-year-olds.",
-    "The negative effect of grass pollen was stronger in children sensitized to pollen allergens.",
-    "Birch pollen did not show a significant effect on lung function."
+    "Increased grass pollen exposure the day before testing was associated with reduced FEV1 in 8-year-olds (-32.4 ml; 95% CI: -50.6 to -14.2 per 3 pollen counts/m³).",
+    "The negative effect was stronger in children sensitized to pollen allergens (FEV1: -41.6 ml; 95% CI: -68.3 to -14.8).",
+    "No associations were found for birch or other pollen exposure in 8-year-olds.",
+    "Pollen exposure was not related to lung function in 16-year-olds."
   ],
   "captured_features": [
-    "FEV1",
-    "FVC",
-    "FEV1/FVC ratio",
-    "serum IgE",
-    "pollen counts",
-    "ozone",
-    "NO2",
-    "PM10",
-    "PM2.5"
+    "FEV1 and FVC measurements",
+    "serum IgE sensitization status",
+    "daily pollen counts for 9 species",
+    "ambient air pollution levels (ozone, NO2, PM10, PM2.5)",
+    "demographic and clinical covariates (sex, age, height, allergic heredity)"
   ],
   "pathologies_diseases": [
-    "lung function",
-    "pollen allergy"
+    "allergic sensitization",
+    "reduced lung function"
   ],
-  "study_design": "Birth cohort study",
-  "data_source_type": "Birth cohort",
-  "population": "Swedish children (8 and 16 years old) in the Stockholm region",
-  "exposure_domain": "pollen and air pollution",
+  "study_design": "prospective birth cohort study",
+  "data_source_type": "birth cohort and environmental monitoring stations",
+  "population": "children aged 8 and 16 years from the BAMSE birth cohort in Stockholm, Sweden",
+  "exposure_domain": "airborne pollen and ambient air pollution",
   "limitations": [
-    "Study limited to the Stockholm region"
+    "Lung function tests were not conducted during the peak summer pollen season, limiting assessment of acute exposure.",
+    "Lack of IgG/IgG4 data to evaluate tolerance development.",
+    "Potential confounding by differences in indoor/outdoor time between age groups.",
+    "Relatively low pollen concentrations during study years."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

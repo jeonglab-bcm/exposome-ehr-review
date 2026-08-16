@@ -3,31 +3,42 @@
   "title": "Metal composition of ambient PM2.5 influences severity of allergic airways disease in mice.",
   "year": "2003",
   "ehr_used": false,
-  "ehr_evidence": "The study uses a mouse model of allergic airways disease induced by ovalbumin (OVA) antigen.",
-  "summary": "Experimental study using a mouse model to investigate if PM2.5 composition from industrial (Hettstedt) vs. non-industrial (Zerbst) cities influences the severity of allergic airways disease.",
+  "ehr_evidence": "We collected ambient air PM2.5 samples on Teflon filters in 1999 in Zerbst... and in Hettstedt... We used a well-characterized mouse model of allergic airways disease induced by ovalbumin (OVA) antigen...",
+  "summary": "Experimental study using an ovalbumin-sensitized mouse model to determine if PM2.5 composition influences allergic airway disease severity and links to prior human epidemiological findings.",
   "key_findings": [
-    "Hypothesized that PM2.5 from Hettstedt would enhance allergic sensitization, airway responsiveness, and lung inflammation compared to PM2.5 from Zerbst."
+    "Hettstedt PM2.5 administered before challenge increased PenH 190% compared to baseline, while Zerbst PM2.5 and control filter extract increased PenH 120% and 44%, respectively.",
+    "Hettstedt PM2.5 administered to allergic mice before challenge caused a significant increase in Mch responsiveness 2 days after challenge compared to allergic mice exposed to Zerbst PM2.5 or control filter extract.",
+    "Particles from Hettstedt increased sensitization to OVA allergen, as determined by serum levels of OVA-specific IgE collected 2 days after OVA challenge, when administered at either the sensitization phase or the challenge phase.",
+    "Eosinophil numbers in allergic mice exposed to Hettstedt PM2.5 before challenge were significantly increased 3-fold compared with allergic mice exposed both to control filter extract and to Zerbst PM2.5.",
+    "Both Hettstedt and Zerbst PM2.5 administered before challenge in allergic mice caused similar significant increases in protein, LDH, and NAG in comparison to corresponding nonallergic groups.",
+    "Levels of pro-inflammatory cytokines (TNF-α, IFN-γ) in allergic mice were increased 6- to 8-fold by exposure to either Hettstedt or Zerbst PM2.5 particles before challenge compared with control filter extract."
   ],
   "captured_features": [
-    "bronchoalveolar lavage (BAL) eosinophils",
-    "T-helper type 2 (Th2) allergic cytokines",
-    "airway hyperresponsiveness to methacholine (Mch)"
+    "PM2.5 metal composition",
+    "enhanced pause (PenH)",
+    "Mch responsiveness (PenH AUC)",
+    "serum OVA-specific IgE",
+    "BAL cell counts",
+    "BAL biochemical indices (protein, LDH, NAG)",
+    "BAL cytokines (IL-1β, IL-4, IL-5, IL-6, IL-13, MIP-2, TNF-α, IFN-γ)"
   ],
   "pathologies_diseases": [
     "allergic airways disease",
-    "asthma"
+    "allergic asthma"
   ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Animal model",
-  "population": "Mice",
-  "exposure_domain": "air pollution (PM2.5)",
+  "study_design": "experimental animal model study",
+  "data_source_type": "environmental monitoring and laboratory animal experiment",
+  "population": "female Balb/c mice, 7 weeks old",
+  "exposure_domain": "ambient PM2.5 and metal composition",
   "limitations": [
-    "Animal model study"
+    "limited sample quantities restricted sensitization phase analysis to allergic mice only",
+    "insufficient mice at 7 days post-challenge prevented statistical analysis",
+    "animal model may not fully replicate human allergic disease"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

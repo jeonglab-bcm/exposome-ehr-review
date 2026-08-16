@@ -3,37 +3,40 @@
   "title": "Vaccine-associated paralytic poliomyelitis: a case report of flaccid monoparesis after oral polio vaccine.",
   "year": "2007",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "Case report of the first confirmed recipient vaccine-associated paralytic poliomyelitis (VAPP) in Korea, involving a 4-month-old male who developed flaccid monoparesis after receiving the oral polio vaccine (OPV).",
+  "ehr_evidence": "Data source was direct clinical assessment, physical examination, laboratory tests, MRI, and electrodiagnostic evaluations on a single patient.",
+  "summary": "Case report describing a 4-month-old male infant in Korea who developed acute flaccid paralysis and persistent hypotonic monoparesis following oral polio vaccine administration.",
   "key_findings": [
-    "First officially approved recipient VAPP case in Korea.",
-    "Flaccid paralysis occurred 4 weeks after OPV immunization."
+    "First clinically confirmed case of vaccine-associated paralytic poliomyelitis (VAPP) in Korea.",
+    "Flaccid paralysis developed 4 weeks after OPV immunization.",
+    "Virus isolation from stool and CSF failed.",
+    "Persistent hypotonic monoparesis and atrophy remained after 18 months of rehabilitation therapy."
   ],
   "captured_features": [
-    "Age",
-    "Sex",
-    "Vaccination history",
-    "Clinical symptoms",
-    "Laboratory results",
-    "MRI results",
-    "Electrodiagnostic evaluations"
+    "clinical presentation",
+    "physical examination",
+    "MRI",
+    "electrodiagnostic evaluations",
+    "developmental screening tests",
+    "stool and CSF samples"
   ],
   "pathologies_diseases": [
-    "vaccine-associated paralytic poliomyelitis (VAPP)",
-    "flaccid monoparesis"
+    "vaccine-associated paralytic poliomyelitis",
+    "acute flaccid paralysis",
+    "hypotonic monoparesis"
   ],
-  "study_design": "Case report",
-  "data_source_type": "Clinical records",
-  "population": "4-month-old male child",
-  "exposure_domain": "Vaccination (Oral Polio Vaccine)",
+  "study_design": "case report",
+  "data_source_type": "clinical case report",
+  "population": "4-month-old male infant, Korea",
+  "exposure_domain": "oral polio vaccine (OPV)",
   "limitations": [
-    "Single case report",
-    "Small sample size"
+    "single case report limits generalizability",
+    "failed to isolate causative virus strain",
+    "diagnosis relied on clinical criteria without virological confirmation"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -3,35 +3,42 @@
   "title": "Effectiveness of introducing point of care capillary testing and linking screening with routine appointments for increasing blood lead screening rates of young children: a before-after study.",
   "year": "2015",
   "ehr_used": true,
-  "ehr_evidence": "Screening rates were determined from routinely collected service data",
-  "summary": "A before-after study evaluating the effectiveness of introducing point-of-care capillary testing and linking blood lead screening with routine child health programs (like immunizations) to increase screening rates in children in Broken Hill, Australia.",
+  "ehr_evidence": "Numerator data for all analyses were obtained from routinely collected data extracted from the Lead Management Program ACCESS database, which contains information on all blood lead tests conducted at both the mainstream and Indigenous health clinics.",
+  "summary": "Before-after study evaluating the impact of switching from venous to capillary blood lead screening and linking it with routine immunization appointments on screening participation rates among young children in Broken Hill, Australia.",
   "key_findings": [
-    "Annual screening rate increased from 0.39 in 2008 to 0.75 in 2012.",
-    "Greatest increases were observed in children aged 11–23 and 48–59 months.",
-    "Linking screening with well-accepted mainstream child health programs is an effective strategy to improve participation."
+    "Annual screening participation increased from 0.39 in 2008 to 0.75 in 2012.",
+    "Cumulative screening by 24 months increased from 0.63 for the 2007 birth cohort to 0.98 for the 2010 birth cohort.",
+    "Attendance stabilized after capillary screening was introduced and increased markedly when linked with immunization.",
+    "No evidence that changing to capillary sampling affected the estimate of the underlying population blood lead level, which continued to fluctuate at or slightly below previous levels.",
+    "No consistent change in the proportion of children with blood lead levels equal to or greater than 5 or 10 μg/dL."
   ],
   "captured_features": [
-    "Screening rates",
-    "Age",
-    "Blood lead levels",
-    "Attendance records"
+    "birth date",
+    "sex",
+    "date of test",
+    "address",
+    "area of town",
+    "numeric identifier",
+    "blood lead test results"
   ],
   "pathologies_diseases": [
-    "Lead exposure",
-    "Neuro-toxicity"
+    "elevated blood lead levels",
+    "lead poisoning"
   ],
-  "study_design": "Before-after study",
-  "data_source_type": "Service data",
-  "population": "Pre-school aged children in Broken Hill, NSW, Australia",
-  "exposure_domain": "Lead exposure",
+  "study_design": "before-after study",
+  "data_source_type": "EHR",
+  "population": "7–59 month old children resident in Broken Hill, NSW, Australia",
+  "exposure_domain": "blood lead levels",
   "limitations": [
-    "Before-after study design",
-    "Geographically limited to Broken Hill"
+    "use of administrative data sets to calculate denominators with assumed linear change between census years",
+    "uncertainty in NSW Midwives Data Collection due to time delays and lack of migration accounting",
+    "before-and-after design limits ability to control for other factors",
+    "single community setting without a control group"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

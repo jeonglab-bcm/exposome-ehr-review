@@ -3,33 +3,43 @@
   "title": "Efficacy of the pentavalent rotavirus vaccine, RotaTeq®, in Finnish infants up to 3 years of age: the Finnish Extension Study.",
   "year": "2010",
   "ehr_used": false,
-  "ehr_evidence": "The study is a clinical trial (REST and FES) and does not mention the use of EHR or linked health data.",
-  "summary": "The Finnish Extension Study (FES) evaluated the efficacy of the pentavalent rotavirus vaccine (RV5) in Finnish infants, following them for rotavirus-related hospitalizations and emergency department visits beyond the initial trial period.",
+  "ehr_evidence": "Monitoring for health care encounters in FES followed the same approach that was used to monitor infants in REST... episodes of AGE requiring hospitalisation or an ED visit were collected at prespecified 12-week intervals by automated short message service contacts, sent via mobile phones, or by direct telephone calls... Case report forms in FES were modelled after the case report forms in REST",
+  "summary": "Extension study (FES) evaluating the sustained efficacy of the pentavalent rotavirus vaccine (RV5) against rotavirus gastroenteritis and acute gastroenteritis hospitalizations and ED visits in Finnish infants up to 3.1 years post-vaccination.",
   "key_findings": [
-    "RV5 reduced RVGE hospitalizations and ED visits by 93.8% for up to 3.1 years.",
-    "RV5 had a substantial impact on all gastroenteritis-related hospitalizations and ED visits into the third year of life."
+    "RV5 reduced RVGE hospitalizations and ED visits by 93.8% (95% CI: 90.8–95.9%) over up to 3.1 years.",
+    "Vaccine efficacy against combined hospitalizations and ED visits was 93.9% (95% CI: 89.1–96.9%) in children 4-11 months, 94.4% (95% CI: 90.2–97.0%) in 12-23 months, and 85.9% (95% CI: 51.6–97.2%) in 24-35 months.",
+    "RV5 reduced all-cause acute gastroenteritis hospitalizations and ED visits by 62.4% (95% CI: 57.6–66.6%).",
+    "Efficacy against G1 rotavirus was 95.3% (95% CI: 92.5–97.2%), but results for G4 were not significant due to low case numbers.",
+    "No cases of intussusception were observed during the FES period."
   ],
   "captured_features": [
-    "rotavirus-related hospitalisations",
-    "emergency department (ED) visits",
-    "rotavirus serotype",
-    "acute gastroenteritis cases"
+    "RVGE hospitalizations",
+    "ED visits",
+    "acute gastroenteritis hospitalizations",
+    "rotavirus genotypes (G1, G2, G3, G4, G9)",
+    "intussusception cases",
+    "stool samples",
+    "demographic characteristics"
   ],
   "pathologies_diseases": [
-    "rotavirus gastroenteritis (RVGE)",
-    "acute gastroenteritis"
+    "rotavirus gastroenteritis",
+    "acute gastroenteritis",
+    "intussusception"
   ],
-  "study_design": "Double-blind, placebo-controlled, randomised trial with extension study",
-  "data_source_type": "Clinical trial",
-  "population": "Finnish infants up to 3 years of age",
-  "exposure_domain": "Vaccination (RV5)",
+  "study_design": "randomized, double-blind, placebo-controlled clinical trial (extension study)",
+  "data_source_type": "clinical trial registry / active surveillance",
+  "population": "Finnish infants enrolled at 6-13 weeks of age, followed up to 3.1 years post-vaccination",
+  "exposure_domain": "vaccine (rotavirus vaccine RV5)",
   "limitations": [
-    "Specific to a single vaccine and a specific geographic region."
+    "Small number of cases in year 3 limiting statistical power",
+    "Too few encounters for G2 and G4 serotypes to demonstrate significant efficacy",
+    "Wide confidence intervals for efficacy beyond 24 months",
+    "Variation in follow-up duration due to rolling enrollment"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "high",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

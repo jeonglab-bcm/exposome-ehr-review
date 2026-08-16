@@ -3,35 +3,43 @@
   "title": "Analysis By Deep Sequencing of Discontinued Neurotropic Yellow Fever Vaccine Strains.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "Genomic analysis of the discontinued French neurotropic yellow fever (FNV) vaccine strain using deep sequencing to characterize its genetic instability and neurotropic properties.",
+  "ehr_evidence": "Viruses. Wild-type French viscerotropic (FVV) and Asibi strains were obtained from the World Reference Center for Emerging Viruses and Arboviruses (Galveston, TX, USA) as lyophilized cell culture supernatant.",
+  "summary": "Deep sequencing and in silico analysis of archived yellow fever vaccine strains (FNV and 17D) and wild-type parental strains to assess genetic diversity, population structure, and reversion to wild-type identity in relation to neurotropic phenotypes.",
   "key_findings": [
-    "FNV strains show lower polymorphism content than the parental FVV strain.",
-    "Heterogeneity and reversion to wild-type identity were observed in FNV strains.",
-    "Specific population structures were associated with neurotropic properties.",
-    "Adaptation of FNV contributed to the neurotropic adverse phenotype."
+    "FNV strains showed lower genetic diversity than wild-type FVV, with 19 conserved amino acid substitutions across all four FNV strains.",
+    "Eight nucleotide positions were highly unstable, with reversion to wild-type identity most evident in low-neurotropism strains FNV-FC and FNV-NT.",
+    "FNV-FC and FNV-NT had higher variant counts (n=131 and n=165) and higher revertant frequencies than high-neurotropism strains FNV-Yale and FNV-IP (n=91 variants each).",
+    "17D-204 vaccine diversity was significantly lower than parental Asibi (mean NSE 0.029 vs 0.118, p < 0.001).",
+    "Kruskal-Wallis tests showed significant differences in NSE (X2 = 2773.51, df = 6, p < 0.001) and RMSD (X2 = 29970, df = 6, p < 0.001) across all seven strains."
   ],
   "captured_features": [
-    "Viral RNA sequences",
-    "polymorphism content",
-    "population structures"
+    "viral RNA sequences",
+    "single-nucleotide variants (SNPs)",
+    "consensus genotypes",
+    "normalized Shannon's entropy (NSE)",
+    "root-mean square distance (RMSD)",
+    "neurovirulence metrics (AST, LD50)"
   ],
   "pathologies_diseases": [
     "yellow fever",
-    "encephalitis"
+    "post-vaccination encephalitis",
+    "neurotropism",
+    "viscerotropism"
   ],
-  "study_design": "Genomic analysis of archive vaccine strains",
-  "data_source_type": "Archive viral strains",
-  "population": "Discontinued French neurotropic yellow fever (FNV) vaccine strains",
-  "exposure_domain": "Vaccine-related",
+  "study_design": "in vitro genomic sequencing and in silico bioinformatics analysis",
+  "data_source_type": "archived viral strains / biobank collections",
+  "population": "archived yellow fever virus strains (FNV, 17D-204, Asibi, FVV) from institutional and commercial collections",
+  "exposure_domain": "N/A",
   "limitations": [
-    "Limited availability of reference material",
-    "Passage histories not generally accessible"
+    "passage histories of archived strains are unknown",
+    "limited sample size of four FNV strains",
+    "neurovirulence data is historical and cited rather than generated in this study",
+    "relationship to original Dakar strain is unknown"
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "Pre-reduction datasets from sequencing analyses are available from the authors upon request.",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

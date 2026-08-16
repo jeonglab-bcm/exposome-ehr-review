@@ -3,44 +3,48 @@
   "title": "Reduction of in utero lead exposures in South African populations: Positive impact of unleaded petrol.",
   "year": "2017",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "The study assessed in utero lead (Pb) exposure and birth outcomes in a South African population following the removal of lead from petrol, measuring Pb in maternal blood, urine, and cord blood.",
+  "ehr_evidence": "Participants also consented to access and use of hospital birth outcome data (including maternal and neonate characteristics such as weight, length and head circumference, gestational age, Apgar score, as well as birth complications, if any) for research purposes. The actual data source was biological samples (maternal blood, urine, cord blood) and questionnaires.",
+  "summary": "Assessment of in utero lead exposure and its association with birth outcomes in a large South African cohort following the legislative removal of lead from petrol.",
   "key_findings": [
-    "Positive correlation between maternal blood Pb and cord blood Pb (rho = 0.65).",
-    "Geographical differences in gestational age, birth length, head circumference, and Apgar scores.",
-    "Positive association between cord blood Pb and head circumference in female neonates.",
-    "Maternal Pb levels were positively correlated with race, educational status, water sources, cooking fuels, and pesticide use."
+    "Overall, the geometric mean of maternal blood lead was 1.32 μg/dL (n = 640; 95% CI, 1.24–1.40).",
+    "In the subset cohort, paired maternal and cord blood lead levels were positively correlated (rho = 0.65, p < 0.001).",
+    "Geographical differences were found in gestational age (p<0.001), birth length (p=0.028), head circumference (p<0.001), Apgar score at 5 min (p<0.001), and parity (p<0.002).",
+    "In female neonates, cord blood lead was positively associated with head circumference (rho = 0.243; p<0.016).",
+    "No significant association was found between maternal blood lead and infant weight, length, or head circumference overall.",
+    "Multivariate analysis showed mothers who did not use pesticides at home had lower lead levels compared to those who did (β = -0.14; 95% CI, -0.26 to -0.02)."
   ],
   "captured_features": [
-    "Maternal blood Pb",
-    "Cord blood Pb",
-    "Maternal urine Pb",
-    "Gestational age",
-    "Birth length",
-    "Head circumference",
+    "maternal blood lead",
+    "cord blood lead",
+    "maternal urine lead",
+    "gestational age",
+    "birth weight",
+    "birth length",
+    "head circumference",
     "Apgar score",
-    "Parity",
-    "Race",
-    "Educational status",
-    "Water sources",
-    "Cooking fuels",
-    "Pesticide use"
+    "parity",
+    "maternal age",
+    "education level",
+    "race/ethnicity",
+    "water source",
+    "cooking fuel",
+    "pesticide use",
+    "dairy intake"
   ],
-  "pathologies_diseases": [
-    "congenital anomalies",
-    "premature labour"
-  ],
-  "study_design": "Observational cohort study",
-  "data_source_type": "Biological samples",
-  "population": "Pregnant women and neonates in South Africa",
-  "exposure_domain": "Lead (Pb) exposure",
+  "pathologies_diseases": [],
+  "study_design": "prospective cohort study",
+  "data_source_type": "biospecimen and questionnaire",
+  "population": "pregnant women and neonates in coastal regions of South Africa",
+  "exposure_domain": "environmental lead exposure",
   "limitations": [
-    "Study focuses on birth outcomes rather than long-term neurodevelopmental impacts in children."
+    "recall bias in dietary intake",
+    "cord blood samples limited to Indian Ocean sites only due to financial constraints",
+    "cross-sectional assessment at delivery"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

@@ -2,39 +2,46 @@
   "pmcid": "PMC4293007",
   "title": "Prenatal exposure to endocrine disrupting chemicals in relation to thyroid hormone levels in infants - a Dutch prospective cohort study.",
   "year": "2014",
-  "ehr_used": false,
-  "ehr_evidence": "Information on T4 levels in heel prick blood spots was obtained through the neonatal screening programme in the Netherlands.",
-  "summary": "A Dutch prospective cohort study assessing the association between prenatal exposure to various endocrine disrupting chemicals (EDCs) and thyroxine (T4) levels in newborns.",
+  "ehr_used": true,
+  "ehr_evidence": "information on T4 levels in heel prick blood spots was obtained through the neonatal screening programme in the Netherlands.",
+  "summary": "Prospective cohort study assessing the association between prenatal exposure to endocrine disrupting chemicals (EDCs) and thyroxine (T4) levels in newborns in the Netherlands.",
   "key_findings": [
-    "Girls in the highest quartile of DDE and PFOA exposure showed an increased T4 level.",
-    "Boys in the second quartile of exposure for both PFOS and PFOA showed a lower T4 level, though this was attenuated after full adjustment.",
-    "No effects were observed for other compounds."
+    "Girls in the highest quartile of DDE exposure showed significantly increased T4 levels compared to the lowest quartile (+24.8 nmol/L, 95% CI 0.79, 48.75; p=0.043).",
+    "Girls in the highest quartile of PFOA exposure showed significantly increased T4 levels compared to the lowest quartile (+38.6 nmol/L, 95% CI 13.34, 63.83; p=0.004).",
+    "Boys in the second quartile of PFOS and PFOA exposure had lower T4 levels in crude models, but associations were attenuated and non-significant after full adjustment.",
+    "No significant associations were observed for DEHP metabolites, PCB-153, or HCB."
   ],
   "captured_features": [
-    "DDE levels",
-    "DEHP metabolites",
-    "HCB levels",
-    "PCB-153 levels",
-    "PFOS levels",
-    "PFOA levels",
-    "T4 levels",
-    "gender",
-    "covariates"
+    "T4 levels from heel prick blood spots",
+    "DDE, PFOS, PFOA, PCB-153, HCB, DEHP metabolites in cord plasma and breast milk",
+    "birth weight",
+    "gestational age",
+    "parity",
+    "caesarean section",
+    "maternal BMI",
+    "maternal smoking and alcohol intake",
+    "maternal age"
   ],
   "pathologies_diseases": [
-    "thyroxine (T4) levels"
+    "congenital hypothyroidism",
+    "thyroid hormone disruption"
   ],
   "study_design": "prospective cohort study",
-  "data_source_type": "screening programme",
-  "population": "newborns in a mother-child cohort in the Netherlands (n=83)",
+  "data_source_type": "EHR / national registry",
+  "population": "83 mother-child pairs (newborns) in the Netherlands",
   "exposure_domain": "endocrine disrupting chemicals (EDCs)",
   "limitations": [
-    "relatively small study population"
+    "small sample size (n=83)",
+    "reduced statistical power due to quartile and gender stratification",
+    "no correction for multiple testing",
+    "T4 measured 4-7 days post-birth",
+    "lack of thyroid binding protein data",
+    "homogenous population limits generalizability"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

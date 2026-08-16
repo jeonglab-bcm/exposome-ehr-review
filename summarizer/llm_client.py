@@ -34,9 +34,31 @@ MAX_RETRIES = 3
 # Output token budget. Generous default so the reasoning-heavy model never
 # truncates mid-JSON; override with GEMMA_MAX_TOKENS. (Server context is 256K.)
 MAX_OUTPUT_TOKENS = int(os.environ.get("GEMMA_MAX_TOKENS", "32768"))
-# Approximate char budget for the source text sent to the model. The model
-# reasons heavily, so a tighter budget leaves tokens for the JSON output.
-SOURCE_CHAR_BUDGET = 6000
+# Approximate char budget for the source text sent to the model. Median
+# extracted full text is ~40K chars, so the old 6000 budget showed the model
+# only the abstract + start of the introduction — it never saw the Results,
+# and correctly reported as much ("results not provided in the snippet").
+# (Server context is 256K; 100K chars is ~25-30K tokens.)
+SOURCE_CHAR_BUDGET = 100_000
+
+
+def _backoff_seconds(exc: Exception, attempt: int) -> float:
+    """Seconds to wait before retrying a failed call.
+
+    Rate limits need far longer than transient network errors: the endpoint is
+    a single self-hosted llama-swap instance, so a 429 means "another worker
+    holds the model", not "retry in two seconds". Honours Retry-After when the
+    server sends one.
+    """
+    retry_after = getattr(getattr(exc, "response", None), "headers", {}) or {}
+    try:
+        if (ra := retry_after.get("retry-after")) is not None:
+            return min(float(ra), 120.0)
+    except (TypeError, ValueError):
+        pass
+    if getattr(exc, "status_code", None) == 429 or "429" in str(exc):
+        return min(15.0 * (2 ** (attempt - 1)), 120.0)   # 15s, 30s, 60s…
+    return 2.0 * attempt
 
 
 def _env(key: str, default: str) -> str:
@@ -85,7 +107,9 @@ def build_user_prompt(text: str) -> str:
         "ehr_used": True,
         "ehr_evidence": "We used Hospital Episode Statistics (HES).",
         "summary": "EWAS of childhood T1DM across England.",
-        "key_findings": ["15 of 53 environmental factors associated with T1DM."],
+        "key_findings": ["15 of 53 environmental factors were associated with "
+                         "T1DM incidence (strongest: PM2.5, beta=0.31, p<0.001).",
+                         "No association was found with maternal age (p=0.62)."],
         "captured_features": ["HES ICD codes", "incident diabetes cases"],
         "pathologies_diseases": ["type 1 diabetes"],
         "study_design": "ecological EWAS",
@@ -102,8 +126,34 @@ def build_user_prompt(text: str) -> str:
         "Example output shape:\n"
         + json.dumps(example, ensure_ascii=False) + "\n\n"
         "Rules:\n"
-        "- ehr_used is a JSON boolean (true/false).\n"
+        "- ehr_used is a JSON boolean (true/false). Set it true ONLY if the "
+        "study analyses data that is all three of: electronic/computerised, "
+        "individual-level (per-person records, not aggregate counts), and "
+        "routinely collected for care, billing, or public-health "
+        "administration (it already existed before this study).\n"
+        "    COUNTS AS TRUE: EHR/EMR systems; insurance or administrative "
+        "claims; hospital discharge or episode databases; national/regional "
+        "health registries (birth, patient, immunization, cancer, "
+        "prescription); studies linking any of these.\n"
+        "    COUNTS AS FALSE: manual or paper chart review done by the study "
+        "team; questionnaires, interviews, or clinical exams conducted for "
+        "this study; biospecimen assays; environmental monitoring; aggregate "
+        "counts with no individual records.\n"
+        "- ehr_evidence: quote the sentence naming the DATA SOURCE. Never put "
+        "a list of variables here. When ehr_used is false, say what the source "
+        "actually was.\n"
         "- confidence is lowercase: high, medium, low, or unclear.\n"
+        "- key_findings: report THIS study's own results, each with the "
+        "quantitative value as published (effect size, OR/HR/beta, CI, "
+        "p-value, or N). If a result was null, say so explicitly "
+        "(e.g. 'no significant association between X and Y'). Do NOT restate "
+        "the study's aim, title, or methods as a finding.\n"
+        "- Take findings ONLY from the Results/Discussion. Never report a "
+        "result from the Introduction's cited prior literature as this "
+        "study's own.\n"
+        "- Describe the study, never the input you were given. Do not write "
+        "that text is truncated, missing, or not provided — if a field cannot "
+        "be filled from the text, use an empty list or empty string.\n"
         "- Output ONLY the JSON object, starting with { and ending with }.\n\n"
         "=== MANUSCRIPT TEXT ===\n" + text
     )
@@ -224,7 +274,7 @@ def summarize_text(
             raw = resp.choices[0].message.content or ""
         except Exception as e:  # network / API error → wait + retry
             last_err = f"API error: {e}"
-            time.sleep(2 * attempt)
+            time.sleep(_backoff_seconds(e, attempt))
             continue
 
         obj = extract_json_object(raw)
@@ -295,11 +345,11 @@ def _extract_one_chunk(client, model, chunk: str, pmcid: str) -> dict[str, Any] 
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": build_user_prompt(chunk)},
     ]
-    for _ in range(MAX_RETRIES):
+    for attempt in range(1, MAX_RETRIES + 1):
         try:
             raw, _fr = _call_llm(client, model, messages)
-        except Exception:
-            time.sleep(2)
+        except Exception as e:
+            time.sleep(_backoff_seconds(e, attempt))
             continue
         obj = extract_json_object(raw)
         if obj is not None:

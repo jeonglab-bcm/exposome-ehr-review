@@ -1,0 +1,42 @@
+{
+  "pmcid": "PMC7006828",
+  "title": "2020_PMC7006828_Kansan_Guardian_Perceptions_of_HPV_and_the_HPV_Vaccine_and_the_R",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "Eligible Kansas guardians of children aged 9 - 17 years completed an online survey.",
+  "summary": "Cross-sectional survey study assessing Kansas guardians' perceptions of HPV and the HPV vaccine, and the influence of social media messages on those perceptions and vaccination decisions.",
+  "key_findings": [
+    "57.9% (n=55) of guardians reported seeing information about HPV and the HPV vaccine on social media.",
+    "Guardians who saw HPV vaccine information on social media were significantly more likely to perceive the vaccine could kill their child compared to those who did not (M=2.50, SD=1.62 vs M=1.74, SD=0.85; t(79)=0.019).",
+    "Children of guardians with annual household income ≥$100,000 were significantly more likely to have received at least one HPV vaccine dose than children of guardians earning <$100,000 (p=0.003).",
+    "Higher HPV vaccine harm perception scores significantly predicted lower effectiveness perception scores (β=-0.451, R=0.620, F[1,57]=35.63, p<0.0001), explaining 38.5% of the variance."
+  ],
+  "captured_features": [
+    "Demographic characteristics (sex, age, race, education, income, region)",
+    "Child demographic characteristics and age",
+    "Self-reported HPV vaccination status",
+    "Social media use and exposure to HPV/HPV vaccine information",
+    "Perception scales (susceptibility, severity, benefits, barriers, cues to action, self-efficacy)"
+  ],
+  "pathologies_diseases": [
+    "Human papillomavirus (HPV)",
+    "HPV-related cancers",
+    "Genital warts"
+  ],
+  "study_design": "Cross-sectional online survey",
+  "data_source_type": "Survey",
+  "population": "Kansas guardians of children aged 9-17 years",
+  "exposure_domain": "Social media messages about HPV and HPV vaccine",
+  "limitations": [
+    "Convenience sampling with a small, non-representative sample (n=95)",
+    "Self-reported vaccination status and perceptions subject to recall and social desirability bias",
+    "Cross-sectional design precludes causal inference",
+    "Limited generalizability to other regions or demographics"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "low",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

@@ -43,6 +43,7 @@ class PaperResult:
     pmcid: str
     status: str  # "ok" | "skipped" | "failed"
     checklist: ManuscriptChecklist | None = None
+    error: str = ""  # why it failed — otherwise failures are silent
 
 PAPERS_DIR = Path("papers")
 SUMMARY_DIR = PAPERS_DIR / "summaries"
@@ -67,6 +68,22 @@ def discover_files() -> list[Path]:
     return files
 
 
+def load_all_summaries(summary_dir: Path) -> list[ManuscriptChecklist]:
+    """Every valid per-paper checklist on disk.
+
+    The combined file is rebuilt from this rather than from just the papers a
+    given run touched — otherwise a partial or failed run truncates it (a failed
+    single-paper run once left the combined file at n=0).
+    """
+    out: list[ManuscriptChecklist] = []
+    for p in sorted(summary_dir.glob("*.json")):
+        try:
+            out.append(ManuscriptChecklist.model_validate_json(p.read_text()))
+        except Exception as e:
+            print(f"  ⚠ unreadable summary {p.name}: {type(e).__name__}: {e}")
+    return out
+
+
 def find_failed() -> list[Path]:
     """Files whose PMCID has no summary JSON yet (the failed/missing set)."""
     done = {p.stem for p in SUMMARY_DIR.glob("*.json")}
@@ -81,6 +98,7 @@ def _process_one(
     chunked: bool,
     recover: bool,
     summary_dir: Path,
+    force: bool = False,
 ) -> PaperResult:
     """Process a single paper: extract -> summarize -> write per-paper JSON.
 
@@ -90,8 +108,8 @@ def _process_one(
     pmcid = pmcid_from_filename(path)
     out_path = summary_dir / f"{pmcid}.json"
 
-    # Skip if a valid cached summary exists
-    if out_path.exists():
+    # Skip if a valid cached summary exists (unless --force re-summarizes)
+    if out_path.exists() and not force:
         try:
             checklist = ManuscriptChecklist.model_validate_json(out_path.read_text())
             return PaperResult(pmcid=pmcid, status="skipped", checklist=checklist)
@@ -124,13 +142,16 @@ def _process_one(
                 )
         out_path.write_text(checklist.model_dump_json(indent=2))
         return PaperResult(pmcid=pmcid, status="ok", checklist=checklist)
-    except Exception:
-        return PaperResult(pmcid=pmcid, status="failed", checklist=None)
+    except Exception as e:
+        return PaperResult(pmcid=pmcid, status="failed", checklist=None,
+                           error=f"{type(e).__name__}: {e}")
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--pmcid", help="Summarize a single paper by PMCID.")
+    ap.add_argument("--pmcid", nargs="+",
+                    help="Summarize specific papers by PMCID "
+                         "(space- or comma-separated).")
     ap.add_argument("--limit", type=int, help="Only process the first N papers.")
     ap.add_argument("--force", action="store_true",
                     help="Re-summarize even if a cached JSON exists.")
@@ -151,12 +172,16 @@ def main(argv: list[str] | None = None) -> int:
     if args.recover:
         files = find_failed()
     elif args.pmcid:
-        pmcid = args.pmcid.upper()
-        if not pmcid.startswith("PMC"):
-            pmcid = f"PMC{pmcid}"
-        files = [f for f in discover_files() if pmcid_from_filename(f) == pmcid]
+        wanted = {
+            p if p.startswith("PMC") else f"PMC{p}"
+            for raw in args.pmcid for part in raw.split(",")
+            if (p := part.strip().upper())
+        }
+        files = [f for f in discover_files() if pmcid_from_filename(f) in wanted]
+        missing = wanted - {pmcid_from_filename(f) for f in files}
+        if missing:
+            print(f"No downloaded file for: {', '.join(sorted(missing))}", file=sys.stderr)
         if not files:
-            print(f"No downloaded file found for {pmcid}", file=sys.stderr)
             return 1
     else:
         files = discover_files()
@@ -195,14 +220,14 @@ def main(argv: list[str] | None = None) -> int:
                   f"{len(result.checklist.captured_features)} feature(s)")
         else:
             failed += 1
-            print(f"  {result.pmcid}  ✗ failed")
+            print(f"  {result.pmcid}  ✗ failed — {result.error or 'unknown error'}")
 
     if args.workers <= 1:
         for idx, path in enumerate(files, 1):
             result = _process_one(
                 path=path, meta=meta, client=client, model=model,
                 chunked=args.chunked, recover=args.recover,
-                summary_dir=SUMMARY_DIR,
+                summary_dir=SUMMARY_DIR, force=args.force,
             )
             _handle(result)
     else:
@@ -211,17 +236,21 @@ def main(argv: list[str] | None = None) -> int:
                 pool.submit(
                     _process_one, path=p, meta=meta, client=client, model=model,
                     chunked=args.chunked, recover=args.recover,
-                    summary_dir=SUMMARY_DIR,
+                    summary_dir=SUMMARY_DIR, force=args.force,
                 ): p for p in files
             }
             for fut in as_completed(futures):
                 _handle(fut.result())
 
     # ── combined file ───────────────────────────────────────────────────
-    checklists.sort(key=lambda c: (c.year, c.pmcid))
-    batch = SummaryBatch(n=len(checklists), model=model, summaries=checklists)
+    # Rebuilt from every per-paper JSON on disk, so a partial run adds to the
+    # combined file instead of replacing it with only what it processed.
+    all_checklists = load_all_summaries(SUMMARY_DIR)
+    all_checklists.sort(key=lambda c: (c.year, c.pmcid))
+    batch = SummaryBatch(n=len(all_checklists), model=model, summaries=all_checklists)
     COMBINED_PATH.write_text(batch.model_dump_json(indent=2))
-    n_ehr = sum(1 for c in checklists if c.ehr_used)
+    n_ehr = sum(1 for c in all_checklists if c.ehr_used)
+    checklists = all_checklists
 
     print("=" * 60)
     print(f"  Summarized : {ok}")

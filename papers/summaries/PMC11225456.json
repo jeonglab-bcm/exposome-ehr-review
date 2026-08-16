@@ -3,39 +3,48 @@
   "title": "Nasopharyngeal carriage and antibiotic susceptibility patterns of streptococcus pneumoniae, haemophilus influenzae, moraxella catarrhalis and staphylococcus aureus among urban Ugandan children post-PCV10 introduction: a cross-sectional study.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "The study describes a cross-sectional study where samples were isolated from children attending a clinic, not an analysis of an EHR database.",
-  "summary": "A cross-sectional study assessing nasopharyngeal carriage and antibiotic resistance of Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catarrhalis, and Staphylococcus aureus in urban Ugandan children 5 years after PCV10 vaccine introduction.",
+  "ehr_evidence": "Nasopharyngeal samples were collected from the children by using single sterile swabs... sent to the Clinical Microbiology Laboratory... an interviewer-administered questionnaire was used to collect clinical and demographic data.",
+  "summary": "Cross-sectional study assessing nasopharyngeal carriage and antibiotic susceptibility patterns of four respiratory bacterial pathogens among urban Ugandan children 5 years post-PCV10 vaccine introduction.",
   "key_findings": [
-    "Overall carriage prevalence was 62%",
-    "Pneumococcus carriage was 46%",
-    "High resistance to cotrimoxazole (100%), erythromycin (76%), and tetracycline (52%)",
-    "Microbial shifts: decrease in pneumococcus, M. catarrhalis, and S. aureus carriage; increase in H. influenzae carriage"
+    "Overall bacterial carriage prevalence was 62% (120/194).",
+    "Carriage was significantly associated with a history of antibiotic use (p=0.0159) and respiratory symptoms (p=0.0003).",
+    "S. pneumoniae, H. influenzae, M. catarrhalis, and S. aureus carriage prevalences were 46% (90/194), 21% (40/194), 7% (14/194), and 6% (12/194), respectively.",
+    "Species co-carriage occurred in 17% (32/194) of children, predominantly S. pneumoniae + H. influenzae (23 children).",
+    "Pneumococci showed high resistance to cotrimoxazole (100%), erythromycin (76%), and tetracycline (52%), with 42% being multidrug-resistant.",
+    "H. influenzae isolates were highly resistant to cotrimoxazole (100%) and tetracycline (75%).",
+    "Post-PCV10 introduction was associated with decreased pneumococcal carriage and increased H. influenzae carriage compared to pre-PCV10 data, alongside increased antibiotic resistance."
   ],
   "captured_features": [
-    "Nasopharyngeal carriage rates",
-    "Antibiotic susceptibility profiles",
-    "Vaccination status",
-    "History of antibiotic use",
-    "Respiratory symptoms"
+    "Nasopharyngeal swab culture results",
+    "antibiotic susceptibility testing (MIC and disc diffusion)",
+    "demographic and clinical questionnaire data",
+    "vaccination status",
+    "antibiotic use history",
+    "respiratory symptom status"
   ],
   "pathologies_diseases": [
-    "Respiratory symptoms",
-    "Streptococcus pneumoniae carriage",
-    "Haemophilus influenzae carriage",
-    "Moraxella catarrhalis carriage",
-    "Staphylococcus aureus carriage"
+    "nasopharyngeal carriage of respiratory bacteria",
+    "antibiotic resistance",
+    "invasive pneumococcal disease",
+    "meningitis",
+    "pneumonia",
+    "otitis media",
+    "sinusitis"
   ],
-  "study_design": "Cross-sectional study",
-  "data_source_type": "Clinical study",
-  "population": "194 children in Kampala, Uganda",
-  "exposure_domain": "Vaccination (PCV10), antibiotic use",
+  "study_design": "cross-sectional study",
+  "data_source_type": "primary microbiological sampling and laboratory testing with questionnaire survey",
+  "population": "children 6-60 months of age attending outpatient clinic at Mulago Hospital Assessment Centre, Kampala, Uganda",
+  "exposure_domain": "PCV10 vaccination status, history of antibiotic use, respiratory symptoms, household crowding",
   "limitations": [
-    "Cross-sectional design"
+    "52 isolates not recovered due to freeze-thaw episodes and fastidious nature of bacteria, reducing sample size",
+    "lack of pneumococcal serotyping",
+    "isolates collected from sick children without clinical evaluation to determine pathogenic relevance",
+    "cross-sectional design limits causal inference"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

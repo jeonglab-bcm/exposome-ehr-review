@@ -1,0 +1,41 @@
+{
+  "pmcid": "PMC6898916",
+  "title": "2019_PMC6898916_The_maternal_antibody_against_diphtheria_tetanus_and_pertussis_s",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "In 2018, 200 neonates hospitalized in Shunyi Women and Children’s Hospital in Beijing, and 238 neonates hospitalized in Qianjiang Central Hospital located in the southwestern mountainous areas were included in this study.",
+  "summary": "Cross-sectional serological study comparing maternal DTP vaccine-associated antibody levels in neonates from urban Beijing and rural Chongqing, China.",
+  "key_findings": [
+    "Mean anti-Dtx IgG was significantly lower in Qianjiang (0.04 IU/ml) than Shunyi (0.12 IU/ml) (P < 0.0001).",
+    "Protective anti-Dtx prevalence was lower in Qianjiang (7.1%) than Shunyi (30.5%) (χ2 = 21.788, P < 0.0001).",
+    "Mean anti-Ttx IgG was significantly lower in Qianjiang (0.07 IU/ml) than Shunyi (0.18 IU/ml) (P < 0.0001).",
+    "Protective anti-Ttx prevalence was lower in Qianjiang (7.6%) than Shunyi (38.5%) (χ2 = 33.569, P < 0.0001).",
+    "No significant difference in mean anti-Ptx IgG between regions (P = 0.2395), but detectable rate was higher in Qianjiang (39.9%) than Shunyi (30.5%) (χ2=4.202, P=0.0404).",
+    "Two neonates from Qianjiang had anti-PT IgG ≥100.0 IU/ml, suggesting recent pertussis exposure in their mothers."
+  ],
+  "captured_features": [
+    "serum antibody concentrations (anti-Dtx, anti-Ttx, anti-Ptx IgG)",
+    "demographic characteristics (sex, term/preterm, delivery mode)",
+    "hospital region"
+  ],
+  "pathologies_diseases": [
+    "diphtheria",
+    "tetanus",
+    "pertussis"
+  ],
+  "study_design": "cross-sectional serological study",
+  "data_source_type": "primary serum samples",
+  "population": "438 neonates (1-28 days old) hospitalized in two regional hospitals in China",
+  "exposure_domain": "geographic region and regional vaccine coverage",
+  "limitations": [
+    "sample size limited to two hospitals",
+    "lack of maternal vaccination status data",
+    "no maternal blood samples collected for direct comparison"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

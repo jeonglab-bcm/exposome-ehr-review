@@ -3,33 +3,46 @@
   "title": "Semiparametric modeling of age at achieving developmental milestones after prenatal exposure to methylmercury in the Seychelles child development study.",
   "year": "1998",
   "ehr_used": false,
-  "ehr_evidence": "The study uses a longitudinal cohort (Seychelles Child Development Study) with maternal hair samples and parent interviews, not EHR.",
-  "summary": "The study evaluated the effects of prenatal methylmercury exposure on the age at which children achieved developmental milestones (walking and talking) in the Seychelles Child Development Study using semiparametric generalized additive models.",
+  "ehr_evidence": "The measure of exposure was the mean of the total mercury concentration in segments of maternal hair, representing growth during pregnancy. The raw data on age at achieving developmental milestones were collected by asking the child's mother or primary caregiver the age, in months, at which the child walked or first said words other than mama or dada. This question was asked in a face-to-face interview conducted when the child was 19 months ± 2 weeks of age.",
+  "summary": "Longitudinal cohort study evaluating the effect of prenatal methylmercury exposure via maternal hair mercury levels on the age at achieving developmental milestones (walking and talking) in Seychellois children at 19 months, using generalized additive models.",
   "key_findings": [
-    "Very slight delays (<1 day) in walking were seen at mercury levels 0-7 ppm, but this effect did not persist at higher exposure levels.",
-    "No evidence for any association between prenatal exposure and age at talking."
+    "Very slight delays (<1 day) in walking were observed at mercury levels from 0 to 7 ppm, but the effect did not persist at higher exposure levels (p=0.036).",
+    "No significant association was found between prenatal mercury exposure and age at talking (flat curve, nonlinear components not significant).",
+    "Change in age at walking from 1 to 5 ppm was +0.04 months, and from 5 to 15 ppm was -0.03 months.",
+    "Higher home environment scores were associated with earlier walking, while positive medical history and higher maternal education were associated with later walking."
   ],
   "captured_features": [
     "maternal hair mercury concentration",
-    "age at walking without support",
-    "age at first saying words other than 'mama' or 'dada'"
+    "age at walking",
+    "age at talking",
+    "sex",
+    "gestational age",
+    "birthweight",
+    "birth order",
+    "medical history",
+    "maternal alcohol/tobacco use",
+    "HOME score",
+    "family income",
+    "languages spoken",
+    "maternal age and education",
+    "caregiver intelligence"
   ],
-  "pathologies_diseases": [
-    "developmental milestones",
-    "walking delay",
-    "speech delay"
-  ],
-  "study_design": "longitudinal cohort study",
-  "data_source_type": "cohort study",
-  "population": "779 Seychelloian children",
-  "exposure_domain": "methylmercury",
+  "pathologies_diseases": [],
+  "study_design": "prospective longitudinal cohort study",
+  "data_source_type": "cohort study with biospecimen analysis and maternal interviews",
+  "population": "738 Seychellois children (365 females, 373 males) evaluated at 19 months of age",
+  "exposure_domain": "prenatal methylmercury exposure (maternal hair mercury concentration)",
   "limitations": [
-    "difficult to conclude cause-and-effect relations at low exposure levels"
+    "reliance on maternal recall for developmental milestones",
+    "small effect sizes (approximately 1 day)",
+    "non-monotonic dose-response relationship complicates causal inference",
+    "sparse data at mercury levels above 15 ppm",
+    "log transformation of mercury compresses higher exposure values"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

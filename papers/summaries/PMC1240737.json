@@ -3,30 +3,47 @@
   "title": "Evaluation of urinary porphyrin excretion in neonates born to mothers exposed to airborne hexachlorobenzene.",
   "year": "2002",
   "ehr_used": false,
-  "ehr_evidence": "No mention of EHR or linked health databases; study conducted in a Porphyria Unit at a tertiary care facility.",
-  "summary": "A cross-sectional study evaluating urinary porphyrin excretion and hexachlorobenzene (HCB) levels in maternal serum and fetal cord blood in neonates born in a village near a chlorinated solvent factory to assess prenatal exposure effects.",
+  "ehr_evidence": "Information on maternal history, sex, and fetal exposure to alcohol and tobacco consumption was obtained through a questionnaire prepared ad hoc for this study. Using urine collection bags, we collected fresh urine samples on the third day after birth from 68 full-term neonates... We obtained 52 fetal cord blood and 56 maternal serum samples for HCB analysis.",
+  "summary": "Cross-sectional study assessing urinary porphyrin excretion in neonates born to mothers exposed to airborne hexachlorobenzene (HCB) near a chlorinated solvent factory in Flix, Spain, compared to a non-exposed control group.",
   "key_findings": [
-    "The study aimed to detect possible adverse effects in urinary porphyrin excretion caused by prenatal exposure to HCB."
+    "Median HCB levels were 1.08 ng/mL in cord blood and 3.35 ng/mL in maternal serum, significantly higher in the exposed group (p < 0.05).",
+    "Neonates from the exposed group had higher CPIII excretion than the non-exposed group (p < 0.05), but this association disappeared after adjusting for maternal smoking.",
+    "Maternal smoking was associated with higher total porphyrin and CPIII excretion (p < 0.05).",
+    "No positive relationship was found between urinary porphyrin excretion and HCB levels; total porphyrin excretion showed no alteration between groups.",
+    "A negative association between CPI/CPIII and the highest tertile of HCB remained statistically significant for CPI after adjusting for smoking and alcohol (p < 0.05).",
+    "Heptaporphyrin isomer III was detected in 35.9% of the exposed group and 9.4% of the non-exposed group (p < 0.012)."
   ],
   "captured_features": [
-    "urinary porphyrin excretion",
-    "maternal serum HCB",
-    "fetal cord blood HCB"
+    "urinary porphyrins (total, UPI, UPIII, CPI, CPIII, heptaporphyrins)",
+    "HCB levels in cord blood and maternal serum",
+    "urinary creatinine",
+    "maternal smoking status",
+    "maternal alcohol consumption",
+    "maternal age",
+    "gestational age",
+    "birth weight",
+    "neonatal sex",
+    "geographic exposure status"
   ],
   "pathologies_diseases": [
-    "Porphyria cutanea tarda (PCT)"
+    "porphyria cutanea tarda (background context)",
+    "subclinical porphyrinuria"
   ],
   "study_design": "cross-sectional study",
-  "data_source_type": "Clinical study",
-  "population": "neonates born in Flix, Spain",
-  "exposure_domain": "airborne hexachlorobenzene (HCB)",
+  "data_source_type": "Primary survey and biospecimen collection",
+  "population": "68 full-term singleton neonates and their mothers born in Móra d’Ebre Hospital, Spain (1997–1999), with 38 from the exposed area (Flix) and 30 from neighboring villages.",
+  "exposure_domain": "Airborne hexachlorobenzene (HCB) / organochlorine pollutants",
   "limitations": [
-    "Manuscript text is truncated at the end"
+    "Small sample size (n=68)",
+    "Cross-sectional design limits causal inference",
+    "Confounding by maternal smoking and alcohol consumption",
+    "Variations in porphyrin excretion during the first days of life",
+    "Lack of dose-response data for specific exposure levels"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

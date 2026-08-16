@@ -3,38 +3,40 @@
   "title": "Temporal and spatial patterns of ambient endotoxin concentrations in Fresno, California.",
   "year": "2010",
   "ehr_used": false,
-  "ehr_evidence": "The study uses environmental monitoring data (ambient endotoxin and air pollutants) collected from a monitoring site, schools, and residences, rather than EHR or linked health data.",
-  "summary": "The study characterizes the temporal and spatial variability of ambient endotoxin concentrations in Fresno/Clovis, California, to identify correlates and predictors in a cohort of children with asthma.",
+  "ehr_evidence": "Daily ambient endotoxin and air pollutants were collected at the central ambient monitoring site of the California Air Resources Board in Fresno and, for shorter time periods, at 10 schools and indoors and outdoors at 84 residences in the community.",
+  "summary": "Characterization of the temporal and spatial variability of ambient endotoxin concentrations in Fresno, California, and identification of meteorologic and land-use correlates.",
   "key_findings": [
-    "Endotoxin concentrations were primarily determined by meteorologic factors, particularly air stagnation.",
-    "Highest concentrations were found in areas immediately downwind from agricultural/pasture land.",
-    "Coarse particulate matter (PMc) was the only pollutant correlated with endotoxin.",
-    "Endotoxin was the most spatially variable pollutant measured."
+    "Daily endotoxin concentrations were primarily driven by meteorologic factors, particularly air recirculation and relative humidity (model R2 = 0.55).",
+    "Highest concentrations were found in areas immediately downwind from agricultural/pasture land and concentrated animal feeding operations.",
+    "PMc was the only measured air pollutant correlated with endotoxin (R2 = 0.44 with PMc vs 0.15 with PM2.5).",
+    "Endotoxin was the most spatially variable pollutant, with coefficients of variation ranging from 0.08 to 0.75.",
+    "Geometric mean concentrations were lowest in the wet season (<0.7 EU/m3) and highest in the dry season (>2 EU/m3)."
   ],
   "captured_features": [
-    "Daily ambient endotoxin concentrations",
-    "fine particulate matter",
+    "ambient endotoxin concentrations",
+    "PM2.5 mass",
+    "PMc mass",
     "elemental carbon",
-    "coarse particulate matter (PMc)",
-    "meteorologic factors"
+    "meteorological variables",
+    "land cover data"
   ],
   "pathologies_diseases": [
-    "asthma",
-    "respiratory symptoms",
-    "atopy"
+    "asthma"
   ],
-  "study_design": "Observational environmental monitoring study",
-  "data_source_type": "Environmental monitoring data",
-  "population": "Children with asthma in Fresno/Clovis, California (FACES cohort)",
-  "exposure_domain": "Ambient endotoxin, air pollution",
+  "study_design": "environmental monitoring and spatial-temporal analysis",
+  "data_source_type": "environmental monitoring",
+  "population": "children 6-11 years with clinically active asthma (FACES cohort) and Fresno/Clovis community residents",
+  "exposure_domain": "ambient endotoxin and particulate matter",
   "limitations": [
-    "Analyses were restricted to the dry months (May–October)",
-    "Short time periods for measurements at some schools and residences"
+    "analysis restricted to dry season months (May-October)",
+    "spatial mapping based on only 22 days",
+    "lack of daily data on potential source emissions",
+    "residential sampling was not a random sample"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

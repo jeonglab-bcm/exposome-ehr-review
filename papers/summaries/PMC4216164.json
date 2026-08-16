@@ -3,28 +3,39 @@
   "title": "Prenatal organochlorine and methylmercury exposure and memory and learning in school-age children in communities near the New Bedford Harbor Superfund site, Massachusetts.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "The study assesses the association between low-level prenatal exposure to PCBs, organochlorines, and methylmercury and memory and learning in school-age children living near the New Bedford Harbor Superfund Site.",
-  "key_findings": [],
+  "ehr_evidence": "A sample of 788 mother–infant pairs were recruited from St. Luke’s Hospital in New Bedford, Massachusetts, at the time of the infant’s birth, between 1993 and 1998.",
+  "summary": "Prospective birth cohort study evaluating associations between low-level prenatal exposure to PCBs, DDE, and methylmercury and childhood memory and learning at age 8.",
+  "key_findings": [
+    "Each 1 μg/g increase in maternal hair Hg was associated with decrements of –2.8 on Visual Memory (95% CI: –5.0, –0.6, p = 0.01), –2.2 on Learning (95% CI: –4.6, 0.2, p = 0.08), and –1.7 on Verbal Memory (95% CI: –3.9, 0.6, p = 0.14).",
+    "No significant adverse associations were found for ∑PCB4, dioxin-like PCBs, or DDE with WRAML indices.",
+    "After excluding three high-exposure outliers, the adjusted estimate for DDE and Learning Index was essentially null."
+  ],
   "captured_features": [
-    "memory scores",
-    "learning scores",
-    "prenatal PCB levels",
-    "prenatal MeHg levels",
-    "prenatal organochlorine levels"
+    "Cord serum PCB and DDE levels",
+    "Maternal hair mercury levels",
+    "WRAML indices (Visual Memory, Verbal Memory, Learning)",
+    "Birth weight and gestational age",
+    "Maternal IQ and depression scores",
+    "Household income and parental education",
+    "Blood lead levels",
+    "Prenatal smoking and alcohol use"
   ],
-  "pathologies_diseases": [
-    "memory and learning deficits"
+  "pathologies_diseases": [],
+  "study_design": "Prospective cohort study",
+  "data_source_type": "Prospective birth cohort",
+  "population": "393 children aged 7–11 years (mean 8.1) born 1993–1998 to mothers residing near New Bedford Harbor, Massachusetts",
+  "exposure_domain": "Prenatal environmental toxicants (organochlorines, methylmercury)",
+  "limitations": [
+    "Low statistical power for PCB associations at low exposure levels",
+    "Hair mercury may be less sensitive than blood biomarkers",
+    "Missing data for covariates and exposures",
+    "Potential selection bias as included children had higher maternal IQ and education",
+    "Cross-sectional assessment of neurodevelopment at a single time point"
   ],
-  "study_design": "Not specified",
-  "data_source_type": "Not specified",
-  "population": "school-age children in communities near the New Bedford Harbor Superfund Site, Massachusetts",
-  "exposure_domain": "PCBs, organochlorines, and methylmercury",
-  "limitations": [],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

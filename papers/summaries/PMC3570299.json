@@ -3,34 +3,44 @@
   "title": "Maternal and offspring fasting glucose and type 2 diabetes-associated genetic variants and cognitive function at age 8: a Mendelian randomization study in the Avon Longitudinal Study of Parents and Children.",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "The study uses the Avon Longitudinal Study of Parents and Children (ALSPAC) cohort, which is a birth cohort study, not an EHR.",
-  "summary": "A Mendelian randomization study investigating whether maternal and offspring genetic risk scores for fasting glucose and type 2 diabetes are causally linked to child intelligence quotient (IQ) at age 8.",
+  "ehr_evidence": "Extensive data have been collected from the mothers and their offspring from pregnancy onwards by questionnaire, abstraction from medical notes, record linkage and by attendance at research clinics.",
+  "summary": "Mendelian randomization study investigating the causal relationship between maternal and offspring genetic risk scores for fasting glucose and type 2 diabetes and childhood cognitive function (IQ) at age 8 in the ALSPAC cohort.",
   "key_findings": [
-    "No association found between maternal or offspring fasting glucose genetic risk scores (FGGRS) and child IQ.",
-    "Maternal type 2 diabetes genetic risk score (T2DGRS) was positively associated with offspring IQ.",
-    "Suggests no causal link between in utero glucose exposure and childhood IQ."
+    "Maternal and offspring FGGRS were not associated with child IQ.",
+    "Maternal T2DGRS was positively associated with offspring IQ (mean difference 0.47, 95% CI 0.12, 0.81; p=0.01).",
+    "Offspring of mothers with diabetes/glycosuria had lower IQ scores (mean difference -3.5, 95% CI -5.6, -1.5; p=0.001).",
+    "FGGRS was strongly associated with offspring fasting glucose and HbA1c levels.",
+    "No association was found between offspring T2DGRS and child IQ."
   ],
   "captured_features": [
-    "FGGRS (fasting glucose genetic risk score)",
-    "T2DGRS (T2D genetic risk score)",
-    "fasting glucose plasma measurements",
-    "IQ scores"
+    "Genetic risk scores (FGGRS, T2DGRS)",
+    "fasting glucose levels",
+    "HbA1c levels",
+    "offspring IQ scores",
+    "maternal diabetes/glycosuria status",
+    "maternal and offspring genotypes",
+    "confounders (maternal age, education, smoking, birthweight, gestational age)"
   ],
   "pathologies_diseases": [
     "type 2 diabetes",
-    "gestational diabetes"
+    "fasting glucose dysregulation",
+    "gestational diabetes",
+    "cognitive impairment"
   ],
-  "study_design": "Mendelian randomization",
-  "data_source_type": "Birth cohort study",
-  "population": "Children at age 8 in the ALSPAC cohort",
-  "exposure_domain": "Metabolic / Glucose levels",
+  "study_design": "Mendelian randomization study within a prospective birth cohort",
+  "data_source_type": "Prospective birth cohort",
+  "population": "Mothers and offspring from the Avon Longitudinal Study of Parents and Children (ALSPAC) cohort, Bristol, England",
+  "exposure_domain": "Genetic risk scores for fasting glucose and type 2 diabetes",
   "limitations": [
-    "Potential lack of statistical power"
+    "Lack of statistical power to detect small effects",
+    "Most participants had fasting glucose and HbA1c levels within the normal range",
+    "Genetic risk scores may not fully capture the disease phenotype or environmental confounders",
+    "Associations with individual SNPs disappeared after Bonferroni correction"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

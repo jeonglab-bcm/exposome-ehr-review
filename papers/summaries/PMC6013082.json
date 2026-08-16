@@ -1,0 +1,42 @@
+{
+  "pmcid": "PMC6013082",
+  "title": "2018_PMC6013082_Strategic_Response_to_an_Outbreak_of_Circulating_Vaccine-Derived",
+  "year": "",
+  "ehr_used": false,
+  "ehr_evidence": "Data were derived from acute flaccid paralysis (AFP) case surveillance, stool specimen testing, administrative vaccination coverage records, and postcampaign monitoring surveys.",
+  "summary": "Descriptive report of a circulating vaccine-derived poliovirus type 2 (cVDPV2) outbreak in Syria (2017–2018), detailing case epidemiology, surveillance performance, and the impact of monovalent OPV type 2 vaccination campaigns and environmental surveillance on interrupting transmission.",
+  "key_findings": [
+    "74 cVDPV2 cases were identified, with a median age of 15 months.",
+    "46 of 74 cases (62%) occurred in females.",
+    "30 cases (41%) occurred in children who had never received an OPV dose.",
+    "71 cases (96%) were reported from Deir-ez-Zor governorate.",
+    "Environmental sewage sampling and mOPV2 vaccination campaigns successfully interrupted cVDPV2 transmission."
+  ],
+  "captured_features": [
+    "AFP case reports",
+    "stool specimen test results",
+    "administrative vaccination coverage",
+    "postcampaign monitoring survey data"
+  ],
+  "pathologies_diseases": [
+    "acute flaccid paralysis",
+    "poliomyelitis",
+    "circulating vaccine-derived poliovirus type 2"
+  ],
+  "study_design": "descriptive outbreak investigation",
+  "data_source_type": "public health surveillance",
+  "population": "children in Syria, primarily aged <5 years",
+  "exposure_domain": "vaccine-derived poliovirus / vaccination status",
+  "limitations": [
+    "subnational gaps in AFP surveillance performance",
+    "delays in receiving laboratory results due to transport and security constraints",
+    "administrative coverage denominators may not reflect actual population due to migration",
+    "postcampaign monitoring relies on parental recall"
+  ],
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "medium",
+  "source_format": "pdf",
+  "model": "qwen3.6-35b-vllm-nvfp4"
+}

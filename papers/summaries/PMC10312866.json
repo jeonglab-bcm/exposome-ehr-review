@@ -3,31 +3,39 @@
   "title": "Associations of longitudinal BMI percentile classification patterns in early childhood with neighborhood-level social determinants of health.",
   "year": "2024",
   "ehr_used": true,
-  "ehr_evidence": "We extracted EHR data from 2012-2019 for a children’s health system that includes 2 hospitals and wide network of outpatient clinics spanning 5 East Coast states in the US.",
-  "summary": "The study identifies distinct longitudinal BMI-percentile classification groups in children aged 0-7 years and examines their associations with 27 neighborhood-level social determinants of health (SDOH) using EHR data.",
+  "ehr_evidence": "We obtained patient-level EHR data from Nemours Children’s Health - a large, multi-state pediatric health system in the US.",
+  "summary": "Longitudinal analysis of BMI-percentile trajectories in early childhood using EHR data, identifying distinct trajectory clusters and assessing their associations with neighborhood-level social determinants of health.",
   "key_findings": [
-    "Five BMI-percentile classification groups emerged: always obesity, overweight most of the time, increasing BMI-percentile, decreasing BMI-percentile, and always normal weight.",
-    "Children in the obesity/overweight clusters were more likely to live in neighborhoods with higher poverty, unemployment, crowded households, single-parent households, and lower preschool enrollment."
+    "Five BMI-percentile trajectory clusters were identified in a cohort of 36,910 children: always having obesity (n=429; 1.16%), overweight most of the time (n=15,006; 40.65%), increasing BMI-percentile (n=9,060; 24.54%), decreasing BMI-percentile (n=5,058; 13.70%), and always normal weight (n=7,357; 19.89%).",
+    "Children in the obesity, overweight, and increasing BMI-percentile groups were significantly more likely to reside in neighborhoods with higher poverty, unemployment, crowded households, single-parent households, and lower preschool enrollment compared to the decreasing and normal weight groups.",
+    "Multinomial logistic regression confirmed significant associations between neighborhood SDOH and cluster membership, with all confidence intervals for odds ratios excluding 1."
   ],
   "captured_features": [
-    "BMI percentiles",
-    "27 neighborhood SDOHs",
-    "hospital and outpatient clinic records"
+    "BMI percentile",
+    "weight and height measurements",
+    "patient race, ethnicity, and insurance type",
+    "patient addresses linked to census tracts",
+    "neighborhood-level SDOH variables (poverty, unemployment, crowded households, single-parent households, preschool enrollment, median household income, etc.)"
   ],
   "pathologies_diseases": [
-    "childhood obesity"
+    "childhood obesity",
+    "overweight"
   ],
-  "study_design": "Retrospective cohort study using data-driven and algorithmic clustering and multinomial logistic regression",
+  "study_design": "Longitudinal cohort study with data-driven and algorithmic clustering of BMI trajectories, followed by multinomial logistic regression analysis.",
   "data_source_type": "EHR",
-  "population": "36,910 children aged 0-7 years in a children's health system across 5 East Coast states in the US",
-  "exposure_domain": "neighborhood-level social determinants of health (SDOH)",
+  "population": "Children aged 0-7 years from a multi-state US pediatric health system (Nemours Children's Health), N=36,910",
+  "exposure_domain": "Neighborhood-level social determinants of health (SDOH)",
   "limitations": [
-    "Preprint (not peer-reviewed)"
+    "Linkage to a single census tract using the last available address may not capture residential mobility effects.",
+    "Potential selection bias from excluding children with sparse clinical data or those who left the health system.",
+    "Regional differences across the five states were not accounted for.",
+    "Did not exclude children on weight-affecting medications or with monogenic obesity.",
+    "Did not analyze interactions between different SDOH variables."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

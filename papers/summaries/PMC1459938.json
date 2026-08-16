@@ -3,35 +3,41 @@
   "title": "Reduced intellectual development in children with prenatal lead exposure.",
   "year": "2006",
   "ehr_used": false,
-  "ehr_evidence": "The study used direct measurements of blood lead (BPb) and psychometric tests in a prospective cohort, not electronic health records.",
-  "summary": "A prospective cohort study in Mexico City investigating the effects of prenatal and postnatal lead exposure on child intellectual development.",
+  "ehr_evidence": "We recruited women at 12 weeks of pregnancy and measured BPb every 8 weeks to delivery. We evaluated children with psychometric tests, anthropometric measurements, and BPb at 6-month intervals after birth. We collected data on demographic, socioeconomic, and other factors that might constitute potential confounders or important control variables modifying the relationship between lead and child development.",
+  "summary": "Prospective longitudinal cohort study evaluating the association between serial prenatal and postnatal blood lead concentrations and child intelligence quotient (IQ) from ages 6 to 10 in Mexico City.",
   "key_findings": [
-    "Prenatal lead exposure is associated with reduced intellectual development in children."
+    "IQ at 6–10 years decreased significantly with increasing natural-log third-trimester BPb (β = –3.90; 95% CI, –6.45 to –1.36).",
+    "BPb at week 28 of pregnancy was the only prenatal lead measure significantly predicting lower FSIQ (β = –4.13, p < 0.001).",
+    "Higher 28- to 36-week BPb was associated with lower VIQ (β = –3.15, p = 0.007) and PIQ (β = –4.37, p = 0.004).",
+    "The logarithmic form of third-trimester BPb fit the data significantly better than a linear functional form (t = 2.15, p = 0.02).",
+    "No significant association was found between 6- to 10-year postnatal BPb and FSIQ after adjusting for covariates and other lead measures."
   ],
   "captured_features": [
-    "maternal BPb",
-    "cord blood BPb",
-    "child BPb",
-    "psychometric tests",
-    "anthropometric measurements",
-    "demographic data",
-    "socioeconomic data"
+    "Blood lead concentration (BPb) at multiple prenatal and postnatal time points",
+    "Wechsler Intelligence Scale for Children–Revised (WISC-R) Full-scale, Verbal, and Performance IQ scores",
+    "Maternal IQ and education level",
+    "Socioeconomic status index",
+    "HOME scale score",
+    "Birth weight, gestational age, Apgar score, child sex"
   ],
   "pathologies_diseases": [
-    "reduced intellectual development"
+    "intellectual development impairment"
   ],
-  "study_design": "Prospective cohort study",
-  "data_source_type": "Prospective cohort study",
-  "population": "321 children born in Mexico City (175 followed after 5 years) between 1987 and 1992",
-  "exposure_domain": "lead (BPb)",
+  "study_design": "Prospective longitudinal cohort study with repeated measures and linear mixed-effects modeling",
+  "data_source_type": "Prospective cohort / primary data collection",
+  "population": "175 children born in Mexico City between 1987 and 1992, followed until age 10 (150 with complete data)",
+  "exposure_domain": "Prenatal and postnatal lead exposure (blood lead concentration)",
   "limitations": [
-    "Small sample size of children tested after 5 years",
-    "Potential collinearity among lead variables"
+    "High loss to follow-up from original sample of 321 to 150 with complete data",
+    "Relatively small sample size reducing statistical power",
+    "Potential test-learning bias from repeated administration of the same IQ test",
+    "Use of outdated Spanish versions of WISC-R and WAIS tests",
+    "Cultural bias of the HOME scale in the study population"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

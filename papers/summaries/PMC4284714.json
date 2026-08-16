@@ -3,39 +3,51 @@
   "title": "Prenatal exposure to arsenic and cadmium impacts infectious disease-related genes within the glucocorticoid receptor signal transduction pathway.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "No mention of EHR or linked health data in the provided text.",
-  "summary": "A compilation of research titles exploring the impacts of prenatal and early-life arsenic and cadmium exposure on infant health, including birth weight, immune system development, and epigenetic modifications.",
+  "ehr_evidence": "Twelve datasets were gathered from previous human cohort studies evaluating mRNA changes, DNA methylation changes, or protein expression changes associated with prenatal exposure to iAs or Cd.",
+  "summary": "A comparative genomic enrichment analysis integrating twelve human pregnancy cohort datasets to identify genes and pathways linking prenatal arsenic and cadmium exposure to infectious disease susceptibility.",
   "key_findings": [
-    "Arsenic exposure is associated with lower birth weight and increased risk of respiratory infections.",
-    "Cadmium exposure is linked to altered thymus and spleen cell phenotypes.",
-    "Prenatal arsenic exposure is associated with altered DNA methylation in cord blood."
+    "82 infection and exposure-related (IER) genes were identified that overlap between infectious disease signaling and prenatal iAs/Cd exposure.",
+    "19 of 82 IER genes were enriched for the glucocorticoid receptor signal transduction pathway (p = 1.58 × 10−18).",
+    "9 of 82 IER genes were present in the TNFR1 pathway (p = 5.01 × 10−13).",
+    "8 of 82 IER genes were present in the toll-like receptor pathway (p = 6.31 × 10−13).",
+    "61% (50/82) of IER genes were shown to be modulated by iAs and 41% (34/82) by Cd in the Comparative Toxicogenomics Database."
   ],
   "captured_features": [
-    "Arsenic concentration",
-    "Cadmium concentration",
-    "Birth weight",
-    "DNA methylation",
-    "Immune markers"
+    "mRNA expression levels",
+    "DNA methylation (5-methyl cytosine)",
+    "protein expression levels",
+    "CpG loci",
+    "transcription factor binding sites"
   ],
   "pathologies_diseases": [
+    "viral infections",
+    "bacterial infections",
+    "parasitic infections",
     "lower respiratory tract infection",
     "diarrhea",
-    "birth defects",
+    "acute respiratory infection",
     "tuberculosis",
     "malaria",
-    "Chagas disease"
+    "Chagas disease",
+    "leishmaniasis",
+    "leprosy"
   ],
-  "study_design": "Prospective cohort studies and laboratory experiments",
-  "data_source_type": "Birth cohorts and laboratory samples",
-  "population": "Infants, newborns, and pregnant women in Bangladesh, USA, Chile, and India",
-  "exposure_domain": "Heavy metals (Arsenic, Cadmium)",
+  "study_design": "comparative genomic enrichment analysis (CGEM) meta-analysis",
+  "data_source_type": "published genomic, epigenomic, and proteomic datasets from human pregnancy cohorts",
+  "population": "pregnant women and newborns/infants from cohorts in Bangladesh, Thailand, Mexico, and the United States",
+  "exposure_domain": "prenatal and early-life exposure to inorganic arsenic and cadmium",
   "limitations": [
-    "The input text is a list of titles rather than a single cohesive manuscript, making it difficult to extract specific methodology."
+    "genomic and epigenomic endpoints can be transient",
+    "original studies had small sample sizes",
+    "incomplete analysis of confounders in source studies",
+    "variations in exposure duration and demographics across cohorts",
+    "reliance on published gene lists rather than raw data",
+    "CTD validation included in vitro and animal model data"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "xml",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }

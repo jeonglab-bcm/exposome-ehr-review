@@ -3,34 +3,41 @@
   "title": "Immunogenicity and Safety of AS03-adjuvanted H5N1 Influenza Vaccine in Children 6-35 Months of Age: Results From a Phase 2, Randomized, Observer-blind, Multicenter, Dose-ranging Study.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "None",
-  "summary": "A phase 2, randomized, observer-blind, multicenter, dose-ranging study evaluating the immunogenicity and safety of different formulations of an AS03-adjuvanted H5N1 influenza vaccine in children aged 6–35 months.",
+  "ehr_evidence": "The study collected primary data through clinical trial visits, blood samples for serologic testing, cell-mediated immunity assessments, and adverse event reporting.",
+  "summary": "Phase 2 randomized, multicenter, dose-ranging clinical trial evaluating the immunogenicity and safety of different formulations of an AS03-adjuvanted H5N1 influenza vaccine in children 6–35 months of age.",
   "key_findings": [
-    "All formulations were highly immunogenic.",
-    "1.9 µg HA/AS03B provided the most favorable balance of immunogenicity versus reactogenicity.",
-    "Antibody levels persisted >4 times above baseline 12 months after primary vaccination with all formulations.",
-    "Incidence of fever ranged from 28.6% to 60.5% depending on the formulation."
+    "All formulations elicited strong homologous immune responses with seroconversion rates of 100% and seroprotection rates of 100% at day 42.",
+    "The 1.9 µg HA/AS03B formulation ranked highest on the immunogenicity-fever index.",
+    "Antibody levels persisted >4 times above baseline at day 385 for all formulations.",
+    "Overall per-subject incidence of fever ranged from 28.6% (3.75 µg HA/AS03D) to 60.5% (1.9 µg HA/AS03B).",
+    "Grade 3 fever (≥39.0 °C) was reported in 18.4% of subjects in the 1.9 µg HA/AS03B group.",
+    "Serious adverse events were reported for 29 subjects (15.7%), none of which were fatal or related to vaccination."
   ],
   "captured_features": [
-    "hemagglutination inhibition titers",
-    "microneutralization antibody titers",
-    "incidence of fever"
+    "Hemagglutination inhibition (HI) titers",
+    "Microneutralization (MN) titers",
+    "Cell-mediated immunity (CD4+ T-cell responses)",
+    "Solicited and unsolicited adverse events",
+    "Fever incidence and duration",
+    "Geometric mean titers (GMT), seroprotection rate (SPR), seroconversion rate (SCR)"
   ],
   "pathologies_diseases": [
     "H5N1 influenza"
   ],
-  "study_design": "Phase 2, randomized, observer-blind, multicenter, dose-ranging study",
-  "data_source_type": "Clinical trial",
-  "population": "children 6–35 months of age",
-  "exposure_domain": "vaccine",
+  "study_design": "Phase 2, randomized, observer-blind, multicenter, dose-ranging clinical trial",
+  "data_source_type": "Clinical trial primary data",
+  "population": "Children 6–35 months of age (n=185) from Thailand and Taiwan",
+  "exposure_domain": "AS03-adjuvanted H5N1 influenza vaccine formulations",
   "limitations": [
-    "Phase 2 study",
-    "Small sample size (n=185)"
+    "Small sample size",
+    "Absence of a placebo control to assess vaccine safety",
+    "Immunogenicity-fever index did not include other reactogenicity indicators",
+    "Limited generalizability"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "high",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma4-12b-qat-gguf"
+  "model": "qwen3.6-35b-vllm-nvfp4"
 }
