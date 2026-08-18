@@ -3,36 +3,40 @@
   "title": "Synergistic effects of traffic-related air pollution and exposure to violence on urban asthma etiology.",
   "year": "2007",
   "ehr_used": false,
-  "ehr_evidence": "Data collection and analysis for the nitrogen dioxide passive network and violence exposure assessment were supported by the Massachusetts Port Authority (P.B.R.) and K08 HL 04187 (R.J.W.)",
-  "summary": "This study examined the role of exposure to violence (ETV) in altering susceptibility to traffic-related air pollution (NO2) in asthma etiology among children in East Boston, Massachusetts.",
+  "ehr_evidence": "Pregnant women were recruited from East Boston Neighborhood Health Center (EBNHC), Boston, Massachusetts, between 1987 and 1993... Questionnaires were administered detailing violence exposures (both witnessing and victimization) and avoidance behaviors... During MISSEB follow-up, parental reports of child’s asthma diagnosis were ascertained through bi-monthly telephone or face-to-face interviews over the child’s first 2 years, every 6 months through 4 years of age, and annually thereafter.",
+  "summary": "A prospective pregnancy cohort study of 413 children in East Boston, Massachusetts, examined the synergistic effects of traffic-related nitrogen dioxide exposure and exposure to violence on childhood asthma etiology using GIS-based pollution modeling and questionnaire data.",
   "key_findings": [
-    "A 1-SD increase in NO2 exposure was associated with an elevated risk of asthma solely among children with above-median ETV (OR = 1.63; 95% CI, 1.14–2.33).",
-    "Among lifetime residents, the association between NO2 and asthma was magnified (OR = 2.40; 95% CI, 1.48–3.88)."
+    "Among children with above-median exposure to violence, a 1-SD (4.3 ppb) increase in year-of-diagnosis NO2 was associated with elevated odds of asthma (adjusted OR = 1.63; 95% CI, 1.14–2.33; p = 0.03 for interaction).",
+    "Among lifetime residents, the association was magnified (adjusted OR = 2.40; 95% CI, 1.48–3.88; p = 0.0009 for interaction).",
+    "No significant independent association was found between NO2 and asthma among children with below-median exposure to violence (OR = 0.94; 95% CI, 0.70–1.26)."
   ],
   "captured_features": [
-    "residential addresses",
-    "violence exposure (ETV)",
-    "asthma diagnosis",
-    "maternal asthma status",
-    "socioeconomic status (education)",
-    "smoking status"
+    "NO2 exposure estimates (GIS-based land-use regression)",
+    "Exposure to violence (ETV) scores (Rasch modeling)",
+    "Asthma diagnosis (parental report)",
+    "Maternal education",
+    "Maternal smoking status (cotinine)",
+    "Child's sex and age",
+    "Maternal asthma history"
   ],
   "pathologies_diseases": [
-    "asthma"
+    "Asthma",
+    "Asthmatic bronchitis"
   ],
-  "study_design": "cohort",
-  "data_source_type": "questionnaire",
-  "population": "413 children in East Boston, Massachusetts, recruited in 1987-1993",
-  "exposure_domain": "traffic-related air pollution (NO2)",
+  "study_design": "prospective cohort",
+  "data_source_type": "other",
+  "population": "413 children (aged 4-11.5 years at follow-up) from a community-based pregnancy cohort in East Boston, Massachusetts",
+  "exposure_domain": "air pollution, social stressors",
   "limitations": [
-    "reliance on questionnaire data for violence exposure",
-    "potential misclassification of violence exposure",
-    "small sample size for investigating multiplicative effects"
+    "Small sample size for investigating multiplicative effects.",
+    "Retrospective violence report subject to recall bias.",
+    "Potential exposure misclassification due to incomplete residential history.",
+    "NO2 may not represent all pollutants of interest."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "gemma-3-12b-it-qat-4bit"
+  "model": "Qwen3.6-35B-A3B-4bit"
 }

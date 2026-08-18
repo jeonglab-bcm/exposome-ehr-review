@@ -2,25 +2,23 @@
   "pmcid": "PMC5840817",
   "title": "Correction to: Early-life exposure to PM2.5 and risk of acute asthma clinical encounters among children in Massachusetts: a case-crossover analysis.",
   "year": "2018",
-  "ehr_used": true,
-  "ehr_evidence": "The study used Massachusetts Department of Public Health birth records and Massachusetts Executive Office of Public Safety and Security (EOPSS) hospital discharge data.",
-  "summary": "This case-crossover analysis examined the association between early-life exposure to PM2.5 and the risk of acute asthma clinical encounters among children in Massachusetts using birth records and hospital discharge data.",
+  "ehr_used": false,
+  "ehr_evidence": "This manuscript is a correction to a previously published article and does not present new primary data analysis or specify the original data source in this text.",
+  "summary": "This correction notice addresses a data entry error in Table 1 of the original study regarding the number of children with a maternal language preference listed as 'Other'.",
   "key_findings": [],
   "captured_features": [],
-  "pathologies_diseases": [
-    "asthma"
+  "pathologies_diseases": [],
+  "study_design": "correction notice",
+  "data_source_type": "other",
+  "population": "children in Massachusetts (from original study)",
+  "exposure_domain": "air pollution (PM2.5, from original study)",
+  "limitations": [
+    "None reported; this is a correction notice."
   ],
-  "study_design": "case-crossover",
-  "data_source_type": "EHR",
-  "population": "children in Massachusetts",
-  "exposure_domain": "air pollution",
-  "limitations": [],
-  "data_availability": "public-repository",
-  "data_accession_links": [
-    "https://doi.org/10.1186/s12940-018-0361-6"
-  ],
-  "data_availability_statement": "The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated.",
-  "confidence": "unclear",
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma-3-12b-it-qat-4bit"
+  "model": "Qwen3.6-35B-A3B-4bit"
 }

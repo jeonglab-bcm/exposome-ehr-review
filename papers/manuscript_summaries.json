@@ -559,38 +559,42 @@
       "title": "Synergistic effects of traffic-related air pollution and exposure to violence on urban asthma etiology.",
       "year": "2007",
       "ehr_used": false,
-      "ehr_evidence": "Data collection and analysis for the nitrogen dioxide passive network and violence exposure assessment were supported by the Massachusetts Port Authority (P.B.R.) and K08 HL 04187 (R.J.W.)",
-      "summary": "This study examined the role of exposure to violence (ETV) in altering susceptibility to traffic-related air pollution (NO2) in asthma etiology among children in East Boston, Massachusetts.",
+      "ehr_evidence": "Pregnant women were recruited from East Boston Neighborhood Health Center (EBNHC), Boston, Massachusetts, between 1987 and 1993... Questionnaires were administered detailing violence exposures (both witnessing and victimization) and avoidance behaviors... During MISSEB follow-up, parental reports of child’s asthma diagnosis were ascertained through bi-monthly telephone or face-to-face interviews over the child’s first 2 years, every 6 months through 4 years of age, and annually thereafter.",
+      "summary": "A prospective pregnancy cohort study of 413 children in East Boston, Massachusetts, examined the synergistic effects of traffic-related nitrogen dioxide exposure and exposure to violence on childhood asthma etiology using GIS-based pollution modeling and questionnaire data.",
       "key_findings": [
-        "A 1-SD increase in NO2 exposure was associated with an elevated risk of asthma solely among children with above-median ETV (OR = 1.63; 95% CI, 1.14–2.33).",
-        "Among lifetime residents, the association between NO2 and asthma was magnified (OR = 2.40; 95% CI, 1.48–3.88)."
+        "Among children with above-median exposure to violence, a 1-SD (4.3 ppb) increase in year-of-diagnosis NO2 was associated with elevated odds of asthma (adjusted OR = 1.63; 95% CI, 1.14–2.33; p = 0.03 for interaction).",
+        "Among lifetime residents, the association was magnified (adjusted OR = 2.40; 95% CI, 1.48–3.88; p = 0.0009 for interaction).",
+        "No significant independent association was found between NO2 and asthma among children with below-median exposure to violence (OR = 0.94; 95% CI, 0.70–1.26)."
       ],
       "captured_features": [
-        "residential addresses",
-        "violence exposure (ETV)",
-        "asthma diagnosis",
-        "maternal asthma status",
-        "socioeconomic status (education)",
-        "smoking status"
+        "NO2 exposure estimates (GIS-based land-use regression)",
+        "Exposure to violence (ETV) scores (Rasch modeling)",
+        "Asthma diagnosis (parental report)",
+        "Maternal education",
+        "Maternal smoking status (cotinine)",
+        "Child's sex and age",
+        "Maternal asthma history"
       ],
       "pathologies_diseases": [
-        "asthma"
+        "Asthma",
+        "Asthmatic bronchitis"
       ],
-      "study_design": "cohort",
-      "data_source_type": "questionnaire",
-      "population": "413 children in East Boston, Massachusetts, recruited in 1987-1993",
-      "exposure_domain": "traffic-related air pollution (NO2)",
+      "study_design": "prospective cohort",
+      "data_source_type": "other",
+      "population": "413 children (aged 4-11.5 years at follow-up) from a community-based pregnancy cohort in East Boston, Massachusetts",
+      "exposure_domain": "air pollution, social stressors",
       "limitations": [
-        "reliance on questionnaire data for violence exposure",
-        "potential misclassification of violence exposure",
-        "small sample size for investigating multiplicative effects"
+        "Small sample size for investigating multiplicative effects.",
+        "Retrospective violence report subject to recall bias.",
+        "Potential exposure misclassification due to incomplete residential history.",
+        "NO2 may not represent all pollutants of interest."
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
       "data_availability_statement": "",
       "confidence": "medium",
       "source_format": "pdf",
-      "model": "gemma-3-12b-it-qat-4bit"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC1964903",
@@ -4313,27 +4317,25 @@
       "pmcid": "PMC5840817",
       "title": "Correction to: Early-life exposure to PM2.5 and risk of acute asthma clinical encounters among children in Massachusetts: a case-crossover analysis.",
       "year": "2018",
-      "ehr_used": true,
-      "ehr_evidence": "The study used Massachusetts Department of Public Health birth records and Massachusetts Executive Office of Public Safety and Security (EOPSS) hospital discharge data.",
-      "summary": "This case-crossover analysis examined the association between early-life exposure to PM2.5 and the risk of acute asthma clinical encounters among children in Massachusetts using birth records and hospital discharge data.",
+      "ehr_used": false,
+      "ehr_evidence": "This manuscript is a correction to a previously published article and does not present new primary data analysis or specify the original data source in this text.",
+      "summary": "This correction notice addresses a data entry error in Table 1 of the original study regarding the number of children with a maternal language preference listed as 'Other'.",
       "key_findings": [],
       "captured_features": [],
-      "pathologies_diseases": [
-        "asthma"
+      "pathologies_diseases": [],
+      "study_design": "correction notice",
+      "data_source_type": "other",
+      "population": "children in Massachusetts (from original study)",
+      "exposure_domain": "air pollution (PM2.5, from original study)",
+      "limitations": [
+        "None reported; this is a correction notice."
       ],
-      "study_design": "case-crossover",
-      "data_source_type": "EHR",
-      "population": "children in Massachusetts",
-      "exposure_domain": "air pollution",
-      "limitations": [],
-      "data_availability": "public-repository",
-      "data_accession_links": [
-        "https://doi.org/10.1186/s12940-018-0361-6"
-      ],
-      "data_availability_statement": "The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated.",
-      "confidence": "unclear",
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "low",
       "source_format": "pdf",
-      "model": "gemma-3-12b-it-qat-4bit"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC5841381",
@@ -4911,29 +4913,26 @@
       "title": "Correction: Evaluation of the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions: a population-based prospective cohort study conducted in England with the Clinical Practice Research Datalink.",
       "year": "2019",
       "ehr_used": true,
-      "ehr_evidence": "a population-based prospective cohort study conducted in England with the Clinical Practice Research Datalink",
-      "summary": "This study evaluated the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions using data from the Clinical Practice Research Datalink.",
+      "ehr_evidence": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
+      "summary": "This correction notice addresses errors in a previously published population-based prospective cohort study evaluating the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions using the Clinical Practice Research Datalink.",
       "key_findings": [],
       "captured_features": [],
       "pathologies_diseases": [
-        "asthma",
-        "high-risk conditions"
+        "asthma"
       ],
       "study_design": "prospective cohort",
       "data_source_type": "EHR",
-      "population": "children and adolescents in England",
+      "population": "children and adolescents with asthma and high-risk conditions in England",
       "exposure_domain": "vaccination",
-      "limitations": [],
-      "data_availability": "public-repository",
-      "data_accession_links": [
-        "http://www.nottingham.ac.uk/primis/documents/specs/seasonal-flu-lqd-specification-14-15-v7.pdf",
-        "http://allcatsrgrey.org.uk/wp/wpfb-file/annual_flu__letter_2017to2018-pdf/",
-        "http://content.digital.nhs.uk/hes"
+      "limitations": [
+        "None explicitly stated in the correction text; the correction addresses protocol approval and reference citations rather than study limitations."
       ],
-      "data_availability_statement": "",
-      "confidence": "medium",
+      "data_availability": "available-upon-request",
+      "data_accession_links": [],
+      "data_availability_statement": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
+      "confidence": "low",
       "source_format": "pdf",
-      "model": "gemma-3-12b-it-qat-4bit"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC6445781",
@@ -5913,40 +5912,36 @@
       "title": "The Rotavirus Vaccine Story: From Discovery to the Eventual Control of Rotavirus Disease.",
       "year": "2021",
       "ehr_used": false,
-      "ehr_evidence": "The medical and public health communities were challenged to improve child survival through research by “taking science to where the problems were” [7].",
-      "summary": "This manuscript details the discovery, development, and eventual control of rotavirus disease through the introduction of live oral vaccines, highlighting challenges and future directions.",
+      "ehr_evidence": "This manuscript is a narrative review article summarizing the history, development, and global impact of rotavirus vaccines; it does not analyze primary electronic health record or linked health data.",
+      "summary": "This narrative review summarizes the historical development, clinical trial efficacy, and post-licensure global impact of rotavirus vaccines, highlighting reduced mortality and hospitalizations but persistent challenges with vaccine effectiveness in low-income settings.",
       "key_findings": [
-        "Worldwide, rotavirus is the leading pathogen causing severe diarrhea in children and a major cause of under 5 years mortality.",
-        "The first rotavirus vaccine, RotaShield, was withdrawn due to a rare adverse event (intussusception).",
-        "Newer vaccines (Rotarix and Rotateq) demonstrated efficacy in reducing rotavirus disease but showed lower effectiveness in low-income countries.",
-        "Two Indian-made rotavirus vaccines (Rotavac and Rotasiil) have been prequalified by the WHO and are being used in low-income countries.",
-        "Rotavirus vaccine programs have led to a marked decrease in hospitalizations and deaths from diarrhea."
+        "Rotavirus vaccine introduction reduced rotavirus hospitalizations by a median of 59%, acute gastroenteritis hospitalizations by 36%, and diarrhea mortality by 36% in countries with routine immunization programs.",
+        "Vaccine effectiveness showed a gradient by setting: median 87% in countries with lowest under-5 mortality, 75% in intermediate, and 60% in highest under-5 mortality countries.",
+        "Rotavac demonstrated an efficacy of 56% (95% CI, 37%–70%) against severe rotavirus gastroenteritis in the first 2 years of life in India.",
+        "Rotasiil demonstrated an efficacy of 36% (95% CI, 12%–49%) in India and 67% (95% CI, 50%–78%) in Niger against severe rotavirus gastroenteritis.",
+        "Post-licensure monitoring in high- and middle-income countries observed an increased risk of intussusception of 1 to 6 excess cases per 100,000 vaccinated infants in the 1–7 days after the first dose, whereas no increased risk was seen in high-mortality countries in sub-Saharan Africa or India."
       ],
-      "captured_features": [
-        "Epidemiology of rotavirus disease",
-        "Development of rotavirus vaccines",
-        "Clinical trials and efficacy data",
-        "Impact of vaccination programs",
-        "Challenges in low-income settings"
-      ],
+      "captured_features": [],
       "pathologies_diseases": [
-        "Rotavirus gastroenteritis",
-        "Diarrhea",
-        "Intussusception"
+        "Rotavirus disease",
+        "Severe rotavirus gastroenteritis",
+        "Intussusception",
+        "Acute gastroenteritis",
+        "Diarrhea"
       ],
-      "study_design": "Historical review",
-      "data_source_type": "Literature review",
-      "population": "Children under 5 years of age worldwide",
-      "exposure_domain": "Viral pathogens",
+      "study_design": "Narrative review",
+      "data_source_type": "other",
+      "population": "Children <5 years globally, with specific focus on low-, middle-, and high-income countries",
+      "exposure_domain": "Vaccination (rotavirus vaccines)",
       "limitations": [
-        "The manuscript is a historical review and does not present new data."
+        "This is a narrative review summarizing existing literature and clinical trial data rather than a primary observational study; it does not generate new primary data from EHR or linked health records."
       ],
       "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online.",
-      "confidence": "medium",
+      "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author.",
+      "confidence": "high",
       "source_format": "pdf",
-      "model": "gemma-3-12b-it-qat-4bit"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC8590342",
@@ -7387,25 +7382,24 @@
       "title": "Correction: Neonatal blood lead concentration predicts medium term lead-related outcomes in children ≤5 years old with congenital lead poisoning: A retrospective cohort study in Northern Nigeria.",
       "year": "2024",
       "ehr_used": false,
-      "ehr_evidence": "The study used data from MSF.",
-      "summary": "This retrospective cohort study in Northern Nigeria examined whether neonatal blood lead concentration predicts medium-term lead-related outcomes in children ≤5 years old with congenital lead poisoning.",
+      "ehr_evidence": "The text is a correction statement regarding funding and competing interests for a previously published retrospective cohort study; it does not contain original data analysis or specify an electronic health record system.",
+      "summary": "This manuscript is a correction notice for a retrospective cohort study on neonatal blood lead concentration and medium-term outcomes in children with congenital lead poisoning in Northern Nigeria, correcting funding and conflict of interest statements.",
       "key_findings": [],
       "captured_features": [],
       "pathologies_diseases": [],
-      "study_design": "retrospective cohort",
-      "data_source_type": "MSF data",
-      "population": "children ≤5 years old with congenital lead poisoning in Northern Nigeria",
-      "exposure_domain": "heavy metals",
-      "limitations": [],
-      "data_availability": "public-repository",
-      "data_accession_links": [
-        "https://doi.org/10.1371/journal.pgph.0001644",
-        "https://doi.org/10.1371/journal.pgph.0002912"
+      "study_design": "retrospective cohort study (as described in the referenced original article)",
+      "data_source_type": "other",
+      "population": "children ≤5 years old with congenital lead poisoning in Northern Nigeria (as described in the referenced original article)",
+      "exposure_domain": "heavy metals (lead)",
+      "limitations": [
+        "None explicitly stated in this correction notice."
       ],
-      "data_availability_statement": "This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
-      "confidence": "unclear",
+      "data_availability": "available-upon-request",
+      "data_accession_links": [],
+      "data_availability_statement": "This does not alter our adherence to PLOS Global Public Health policies on sharing data and materials.",
+      "confidence": "low",
       "source_format": "pdf",
-      "model": "gemma-3-12b-it-qat-4bit"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC10870542",

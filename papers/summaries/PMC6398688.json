@@ -3,27 +3,24 @@
   "title": "Correction: Evaluation of the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions: a population-based prospective cohort study conducted in England with the Clinical Practice Research Datalink.",
   "year": "2019",
   "ehr_used": true,
-  "ehr_evidence": "a population-based prospective cohort study conducted in England with the Clinical Practice Research Datalink",
-  "summary": "This study evaluated the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions using data from the Clinical Practice Research Datalink.",
+  "ehr_evidence": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
+  "summary": "This correction notice addresses errors in a previously published population-based prospective cohort study evaluating the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions using the Clinical Practice Research Datalink.",
   "key_findings": [],
   "captured_features": [],
   "pathologies_diseases": [
-    "asthma",
-    "high-risk conditions"
+    "asthma"
   ],
   "study_design": "prospective cohort",
   "data_source_type": "EHR",
-  "population": "children and adolescents in England",
+  "population": "children and adolescents with asthma and high-risk conditions in England",
   "exposure_domain": "vaccination",
-  "limitations": [],
-  "data_availability": "public-repository",
-  "data_accession_links": [
-    "http://www.nottingham.ac.uk/primis/documents/specs/seasonal-flu-lqd-specification-14-15-v7.pdf",
-    "http://allcatsrgrey.org.uk/wp/wpfb-file/annual_flu__letter_2017to2018-pdf/",
-    "http://content.digital.nhs.uk/hes"
+  "limitations": [
+    "None explicitly stated in the correction text; the correction addresses protocol approval and reference citations rather than study limitations."
   ],
-  "data_availability_statement": "",
-  "confidence": "medium",
+  "data_availability": "available-upon-request",
+  "data_accession_links": [],
+  "data_availability_statement": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "gemma-3-12b-it-qat-4bit"
+  "model": "Qwen3.6-35B-A3B-4bit"
 }
