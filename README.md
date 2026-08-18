@@ -50,6 +50,7 @@ Git — large/binary files (`*.pdf`, `*.xml`, `db.json`) go through **Git LFS**
 |-------|----------|
 | [docs/data-collection.md](./docs/data-collection.md) | Search strategy (Tier 1–5), the seven-stage fetch process, full-text resolution & validation |
 | [docs/summarization.md](./docs/summarization.md) | Gemma 4 12B summarization, the `ManuscriptChecklist` schema, and the data-availability scan |
+| [docs/local-llm.md](./docs/local-llm.md) | Running the summarizer against a local LLM (oMLX on Apple Silicon): model install, the thinking-model gotcha, offloading |
 | [docs/orchestration.md](./docs/orchestration.md) | TinyDB store, Dagster asset graph, GitHub Actions, and the full list of generated outputs |
 
 ## Static site (GitHub Pages)
