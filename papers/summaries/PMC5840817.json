@@ -2,23 +2,25 @@
   "pmcid": "PMC5840817",
   "title": "Correction to: Early-life exposure to PM2.5 and risk of acute asthma clinical encounters among children in Massachusetts: a case-crossover analysis.",
   "year": "2018",
-  "ehr_used": false,
-  "ehr_evidence": "This manuscript is a correction notice to a previously published study and does not describe the primary data source.",
-  "summary": "Correction notice addressing an incorrect demographic count in Table 1 of a previously published case-crossover study on early-life PM2.5 exposure and acute asthma clinical encounters in Massachusetts.",
+  "ehr_used": true,
+  "ehr_evidence": "The study used Massachusetts Department of Public Health birth records and Massachusetts Executive Office of Public Safety and Security (EOPSS) hospital discharge data.",
+  "summary": "This case-crossover analysis examined the association between early-life exposure to PM2.5 and the risk of acute asthma clinical encounters among children in Massachusetts using birth records and hospital discharge data.",
   "key_findings": [],
   "captured_features": [],
   "pathologies_diseases": [
-    "acute asthma"
+    "asthma"
   ],
-  "study_design": "case-crossover analysis",
-  "data_source_type": "clinical encounter data",
+  "study_design": "case-crossover",
+  "data_source_type": "EHR",
   "population": "children in Massachusetts",
-  "exposure_domain": "PM2.5",
+  "exposure_domain": "air pollution",
   "limitations": [],
-  "data_availability": "not-stated",
-  "data_accession_links": [],
-  "data_availability_statement": "",
-  "confidence": "low",
+  "data_availability": "public-repository",
+  "data_accession_links": [
+    "https://doi.org/10.1186/s12940-018-0361-6"
+  ],
+  "data_availability_statement": "The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated.",
+  "confidence": "unclear",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "gemma-3-12b-it-qat-4bit"
 }

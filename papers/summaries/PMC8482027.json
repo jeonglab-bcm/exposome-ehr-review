@@ -3,29 +3,38 @@
   "title": "The Rotavirus Vaccine Story: From Discovery to the Eventual Control of Rotavirus Disease.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "Narrative review synthesizing published clinical trial data, surveillance reports, and historical literature on rotavirus vaccine development and implementation.",
-  "summary": "Narrative review of the history, development, efficacy, global implementation, and future directions of rotavirus vaccines.",
-  "key_findings": [],
-  "captured_features": [],
-  "pathologies_diseases": [
-    "rotavirus disease",
-    "acute gastroenteritis",
-    "diarrhea",
-    "intussusception"
+  "ehr_evidence": "The medical and public health communities were challenged to improve child survival through research by “taking science to where the problems were” [7].",
+  "summary": "This manuscript details the discovery, development, and eventual control of rotavirus disease through the introduction of live oral vaccines, highlighting challenges and future directions.",
+  "key_findings": [
+    "Worldwide, rotavirus is the leading pathogen causing severe diarrhea in children and a major cause of under 5 years mortality.",
+    "The first rotavirus vaccine, RotaShield, was withdrawn due to a rare adverse event (intussusception).",
+    "Newer vaccines (Rotarix and Rotateq) demonstrated efficacy in reducing rotavirus disease but showed lower effectiveness in low-income countries.",
+    "Two Indian-made rotavirus vaccines (Rotavac and Rotasiil) have been prequalified by the WHO and are being used in low-income countries.",
+    "Rotavirus vaccine programs have led to a marked decrease in hospitalizations and deaths from diarrhea."
   ],
-  "study_design": "Narrative review",
-  "data_source_type": "Published literature and historical data",
-  "population": "Children worldwide, primarily under 5 years of age",
-  "exposure_domain": "Rotavirus vaccination",
+  "captured_features": [
+    "Epidemiology of rotavirus disease",
+    "Development of rotavirus vaccines",
+    "Clinical trials and efficacy data",
+    "Impact of vaccination programs",
+    "Challenges in low-income settings"
+  ],
+  "pathologies_diseases": [
+    "Rotavirus gastroenteritis",
+    "Diarrhea",
+    "Intussusception"
+  ],
+  "study_design": "Historical review",
+  "data_source_type": "Literature review",
+  "population": "Children under 5 years of age worldwide",
+  "exposure_domain": "Viral pathogens",
   "limitations": [
-    "Narrative review design",
-    "Relies on published literature and historical data rather than original primary analysis",
-    "No individual-level patient data evaluated"
+    "The manuscript is a historical review and does not present new data."
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author.",
-  "confidence": "low",
+  "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online.",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "gemma-3-12b-it-qat-4bit"
 }

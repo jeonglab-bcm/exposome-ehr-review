@@ -101,31 +101,41 @@ SYSTEM_PROMPT = (
 )
 
 
-def build_user_prompt(text: str) -> str:
+def build_user_prompt(text: str, title: str = "", year: str = "") -> str:
     keys = list(LLM_FIELDS_SCHEMA["properties"].keys())
+    # NOTE: example values are deliberate placeholders. A concrete worked
+    # example caused the 12B model to copy the example verbatim instead of
+    # reading the manuscript (observed 2026-08-18, PMC8482027). Keep them
+    # unmistakably synthetic.
     example = {
         "ehr_used": True,
-        "ehr_evidence": "We used Hospital Episode Statistics (HES).",
-        "summary": "EWAS of childhood T1DM across England.",
-        "key_findings": ["15 of 53 environmental factors were associated with "
-                         "T1DM incidence (strongest: PM2.5, beta=0.31, p<0.001).",
-                         "No association was found with maternal age (p=0.62)."],
-        "captured_features": ["HES ICD codes", "incident diabetes cases"],
-        "pathologies_diseases": ["type 1 diabetes"],
-        "study_design": "ecological EWAS",
-        "data_source_type": "EHR",
-        "population": "children 0-9 yrs, England",
-        "exposure_domain": "air pollution",
-        "limitations": ["ecological design"],
+        "ehr_evidence": "<<quote the sentence from the manuscript naming the database>>",
+        "summary": "<<one sentence: design + population + exposure + outcome>>",
+        "key_findings": ["<<main quantitative result with effect size and p-value>>"],
+        "captured_features": ["<<data fields actually analysed>>"],
+        "pathologies_diseases": ["<<outcome condition(s)>>"],
+        "study_design": "<<e.g. cohort, case-control, cross-sectional>>",
+        "data_source_type": "<<EHR / claims / registry / biospecimen / other>>",
+        "population": "<<age range and setting>>",
+        "exposure_domain": "<<e.g. air pollution, heavy metals>>",
+        "limitations": ["<<main design limitation>>"],
         "confidence": "medium",
     }
+    header = "Extract the checklist JSON for this manuscript.\n\n"
+    if title:
+        header += f"Manuscript title: {title}"
+        if year:
+            header += f" ({year})"
+        header += ("\nYour output MUST describe THIS manuscript. The example below "
+                   "shows the FORMAT ONLY — its values are placeholders; never copy "
+                   "them.\n\n")
     return (
-        "Extract the checklist JSON for this manuscript.\n\n"
-        "Use EXACTLY these keys and no others:\n"
+        header
+        + "Use EXACTLY these keys and no others:\n"
         + json.dumps(keys) + "\n\n"
-        "Example output shape:\n"
+        + "Example output shape (format only):\n"
         + json.dumps(example, ensure_ascii=False) + "\n\n"
-        "Rules:\n"
+        + "Rules:\n"
         "- ehr_used is a JSON boolean (true/false). Set it true ONLY if the "
         "study analyses data that is all three of: electronic/computerised, "
         "individual-level (per-person records, not aggregate counts), and "
@@ -257,7 +267,7 @@ def summarize_text(
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": build_user_prompt(text)},
+        {"role": "user", "content": build_user_prompt(text, title=title, year=year)},
     ]
 
     last_err = ""
