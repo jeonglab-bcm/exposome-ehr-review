@@ -3,736 +3,6 @@
   "model": "qwen3.6-35b-vllm-nvfp4",
   "summaries": [
     {
-      "pmcid": "PMC10229756",
-      "title": "2023_PMC10229756_Adverse_Events_Following_Immunization_Among_Children_Under_Two_",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "Data was collected using a pretested, semi-structured questionnaire that contained 20 questions regarding the socio-demographic characteristics of the participants, vaccination details, and the AEFI history of the child.",
-      "summary": "Prospective community-based observational study assessing the incidence and pattern of adverse events following immunization (AEFI) among children under two years of age in Uttarakhand, North India.",
-      "key_findings": [
-        "The incidence of AEFI was 33.0 per 100 doses of vaccines administered.",
-        "212 AEFIs were reported from 152 of 255 vaccinated subjects.",
-        "The most common AEFI was fever (101, 47.6%), followed by swelling at the injection site (53, 25.0%).",
-        "Pentavalent + OPV had the highest AEFI incidence (48.8 per 100 doses), followed by DPT + MR + OPV (46.6 per 100 doses).",
-        "No AEFI was reported after BCG + Hepatitis B + OPV administration.",
-        "No significant association of AEFI with age or gender was found (p > 0.05).",
-        "All reported AEFIs were minor, and no serious AEFIs were identified."
-      ],
-      "captured_features": [
-        "socio-demographic characteristics",
-        "vaccination details",
-        "AEFI history",
-        "fever",
-        "swelling",
-        "pain",
-        "redness",
-        "nodule",
-        "excessive cry",
-        "age group",
-        "gender",
-        "birth weight",
-        "socioeconomic status"
-      ],
-      "pathologies_diseases": [
-        "adverse events following immunization (AEFI)",
-        "fever",
-        "swelling",
-        "pain",
-        "redness",
-        "nodule",
-        "excessive cry"
-      ],
-      "study_design": "Prospective community-based observational study",
-      "data_source_type": "Questionnaire and home visit survey",
-      "population": "Children aged less than two years receiving vaccines under the Universal Immunization Program in Uttarakhand, North India",
-      "exposure_domain": "Routine childhood vaccines (Pentavalent, OPV, IPV, DPT, MR, BCG, Hepatitis B)",
-      "limitations": [
-        "Conducted in a single block, limiting generalizability.",
-        "Recall bias due to reliance on maternal history for AEFI identification.",
-        "Inability to attribute specific AEFIs to individual vaccines due to co-administration.",
-        "Small sample size due to declined participation and loss to follow-up, introducing potential selection bias."
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC13100012",
-      "title": "2026_PMC13100012_Coverage_and_associated_factors_of_inactivated_polio_vaccine_up",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "The current study was conducted based on the most recent Demographic and Health Survey (DHS) data of 20 Sub-Saharan African countries.",
-      "summary": "Secondary data analysis assessing inactivated polio vaccine (IPV) coverage and determinants among children aged 12–23 months across 20 Sub-Saharan African countries using pooled DHS survey data.",
-      "key_findings": [
-        "Pooled IPV coverage was 65.10% (95% CI: 55.44, 74.76).",
-        "Maternal age 20–35 years (AOR = 1.08, 95% CI: 1.00, 1.18) and >35 years (AOR = 1.22, 95% CI: 1.11, 1.34) were positively associated with IPV uptake.",
-        "Maternal education at primary (AOR = 1.30, 95% CI: 1.23, 1.37) and secondary+ levels (AOR = 1.87, 95% CI: 1.76, 1.99) increased odds.",
-        "Rich household wealth showed an inverse association (AOR = 0.84, 95% CI: 0.79, 0.89).",
-        "ANC visits 1–3 (AOR = 1.86, 95% CI: 1.72, 2.01) and ≥4 (AOR = 2.51, 95% CI: 2.33, 2.70), health facility delivery (AOR = 1.86, 95% CI: 1.77, 1.97), and PNC (AOR = 1.73, 95% CI: 1.65, 1.82) were significant positive determinants.",
-        "Urban residence (AOR = 1.24, 95% CI: 1.17, 1.31) and high community women's literacy (AOR = 1.68, 95% CI: 1.54, 1.83) were associated with higher uptake.",
-        "Regional disparities were observed, with Southern Africa showing the highest odds compared to Central Africa (AOR = 8.41, 95% CI: 7.08, 9.99)."
-      ],
-      "captured_features": [
-        "child vaccination status",
-        "maternal age",
-        "maternal education",
-        "household wealth index",
-        "marital status",
-        "media exposure",
-        "antenatal care visits",
-        "postnatal care visits",
-        "place of delivery",
-        "birth interval",
-        "residence type",
-        "community women's literacy",
-        "community poverty level",
-        "geographic region"
-      ],
-      "pathologies_diseases": [
-        "poliomyelitis",
-        "circulating vaccine-derived poliovirus"
-      ],
-      "study_design": "cross-sectional secondary data analysis with multilevel logistic regression",
-      "data_source_type": "Demographic and Health Survey (DHS)",
-      "population": "children aged 12–23 months and their mothers in 20 Sub-Saharan African countries (weighted n=43,564)",
-      "exposure_domain": "socio-demographic factors, maternal healthcare utilization, community-level characteristics, and geographic region",
-      "limitations": [
-        "cross-sectional design prevents causal inference",
-        "reliance on verbal reports and vaccination cards may introduce recall bias",
-        "limited data on health system factors",
-        "potential time lag between data collection and publication"
-      ],
-      "data_availability": "public-repository",
-      "data_accession_links": [
-        "https://dhsprogram.com/data/available-datasets.cfm"
-      ],
-      "data_availability_statement": "The datasets generated and analyzed for the present study are available in the DHS website (which is available from  [ h t t p s : / / d h s p r o g r a m . c o m / d a t a / a v a i l a b l e - d a t a s e t s . c f m ] ( h t t p s : / d h s p r o g r a m . c o m / d a t a / a v a i l a b l e - d a t a s e t s . c f m ) .",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC2685976",
-      "title": "2009_PMC2685976_A_liposome-based_mycobacterial_vaccine_induces_potent_adult_and_",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "Specific pathogen-free C57BL/6 mice (7 days of age (1-week-old, neonates) or 8–12 weeks old (adult), Charles River) were bred and kept under specific pathogen-free conditions in the university zootechnology unit.",
-      "summary": "Preclinical murine study evaluating the immunogenicity, dendritic cell targeting, and protective efficacy of the CAF01 liposome-based adjuvant against tuberculosis in neonatal and adult mice.",
-      "key_findings": [
-        "Ag85B-ESAT-6/CAF01 significantly reduced post-challenge M. bovis BCG bacterial counts in spleen and lungs compared to Alum control (p<0.05).",
-        "Ag85B-ESAT-6/Alum did not confer protective efficacy, with CFU counts as high as in unimmunized controls.",
-        "Twenty-four hours post-immunization, 84.2 ± 4.8% of adjuvant-bearing cells in adult draining lymph nodes were CD11c+ DCs.",
-        "The proportion of total DCs bearing antigen and adjuvant was low (0.09 ± 0.04%), translating to 523 ± 254 Ag+Adj+ DCs per adult mouse.",
-        "In neonates, adjuvant-bearing cells were 71.2 ± 9.8% CD11c+ DCs, with a lower Ag+Adj+ proportion (28.6 ± 8.6%) and count (151 ± 119 DCs per mouse).",
-        "Vaccine-associated DCs peaked around Day 5 and were not detected by Day 21 post-immunization.",
-        "CAF01 induced sustained adult-like Th1 (IFN-γ, TNF-α) and Th17 (IL-17) responses in neonates comparable to adults (p>0.05)."
-      ],
-      "captured_features": [
-        "Cytokine production (IFN-γ, TNF-α, IL-2, IL-17, IL-5)",
-        "Dendritic cell surface markers (CD11c, CD40, CD86, CD205)",
-        "Bacterial colony-forming units (CFU) in spleen and lungs",
-        "T cell activation markers (CD44)",
-        "Fluorochrome-labeled antigen and adjuvant uptake"
-      ],
-      "pathologies_diseases": [
-        "Tuberculosis (Mycobacterium tuberculosis / M. bovis BCG infection)"
-      ],
-      "study_design": "Preclinical murine immunization and challenge model",
-      "data_source_type": "Animal model / experimental immunology",
-      "population": "C57BL/6 mice (neonates at 1 week of age and adults at 8-12 weeks)",
-      "exposure_domain": "Vaccine adjuvant (CAF01 formulation)",
-      "limitations": [
-        "Mouse model limitations in predicting human vaccine efficacy",
-        "Fluorochrome labeling intensity may not capture all labeled cell populations in vivo",
-        "Detection limits of the method may affect DC migration timing estimates",
-        "Short half-life of activated DCs complicates duration estimation of the phenomenon"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC3469560",
-      "title": "2012_PMC3469560_Attitudes_of_the_general_public_and_general_practitioners_in_fiv",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "In December 2009/January 2010 and April 2010, 500 randomly selected members of the general public in Germany, France, the United States, China, and Mexico were surveyed by telephone about vaccination for seasonal and A/H1N1 pandemic influenza. Also, in April 2010, 100 randomly selected general practitioners were surveyed.",
-      "summary": "Cross-sectional survey of the general public and general practitioners in five countries examining attitudes, perceptions, and vaccination coverage rates for seasonal and A/H1N1 pandemic influenza during the 2009/2010 season.",
-      "key_findings": [
-        "Adult A/H1N1 pandemic influenza vaccination coverage in Dec 2009/Jan 2010 was 12% in France, 11% in Germany, 41% in the US, 13% in Mexico, and 12% in China.",
-        "Adult seasonal influenza vaccination coverage in Dec 2009/Jan 2010 was 29% in France, 25% in Germany, 46% in the US, 30% in Mexico, and 10% in China.",
-        "Inclusion of the A/H1N1 pandemic strain increased willingness to be vaccinated for seasonal influenza in the US, Mexico, and China but not in Germany or France.",
-        "The 2009/2010 A/H1N1 pandemic increased seasonal influenza vaccine uptake in Mexico but had little effect in other countries.",
-        "GP recommendation was a common reason for receiving the pandemic vaccine, while lack of risk perception and safety concerns were common reasons for not being vaccinated."
-      ],
-      "captured_features": [
-        "vaccination coverage rates",
-        "public and GP threat perceptions",
-        "vaccination decision drivers",
-        "future vaccination willingness"
-      ],
-      "pathologies_diseases": [
-        "influenza (seasonal and A/H1N1 pandemic)"
-      ],
-      "study_design": "cross-sectional telephone and internet surveys",
-      "data_source_type": "telephone and internet survey",
-      "population": "general public (adults and parents) and general practitioners in France, Germany, the US, Mexico, and China",
-      "exposure_domain": "influenza vaccination, pandemic/seasonal influenza exposure, media coverage, GP recommendations",
-      "limitations": [
-        "small sample size (500 public, 100 GPs per country)",
-        "low survey response rates leading to potential selection bias",
-        "geographic limitation in China and Mexico (only 3 largest cities surveyed)",
-        "self-reported vaccination status subject to recall and honesty bias",
-        "cross-sectional design limits causal inference"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "low",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC4256824",
-      "title": "2014_PMC4256824_Determinants_of_vaccination_coverage_and_adherence_to_the_Greek_",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "The infant was considered as immunized or not based on the immunization card, as provided by the National Greek Health Care System.",
-      "summary": "Cross-sectional survey evaluating vaccination coverage and socioeconomic determinants among infants aged 2-24 months in Athens, Greece during 2009-2011.",
-      "key_findings": [
-        "4.9% (95% CI 3.9%-6.0%) of parents admitted omitting a vaccine due to beliefs.",
-        "Infants were less likely to be fully vaccinated if they belonged to a minority group, had >1 sibling, young/illiterate parents, non-public insurance, or unemployed parents.",
-        "Appropriate hepatitis B immunization was strongly associated with hexavalent vaccine use (97.5% vs 54.2% at 6 months, 92.8% vs 25.7% at 12 months, p<0.01).",
-        "Multivariate analysis confirmed parental age, educational/occupational status, and family size (>3 children) as independent predictors of immunization status.",
-        "Lack of insurance was not associated with missed vaccine doses (57.8% vs 57.8%, p=NS)."
-      ],
-      "captured_features": [
-        "immunization card status",
-        "parental age, education, occupation",
-        "family size",
-        "health insurance status",
-        "vaccination coverage rates",
-        "minority/immigrant status"
-      ],
-      "pathologies_diseases": [
-        "vaccine-preventable diseases",
-        "hepatitis B",
-        "diphtheria",
-        "tetanus",
-        "pertussis",
-        "polio",
-        "Haemophilus influenzae type b",
-        "pneumococcal disease",
-        "meningococcal C",
-        "measles",
-        "mumps",
-        "rubella",
-        "varicella",
-        "hepatitis A",
-        "rotavirus",
-        "tuberculosis"
-      ],
-      "study_design": "cross-sectional survey",
-      "data_source_type": "questionnaire and immunization cards",
-      "population": "infants aged 2-24 months visiting a tertiary public outpatient clinic in Athens, Greece (2009-2011)",
-      "exposure_domain": "socioeconomic status, parental demographics, economic crisis period",
-      "limitations": [
-        "convenience sample not representative of general population",
-        "overrepresentation of minority and low-SES children",
-        "underrepresentation of high-SES and rural families",
-        "less stringent criteria used to define complete vaccination",
-        "potential selection bias from outpatient clinic recruitment"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC4515582",
-      "title": "2013_PMC4515582_Are_Recent_Medical_Graduates_More_Skeptical_of_Vaccines",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "Surveys covering vaccine knowledge, attitudes, and beliefs were mailed in 2005 to 712 of these parent-identified providers.",
-      "summary": "Cross-sectional survey investigating the association between US primary care provider graduation year and beliefs regarding vaccine safety, efficacy, and disease susceptibility.",
-      "key_findings": [
-        "Recent graduates had 15% decreased odds of believing vaccines are efficacious compared to the preceding 5-year cohort (OR: 0.85, 95% CI: 0.73–0.99).",
-        "For every 5-year increase in graduation year, there was a 24% reduced odds of believing immunizations are one of the safest forms of medicine (OR: 0.76, 95% CI: 0.67–0.87).",
-        "Recent graduates had 1.3 times higher odds of believing immunizations do more harm than good (OR: 1.3, 95% CI: 1.0–1.8).",
-        "3.7% of recent graduates believed that immunizations do more harm than good.",
-        "Significant decreased odds of believing polio vaccines (IPV and OPV) were safe for recent compared to older graduates."
-      ],
-      "captured_features": [
-        "Provider graduation year",
-        "Vaccine efficacy beliefs",
-        "Vaccine safety beliefs",
-        "Disease susceptibility beliefs",
-        "Disease severity beliefs",
-        "Provider exemption status",
-        "Provider professional type"
-      ],
-      "pathologies_diseases": [
-        "polio",
-        "diphtheria",
-        "pertussis",
-        "tetanus",
-        "measles",
-        "mumps",
-        "rubella",
-        "Haemophilus influenzae type b",
-        "varicella",
-        "hepatitis B",
-        "invasive pneumococcal disease",
-        "influenza"
-      ],
-      "study_design": "cross-sectional survey",
-      "data_source_type": "survey",
-      "population": "primary care health care providers in the United States",
-      "exposure_domain": "provider graduation year (cohort effect)",
-      "limitations": [
-        "cross-sectional design prevents causal inference",
-        "graduation year used as proxy for age",
-        "non-representative sample nested within a case-control study",
-        "small sample size for some analyses",
-        "data collected in 2005 may not reflect current provider beliefs",
-        "limited patient sample per provider used to categorize exemption status"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "xml",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC4640112",
-      "title": "2015_PMC4640112_Febrile_seizures_after_2009_influenza_A_H1N1_vaccination_and_inf",
-      "year": "",
-      "ehr_used": true,
-      "ehr_evidence": "In addition to information from the national population registry, we used information from the Norwegian Directorate of Health, the Norwegian Surveillance System for Communicable Diseases, the Norwegian Immunisation Register, and the Norwegian Patient Register.",
-      "summary": "Nationwide registry-based self-controlled case series study estimating the risk of febrile seizures in Norwegian children following 2009 H1N1 influenza vaccination or infection.",
-      "key_findings": [
-        "The incidence rate ratio (IRR) of febrile seizures 1–3 days after vaccination was 2.00 (95% CI: 1.15–3.51).",
-        "No increased risk of febrile seizures was observed in the period 4–7 days after vaccination.",
-        "The IRR of febrile seizures on the same day as a diagnosis of influenza was 116.70 (95% CI: 62.81–216.90).",
-        "A tenfold increased risk was observed in the period 1–3 days after a diagnosis of influenza (IRR 10.12, 95% CI: 3.82–26.82)."
-      ],
-      "captured_features": [
-        "ICD-10 codes R56.0 and R56.8",
-        "ICPC-2 code R80",
-        "vaccination dates",
-        "influenza diagnosis dates",
-        "personal identification numbers",
-        "age and sex"
-      ],
-      "pathologies_diseases": [
-        "febrile seizures",
-        "influenza A (H1N1) infection"
-      ],
-      "study_design": "self-controlled case series (SCCS) study",
-      "data_source_type": "National health registries",
-      "population": "226,889 Norwegian children born 2006–2009 (up to 45 months old) resident in Norway as of October 1, 2009",
-      "exposure_domain": "Influenza A (H1N1) vaccination and infection",
-      "limitations": [
-        "Limited information on potential confounders",
-        "Lack of validity testing for outcome diagnosis",
-        "Under-ascertainment of influenza cases in primary care",
-        "Results likely apply to more severe influenza infections"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "high",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC5779422",
-      "title": "2014_PMC5779422_Human_papillomavirus_vaccination_coverage_among_adolescents_2007",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "CDC analyzed data from the 2007–2013 National Immunization Survey-Teen (NIS-Teen) and national postlicensure vaccine safety data among females and males.",
-      "summary": "Assessment of HPV vaccination coverage among US adolescents aged 13–17 years from 2007–2013 and postlicensure safety monitoring from 2006–2014.",
-      "key_findings": [
-        "Vaccination coverage with ≥1 dose increased from 53.8% (2012) to 57.3% (2013) among girls and from 20.8% (2012) to 34.6% (2013) among boys.",
-        "Receipt of ≥1 dose by age 13 increased by an average of 5.9% (95% CI = 2.8%–9.0%) with each new birth cohort, reaching 46.8% (95% CI = 41.2%–52.5%) for the 2000 cohort.",
-        "Missed vaccination opportunities ranged from 9.3% (95% CI = 8.1%–10.8%) for the 1994 cohort to 83.7% (95% CI = 77.8%–88.2%) for the 2000 cohort.",
-        "If missed opportunities were eliminated, coverage for the 2000 cohort could have reached 91.3% (95% CI = 87.9%–93.8%) by age 13.",
-        "VAERS received 25,176 adverse event reports post-HPV vaccination; 92.4% of HPV4 reports were classified as nonserious."
-      ],
-      "captured_features": [
-        "vaccination coverage rates",
-        "missed vaccination opportunities",
-        "parent-reported reasons for non-vaccination",
-        "adverse event reports"
-      ],
-      "pathologies_diseases": [
-        "HPV infection",
-        "cervical cancer",
-        "genital warts"
-      ],
-      "study_design": "Cross-sectional survey analysis with birth cohort analysis and passive safety monitoring",
-      "data_source_type": "Survey and passive reporting system",
-      "population": "Adolescents aged 13–17 years in the United States",
-      "exposure_domain": "HPV vaccination",
-      "limitations": [
-        "Low cell phone household response rate (23.3%)",
-        "Incomplete provider-reported vaccination histories",
-        "Missed opportunity evaluation limited to encounters with other vaccinations",
-        "VAERS passive reporting cannot determine causality",
-        "Potential underreporting of adverse events"
-      ],
-      "data_availability": "public-repository",
-      "data_accession_links": [
-        "ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf"
-      ],
-      "data_availability_statement": "CDC, National Opinion Research Center at the University of Chicago. National Immunization Survey-Teen: a user’s guide for the 2012 public-use data file. Chicago, IL: National Opinion Research Center; 2014. Available at ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf.",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC5945909",
-      "title": "2018_PMC5945909_Parents_attitudes_towards_topical_fluoride_and_vaccines_for_chil",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "We analyzed data collected from 2011 to 12 for 361 children from three Washington state dental clinics.",
-      "summary": "Case-control study examining the overlap between parental attitudes and internet use regarding topical fluoride and vaccines, and their association with refusal of these preventive treatments.",
-      "key_findings": [
-        "51.5% of parents refused fluoride, only 27.7% reported refusing vaccinations.",
-        "Topical fluoride and vaccine refusal are modestly correlated (r = 0.23).",
-        "In adjusted models, only not using fluoride toothpaste was significantly associated with fluoride refusal (PR = 1.36, 95% CI 1.02–1.89).",
-        "For vaccine refusal, in the full adjusted model, vaccine safety concerns (PR = 1.81, 95% CI 1.49–2.20), internet use for vaccine information (PR = 2.84, 95% CI 2.09–3.87), and perceived severity of preventable cavities (PR = 1.29, 95% CI 1.04–1.60) remained significant predictors.",
-        "White respondents reported 62% higher likelihood of vaccine refusal (PR = 1.62, 95% CI 1.24–2.70)."
-      ],
-      "captured_features": [
-        "parental demographics",
-        "dental insurance status",
-        "topical fluoride refusal",
-        "vaccine refusal",
-        "safety concerns",
-        "perceived disease severity",
-        "internet use for health information",
-        "attitudes towards dental procedures",
-        "fluoride toothpaste use"
-      ],
-      "pathologies_diseases": [
-        "dental caries",
-        "vaccine-preventable diseases"
-      ],
-      "study_design": "case-control study",
-      "data_source_type": "Survey and dental chart records",
-      "population": "361 parents and children from three dental clinics in Washington state, USA",
-      "exposure_domain": "Parental attitudes and internet use for health information",
-      "limitations": [
-        "Limited to three dental clinics in Washington state",
-        "Vaccine refusal based on self-report",
-        "Lack of data on parental dental and medical history",
-        "Incomplete coverage of theoretical model domains"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC6013082",
-      "title": "2018_PMC6013082_Strategic_Response_to_an_Outbreak_of_Circulating_Vaccine-Derived",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "Data were derived from acute flaccid paralysis (AFP) case surveillance, stool specimen testing, administrative vaccination coverage records, and postcampaign monitoring surveys.",
-      "summary": "Descriptive report of a circulating vaccine-derived poliovirus type 2 (cVDPV2) outbreak in Syria (2017–2018), detailing case epidemiology, surveillance performance, and the impact of monovalent OPV type 2 vaccination campaigns and environmental surveillance on interrupting transmission.",
-      "key_findings": [
-        "74 cVDPV2 cases were identified, with a median age of 15 months.",
-        "46 of 74 cases (62%) occurred in females.",
-        "30 cases (41%) occurred in children who had never received an OPV dose.",
-        "71 cases (96%) were reported from Deir-ez-Zor governorate.",
-        "Environmental sewage sampling and mOPV2 vaccination campaigns successfully interrupted cVDPV2 transmission."
-      ],
-      "captured_features": [
-        "AFP case reports",
-        "stool specimen test results",
-        "administrative vaccination coverage",
-        "postcampaign monitoring survey data"
-      ],
-      "pathologies_diseases": [
-        "acute flaccid paralysis",
-        "poliomyelitis",
-        "circulating vaccine-derived poliovirus type 2"
-      ],
-      "study_design": "descriptive outbreak investigation",
-      "data_source_type": "public health surveillance",
-      "population": "children in Syria, primarily aged <5 years",
-      "exposure_domain": "vaccine-derived poliovirus / vaccination status",
-      "limitations": [
-        "subnational gaps in AFP surveillance performance",
-        "delays in receiving laboratory results due to transport and security constraints",
-        "administrative coverage denominators may not reflect actual population due to migration",
-        "postcampaign monitoring relies on parental recall"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC6190029",
-      "title": "2018_PMC6190029_A_rapid_qualitative_assessment_of_oral_cholera_vaccine_anticipat",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "Questionnaires, in-depth interviews, and focus group discussions, as well as observations, were conducted before the campaign.",
-      "summary": "Rapid qualitative anthropological assessment of oral cholera vaccine acceptability in Nampula, Mozambique, assessing barriers and levers for vaccine acceptance amid political resistance and mistrust.",
-      "key_findings": [
-        "95% of participants reported knowledge about cholera.",
-        "66% identified dirtiness as the principal cause of cholera.",
-        "26% reported previous negative experiences associated with immunization.",
-        "55% preferred injectable vaccines over oral delivery.",
-        "95% expressed willingness to be vaccinated.",
-        "83% preferred administration by health professionals rather than community health workers.",
-        "75% favored public health center-based delivery over home-based delivery."
-      ],
-      "captured_features": [
-        "perceptions of cholera origins",
-        "experiences of conflict linked to interventions",
-        "attitudes towards vaccines",
-        "anticipated OCV attitude",
-        "intent to be vaccinated",
-        "preferred immunization strategies",
-        "communication strategies"
-      ],
-      "pathologies_diseases": [
-        "cholera"
-      ],
-      "study_design": "Rapid qualitative anthropological assessment with mixed-methods data collection",
-      "data_source_type": "Qualitative interviews and questionnaires",
-      "population": "Community members, health workers, political leaders, and government officials in Nampula City, Mozambique",
-      "exposure_domain": "Socio-political context, vaccine acceptability, public health intervention resistance, perceived institutional negligence",
-      "limitations": [
-        "Purposive sampling technique limits representativeness",
-        "Findings may not be generalizable to other populations or later time periods",
-        "Context-specific cultural, social, and historical determinants"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "low",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC6668241",
-      "title": "2019_PMC6668241_Identification_of_the_determinants_of_incomplete_vaccination_in_",
-      "year": "",
-      "ehr_used": true,
-      "ehr_evidence": "Vaccination status was determined from the Australian Childhood Immunisation Register and deemed either “complete” (no doses overdue) or “incomplete” (1 or more doses overdue) at the time of questionnaire completion.",
-      "summary": "Cross-sectional study assessing sociodemographic and parental belief factors associated with incomplete childhood vaccination status in Western Australia.",
-      "key_findings": [
-        "20% (116/589) of children had incomplete vaccination status.",
-        "Children with incomplete status were more likely born overseas (OR: 3.52, 95% CI: 1.54 to 8.05).",
-        "More likely to have a healthcare professional advise delaying or not vaccinating (OR: 4.25, 95% CI: 2.07 to 8.69).",
-        "Associated with lower parental education (<Year 10 high school) (OR: 2.92, 95% CI: 1.34 to 6.39).",
-        "Associated with larger family size (OR: 1.39 per child increase, 95% CI: 1.03 to 1.87).",
-        "No significant association between parental beliefs/attitudes and vaccination status remained after adjusting for sociodemographic factors."
-      ],
-      "captured_features": [
-        "parental demographics",
-        "child demographics",
-        "parental vaccination beliefs (7-point Likert scale)",
-        "vaccination status from national register",
-        "hospital outpatient visit history"
-      ],
-      "pathologies_diseases": [],
-      "study_design": "cross-sectional",
-      "data_source_type": "Registry & Survey",
-      "population": "children <6 years old attending outpatient clinics in Perth, Western Australia, and their parents",
-      "exposure_domain": "sociodemographic factors, parental beliefs, healthcare access",
-      "limitations": [
-        "convenience sample from hospital setting may underrepresent high SES, fathers, and ethnic minorities",
-        "self-reported survey data subject to recall and social desirability bias",
-        "cross-sectional design precludes causal inference",
-        "immunisation register may not accurately reflect status for overseas-born children",
-        "unverified healthcare professional advice on vaccine delay"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC6898916",
-      "title": "2019_PMC6898916_The_maternal_antibody_against_diphtheria_tetanus_and_pertussis_s",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "In 2018, 200 neonates hospitalized in Shunyi Women and Children’s Hospital in Beijing, and 238 neonates hospitalized in Qianjiang Central Hospital located in the southwestern mountainous areas were included in this study.",
-      "summary": "Cross-sectional serological study comparing maternal DTP vaccine-associated antibody levels in neonates from urban Beijing and rural Chongqing, China.",
-      "key_findings": [
-        "Mean anti-Dtx IgG was significantly lower in Qianjiang (0.04 IU/ml) than Shunyi (0.12 IU/ml) (P < 0.0001).",
-        "Protective anti-Dtx prevalence was lower in Qianjiang (7.1%) than Shunyi (30.5%) (χ2 = 21.788, P < 0.0001).",
-        "Mean anti-Ttx IgG was significantly lower in Qianjiang (0.07 IU/ml) than Shunyi (0.18 IU/ml) (P < 0.0001).",
-        "Protective anti-Ttx prevalence was lower in Qianjiang (7.6%) than Shunyi (38.5%) (χ2 = 33.569, P < 0.0001).",
-        "No significant difference in mean anti-Ptx IgG between regions (P = 0.2395), but detectable rate was higher in Qianjiang (39.9%) than Shunyi (30.5%) (χ2=4.202, P=0.0404).",
-        "Two neonates from Qianjiang had anti-PT IgG ≥100.0 IU/ml, suggesting recent pertussis exposure in their mothers."
-      ],
-      "captured_features": [
-        "serum antibody concentrations (anti-Dtx, anti-Ttx, anti-Ptx IgG)",
-        "demographic characteristics (sex, term/preterm, delivery mode)",
-        "hospital region"
-      ],
-      "pathologies_diseases": [
-        "diphtheria",
-        "tetanus",
-        "pertussis"
-      ],
-      "study_design": "cross-sectional serological study",
-      "data_source_type": "primary serum samples",
-      "population": "438 neonates (1-28 days old) hospitalized in two regional hospitals in China",
-      "exposure_domain": "geographic region and regional vaccine coverage",
-      "limitations": [
-        "sample size limited to two hospitals",
-        "lack of maternal vaccination status data",
-        "no maternal blood samples collected for direct comparison"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC7006828",
-      "title": "2020_PMC7006828_Kansan_Guardian_Perceptions_of_HPV_and_the_HPV_Vaccine_and_the_R",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "Eligible Kansas guardians of children aged 9 - 17 years completed an online survey.",
-      "summary": "Cross-sectional survey study assessing Kansas guardians' perceptions of HPV and the HPV vaccine, and the influence of social media messages on those perceptions and vaccination decisions.",
-      "key_findings": [
-        "57.9% (n=55) of guardians reported seeing information about HPV and the HPV vaccine on social media.",
-        "Guardians who saw HPV vaccine information on social media were significantly more likely to perceive the vaccine could kill their child compared to those who did not (M=2.50, SD=1.62 vs M=1.74, SD=0.85; t(79)=0.019).",
-        "Children of guardians with annual household income ≥$100,000 were significantly more likely to have received at least one HPV vaccine dose than children of guardians earning <$100,000 (p=0.003).",
-        "Higher HPV vaccine harm perception scores significantly predicted lower effectiveness perception scores (β=-0.451, R=0.620, F[1,57]=35.63, p<0.0001), explaining 38.5% of the variance."
-      ],
-      "captured_features": [
-        "Demographic characteristics (sex, age, race, education, income, region)",
-        "Child demographic characteristics and age",
-        "Self-reported HPV vaccination status",
-        "Social media use and exposure to HPV/HPV vaccine information",
-        "Perception scales (susceptibility, severity, benefits, barriers, cues to action, self-efficacy)"
-      ],
-      "pathologies_diseases": [
-        "Human papillomavirus (HPV)",
-        "HPV-related cancers",
-        "Genital warts"
-      ],
-      "study_design": "Cross-sectional online survey",
-      "data_source_type": "Survey",
-      "population": "Kansas guardians of children aged 9-17 years",
-      "exposure_domain": "Social media messages about HPV and HPV vaccine",
-      "limitations": [
-        "Convenience sampling with a small, non-representative sample (n=95)",
-        "Self-reported vaccination status and perceptions subject to recall and social desirability bias",
-        "Cross-sectional design precludes causal inference",
-        "Limited generalizability to other regions or demographics"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "low",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC8993071",
-      "title": "2022_PMC8993071_COVID-19_vaccination_in_5-11_years_old_children_Drivers_of_vacci",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "four focus group discussions were conducted with 28 vaccine-hesitant parents on November 8 and 9, 2021, three weeks after the submission of Pfizer-BioNTech’ application to Health Canada for approval of its pediatric formulation of its COVID-19 vaccine.",
-      "summary": "Qualitative study exploring drivers of COVID-19 vaccine hesitancy among parents of 5-11 year old children in Quebec using focus group discussions.",
-      "key_findings": [
-        "Out of 28 participants, seven intended to vaccinate their child(ren) while the remaining were unsure or unwilling.",
-        "Parents perceived vaccination as unnecessary due to low child risk and were concerned about side effects and political pressure.",
-        "Focus group findings may not be representative of most parents due to recruitment of vaccine-hesitant participants."
-      ],
-      "captured_features": [
-        "focus group transcripts",
-        "parental vaccination intentions",
-        "perceptions of vaccine safety and necessity"
-      ],
-      "pathologies_diseases": [
-        "COVID-19"
-      ],
-      "study_design": "qualitative focus group study",
-      "data_source_type": "focus group interviews",
-      "population": "parents of 5-11 year old children in Quebec, Canada",
-      "exposure_domain": "N/A",
-      "limitations": [
-        "recruited only vaccine-hesitant parents, limiting representativeness",
-        "small sample size (N=28)",
-        "qualitative design limits generalizability"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "low",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
-      "pmcid": "PMC9707357",
-      "title": "2022_PMC9707357_Sociodemographic_Variation_in_Early_Uptake_of_COVID-19_Vaccine_a",
-      "year": "",
-      "ehr_used": false,
-      "ehr_evidence": "CDC analyzed data from 4,496 National Immunization Survey-Child COVID Module (NIS-CCM) interviews conducted during July 1–29, 2022",
-      "summary": "Cross-sectional analysis of COVID-19 vaccine uptake and parental intent and attitudes among children aged 6 months–4 years in the United States.",
-      "key_findings": [
-        "3.5% of children aged 6 months–4 years had received ≥1 dose of COVID-19 vaccine.",
-        "59.3% of children were unvaccinated but parents were open to vaccination.",
-        "37.2% of children were unvaccinated and parents were reluctant to vaccinate.",
-        "Parental openness to vaccination was higher among parents of Asian (83.1%), Black (61.1%), and Hispanic (66.2%) children compared to White children (52.9%).",
-        "Parental openness was lower in rural areas (45.8%) than urban areas (64.1%).",
-        "Provider recommendation for vaccination was reported by 24.6% of unvaccinated children with open parents versus 62.7% of vaccinated children."
-      ],
-      "captured_features": [
-        "parent-reported vaccination status",
-        "parental intent to vaccinate",
-        "parental attitudes (safety, importance, concern)",
-        "place of vaccination",
-        "sociodemographic characteristics (age, race/ethnicity, income, education, urban/rural residence, HHS region, social vulnerability index)"
-      ],
-      "pathologies_diseases": [
-        "COVID-19"
-      ],
-      "study_design": "cross-sectional survey analysis",
-      "data_source_type": "survey",
-      "population": "children aged 6 months–4 years and their parents/guardians in the United States",
-      "exposure_domain": "sociodemographic factors, parental attitudes, provider recommendations, and vaccination setting",
-      "limitations": [
-        "low survey response rate of 20%",
-        "potential bias from nonresponse and misclassification despite calibration weights",
-        "parent-reported vaccination status and intent subject to recall and social desirability biases"
-      ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "medium",
-      "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
-    },
-    {
       "pmcid": "PMC1567781",
       "title": "Antecedents and correlates of improved cognitive performance in children exposed in utero to low levels of lead.",
       "year": "1990",
@@ -1289,42 +559,42 @@
       "title": "Synergistic effects of traffic-related air pollution and exposure to violence on urban asthma etiology.",
       "year": "2007",
       "ehr_used": false,
-      "ehr_evidence": "We developed geographic information systems (GIS)–based models to retrospectively estimate residential exposures to trafﬁc-related pollution for 413 children in a community-based pregnancy cohort, recruited in East Boston, Massachusetts, between 1987 and 1993, using monthly nitrogen dioxide measurements for 13 sites over 18 years.",
-      "summary": "Observational study examining the synergistic effects of traffic-related air pollution (NO2) and exposure to violence (ETV) on childhood asthma etiology in an urban cohort.",
+      "ehr_evidence": "Pregnant women were recruited from East Boston Neighborhood Health Center (EBNHC), Boston, Massachusetts, between 1987 and 1993... Questionnaires were administered detailing violence exposures (both witnessing and victimization) and avoidance behaviors... During MISSEB follow-up, parental reports of child’s asthma diagnosis were ascertained through bi-monthly telephone or face-to-face interviews over the child’s first 2 years, every 6 months through 4 years of age, and annually thereafter.",
+      "summary": "A prospective pregnancy cohort study of 413 children in East Boston, Massachusetts, examined the synergistic effects of traffic-related nitrogen dioxide exposure and exposure to violence on childhood asthma etiology using GIS-based pollution modeling and questionnaire data.",
       "key_findings": [
-        "A 1-SD (4.3 ppb) increase in year-of-diagnosis NO2 was associated with elevated asthma risk solely among children with above-median ETV (adjusted OR = 1.63; 95% CI, 1.14–2.33).",
-        "Among lifetime residents, the association was magnified (adjusted OR = 2.40; 95% CI, 1.48–3.88).",
-        "No independent effect of ETV alone on asthma was found (OR = 0.98; 95% CI, 0.78–1.22).",
-        "The NO2-ETV interaction term was statistically significant (p = 0.03 for full cohort, p = 0.0009 for lifetime residents)."
+        "Among children with above-median exposure to violence, a 1-SD (4.3 ppb) increase in year-of-diagnosis NO2 was associated with elevated odds of asthma (adjusted OR = 1.63; 95% CI, 1.14–2.33; p = 0.03 for interaction).",
+        "Among lifetime residents, the association was magnified (adjusted OR = 2.40; 95% CI, 1.48–3.88; p = 0.0009 for interaction).",
+        "No significant independent association was found between NO2 and asthma among children with below-median exposure to violence (OR = 0.94; 95% CI, 0.70–1.26)."
       ],
       "captured_features": [
-        "NO2 exposure estimates via GIS/LUR models",
-        "Exposure to violence (ETV) questionnaire scores",
-        "Parent-reported asthma diagnosis",
-        "Maternal education, smoking status, and asthma history",
-        "Child sex, age, and residential addresses"
+        "NO2 exposure estimates (GIS-based land-use regression)",
+        "Exposure to violence (ETV) scores (Rasch modeling)",
+        "Asthma diagnosis (parental report)",
+        "Maternal education",
+        "Maternal smoking status (cotinine)",
+        "Child's sex and age",
+        "Maternal asthma history"
       ],
       "pathologies_diseases": [
-        "childhood asthma"
+        "Asthma",
+        "Asthmatic bronchitis"
       ],
-      "study_design": "prospective community-based pregnancy cohort with retrospective exposure assessment",
-      "data_source_type": "cohort study with environmental monitoring and questionnaires",
-      "population": "413 children recruited from a community-based pregnancy cohort in East Boston, Massachusetts (1987-1993), followed to age 4-11.5 years",
-      "exposure_domain": "traffic-related air pollution (NO2) and exposure to violence (ETV)/chronic stress",
+      "study_design": "prospective cohort",
+      "data_source_type": "other",
+      "population": "413 children (aged 4-11.5 years at follow-up) from a community-based pregnancy cohort in East Boston, Massachusetts",
+      "exposure_domain": "air pollution, social stressors",
       "limitations": [
-        "Small sample size for investigating multiplicative effects",
-        "Reliance on NO2 as a marker for traffic-related pollution",
-        "Incomplete residential history leading to potential exposure misclassification",
-        "Potential confounding from indoor NO2 sources and behavioral changes due to violence fear",
-        "Recall bias and underreporting in retrospective violence assessment",
-        "Lack of long-term psychosocial stress measures beyond ETV"
+        "Small sample size for investigating multiplicative effects.",
+        "Retrospective violence report subject to recall bias.",
+        "Potential exposure misclassification due to incomplete residential history.",
+        "NO2 may not represent all pollutants of interest."
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
       "data_availability_statement": "",
       "confidence": "medium",
       "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC1964903",
@@ -1734,6 +1004,49 @@
         "Overweight classification based on German-specific 90th percentile cutoff",
         "Regional variables act as ecological surrogates",
         "Cross-sectional design limits causal inference"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC2685976",
+      "title": "2009_PMC2685976_A_liposome-based_mycobacterial_vaccine_induces_potent_adult_and_",
+      "year": "2009",
+      "ehr_used": false,
+      "ehr_evidence": "Specific pathogen-free C57BL/6 mice (7 days of age (1-week-old, neonates) or 8–12 weeks old (adult), Charles River) were bred and kept under specific pathogen-free conditions in the university zootechnology unit.",
+      "summary": "Preclinical murine study evaluating the immunogenicity, dendritic cell targeting, and protective efficacy of the CAF01 liposome-based adjuvant against tuberculosis in neonatal and adult mice.",
+      "key_findings": [
+        "Ag85B-ESAT-6/CAF01 significantly reduced post-challenge M. bovis BCG bacterial counts in spleen and lungs compared to Alum control (p<0.05).",
+        "Ag85B-ESAT-6/Alum did not confer protective efficacy, with CFU counts as high as in unimmunized controls.",
+        "Twenty-four hours post-immunization, 84.2 ± 4.8% of adjuvant-bearing cells in adult draining lymph nodes were CD11c+ DCs.",
+        "The proportion of total DCs bearing antigen and adjuvant was low (0.09 ± 0.04%), translating to 523 ± 254 Ag+Adj+ DCs per adult mouse.",
+        "In neonates, adjuvant-bearing cells were 71.2 ± 9.8% CD11c+ DCs, with a lower Ag+Adj+ proportion (28.6 ± 8.6%) and count (151 ± 119 DCs per mouse).",
+        "Vaccine-associated DCs peaked around Day 5 and were not detected by Day 21 post-immunization.",
+        "CAF01 induced sustained adult-like Th1 (IFN-γ, TNF-α) and Th17 (IL-17) responses in neonates comparable to adults (p>0.05)."
+      ],
+      "captured_features": [
+        "Cytokine production (IFN-γ, TNF-α, IL-2, IL-17, IL-5)",
+        "Dendritic cell surface markers (CD11c, CD40, CD86, CD205)",
+        "Bacterial colony-forming units (CFU) in spleen and lungs",
+        "T cell activation markers (CD44)",
+        "Fluorochrome-labeled antigen and adjuvant uptake"
+      ],
+      "pathologies_diseases": [
+        "Tuberculosis (Mycobacterium tuberculosis / M. bovis BCG infection)"
+      ],
+      "study_design": "Preclinical murine immunization and challenge model",
+      "data_source_type": "Animal model / experimental immunology",
+      "population": "C57BL/6 mice (neonates at 1 week of age and adults at 8-12 weeks)",
+      "exposure_domain": "Vaccine adjuvant (CAF01 formulation)",
+      "limitations": [
+        "Mouse model limitations in predicting human vaccine efficacy",
+        "Fluorochrome labeling intensity may not capture all labeled cell populations in vivo",
+        "Detection limits of the method may affect DC migration timing estimates",
+        "Short half-life of activated DCs complicates duration estimation of the phenomenon"
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
@@ -2575,6 +1888,47 @@
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
     {
+      "pmcid": "PMC3469560",
+      "title": "2012_PMC3469560_Attitudes_of_the_general_public_and_general_practitioners_in_fiv",
+      "year": "2012",
+      "ehr_used": false,
+      "ehr_evidence": "In December 2009/January 2010 and April 2010, 500 randomly selected members of the general public in Germany, France, the United States, China, and Mexico were surveyed by telephone about vaccination for seasonal and A/H1N1 pandemic influenza. Also, in April 2010, 100 randomly selected general practitioners were surveyed.",
+      "summary": "Cross-sectional survey of the general public and general practitioners in five countries examining attitudes, perceptions, and vaccination coverage rates for seasonal and A/H1N1 pandemic influenza during the 2009/2010 season.",
+      "key_findings": [
+        "Adult A/H1N1 pandemic influenza vaccination coverage in Dec 2009/Jan 2010 was 12% in France, 11% in Germany, 41% in the US, 13% in Mexico, and 12% in China.",
+        "Adult seasonal influenza vaccination coverage in Dec 2009/Jan 2010 was 29% in France, 25% in Germany, 46% in the US, 30% in Mexico, and 10% in China.",
+        "Inclusion of the A/H1N1 pandemic strain increased willingness to be vaccinated for seasonal influenza in the US, Mexico, and China but not in Germany or France.",
+        "The 2009/2010 A/H1N1 pandemic increased seasonal influenza vaccine uptake in Mexico but had little effect in other countries.",
+        "GP recommendation was a common reason for receiving the pandemic vaccine, while lack of risk perception and safety concerns were common reasons for not being vaccinated."
+      ],
+      "captured_features": [
+        "vaccination coverage rates",
+        "public and GP threat perceptions",
+        "vaccination decision drivers",
+        "future vaccination willingness"
+      ],
+      "pathologies_diseases": [
+        "influenza (seasonal and A/H1N1 pandemic)"
+      ],
+      "study_design": "cross-sectional telephone and internet surveys",
+      "data_source_type": "telephone and internet survey",
+      "population": "general public (adults and parents) and general practitioners in France, Germany, the US, Mexico, and China",
+      "exposure_domain": "influenza vaccination, pandemic/seasonal influenza exposure, media coverage, GP recommendations",
+      "limitations": [
+        "small sample size (500 public, 100 GPs per country)",
+        "low survey response rates leading to potential selection bias",
+        "geographic limitation in China and Mexico (only 3 largest cities surveyed)",
+        "self-reported vaccination status subject to recall and honesty bias",
+        "cross-sectional design limits causal inference"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
       "pmcid": "PMC3499875",
       "title": "Pilot study of pesticide knowledge, attitudes, and practices among pregnant women in northern Thailand.",
       "year": "2012",
@@ -3078,6 +2432,62 @@
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
     {
+      "pmcid": "PMC4515582",
+      "title": "2013_PMC4515582_Are_Recent_Medical_Graduates_More_Skeptical_of_Vaccines",
+      "year": "2013",
+      "ehr_used": false,
+      "ehr_evidence": "Surveys covering vaccine knowledge, attitudes, and beliefs were mailed in 2005 to 712 of these parent-identified providers.",
+      "summary": "Cross-sectional survey investigating the association between US primary care provider graduation year and beliefs regarding vaccine safety, efficacy, and disease susceptibility.",
+      "key_findings": [
+        "Recent graduates had 15% decreased odds of believing vaccines are efficacious compared to the preceding 5-year cohort (OR: 0.85, 95% CI: 0.73–0.99).",
+        "For every 5-year increase in graduation year, there was a 24% reduced odds of believing immunizations are one of the safest forms of medicine (OR: 0.76, 95% CI: 0.67–0.87).",
+        "Recent graduates had 1.3 times higher odds of believing immunizations do more harm than good (OR: 1.3, 95% CI: 1.0–1.8).",
+        "3.7% of recent graduates believed that immunizations do more harm than good.",
+        "Significant decreased odds of believing polio vaccines (IPV and OPV) were safe for recent compared to older graduates."
+      ],
+      "captured_features": [
+        "Provider graduation year",
+        "Vaccine efficacy beliefs",
+        "Vaccine safety beliefs",
+        "Disease susceptibility beliefs",
+        "Disease severity beliefs",
+        "Provider exemption status",
+        "Provider professional type"
+      ],
+      "pathologies_diseases": [
+        "polio",
+        "diphtheria",
+        "pertussis",
+        "tetanus",
+        "measles",
+        "mumps",
+        "rubella",
+        "Haemophilus influenzae type b",
+        "varicella",
+        "hepatitis B",
+        "invasive pneumococcal disease",
+        "influenza"
+      ],
+      "study_design": "cross-sectional survey",
+      "data_source_type": "survey",
+      "population": "primary care health care providers in the United States",
+      "exposure_domain": "provider graduation year (cohort effect)",
+      "limitations": [
+        "cross-sectional design prevents causal inference",
+        "graduation year used as proxy for age",
+        "non-representative sample nested within a case-control study",
+        "small sample size for some analyses",
+        "data collected in 2005 may not reflect current provider beliefs",
+        "limited patient sample per provider used to categorize exemption status"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "xml",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
       "pmcid": "PMC4604872",
       "title": "Progress in immunization information systems--United States, 2011.",
       "year": "2013",
@@ -3485,6 +2895,64 @@
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
     {
+      "pmcid": "PMC4256824",
+      "title": "2014_PMC4256824_Determinants_of_vaccination_coverage_and_adherence_to_the_Greek_",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "The infant was considered as immunized or not based on the immunization card, as provided by the National Greek Health Care System.",
+      "summary": "Cross-sectional survey evaluating vaccination coverage and socioeconomic determinants among infants aged 2-24 months in Athens, Greece during 2009-2011.",
+      "key_findings": [
+        "4.9% (95% CI 3.9%-6.0%) of parents admitted omitting a vaccine due to beliefs.",
+        "Infants were less likely to be fully vaccinated if they belonged to a minority group, had >1 sibling, young/illiterate parents, non-public insurance, or unemployed parents.",
+        "Appropriate hepatitis B immunization was strongly associated with hexavalent vaccine use (97.5% vs 54.2% at 6 months, 92.8% vs 25.7% at 12 months, p<0.01).",
+        "Multivariate analysis confirmed parental age, educational/occupational status, and family size (>3 children) as independent predictors of immunization status.",
+        "Lack of insurance was not associated with missed vaccine doses (57.8% vs 57.8%, p=NS)."
+      ],
+      "captured_features": [
+        "immunization card status",
+        "parental age, education, occupation",
+        "family size",
+        "health insurance status",
+        "vaccination coverage rates",
+        "minority/immigrant status"
+      ],
+      "pathologies_diseases": [
+        "vaccine-preventable diseases",
+        "hepatitis B",
+        "diphtheria",
+        "tetanus",
+        "pertussis",
+        "polio",
+        "Haemophilus influenzae type b",
+        "pneumococcal disease",
+        "meningococcal C",
+        "measles",
+        "mumps",
+        "rubella",
+        "varicella",
+        "hepatitis A",
+        "rotavirus",
+        "tuberculosis"
+      ],
+      "study_design": "cross-sectional survey",
+      "data_source_type": "questionnaire and immunization cards",
+      "population": "infants aged 2-24 months visiting a tertiary public outpatient clinic in Athens, Greece (2009-2011)",
+      "exposure_domain": "socioeconomic status, parental demographics, economic crisis period",
+      "limitations": [
+        "convenience sample not representative of general population",
+        "overrepresentation of minority and low-SES children",
+        "underrepresentation of high-SES and rural families",
+        "less stringent criteria used to define complete vaccination",
+        "potential selection bias from outpatient clinic recruitment"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
       "pmcid": "PMC4284714",
       "title": "Prenatal exposure to arsenic and cadmium impacts infectious disease-related genes within the glucocorticoid receptor signal transduction pathway.",
       "year": "2014",
@@ -3696,6 +3164,51 @@
       "data_availability": "not-stated",
       "data_accession_links": [],
       "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC5779422",
+      "title": "2014_PMC5779422_Human_papillomavirus_vaccination_coverage_among_adolescents_2007",
+      "year": "2014",
+      "ehr_used": false,
+      "ehr_evidence": "CDC analyzed data from the 2007–2013 National Immunization Survey-Teen (NIS-Teen) and national postlicensure vaccine safety data among females and males.",
+      "summary": "Assessment of HPV vaccination coverage among US adolescents aged 13–17 years from 2007–2013 and postlicensure safety monitoring from 2006–2014.",
+      "key_findings": [
+        "Vaccination coverage with ≥1 dose increased from 53.8% (2012) to 57.3% (2013) among girls and from 20.8% (2012) to 34.6% (2013) among boys.",
+        "Receipt of ≥1 dose by age 13 increased by an average of 5.9% (95% CI = 2.8%–9.0%) with each new birth cohort, reaching 46.8% (95% CI = 41.2%–52.5%) for the 2000 cohort.",
+        "Missed vaccination opportunities ranged from 9.3% (95% CI = 8.1%–10.8%) for the 1994 cohort to 83.7% (95% CI = 77.8%–88.2%) for the 2000 cohort.",
+        "If missed opportunities were eliminated, coverage for the 2000 cohort could have reached 91.3% (95% CI = 87.9%–93.8%) by age 13.",
+        "VAERS received 25,176 adverse event reports post-HPV vaccination; 92.4% of HPV4 reports were classified as nonserious."
+      ],
+      "captured_features": [
+        "vaccination coverage rates",
+        "missed vaccination opportunities",
+        "parent-reported reasons for non-vaccination",
+        "adverse event reports"
+      ],
+      "pathologies_diseases": [
+        "HPV infection",
+        "cervical cancer",
+        "genital warts"
+      ],
+      "study_design": "Cross-sectional survey analysis with birth cohort analysis and passive safety monitoring",
+      "data_source_type": "Survey and passive reporting system",
+      "population": "Adolescents aged 13–17 years in the United States",
+      "exposure_domain": "HPV vaccination",
+      "limitations": [
+        "Low cell phone household response rate (23.3%)",
+        "Incomplete provider-reported vaccination histories",
+        "Missed opportunity evaluation limited to encounters with other vaccinations",
+        "VAERS passive reporting cannot determine causality",
+        "Potential underreporting of adverse events"
+      ],
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf"
+      ],
+      "data_availability_statement": "CDC, National Opinion Research Center at the University of Chicago. National Immunization Survey-Teen: a user’s guide for the 2012 public-use data file. Chicago, IL: National Opinion Research Center; 2014. Available at ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -3923,6 +3436,48 @@
       "data_accession_links": [],
       "data_availability_statement": "",
       "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC4640112",
+      "title": "2015_PMC4640112_Febrile_seizures_after_2009_influenza_A_H1N1_vaccination_and_inf",
+      "year": "2015",
+      "ehr_used": true,
+      "ehr_evidence": "In addition to information from the national population registry, we used information from the Norwegian Directorate of Health, the Norwegian Surveillance System for Communicable Diseases, the Norwegian Immunisation Register, and the Norwegian Patient Register.",
+      "summary": "Nationwide registry-based self-controlled case series study estimating the risk of febrile seizures in Norwegian children following 2009 H1N1 influenza vaccination or infection.",
+      "key_findings": [
+        "The incidence rate ratio (IRR) of febrile seizures 1–3 days after vaccination was 2.00 (95% CI: 1.15–3.51).",
+        "No increased risk of febrile seizures was observed in the period 4–7 days after vaccination.",
+        "The IRR of febrile seizures on the same day as a diagnosis of influenza was 116.70 (95% CI: 62.81–216.90).",
+        "A tenfold increased risk was observed in the period 1–3 days after a diagnosis of influenza (IRR 10.12, 95% CI: 3.82–26.82)."
+      ],
+      "captured_features": [
+        "ICD-10 codes R56.0 and R56.8",
+        "ICPC-2 code R80",
+        "vaccination dates",
+        "influenza diagnosis dates",
+        "personal identification numbers",
+        "age and sex"
+      ],
+      "pathologies_diseases": [
+        "febrile seizures",
+        "influenza A (H1N1) infection"
+      ],
+      "study_design": "self-controlled case series (SCCS) study",
+      "data_source_type": "National health registries",
+      "population": "226,889 Norwegian children born 2006–2009 (up to 45 months old) resident in Norway as of October 1, 2009",
+      "exposure_domain": "Influenza A (H1N1) vaccination and infection",
+      "limitations": [
+        "Limited information on potential confounders",
+        "Lack of validity testing for outcome diagnosis",
+        "Under-ascertainment of influenza cases in primary care",
+        "Results likely apply to more severe influenza infections"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "high",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
@@ -4763,24 +4318,24 @@
       "title": "Correction to: Early-life exposure to PM2.5 and risk of acute asthma clinical encounters among children in Massachusetts: a case-crossover analysis.",
       "year": "2018",
       "ehr_used": false,
-      "ehr_evidence": "This manuscript is a correction notice to a previously published study and does not describe the primary data source.",
-      "summary": "Correction notice addressing an incorrect demographic count in Table 1 of a previously published case-crossover study on early-life PM2.5 exposure and acute asthma clinical encounters in Massachusetts.",
+      "ehr_evidence": "This manuscript is a correction to a previously published article and does not present new primary data analysis or specify the original data source in this text.",
+      "summary": "This correction notice addresses a data entry error in Table 1 of the original study regarding the number of children with a maternal language preference listed as 'Other'.",
       "key_findings": [],
       "captured_features": [],
-      "pathologies_diseases": [
-        "acute asthma"
+      "pathologies_diseases": [],
+      "study_design": "correction notice",
+      "data_source_type": "other",
+      "population": "children in Massachusetts (from original study)",
+      "exposure_domain": "air pollution (PM2.5, from original study)",
+      "limitations": [
+        "None reported; this is a correction notice."
       ],
-      "study_design": "case-crossover analysis",
-      "data_source_type": "clinical encounter data",
-      "population": "children in Massachusetts",
-      "exposure_domain": "PM2.5",
-      "limitations": [],
       "data_availability": "not-stated",
       "data_accession_links": [],
       "data_availability_statement": "",
       "confidence": "low",
       "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC5841381",
@@ -4867,6 +4422,52 @@
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
     {
+      "pmcid": "PMC5945909",
+      "title": "2018_PMC5945909_Parents_attitudes_towards_topical_fluoride_and_vaccines_for_chil",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "We analyzed data collected from 2011 to 12 for 361 children from three Washington state dental clinics.",
+      "summary": "Case-control study examining the overlap between parental attitudes and internet use regarding topical fluoride and vaccines, and their association with refusal of these preventive treatments.",
+      "key_findings": [
+        "51.5% of parents refused fluoride, only 27.7% reported refusing vaccinations.",
+        "Topical fluoride and vaccine refusal are modestly correlated (r = 0.23).",
+        "In adjusted models, only not using fluoride toothpaste was significantly associated with fluoride refusal (PR = 1.36, 95% CI 1.02–1.89).",
+        "For vaccine refusal, in the full adjusted model, vaccine safety concerns (PR = 1.81, 95% CI 1.49–2.20), internet use for vaccine information (PR = 2.84, 95% CI 2.09–3.87), and perceived severity of preventable cavities (PR = 1.29, 95% CI 1.04–1.60) remained significant predictors.",
+        "White respondents reported 62% higher likelihood of vaccine refusal (PR = 1.62, 95% CI 1.24–2.70)."
+      ],
+      "captured_features": [
+        "parental demographics",
+        "dental insurance status",
+        "topical fluoride refusal",
+        "vaccine refusal",
+        "safety concerns",
+        "perceived disease severity",
+        "internet use for health information",
+        "attitudes towards dental procedures",
+        "fluoride toothpaste use"
+      ],
+      "pathologies_diseases": [
+        "dental caries",
+        "vaccine-preventable diseases"
+      ],
+      "study_design": "case-control study",
+      "data_source_type": "Survey and dental chart records",
+      "population": "361 parents and children from three dental clinics in Washington state, USA",
+      "exposure_domain": "Parental attitudes and internet use for health information",
+      "limitations": [
+        "Limited to three dental clinics in Washington state",
+        "Vaccine refusal based on self-report",
+        "Lack of data on parental dental and medical history",
+        "Incomplete coverage of theoretical model domains"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
       "pmcid": "PMC5993870",
       "title": "Total mercury exposure in early pregnancy has no adverse association with scholastic ability of the offspring particularly if the mother eats fish.",
       "year": "2018",
@@ -4900,6 +4501,48 @@
       "data_availability_statement": "",
       "confidence": "medium",
       "source_format": "xml",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC6013082",
+      "title": "2018_PMC6013082_Strategic_Response_to_an_Outbreak_of_Circulating_Vaccine-Derived",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "Data were derived from acute flaccid paralysis (AFP) case surveillance, stool specimen testing, administrative vaccination coverage records, and postcampaign monitoring surveys.",
+      "summary": "Descriptive report of a circulating vaccine-derived poliovirus type 2 (cVDPV2) outbreak in Syria (2017–2018), detailing case epidemiology, surveillance performance, and the impact of monovalent OPV type 2 vaccination campaigns and environmental surveillance on interrupting transmission.",
+      "key_findings": [
+        "74 cVDPV2 cases were identified, with a median age of 15 months.",
+        "46 of 74 cases (62%) occurred in females.",
+        "30 cases (41%) occurred in children who had never received an OPV dose.",
+        "71 cases (96%) were reported from Deir-ez-Zor governorate.",
+        "Environmental sewage sampling and mOPV2 vaccination campaigns successfully interrupted cVDPV2 transmission."
+      ],
+      "captured_features": [
+        "AFP case reports",
+        "stool specimen test results",
+        "administrative vaccination coverage",
+        "postcampaign monitoring survey data"
+      ],
+      "pathologies_diseases": [
+        "acute flaccid paralysis",
+        "poliomyelitis",
+        "circulating vaccine-derived poliovirus type 2"
+      ],
+      "study_design": "descriptive outbreak investigation",
+      "data_source_type": "public health surveillance",
+      "population": "children in Syria, primarily aged <5 years",
+      "exposure_domain": "vaccine-derived poliovirus / vaccination status",
+      "limitations": [
+        "subnational gaps in AFP surveillance performance",
+        "delays in receiving laboratory results due to transport and security constraints",
+        "administrative coverage denominators may not reflect actual population due to migration",
+        "postcampaign monitoring relies on parental recall"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
     {
@@ -4995,6 +4638,50 @@
       "data_availability": "available-upon-request",
       "data_accession_links": [],
       "data_availability_statement": "Pre-reduction datasets from sequencing analyses are available from the authors upon request.",
+      "confidence": "low",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC6190029",
+      "title": "2018_PMC6190029_A_rapid_qualitative_assessment_of_oral_cholera_vaccine_anticipat",
+      "year": "2018",
+      "ehr_used": false,
+      "ehr_evidence": "Questionnaires, in-depth interviews, and focus group discussions, as well as observations, were conducted before the campaign.",
+      "summary": "Rapid qualitative anthropological assessment of oral cholera vaccine acceptability in Nampula, Mozambique, assessing barriers and levers for vaccine acceptance amid political resistance and mistrust.",
+      "key_findings": [
+        "95% of participants reported knowledge about cholera.",
+        "66% identified dirtiness as the principal cause of cholera.",
+        "26% reported previous negative experiences associated with immunization.",
+        "55% preferred injectable vaccines over oral delivery.",
+        "95% expressed willingness to be vaccinated.",
+        "83% preferred administration by health professionals rather than community health workers.",
+        "75% favored public health center-based delivery over home-based delivery."
+      ],
+      "captured_features": [
+        "perceptions of cholera origins",
+        "experiences of conflict linked to interventions",
+        "attitudes towards vaccines",
+        "anticipated OCV attitude",
+        "intent to be vaccinated",
+        "preferred immunization strategies",
+        "communication strategies"
+      ],
+      "pathologies_diseases": [
+        "cholera"
+      ],
+      "study_design": "Rapid qualitative anthropological assessment with mixed-methods data collection",
+      "data_source_type": "Qualitative interviews and questionnaires",
+      "population": "Community members, health workers, political leaders, and government officials in Nampula City, Mozambique",
+      "exposure_domain": "Socio-political context, vaccine acceptability, public health intervention resistance, perceived institutional negligence",
+      "limitations": [
+        "Purposive sampling technique limits representativeness",
+        "Findings may not be generalizable to other populations or later time periods",
+        "Context-specific cultural, social, and historical determinants"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5226,24 +4913,26 @@
       "title": "Correction: Evaluation of the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions: a population-based prospective cohort study conducted in England with the Clinical Practice Research Datalink.",
       "year": "2019",
       "ehr_used": true,
-      "ehr_evidence": "Evaluation of the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions: a population-based prospective cohort study conducted in England with the Clinical Practice Research Datalink.",
-      "summary": "Correction notice for a population-based prospective cohort study evaluating LAIV safety in children and adolescents with asthma and high-risk conditions using the Clinical Practice Research Datalink.",
+      "ehr_evidence": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
+      "summary": "This correction notice addresses errors in a previously published population-based prospective cohort study evaluating the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions using the Clinical Practice Research Datalink.",
       "key_findings": [],
       "captured_features": [],
       "pathologies_diseases": [
         "asthma"
       ],
-      "study_design": "population-based prospective cohort study",
+      "study_design": "prospective cohort",
       "data_source_type": "EHR",
-      "population": "children and adolescents with asthma and high-risk conditions",
-      "exposure_domain": "influenza vaccine",
-      "limitations": [],
-      "data_availability": "not-stated",
+      "population": "children and adolescents with asthma and high-risk conditions in England",
+      "exposure_domain": "vaccination",
+      "limitations": [
+        "None explicitly stated in the correction text; the correction addresses protocol approval and reference citations rather than study limitations."
+      ],
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
       "confidence": "low",
       "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC6445781",
@@ -5413,6 +5102,47 @@
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
     {
+      "pmcid": "PMC6668241",
+      "title": "2019_PMC6668241_Identification_of_the_determinants_of_incomplete_vaccination_in_",
+      "year": "2019",
+      "ehr_used": true,
+      "ehr_evidence": "Vaccination status was determined from the Australian Childhood Immunisation Register and deemed either “complete” (no doses overdue) or “incomplete” (1 or more doses overdue) at the time of questionnaire completion.",
+      "summary": "Cross-sectional study assessing sociodemographic and parental belief factors associated with incomplete childhood vaccination status in Western Australia.",
+      "key_findings": [
+        "20% (116/589) of children had incomplete vaccination status.",
+        "Children with incomplete status were more likely born overseas (OR: 3.52, 95% CI: 1.54 to 8.05).",
+        "More likely to have a healthcare professional advise delaying or not vaccinating (OR: 4.25, 95% CI: 2.07 to 8.69).",
+        "Associated with lower parental education (<Year 10 high school) (OR: 2.92, 95% CI: 1.34 to 6.39).",
+        "Associated with larger family size (OR: 1.39 per child increase, 95% CI: 1.03 to 1.87).",
+        "No significant association between parental beliefs/attitudes and vaccination status remained after adjusting for sociodemographic factors."
+      ],
+      "captured_features": [
+        "parental demographics",
+        "child demographics",
+        "parental vaccination beliefs (7-point Likert scale)",
+        "vaccination status from national register",
+        "hospital outpatient visit history"
+      ],
+      "pathologies_diseases": [],
+      "study_design": "cross-sectional",
+      "data_source_type": "Registry & Survey",
+      "population": "children <6 years old attending outpatient clinics in Perth, Western Australia, and their parents",
+      "exposure_domain": "sociodemographic factors, parental beliefs, healthcare access",
+      "limitations": [
+        "convenience sample from hospital setting may underrepresent high SES, fathers, and ethnic minorities",
+        "self-reported survey data subject to recall and social desirability bias",
+        "cross-sectional design precludes causal inference",
+        "immunisation register may not accurately reflect status for overseas-born children",
+        "unverified healthcare professional advice on vaccine delay"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
       "pmcid": "PMC6701777",
       "title": "The effect of H1N1 vaccination on serum miRNA expression in children: A tale of caution for microRNA microarray studies.",
       "year": "2019",
@@ -5440,6 +5170,47 @@
         "potential false positives from microarray cross-hybridization",
         "single microarray platform used",
         "limited to one post-vaccination timepoint"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC6898916",
+      "title": "2019_PMC6898916_The_maternal_antibody_against_diphtheria_tetanus_and_pertussis_s",
+      "year": "2019",
+      "ehr_used": false,
+      "ehr_evidence": "In 2018, 200 neonates hospitalized in Shunyi Women and Children’s Hospital in Beijing, and 238 neonates hospitalized in Qianjiang Central Hospital located in the southwestern mountainous areas were included in this study.",
+      "summary": "Cross-sectional serological study comparing maternal DTP vaccine-associated antibody levels in neonates from urban Beijing and rural Chongqing, China.",
+      "key_findings": [
+        "Mean anti-Dtx IgG was significantly lower in Qianjiang (0.04 IU/ml) than Shunyi (0.12 IU/ml) (P < 0.0001).",
+        "Protective anti-Dtx prevalence was lower in Qianjiang (7.1%) than Shunyi (30.5%) (χ2 = 21.788, P < 0.0001).",
+        "Mean anti-Ttx IgG was significantly lower in Qianjiang (0.07 IU/ml) than Shunyi (0.18 IU/ml) (P < 0.0001).",
+        "Protective anti-Ttx prevalence was lower in Qianjiang (7.6%) than Shunyi (38.5%) (χ2 = 33.569, P < 0.0001).",
+        "No significant difference in mean anti-Ptx IgG between regions (P = 0.2395), but detectable rate was higher in Qianjiang (39.9%) than Shunyi (30.5%) (χ2=4.202, P=0.0404).",
+        "Two neonates from Qianjiang had anti-PT IgG ≥100.0 IU/ml, suggesting recent pertussis exposure in their mothers."
+      ],
+      "captured_features": [
+        "serum antibody concentrations (anti-Dtx, anti-Ttx, anti-Ptx IgG)",
+        "demographic characteristics (sex, term/preterm, delivery mode)",
+        "hospital region"
+      ],
+      "pathologies_diseases": [
+        "diphtheria",
+        "tetanus",
+        "pertussis"
+      ],
+      "study_design": "cross-sectional serological study",
+      "data_source_type": "primary serum samples",
+      "population": "438 neonates (1-28 days old) hospitalized in two regional hospitals in China",
+      "exposure_domain": "geographic region and regional vaccine coverage",
+      "limitations": [
+        "sample size limited to two hospitals",
+        "lack of maternal vaccination status data",
+        "no maternal blood samples collected for direct comparison"
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
@@ -5483,6 +5254,48 @@
       ],
       "data_availability_statement": "",
       "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC7006828",
+      "title": "2020_PMC7006828_Kansan_Guardian_Perceptions_of_HPV_and_the_HPV_Vaccine_and_the_R",
+      "year": "2020",
+      "ehr_used": false,
+      "ehr_evidence": "Eligible Kansas guardians of children aged 9 - 17 years completed an online survey.",
+      "summary": "Cross-sectional survey study assessing Kansas guardians' perceptions of HPV and the HPV vaccine, and the influence of social media messages on those perceptions and vaccination decisions.",
+      "key_findings": [
+        "57.9% (n=55) of guardians reported seeing information about HPV and the HPV vaccine on social media.",
+        "Guardians who saw HPV vaccine information on social media were significantly more likely to perceive the vaccine could kill their child compared to those who did not (M=2.50, SD=1.62 vs M=1.74, SD=0.85; t(79)=0.019).",
+        "Children of guardians with annual household income ≥$100,000 were significantly more likely to have received at least one HPV vaccine dose than children of guardians earning <$100,000 (p=0.003).",
+        "Higher HPV vaccine harm perception scores significantly predicted lower effectiveness perception scores (β=-0.451, R=0.620, F[1,57]=35.63, p<0.0001), explaining 38.5% of the variance."
+      ],
+      "captured_features": [
+        "Demographic characteristics (sex, age, race, education, income, region)",
+        "Child demographic characteristics and age",
+        "Self-reported HPV vaccination status",
+        "Social media use and exposure to HPV/HPV vaccine information",
+        "Perception scales (susceptibility, severity, benefits, barriers, cues to action, self-efficacy)"
+      ],
+      "pathologies_diseases": [
+        "Human papillomavirus (HPV)",
+        "HPV-related cancers",
+        "Genital warts"
+      ],
+      "study_design": "Cross-sectional online survey",
+      "data_source_type": "Survey",
+      "population": "Kansas guardians of children aged 9-17 years",
+      "exposure_domain": "Social media messages about HPV and HPV vaccine",
+      "limitations": [
+        "Convenience sampling with a small, non-representative sample (n=95)",
+        "Self-reported vaccination status and perceptions subject to recall and social desirability bias",
+        "Cross-sectional design precludes causal inference",
+        "Limited generalizability to other regions or demographics"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
@@ -6099,31 +5912,36 @@
       "title": "The Rotavirus Vaccine Story: From Discovery to the Eventual Control of Rotavirus Disease.",
       "year": "2021",
       "ehr_used": false,
-      "ehr_evidence": "Narrative review synthesizing published clinical trial data, surveillance reports, and historical literature on rotavirus vaccine development and implementation.",
-      "summary": "Narrative review of the history, development, efficacy, global implementation, and future directions of rotavirus vaccines.",
-      "key_findings": [],
+      "ehr_evidence": "This manuscript is a narrative review article summarizing the history, development, and global impact of rotavirus vaccines; it does not analyze primary electronic health record or linked health data.",
+      "summary": "This narrative review summarizes the historical development, clinical trial efficacy, and post-licensure global impact of rotavirus vaccines, highlighting reduced mortality and hospitalizations but persistent challenges with vaccine effectiveness in low-income settings.",
+      "key_findings": [
+        "Rotavirus vaccine introduction reduced rotavirus hospitalizations by a median of 59%, acute gastroenteritis hospitalizations by 36%, and diarrhea mortality by 36% in countries with routine immunization programs.",
+        "Vaccine effectiveness showed a gradient by setting: median 87% in countries with lowest under-5 mortality, 75% in intermediate, and 60% in highest under-5 mortality countries.",
+        "Rotavac demonstrated an efficacy of 56% (95% CI, 37%–70%) against severe rotavirus gastroenteritis in the first 2 years of life in India.",
+        "Rotasiil demonstrated an efficacy of 36% (95% CI, 12%–49%) in India and 67% (95% CI, 50%–78%) in Niger against severe rotavirus gastroenteritis.",
+        "Post-licensure monitoring in high- and middle-income countries observed an increased risk of intussusception of 1 to 6 excess cases per 100,000 vaccinated infants in the 1–7 days after the first dose, whereas no increased risk was seen in high-mortality countries in sub-Saharan Africa or India."
+      ],
       "captured_features": [],
       "pathologies_diseases": [
-        "rotavirus disease",
-        "acute gastroenteritis",
-        "diarrhea",
-        "intussusception"
+        "Rotavirus disease",
+        "Severe rotavirus gastroenteritis",
+        "Intussusception",
+        "Acute gastroenteritis",
+        "Diarrhea"
       ],
       "study_design": "Narrative review",
-      "data_source_type": "Published literature and historical data",
-      "population": "Children worldwide, primarily under 5 years of age",
-      "exposure_domain": "Rotavirus vaccination",
+      "data_source_type": "other",
+      "population": "Children <5 years globally, with specific focus on low-, middle-, and high-income countries",
+      "exposure_domain": "Vaccination (rotavirus vaccines)",
       "limitations": [
-        "Narrative review design",
-        "Relies on published literature and historical data rather than original primary analysis",
-        "No individual-level patient data evaluated"
+        "This is a narrative review summarizing existing literature and clinical trial data rather than a primary observational study; it does not generate new primary data from EHR or linked health records."
       ],
       "data_availability": "supplementary-only",
       "data_accession_links": [],
       "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author.",
-      "confidence": "low",
+      "confidence": "high",
       "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC8590342",
@@ -6389,6 +6207,42 @@
       "data_accession_links": [],
       "data_availability_statement": "",
       "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC8993071",
+      "title": "2022_PMC8993071_COVID-19_vaccination_in_5-11_years_old_children_Drivers_of_vacci",
+      "year": "2022",
+      "ehr_used": false,
+      "ehr_evidence": "four focus group discussions were conducted with 28 vaccine-hesitant parents on November 8 and 9, 2021, three weeks after the submission of Pfizer-BioNTech’ application to Health Canada for approval of its pediatric formulation of its COVID-19 vaccine.",
+      "summary": "Qualitative study exploring drivers of COVID-19 vaccine hesitancy among parents of 5-11 year old children in Quebec using focus group discussions.",
+      "key_findings": [
+        "Out of 28 participants, seven intended to vaccinate their child(ren) while the remaining were unsure or unwilling.",
+        "Parents perceived vaccination as unnecessary due to low child risk and were concerned about side effects and political pressure.",
+        "Focus group findings may not be representative of most parents due to recruitment of vaccine-hesitant participants."
+      ],
+      "captured_features": [
+        "focus group transcripts",
+        "parental vaccination intentions",
+        "perceptions of vaccine safety and necessity"
+      ],
+      "pathologies_diseases": [
+        "COVID-19"
+      ],
+      "study_design": "qualitative focus group study",
+      "data_source_type": "focus group interviews",
+      "population": "parents of 5-11 year old children in Quebec, Canada",
+      "exposure_domain": "N/A",
+      "limitations": [
+        "recruited only vaccine-hesitant parents, limiting representativeness",
+        "small sample size (N=28)",
+        "qualitative design limits generalizability"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
@@ -6747,6 +6601,47 @@
       "model": "qwen3.6-35b-vllm-nvfp4"
     },
     {
+      "pmcid": "PMC9707357",
+      "title": "2022_PMC9707357_Sociodemographic_Variation_in_Early_Uptake_of_COVID-19_Vaccine_a",
+      "year": "2022",
+      "ehr_used": false,
+      "ehr_evidence": "CDC analyzed data from 4,496 National Immunization Survey-Child COVID Module (NIS-CCM) interviews conducted during July 1–29, 2022",
+      "summary": "Cross-sectional analysis of COVID-19 vaccine uptake and parental intent and attitudes among children aged 6 months–4 years in the United States.",
+      "key_findings": [
+        "3.5% of children aged 6 months–4 years had received ≥1 dose of COVID-19 vaccine.",
+        "59.3% of children were unvaccinated but parents were open to vaccination.",
+        "37.2% of children were unvaccinated and parents were reluctant to vaccinate.",
+        "Parental openness to vaccination was higher among parents of Asian (83.1%), Black (61.1%), and Hispanic (66.2%) children compared to White children (52.9%).",
+        "Parental openness was lower in rural areas (45.8%) than urban areas (64.1%).",
+        "Provider recommendation for vaccination was reported by 24.6% of unvaccinated children with open parents versus 62.7% of vaccinated children."
+      ],
+      "captured_features": [
+        "parent-reported vaccination status",
+        "parental intent to vaccinate",
+        "parental attitudes (safety, importance, concern)",
+        "place of vaccination",
+        "sociodemographic characteristics (age, race/ethnicity, income, education, urban/rural residence, HHS region, social vulnerability index)"
+      ],
+      "pathologies_diseases": [
+        "COVID-19"
+      ],
+      "study_design": "cross-sectional survey analysis",
+      "data_source_type": "survey",
+      "population": "children aged 6 months–4 years and their parents/guardians in the United States",
+      "exposure_domain": "sociodemographic factors, parental attitudes, provider recommendations, and vaccination setting",
+      "limitations": [
+        "low survey response rate of 20%",
+        "potential bias from nonresponse and misclassification despite calibration weights",
+        "parent-reported vaccination status and intent subject to recall and social desirability biases"
+      ],
+      "data_availability": "not-stated",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
       "pmcid": "PMC9890274",
       "title": "Quantile regression to examine the association of air pollution with subclinical atherosclerosis in an adolescent population.",
       "year": "2022",
@@ -6877,6 +6772,63 @@
         "Upstream data collection accuracy was not fully assessed"
       ],
       "data_availability": "in-house",
+      "data_accession_links": [],
+      "data_availability_statement": "",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC10229756",
+      "title": "2023_PMC10229756_Adverse_Events_Following_Immunization_Among_Children_Under_Two_",
+      "year": "2023",
+      "ehr_used": false,
+      "ehr_evidence": "Data was collected using a pretested, semi-structured questionnaire that contained 20 questions regarding the socio-demographic characteristics of the participants, vaccination details, and the AEFI history of the child.",
+      "summary": "Prospective community-based observational study assessing the incidence and pattern of adverse events following immunization (AEFI) among children under two years of age in Uttarakhand, North India.",
+      "key_findings": [
+        "The incidence of AEFI was 33.0 per 100 doses of vaccines administered.",
+        "212 AEFIs were reported from 152 of 255 vaccinated subjects.",
+        "The most common AEFI was fever (101, 47.6%), followed by swelling at the injection site (53, 25.0%).",
+        "Pentavalent + OPV had the highest AEFI incidence (48.8 per 100 doses), followed by DPT + MR + OPV (46.6 per 100 doses).",
+        "No AEFI was reported after BCG + Hepatitis B + OPV administration.",
+        "No significant association of AEFI with age or gender was found (p > 0.05).",
+        "All reported AEFIs were minor, and no serious AEFIs were identified."
+      ],
+      "captured_features": [
+        "socio-demographic characteristics",
+        "vaccination details",
+        "AEFI history",
+        "fever",
+        "swelling",
+        "pain",
+        "redness",
+        "nodule",
+        "excessive cry",
+        "age group",
+        "gender",
+        "birth weight",
+        "socioeconomic status"
+      ],
+      "pathologies_diseases": [
+        "adverse events following immunization (AEFI)",
+        "fever",
+        "swelling",
+        "pain",
+        "redness",
+        "nodule",
+        "excessive cry"
+      ],
+      "study_design": "Prospective community-based observational study",
+      "data_source_type": "Questionnaire and home visit survey",
+      "population": "Children aged less than two years receiving vaccines under the Universal Immunization Program in Uttarakhand, North India",
+      "exposure_domain": "Routine childhood vaccines (Pentavalent, OPV, IPV, DPT, MR, BCG, Hepatitis B)",
+      "limitations": [
+        "Conducted in a single block, limiting generalizability.",
+        "Recall bias due to reliance on maternal history for AEFI identification.",
+        "Inability to attribute specific AEFIs to individual vaccines due to co-administration.",
+        "Small sample size due to declined participation and loss to follow-up, introducing potential selection bias."
+      ],
+      "data_availability": "not-stated",
       "data_accession_links": [],
       "data_availability_statement": "",
       "confidence": "medium",
@@ -7430,24 +7382,24 @@
       "title": "Correction: Neonatal blood lead concentration predicts medium term lead-related outcomes in children ≤5 years old with congenital lead poisoning: A retrospective cohort study in Northern Nigeria.",
       "year": "2024",
       "ehr_used": false,
-      "ehr_evidence": "",
-      "summary": "Correction notice for a retrospective cohort study investigating neonatal blood lead concentration as a predictor of medium-term lead-related outcomes in children under 5 with congenital lead poisoning in Northern Nigeria.",
+      "ehr_evidence": "The text is a correction statement regarding funding and competing interests for a previously published retrospective cohort study; it does not contain original data analysis or specify an electronic health record system.",
+      "summary": "This manuscript is a correction notice for a retrospective cohort study on neonatal blood lead concentration and medium-term outcomes in children with congenital lead poisoning in Northern Nigeria, correcting funding and conflict of interest statements.",
       "key_findings": [],
       "captured_features": [],
-      "pathologies_diseases": [
-        "congenital lead poisoning"
+      "pathologies_diseases": [],
+      "study_design": "retrospective cohort study (as described in the referenced original article)",
+      "data_source_type": "other",
+      "population": "children ≤5 years old with congenital lead poisoning in Northern Nigeria (as described in the referenced original article)",
+      "exposure_domain": "heavy metals (lead)",
+      "limitations": [
+        "None explicitly stated in this correction notice."
       ],
-      "study_design": "retrospective cohort study",
-      "data_source_type": "",
-      "population": "children ≤5 years old with congenital lead poisoning in Northern Nigeria",
-      "exposure_domain": "blood lead concentration",
-      "limitations": [],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
-      "confidence": "unclear",
+      "data_availability_statement": "This does not alter our adherence to PLOS Global Public Health policies on sharing data and materials.",
+      "confidence": "low",
       "source_format": "pdf",
-      "model": "qwen3.6-35b-vllm-nvfp4"
+      "model": "Qwen3.6-35B-A3B-4bit"
     },
     {
       "pmcid": "PMC10870542",
@@ -8079,6 +8031,61 @@
       "data_availability": "available-upon-request",
       "data_accession_links": [],
       "data_availability_statement": "The data that support the findings of this study are available from C.A.V., but restrictions apply to their availability. The data were used under license for the current study and include unpublished results that are still being analyzed. Therefore, they are not publicly available. However, data may be obtained from the corresponding author on reasonable request and with permission from C.A.V.",
+      "confidence": "medium",
+      "source_format": "pdf",
+      "model": "qwen3.6-35b-vllm-nvfp4"
+    },
+    {
+      "pmcid": "PMC13100012",
+      "title": "2026_PMC13100012_Coverage_and_associated_factors_of_inactivated_polio_vaccine_up",
+      "year": "2026",
+      "ehr_used": false,
+      "ehr_evidence": "The current study was conducted based on the most recent Demographic and Health Survey (DHS) data of 20 Sub-Saharan African countries.",
+      "summary": "Secondary data analysis assessing inactivated polio vaccine (IPV) coverage and determinants among children aged 12–23 months across 20 Sub-Saharan African countries using pooled DHS survey data.",
+      "key_findings": [
+        "Pooled IPV coverage was 65.10% (95% CI: 55.44, 74.76).",
+        "Maternal age 20–35 years (AOR = 1.08, 95% CI: 1.00, 1.18) and >35 years (AOR = 1.22, 95% CI: 1.11, 1.34) were positively associated with IPV uptake.",
+        "Maternal education at primary (AOR = 1.30, 95% CI: 1.23, 1.37) and secondary+ levels (AOR = 1.87, 95% CI: 1.76, 1.99) increased odds.",
+        "Rich household wealth showed an inverse association (AOR = 0.84, 95% CI: 0.79, 0.89).",
+        "ANC visits 1–3 (AOR = 1.86, 95% CI: 1.72, 2.01) and ≥4 (AOR = 2.51, 95% CI: 2.33, 2.70), health facility delivery (AOR = 1.86, 95% CI: 1.77, 1.97), and PNC (AOR = 1.73, 95% CI: 1.65, 1.82) were significant positive determinants.",
+        "Urban residence (AOR = 1.24, 95% CI: 1.17, 1.31) and high community women's literacy (AOR = 1.68, 95% CI: 1.54, 1.83) were associated with higher uptake.",
+        "Regional disparities were observed, with Southern Africa showing the highest odds compared to Central Africa (AOR = 8.41, 95% CI: 7.08, 9.99)."
+      ],
+      "captured_features": [
+        "child vaccination status",
+        "maternal age",
+        "maternal education",
+        "household wealth index",
+        "marital status",
+        "media exposure",
+        "antenatal care visits",
+        "postnatal care visits",
+        "place of delivery",
+        "birth interval",
+        "residence type",
+        "community women's literacy",
+        "community poverty level",
+        "geographic region"
+      ],
+      "pathologies_diseases": [
+        "poliomyelitis",
+        "circulating vaccine-derived poliovirus"
+      ],
+      "study_design": "cross-sectional secondary data analysis with multilevel logistic regression",
+      "data_source_type": "Demographic and Health Survey (DHS)",
+      "population": "children aged 12–23 months and their mothers in 20 Sub-Saharan African countries (weighted n=43,564)",
+      "exposure_domain": "socio-demographic factors, maternal healthcare utilization, community-level characteristics, and geographic region",
+      "limitations": [
+        "cross-sectional design prevents causal inference",
+        "reliance on verbal reports and vaccination cards may introduce recall bias",
+        "limited data on health system factors",
+        "potential time lag between data collection and publication"
+      ],
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://dhsprogram.com/data/available-datasets.cfm"
+      ],
+      "data_availability_statement": "The datasets generated and analyzed for the present study are available in the DHS website (which is available from  [ h t t p s : / / d h s p r o g r a m . c o m / d a t a / a v a i l a b l e - d a t a s e t s . c f m ] ( h t t p s : / d h s p r o g r a m . c o m / d a t a / a v a i l a b l e - d a t a s e t s . c f m ) .",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"

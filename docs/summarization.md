@@ -60,5 +60,5 @@ python scan_data_availability.py --limit 5       # pilot
 python scan_data_availability.py --workers 4     # concurrent
 ```
 
-Latest scan (185 papers): 147 not-stated, 14 supplementary-only,
-11 available-upon-request, **12 public-repository** (with accession/links), 1 in-house.
+Latest scan (185 papers): 145 not-stated, 14 supplementary-only,
+13 available-upon-request, **12 public-repository** (with accession/links), 1 in-house.

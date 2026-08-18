@@ -3,22 +3,22 @@
   "title": "Correction to: Early-life exposure to PM2.5 and risk of acute asthma clinical encounters among children in Massachusetts: a case-crossover analysis.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "This manuscript is a correction notice to a previously published study and does not describe the primary data source.",
-  "summary": "Correction notice addressing an incorrect demographic count in Table 1 of a previously published case-crossover study on early-life PM2.5 exposure and acute asthma clinical encounters in Massachusetts.",
+  "ehr_evidence": "This manuscript is a correction to a previously published article and does not present new primary data analysis or specify the original data source in this text.",
+  "summary": "This correction notice addresses a data entry error in Table 1 of the original study regarding the number of children with a maternal language preference listed as 'Other'.",
   "key_findings": [],
   "captured_features": [],
-  "pathologies_diseases": [
-    "acute asthma"
+  "pathologies_diseases": [],
+  "study_design": "correction notice",
+  "data_source_type": "other",
+  "population": "children in Massachusetts (from original study)",
+  "exposure_domain": "air pollution (PM2.5, from original study)",
+  "limitations": [
+    "None reported; this is a correction notice."
   ],
-  "study_design": "case-crossover analysis",
-  "data_source_type": "clinical encounter data",
-  "population": "children in Massachusetts",
-  "exposure_domain": "PM2.5",
-  "limitations": [],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "Qwen3.6-35B-A3B-4bit"
 }

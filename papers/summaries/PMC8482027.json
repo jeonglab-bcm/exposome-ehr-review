@@ -3,29 +3,34 @@
   "title": "The Rotavirus Vaccine Story: From Discovery to the Eventual Control of Rotavirus Disease.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "Narrative review synthesizing published clinical trial data, surveillance reports, and historical literature on rotavirus vaccine development and implementation.",
-  "summary": "Narrative review of the history, development, efficacy, global implementation, and future directions of rotavirus vaccines.",
-  "key_findings": [],
+  "ehr_evidence": "This manuscript is a narrative review article summarizing the history, development, and global impact of rotavirus vaccines; it does not analyze primary electronic health record or linked health data.",
+  "summary": "This narrative review summarizes the historical development, clinical trial efficacy, and post-licensure global impact of rotavirus vaccines, highlighting reduced mortality and hospitalizations but persistent challenges with vaccine effectiveness in low-income settings.",
+  "key_findings": [
+    "Rotavirus vaccine introduction reduced rotavirus hospitalizations by a median of 59%, acute gastroenteritis hospitalizations by 36%, and diarrhea mortality by 36% in countries with routine immunization programs.",
+    "Vaccine effectiveness showed a gradient by setting: median 87% in countries with lowest under-5 mortality, 75% in intermediate, and 60% in highest under-5 mortality countries.",
+    "Rotavac demonstrated an efficacy of 56% (95% CI, 37%–70%) against severe rotavirus gastroenteritis in the first 2 years of life in India.",
+    "Rotasiil demonstrated an efficacy of 36% (95% CI, 12%–49%) in India and 67% (95% CI, 50%–78%) in Niger against severe rotavirus gastroenteritis.",
+    "Post-licensure monitoring in high- and middle-income countries observed an increased risk of intussusception of 1 to 6 excess cases per 100,000 vaccinated infants in the 1–7 days after the first dose, whereas no increased risk was seen in high-mortality countries in sub-Saharan Africa or India."
+  ],
   "captured_features": [],
   "pathologies_diseases": [
-    "rotavirus disease",
-    "acute gastroenteritis",
-    "diarrhea",
-    "intussusception"
+    "Rotavirus disease",
+    "Severe rotavirus gastroenteritis",
+    "Intussusception",
+    "Acute gastroenteritis",
+    "Diarrhea"
   ],
   "study_design": "Narrative review",
-  "data_source_type": "Published literature and historical data",
-  "population": "Children worldwide, primarily under 5 years of age",
-  "exposure_domain": "Rotavirus vaccination",
+  "data_source_type": "other",
+  "population": "Children <5 years globally, with specific focus on low-, middle-, and high-income countries",
+  "exposure_domain": "Vaccination (rotavirus vaccines)",
   "limitations": [
-    "Narrative review design",
-    "Relies on published literature and historical data rather than original primary analysis",
-    "No individual-level patient data evaluated"
+    "This is a narrative review summarizing existing literature and clinical trial data rather than a primary observational study; it does not generate new primary data from EHR or linked health records."
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
   "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author.",
-  "confidence": "low",
+  "confidence": "high",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "Qwen3.6-35B-A3B-4bit"
 }
