@@ -428,6 +428,17 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  ok={ok}  failed={failed}")
     for cat, n in cats.most_common():
         print(f"  {cat:<26} {n}")
+
+    # ── rebuild combined file ────────────────────────────────────────────
+    # DA results live only in the per-paper files; refresh the combined
+    # JSON so downstream exports (make results / site) can see them.
+    from summarizer.run import load_all_summaries
+    from summarizer.schema import SummaryBatch
+    all_checklists = load_all_summaries(SUMMARY_DIR)
+    all_checklists.sort(key=lambda c: (c.year, c.pmcid))
+    batch = SummaryBatch(n=len(all_checklists), model=model, summaries=all_checklists)
+    COMBINED_PATH.write_text(batch.model_dump_json(indent=2))
+    print(f"  Combined   : {COMBINED_PATH}  ({len(all_checklists)} papers)")
     return 0 if failed == 0 else 1
 
 

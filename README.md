@@ -7,7 +7,7 @@ linked cohort data, downloads the open-access full text, summarizes each
 manuscript with **Gemma 4 12B**, and captures **data-availability** (accession
 numbers / repository links) for systematic-review work.
 
-> **Current collection: 166 full-text papers**, 1990–2026, **20 EHR-based**.
+> **Current collection: 185 full-text papers**, 1990–2026, **18 EHR-based**.
 > Browse the live inventory at
 > **[hyunhwan-bcm.github.io/exposome-ehr-review](https://hyunhwan-bcm.github.io/exposome-ehr-review/)**
 > or see [`paper_summary.md`](./paper_summary.md).

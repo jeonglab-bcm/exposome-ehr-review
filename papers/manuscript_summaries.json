@@ -105,9 +105,11 @@
         "limited data on health system factors",
         "potential time lag between data collection and publication"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://dhsprogram.com/data/available-datasets.cfm"
+      ],
+      "data_availability_statement": "The datasets generated and analyzed for the present study are available in the DHS website (which is available from  [ h t t p s : / / d h s p r o g r a m . c o m / d a t a / a v a i l a b l e - d a t a s e t s . c f m ] ( h t t p s : / d h s p r o g r a m . c o m / d a t a / a v a i l a b l e - d a t a s e t s . c f m ) .",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -388,9 +390,11 @@
         "VAERS passive reporting cannot determine causality",
         "Potential underreporting of adverse events"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf"
+      ],
+      "data_availability_statement": "CDC, National Opinion Research Center at the University of Chicago. National Immunization Survey-Teen: a user’s guide for the 2012 public-use data file. Chicago, IL: National Opinion Research Center; 2014. Available at ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -2607,9 +2611,9 @@
         "Proxy measures for exposure rather than direct biomonitoring",
         "Cross-sectional design limits causal inference"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Associated DataSupplementary MaterialsSupplementary File 1:PDF-Document (PDF, 721 KB)Click here for additional data file.",
       "confidence": "low",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -3307,9 +3311,9 @@
         "potential for multiple testing false positives",
         "possible confounding by postnatal paternal behavior"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The authors confirm that, for approved reasons, some access restrictions apply to the data underlying the findings. All data is stored at the secure platform of Denmark Statistics, which is the central authority on Danish statistics with the mission to collect, compile and publish statisti cs on the Danish society. By legislations, researchers who want to get access to the data must apply for permissions from Both Statistics Denmark and Danish Data Prote ction Agency. Anyone with interests in this data can contact the authors of the study.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -3778,9 +3782,9 @@
         "Limited cell lines tested",
         "Conflicting data between neurovirulence scores and in vivo variant frequencies"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Associated DataSupplementary Materials",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -3958,9 +3962,9 @@
         "single bacterial strain and allergen model limits generalizability",
         "lack of human clinical validation"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "All relevant data are within the paper.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -4225,9 +4229,9 @@
         "narrow focus on hyperkinetic behavior only",
         "intervention limited to pregnancy without lactation period"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "All relevant data are within the paper and its Supporting Information files.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -4408,9 +4412,9 @@
         "Lack of pubertal timing data to account for sex-specific developmental differences",
         "Missing anthropometric and biomarker data due to loss to follow-up"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Associated DataSupplementary Materials(177 KB) PDFClick here for additional data file.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -4455,9 +4459,9 @@
         "Large number of cadmium values below limit of detection affecting continuous variable modeling",
         "Reliance on self-reported smoking data"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Additional Supporting Information may be found in the online version of this article at the publisher’s website:",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -4505,9 +4509,11 @@
         "Unknown childhood lead exposure not accounted for",
         "Single time-point prenatal blood sampling may not capture full gestational exposure"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "http://dx.doi.org/10.1016/j.neuro.2017.07.025"
+      ],
+      "data_availability_statement": "Data relating to prenatal lead exposure and child IQ at 4 and 8 years old in the Avon Longitudinal Study of Parents and Children doi:http://dx.doi.org/10.1016/j.neuro.201 7.07.025 Data in Brief.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -4814,9 +4820,9 @@
         "Results derived exclusively from murine models and cell culture, lacking human clinical or epidemiological data",
         "Short-term passaging may not reflect long-term vaccine stability in natural settings"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Data are not publically available, but will be provided upon request.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -4986,9 +4992,9 @@
         "neurovirulence data is historical and cited rather than generated in this study",
         "relationship to original Dakar strain is unknown"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Pre-reduction datasets from sequencing analyses are available from the authors upon request.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5028,9 +5034,9 @@
         "potential selection bias as sample represents urban population with high SES",
         "lack of measurement/inclusion of other neurotoxic elements (As, Cd, Hg)"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Associated DataSupplementary MaterialsClick here for additional data file.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5161,7 +5167,7 @@
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Not applicable.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5357,9 +5363,9 @@
         "Residual confounding possible",
         "Inconsistency between complete-case and multiple-imputation results"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Associated DataSupplementary Materialsnxz023_Supplemental_FileClick here for additional data file.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5470,8 +5476,11 @@
         "training-test split percentages are somewhat arbitrary",
         "potential for random error or unmeasured confounding"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "http://dx.doi.org/10.5281/zenodo.2658697",
+        "https://doi.org/10.5281/zenodo.2658697"
+      ],
       "data_availability_statement": "",
       "confidence": "medium",
       "source_format": "pdf",
@@ -5639,9 +5648,9 @@
         "loss of spatial granularity due to aggregation",
         "high intercorrelation among variables prevented full mutual adjustment"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The majority of the demographic and environmental factors included in the study were derived from Crown copyright data and are available via the links provided in the text and references. HES data are available via NHS Digital on application with appropriate ethics and governance permissions; we do not hold data provider, ethics or governance permissions to share these health data with third parties.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5679,7 +5688,7 @@
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "All data generated or analyzed during this study are included in this manuscript.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5776,9 +5785,9 @@
         "lack of bone marrow biopsy and liver function tests",
         "limited generalizability to lower exposure populations or other regions"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "All pertinent data are in our study files and can be made available upon request.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5821,9 +5830,11 @@
         "CHIRP registry data may miss early childhood vaccinations due to 2015 mandate start date",
         "demographically homogenous cohort (mostly white, high education)"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://doi.org/10.6084/m9.figshare.12442757.v1"
+      ],
+      "data_availability_statement": "Data stored and supported on figshare.com at https://doi.org/10.6084/m9.figshare.12442757.v1.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -5897,9 +5908,11 @@
         "tissue-specific methylation patterns limit blood as a universal proxy for brain epigenetics",
         "lack of GRE motif enrichment suggests indirect molecular mechanisms"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "GSE163447"
+      ],
+      "data_availability_statement": "The data discussed in this publication have been deposited in NCBI ’s Gene Expression Omnibus 48 and are accessible through GEO Series accession number GSE163447.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6105,9 +6118,9 @@
         "Relies on published literature and historical data rather than original primary analysis",
         "No individual-level patient data evaluated"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6290,9 +6303,9 @@
         "Back-extrapolation of air pollution models over 19 years without antenatal data",
         "Exclusion of pregnancy complications due to small numbers"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Please note: supplementary material is not edited by the Editorial Office, and is uploaded as it has been supplied by the author.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6458,9 +6471,9 @@
         "lack of long-term follow-up data",
         "unclear predisposing factors"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The data used to support the ﬁndings of this study are included within the article.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6499,9 +6512,11 @@
         "CHFS only surveyed risk tolerance of one spouse, preventing joint estimation of own and spouse's risk tolerance.",
         "Limited quantification of the exact degree to which hardship conditioned individuals to engage in entrepreneurship."
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://zenodo.org/record/6084180"
+      ],
+      "data_availability_statement": "Data Availability. China Population Census 1990, China Population Census 2000, China Population Mini-Census 2005, and China Economic Census data are available from the National Bureau of Statistics-Peking University (NBS-PKU) Research Data Center, Peking University (https://microdata.stats.gov.cn/; c l i c k o n the third link). CHFSs 2011 and 2013 data are available from the Survey and Research Center for China Household Finance, Southwestern University of Finance and Economics, Chengdu ( https://chfs.swufe.edu.cn/; to access the data, apply through the of ﬁcial platform ( https://chfser.swufe.edu.cn/datas/). China General Social Surveys 2008, 2010, 2011, 2012, and 2013 data are available from the National Survey Research Center, Renmin University of China, Beijing (http://cgss.ruc.edu.cn/English/Contact_Us.htm; to access the data, contact cgss@ruc.edu.cn). China Family Panel Studies 2010 data are available from the Institute of Social Science Survey, Peking University (http://www.isss.pku.edu.cn/cfps/; to access the restricted county-level data, apply through http://www.isss.pku.edu.cn/cfps/sjzx/xzsj/index.htm). China daily instrumental temperature records at 727 stations from 1951 to 1970 are available in Zenodo (https://zenodo.org/record/6084180#.YgsDzt9BxEY).",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6539,9 +6554,9 @@
         "privacy protection prevented longitudinal follow-up of individual respondents",
         "self-reported data may contain information deviation"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Supplemental data for this article can be accessed on the publisher’s website at https://doi.org/10.1080/21645515.2022.2049169.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6632,9 +6647,9 @@
         "significant missing data across datasets",
         "low concordance between overlapping data elements from different vendors"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The datasets presented in this article are not readily available because it contains clinical information. Requests to access the datasets should be directed to mlgreer@uams.edu.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6679,9 +6694,11 @@
         "lack of individual-level clinical data beyond reported cases",
         "reliance on mandatory reporting from healthcare professionals and marketing authorization holders"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://www.mhlw.go.jp/stf/shingi/shingi-kousei_284075.html"
+      ],
+      "data_availability_statement": "The data for this report are available to the public on the webpage (Japanese language only) of the Ministry of Health, Labour and Welfare of Japan ( https://www.mhlw.go.jp/stf/shingi/shingi-kousei_284075.html).",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -6859,7 +6876,7 @@
         "Limited to 7 prioritized demographic fields",
         "Upstream data collection accuracy was not fully assessed"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "in-house",
       "data_accession_links": [],
       "data_availability_statement": "",
       "confidence": "medium",
@@ -7042,9 +7059,9 @@
         "self-reported exposure subject to recall bias",
         "unmeasured confounding from regional air quality improvements"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The datasets generated and/or analyzed during the current study are not publicly available due to the data belonging to the School of Public Health of Fudan University but are available from the corresponding author upon reasonable request.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7084,9 +7101,11 @@
       "limitations": [
         "underestimation of the numbers and incidence rates of adverse events by using the spontaneous reporting data"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://www.mhlw.go.jp/stf/shingi/shingi-kousei_284075.html"
+      ],
+      "data_availability_statement": "The data for this report are available to the public (Japanese language only) in the webpage of the Ministry of Health, Labour and Welfare of Japan ( https://www.mhlw.go.jp/stf /shingi/shingi-kousei_284075. html).",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7129,7 +7148,7 @@
       ],
       "data_availability": "not-stated",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Data sharing not applicable to this article as no datasets were generated or analyzed during the current study.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7265,9 +7284,9 @@
         "temporal association only",
         "insufficient evidence for causality"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Data are available upon reasonable request to the corresponding author.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7314,9 +7333,9 @@
         "Observational design without randomization",
         "Limited PBMC samples for healthy pediatric controls prevented cellular response comparison"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "All data generated or analyzed during this study are included in this published article (and its supplementary information files).",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7511,9 +7530,9 @@
         "small sample sizes (n=3-5 per group)",
         "lack of human clinical validation"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The datasets generated and analyzed during the current study are submitted to CSIR-IITR repository and will be made available by corresponding author on request.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7593,9 +7612,9 @@
         "did not assess vaccine efficacy",
         "lack of randomized comparison between one and two doses for long-term durability"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "supplementary-only",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "Supplementary data to this article can be found online.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7777,9 +7796,9 @@
         "only 8 of over 23 detectable PFASs were measured",
         "single-city cohort limits generalizability to other populations"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The datasets used and/or analysed during the current study available from the corresponding author on reason-able request.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7819,9 +7838,11 @@
         "controlled laboratory conditions may not reflect real-world agricultural environments",
         "cross-sectional sampling at a single timepoint (8 weeks)"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "PRJNA1206751"
+      ],
+      "data_availability_statement": "The raw metagenomic sequence data are publicly available under the accession number PRJNA1206751.",
       "confidence": "low",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7862,9 +7883,14 @@
         "Dietary intake estimated from group distribution rather than individual consumption",
         "Cross-sectional design limits causal inference for social transmission"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://doi.org/10.5281/zenodo.14913431",
+        "ENA: PRJEB86099",
+        "https://doi.org/10.5281/zenodo.14911049",
+        "PRJEB86099"
+      ],
+      "data_availability_statement": "Sequencing data have been deposited at the European Nucleotide Archive under project ENA: PRJEB86099 and are publicly available as of the date of publication. Pseudonymized sample data have been deposited and are publicly available as of the data of publication at Zenodo: https://doi.org/10.5281/zenodo.14913431. All original code has been deposited and is publicly available as of the date of publication at Zenodo: https://doi.org/10.5281/zenodo.14911049.",
       "confidence": "medium",
       "source_format": "xml",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -7995,9 +8021,11 @@
         "Use of London air pollution data as a nationwide proxy may not be accurate",
         "Median-based polygenic risk score grouping may not reflect true genetic risk distribution"
       ],
-      "data_availability": "not-stated",
-      "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability": "public-repository",
+      "data_accession_links": [
+        "https://github.com/benny817817/early-life-sugar-rationing-respiratory-health"
+      ],
+      "data_availability_statement": "The data are accessible through a public, open-access repository . Data from the UKB, ELSA, and HRS are available to researchers on request.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
@@ -8048,9 +8076,9 @@
         "Small subgroup sample sizes limiting statistical power",
         "Potential type II error for non-significant outcomes"
       ],
-      "data_availability": "not-stated",
+      "data_availability": "available-upon-request",
       "data_accession_links": [],
-      "data_availability_statement": "",
+      "data_availability_statement": "The data that support the findings of this study are available from C.A.V., but restrictions apply to their availability. The data were used under license for the current study and include unpublished results that are still being analyzed. Therefore, they are not publicly available. However, data may be obtained from the corresponding author on reasonable request and with permission from C.A.V.",
       "confidence": "medium",
       "source_format": "pdf",
       "model": "qwen3.6-35b-vllm-nvfp4"
