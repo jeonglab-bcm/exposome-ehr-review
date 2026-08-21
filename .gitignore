@@ -11,3 +11,6 @@ env/
 # macOS
 .DS_Store
 webapp.log
+
+# Local tooling
+.kanbots/
