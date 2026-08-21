@@ -1,78 +1,99 @@
-# Storage, orchestration & CI
+# Storage, orchestration, and CI
 
-The TinyDB source of truth, the Dagster asset graph, GitHub Actions, and the
-full list of generated outputs.
+The pipeline uses two explicit sources of truth: a PMCID-keyed manifest for
+retrieved full text and validated per-paper JSON for the summary catalog.
 
 ← back to the [README](../README.md)
 
-## TinyDB store
+## State model
 
-[`database.py`](../database.py) + [`db.py`](../db.py): a TinyDB-backed document
-store that validates every record through `ManuscriptChecklist` (the catalog
-can never drift into a state `build_results.py` can't read). The DB is the
-source of truth for the combined file.
+`papers/manifest.json` contains `schema_version`, `updated_at`, and a `records`
+object keyed by PMCID. Each record carries status, selected path, `sha256:`
+checksum, exact-query provenance, timestamps, optional screening metadata, and
+bibliographic fields. The redundant `publication_eligible` flag must agree with
+the explicit screening decision and is checked before publication.
 
-```bash
-make db-import    # papers/summaries/*.json -> papers/db.json
-make db-export    # store -> combined + results/manuscript_summaries.json
-make db-stats     # record counts
-python db.py find --ehr-used --disease asthma
-python db.py update PMC1234567 --no-ehr-used --ehr-evidence "n/a"
+Reconciliation validates the filesystem, repairs legacy `downloaded` and
+`xml_only` lists, registers valid unlogged files, marks missing files for retry,
+and deterministically chooses one representation when PDF and XML both exist.
+Writes use a temporary file plus `os.replace` so readers do not observe partial
+JSON.
+
+TinyDB is a derived, validated index. `pipeline_ops.rebuild_combined` validates
+the manifest's current included-and-summarized projection, builds a fresh
+temporary database, exports a fresh combined JSON, and publishes each complete
+file with an atomic replacement. This removes rows whose summary files no
+longer exist or whose sources require re-summarization. Manifest-driven rebuilds
+also reject missing/stale cache sidecars before replacing either output. The
+rebuild refuses partial publication when even one included record is not ready.
+The consistency gate detects cross-file drift if a process is interrupted
+between the two final replacements.
+
+The supported Make targets preserve that invariant: `make results`,
+`make db-import`, and `make db-export` all exact-rebuild the database from the
+current publishable per-paper summaries before exposing a combined batch. The
+lower-level `db.py import` command is an upsert utility for interactive work and
+is not a publication operation.
+
+## Dagster lineage
+
+```text
+download_log → paper_state → per_paper_summaries → data_availability_scan
+                    │                                      │
+                    └→ paper_summary        manuscript_summaries → results → site
+                              └──────────────────────────────────────────────┘
+                                                     artifact_consistency
 ```
 
-## Dagster orchestration
-
-[`pipeline.py`](../pipeline.py) wraps the existing scripts as assets with
-lineage: `download_log` → `per_paper_summaries` → `data_availability_scan` →
-`manuscript_summaries` → `results`. The summarizer runs in `--recover` +
-`--workers 4` mode, and the focused data-availability scan is a first-class
-asset so `make materialize` reproduces the same enriched outputs as the manual
-workflow.
-
 ```bash
-make dagster       # UI + lineage browser (dagster dev -m pipeline)
-make materialize   # materialize the whole graph headlessly
+make dagster
+make materialize
+make check-artifacts
 ```
 
-## Running in GitHub Actions
+The final consistency asset audits all 20 exact query runs, translated-query
+contracts, NCBI/retrieved/page counts, candidate membership, and the separate
+included/excluded/pending screening partitions. It then compares the explicit
+included-study projection across manifest, validated source files, download
+log, per-paper summaries, TinyDB, both combined JSON files, Markdown
+inventories, and the embedded static-site data. Every structured summary is
+Pydantic-validated; manifest checksums and cache identities must be current;
+record payloads and model provenance must agree; and reports/site must be
+byte-for-byte equal to deterministic rebuilds.
 
-[`.github/workflows/pipeline.yml`](../.github/workflows/pipeline.yml) runs the
-same Dagster graph (`dagster asset materialize -m pipeline --select "*"`) on a
-GitHub-hosted runner, triggered manually from the Actions tab (or
-`gh workflow run pipeline.yml -f workers=4 -f limit=2` for a pilot run), and
-pushes the updated `papers/`, `results/`, and `paper_summary.md` back to the
-branch that triggered it.
+## GitHub Actions configuration
 
-The LLM endpoint is a vLLM server served via **Tailscale Serve** inside the
-tailnet at `https://mac-mini.tail5aee49.ts.net/v1` — no API key required, but
-the GitHub-hosted runner must join the tailnet for the run. The workflow does
-this with `tailscale/github-action` (ephemeral node, removed after the run).
-**One-time setup required before the workflow can run:**
+Pushes and pull requests run the offline test suite with read-only repository
+permissions. Publishing is a separate manual-dispatch job: it first passes the
+same tests, materializes the full graph, rebuilds the site stylesheet, runs the
+consistency checker again, and only then commits generated artifacts. Configure:
 
-1. Create a **Tailscale OAuth client** (Settings → OAuth clients in the
-   Tailscale admin console) with the `devices` scope and `tag:ci`. Store
-   the client ID and secret as repo secrets `TS_OAUTH_CLIENT_ID` and
-   `TS_OAUTH_SECRET` (Settings → Secrets and variables → Actions).
-2. `EXPOSOME_LLM_BASE_URL` / `EXPOSOME_LLM_MODEL` can be overridden as repo
-   **variables** if they should differ from the code defaults; set an
-   `EXPOSOME_LLM_API_KEY` secret only if you point at a key-requiring
-   endpoint.
+- repository variable `NCBI_TOOL` with a stable E-utilities client name;
+- repository variable `NCBI_EMAIL` with a monitored E-utilities contact;
+- optional secret `NCBI_API_KEY`;
+- Tailscale OAuth secrets `TS_OAUTH_CLIENT_ID` and `TS_OAUTH_SECRET`; the LLM
+  endpoint is reachable only from inside the tailnet;
+- optional secret `EXPOSOME_LLM_API_KEY`. The tailnet-internal endpoint needs no
+  key; set this only when pointing at a key-requiring endpoint;
+- optional repository variable `EXPOSOME_LLM_MODEL` when it should differ from
+  the code default.
 
-`papers/*.pdf`/`*.xml`/`db.json` are tracked via **Git LFS**
-(`.gitattributes`) — install it locally with `git lfs install` before
-cloning/pulling, and be aware of GitHub's LFS storage/bandwidth quota (1 GB
-free per repo/month; a data pack may be needed as the corpus grows).
+The manual workflow rejects a nonempty `limit` input before contacting external
+services. Pilot limits remain useful for local development, but CI publication
+is deliberately full-corpus only.
 
-## Output
+## Artifacts
 
 | Path | Contents |
-|------|----------|
-| `papers/*.pdf` | Downloaded full-text PDFs (tracked via **Git LFS**) |
-| `papers/*.xml` | JATS-XML full text where no PDF was resolvable (tracked via **Git LFS**) |
-| `papers/download_log.json` | Audit log: `downloaded`, `excluded`, `failed`, `abstract_only`, `xml_only`, `papers` (tracked) |
-| `papers/summaries/<pmcid>.json` | One checklist per paper (tracked) |
-| `papers/db.json` | TinyDB document store (tracked via **Git LFS**, source of truth) |
-| `papers/manuscript_summaries.json` | Combined `SummaryBatch` JSON (tracked, regenerated by the store) |
-| `results/manuscript_summaries.json` | **Tracked** combined copy |
-| `results/SUMMARY.md` / `results/checklist.md` | **Tracked** readable inventory (word-boundary cell clipping) |
-| `paper_summary.md` | Human-readable inventory grouped by exposure domain and health outcome |
+|---|---|
+| `papers/download_log.json` | Frozen exact/effective queries, shard/page proofs, metadata provenance, candidate decisions, and compatibility state |
+| `papers/screening_overrides.json` | Durable PMCID-keyed manual decisions and reviewer evidence |
+| `papers/manifest.json` | Canonical PMCID status/path/checksum/query/screening state |
+| `papers/*.pdf`, `papers/*.xml` | Retrieved full text; one validated representation selected per PMCID |
+| `papers/summaries/<pmcid>.json` | Validated per-paper checklist |
+| `papers/summaries/.cache/<pmcid>.json` | Canonical source/checksum, title/year, prompt/schema/model, processing-code, and execution-mode cache identity |
+| `papers/db.json` | Atomically rebuilt TinyDB index |
+| `papers/manuscript_summaries.json` | Record-derived combined `SummaryBatch` |
+| `results/manuscript_summaries.json` | Published combined copy |
+| `paper_summary.md`, `results/*.md` | Generated inventories with count markers |
+| `docs/index.html` | Static site with embedded record data and count metadata |

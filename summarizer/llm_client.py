@@ -88,26 +88,19 @@ def get_client() -> tuple[OpenAI, str]:
 
 
 # ── prompt ───────────────────────────────────────────────────────────────────
-# The prompt has to ask for JSON in words. Pydantic validates what came back;
-# it cannot constrain what the model emits. The served endpoint accepts an
-# OpenAI `response_format` / `json_schema` argument but ignores it (verified
-# 2026-08-25 against ornith-1.5-35b: the reply was prose). Until the server
-# enforces guided decoding, the wording below plus extract_json_object() and
-# the corrective-reprompt loop are what actually keep the output parseable.
 SYSTEM_PROMPT = (
-    "You are a strict structured-data extractor for a systematic review of "
-    "environmental-exposure (exposome / EWAS) studies. Read the manuscript text "
-    "and extract a single JSON object with EXACTLY these keys and no others: "
-    "ehr_used, ehr_evidence, summary, key_findings, captured_features, "
-    "pathologies_diseases, study_design, data_source_type, population, "
-    "cohort_type, exposure_domain, limitations, confidence. Do NOT invent keys "
-    "like article, authors, title, abstract. ehr_used must be a JSON boolean "
-    "(true/false). cohort_type must be exactly one of: birth-cohort, pediatric, "
-    "adolescent, adult, older-adult, mixed, not-stated — report the age stratum "
-    "the study actually enrolled, and use not-stated when the manuscript does "
-    "not say. Age and EHR use are descriptive facets to record, never reasons "
-    "to skip or downgrade a study. confidence must be one of: high, medium, "
-    "low, unclear. Output ONLY a JSON object starting "
+    "You are a strict structured-data extractor for a systematic review on "
+    "all-age human exposome / EWAS and operational exposure-outcome studies. "
+    "Adult, pediatric, and mixed-age populations are all eligible; EHR or "
+    "linked-health-data use is a descriptive facet, not an inclusion rule. "
+    "Vaccination may be the exposure when the study evaluates a subsequent "
+    "health or biological outcome. Read the manuscript text and extract a single JSON "
+    "object with EXACTLY these keys and no others: ehr_used, ehr_evidence, "
+    "summary, key_findings, captured_features, pathologies_diseases, "
+    "study_design, data_source_type, population, exposure_domain, "
+    "limitations, confidence. Do NOT invent keys like article, authors, title, "
+    "abstract. ehr_used must be a JSON boolean (true/false). confidence must be "
+    "one of: high, medium, low, unclear. Output ONLY a JSON object starting "
     "with { and ending with } — no markdown fences, no reasoning, no prose."
 )
 

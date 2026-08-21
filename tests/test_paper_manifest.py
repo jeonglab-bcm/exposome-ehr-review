@@ -4,9 +4,11 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from database import Store
 from paper_manifest import (
     PaperManifest,
     PayloadCandidate,
@@ -364,3 +366,289 @@ def test_summary_cache_invalidates_every_identity_component(tmp_path: Path):
     assert not summary_cache_matches(summary, **kwargs)
 
 
+def test_process_one_writes_cache_and_source_change_invalidates(tmp_path: Path):
+    from summarizer.run import _process_one
+
+    source = tmp_path / "2020_PMC8_source.pdf"
+    source.write_bytes(_pdf())
+    checklist = _summary("PMC8")
+    client = MagicMock()
+    with patch("summarizer.run.extract", return_value=("text", "pdf")), \
+         patch("summarizer.run.summarize_text", return_value=checklist) as summarize:
+        first = _process_one(
+            path=source, meta={"PMC8": {"title": "PMC8 title", "year": "2020"}},
+            client=client, model="model-a",
+            chunked=False, recover=False, summary_dir=tmp_path,
+        )
+        second = _process_one(
+            path=source, meta={"PMC8": {"title": "PMC8 title", "year": "2020"}},
+            client=client, model="model-a",
+            chunked=False, recover=False, summary_dir=tmp_path,
+        )
+        source.write_bytes(_pdf() + b"new revision")
+        third = _process_one(
+            path=source, meta={"PMC8": {"title": "PMC8 title", "year": "2020"}},
+            client=client, model="model-a",
+            chunked=False, recover=False, summary_dir=tmp_path,
+        )
+
+    assert [first.status, second.status, third.status] == ["ok", "skipped", "ok"]
+    assert summarize.call_count == 2
+
+
+def test_rebuild_combined_removes_stale_database_rows(tmp_path: Path):
+    import pipeline_ops
+
+    summaries = tmp_path / "summaries"
+    summaries.mkdir()
+    (summaries / "PMC10.json").write_text(_summary("PMC10").model_dump_json())
+    stale_path = summaries / "PMC11.json"
+    stale_path.write_text(_summary("PMC11").model_dump_json())
+    db_path = tmp_path / "db.json"
+    combined = tmp_path / "combined.json"
+
+    pipeline_ops.rebuild_combined(
+        summary_dir=summaries, out_path=combined, db_path=db_path,
+        included_pmcids={"PMC10", "PMC11"},
+    )
+    stale_path.unlink()
+    data = pipeline_ops.rebuild_combined(
+        summary_dir=summaries, out_path=combined, db_path=db_path,
+        included_pmcids={"PMC10"},
+    )
+
+    assert data["n"] == 1
+    with Store(db_path) as store:
+        assert store.get("PMC10") is not None
+        assert store.get("PMC11") is None
+
+
+def test_rebuild_combined_ignores_retained_stale_summary_without_deleting_it(tmp_path: Path):
+    import pipeline_ops
+
+    summaries = tmp_path / "summaries"
+    summaries.mkdir()
+    included = summaries / "PMC30.json"
+    stale = summaries / "PMC31.json"
+    included.write_text(_summary("PMC30").model_dump_json())
+    stale.write_text(_summary("PMC31").model_dump_json())
+
+    data = pipeline_ops.rebuild_combined(
+        summary_dir=summaries,
+        out_path=tmp_path / "combined.json",
+        db_path=tmp_path / "db.json",
+        included_pmcids={"PMC30"},
+    )
+
+    assert data["n"] == 1
+    assert [row["pmcid"] for row in data["summaries"]] == ["PMC30"]
+    assert stale.exists()
+
+
+def test_rebuild_combined_refuses_incomplete_downloaded_projection(
+    tmp_path: Path,
+):
+    import pipeline_ops
+    from summarizer.run import PROCESSING_CHECKSUM, PROMPT_CHECKSUM, SCHEMA_CHECKSUM
+
+    papers = tmp_path / "papers"
+    summaries = papers / "summaries"
+    summaries.mkdir(parents=True)
+    manifest = PaperManifest(papers / "manifest.json")
+    for pmcid, status in (("PMC32", "summarized"), ("PMC33", "downloaded")):
+        source = papers / f"2020_{pmcid}_paper.pdf"
+        source.write_bytes(_pdf())
+        manifest.upsert(
+            pmcid,
+            status=status,
+            path=source,
+            checksum=sha256_file(source),
+            screening=_screening(),
+            timestamp=NOW,
+        )
+        summary_path = summaries / f"{pmcid}.json"
+        checklist = _summary(pmcid)
+        summary_path.write_text(checklist.model_dump_json())
+        if status == "summarized":
+            write_summary_cache_metadata(
+                summary_path,
+                pmcid=pmcid,
+                source_path=source,
+                source_identity_path=source,
+                source_checksum=sha256_file(source),
+                model=checklist.model,
+                prompt_checksum=PROMPT_CHECKSUM,
+                schema_checksum=SCHEMA_CHECKSUM,
+                title=checklist.title,
+                year=checklist.year,
+                processing_checksum=PROCESSING_CHECKSUM,
+                summarization_mode="single-with-chunked-recovery",
+                timestamp=NOW,
+            )
+    manifest.save(timestamp=NOW)
+
+    import pytest
+    db_path = papers / "db.json"
+    combined = papers / "manuscript_summaries.json"
+    db_path.write_text('{"sentinel": "database"}\n')
+    combined.write_text('{"sentinel": "combined"}\n')
+    with pytest.raises(ValueError, match="PMC33=downloaded"):
+        pipeline_ops.rebuild_combined(
+            summary_dir=summaries,
+            out_path=combined,
+            db_path=db_path,
+            manifest_path=manifest.path,
+            papers_dir=papers,
+        )
+
+    assert json.loads(combined.read_text()) == {"sentinel": "combined"}
+    assert json.loads(db_path.read_text()) == {"sentinel": "database"}
+    assert (summaries / "PMC33.json").exists()
+
+
+def test_manifest_driven_rebuild_refuses_summarized_status_without_current_cache(
+    tmp_path: Path,
+):
+    import pipeline_ops
+    import pytest
+
+    papers = tmp_path / "papers"
+    summaries = papers / "summaries"
+    summaries.mkdir(parents=True)
+    source = papers / "2020_PMC34_paper.pdf"
+    source.write_bytes(_pdf())
+    manifest = PaperManifest(papers / "manifest.json")
+    manifest.upsert(
+        "PMC34",
+        status="summarized",
+        path=source,
+        checksum=sha256_file(source),
+        screening=_screening(),
+        timestamp=NOW,
+    )
+    manifest.save(timestamp=NOW)
+    (summaries / "PMC34.json").write_text(_summary("PMC34").model_dump_json())
+    combined = papers / "manuscript_summaries.json"
+    database = papers / "db.json"
+    combined.write_text('{"sentinel": "combined"}\n')
+    database.write_text('{"sentinel": "database"}\n')
+
+    with pytest.raises(ValueError, match="cache is stale or missing"):
+        pipeline_ops.rebuild_combined(
+            summary_dir=summaries,
+            out_path=combined,
+            db_path=database,
+            manifest_path=manifest.path,
+            papers_dir=papers,
+        )
+
+    assert json.loads(combined.read_text()) == {"sentinel": "combined"}
+    assert json.loads(database.read_text()) == {"sentinel": "database"}
+
+
+def test_manifest_driven_rebuild_refuses_missing_authoritative_summary(tmp_path: Path):
+    import pipeline_ops
+    import pytest
+
+    papers = tmp_path / "papers"
+    summaries = papers / "summaries"
+    summaries.mkdir(parents=True)
+    source = papers / "2020_PMC35_paper.pdf"
+    source.write_bytes(_pdf())
+    manifest = PaperManifest(papers / "manifest.json")
+    manifest.upsert(
+        "PMC35",
+        status="summarized",
+        path=source,
+        checksum=sha256_file(source),
+        screening=_screening(),
+        timestamp=NOW,
+    )
+    manifest.save(timestamp=NOW)
+
+    with pytest.raises(ValueError, match="summaries are missing for PMC35"):
+        pipeline_ops.rebuild_combined(
+            summary_dir=summaries,
+            out_path=papers / "manuscript_summaries.json",
+            db_path=papers / "db.json",
+            manifest_path=manifest.path,
+            papers_dir=papers,
+        )
+
+
+def test_manifest_driven_rebuild_rejects_edited_summary_identity(tmp_path: Path):
+    import pipeline_ops
+    import pytest
+    from summarizer.run import PROCESSING_CHECKSUM, PROMPT_CHECKSUM, SCHEMA_CHECKSUM
+
+    papers = tmp_path / "papers"
+    summaries = papers / "summaries"
+    summaries.mkdir(parents=True)
+    source = papers / "2020_PMC36_paper.pdf"
+    source.write_bytes(_pdf())
+    manifest = PaperManifest(papers / "manifest.json")
+    manifest.upsert(
+        "PMC36",
+        status="summarized",
+        path=source,
+        checksum=sha256_file(source),
+        screening=_screening(),
+        timestamp=NOW,
+        metadata={"title": "Manifest title", "year": "2020"},
+    )
+    manifest.save(timestamp=NOW)
+    checklist = _summary("PMC36").model_copy(update={"title": "Edited title"})
+    summary_path = summaries / "PMC36.json"
+    summary_path.write_text(checklist.model_dump_json())
+    write_summary_cache_metadata(
+        summary_path,
+        pmcid="PMC36",
+        source_path=source,
+        source_identity_path=source,
+        source_checksum=sha256_file(source),
+        model=checklist.model,
+        prompt_checksum=PROMPT_CHECKSUM,
+        schema_checksum=SCHEMA_CHECKSUM,
+        title="Manifest title",
+        year="2020",
+        processing_checksum=PROCESSING_CHECKSUM,
+        summarization_mode="single-with-chunked-recovery",
+        timestamp=NOW,
+    )
+
+    with pytest.raises(ValueError, match="cache is stale or missing"):
+        pipeline_ops.rebuild_combined(
+            summary_dir=summaries,
+            out_path=papers / "manuscript_summaries.json",
+            db_path=papers / "db.json",
+            manifest_path=manifest.path,
+            papers_dir=papers,
+        )
+
+
+def test_manifest_summarized_status_tracks_current_cache_set(tmp_path: Path):
+    from summarizer.run import _sync_manifest_summary_statuses
+
+    source = tmp_path / "2020_PMC40_source.pdf"
+    source.write_bytes(_pdf())
+    manifest_path = tmp_path / "manifest.json"
+    manifest = PaperManifest(manifest_path)
+    manifest.upsert(
+        "PMC40",
+        status="downloaded",
+        path=source,
+        checksum=sha256_file(source),
+        screening=_screening(),
+        timestamp=NOW,
+    )
+    manifest.save(timestamp=NOW)
+
+    _sync_manifest_summary_statuses(
+        {"PMC40": source}, {"PMC40"}, manifest_path=manifest_path,
+    )
+    assert PaperManifest(manifest_path).get("PMC40")["status"] == "summarized"
+
+    _sync_manifest_summary_statuses(
+        {"PMC40": source}, set(), manifest_path=manifest_path,
+    )
+    assert PaperManifest(manifest_path).get("PMC40")["status"] == "downloaded"

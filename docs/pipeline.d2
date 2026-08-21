@@ -1,5 +1,5 @@
-## Pediatric Exposome / EWAS Literature Pipeline
-## Render:  d2 --layout elk docs/pipeline.d2 docs/pipeline.svg
+## All-age Exposome Evidence Map
+## Render: d2 --layout elk docs/pipeline.d2 docs/pipeline.svg
 
 direction: down
 
@@ -9,82 +9,126 @@ classes: {
   }
   store: {
     shape: cylinder
-    style: { fill: "#fff4e0"; stroke: "#d68a2b"; stroke-width: 2; font-size: 15 }
+    style: { fill: "#fff4e0"; stroke: "#d68a2b"; stroke-width: 2; font-size: 14 }
   }
   output: {
     shape: page
     style: { fill: "#e9f9ee"; stroke: "#2f9e51"; stroke-width: 2; font-size: 13 }
+  }
+  gate: {
+    shape: diamond
+    style: { fill: "#fff0f0"; stroke: "#c43d3d"; stroke-width: 2; font-size: 14 }
   }
   llm: {
     style: { fill: "#f3e9ff"; stroke: "#8a4fd4"; stroke-width: 2; font-size: 15 }
   }
 }
 
-pubmed: |md
-  ## ☁ PubMed Central
-  NCBI E-utilities + Europe PMC
+pmc: |md
+  ## PubMed Central
+  NCBI E-utilities + Europe PMC full-text fallback
 | { style.fill: "#f0f0f0"; style.stroke: "#999"; style.border-radius: 10 }
 
-download: |md
-  ## make download
+search: |md
+  ## Search and retrieve
   `fetch_pmc_papers.py`
-  - 20 tiered queries (EWAS · EHR · birth-cohort · vaccine)
-  - drop reviews · meta-analysis · epigenome · abstracts
-  - full-text: OA PDF → tar.gz → Europe PMC → XML
+  - 20 named exact queries: core, mixtures, vaccine, adjacent
+  - frozen complete counts and every page
+  - PDF → tarball → Europe PMC PDF → JATS XML
 | { class: stage }
 
-summarize: |md
-  ## make summarize
-  `summarizer/run.py`
-  - extract PDF/XML → Pydantic `ManuscriptChecklist`
-  - EHR? · features · disease · exposure · confidence
-  - concurrent · resume-only · chunked recovery
-| { class: stage }
-
-scan: |md
-  ## scan_data_availability.py
-  - LLM classify: public-repo / on-request / in-house
-  - regex net: dbGaP · GEO · Zenodo · GitHub
-| { class: stage }
-
-gemma: |md
-  ## 🤖 Qwen3.6-MoE
-  OpenAI-compatible endpoint
-| { class: llm }
-
-db: |md
-  ## TinyDB
-  `papers/db.json`
+audit: |md
+  ## Retrieval audit trail
+  `papers/download_log.json`
+  Exact query, translation, UTC time, page counts,
+  candidate membership, and screening partitions
 | { class: store }
 
-results: |md
-  ## make results
-  db-export → `build_results.py`
+screen: |md
+  ## Eligibility screen
+  Human + primary-study evidence required
+  Scope: core · mixtures · vaccine · adjacent
+  Population: adult · pediatric · mixed · unclear
 | { class: stage }
 
-web: |md
-  ## make web
-  `webapp.py` · :8010
+manifest: |md
+  ## PMCID manifest
+  Path + checksum + exact-query + screening state
+  Only explicit `included` local files are publishable
+| { class: store }
+
+summarize: |md
+  ## Summarize included full text
+  Pydantic `ManuscriptChecklist`
+  Source/prompt/schema/model/processing cache identity
 | { class: stage }
 
-out: results/ {
+llm: |md
+  ## Configured LLM
+  OpenAI-compatible endpoint
+  Model provenance stored per record
+| { class: llm }
+
+scan: |md
+  ## Focused data-availability scan
+  Repository · upon-request · in-house · supplementary · unstated
+| { class: stage }
+
+per_paper: |md
+  ## Per-paper JSON + sidecars
+  `papers/summaries/`
+| { class: store }
+
+rebuild: |md
+  ## Exact catalog rebuild
+  Validate every per-paper record, replace TinyDB,
+  and atomically publish the combined `SummaryBatch`
+| { class: stage }
+
+catalog: |md
+  ## Derived catalog
+  `papers/db.json`
+  `papers/manuscript_summaries.json`
+| { class: store }
+
+publish: |md
+  ## Deterministic publication
+  `build_summary.py` · `build_results.py` · `build_site.py`
+| { class: stage }
+
+outputs: Published artifacts {
   direction: right
-  style.fill: transparent; style.stroke: "#cccccc"; style.font-size: 15
-  SUMMARY: SUMMARY.md { class: output }
-  checklist: checklist.md { class: output }
-  combined: manuscript_summaries.json { class: output }
+  style.fill: transparent
+  style.stroke: "#cccccc"
+  summary: paper_summary.md { class: output }
+  results: results/ { class: output }
+  site: docs/index.html { class: output }
 }
 
-# ── flow ──
-pubmed -> download: search + fetch { style.stroke-width: 2 }
-download -> summarize: PDFs / XML + log { style.stroke-width: 2 }
-summarize -> scan: per-paper JSON { style.stroke-width: 2 }
-summarize <-> gemma: text ⇄ checklist { style.stroke: "#8a4fd4" }
-scan <-> gemma: prompt ⇄ label { style.stroke: "#8a4fd4" }
-summarize -> db { style.stroke-width: 2 }
-scan -> db: accession / links { style.stroke-width: 2 }
-db -> results { style.stroke-width: 2 }
-db -> web: serves { style.stroke-dash: 4 }
-results -> out.SUMMARY
-results -> out.checklist
-results -> out.combined
+verify: |md
+  ## Consistency gate
+  Query/search/screen audit · included projection · Pydantic payloads
+  Cache/provenance · exact PMCID sets · deterministic output bytes
+| { class: gate }
+
+pmc -> search: complete search + full text { style.stroke-width: 2 }
+search -> audit: persist every run and candidate { style.stroke-width: 2 }
+audit -> screen: metadata + query membership { style.stroke-width: 2 }
+screen -> manifest: included / excluded / pending { style.stroke-width: 2 }
+manifest -> summarize: explicit included-study projection { style.stroke-width: 2 }
+summarize <-> llm: source text ⇄ checklist { style.stroke: "#8a4fd4" }
+summarize -> per_paper: validated JSON + cache sidecar { style.stroke-width: 2 }
+per_paper -> scan: enrich availability evidence { style.stroke-width: 2 }
+scan <-> llm: focused context ⇄ label { style.stroke: "#8a4fd4" }
+scan -> rebuild: complete current per-paper set { style.stroke-width: 2 }
+rebuild -> catalog: atomic exact replacement { style.stroke-width: 2 }
+catalog -> publish { style.stroke-width: 2 }
+audit -> publish: inventory counts { style.stroke-width: 2 }
+publish -> outputs.summary
+publish -> outputs.results
+publish -> outputs.site
+audit -> verify
+manifest -> verify
+per_paper -> verify
+catalog -> verify
+outputs -> verify

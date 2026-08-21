@@ -32,12 +32,19 @@ except Exception:
 from summarizer.extract import extract, pmcid_from_filename
 from summarizer.llm_client import get_client, extract_json_object, MAX_OUTPUT_TOKENS
 from summarizer.schema import ManuscriptChecklist
+from output_provenance import dominant_model
+from paper_manifest import (
+    atomic_write_text,
+    discover_publication_ready_papers,
+    publication_ready_paper_files,
+)
 from pydantic import BaseModel, Field, field_validator
 
 PAPERS_DIR = Path("papers")
 SUMMARY_DIR = PAPERS_DIR / "summaries"
 COMBINED_PATH = PAPERS_DIR / "manuscript_summaries.json"
 LOG_PATH = PAPERS_DIR / "download_log.json"
+MANIFEST_PATH = PAPERS_DIR / "manifest.json"
 
 SOURCE_CHAR_BUDGET = 12000  # data-availability statements are usually near the end
 
@@ -113,7 +120,7 @@ def _normalize_da_value(value: str) -> str | None:
 
 
 def _extract_markdown_da_response(raw: str) -> dict | None:
-    """Recover data-availability fields from Gemma's markdown prose output.
+    """Recover data-availability fields from a model's markdown prose output.
 
     The prompt asks for JSON, but the deployed model sometimes emits bullet
     prose like ``* `data_availability`: "public-repository"``. Treat this as a
@@ -296,10 +303,7 @@ def load_metadata() -> dict[str, dict]:
 
 
 def discover_files() -> list[Path]:
-    return sorted(
-        list(PAPERS_DIR.glob("*.pdf")) + list(PAPERS_DIR.glob("*.xml")),
-        key=lambda p: pmcid_from_filename(p),
-    )
+    return discover_publication_ready_papers(MANIFEST_PATH, PAPERS_DIR, validate=True)
 
 
 def scan_one(path: Path, *, summary_dir: Path, meta: dict | None = None,
@@ -341,9 +345,9 @@ def scan_one(path: Path, *, summary_dir: Path, meta: dict | None = None,
     # completed + validated when summarize runs).
     if all(k in rec for k in ("ehr_used", "ehr_evidence", "summary")):
         checklist = ManuscriptChecklist(**rec)
-        out_path.write_text(checklist.model_dump_json(indent=2))
+        atomic_write_text(out_path, checklist.model_dump_json(indent=2) + "\n")
     else:
-        out_path.write_text(json.dumps(rec, indent=2, sort_keys=True))
+        atomic_write_text(out_path, json.dumps(rec, indent=2, sort_keys=True) + "\n")
     return json.loads(out_path.read_text())
 
 
@@ -357,23 +361,59 @@ def main(argv: list[str] | None = None) -> int:
     SUMMARY_DIR.mkdir(parents=True, exist_ok=True)
     meta = load_metadata()
 
+    try:
+        available_files = discover_files()
+    except (FileNotFoundError, ValueError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
     if args.pmcid:
         pmcid = args.pmcid.upper()
         if not pmcid.startswith("PMC"):
             pmcid = f"PMC{pmcid}"
-        files = [f for f in discover_files() if pmcid_from_filename(f) == pmcid]
+        files = [f for f in available_files if pmcid_from_filename(f) == pmcid]
     else:
-        files = discover_files()
+        files = available_files
     if args.limit:
         files = files[: args.limit]
     if not files:
-        print("No papers found under papers/.", file=sys.stderr)
-        return 1
+        if args.pmcid:
+            print("No included paper found for that PMCID.", file=sys.stderr)
+            return 1
+        from summarizer.schema import SummaryBatch
+        atomic_write_text(
+            COMBINED_PATH,
+            SummaryBatch(n=0, model="", summaries=[]).model_dump_json(indent=2) + "\n",
+        )
+        print("No current included summaries; wrote an empty combined artifact.")
+        return 0
 
     try:
         client, model = get_client()
     except RuntimeError as e:
         print(str(e), file=sys.stderr)
+        return 2
+
+    # ``summarized`` is durable workflow state, but prompt/schema/model changes
+    # can make its cache stale between runs.  Refuse to enrich or republish any
+    # batch until every member is current for the configured model.
+    from summarizer.run import _cached_checklist
+    stale = [
+        path for path in available_files
+        if _cached_checklist(
+            path,
+            model=model,
+            meta=meta,
+            summary_dir=SUMMARY_DIR,
+            summarization_mode=None,
+        ) is None
+    ]
+    if stale:
+        names = ", ".join(pmcid_from_filename(path) for path in stale[:8])
+        suffix = " ..." if len(stale) > 8 else ""
+        print(
+            f"Stale or missing summary cache for {names}{suffix}; run make summarize first.",
+            file=sys.stderr,
+        )
         return 2
 
     print(f"Data-availability scan | model: {model} | papers: {len(files)} | workers: {args.workers}")
@@ -434,10 +474,16 @@ def main(argv: list[str] | None = None) -> int:
     # JSON so downstream exports (make results / site) can see them.
     from summarizer.run import load_all_summaries
     from summarizer.schema import SummaryBatch
-    all_checklists = load_all_summaries(SUMMARY_DIR)
+    allowed_pmcids = set(publication_ready_paper_files(
+        MANIFEST_PATH, PAPERS_DIR, validate=True,
+    ))
+    all_checklists = load_all_summaries(
+        SUMMARY_DIR, allowed_pmcids=allowed_pmcids,
+    )
     all_checklists.sort(key=lambda c: (c.year, c.pmcid))
-    batch = SummaryBatch(n=len(all_checklists), model=model, summaries=all_checklists)
-    COMBINED_PATH.write_text(batch.model_dump_json(indent=2))
+    batch_model = dominant_model([checklist.model_dump() for checklist in all_checklists])
+    batch = SummaryBatch(n=len(all_checklists), model=batch_model, summaries=all_checklists)
+    atomic_write_text(COMBINED_PATH, batch.model_dump_json(indent=2) + "\n")
     print(f"  Combined   : {COMBINED_PATH}  ({len(all_checklists)} papers)")
     return 0 if failed == 0 else 1
 

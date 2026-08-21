@@ -8,7 +8,7 @@ on:
         default: "4"
         required: false
       limit:
-        description: "Pilot run: only process the first N papers (blank = all)"
+        description: "Publication runs must be complete; leave this blank"
         default: ""
         required: false
       force:
@@ -17,24 +17,21 @@ on:
         default: false
         required: false
 
+# Read-only by default. Only the publication job may update tracked artifacts.
+# Push / pull-request testing lives in test.yml, which also canaries the endpoint.
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: pipeline-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  pipeline:
+  tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (with LFS)
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          lfs: true
-
-      - name: Connect Tailscale (LLM endpoint lives inside the tailnet)
-        uses: tailscale/github-action@v4
-        with:
-          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          tags: tag:ci
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -44,27 +41,85 @@ jobs:
       - name: Install dependencies
         run: pip install requests openai pypdf pydantic python-dotenv pytest tinydb dagster
 
-      - name: Run tests
-        env:
-          EXPOSOME_LLM_API_KEY: ${{ secrets.EXPOSOME_LLM_API_KEY }}
+      - name: Run read-only tests
         run: pytest tests/ -q
 
-      - name: Materialize pipeline (download -> summarize -> data availability -> results)
+  publish:
+    needs: tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout (with LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Validate full-run publication configuration
         env:
+          PIPELINE_LIMIT: ${{ inputs.limit }}
+          SUMMARIZE_WORKERS: ${{ inputs.workers || '4' }}
+          NCBI_TOOL: ${{ vars.NCBI_TOOL }}
+          NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+        run: |
+          test -z "$PIPELINE_LIMIT" || {
+            echo "Refusing to publish a pilot subset: workflow input 'limit' must be blank."
+            exit 2
+          }
+          case "$SUMMARIZE_WORKERS" in
+            ''|*[!0-9]*|0) echo "workers must be a positive integer"; exit 2 ;;
+          esac
+          test -n "$NCBI_TOOL" || { echo "Set repository variable NCBI_TOOL"; exit 2; }
+          test -n "$NCBI_EMAIL" || { echo "Set repository variable NCBI_EMAIL"; exit 2; }
+
+      - name: Connect Tailscale (LLM endpoint lives inside the tailnet)
+        uses: tailscale/github-action@v4
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
+
+      - name: Verify LLM endpoint before a long publication run
+        run: curl -sf --max-time 15 https://mac-mini.tail5aee49.ts.net/v1/models > /dev/null
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests openai pypdf pydantic python-dotenv pytest tinydb dagster
+
+      - name: Materialize full pipeline
+        env:
+          NCBI_TOOL: ${{ vars.NCBI_TOOL }}
+          NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
           EXPOSOME_LLM_BASE_URL: https://mac-mini.tail5aee49.ts.net/v1
           EXPOSOME_LLM_API_KEY: ${{ secrets.EXPOSOME_LLM_API_KEY }}
           EXPOSOME_LLM_MODEL: ${{ vars.EXPOSOME_LLM_MODEL }}
-          SUMMARIZE_WORKERS: ${{ inputs.workers }}
-          SCAN_WORKERS: ${{ inputs.workers }}
-          PIPELINE_LIMIT: ${{ inputs.limit }}
+          SUMMARIZE_WORKERS: ${{ inputs.workers || '4' }}
+          SCAN_WORKERS: ${{ inputs.workers || '4' }}
           SUMMARIZE_FORCE: ${{ inputs.force }}
+          PIPELINE_LIMIT: ""
         run: dagster asset materialize -m pipeline --select "*"
+
+      - name: Rebuild site stylesheet
+        run: >-
+          npx --yes tailwindcss@3
+          -i docs/tailwind.input.css
+          -o docs/tailwind.css
+          --content docs/index.html
+          --minify
+
+      - name: Verify published artifacts agree
+        run: python artifact_consistency.py
 
       - name: Commit and push results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add papers results paper_summary.md
+          git add papers results paper_summary.md docs/index.html docs/tailwind.css
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
