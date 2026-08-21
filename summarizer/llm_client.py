@@ -1,15 +1,18 @@
 """LLM client + structured-output extraction for manuscript summarization.
 
-Talks to the external OpenAI-compatible Gemma 4 12B endpoint via the ``openai``
-SDK. The model tends to wrap JSON in chain-of-thought reasoning and markdown
+Talks to an OpenAI-compatible LLM endpoint via the ``openai`` SDK (default:
+the vLLM server inside the tailnet at https://mac-mini.tail5aee49.ts.net/v1).
+The model tends to wrap JSON in chain-of-thought reasoning and markdown
 fences, so we extract the last ```json``` block (or the largest balanced
 ``{...}``) and validate with Pydantic, retrying with a corrective nudge on
 failure.
 
 Configuration is entirely env-based so no API key is ever committed:
 
-    EXPOSOME_LLM_BASE_URL   default https://llm.bioinfolder.com/v1
-    EXPOSOME_LLM_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
+    EXPOSOME_LLM_BASE_URL   default https://mac-mini.tail5aee49.ts.net/v1
+    EXPOSOME_LLM_API_KEY    optional — not needed for the tailnet-internal
+                            endpoint; set it when pointing at an endpoint
+                            that requires a key
     EXPOSOME_LLM_MODEL      default gemma4-12b-qat-gguf
 """
 from __future__ import annotations
@@ -26,9 +29,11 @@ from pydantic import ValidationError
 from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 
 # ── config ───────────────────────────────────────────────────────────────────
-DEFAULT_BASE_URL = "https://llm.bioinfolder.com/v1"
+DEFAULT_BASE_URL = "https://mac-mini.tail5aee49.ts.net/v1"
 DEFAULT_MODEL = "gemma4-12b-qat-gguf"
-PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
+# The default endpoint is inside the tailnet and does not authenticate; the
+# OpenAI SDK just needs a non-empty bearer token on the wire.
+NO_AUTH_TOKEN = "tailscale-internal"
 
 MAX_RETRIES = 3
 # Output token budget. Generous default so the reasoning-heavy model never
@@ -68,12 +73,8 @@ def _env(key: str, default: str) -> str:
 
 def get_client() -> tuple[OpenAI, str]:
     """Build an OpenAI client + model id from env vars."""
-    api_key = os.environ.get("EXPOSOME_LLM_API_KEY", "").strip()
-    if not api_key:
-        raise RuntimeError(
-            "EXPOSOME_LLM_API_KEY is not set. Copy .env.example to .env and fill in the key, "
-            "or export EXPOSOME_LLM_API_KEY in your shell."
-        )
+    # Optional: the default tailnet-internal vLLM endpoint needs no key.
+    api_key = os.environ.get("EXPOSOME_LLM_API_KEY", "").strip() or NO_AUTH_TOKEN
     base_url = _env("EXPOSOME_LLM_BASE_URL", DEFAULT_BASE_URL)
     model = _env("EXPOSOME_LLM_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
