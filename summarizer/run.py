@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Summarize collected manuscripts into Pydantic-validated JSON checklists via
-Gemma 4 12B.
+Qwen3.6-MoE.
 
 Usage:
     python -m summarizer.run                 # all downloaded papers
@@ -12,7 +12,7 @@ Usage:
 Env:
     EXPOSOME_LLM_BASE_URL  default https://mac-mini.tail5aee49.ts.net/v1
     EXPOSOME_LLM_API_KEY   optional (not needed for the tailnet-internal endpoint)
-    EXPOSOME_LLM_MODEL     default gemma4-12b-qat-gguf
+    EXPOSOME_LLM_MODEL     default qwen3.6-moe
 """
 from __future__ import annotations
 

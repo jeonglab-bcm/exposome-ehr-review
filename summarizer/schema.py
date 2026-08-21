@@ -1,6 +1,6 @@
 """Pydantic checklist schema for manuscript summarization.
 
-Each collected paper is summarized by Gemma 4 12B into a structured record
+Each collected paper is summarized by Qwen3.6-MoE into a structured record
 conforming to :class:`ManuscriptChecklist`. The schema is the single source of
 truth for the JSON written under ``papers/summaries/`` and the combined
 ``papers/manuscript_summaries.json``.
