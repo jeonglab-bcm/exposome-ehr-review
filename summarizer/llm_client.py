@@ -8,9 +8,9 @@ failure.
 
 Configuration is entirely env-based so no API key is ever committed:
 
-    GEMMA_BASE_URL   default https://llm.bioinfolder.com/v1
-    GEMMA_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
-    GEMMA_MODEL      default gemma4-12b-qat-gguf
+    EXPOSOME_LLM_BASE_URL   default https://llm.bioinfolder.com/v1
+    EXPOSOME_LLM_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
+    EXPOSOME_LLM_MODEL      default gemma4-12b-qat-gguf
 """
 from __future__ import annotations
 
@@ -32,8 +32,8 @@ PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
 
 MAX_RETRIES = 3
 # Output token budget. Generous default so the reasoning-heavy model never
-# truncates mid-JSON; override with GEMMA_MAX_TOKENS. (Server context is 256K.)
-MAX_OUTPUT_TOKENS = int(os.environ.get("GEMMA_MAX_TOKENS", "32768"))
+# truncates mid-JSON; override with EXPOSOME_LLM_MAX_TOKENS. (Server context is 256K.)
+MAX_OUTPUT_TOKENS = int(os.environ.get("EXPOSOME_LLM_MAX_TOKENS", "32768"))
 # Approximate char budget for the source text sent to the model. Median
 # extracted full text is ~40K chars, so the old 6000 budget showed the model
 # only the abstract + start of the introduction — it never saw the Results,
@@ -68,14 +68,14 @@ def _env(key: str, default: str) -> str:
 
 def get_client() -> tuple[OpenAI, str]:
     """Build an OpenAI client + model id from env vars."""
-    api_key = os.environ.get("GEMMA_API_KEY", "").strip()
+    api_key = os.environ.get("EXPOSOME_LLM_API_KEY", "").strip()
     if not api_key:
         raise RuntimeError(
-            "GEMMA_API_KEY is not set. Copy .env.example to .env and fill in the key, "
-            "or export GEMMA_API_KEY in your shell."
+            "EXPOSOME_LLM_API_KEY is not set. Copy .env.example to .env and fill in the key, "
+            "or export EXPOSOME_LLM_API_KEY in your shell."
         )
-    base_url = _env("GEMMA_BASE_URL", DEFAULT_BASE_URL)
-    model = _env("GEMMA_MODEL", DEFAULT_MODEL)
+    base_url = _env("EXPOSOME_LLM_BASE_URL", DEFAULT_BASE_URL)
+    model = _env("EXPOSOME_LLM_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
     # Cloudflare (fronting llm.bioinfolder.com) blocks the openai SDK's default
     # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),

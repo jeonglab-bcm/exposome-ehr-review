@@ -53,8 +53,8 @@ fresh: clean download ## Clean then re-download from scratch
 summarize: $(COMBINED_JSON) ## Summarize all manuscripts via Gemma 4 12B -> JSON
 
 $(COMBINED_JSON): summarizer $(VENV)
-	@if [ ! -f .env ] && [ -z "$$GEMMA_API_KEY" ]; then \
-		echo "⚠ No GEMMA_API_KEY: copy .env.example to .env and fill in the key."; \
+	@if [ ! -f .env ] && [ -z "$$EXPOSOME_LLM_API_KEY" ]; then \
+		echo "⚠ No EXPOSOME_LLM_API_KEY: copy .env.example to .env and fill in the key."; \
 		exit 2; \
 	fi
 	@$(VENV_PYTHON) -m summarizer.run

@@ -10,9 +10,9 @@ Usage:
     python -m summarizer.run --force          # re-summarize even if cached
 
 Env:
-    GEMMA_BASE_URL  default https://llm.bioinfolder.com/v1
-    GEMMA_API_KEY    required
-    GEMMA_MODEL      default gemma4-12b-qat-gguf
+    EXPOSOME_LLM_BASE_URL  default https://llm.bioinfolder.com/v1
+    EXPOSOME_LLM_API_KEY    required
+    EXPOSOME_LLM_MODEL      default gemma4-12b-qat-gguf
 """
 from __future__ import annotations
 

@@ -47,10 +47,10 @@ The Gemma endpoint is served publicly at `https://llm.bioinfolder.com/v1`
 (behind Cloudflare), so a GitHub-hosted runner can reach it directly — no
 VPN/tunnel needed. **One-time setup required before the workflow can run:**
 
-1. Add `GEMMA_API_KEY` as a **repo secret** (Settings → Secrets and
-   variables → Actions) — the real Gemma endpoint key.
-2. Optionally set `GEMMA_BASE_URL` / `GEMMA_MODEL` as repo **variables** if
-   they should differ from the code defaults.
+1. Add `EXPOSOME_LLM_API_KEY` as a **repo secret** (Settings → Secrets and
+   variables → Actions) — the LLM endpoint key.
+2. Optionally set `EXPOSOME_LLM_BASE_URL` / `EXPOSOME_LLM_MODEL` as repo
+   **variables** if they should differ from the code defaults.
 
 `papers/*.pdf`/`*.xml`/`db.json` are tracked via **Git LFS**
 (`.gitattributes`) — install it locally with `git lfs install` before
