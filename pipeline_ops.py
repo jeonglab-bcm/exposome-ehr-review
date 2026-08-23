@@ -31,7 +31,10 @@ DOWNLOAD_LOG = PAPERS_DIR / "download_log.json"
 # failure) + concurrent workers (the bottleneck is network-bound LLM calls).
 # Override worker counts via SUMMARIZE_WORKERS / SCAN_WORKERS (e.g. from CI
 # workflow_dispatch inputs) without touching the Dagster asset graph.
-SUMMARIZE_ARGS = ["--recover", "--workers", os.environ.get("SUMMARIZE_WORKERS", "4")]
+_summarize_args = ["--recover", "--workers", os.environ.get("SUMMARIZE_WORKERS", "4")]
+if os.environ.get("SUMMARIZE_FORCE", "").strip().lower() in ("1", "true", "yes"):
+    _summarize_args = ["--force", "--workers", os.environ.get("SUMMARIZE_WORKERS", "4")]
+SUMMARIZE_ARGS = _summarize_args
 
 # Focused data-availability pass. This updates the already-created per-paper
 # JSONs with data_availability/accession fields before the combined artifact is
@@ -41,18 +44,10 @@ DATA_AVAILABILITY_ARGS = ["--workers", os.environ.get("SCAN_WORKERS", "4")]
 
 def _run(cmd: list[str], *, label: str) -> int:
     """Run ``cmd`` in the repo root; raise RuntimeError on non-zero exit."""
-    cwd = str(REPO_ROOT)
-    proc = subprocess.run(cmd, cwd=cwd, text=True, capture_output=True)
+    proc = subprocess.run(cmd, cwd=str(REPO_ROOT), text=True, capture_output=True)
     if proc.returncode != 0:
-        full = (proc.stderr or proc.stdout or "").strip()
-        tail = full.splitlines()[-6:]
-        diag = (
-            f"{label} failed (exit {proc.returncode})\n"
-            f"cwd={cwd}\n"
-            f"papers_dir_exists={PAPERS_DIR.exists()}\n"
-            f"pdf_count={len(list(PAPERS_DIR.glob('*.pdf')))}\n"
-        )
-        raise RuntimeError(diag + "\n".join(tail))
+        tail = (proc.stderr or proc.stdout or "").strip().splitlines()[-6:]
+        raise RuntimeError(f"{label} failed (exit {proc.returncode})\n" + "\n".join(tail))
     return proc.returncode
 
 

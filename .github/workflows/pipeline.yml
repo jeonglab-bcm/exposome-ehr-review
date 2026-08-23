@@ -11,6 +11,11 @@ on:
         description: "Pilot run: only process the first N papers (blank = all)"
         default: ""
         required: false
+      force:
+        description: "Re-summarize all papers even if cached (true/false)"
+        type: boolean
+        default: false
+        required: false
 
 permissions:
   contents: write
@@ -44,14 +49,6 @@ jobs:
           EXPOSOME_LLM_API_KEY: ${{ secrets.EXPOSOME_LLM_API_KEY }}
         run: pytest tests/ -q
 
-      - name: Verify papers directory
-        run: |
-          echo "Papers dir: $(pwd)/papers"
-          echo "PDF count: $(ls papers/*.pdf 2>/dev/null | wc -l)"
-          echo "XML count: $(ls papers/*.xml 2>/dev/null | wc -l)"
-          ls papers/ | head -5
-          file papers/*.pdf 2>/dev/null | head -3
-
       - name: Materialize pipeline (download -> summarize -> data availability -> results)
         env:
           EXPOSOME_LLM_BASE_URL: https://mac-mini.tail5aee49.ts.net/v1
@@ -60,6 +57,7 @@ jobs:
           SUMMARIZE_WORKERS: ${{ inputs.workers }}
           SCAN_WORKERS: ${{ inputs.workers }}
           PIPELINE_LIMIT: ${{ inputs.limit }}
+          SUMMARIZE_FORCE: ${{ inputs.force }}
         run: dagster asset materialize -m pipeline --select "*"
 
       - name: Commit and push results
