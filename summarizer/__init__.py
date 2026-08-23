@@ -1,4 +1,4 @@
-"""Manuscript summarization pipeline (Gemma 4 12B + Pydantic checklist)."""
+"""Manuscript summarization pipeline (Qwen3.6-MoE + Pydantic checklist)."""
 from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist, SummaryBatch
 from .llm_client import get_client, summarize_text
 

@@ -24,12 +24,11 @@ jobs:
         with:
           lfs: true
 
-      - name: Connect to Tailscale
-        uses: tailscale/github-action@v2
+      - name: Connect Tailscale (LLM endpoint lives inside the tailnet)
+        uses: tailscale/github-action@v4
         with:
-          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          tags: tag:ci
+          authkey: ${{ secrets.TS_AUTHKEY }}
+          ping: mac-mini.tail5aee49.ts.net
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,12 +39,15 @@ jobs:
         run: pip install requests openai pypdf pydantic python-dotenv pytest tinydb dagster
 
       - name: Run tests
+        env:
+          EXPOSOME_LLM_API_KEY: ${{ secrets.EXPOSOME_LLM_API_KEY }}
         run: pytest tests/ -q
 
       - name: Materialize pipeline (download -> summarize -> data availability -> results)
         env:
-          LLM_URL: ${{ vars.LLM_URL }}
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          EXPOSOME_LLM_BASE_URL: https://mac-mini.tail5aee49.ts.net/v1
+          EXPOSOME_LLM_API_KEY: ${{ secrets.EXPOSOME_LLM_API_KEY }}
+          EXPOSOME_LLM_MODEL: ${{ vars.EXPOSOME_LLM_MODEL }}
           SUMMARIZE_WORKERS: ${{ inputs.workers }}
           SCAN_WORKERS: ${{ inputs.workers }}
           PIPELINE_LIMIT: ${{ inputs.limit }}

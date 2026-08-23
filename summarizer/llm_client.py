@@ -1,15 +1,19 @@
 """LLM client + structured-output extraction for manuscript summarization.
 
-Talks to the external OpenAI-compatible Gemma 4 12B endpoint via the ``openai``
-SDK. The model tends to wrap JSON in chain-of-thought reasoning and markdown
+Talks to an OpenAI-compatible LLM endpoint via the ``openai`` SDK (default:
+the vLLM server inside the tailnet at https://mac-mini.tail5aee49.ts.net/v1).
+The model tends to wrap JSON in chain-of-thought reasoning and markdown
 fences, so we extract the last ```json``` block (or the largest balanced
 ``{...}``) and validate with Pydantic, retrying with a corrective nudge on
 failure.
 
-Configuration is entirely env-based:
+Configuration is entirely env-based so no API key is ever committed:
 
-    LLM_URL            default https://mac-mini.tail5aee49.ts.net/v1
-    LLM_MODEL          default ornith-1.5-35b
+    EXPOSOME_LLM_BASE_URL   default https://mac-mini.tail5aee49.ts.net/v1
+    EXPOSOME_LLM_API_KEY    optional — not needed for the tailnet-internal
+                            endpoint; set it when pointing at an endpoint
+                            that requires a key
+    EXPOSOME_LLM_MODEL      default ornith-1.5-35b
 """
 from __future__ import annotations
 
@@ -27,11 +31,14 @@ from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 # ── config ───────────────────────────────────────────────────────────────────
 DEFAULT_BASE_URL = "https://mac-mini.tail5aee49.ts.net/v1"
 DEFAULT_MODEL = "ornith-1.5-35b"
+# The default endpoint is inside the tailnet and does not authenticate; the
+# OpenAI SDK just needs a non-empty bearer token on the wire.
+NO_AUTH_TOKEN = "tailscale-internal"
 
 MAX_RETRIES = 3
 # Output token budget. Generous default so the reasoning-heavy model never
-# truncates mid-JSON; override with LLM_MAX_TOKENS. (Server context is 256K.)
-MAX_OUTPUT_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", "32768"))
+# truncates mid-JSON; override with EXPOSOME_LLM_MAX_TOKENS. (Server context is 256K.)
+MAX_OUTPUT_TOKENS = int(os.environ.get("EXPOSOME_LLM_MAX_TOKENS", "32768"))
 # Approximate char budget for the source text sent to the model. Median
 # extracted full text is ~40K chars, so the old 6000 budget showed the model
 # only the abstract + start of the introduction — it never saw the Results,
@@ -66,14 +73,16 @@ def _env(key: str, default: str) -> str:
 
 def get_client() -> tuple[OpenAI, str]:
     """Build an OpenAI client + model id from env vars."""
-    base_url = _env("LLM_URL", DEFAULT_BASE_URL)
-    model = _env("LLM_MODEL", DEFAULT_MODEL)
+    # Optional: the default tailnet-internal vLLM endpoint needs no key.
+    api_key = os.environ.get("EXPOSOME_LLM_API_KEY", "").strip() or NO_AUTH_TOKEN
+    base_url = _env("EXPOSOME_LLM_BASE_URL", DEFAULT_BASE_URL)
+    model = _env("EXPOSOME_LLM_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
-    # The endpoint may block the openai SDK.s default
+    # Cloudflare (fronting llm.bioinfolder.com) blocks the openai SDK's default
     # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),
     # even with a valid API key — override it to a benign value.
     return OpenAI(
-        base_url=base_url, api_key="unused", timeout=120.0,
+        base_url=base_url, api_key=api_key, timeout=120.0,
         default_headers={"User-Agent": "exposome-ehr-review-pipeline/1.0"},
     ), model
 

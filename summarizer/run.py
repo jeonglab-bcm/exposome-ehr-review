@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Summarize collected manuscripts into Pydantic-validated JSON checklists via
-Gemma 4 12B.
+Qwen3.6-MoE.
 
 Usage:
     python -m summarizer.run                 # all downloaded papers
@@ -10,8 +10,9 @@ Usage:
     python -m summarizer.run --force          # re-summarize even if cached
 
 Env:
-    LLM_URL         default https://mac-mini.tail5aee49.ts.net/v1
-    LLM_MODEL        default ornith-1.5-35b
+    EXPOSOME_LLM_BASE_URL  default https://mac-mini.tail5aee49.ts.net/v1
+    EXPOSOME_LLM_API_KEY   optional (not needed for the tailnet-internal endpoint)
+    EXPOSOME_LLM_MODEL     default ornith-1.5-35b
 """
 from __future__ import annotations
 
