@@ -49,18 +49,14 @@ the GitHub-hosted runner must join the tailnet for the run. The workflow does
 this with `tailscale/github-action` (ephemeral node, removed after the run).
 **One-time setup required before the workflow can run:**
 
-1. Create a **pre-auth key** in the Tailscale admin console (Security → Keys;
-   give it an expiry if you like) and store it as repo secret `TS_AUTHKEY`
-   (Settings → Secrets and variables → Actions). The workflow uses
-   `tailscale/github-action` with this key to join the tailnet per run.
+1. Create a **Tailscale OAuth client** (Settings → OAuth clients in the
+   Tailscale admin console) with the `devices` scope and `tag:ci`. Store
+   the client ID and secret as repo secrets `TS_OAUTH_CLIENT_ID` and
+   `TS_OAUTH_SECRET` (Settings → Secrets and variables → Actions).
 2. `EXPOSOME_LLM_BASE_URL` / `EXPOSOME_LLM_MODEL` can be overridden as repo
    **variables** if they should differ from the code defaults; set an
    `EXPOSOME_LLM_API_KEY` secret only if you point at a key-requiring
    endpoint.
-
-(Alternative: an OAuth client / OIDC federated identity with the `auth_keys`
-scope is the recommended long-term auth — see the `tailscale/github-action`
-README — but the pre-auth key is the simplest working setup.)
 
 `papers/*.pdf`/`*.xml`/`db.json` are tracked via **Git LFS**
 (`.gitattributes`) — install it locally with `git lfs install` before
