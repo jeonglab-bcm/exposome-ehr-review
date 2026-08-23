@@ -8,8 +8,8 @@ failure.
 
 Configuration is entirely env-based:
 
-    GEMMA_BASE_URL   default https://mac-mini.tail5aee49.ts.net/v1
-    GEMMA_MODEL      default gemma4-12b-qat-gguf
+    LLM_URL            default https://mac-mini.tail5aee49.ts.net/v1
+    LLM_MODEL          default ornith-1.5-35b
 """
 from __future__ import annotations
 
@@ -26,12 +26,12 @@ from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 
 # ── config ───────────────────────────────────────────────────────────────────
 DEFAULT_BASE_URL = "https://mac-mini.tail5aee49.ts.net/v1"
-DEFAULT_MODEL = "gemma4-12b-qat-gguf"
+DEFAULT_MODEL = "ornith-1.5-35b"
 
 MAX_RETRIES = 3
 # Output token budget. Generous default so the reasoning-heavy model never
-# truncates mid-JSON; override with GEMMA_MAX_TOKENS. (Server context is 256K.)
-MAX_OUTPUT_TOKENS = int(os.environ.get("GEMMA_MAX_TOKENS", "32768"))
+# truncates mid-JSON; override with LLM_MAX_TOKENS. (Server context is 256K.)
+MAX_OUTPUT_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", "32768"))
 # Approximate char budget for the source text sent to the model. Median
 # extracted full text is ~40K chars, so the old 6000 budget showed the model
 # only the abstract + start of the introduction — it never saw the Results,
@@ -66,8 +66,8 @@ def _env(key: str, default: str) -> str:
 
 def get_client() -> tuple[OpenAI, str]:
     """Build an OpenAI client + model id from env vars."""
-    base_url = _env("GEMMA_BASE_URL", DEFAULT_BASE_URL)
-    model = _env("GEMMA_MODEL", DEFAULT_MODEL)
+    base_url = _env("LLM_URL", DEFAULT_BASE_URL)
+    model = _env("LLM_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
     # The endpoint may block the openai SDK.s default
     # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),

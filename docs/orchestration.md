@@ -50,7 +50,7 @@ required before the workflow can run:**
 
 1. Add `TS_OAUTH_CLIENT_ID` and `TS_OAUTH_SECRET` as **repo secrets** —
    a Tailscale OAuth client with `tag:ci` permission.
-2. Optionally set `GEMMA_BASE_URL` / `GEMMA_MODEL` as repo **variables** if
+2. Optionally set `LLM_URL` / `LLM_MODEL` as repo **variables** if
    they should differ from the code defaults.
 
 `papers/*.pdf`/`*.xml`/`db.json` are tracked via **Git LFS**

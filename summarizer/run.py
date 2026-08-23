@@ -10,8 +10,8 @@ Usage:
     python -m summarizer.run --force          # re-summarize even if cached
 
 Env:
-    GEMMA_BASE_URL  default https://mac-mini.tail5aee49.ts.net/v1
-    GEMMA_MODEL      default gemma4-12b-qat-gguf
+    LLM_URL         default https://mac-mini.tail5aee49.ts.net/v1
+    LLM_MODEL        default ornith-1.5-35b
 """
 from __future__ import annotations
 

@@ -13,7 +13,7 @@ via an external OpenAI-compatible endpoint, validated with a Pydantic schema.
 bottleneck is network-bound LLM calls).
 
 ```bash
-cp .env.example .env        # optionally override GEMMA_BASE_URL / GEMMA_MODEL
+cp .env.example .env        # optionally override LLM_URL / LLM_MODEL
 make summarize              # all manuscripts (resume-only, chunked recovery)
 make summarize-paper PMC=PMC7145790   # single paper
 python -m summarizer.run --recover --workers 4   # 4 concurrent
