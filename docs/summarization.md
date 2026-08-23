@@ -5,15 +5,15 @@ how its data-availability is captured.
 
 ← back to the [README](../README.md)
 
-## Manuscript summarization (Gemma 4 12B → Pydantic JSON)
+## Manuscript summarization (Qwen3.6-MoE → Pydantic JSON)
 
-Each manuscript is summarized into a structured **checklist** by **Gemma 4 12B**
+Each manuscript is summarized into a structured **checklist** by **Qwen3.6-MoE**
 via an external OpenAI-compatible endpoint, validated with a Pydantic schema.
 `--workers N` runs papers concurrently (the OpenAI client is thread-safe;
 bottleneck is network-bound LLM calls).
 
 ```bash
-cp .env.example .env        # fill in GEMMA_API_KEY (never committed)
+cp .env.example .env        # fill in EXPOSOME_LLM_API_KEY (never committed)
 make summarize              # all manuscripts (resume-only, chunked recovery)
 make summarize-paper PMC=PMC7145790   # single paper
 python -m summarizer.run --recover --workers 4   # 4 concurrent
@@ -47,7 +47,7 @@ truncated responses, lenient field validators, and a retry-with-nudge loop.
 
 ## Data-availability scan
 
-[`scan_data_availability.py`](../scan_data_availability.py) asks Gemma 4 12B
+[`scan_data_availability.py`](../scan_data_availability.py) asks Qwen3.6-MoE
 (32k-token budget, pydantic-validated) **only** about how a study's data can be
 obtained, in a focused window around the "Data availability" section. A
 deterministic regex safety-net supplements any accession/URL (dbGaP / GSE /
