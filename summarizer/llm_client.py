@@ -6,10 +6,9 @@ fences, so we extract the last ```json``` block (or the largest balanced
 ``{...}``) and validate with Pydantic, retrying with a corrective nudge on
 failure.
 
-Configuration is entirely env-based so no API key is ever committed:
+Configuration is entirely env-based:
 
     GEMMA_BASE_URL   default https://mac-mini.tail5aee49.ts.net/v1
-    GEMMA_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
     GEMMA_MODEL      default gemma4-12b-qat-gguf
 """
 from __future__ import annotations
@@ -28,7 +27,6 @@ from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 # ── config ───────────────────────────────────────────────────────────────────
 DEFAULT_BASE_URL = "https://mac-mini.tail5aee49.ts.net/v1"
 DEFAULT_MODEL = "gemma4-12b-qat-gguf"
-PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
 
 MAX_RETRIES = 3
 # Output token budget. Generous default so the reasoning-heavy model never
@@ -68,12 +66,6 @@ def _env(key: str, default: str) -> str:
 
 def get_client() -> tuple[OpenAI, str]:
     """Build an OpenAI client + model id from env vars."""
-    api_key = os.environ.get("GEMMA_API_KEY", "").strip()
-    if not api_key:
-        raise RuntimeError(
-            "GEMMA_API_KEY is not set. Copy .env.example to .env and fill in the key, "
-            "or export GEMMA_API_KEY in your shell."
-        )
     base_url = _env("GEMMA_BASE_URL", DEFAULT_BASE_URL)
     model = _env("GEMMA_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
@@ -81,7 +73,7 @@ def get_client() -> tuple[OpenAI, str]:
     # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),
     # even with a valid API key — override it to a benign value.
     return OpenAI(
-        base_url=base_url, api_key=api_key, timeout=120.0,
+        base_url=base_url, api_key="unused", timeout=120.0,
         default_headers={"User-Agent": "exposome-ehr-review-pipeline/1.0"},
     ), model
 
