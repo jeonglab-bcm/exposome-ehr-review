@@ -41,10 +41,18 @@ DATA_AVAILABILITY_ARGS = ["--workers", os.environ.get("SCAN_WORKERS", "4")]
 
 def _run(cmd: list[str], *, label: str) -> int:
     """Run ``cmd`` in the repo root; raise RuntimeError on non-zero exit."""
-    proc = subprocess.run(cmd, cwd=str(REPO_ROOT), text=True, capture_output=True)
+    cwd = str(REPO_ROOT)
+    proc = subprocess.run(cmd, cwd=cwd, text=True, capture_output=True)
     if proc.returncode != 0:
-        tail = (proc.stderr or proc.stdout or "").strip().splitlines()[-6:]
-        raise RuntimeError(f"{label} failed (exit {proc.returncode})\n" + "\n".join(tail))
+        full = (proc.stderr or proc.stdout or "").strip()
+        tail = full.splitlines()[-6:]
+        diag = (
+            f"{label} failed (exit {proc.returncode})\n"
+            f"cwd={cwd}\n"
+            f"papers_dir_exists={PAPERS_DIR.exists()}\n"
+            f"pdf_count={len(list(PAPERS_DIR.glob('*.pdf')))}\n"
+        )
+        raise RuntimeError(diag + "\n".join(tail))
     return proc.returncode
 
 
