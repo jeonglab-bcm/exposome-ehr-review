@@ -43,13 +43,16 @@ GitHub-hosted runner, triggered manually from the Actions tab (or
 pushes the updated `papers/`, `results/`, and `paper_summary.md` back to the
 branch that triggered it.
 
-The Gemma endpoint is served publicly at `https://llm.bioinfolder.com/v1`
-(behind Cloudflare), so a GitHub-hosted runner can reach it directly — no
-VPN/tunnel needed. **One-time setup required before the workflow can run:**
+The Gemma endpoint runs at `https://mac-mini.tail5aee49.ts.net/v1` on the
+Tailscale tailnet. The workflow joins the runner to the tailnet via
+`tailscale/github-action@v2` before the pipeline runs. **One-time setup
+required before the workflow can run:**
 
 1. Add `GEMMA_API_KEY` as a **repo secret** (Settings → Secrets and
    variables → Actions) — the real Gemma endpoint key.
-2. Optionally set `GEMMA_BASE_URL` / `GEMMA_MODEL` as repo **variables** if
+2. Add `TS_OAUTH_CLIENT_ID` and `TS_OAUTH_SECRET` as **repo secrets** —
+   a Tailscale OAuth client with `tag:ci` permission.
+3. Optionally set `GEMMA_BASE_URL` / `GEMMA_MODEL` as repo **variables** if
    they should differ from the code defaults.
 
 `papers/*.pdf`/`*.xml`/`db.json` are tracked via **Git LFS**

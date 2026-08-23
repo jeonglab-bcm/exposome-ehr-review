@@ -8,7 +8,7 @@ failure.
 
 Configuration is entirely env-based so no API key is ever committed:
 
-    GEMMA_BASE_URL   default https://llm.bioinfolder.com/v1
+    GEMMA_BASE_URL   default https://mac-mini.tail5aee49.ts.net/v1
     GEMMA_API_KEY    required (placeholder sk-unsloth-PLACEHOLDER)
     GEMMA_MODEL      default gemma4-12b-qat-gguf
 """
@@ -26,7 +26,7 @@ from pydantic import ValidationError
 from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 
 # ── config ───────────────────────────────────────────────────────────────────
-DEFAULT_BASE_URL = "https://llm.bioinfolder.com/v1"
+DEFAULT_BASE_URL = "https://mac-mini.tail5aee49.ts.net/v1"
 DEFAULT_MODEL = "gemma4-12b-qat-gguf"
 PLACEHOLDER_KEY = "sk-unsloth-PLACEHOLDER"
 
@@ -77,7 +77,7 @@ def get_client() -> tuple[OpenAI, str]:
     base_url = _env("GEMMA_BASE_URL", DEFAULT_BASE_URL)
     model = _env("GEMMA_MODEL", DEFAULT_MODEL)
     # explicit timeout so a stalled connection cannot hang the whole batch.
-    # Cloudflare (fronting llm.bioinfolder.com) blocks the openai SDK's default
+    # The endpoint may block the openai SDK.s default
     # "OpenAI/Python ..." User-Agent outright (403 "Your request was blocked"),
     # even with a valid API key — override it to a benign value.
     return OpenAI(
