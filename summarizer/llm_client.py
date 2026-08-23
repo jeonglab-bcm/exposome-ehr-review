@@ -13,7 +13,7 @@ Configuration is entirely env-based so no API key is ever committed:
     EXPOSOME_LLM_API_KEY    optional — not needed for the tailnet-internal
                             endpoint; set it when pointing at an endpoint
                             that requires a key
-    EXPOSOME_LLM_MODEL      default qwen3.6-moe
+    EXPOSOME_LLM_MODEL      default ornith-1.5-35b
 """
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ from .schema import LLM_FIELDS_SCHEMA, ManuscriptChecklist
 
 # ── config ───────────────────────────────────────────────────────────────────
 DEFAULT_BASE_URL = "https://mac-mini.tail5aee49.ts.net/v1"
-DEFAULT_MODEL = "qwen3.6-moe"
+DEFAULT_MODEL = "ornith-1.5-35b"
 # The default endpoint is inside the tailnet and does not authenticate; the
 # OpenAI SDK just needs a non-empty bearer token on the wire.
 NO_AUTH_TOKEN = "tailscale-internal"

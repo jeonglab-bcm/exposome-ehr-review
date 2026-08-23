@@ -12,7 +12,7 @@ Usage:
 Env:
     EXPOSOME_LLM_BASE_URL  default https://mac-mini.tail5aee49.ts.net/v1
     EXPOSOME_LLM_API_KEY   optional (not needed for the tailnet-internal endpoint)
-    EXPOSOME_LLM_MODEL     default qwen3.6-moe
+    EXPOSOME_LLM_MODEL     default ornith-1.5-35b
 """
 from __future__ import annotations
 
