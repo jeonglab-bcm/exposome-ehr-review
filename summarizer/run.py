@@ -171,6 +171,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.recover:
         files = find_failed()
+        if not files and discover_files():
+            print("All papers already summarized — nothing to recover.")
+            return 0
     elif args.pmcid:
         wanted = {
             p if p.startswith("PMC") else f"PMC{p}"

@@ -3,28 +3,26 @@
   "title": "Interim CDC guidance for polio vaccination for travel to and from countries affected by wild poliovirus.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "Literature review and public health surveillance data synthesized by CDC/ACIP.",
-  "summary": "CDC interim public health guidance and vaccine recommendations for travelers to and from countries with active wild poliovirus circulation.",
-  "key_findings": [
-    "No original research results reported; this is a public health guidance document."
-  ],
+  "ehr_evidence": "This report provides an update on CDC policy for polio vaccination of travelers for health protection; the document is a CDC/MMWR interim guidance statement based on epidemiological and scientific literature rather than an electronic health record or individual-level database.",
+  "summary": "A 2014 CDC MMWR interim guidance document providing recommendations for polio vaccination (IPV or OPV) of travelers to and from countries with active wild poliovirus (WPV) transmission.",
+  "key_findings": [],
   "captured_features": [],
   "pathologies_diseases": [
     "poliomyelitis",
     "wild poliovirus infection"
   ],
-  "study_design": "Public health guidance and policy recommendation",
-  "data_source_type": "Literature review and public health surveillance",
-  "population": "Infants, children, and adults traveling to or residing in polio-endemic/exporting countries",
-  "exposure_domain": "Travel to polio-endemic regions / wild poliovirus exposure",
+  "study_design": "guidance document / policy statement (not an original empirical study)",
+  "data_source_type": "guidance document based on epidemiological and scientific literature",
+  "population": "travelers (infants, children, and adults) to or from countries with active WPV circulation, including long-term residents, immigrants, and refugees",
+  "exposure_domain": "polio vaccination (IPV/OPV) for travel to polio-affected countries",
   "limitations": [
-    "Lack of data on lifelong immunity after routine polio vaccine series",
-    "Limited experience with administration of multiple additional IPV doses"
+    "Not an empirical study; no primary data analysis, effect sizes, or statistical results are reported.",
+    "Recommendations are time-sensitive and subject to change as the WHO public health emergency is reassessed."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "unclear",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

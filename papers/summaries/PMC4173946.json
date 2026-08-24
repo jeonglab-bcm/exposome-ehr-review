@@ -3,37 +3,40 @@
   "title": "An unusual case of vaccine-associated paralytic poliomyelitis.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "Data were derived from clinical case presentation, MRI findings, cerebrospinal fluid analysis, stool cultures, and immunization records from a public health unit and hospital.",
-  "summary": "Case report describing an immunocompetent child who developed vaccine-associated paralytic poliomyelitis after receiving oral polio vaccine in China, despite prior inactivated polio vaccine doses.",
+  "ehr_evidence": "The data source was a single-patient clinical case presentation with diagnostic workup (MRI, electromyography, cerebrospinal fluid analysis, stool cultures, and polio serology), not electronic or computerised individual-level health records.",
+  "summary": "A case report of an immunocompetent, previously well child nearly one year of age who developed vaccine-associated paralytic poliomyelitis after receiving oral poliovirus vaccine despite two prior doses of inactivated poliovirus vaccine.",
   "key_findings": [
-    "Stool culture and sequencing identified Sabin poliovirus type 3 strain with 99.7% homology to the parent OPV strain.",
-    "MRI revealed bilateral symmetric increased signal within the anterior horns of the spinal cord gray matter.",
-    "Polio antibody titres were <1:8 for type 1, 1:32 for type 2, and 1:128 for type 3."
+    "The child was determined to be a probable case of vaccine-associated paralytic poliomyelitis (VAPP) by the Advisory Committee Causality Assessment.",
+    "Stool culture isolated poliovirus type 3, sequenced at the national laboratory in China as a Sabin poliovirus type 3 strain with 99.7% homology with the parent OPV strain.",
+    "Repeat polio serology seven months after the first set showed a 1:8 titre for poliovirus 3.",
+    "Estimates of risk for VAPP range from one in 750,000 with the first dose of OPV to one in 2.4 million for all doses of OPV."
   ],
   "captured_features": [
-    "MRI spinal cord imaging",
-    "cerebrospinal fluid white blood cell count and protein",
-    "stool culture and viral sequencing",
-    "polio antibody titres",
-    "immunization history"
+    "MRI findings of bilateral symmetric increased signal within the anterior horns of the spinal cord gray matter (C2-C5 and T10-T12)",
+    "Electromyography showing denervation, absent peroneal nerve response, and fibrillation potentials",
+    "Cerebrospinal fluid white blood cell count of 12×106/L with protein 1.43 g/L",
+    "Stool culture results (poliovirus type 3, no nonpolio enteroviral growth)",
+    "Polio antibody titres (1:8 for poliovirus 1, 1:32 for poliovirus 2, 1:128 for poliovirus 3)",
+    "Immunoglobulin subclass analysis and negative HIV test"
   ],
   "pathologies_diseases": [
-    "vaccine-associated paralytic poliomyelitis",
-    "poliomyelitis"
+    "Vaccine-associated paralytic poliomyelitis",
+    "Poliomyelitis",
+    "Acute flaccid paralysis",
+    "Guillain-Barré syndrome"
   ],
-  "study_design": "case report",
-  "data_source_type": "clinical case report",
-  "population": "single immunocompetent child, almost one year of age",
-  "exposure_domain": "oral polio vaccine (OPV)",
+  "study_design": "Case report",
+  "data_source_type": "other",
+  "population": "A previously well child almost one year of age, born in Canada to Chinese parents, evaluated in China and Canada",
+  "exposure_domain": "Vaccine exposure (oral poliovirus vaccine)",
   "limitations": [
-    "single case report limits generalizability",
-    "no CSF viral culture or PCR conducted initially",
-    "potential for recall bias in immunization history"
+    "Single case report of one patient, limiting generalizability and causal inference",
+    "Retrospective case review without a control group"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

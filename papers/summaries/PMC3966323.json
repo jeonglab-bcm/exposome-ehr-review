@@ -3,36 +3,36 @@
   "title": "Long-term effects of maternal deprivation on cholinergic system in rat brain.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "The study used Wistar rats and brain tissue for biochemical and immunohistochemical analysis.",
-  "summary": "Experimental study examining the long-term effects of maternal separation on acetylcholinesterase activity and cholinergic fiber density in the brains of Wistar rats.",
+  "ehr_evidence": "The study used an animal experimental model; male and nulliparous Wistar rats were used, with brain regions collected for AChE activity measurements and morphometric/immunohistochemical analysis (no electronic or computerised health records were analysed).",
+  "summary": "A controlled experimental animal study examining long-term effects of 24-hour maternal deprivation on postnatal day 9 on acetylcholinesterase (AChE) activity and cholinergic (ChAT) fiber density in specific brain structures of male Wistar rats sacrificed at postnatal day 60.",
   "key_findings": [
-    "AChE activity significantly decreased in the cortex (P<0.05) and significantly increased in the hippocampus (P<0.05) compared to controls.",
-    "No significant change in AChE activity was observed in the thalamus or caudate nuclei.",
-    "ChAT positive fiber density significantly increased in the hippocampal CA1 region, with no change in CA3 or dentate gyrus.",
-    "ChAT positive fiber density significantly decreased in the retrosplenial cortex."
+    "AChE activity was significantly decreased in the cortex of MD rats compared to controls (P<0.05).",
+    "AChE activity was significantly increased in the hippocampus of MD rats compared to controls (P<0.05).",
+    "No change in AChE activity was observed in the thalamus or caudate nuclei.",
+    "Density of ChAT-positive fibers was significantly increased in the CA1 region of the hippocampus in MD rats.",
+    "Density of ChAT-positive fibers was significantly decreased in the retrosplenial (RS) cortex of MD rats.",
+    "No change in ChAT-positive fiber density was noticed in the CA3 region or dentate gyrus (DG)."
   ],
   "captured_features": [
-    "AChE activity (mol/mg)",
-    "ChAT positive fiber density (10^3/mm^3)",
-    "brain region morphology"
+    "AChE activity (mol/mg) in dorsolateral frontal cortex, hippocampus, thalamus, and caudate nuclei",
+    "Density of ChAT-positive fibers (10^3/mm^3) in hippocampal CA1, CA3, dentate gyrus, and retrosplenial cortex"
   ],
   "pathologies_diseases": [
     "schizophrenia (animal model context)"
   ],
-  "study_design": "experimental animal study",
-  "data_source_type": "animal model",
-  "population": "male Wistar rats, postnatal day 9 to 60",
-  "exposure_domain": "maternal deprivation (early life stress)",
+  "study_design": "controlled experimental animal study (maternal deprivation vs. control)",
+  "data_source_type": "biospecimen",
+  "population": "male Wistar rats; maternal deprivation on postnatal day 9, sacrificed at postnatal day 60 (2 months)",
+  "exposure_domain": "early-life stress / maternal deprivation",
   "limitations": [
-    "small sample size (n=5-8 per group)",
-    "single 24-hour maternal separation protocol on postnatal day 9",
-    "only male animals tested",
-    "limited to specific brain regions and cholinergic markers"
+    "Only male animals were used, limiting generalizability across sexes.",
+    "Single 24-hour maternal deprivation protocol limits understanding of timing/dose effects.",
+    "Limited brain regions examined; additional regions and receptor densities (mAChR, nAChR) not assessed."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,54 +3,55 @@
   "title": "Cognitive and Behavioral Development of 9-Year-Old Children After Maternal Cancer During Pregnancy: A Prospective Multicenter Cohort Study.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "The INCIP Child Follow-up study evaluates the general health and neurocognitive development after prenatal exposure to maternal cancer (treatment) using age-adapted standardized test batteries.",
-  "summary": "Long-term follow-up study assessing cognitive and behavioral outcomes at age 9 in children prenatally exposed to maternal cancer and its treatment.",
+  "ehr_evidence": "A neuropsychologic examination, assessing intelligence quotient, attention, memory, and behavior, was performed... parents completed a questionnaire on their child's general health and educational level. All tests were conducted in the child's native language.",
+  "summary": "A cross-sectional analysis within a prospective multicenter cohort of 151 nine-year-old children prenatally exposed to maternal cancer and its treatment, assessing cognitive and behavioral outcomes.",
   "key_findings": [
-    "Full Scale Intelligence Quotient (FSIQ) increased by 1.6 points (95% CI, 0.7 to 2.5; P < .001) for each week increase in gestational age.",
-    "No difference in FSIQ was found between treatment types (F[4,140] = 0.45, P = .776).",
-    "No associations were found between FSIQ and chemotherapeutic agent, exposure level, or timing during pregnancy.",
-    "FSIQ was lower in children with a deceased mother before age 2 years (93.13 ± 12.65) than in children with a surviving mother (104.08 ± 14.88), but this association disappeared after adjusting for gestational age (P > .3).",
-    "Maternal education level remained a significant predictor of FSIQ (P = .005).",
-    "Four children were diagnosed with attention-deficit hyperactivity disorder and one with autism spectrum disorder.",
-    "Thirty-one children (24.4%) received remedial care."
+    "Mean cognitive and behavioral outcomes were within normal ranges with no difference in FSIQ between treatment types (F[4,140] = 0.45, P = .776) or cancer stages (F[3,140] = 1.53, P = .211).",
+    "Gestational age at birth showed a positive association with FSIQ, increasing by 1.6 points (95% CI, 0.7 to 2.5; P < .001) for each week increase in gestational age.",
+    "No associations were found between FSIQ and chemotherapeutic agent, exposure level, or timing during pregnancy in children prenatally exposed to chemotherapy (all P > .08).",
+    "Maternal bereavement had an effect on FSIQ (F[2, 144] = 3.94, P = .022) with lower FSIQ in children with a deceased mother before age 2 years (93.13 ± 12.65) than with a surviving mother (104.08 ± 14.88), but this association disappeared after adjusting for gestational age (P > .3).",
+    "In multiple linear regression, gestational age (P = .006) and maternal education level (P = .005) remained significant predictors of FSIQ, estimating an increase of 1.27 points (± 0.45) per week increase in GA.",
+    "In the chemotherapy subgroup, only maternal education level remained a significant predictor of FSIQ (P = .011).",
+    "A significant relation was found between maternal bereavement before age 2 years and remedial care (χ2 [2,127] = 7.33, P = .026, φ = 0.240), and between remedial support and prematurity (24 children, 77.4% born preterm; χ2 [1,127] = 6.67, P = .010, φ = 0.229)."
   ],
   "captured_features": [
     "Full Scale Intelligence Quotient (FSIQ)",
     "verbal intelligence",
     "performance intelligence",
     "processing speed",
-    "attention and memory scores",
-    "behavioral questionnaire results",
+    "attention and memory test scores",
+    "behavioral questionnaire scores (BRIEF, CBCL)",
     "gestational age at birth",
-    "maternal education level",
-    "maternal death/bereavement status",
-    "chemotherapy exposure and timing",
-    "treatment type",
+    "maternal death/bereavement",
+    "maternal and paternal education level",
     "cancer stage",
+    "treatment type",
+    "chemotherapy exposure level and timing",
     "ADHD diagnosis",
     "autism spectrum disorder diagnosis",
-    "remedial care need"
+    "remedial care need",
+    "preterm birth"
   ],
   "pathologies_diseases": [
-    "maternal cancer",
+    "maternal cancer (exposure)",
     "attention-deficit hyperactivity disorder",
-    "autism spectrum disorder"
+    "autism spectrum disorder",
+    "preterm birth"
   ],
-  "study_design": "Prospective multicenter cohort study (cross-sectional analysis at age 9)",
-  "data_source_type": "Clinical assessment and parent-reported questionnaires",
-  "population": "151 children (mean age 9.3 years) born to mothers diagnosed with cancer during pregnancy",
-  "exposure_domain": "Prenatal exposure to maternal cancer and oncologic treatment (chemotherapy, surgery, radiotherapy)",
+  "study_design": "Cross-sectional analysis within a prospective multicenter cohort",
+  "data_source_type": "other",
+  "population": "151 nine-year-old children (mean age 9.3 years, range 7.8-10.6 years) prenatally exposed to maternal cancer, from Belgium, Netherlands, Italy, Czech Republic, and New Jersey",
+  "exposure_domain": "Maternal cancer during pregnancy and its treatment (chemotherapy, surgery, radiotherapy, trastuzumab)",
   "limitations": [
-    "Cross-sectional analysis at a single timepoint (age 9)",
-    "Small sample size, particularly in the chemotherapy-exposed subgroup",
-    "Multicollinearity between prematurity and maternal bereavement effects",
-    "Lack of comparison with general population rates for remedial support",
-    "Potential underpowered analysis for detecting chemotherapy effects on cognition"
+    "Underpowered analysis in the smaller chemotherapy subgroup, possibly masking a prematurity effect.",
+    "Multicollinearity/multicollinearity between maternal death and premature birth makes disentangling effects difficult.",
+    "Remedial support rates cannot be compared with the general population because general population rates are under-reported.",
+    "Small sample size for maternal bereavement analysis requires larger studies."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -2,39 +2,56 @@
   "pmcid": "PMC7145790",
   "title": "Childhood type 1 diabetes: an environment-wide association study across England.",
   "year": "2020",
-  "ehr_used": false,
-  "ehr_evidence": "We obtained type 1 diabetes data from National Health Service (NHS) Digital hospital episode statistics (HES) records.",
-  "summary": "Ecological EnWAS assessing associations between 53 demographic and environmental factors and childhood type 1 diabetes incidence across England.",
+  "ehr_used": true,
+  "ehr_evidence": "We obtained type 1 diabetes data from National Health Service (NHS) Digital hospital episode statistics (HES) records held by the UK Small Area Health Statistics Unit.",
+  "summary": "An ecological environment-wide association study using national HES data assessed associations between 53 demographic and environmental factors and incident childhood type 1 diabetes incidence in 13,948 children aged 0-9 years across 354 local authority districts in England (2000-2011).",
   "key_findings": [
-    "Overall incidence was 21.2 (95% CI 20.9, 21.6) per 100,000 children aged 0–9 years.",
-    "15 of 53 factors were significantly associated with incidence after multiple testing.",
-    "Multivariable ecological regression showed the living environment domain of IMD was inversely associated with risk (RR 0.995; 95% CrI 0.991, 0.998).",
-    "Radon potential class was positively associated with risk (RR 1.044; 95% CrI 1.015, 1.074).",
-    "Air pollutants, lead in soil, overcrowding, population density, and ethnicity showed significant unadjusted associations but were not significant in the multivariable model."
+    "Overall type 1 diabetes incidence was 21.2 (95% CI 20.9, 21.6) per 100,000 children aged 0-9 years.",
+    "30 of 53 environmental/demographic variables were significantly associated with type 1 diabetes after Bonferroni correction (p < 0.0009), with 15 remaining significant after accounting for spatial dependency in Bayesian disease mapping.",
+    "Air pollutants (PM10, PM2.5, nitrogen dioxide, nitrogen oxides, carbon monoxide) were all inversely associated with type 1 diabetes incidence.",
+    "Multivariable ecological regression retained significant associations for the IMD living environment domain (RR 0.995; 95% CrI 0.991, 0.998) and radon potential class (RR 1.044; 95% CrI 1.015, 1.074).",
+    "Radon potential class showed a consistent, significant positive association with type 1 diabetes risk across all analyses.",
+    "No significant association was found for meteorological variables (sunshine duration, temperature, ultraviolet radiation), nitrates in drinking water, land use, or pesticide use."
   ],
   "captured_features": [
-    "HES ICD codes for diabetes",
-    "incident case counts per LAD",
-    "environmental and demographic variables at LAD level"
+    "Sunshine duration (minimum/maximum)",
+    "Temperature (minimum/maximum)",
+    "Ultraviolet radiation",
+    "Land cover (green, blue, built-up, intense agriculture)",
+    "Accessible natural greenspace (ANGSt)",
+    "Rural/urban status",
+    "Radon potential class",
+    "PM10, PM2.5, nitrogen dioxide, nitrogen oxides, carbon monoxide, sulphur dioxide, ozone, benzene",
+    "Lead, cadmium, arsenic in soil",
+    "Nitrates in drinking water",
+    "Pesticide use (fungicides, herbicides, insecticides, etc.)",
+    "Outdoor light at night",
+    "Population density",
+    "Overcrowding",
+    "Index of Multiple Deprivation and domains",
+    "Tobacco expenditure",
+    "Ethnicity (white, black, Asian)",
+    "Case counts and age/sex-adjusted expected counts by local authority district"
   ],
   "pathologies_diseases": [
-    "type 1 diabetes"
+    "Childhood type 1 diabetes"
   ],
-  "study_design": "ecological environment-wide association study with disease mapping and multivariable ecological regression",
+  "study_design": "Ecological environment-wide association study (EnWAS) with Bayesian disease mapping and multivariable ecological (Poisson) regression at local authority district level",
   "data_source_type": "EHR",
-  "population": "children aged 0–9 years in England",
-  "exposure_domain": "environmental and demographic factors (air pollution, radon, land use, meteorological, socioeconomic deprivation, ethnicity, overcrowding)",
+  "population": "13,948 children aged 0-9 years with incident type 1 diabetes in England (2000-2011), aggregated to 354 local authority districts",
+  "exposure_domain": "Broad environmental and demographic exposome (air pollution, meteorological factors, land use, soil metals, water nitrates, pesticides, night-time light, socioeconomic deprivation, ethnicity)",
   "limitations": [
-    "ecological study design using aggregate LAD-level counts",
-    "potential ecological bias and residual confounding by unmeasured individual-level factors",
-    "temporal mismatch between some exposure and health data",
-    "loss of spatial granularity due to aggregation",
-    "high intercorrelation among variables prevented full mutual adjustment"
+    "Ecological (area-level) design means associations may not reflect individual-level relationships (ecological bias).",
+    "High intercorrelation among variables prevented a full mutually-adjusted model, leaving potential confounding by measured and unmeasured factors (e.g. diet, family history).",
+    "Exposure variables were aggregated to LAD level, losing spatial granularity and potentially attenuating associations.",
+    "Temporal mismatch between environmental and health data collection periods.",
+    "HES dataset may include readmissions/prevalent cases and miss children treated outside the NHS.",
+    "No individual-level data on family history, lifestyle, or diet available."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "The majority of the demographic and environmental factors included in the study were derived from Crown copyright data and are available via the links provided in the text and references. HES data are available via NHS Digital on application with appropriate ethics and governance permissions; we do not hold data provider, ethics or governance permissions to share these health data with third parties.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

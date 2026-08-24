@@ -3,22 +3,22 @@
   "title": "Adverse event following immunization or vaccination in children in Minas Gerais: 2015 to 2020.",
   "year": "2023",
   "ehr_used": true,
-  "ehr_evidence": "Data for this study were collected in January 2022, using ESAVI notifications resulting from immunization errors registered in SI-PNI.",
-  "summary": "Ecological descriptive study analyzing immunization errors and adverse events following immunization in children aged 0-9 years in Minas Gerais, Brazil, from 2015 to 2020 using national immunization registry data.",
+  "ehr_evidence": "This is an ecological, descriptive study with a quantitative approach, based on ESAVI notifications registered in the PNI Information System (Sistema de Informações do PNI – SI-PNI).",
+  "summary": "An ecological, descriptive study of immunization errors among children aged 0 to 9 years in Minas Gerais, Brazil (2015–2020), using ESAVI notifications from the national immunization information system to characterize the frequency and clinical features of events supposedly attributable to vaccination.",
   "key_findings": [
-    "3,259 immunization error events were recorded out of 39,903,277 doses administered (0.008%).",
-    "91.86% of immunization errors did not result in adverse events.",
+    "3,259 immunization errors were recorded out of 39,903,277 doses administered, equivalent to 0.008% of total doses.",
+    "91.86% of immunization errors did not result in adverse events and 8.14% resulted in an adverse event.",
     "56.02% of errors occurred in children under 1 year of age.",
-    "The most frequent error diagnosis was application outside the recommended age (29.12%).",
-    "Fever was the most common manifestation (40.85%), with 71.91% of events being local or systemic.",
-    "Incidence rates were 7.50/100,000 doses for errors without adverse events and 0.66/100,000 for errors with adverse events.",
-    "2019 recorded the highest incidence rates for both error categories."
+    "The most frequent diagnosis was application outside the recommended age (29.12%).",
+    "71.91% of manifestations were local and systemic, with fever being the most common systemic manifestation (40.85%).",
+    "The incidence rate of immunization errors without adverse events was 7.50/100,000 doses administered and with adverse events 0.66/100,000 doses.",
+    "In 2019 the highest incidence rate of errors without adverse events (16.18/100,000) and with adverse events (1.06/100,000) was observed."
   ],
   "captured_features": [
-    "immunization error type",
+    "immunization error",
     "gender",
     "age",
-    "immunobiological administered",
+    "type of immunobiological administered",
     "health macro-region",
     "route of administration",
     "type of event",
@@ -28,23 +28,25 @@
     "case evolution"
   ],
   "pathologies_diseases": [
-    "adverse events following immunization",
-    "immunization errors"
+    "Adverse events following immunization (ESAVI)",
+    "immunization errors",
+    "fever",
+    "local injection-site reactions"
   ],
-  "study_design": "ecological descriptive study",
-  "data_source_type": "EHR",
-  "population": "children aged 0-9 years in Minas Gerais, Brazil",
-  "exposure_domain": "immunization errors",
+  "study_design": "Ecological, descriptive study",
+  "data_source_type": "registry",
+  "population": "Children aged 0 to 9 years in Minas Gerais, Brazil, 2015 to 2020",
+  "exposure_domain": "Immunization/vaccination errors and adverse events following immunization",
   "limitations": [
-    "underreporting of adverse events following immunization",
-    "inadequate completion of notification records",
-    "lack of simultaneous implementation of the notification system across all macro-regions",
-    "potential underreporting due to fear of professional reprimand"
+    "Ecological study design limiting causal inference.",
+    "Underreporting of ESAVIs resulting from immunization errors.",
+    "Inadequate/incomplete completion of notification records (e.g., 99.69% of errors without adverse events lacked case-evolution information).",
+    "Use of secondary data from a public-health surveillance information system."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
-  "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "confidence": "low",
+  "source_format": "pdf",
+  "model": "ornith-1.5-35b"
 }

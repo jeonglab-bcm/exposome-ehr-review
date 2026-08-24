@@ -3,40 +3,45 @@
   "title": "Genetic exploration of Dravet syndrome: two case report.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "Whole genome sequencing (WGS), whole exome sequencing (WES), and Sanger sequencing were performed at 3Billion (Seoul, Korea).",
-  "summary": "Case series of two Indonesian children with Dravet syndrome, detailing clinical presentations, genetic findings via NGS, and treatment outcomes.",
+  "ehr_evidence": "The study did not use electronic health records; genetic analysis was performed on biospecimens via whole-genome sequencing, whole-exome sequencing, and Sanger sequencing at 3Billion (Seoul, Korea).",
+  "summary": "A case series of two Indonesian (Javanese) pediatric patients with Dravet syndrome who underwent next-generation sequencing to identify causative genetic variants and correlate mutations with clinical severity.",
   "key_findings": [
-    "Patient 1 (n=1) had a 552.9 Kb heterozygous deletion spanning TTC21B, SCN1A, and SCN9A, experiencing 6-7 seizures per day.",
-    "Patient 2 (n=1) had a heterozygous splice site mutation in SCN1A (c.4003-2A>G), with seizures reduced to one per year after medication adjustment.",
-    "Greater genetic mutation severity correlated with more severe clinical manifestations and poorer seizure control (n=2)."
+    "Patient 1 (aged 11 years 2 months) had a heterozygous pathogenic 552.9 Kb deletion at 2q24.3 spanning TTC21B, SCN1A, and SCN9A genes.",
+    "Patient 2 (aged 1 year 4 months) had a novel likely pathogenic heterozygous splice-site mutation in SCN1A (c.4003-2A>G, upstream of exon 24).",
+    "The more severe the genetic mutation detected, the more severe the clinical manifestations; patient 1 (three-gene mutation) had worse seizure control than patient 2 (single SCN1A mutation).",
+    "Inheritance patterns were unresolved in both cases due to inability to perform parental Sanger sequencing.",
+    "Removing contraindicated sodium-channel blockers (oxcarbazepine in patient 1, phenytoin in patient 2) improved seizure control in both patients."
   ],
   "captured_features": [
-    "clinical seizure characteristics",
+    "Whole-genome sequencing variants",
+    "Whole-exome sequencing variants",
+    "Sanger sequencing results",
+    "SCN1A/TTC21B/SCN9A gene variants",
+    "Seizure type and frequency",
+    "Developmental status",
     "EEG findings",
-    "neuroimaging results",
-    "NGS genetic variants",
-    "treatment regimens",
-    "seizure frequency and outcomes"
+    "Brain MRI/CT imaging findings",
+    "Anticonvulsant medication and treatment response"
   ],
   "pathologies_diseases": [
     "Dravet syndrome",
-    "developmental and epileptic encephalopathy",
-    "severe myoclonic epilepsy of infancy"
+    "Developmental and epileptic encephalopathy",
+    "Intractable/generalized seizures",
+    "Global developmental delay"
   ],
   "study_design": "case series",
-  "data_source_type": "clinical case series and genetic testing",
-  "population": "two Indonesian children (aged 11 years 2 months and 1 year 4 months) with Javanese ethnicity",
-  "exposure_domain": "genetic mutations / next-generation sequencing",
+  "data_source_type": "biospecimen",
+  "population": "Two Indonesian (Javanese) children at a tertiary referral hospital in Indonesia: a boy aged 11 years 2 months and a girl aged 1 year 4 months, both with Dravet syndrome.",
+  "exposure_domain": "none (genetic study; no environmental exposure analyzed)",
   "limitations": [
-    "small sample size (n=2)",
-    "lack of parental genetic testing for inheritance confirmation",
-    "single-center design",
-    "no control group"
+    "Only two cases were analyzed, limiting generalizability.",
+    "Inheritance patterns remained unresolved because parental Sanger sequencing could not be performed.",
+    "No environmental or exposome data were collected."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

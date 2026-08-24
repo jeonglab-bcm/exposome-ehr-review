@@ -3,30 +3,30 @@
   "title": "Minority children at risk from ETS.",
   "year": "1999",
   "ehr_used": false,
-  "ehr_evidence": "The teams measured four different biomarkers in the blood cells of 109 Hispanic and African-American children, ages 1 to 6.",
-  "summary": "Study evaluating the association between environmental tobacco smoke (ETS) exposure and cancer-related biomarkers in young minority children.",
+  "ehr_evidence": "The study measured four biomarkers in the blood cells of 109 Hispanic and African-American children, ages 1 to 6 (cotinine, two carcinogenic protein complexes, and sister chromatid exchanges).",
+  "summary": "A cross-sectional study measuring four blood-cell biomarkers in 109 Hispanic and African-American children ages 1 to 6 to assess genetic damage associated with environmental tobacco smoke (ETS) exposure.",
   "key_findings": [
-    "The four measured biomarkers increased with ETS exposure in all exposure groups."
+    "The four biomarkers increased with ETS exposure across all exposure groups (no ETS, ETS from a household member other than the mother, and ETS via maternal smoking)."
   ],
   "captured_features": [
     "cotinine",
     "carcinogenic protein complexes",
-    "sister chromatid exchanges",
-    "ETS exposure status"
+    "sister chromatid exchanges"
   ],
   "pathologies_diseases": [
-    "cancer risk",
-    "genetic damage"
+    "genetic damage / cancer risk"
   ],
-  "study_design": "cross-sectional observational study",
-  "data_source_type": "blood samples",
+  "study_design": "cross-sectional",
+  "data_source_type": "biospecimen",
   "population": "109 Hispanic and African-American children, ages 1 to 6",
   "exposure_domain": "environmental tobacco smoke (ETS)",
-  "limitations": [],
+  "limitations": [
+    "Small sample size (N=109) and reliance on a single news summary rather than the primary study data, limiting quantitative detail such as effect sizes and p-values."
+  ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

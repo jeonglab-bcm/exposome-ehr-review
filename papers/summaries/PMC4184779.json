@@ -4,41 +4,41 @@
   "year": "2014",
   "ehr_used": false,
   "ehr_evidence": "Magnetic resonance imaging (MRI) scans were acquired on the 3T Siemens Magnetom Trio at Murdoch Childrens Research Institute, Melbourne, using a 12-channel coil.",
-  "summary": "Neuroimaging study comparing cortical thickness and verbal abilities in 16 children prenatally exposed to valproate versus 16 matched controls.",
+  "summary": "A case-control neuroimaging study of 16 children prenatally exposed to sodium valproate and 16 matched controls found regionally increased cortical thickness and loss of normal inferior frontal asymmetry following in utero VPA exposure.",
   "key_findings": [
-    "Increased cortical thickness in left inferior frontal gyrus and left medial occipital cortex (P < 0.05, corrected).",
-    "Significant interaction between group and hemispheric thickness in inferior frontal region (F(1, 29) = 12.38, P = 0.001), showing absence of normal right-left asymmetry in exposed children.",
-    "VPA dose significantly correlated with right inferior frontal gyrus thickness (r = 0.57, P = 0.02).",
-    "No significant correlation between VPA dose and left inferior frontal gyrus thickness (r = -0.17, P = 0.53).",
-    "No significant difference in total cortical white and grey matter between groups (both P > 0.1).",
-    "Trend towards poorer verbal abilities and greater left inferior frontal gyrus thickness in exposed children (r = -0.42, P = 0.12)."
+    "Increased cortical thickness in the left inferior frontal gyrus (Pars Opercularis) and left medial occipital cortex (Pericalcarine), remaining significant after controlling for age.",
+    "A significant interaction between group and hemispheric inferior frontal thickness (F(1, 29) = 12.38, P = 0.001) showed absence of the normal right > left asymmetry in VPA-exposed children.",
+    "VPA dose across pregnancy correlated significantly with right IFG thickness (r = 0.57, P = 0.02) but not left IFG thickness (r = -0.17, P = 0.53).",
+    "A non-significant trend toward poorer verbal abilities and greater left IFG thickness (r = -0.42, P = 0.12).",
+    "Total cortical white and grey matter did not differ between groups (both P > 0.1)."
   ],
   "captured_features": [
-    "MRI cortical thickness measurements",
-    "maternal VPA dose",
-    "hemispheric asymmetry",
-    "verbal comprehension index scores",
-    "IQ scores"
+    "Cortical thickness (Freesurfer voxelwise group comparisons, P < 0.05 Monte Carlo correction)",
+    "Total cortical white and grey matter volume",
+    "Hemispheric inferior frontal gyrus asymmetry",
+    "VPA dose across pregnancy",
+    "WASI IQ scores",
+    "WISC-4 Verbal Comprehension Index scores"
   ],
   "pathologies_diseases": [
-    "maternal epilepsy",
-    "neurodevelopmental impairment",
-    "language impairment"
+    "Maternal epilepsy",
+    "Prenatal antiepileptic drug (valproate) exposure",
+    "Neurodevelopmental impairment / cortical thickness alterations"
   ],
-  "study_design": "prospective case-control neuroimaging study",
-  "data_source_type": "MRI imaging and neuropsychological testing",
-  "population": "16 children (mean age 7.2 years) prenatally exposed to valproate and 16 age- and sex-matched controls (mean age 8.1 years)",
-  "exposure_domain": "prenatal antiepileptic drug exposure (sodium valproate)",
+  "study_design": "case-control",
+  "data_source_type": "other",
+  "population": "16 children (7 male, 1 left-handed) exposed to VPA in utero (mean age 7.2 years, range 6-8) and 16 age- and sex-matched controls (mean age 8.1 years, range 6-9) at Murdoch Childrens Research Institute, Melbourne, Australia.",
+  "exposure_domain": "prenatal drug exposure (sodium valproate / antiepileptic drug)",
   "limitations": [
-    "small sample size (16 cases, 16 controls)",
-    "minor age discrepancy between groups",
-    "cross-sectional design limits causal inference",
-    "limited dose range (relatively low average dose)"
+    "Very small sample size (16 exposed vs 16 controls).",
+    "Minor but significant age discrepancy between groups.",
+    "Cohort exposed to a relatively low average VPA dose, limiting dose-response generalizability.",
+    "Cross-sectional design precludes causal inference about developmental trajectory."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

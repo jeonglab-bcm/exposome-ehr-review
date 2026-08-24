@@ -3,39 +3,47 @@
   "title": "COVID-19 mRNA Vaccine-Associated Myocarditis Presenting as STEMI in a 48-Year-Old Male.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "Clinical case report based on direct patient evaluation, laboratory testing, and imaging at Memorial Healthcare System.",
-  "summary": "Case report of a 48-year-old male presenting with STEMI and myocarditis shortly after receiving the second dose of the Moderna COVID-19 mRNA vaccine, with rapid resolution of symptoms and cardiac markers.",
+  "ehr_evidence": "The data used to support the findings of this study are included within the article. This is a single-patient case report based on clinical documentation (history, physical exam, EKG, cardiac catheterization, and laboratory results) collected during routine care rather than an electronic health record database analysis.",
+  "summary": "Case report of a 48-year-old Hispanic male who developed COVID-19 mRNA (Moderna) vaccine-associated myocarditis presenting as STEMI shortly after his second vaccine dose, with normal coronaries, reduced ejection fraction (40%), elevated troponin, and rapid symptom resolution.",
   "key_findings": [
-    "Peak troponin was 13.60 ng/mL.",
-    "CRP was 5.10 mg/dL.",
-    "Coronary angiography revealed normal and patent coronary arteries.",
-    "Symptoms and cardiac markers resolved rapidly following discharge."
+    "The patient had elevated troponin (4.40 ng/mL at presentation, peak 13.60 ng/mL) and CRP 5.10 mg/dL with normal patent coronary arteries on angiography and estimated ejection fraction of 40% with anterolateral and apical hypokinesis.",
+    "Nasopharyngeal SARS-CoV-2 RT-PCR and respiratory viral panel were both negative.",
+    "Chest pain and flu-like symptoms resolved with trending-down troponins and CRP; at 3-month follow-up the patient was asymptomatic on guideline-directed medical therapy.",
+    "A history of viral myocarditis 7 years prior was noted, but it remains unclear whether this is a predisposing factor to mRNA vaccine-associated myocarditis."
   ],
   "captured_features": [
-    "EKG findings",
-    "coronary angiography",
-    "serum troponin",
+    "History and physical examination",
+    "EKG (ST elevations in lateral leads)",
+    "Coronary angiography",
+    "Ventriculography/echocardiographic ejection fraction",
+    "Troponin (presentation and peak)",
     "CRP",
-    "echocardiogram ejection fraction"
+    "ESR",
+    "SARS-CoV-2 RT-PCR",
+    "Respiratory viral panel",
+    "WBC count",
+    "Absolute eosinophil count",
+    "TSH"
   ],
   "pathologies_diseases": [
-    "myocarditis",
-    "STEMI"
+    "Myocarditis",
+    "STEMI (ST-elevation myocardial infarction)",
+    "COVID-19 mRNA vaccine-associated myocarditis"
   ],
-  "study_design": "case report",
-  "data_source_type": "clinical case report",
-  "population": "48-year-old male",
-  "exposure_domain": "COVID-19 mRNA vaccine (Moderna)",
+  "study_design": "Case report",
+  "data_source_type": "Case report (clinical documentation)",
+  "population": "Single 48-year-old male in a US emergency/cardiac care setting",
+  "exposure_domain": "COVID-19 mRNA vaccine (Moderna, second dose)",
   "limitations": [
-    "single case report limits generalizability",
-    "cardiac MRI unavailable for definitive diagnosis",
-    "lack of long-term follow-up data",
-    "unclear predisposing factors"
+    "Single case report with no generalizability or control group.",
+    "Cardiac MRI was unavailable and endomyocardial biopsy was not performed, limiting definitive diagnosis.",
+    "Prior viral myocarditis as a predisposing factor is unconfirmed.",
+    "Short follow-up (3 months) with no long-term or recurrence data."
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "The data used to support the ﬁndings of this study are included within the article.",
+  "data_availability_statement": "The data used to support the findings of this study are included within the article.",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

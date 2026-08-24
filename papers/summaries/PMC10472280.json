@@ -2,43 +2,44 @@
   "pmcid": "PMC10472280",
   "title": "Updated report of COVID-19 vaccine safety monitoring in Japan: booster doses for Omicron variants and vaccinations for infants and young children.",
   "year": "2023",
-  "ehr_used": false,
-  "ehr_evidence": "individual case safety reports from healthcare professionals and the marketing authorisation holder (MAH)",
-  "summary": "Updated report of COVID-19 vaccine safety monitoring in Japan covering booster doses for Omicron variants and vaccinations for infants and young children until March 2023.",
+  "ehr_used": true,
+  "ehr_evidence": "a potential limitations of the report may include underestimation of the numbers and incidence rates of adverse events by using the spontaneous reporting data.",
+  "summary": "A national-level descriptive pharmacovigilance report of COVID-19 vaccine safety (booster doses for Omicron variants in people aged ≥12 years and vaccinations for infants/young children aged 6 months to 4 years) in Japan using spontaneous adverse event reporting data until 12 March 2023.",
   "key_findings": [
-    "39 confirmed cases of myocarditis and 18 of pericarditis for any Pfizer booster doses.",
-    "24 confirmed cases of myocarditis and 13 of pericarditis for any Moderna booster doses.",
-    "Only 1 death was confirmed as causally related to vaccination (42-year-old woman, Pfizer BA.4/BA.5).",
-    "Reporting rates of serious adverse events for bivalent Omicron vaccines were generally not higher than for any booster doses.",
-    "Reporting rate of serious adverse events was low in children aged 6 months to 4 years."
+    "Reporting rates of serious adverse events (myocarditis/pericarditis, anaphylaxis, and death) associated with bivalent Omicron vaccines were generally not higher than those for any booster doses.",
+    "The reporting rate of serious adverse events was low in children aged 6 months to 4 years.",
+    "Among 8,186,613 and 43,397,362 Pﬁzer doses for Omicron BA.1 and BA.4/BA.5, there were 97 and 527 individual case safety reports from healthcare professionals and 171 and 603 from the marketing authorisation holder, respectively.",
+    "There were 39 and 18 confirmed cases of myocarditis and pericarditis for any Pﬁzer booster doses; no confirmed cases of myocarditis/pericarditis for Moderna bivalent vaccines, with 24 and 13 confirmed cases for any Moderna booster doses.",
+    "No additional safety-related regulatory actions were issued by the Japanese government since the introduction of these vaccines until April 2023."
   ],
   "captured_features": [
-    "individual case safety reports",
-    "adverse event types (myocarditis, pericarditis, anaphylaxis, death)",
-    "age",
-    "sex",
-    "vaccine manufacturer",
-    "dose number",
-    "Omicron variant"
+    "number of doses administered by manufacturer, dose number, age, and sex",
+    "number of individual case safety reports from healthcare professionals and marketing authorization holders",
+    "confirmed cases of myocarditis and pericarditis",
+    "anaphylaxis reports",
+    "duplicated death reports",
+    "reporting proportions/rates by manufacturer, dose number, age, and sex"
   ],
   "pathologies_diseases": [
     "myocarditis",
     "pericarditis",
-    "anaphylaxis"
+    "anaphylaxis",
+    "death"
   ],
-  "study_design": "pharmacovigilance surveillance report",
-  "data_source_type": "spontaneous adverse event reporting system",
-  "population": "individuals aged ≥12 years and infants/young children aged 6 months to 4 years in Japan",
-  "exposure_domain": "COVID-19 vaccination (booster doses for Omicron variants)",
+  "study_design": "Descriptive pharmacovigilance report based on spontaneous adverse event reporting (passive surveillance)",
+  "data_source_type": "Pharmacovigilance database (spontaneous adverse event reporting system, Ministry of Health, Labour and Welfare)",
+  "population": "People aged ≥12 years receiving COVID-19 booster doses for Omicron variants and infants/young children aged 6 months to 4 years in Japan, as of 12 March 2023",
+  "exposure_domain": "COVID-19 vaccination (monovalent and bivalent Omicron BA.1 and BA.4/BA.5 booster vaccines; Pﬁzer BNT162b2 and Moderna mRNA-1273)",
   "limitations": [
-    "underestimation of the numbers and incidence rates of adverse events by using the spontaneous reporting data"
+    "Underestimation of the numbers and incidence rates of adverse events due to reliance on spontaneous (passive) reporting data, with no reliable denominator-based incidence and potential underreporting and confounding.",
+    "Descriptive design without a comparison/unvaccinated group limits causal inference."
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
     "https://www.mhlw.go.jp/stf/shingi/shingi-kousei_284075.html"
   ],
-  "data_availability_statement": "The data for this report are available to the public (Japanese language only) in the webpage of the Ministry of Health, Labour and Welfare of Japan ( https://www.mhlw.go.jp/stf /shingi/shingi-kousei_284075. html).",
+  "data_availability_statement": "The data for this report are available to the public (Japanese language only) in the webpage of the Ministry of Health, Labour and Welfare of Japan ( https://www.mhlw.go.jp/stf /shingi/shingi-kousei_284075.html).",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

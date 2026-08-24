@@ -3,36 +3,36 @@
   "title": "Low-level environmental lead exposure in childhood and adult intellectual function: a follow-up study.",
   "year": "2011",
   "ehr_used": false,
-  "ehr_evidence": "We recruited adults in the Boston area who had participated as newborns and young children in a prospective cohort study that examined the relationship between lead exposure and childhood intellectual function.",
-  "summary": "Follow-up study assessing the relationship between early-life environmental lead exposure and adult intellectual function in a prospective cohort.",
+  "ehr_evidence": "The data source was a prospective birth cohort established among babies born at Brigham and Women's Hospital in Boston (1979-1981), with blood-lead concentrations measured from umbilical cord and via capillary/venipuncture samples at ages 6, 12, 18, 24, 57 months and 10 years, plus neuropsychological testing (WASI) and questionnaires collected for the study, not electronic health records.",
+  "summary": "A follow-up of a prospective cohort of adults aged 28-30 years from the Boston area examined the association between low-level childhood blood-lead concentrations and adult Full-Scale IQ measured by WASI.",
   "key_findings": [
-    "Childhood blood-lead concentration (mean of ages 4 and 10) had the strongest relationship with Full-Scale IQ (b = -1.89 ± 0.70, p = 0.01).",
-    "Full-scale IQ was significantly related to blood-lead concentration at age 6 months (b = -1.66 ± 0.75, p = 0.03), 4 years (b = -0.90 ± 0.41, p = 0.03), and 10 years (b = -1.95 ± 0.80, p = 0.02).",
-    "Adjusting for maternal IQ altered the significance of the regression coefficient for blood lead."
+    "Average late childhood blood-lead concentration (mean of concentrations at ages 4 and 10 years) had the strongest relationship with Full-Scale IQ (b = -1.89 ± 0.70, p = 0.01, 95% CI -3.30, -0.47).",
+    "Full-Scale IQ was significantly related to blood-lead concentration at 6 months (b = -1.66 ± 0.75, p = 0.03), 4 years (b = -0.90 ± 0.41, p = 0.03) and 10 years (b = -1.95 ± 0.80, p = 0.02).",
+    "Verbal IQ was significantly related to blood-lead concentration at 10 years (p = 0.001).",
+    "Adjusting for maternal IQ altered the significance of the regression coefficient, reducing the estimate from -1.89 (-3.30, -0.47) to -1.11 (-2.29, 0.06), so the confounding effect of maternal IQ could not be excluded."
   ],
   "captured_features": [
-    "blood lead concentrations at multiple time points",
-    "Full-Scale IQ scores",
-    "maternal IQ",
-    "HOME score",
-    "demographic and socioeconomic variables",
-    "birth weight",
-    "gestational age"
+    "Blood-lead concentrations at cord, 6 months, 12 months, 24 months, 4 years and 10 years",
+    "Average and average late childhood blood-lead concentrations",
+    "WASI Full-Scale IQ, Verbal IQ and Performance IQ",
+    "Maternal IQ, HOME score, birth weight, gestational age, birth order, sex, race, maternal education and tobacco/alcohol use during pregnancy"
   ],
-  "pathologies_diseases": [],
-  "study_design": "prospective cohort follow-up study",
-  "data_source_type": "prospective cohort",
-  "population": "adults aged 28-30 years (n=43) originally enrolled as newborns in a Boston cohort (1979-1981)",
-  "exposure_domain": "environmental lead exposure",
+  "pathologies_diseases": [
+    "Reduced adult intellectual function (lower IQ); neurocognitive impairment associated with childhood lead exposure"
+  ],
+  "study_design": "Prospective cohort (long-term follow-up study)",
+  "data_source_type": "biospecimen",
+  "population": "43 adults aged 28-30 years in the Boston area who participated as newborns/young children in a prospective lead-exposure cohort; predominantly white, college-educated",
+  "exposure_domain": "heavy metals (lead)",
   "limitations": [
-    "small sample size (n=43)",
-    "limited ability to perform multivariate analysis",
-    "potential confounding by maternal IQ cannot be excluded"
+    "Very small sample size (n = 43), which prevented multivariate analysis and evaluation of confounders/interactions.",
+    "Potential confounding by maternal IQ could not be excluded.",
+    "Limited generalizability due to a homogeneous, highly educated, predominantly white sample."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,47 +3,50 @@
   "title": "COVID-19 Vaccination Responses with Different Vaccine Platforms in Patients with Inborn Errors of Immunity.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "Blood samples from patients and healthy adult donors were collected prior to vaccination (T0), 28 days (+ / − 3 days) after the first (T1) and the second (T2) doses.",
-  "summary": "Observational study evaluating the safety and immunogenicity (humoral and cellular responses) of different COVID-19 vaccine platforms in patients with inborn errors of immunity and healthy controls in Argentina.",
+  "ehr_evidence": "The study prospectively collected blood/plasma/serum and PBMC samples from patients and healthy controls, analyzed by ELISA, pseudovirus neutralization assay, ELISPOT, and flow cytometry; no electronic health record or administrative database was used.",
+  "summary": "A prospective observational cohort study evaluating the safety and immunogenicity (humoral and cellular immune responses) of five COVID-19 vaccine platforms in 118 adult and pediatric patients with inborn errors of immunity compared with 37 age-matched healthy controls in Argentina.",
   "key_findings": [
-    "No moderate or severe adverse events were observed in IEI patients following vaccination.",
-    "Anti-S/RBD IgG titers were significantly lower in IEI patients compared to healthy controls (p < 0.05 for adults, p < 0.005 for pediatrics).",
-    "Neutralizing antibody IC80 titers were significantly lower in IEI patients than in healthy controls (p < 0.01 for pediatrics, p < 0.05 for adults).",
-    "Positive S-specific IFN-γ response was observed in 84.5% of IEI patients, and 82.1% presented S-specific TFH cells.",
-    "Moderna vaccines elicited significantly stronger humoral responses and neutralization capacity compared to other platforms (p < 0.01 and p < 0.005, respectively).",
-    "No significant difference in humoral response was observed between vaccinated patients with or without previous SARS-CoV-2 infection."
+    "Anti-S/RBD IgG titers were significantly lower in IEI patients than in age-matched healthy controls (p < 0.05 for both pediatric and adult cohorts).",
+    "Neutralizing antibody titers (IC80) were significantly lower in IEI patients than in healthy controls (pediatric p < 0.01, adult p < 0.05).",
+    "Positive S-specific IFN-γ cellular response was observed in 84.5% of IEI patients.",
+    "82.1% of IEI patients presented S-specific circulating T follicular-helper (TFH) cells.",
+    "Circulating TFH cell frequency was significantly lower in IEI patients than in healthy controls (3.1% vs 8.9%, p < 0.0001).",
+    "Neutralizing capacity was significantly higher in pediatric than adult IEI patients (p < 0.001).",
+    "Moderna vaccine elicited a stronger humoral response than other platforms (antibody titer p < 0.01 and neutralization p < 0.005), while cellular (IFN-γ) response did not differ by vaccine platform.",
+    "No significant difference in humoral response was observed between vaccinated patients with or without previous SARS-CoV-2 infection.",
+    "No moderate or severe vaccine-associated adverse events were observed."
   ],
   "captured_features": [
-    "IgG anti-S/RBD and anti-N antibodies by ELISA",
-    "Neutralizing antibody IC50/IC80 via pseudo-virus assay",
-    "IFN-γ secretion by ELISPOT",
-    "S-specific circulating TFH cell frequency by flow cytometry",
+    "Anti-S/RBD IgG titers (IU/mL) by ELISA",
+    "Anti-nucleocapsid (N) IgG antibodies",
+    "Neutralizing antibody titers (IC80/IC50) by pseudovirus assay",
+    "IFN-γ-secreting cells by ELISPOT (SFU)",
+    "Circulating TFH cell frequency by flow cytometry (CD4+CXCR5+PD-1+CD154+)",
+    "Vaccine platform received",
+    "IEI diagnosis (IUIS classification)",
+    "Age and sex",
+    "Previous SARS-CoV-2 infection history",
     "Vaccine-associated adverse events",
-    "SARS-CoV-2 infection status"
+    "COVID-19 disease severity"
   ],
   "pathologies_diseases": [
-    "inborn errors of immunity (IEI)",
-    "COVID-19",
-    "common variable immunodeficiency (CVID)",
-    "X-linked agammaglobulinemia (XLA)",
-    "specific antibody deficiency (SAD)",
-    "combined immunodeficiency (CID)",
-    "Down syndrome"
+    "Inborn errors of immunity (IEI; e.g., CVID, XLA, specific antibody deficiency, selective IgA deficiency, hypogammaglobulinemia, hyper IgM syndrome, combined immunodeficiencies)",
+    "COVID-19 (SARS-CoV-2 infection)"
   ],
-  "study_design": "Observational prospective cohort study",
-  "data_source_type": "Biospecimen and clinical follow-up",
-  "population": "118 patients with inborn errors of immunity (79 adults aged 19-78, 39 pediatrics aged 12-18) and 37 age-matched healthy controls in Argentina",
-  "exposure_domain": "COVID-19 vaccination (mRNA, adenoviral vector, inactivated platforms)",
+  "study_design": "Prospective observational cohort study with age-matched healthy controls",
+  "data_source_type": "biospecimen",
+  "population": "118 adults and pediatric patients with inborn errors of immunity (aged 12-78 years) and 37 age-matched healthy controls (27 adults, 12 adolescents) in Argentina",
+  "exposure_domain": "COVID-19 vaccination (vaccine platforms: mRNA, adenoviral vector, inactivated, and combinations)",
   "limitations": [
-    "Small sample size for specific IEI subtypes",
-    "Lack of long-term follow-up for immunogenicity",
-    "Observational design without randomization",
-    "Limited PBMC samples for healthy pediatric controls prevented cellular response comparison"
+    "Observational design with a relatively small sample size and heterogeneous IEI subtypes",
+    "No long-term follow-up, so long-term humoral and cellular immunogenicity remains unknown",
+    "Healthy controls were recruited from healthcare workers and children of healthcare workers, not population-based",
+    "Single-country (Argentina) setting limiting generalizability"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
   "data_availability_statement": "All data generated or analyzed during this study are included in this published article (and its supplementary information files).",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

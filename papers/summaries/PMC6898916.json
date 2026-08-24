@@ -3,39 +3,42 @@
   "title": "2019_PMC6898916_The_maternal_antibody_against_diphtheria_tetanus_and_pertussis_s",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "In 2018, 200 neonates hospitalized in Shunyi Women and Children’s Hospital in Beijing, and 238 neonates hospitalized in Qianjiang Central Hospital located in the southwestern mountainous areas were included in this study.",
-  "summary": "Cross-sectional serological study comparing maternal DTP vaccine-associated antibody levels in neonates from urban Beijing and rural Chongqing, China.",
+  "ehr_evidence": "A routinely peripheral blood sample was obtained at admission. All serum samples were frozen at − 20 °C until analysis. Anti-Dtx, anti-Ttx and anti-pertussis toxin (Ptx) IgG levels were measured by enzyme-linked immunosorbent assay using commercial ELISA kits (Euroimmun, Lübeck, Germany).",
+  "summary": "A comparative cross-sectional study of DTP-associated maternal antibodies in 438 neonates (1-28 days) from two Chinese hospitals (Shunyi, Beijing and Qianjiang, Chongqing) showing significant regional differences in protective antibody levels.",
   "key_findings": [
-    "Mean anti-Dtx IgG was significantly lower in Qianjiang (0.04 IU/ml) than Shunyi (0.12 IU/ml) (P < 0.0001).",
-    "Protective anti-Dtx prevalence was lower in Qianjiang (7.1%) than Shunyi (30.5%) (χ2 = 21.788, P < 0.0001).",
-    "Mean anti-Ttx IgG was significantly lower in Qianjiang (0.07 IU/ml) than Shunyi (0.18 IU/ml) (P < 0.0001).",
-    "Protective anti-Ttx prevalence was lower in Qianjiang (7.6%) than Shunyi (38.5%) (χ2 = 33.569, P < 0.0001).",
-    "No significant difference in mean anti-Ptx IgG between regions (P = 0.2395), but detectable rate was higher in Qianjiang (39.9%) than Shunyi (30.5%) (χ2=4.202, P=0.0404).",
-    "Two neonates from Qianjiang had anti-PT IgG ≥100.0 IU/ml, suggesting recent pertussis exposure in their mothers."
+    "Mean anti-Dtx IgG was significantly lower in Qianjiang (0.04 IU/ml) than Shunyi (0.12 IU/ml), P < 0.0001.",
+    "Mean anti-Ttx IgG was significantly lower in Qianjiang (0.07 IU/ml) than Shunyi (0.18 IU/ml), P < 0.0001.",
+    "Protective anti-Dtx IgG prevalence was lower in Qianjiang (7.1%) than Shunyi (30.5%), χ2 = 21.788, P < 0.0001.",
+    "Protective anti-Ttx IgG prevalence was lower in Qianjiang (7.6%) than Shunyi (38.5%), χ2 = 33.569, P < 0.0001.",
+    "The detectable rate of anti-Ptx IgG was significantly higher in Qianjiang (39.9%) than Shunyi (30.5%).",
+    "No significant difference in protective anti-Ptx IgG rate was observed between Shunyi and Qianjiang (χ2 = 0.837, P < 0.3601)."
   ],
   "captured_features": [
-    "serum antibody concentrations (anti-Dtx, anti-Ttx, anti-Ptx IgG)",
-    "demographic characteristics (sex, term/preterm, delivery mode)",
-    "hospital region"
+    "Serum anti-Dtx IgG concentration (IU/ml)",
+    "Serum anti-Ttx IgG concentration (IU/ml)",
+    "Serum anti-Ptx IgG concentration (IU/ml)",
+    "Protective antibody prevalence rates",
+    "Detectable antibody rates",
+    "Demographic variables (sex, term/preterm, delivery mode)"
   ],
   "pathologies_diseases": [
-    "diphtheria",
-    "tetanus",
-    "pertussis"
+    "Diphtheria",
+    "Tetanus",
+    "Pertussis"
   ],
-  "study_design": "cross-sectional serological study",
-  "data_source_type": "primary serum samples",
-  "population": "438 neonates (1-28 days old) hospitalized in two regional hospitals in China",
-  "exposure_domain": "geographic region and regional vaccine coverage",
+  "study_design": "Cross-sectional comparative study",
+  "data_source_type": "biospecimen",
+  "population": "438 neonates (1-28 days old) hospitalized in Shunyi Women and Children's Hospital (Beijing) and Qianjiang Central Hospital (Chongqing)",
+  "exposure_domain": "Vaccination (DTP vaccine) and maternal passive antibody transfer / regional immunization coverage",
   "limitations": [
-    "sample size limited to two hospitals",
-    "lack of maternal vaccination status data",
-    "no maternal blood samples collected for direct comparison"
+    "Sample size limited and all subjects collected from only two hospitals.",
+    "Vaccination status of neonates' mothers could not be obtained.",
+    "No maternal blood samples were collected for comparison."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

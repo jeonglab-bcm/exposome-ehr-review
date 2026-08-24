@@ -3,36 +3,45 @@
   "title": "Unilateral morning glory disc anomaly in a patient with prenatal Zika virus exposure.",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "A complete ophthalmological exam was performed. Magnetic resonance imaging (MRI) and computed tomography (CT) were performed and were remarkable for a base of skull encephalocele and callosal dysgenesis.",
-  "summary": "Case report describing a 3-year-old male with confirmed prenatal Zika virus exposure who presented with unilateral morning glory disc anomaly and associated midline brain defects.",
+  "ehr_evidence": "No electronic health record or database was used; data were collected from direct clinical ophthalmological examination, maternal real-time PCR testing, and pediatric neuroimaging (MRI and CT) as a single case report.",
+  "summary": "A case report describing a 3-year-old male with confirmed prenatal Zika virus exposure who presented with unilateral morning glory disc anomaly and associated midline craniofacial and brain anomalies.",
   "key_findings": [
-    "Visual acuity was 20/200 in the right eye (OD) and 20/20 in the left eye (OS).",
-    "Neuroimaging revealed a base of skull encephalocele and callosal dysgenesis."
+    "First reported case of unilateral morning glory disc anomaly following confirmed prenatal Zika virus exposure.",
+    "Best-corrected visual acuity was 20/200 in the right eye and 20/20 in the left eye.",
+    "Neuroimaging revealed a base of skull encephalocele through the floor of the sella and callosal dysgenesis.",
+    "The report explicitly states it cannot demonstrate a causal relationship between prenatal ZIKV exposure and MGDA.",
+    "No prior reports of MGDA in children with prenatal ZIKV exposure had been documented."
   ],
   "captured_features": [
-    "ophthalmological exam findings",
-    "RT-PCR test results",
-    "MRI and CT imaging results"
+    "Best-corrected visual acuity (20/200 OD, 20/20 OS)",
+    "Fundus photography findings (central funnel-shaped excavation, glial tuft, peripapillary atrophy, radial spoke-like vasculature OD)",
+    "Intraocular pressure",
+    "Extraocular movements and strabismus assessment",
+    "Maternal RT-PCR-confirmed Zika virus infection in the second trimester",
+    "Brain MRI and CT findings (sellar encephalocele, callosal dysgenesis)"
   ],
   "pathologies_diseases": [
-    "morning glory disc anomaly",
-    "congenital Zika syndrome",
-    "encephalocele",
-    "callosal dysgenesis"
+    "Morning glory disc anomaly",
+    "Prenatal Zika virus exposure",
+    "Congenital Zika syndrome",
+    "Base of skull encephalocele",
+    "Callosal dysgenesis",
+    "Strabismus",
+    "Cleft lip"
   ],
-  "study_design": "case report",
-  "data_source_type": "clinical examination and imaging",
-  "population": "3-year-old male child",
-  "exposure_domain": "prenatal Zika virus exposure",
+  "study_design": "Case report",
+  "data_source_type": "other",
+  "population": "A single 3-year-old male pediatric patient evaluated at a pediatric ophthalmology clinic",
+  "exposure_domain": "Prenatal Zika virus (viral/infectious) exposure",
   "limitations": [
-    "single case report (N=1)",
-    "cannot demonstrate causal relationship",
-    "lack of comparative control group"
+    "Single patient (N=1), limiting generalizability.",
+    "Cannot establish causality between prenatal ZIKV exposure and MGDA.",
+    "No control or comparison group."
   ],
-  "data_availability": "not-stated",
+  "data_availability": "in-house",
   "data_accession_links": [],
   "data_availability_statement": "All data generated or analyzed during this study are included in this manuscript.",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

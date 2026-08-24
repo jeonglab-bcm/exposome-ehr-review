@@ -3,46 +3,43 @@
   "title": "A comprehensive atlas of the bonobo gut bacteriome and its associated host and exposome factors.",
   "year": "2025",
   "ehr_used": false,
-  "ehr_evidence": "Data were collected using observations, historical records retrieved from the studbook or from the Zoological Information Management System (ZIMS), questionnaires and diet sheets filled in by zoo staff.",
-  "summary": "Comprehensive atlas of the bonobo gut bacteriome and its associated host and exposome factors, comparing wild and zoo-housed populations to identify drivers of microbiome composition and social transmission.",
+  "ehr_evidence": "In the zoo setting, data were collected using observations, historical records retrieved from the studbook or from the Zoological Information Management System (ZIMS), questionnaires and diet sheets filled in by zoo staff.",
+  "summary": "A standardized microbiome atlas study of 644 fecal 16S samples from 212 wild and zoo-housed bonobos (Pan paniscus) examining how host and exposome factors shape gut bacteriome composition.",
   "key_findings": [
-    "Gut bacterial beta diversity was significantly associated with captive vs wild lifestyle (PERMANOVA: R2 = 28.7%, p < 0.001).",
-    "Wild bonobo alpha diversity was higher than zoo-housed bonobos (LMM: β = 0.935 ± 0.311 SE, p = 0.020).",
-    "Dietary diversity was negatively correlated with alpha diversity in wild bonobos (LMM: β = −0.353 ± 0.077 SE, padj < 0.001).",
-    "Antibiotic use was associated with lower similarity to the wild phenotype (posterior mean = −0.298, 95% CI: [−0.407, −0.189]).",
-    "Current cohabitation led to the highest gut bacteria sharing (36.5% Bray-Curtis similarity on average), followed by past cohabitation (30.1% similarity).",
-    "Grooming bond strength strongly correlated with gut bacteriome similarity (posterior mean = 1.055, 95% CI: [0.496, 1.609])."
+    "Gut bacterial beta diversity was significantly associated with captive vs. wild lifestyle (PERMANOVA: R2 = 28.7%, p < 0.001)",
+    "Alpha diversity (inverse Simpson) was higher in wild than zoo-housed bonobos (LMM: β = 0.935 ± 0.311 SE, p = 0.020)",
+    "Grooming bond strength was the strongest predictor of gut bacteriome similarity (posterior mean = 1.055, 95% CI: [0.496, 1.609]), exceeding genetic relatedness",
+    "Antibiotic use was associated with lower similarity to the wild phenotype (posterior mean = −0.298, 95% CI: [−0.407, −0.189])",
+    "Diets high in fiber, starch, and browse were associated with more wild-like gut bacteriomes (fiber posterior mean = 0.167, 95% CI: [0.056, 0.281])"
   ],
   "captured_features": [
-    "16S rRNA amplicon sequencing",
-    "dietary intake and diversity",
-    "antibiotic and medication use",
-    "grooming and proximity bond strength",
-    "cohabitation history and tenure",
-    "age class and sex",
-    "Bristol stool score",
-    "genetic relatedness and maternal kinship"
+    "16S rRNA amplicon sequencing (V4 region) ASV counts and taxa tables",
+    "Alpha diversity (inverse Simpson index)",
+    "Beta diversity (ASV-level Bray-Curtis dissimilarity)",
+    "Host factors (age, sex, reproductive state, rearing history)",
+    "Exposome factors (diet, antibiotic/medicine use, Bristol stool score, seasonality, outdoor access)",
+    "Social behavior (grooming bond strength, proximity bond strength, tenure, dominance rank)",
+    "Kinship/relatedness and maternal effects"
   ],
   "pathologies_diseases": [],
-  "study_design": "Cross-sectional observational study with dyadic analyses comparing wild and zoo-housed bonobos",
-  "data_source_type": "Fecal microbiome sequencing and field/zoo observational data",
-  "population": "212 bonobos (Pan paniscus) from European zoos and two wild communities in the Democratic Republic of the Congo",
-  "exposure_domain": "Diet, antibiotic use, social contact, cohabitation, age, maternal effects, and environmental conditions",
+  "study_design": "Cross-sectional microbiome atlas with dyadic analyses (zoo-housed and wild cohorts)",
+  "data_source_type": "biospecimen",
+  "population": "212 wild and zoo-housed bonobos (Pan paniscus), ages 1.1–70.6 years, from 11 European zoos and two wild communities (Bompusa East and West) in the Democratic Republic of the Congo",
+  "exposure_domain": "exposome factors including diet, antibiotic/medicine use, social contact, early-life adversity, and environment",
   "limitations": [
-    "Assumes wild bonobo bacteriome represents a native baseline",
-    "Relies on 16S rRNA sequencing rather than metagenomics, limiting strain-level resolution",
-    "Dietary intake estimated from group distribution rather than individual consumption",
-    "Cross-sectional design limits causal inference for social transmission"
+    "16S rRNA sequencing does not provide strain-level resolution, limiting transmission inference",
+    "Assumes the studied wild bonobo populations have a native, non-dysbiotic bacteriome",
+    "Only two wild communities were sampled, limiting generalizability of native microbiome variability"
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
+    "PRJEB86099",
     "https://doi.org/10.5281/zenodo.14913431",
-    "ENA: PRJEB86099",
     "https://doi.org/10.5281/zenodo.14911049",
-    "PRJEB86099"
+    "ENA: PRJEB86099"
   ],
-  "data_availability_statement": "Sequencing data have been deposited at the European Nucleotide Archive under project ENA: PRJEB86099 and are publicly available as of the date of publication. Pseudonymized sample data have been deposited and are publicly available as of the data of publication at Zenodo: https://doi.org/10.5281/zenodo.14913431. All original code has been deposited and is publicly available as of the date of publication at Zenodo: https://doi.org/10.5281/zenodo.14911049.",
+  "data_availability_statement": "Sequencing data have been deposited at the European Nucleotide Archive under project ENA: PRJEB86099 and are publicly available as of the date of publication. Pseudonymized sample data have been deposited and are publicly available as of the date of publication at Zenodo: https://doi.org/10.5281/zenodo.14913431. Table 1 includes sample (meta)data on pseudonymized group and individual identity, sampling date, sequencing plate, DNA extraction method, and all associated data analyzed within the current study. Data on the dyadic level are found in tables 2 and 3, an ASV-level count table per sample in table 4, and an ASV-level taxa annotation in table 5. All original code has been deposited and is publicly available as of the date of publication at Zenodo: https://doi.org/10.5281/zenodo.14911049. Any additional information required to reanalyze the data reported in this paper is available from the lead contact upon request.",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

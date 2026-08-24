@@ -3,39 +3,43 @@
   "title": "Safety and immunogenicity of an inactivated thimerosal-free influenza vaccine in infants and children.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "An AE diary card was used to record solicited local and systemic AEs during the 6 days following the day of vaccination.",
-  "summary": "Prospective, open-label, phase III clinical trial evaluating the safety, reactogenicity, and immunogenicity of a thimerosal-free inactivated influenza vaccine in healthy children aged 6 months to <9 years.",
+  "ehr_evidence": "Data were collected prospectively through scheduled clinical visits, parent-completed adverse event diary cards, and blood samples assessed by hemagglutination inhibition and single radial hemolysis assays in a phase III clinical trial (NCT00700193).",
+  "summary": "A prospective, open-label, phase III clinical trial evaluating the safety, reactogenicity, and immunogenicity of a thimerosal-free inactivated influenza vaccine (Fluvax/C210) in 298 healthy Australian children aged 6 months to <9 years.",
   "key_findings": [
-    "A maximum intensity of severe was reported for injection site pain and fever by only 3.0% and 3.4% of participants, respectively.",
-    "≥95% of both younger and older children achieved seroprotection after dose 2.",
-    "Of those seronegative at baseline, 97% became seroprotected after dose 1 against A/H3N2 versus 15% for A/H1N1 and 22% for B.",
-    "Only one participant had a confirmed case of influenza B after the booster vaccination, but the specimen was compromised during transportation."
+    "No withdrawals occurred due to adverse events, and the majority of solicited local and systemic adverse events were of mild severity.",
+    "Severe injection site pain and fever were reported by only 3.0% and 3.4% of participants, respectively.",
+    "The vaccine was immunogenic for all antigens, with ≥95% of both younger and older children achieving seroprotection after dose 2.",
+    "No significant difference in baseline seropositivity to any vaccine antigen was found between children who reported prior influenza-like illness and those who did not.",
+    "An unexpected discrepancy between HI and SRH assay results for the influenza B strain was observed following the booster dose in Group A."
   ],
   "captured_features": [
-    "solicited local and systemic adverse events",
+    "solicited local adverse events (erythema, swelling, pain)",
+    "solicited systemic adverse events (fever, irritability, cough, rhinitis, loss of appetite, myalgia, sore throat, vomiting/diarrhea, wheezing)",
+    "unsolicited adverse events and serious adverse events",
     "hemagglutination inhibition (HI) antibody titers",
-    "single radial hemolysis (SRH) assay results",
     "geometric mean titers (GMTs)",
-    "seroprotection rates (HI titer ≥1:40)"
+    "single radial hemolysis (SRH) assay results",
+    "seroprotection and seroconversion rates"
   ],
   "pathologies_diseases": [
     "influenza",
-    "influenza-like illness"
+    "influenza-like illness",
+    "vaccine adverse events"
   ],
   "study_design": "prospective, open-label, phase III clinical trial",
-  "data_source_type": "primary clinical trial data collection",
-  "population": "healthy children aged 6 months to <9 years",
-  "exposure_domain": "influenza vaccination",
+  "data_source_type": "biospecimen",
+  "population": "298 healthy children aged 6 months to <9 years (Group A: ≥6 months to <3 years; Group B: ≥3 years to <9 years) at two Australian pediatric hospitals",
+  "exposure_domain": "inactivated influenza vaccine (Fluvax/C210)",
   "limitations": [
-    "lack of a placebo control group",
-    "open-label design",
-    "single geographic region (Australia)",
-    "compromised laboratory specimen for one confirmed influenza case"
+    "Lack of a placebo control group; all participants acted as their own controls.",
+    "Open-label design with first occurrences of solicited local adverse events arbitrarily deemed related to the vaccine.",
+    "Different influenza B strains between the 2005 and 2006 seasons limited comparability of booster responses.",
+    "No group comparison inferential statistics were applied."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

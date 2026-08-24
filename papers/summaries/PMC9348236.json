@@ -3,36 +3,36 @@
   "title": "Acute appendicitis in a patient immunised with COVID-19 vaccine: A case report with morphological analysis.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "Clinical case presentation and hospital records of a single 58-year-old female patient at Careggi University Hospital.",
-  "summary": "Case report describing acute appendicitis occurring approximately 48 hours after the first dose of the Pfizer-BioNTech COVID-19 vaccine in a 58-year-old female, with histological evidence of Th1-driven granulomatous inflammation.",
+  "ehr_evidence": "The study is a single-patient case report; data were derived from clinical assessment, imaging (abdominal ultrasound and contrast CT), laboratory tests, and histopathological analysis of one 58-year-old female at Careggi University Hospital, not from an electronic/computerised health record.",
+  "summary": "A case report of a 58-year-old female who developed acute appendicitis approximately 48 hours after her first Pfizer-BioNTech COVID-19 vaccine dose, with morphological analysis revealing granulomatous inflammation.",
   "key_findings": [
-    "A 58-year-old female developed acute appendicitis approximately 48 hours after her first Pfizer-BioNTech vaccine dose.",
-    "Histopathology revealed diffuse acute and chronic inflammatory infiltrates with non-necrotizing granulomas.",
-    "WHO causality assessment indicated a B1 rating (temporal relation consistent but insufficient definitive evidence)."
+    "A 58-year-old female developed acute appendicitis approximately 48 hours after her first Pfizer-BioNTech COVID-19 vaccine dose; histology showed diffuse acute and chronic inflammatory infiltrates with scattered non-necrotizing granulomas throughout the appendiceal wall.",
+    "WHO causality assessment (2018 algorithm) yielded B1: temporal relationship consistent but insufficient definitive evidence that the vaccine caused the event."
   ],
   "captured_features": [
-    "clinical symptoms",
-    "imaging findings",
-    "laboratory values",
-    "histopathology"
+    "Clinical presentation (right iliac fossa pain, fever, nausea, vomiting)",
+    "Ultrasound findings (fluid collection in right iliac fossa, cecal wall thickening)",
+    "CT scan findings (distended appendix, maximum thickness 12 mm, thickened walls)",
+    "Laboratory values (haemoglobin 12.5 g/dL, leukocytosis 12.1x10^9/L, neutrophilia 78.4%, fibrinogen 636.0 mg/dL, prothrombin time 13.3 s)",
+    "Histopathology (acute and chronic infiltrates, non-necrotizing granulomas within lymphoid follicles, serosal giant cells)"
   ],
   "pathologies_diseases": [
-    "acute appendicitis"
+    "Acute appendicitis",
+    "Granulomatous appendicitis",
+    "Breast cancer (past medical history)"
   ],
-  "study_design": "case report",
-  "data_source_type": "clinical case report / hospital records",
-  "population": "single 58-year-old female",
-  "exposure_domain": "COVID-19 mRNA vaccine",
+  "study_design": "Case report",
+  "data_source_type": "Other (single-patient clinical case report with morphological analysis)",
+  "population": "A single 58-year-old female academic healthcare professional at Careggi University Hospital, Florence, Italy (adult patient, not pediatric)",
+  "exposure_domain": "COVID-19 vaccine (mRNA, Pfizer-BioNTech)",
   "limitations": [
-    "single case design",
-    "no control group",
-    "temporal association only",
-    "insufficient evidence for causality"
+    "Single-patient case report; cannot establish causation or association.",
+    "No causal relationship between COVID-19 vaccine and appendicitis established."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "Data are available upon reasonable request to the corresponding author.",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

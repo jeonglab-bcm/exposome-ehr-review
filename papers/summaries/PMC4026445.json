@@ -4,37 +4,38 @@
   "year": "2014",
   "ehr_used": false,
   "ehr_evidence": "Mother–child pairs in this study were drawn from the longitudinal birth cohort studies in Mexico City that comprise the Early Life Exposures in MExico and NeuroToxicology (ELEMENT) project.",
-  "summary": "Validation study assessing micro-spatial dentine lead levels as a biomarker for accurately estimating prenatal, early childhood, and long-term cumulative lead exposure by comparing them with maternal blood, bone, cord blood, and serial childhood blood samples.",
+  "summary": "In a prospective mother-child cohort (ELEMENT, Mexico City) of 85 subjects, micro-spatial deciduous dentine lead levels were validated against maternal blood/bone, umbilical cord blood, and serial childhood blood lead to assess exposure timing over prenatal, early childhood, and cumulative long-term periods.",
   "key_findings": [
-    "Dentine Pb at birth significantly associated with cord blood Pb (Spearman r = 0.69; n = 27; p<0.0001).",
-    "Prenatal dentine Pb associated with maternal patella Pb (r = 0.48; n = 59; p<0.0001) and tibia Pb (r = 0.35; n = 41; p<0.03).",
-    "Dentine Pb at 3 months significantly associated with concurrent child blood Pb (r = 0.64; n = 55; p<0.0001).",
-    "Secondary dentine Pb correlated positively with cumulative blood lead index (CBLI) (r = 0.38; n = 75; p<0.0007).",
-    "Birth dentine Pb not significantly associated with child blood Pb after 2 years of age.",
-    "Secondary dentine Pb correlations with maternal bone and blood during pregnancy were weaker and statistically insignificant."
+    "Dentine Pb at the neonatal line was significantly associated with cord blood Pb (Spearman r = 0.69; n = 27; p<0.0001).",
+    "Prenatal dentine Pb was significantly associated with maternal patella Pb (Spearman r = 0.48; n = 59; p<0.0001), a stronger association than with tibia Pb (Spearman r = 0.35; n = 41; p<0.03).",
+    "Dentine Pb formed at 3 months was significantly associated with child blood Pb measured concurrently (Spearman r = 0.64; n = 55; p<0.0001), with progressively weaker associations at older ages.",
+    "Second trimester maternal blood Pb was associated with prenatal dentine Pb (Spearman r = 0.60; n = 36; p<0.0001) and third trimester (Spearman r = 0.64; n = 44; p<0.0001).",
+    "Mean Pb in secondary dentine correlated positively with cumulative blood lead index (Spearman r = 0.38; n = 75; p<0.0007).",
+    "Birth dentine Pb was not significantly associated with child blood Pb sampled after 2 years of age.",
+    "Secondary dentine Pb was not significantly associated with maternal bone or maternal blood during pregnancy (all p>0.05)."
   ],
   "captured_features": [
-    "Dentine Pb levels (micro-spatial LA-ICP-MS)",
-    "maternal blood Pb",
-    "maternal bone Pb (tibia/patella)",
-    "umbilical cord blood Pb",
-    "serial childhood blood Pb",
-    "cumulative blood lead index (CBLI)"
+    "Micro-spatial dentine Pb (208Pb:43Ca) by LA-ICP-MS in primary and secondary dentine",
+    "Umbilical cord blood Pb",
+    "Maternal venous blood Pb by trimester",
+    "Maternal bone Pb (tibia, patella) by K-XRF",
+    "Child blood Pb at 3, 6, 18, 30 months and later ages",
+    "Cumulative blood lead index (CBLI)",
+    "Tooth type and age at shedding"
   ],
   "pathologies_diseases": [],
-  "study_design": "prospective cohort biomarker validation study",
-  "data_source_type": "prospective birth cohort / biospecimen analysis",
-  "population": "85 mother-child pairs from the ELEMENT cohort in Mexico City, children followed from birth to 6-11 years",
-  "exposure_domain": "lead (Pb)",
+  "study_design": "Prospective birth cohort (biomarker validation study)",
+  "data_source_type": "biospecimen",
+  "population": "85 mother-child pairs from the ELEMENT cohort in Mexico City; children followed from birth to 6 years with blood Pb up to 7-11 years; deciduous teeth collected at 7-15 years",
+  "exposure_domain": "heavy metals",
   "limitations": [
-    "Incomplete biomarker data on all participants due to incomplete follow-up and sample collection",
-    "Only one tooth per participant analyzed, preventing assessment of tooth type influence",
-    "Small sample sizes for some specific comparisons"
+    "Incomplete set of biomarkers on all 85 participants due to incomplete follow-up and sample collection.",
+    "Only one tooth per participant, preventing exploration of tooth-type influence on dentine Pb."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

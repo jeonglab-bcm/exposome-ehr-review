@@ -2,41 +2,45 @@
   "pmcid": "PMC9489473",
   "title": "Updated report of COVID-19 vaccine safety monitoring in Japan: Booster shots and paediatric vaccinations.",
   "year": "2022",
-  "ehr_used": false,
-  "ehr_evidence": "reporting has been mandatory for any myocarditis/pericarditis cases within 28 days after receiving a COVID-19 vaccine, for further investigation.",
-  "summary": "National pharmacovigilance safety monitoring report of COVID-19 vaccine adverse events in Japan, covering booster shots and paediatric vaccinations from December 2021 to May 2022.",
+  "ehr_used": true,
+  "ehr_evidence": "The data for this report are available to the public on the webpage (Japanese language only) of the Ministry of Health, Labour and Welfare of Japan.",
+  "summary": "A descriptive pharmacovigilance safety monitoring report of COVID-19 mRNA vaccine booster (third) shots and paediatric (5-11 years) vaccinations in Japan from December 2021 to May 2022, reporting individual case adverse event rates.",
   "key_findings": [
-    "Overall reporting rates of serious adverse events for the third shot were generally lower than for the first and second shots.",
-    "Myocarditis/pericarditis reporting rates in young men with third shots tended to be higher than first shots but lower than second shots.",
-    "No confirmed causal relationship between vaccination and death was established.",
-    "In children aged 5-11 years, reporting rates for suspected myocarditis were very low with none confirmed by Brighton classification 1-3, and one confirmed pericarditis case (0.9 cases per 1 million shots)."
+    "Among 40,923,719 third shots of BNT162b2 there were 1,585 (0.0039%) reports from healthcare professionals and 858 (0.0021%) from the MAH, lower than first and second shots.",
+    "Among 30,597,546 third shots of mRNA-1273 there were 712 (0.0023%) reports from healthcare professionals and 420 (0.0014%) from the MAH, also lower than first and second shots.",
+    "The overall reporting rate of serious adverse events associated with the third shot was generally lower than those for the first and second shots.",
+    "Reporting rates of myocarditis/pericarditis among young men with third shots tended to be higher than for first shots but lower than second shots.",
+    "No cases of death were confirmed by experts suggesting a causal relationship between vaccination and death (134 deduplicated BNT162b2 and 78 mRNA-1273 death reports).",
+    "In children aged 5-11 years, among 879,260 second shots there were 23 (0.0026%) reports from healthcare professionals and 16 (0.0018%) from the MAH, with one expert-confirmed pericarditis case (0.9 cases per 1 million shots)."
   ],
   "captured_features": [
-    "number of vaccine shots administered",
-    "adverse event reports (myocarditis, pericarditis, anaphylaxis, TTS, deaths)",
-    "reporting rates per 1 million shots",
-    "age and sex distributions",
-    "Brighton classification confirmations"
+    "individual case safety reports (suspected adverse events)",
+    "age group",
+    "sex",
+    "vaccine type (BNT162b2, mRNA-1273)",
+    "number of shots administered (first, second, third)",
+    "reporting rate per million shots",
+    "Brighton classification confirmed cases",
+    "cause of death"
   ],
   "pathologies_diseases": [
     "myocarditis",
     "pericarditis",
     "anaphylaxis",
     "thrombosis with thrombocytopenia syndrome",
-    "hemorrhagic stroke",
-    "ischemic heart disease",
-    "pulmonary embolism",
-    "ischemic stroke",
-    "hypoxic ischemic encephalopathy"
+    "death",
+    "hypoxic ischemic encephalopathy",
+    "neonatal asphyxia"
   ],
-  "study_design": "national pharmacovigilance surveillance report",
-  "data_source_type": "spontaneous adverse event reporting system",
-  "population": "general population of Japan, including adults receiving booster doses and children aged 5-11 years",
-  "exposure_domain": "COVID-19 vaccines (BNT162b2 and mRNA-1273)",
+  "study_design": "pharmacovigilance safety monitoring report (descriptive, no control group)",
+  "data_source_type": "pharmacovigilance adverse event reporting system (other)",
+  "population": "Japanese national population; mRNA COVID-19 vaccine booster (third shot) recipients broadly from age 12 to 80+ and children aged 5-11 years, December 2021 to May 2022",
+  "exposure_domain": "COVID-19 vaccination (mRNA vaccines BNT162b2 and mRNA-1273), booster and paediatric doses",
   "limitations": [
-    "inherent reporting bias and potential underreporting of spontaneous adverse event reports",
-    "lack of individual-level clinical data beyond reported cases",
-    "reliance on mandatory reporting from healthcare professionals and marketing authorization holders"
+    "Spontaneous adverse event reporting subject to underreporting and reporting bias.",
+    "No control/comparison group and reporting rates are not incidence, so causal inference is limited.",
+    "Mandatory reporting of myocarditis/pericarditis from December 2021 may have inflated reporting rates.",
+    "Cause of death varied widely and no causal relationship with vaccination was confirmed."
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
@@ -45,5 +49,5 @@
   "data_availability_statement": "The data for this report are available to the public on the webpage (Japanese language only) of the Ministry of Health, Labour and Welfare of Japan ( https://www.mhlw.go.jp/stf/shingi/shingi-kousei_284075.html).",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

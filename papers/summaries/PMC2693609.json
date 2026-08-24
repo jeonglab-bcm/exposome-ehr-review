@@ -3,40 +3,41 @@
   "title": "Vaccine-associated paralytic poliomyelitis: a case report of flaccid monoparesis after oral polio vaccine.",
   "year": "2007",
   "ehr_used": false,
-  "ehr_evidence": "Data source was direct clinical assessment, physical examination, laboratory tests, MRI, and electrodiagnostic evaluations on a single patient.",
-  "summary": "Case report describing a 4-month-old male infant in Korea who developed acute flaccid paralysis and persistent hypotonic monoparesis following oral polio vaccine administration.",
+  "ehr_evidence": "The report is based on clinical evaluation of a single patient at the Department of Pediatrics, Chonbuk National University Hospital, including physical/neurologic examination, laboratory tests, skeletal radiography, hip sonogram, 3-phase bone scan, brain and spinal MRI, and electrodiagnostic evaluations; no electronic health record or database was analysed.",
+  "summary": "A single-case report describing a 4-month-old male who developed flaccid monoparesis of the left lower extremity four weeks after receiving oral polio vaccine (OPV) with DTaP and was left with permanent hypotonic monoparesis.",
   "key_findings": [
-    "First clinically confirmed case of vaccine-associated paralytic poliomyelitis (VAPP) in Korea.",
-    "Flaccid paralysis developed 4 weeks after OPV immunization.",
-    "Virus isolation from stool and CSF failed.",
-    "Persistent hypotonic monoparesis and atrophy remained after 18 months of rehabilitation therapy."
+    "The patient was left with permanent hypotonic monoparesis (GIV/V) with atrophy on the left lower extremity and ipsilateral claw foot persisting for more than 18 months despite massive physical therapy.",
+    "Attempts to isolate Sabin-like (vaccine-related) poliovirus in two stool and CSF samples failed because specimens were collected more than 2 months after onset of paralysis.",
+    "The patient is reported as the first clinically confirmed, officially approved recipient vaccine-associated paralytic poliomyelitis case in Korea."
   ],
   "captured_features": [
-    "clinical presentation",
-    "physical examination",
-    "MRI",
-    "electrodiagnostic evaluations",
-    "developmental screening tests",
-    "stool and CSF samples"
+    "flaccid paralysis of the left lower extremity",
+    "hypotonia and muscle weakness (grade IV/V)",
+    "muscle atrophy of the left lower extremity",
+    "ipsilateral claw foot deformity",
+    "electrodiagnostic findings (normal sensory nerve action potentials, low amplitudes in left tibial and deep peroneal nerves, widespread fibrillation potentials)",
+    "normal brain and spinal MRI",
+    "growth and developmental measurements"
   ],
   "pathologies_diseases": [
-    "vaccine-associated paralytic poliomyelitis",
+    "vaccine-associated paralytic poliomyelitis (VAPP)",
     "acute flaccid paralysis",
-    "hypotonic monoparesis"
+    "flaccid monoparesis",
+    "poliomyelitis"
   ],
   "study_design": "case report",
-  "data_source_type": "clinical case report",
-  "population": "4-month-old male infant, Korea",
-  "exposure_domain": "oral polio vaccine (OPV)",
+  "data_source_type": "other",
+  "population": "A single 4-month-old male patient (later followed to 2 years) treated at Chonbuk National University Hospital, Korea",
+  "exposure_domain": "vaccine (oral polio vaccine, OPV, with DTaP)",
   "limitations": [
-    "single case report limits generalizability",
-    "failed to isolate causative virus strain",
-    "diagnosis relied on clinical criteria without virological confirmation"
+    "Single case report with only one patient, limiting generalizability.",
+    "Failure to isolate the causative vaccine-related poliovirus from stool and CSF specimens, so etiology could not be virologically confirmed.",
+    "VAPP cannot be distinguished clinically from wild-type poliomyelitis."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

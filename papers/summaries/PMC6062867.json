@@ -3,50 +3,40 @@
   "title": "Occupational exposure to organic solvents during pregnancy and childhood behavior: findings from the PELAGIE birth cohort (France, 2002-2013).",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "Data were collected via the PELAGIE birth cohort using self-reported questionnaires and parent-completed behavioral checklists (CBCL, PSBQ, SDQ).",
-  "summary": "Prospective birth cohort study examining the association between maternal occupational exposure to organic solvents during pregnancy and childhood behavioral outcomes at ages 2 and 6.",
+  "ehr_evidence": "The data source was the PELAGIE French birth cohort, with exposure and outcome data collected via parent-completed self-administered questionnaires (not EHR); 'Within the French birth cohort PELAGIE, parents assessed their children's internalizing and externalizing behaviors using items from the Child Behavior Checklist and the Preschool Social Behavior Questionnaire at age 2, and the Strength and Difficulties Questionnaire at age 6.'",
+  "summary": "A prospective birth cohort study of 715 mother-child pairs in Brittany, France, examining whether maternal occupational exposure to organic solvents during pregnancy is associated with childhood externalizing and internalizing behavior traits at ages 2 and 6.",
   "key_findings": [
-    "Increased externalizing behavior score at age 2 was associated with prenatal exposure to solvents (standardized score: 0.34 (95% CI = 0.11, 0.57) for occasional exposure and 0.26 (0.05, 0.48) for regular exposure).",
-    "This association was attenuated at age 6 (0.22 (−0.02, 0.47) for occasional exposure and 0.07 (−0.14, 0.28) for regular exposure).",
-    "No association was observed for internalizing behavior at either age."
+    "Increased externalizing behavior score at age 2 was associated with prenatal solvent exposure (standardized coefficient 0.34, 95% CI 0.11-0.57 for occasional exposure and 0.26, 95% CI 0.05-0.48 for regular exposure) versus unexposed.",
+    "The association with externalizing behavior was attenuated and non-significant at age 6 (0.22, 95% CI -0.02 to 0.47 for occasional exposure and 0.07, 95% CI -0.14 to 0.28 for regular exposure).",
+    "No significant association was observed between prenatal solvent exposure and internalizing behavior at age 2 or age 6.",
+    "The association between prenatal solvent exposure and externalizing behavior at age 2 was stronger in girls (0.44, 95% CI 0.11-0.77) than in boys (0.23, 95% CI -0.09 to 0.55)."
   ],
   "captured_features": [
-    "self-reported occupational solvent exposure",
-    "CBCL scores",
-    "PSBQ scores",
-    "SDQ scores",
-    "maternal age",
-    "maternal education",
-    "parity",
-    "maternal smoking",
-    "breastfeeding duration",
-    "mother-child interaction score"
+    "Maternal occupational exposure to organic solvents (never/occasional/regular) self-reported early in pregnancy",
+    "Child behavior subscale scores from CBCL and PSBQ at age 2 and SDQ at age 6",
+    "Latent internalizing and externalizing behavior traits via structural equation modeling",
+    "Maternal age, maternal education, parity, child's sex, maternal tobacco consumption, breastfeeding duration, mother-child interaction score"
   ],
   "pathologies_diseases": [
-    "externalizing behavior",
-    "internalizing behavior",
-    "attention deficit/hyperactivity",
-    "aggression",
-    "opposition",
-    "emotional symptoms",
-    "peer relationship problems",
-    "conduct problems"
+    "Externalizing behavior (aggression, opposition, attention deficit/hyperactivity, conduct problems, hyperactivity/inattention)",
+    "Internalizing behavior (emotional symptoms, peer relationship problems)",
+    "Childhood behavioral problems"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "cohort survey",
-  "population": "715 mother-child pairs from the PELAGIE birth cohort in France, children assessed at ages 2 and 6",
-  "exposure_domain": "occupational exposure to organic solvents during pregnancy",
+  "study_design": "Prospective birth cohort",
+  "data_source_type": "other",
+  "population": "715 mother-child pairs from the PELAGIE general-population cohort in Brittany, France; pregnant women enrolled before 19 weeks gestation (2002-2006); children assessed at ages 2 and 6.",
+  "exposure_domain": "Occupational exposure to organic solvents (prenatal)",
   "limitations": [
-    "exposure assessment based on maternal self-reports",
-    "groups defined by frequency rather than intensity",
-    "use of different behavioral tools at ages 2 and 6",
-    "potential lack of measurement invariance between sexes",
-    "inability to account for other maternal or postnatal environmental exposures to solvents"
+    "Occupational exposure was based on maternal self-report and defined by frequency rather than intensity.",
+    "Behavior scores at age 2 were adapted from two scales (CBCL and PSBQ) not strictly validated.",
+    "Lack of measurement invariance between boys and girls prevented formal conclusions about sex-differential effects.",
+    "Other maternal/postnatal solvent exposure sources (home/outside) were largely unmeasured.",
+    "Analysis used a sub-sample of the cohort, though selection bias was likely minimal."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

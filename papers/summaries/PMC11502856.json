@@ -3,43 +3,44 @@
   "title": "Associations between gestational exposure to perfluoroalkyl substances, fetal growth, and the mediation effect of thyroid hormones.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "Study participants were selected among subjects of the Ezhou birth cohort study, which is an ongoing longitudinal study initiated in January 2019 that aims to evaluate the impact of environmental factors on the health of pregnant women and their children.",
-  "summary": "Prospective birth cohort study evaluating associations between prenatal PFAS exposure, maternal thyroid hormones, and fetal growth outcomes in China.",
+  "ehr_evidence": "We enrolled 374 mother-infant pairs from the Ezhou birth cohort study between 2019 and 2020; PFASs and thyroid hormones were measured in maternal serum during the first trimester, and birth outcomes were obtained from the participants' medical records.",
+  "summary": "A prospective birth cohort study of 379 mother-infant pairs in Ezhou City, China (2019-2020) examining associations between first-trimester maternal serum PFAS concentrations and birth outcomes (birth weight, length, head circumference, gestational age), with maternal thyroid hormones as mediators.",
   "key_findings": [
-    "Increasing PFNA concentration was associated with decreased birth length (β = -0.54 cm; 95% CI: -0.90, -0.18).",
-    "Increasing PFHxS concentration was associated with decreased birth length (β = -0.64 cm; 95% CI: -0.86, -0.42).",
-    "Increasing PFOA concentration was associated with decreased head circumference (β = -0.73 cm; 95% CI: -1.19, -0.27).",
-    "Increasing PFHpS concentration was associated with decreased head circumference (β = -0.30 cm; 95% CI: -0.53, -0.07).",
-    "Increasing PFDA concentration was associated with decreased gestational age (β = -0.18 week; 95% CI: -0.26, -0.10).",
+    "Increasing PFNA (β = -0.54 cm, 95% CI: -0.90, -0.18) and PFHxS (β = -0.64 cm, 95% CI: -0.86, -0.42) concentrations were negatively associated with birth length.",
+    "Increasing PFOA (β = -0.73 cm, 95% CI: -1.19, -0.27) and PFHpS (β = -0.30 cm, 95% CI: -0.53, -0.07) concentrations were negatively associated with head circumference.",
+    "Each Ln increase in PFOA was associated with a 43.2 g decrease in birth weight (95% CI: -75.8, -10.6).",
+    "Each Ln increase in PFDA was negatively associated with gestational age (β = -0.18 week, 95% CI: -0.26, -0.10).",
     "Maternal FT3 mediated 36.7% of the effect of PFNA on birth length, and FT4 mediated 30.8% of the effect of PFOA on head circumference.",
     "No significant mediation by thyroid hormones was observed for birth weight or gestational age.",
-    "In female infants, higher PFOA was associated with lower birth weight (β = -53.6 g; 95% CI: -77.8, -29.4)."
+    "PFOS and PFNA were negatively associated with TSH, and PFDA was positively associated with TT4."
   ],
   "captured_features": [
-    "maternal serum PFAS concentrations",
-    "maternal thyroid hormone levels (TSH, FT3, FT4, TT3, TT4, TG)",
-    "birth weight",
-    "birth length",
-    "head circumference",
-    "gestational age",
+    "maternal serum PFAS concentrations (PFOA, PFOS, PFNA, PFDA, PFHxS, PFOSA, PFHpS, PFHpA)",
+    "maternal thyroid hormone levels (TSH, FT3, FT4, TT4, TT3, TG)",
+    "birth weight (g)",
+    "birth length (cm)",
+    "head circumference (cm)",
+    "gestational age (weeks)",
     "infant sex",
-    "maternal demographics and lifestyle factors"
+    "maternal age, pre-pregnancy BMI, gestational weight gain, living area, maternal education, family income, parity, method of delivery, maternal occupation, second-hand smoke exposure"
   ],
-  "pathologies_diseases": [],
-  "study_design": "prospective birth cohort study with mediation analysis",
-  "data_source_type": "birth cohort",
-  "population": "379 mother-infant pairs from Ezhou City, Hubei Province, China, recruited in early pregnancy (2019-2020)",
-  "exposure_domain": "per- and polyfluoroalkyl substances (PFASs)",
+  "pathologies_diseases": [
+    "Adverse fetal growth outcomes (reduced birth length, head circumference, birth weight, and gestational age)"
+  ],
+  "study_design": "Prospective birth cohort study (with cross-sectional assessment of PFAS-thyroid hormone associations and mediation analysis)",
+  "data_source_type": "biospecimen",
+  "population": "379 mother-infant pairs from the Ezhou birth cohort in Ezhou City, Hubei, China; pregnant women recruited in early/first-trimester pregnancy (mean maternal age 27.3 years) with their live-born infants",
+  "exposure_domain": "Perfluoroalkyl and polyfluoroalkyl substances (PFAS) - environmental persistent chemicals",
   "limitations": [
-    "PFAS-thyroid hormone associations are cross-sectional, limiting causal inference",
-    "single first-trimester measurement may lead to exposure misclassification",
-    "only 8 of over 23 detectable PFASs were measured",
-    "single-city cohort limits generalizability to other populations"
+    "PFAS-thyroid hormone associations are cross-sectional, limiting causal inference.",
+    "First-trimester single measurements may lead to exposure misclassification.",
+    "Only 8 of at least 23 detectable PFASs were measured, possibly underestimating PFAS effects.",
+    "Participants from a single city in China, limiting generalizability to other countries and socioeconomic groups."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
-  "data_availability_statement": "The datasets used and/or analysed during the current study available from the corresponding author on reason-able request.",
+  "data_availability_statement": "The datasets used and/or analysed during the current study available from the corresponding author on reasonable request.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

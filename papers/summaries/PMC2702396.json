@@ -3,41 +3,56 @@
   "title": "Thyroid hormone levels of pregnant inuit women and their infants exposed to environmental contaminants.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "Blood samples were collected in vials containing EDTA as the anticoagulant and centrifuged (10 min, 5,000 rpm), and the plasma transferred into glass vials prewashed with hexane.",
-  "summary": "Prospective mother-infant cohort study examining the association between prenatal and postnatal exposure to organochlorine and chlorinated phenolic compounds and thyroid hormone status in pregnant Inuit women and their infants.",
+  "ehr_evidence": "We measured thyroid hormone parameters [thyroid stimulating hormone (TSH), free thyroxine (fT4), total triiodothyronine (T3), thyroxine-binding globulin (TBG)] and concentrations of several contaminants [PCB-153, hydroxylated metabolites of PCBs (HO-PCBs), pentachlorophenol (PCP) and hexachlorobenzene (HCB)] in maternal plasma at delivery (n = 120), in umbilical cord plasma (n = 95), and in infant plasma at 7 months postpartum (n = 130).",
+  "summary": "A prospective cohort study of pregnant Inuit women in Nunavik, Quebec, Canada and their infants, examining associations between exposure to organochlorine compounds (PCBs, HCB, PCP, HO-PCBs) and thyroid hormone status in mothers and infants during the first year of life.",
   "key_findings": [
-    "In pregnant women, a positive association was found between HO-PCBs and T3 concentrations (β = 0.57, p = 0.02).",
-    "In umbilical cord blood, PCB-153 concentrations were negatively associated with TBG levels (β = –0.26, p = 0.01).",
-    "In a subsample analysis, a negative relationship was found between maternal PCP levels and cord fT4 concentrations in neonates (β = –0.59, p = 0.02).",
-    "No association was observed between contaminants and thyroid hormones at 7 months of age.",
-    "A significant negative association between PCB-153 and TSH was found in simple regression for 7-month-old infants, but was no longer significant after adjustment for breast-feeding status."
+    "Positive association between HO-PCBs and T3 concentrations in pregnant women (β = 0.57, p = 0.02).",
+    "Negative association between PCB-153 and TBG levels in umbilical cord blood (β = –0.26, p = 0.01).",
+    "Negative relationship between maternal PCP and cord fT4 concentrations in neonates (β = –0.59, p = 0.02).",
+    "No significant association between PCB-153 and TSH or fT4 in pregnant women.",
+    "No association between contaminants and thyroid hormones at 7 months of age."
   ],
   "captured_features": [
-    "maternal plasma PCB-153, HCB, ΣHO-PCBs, PCP, TSH, fT4, T3, TBG, selenium, lipids",
-    "cord plasma PCB-153, HCB, ΣHO-PCBs, PCP, TSH, fT4, T3, TBG, selenium",
-    "infant plasma PCB-153, HCB, TSH, fT4, T3, TBG",
-    "maternal age, parity, socioeconomic status, alcohol/cigarette consumption, fish consumption, gestational age, birth weight, sex, breast-feeding status"
+    "TSH",
+    "fT4",
+    "T3",
+    "TBG",
+    "PCB-153",
+    "HO-PCBs",
+    "PCP",
+    "HCB",
+    "maternal plasma",
+    "umbilical cord plasma",
+    "infant plasma",
+    "blood selenium",
+    "plasma lipid concentrations",
+    "gestational age",
+    "birth weight",
+    "breast-feeding status",
+    "age at delivery",
+    "alcohol and cigarette consumption",
+    "fish consumption",
+    "socioeconomic status"
   ],
   "pathologies_diseases": [
-    "thyroid hormone status",
-    "hypothyroxinemia",
-    "postpartum thyroid dysfunction"
+    "thyroid hormone disruption",
+    "hypothyroidism",
+    "hypothyroxinemia"
   ],
-  "study_design": "Prospective mother-infant cohort study",
-  "data_source_type": "Cohort with direct biological sampling",
-  "population": "Pregnant Inuit women from Nunavik, Québec, Canada, and their infants at birth and 7 months postpartum",
-  "exposure_domain": "Environmental contaminants (organochlorines and chlorinated phenolic compounds: PCBs, HCB, HO-PCBs, PCP)",
+  "study_design": "prospective cohort",
+  "data_source_type": "biospecimen",
+  "population": "Pregnant Inuit women (mean age 24.9 years) from the three largest communities of the Hudson Bay coast of Nunavik, Quebec, Canada, and their infants during the first year of life (n = 120 mothers, 95 cord samples, 130 infant samples).",
+  "exposure_domain": "Organochlorine and chlorinated phenolic environmental contaminants (PCBs, hexachlorobenzene, pentachlorophenol, hydroxylated PCB metabolites)",
   "limitations": [
-    "Small sample size for CPC analysis limits statistical power",
-    "Potential selection bias in subsample analyses (e.g., higher birth weight, lower selenium)",
-    "Lack of association with cord blood PCP despite high correlation with maternal levels",
-    "Unmeasured confounding by iodine intake",
-    "Differential thyroid hormone metabolism between fetuses and adults"
+    "Small sample sizes, particularly in subsample analyses of cord CPCs.",
+    "Loss to follow-up and exclusions reduced analytic sample.",
+    "Association between maternal PCP and cord fT4 not corroborated with cord blood PCP despite high correlation (r = 0.85).",
+    "Potential residual confounding (iodine intake, diet)."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

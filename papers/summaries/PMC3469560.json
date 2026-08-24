@@ -3,39 +3,41 @@
   "title": "2012_PMC3469560_Attitudes_of_the_general_public_and_general_practitioners_in_fiv",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "In December 2009/January 2010 and April 2010, 500 randomly selected members of the general public in Germany, France, the United States, China, and Mexico were surveyed by telephone about vaccination for seasonal and A/H1N1 pandemic influenza. Also, in April 2010, 100 randomly selected general practitioners were surveyed.",
-  "summary": "Cross-sectional survey of the general public and general practitioners in five countries examining attitudes, perceptions, and vaccination coverage rates for seasonal and A/H1N1 pandemic influenza during the 2009/2010 season.",
+  "ehr_evidence": "In December 2009/January 2010 and April 2010, 500 randomly selected members of the general public in Germany, France, the United States, China, and Mexico were surveyed by telephone about vaccination for seasonal and A/H1N1 pandemic influenza; GPs participated via a computer-assisted web interview.",
+  "summary": "A cross-sectional telephone/web survey of 500 general public members and 100 general practitioners per country in France, Germany, the US, China, and Mexico examining whether the 2009/2010 A/H1N1 pandemic affected seasonal influenza vaccine uptake and attitudes.",
   "key_findings": [
-    "Adult A/H1N1 pandemic influenza vaccination coverage in Dec 2009/Jan 2010 was 12% in France, 11% in Germany, 41% in the US, 13% in Mexico, and 12% in China.",
-    "Adult seasonal influenza vaccination coverage in Dec 2009/Jan 2010 was 29% in France, 25% in Germany, 46% in the US, 30% in Mexico, and 10% in China.",
+    "Adult A/H1N1 pandemic vaccine coverage in December 2009/January 2010 was 41% in the US versus approximately 10-13% in France, Germany, Mexico, and China.",
+    "The 2009/2010 A/H1N1 pandemic increased seasonal influenza vaccine uptake only in Mexico (adult VCR rose from 30% to 46%), with little or no effect in France, Germany, the US, and China.",
+    "Physician advice or recommendation was the most common reason for receiving the pandemic vaccine in France, Germany, and Mexico.",
     "Inclusion of the A/H1N1 pandemic strain increased willingness to be vaccinated for seasonal influenza in the US, Mexico, and China but not in Germany or France.",
-    "The 2009/2010 A/H1N1 pandemic increased seasonal influenza vaccine uptake in Mexico but had little effect in other countries.",
-    "GP recommendation was a common reason for receiving the pandemic vaccine, while lack of risk perception and safety concerns were common reasons for not being vaccinated."
+    "More than 90% of respondents in France and Germany perceived the A/H1N1 threat as mild to moderate (mean score <5), versus 51% in Mexico perceiving it as serious (mean score 6.9)."
   ],
   "captured_features": [
-    "vaccination coverage rates",
-    "public and GP threat perceptions",
-    "vaccination decision drivers",
-    "future vaccination willingness"
+    "vaccination coverage rates (A/H1N1 and seasonal) by age group and country",
+    "perceived threat/risk severity of A/H1N1 influenza (0-10 scale)",
+    "reasons for and against vaccination",
+    "media coverage perception",
+    "intention to be vaccinated next season"
   ],
   "pathologies_diseases": [
-    "influenza (seasonal and A/H1N1 pandemic)"
+    "influenza (seasonal)",
+    "A/H1N1 pandemic influenza"
   ],
-  "study_design": "cross-sectional telephone and internet surveys",
-  "data_source_type": "telephone and internet survey",
-  "population": "general public (adults and parents) and general practitioners in France, Germany, the US, Mexico, and China",
-  "exposure_domain": "influenza vaccination, pandemic/seasonal influenza exposure, media coverage, GP recommendations",
+  "study_design": "cross-sectional survey",
+  "data_source_type": "other",
+  "population": "adults (≥18 years) from the general public and general practitioners in France, Germany, the US, China, and Mexico",
+  "exposure_domain": "pandemic influenza (A/H1N1) and seasonal influenza vaccination",
   "limitations": [
-    "small sample size (500 public, 100 GPs per country)",
-    "low survey response rates leading to potential selection bias",
-    "geographic limitation in China and Mexico (only 3 largest cities surveyed)",
-    "self-reported vaccination status subject to recall and honesty bias",
-    "cross-sectional design limits causal inference"
+    "Low survey response rates (e.g., 5-7% in France and Germany) with possible selection bias.",
+    "Small sample size of 500 public members and 100 GPs per country.",
+    "Vaccination coverage relied on respondents' recollection and honesty (recall bias).",
+    "Only the three largest cities were sampled in China and Mexico, potentially overestimating coverage.",
+    "Self-reported data with respondents aware of being surveyed."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

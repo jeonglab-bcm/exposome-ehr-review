@@ -31,7 +31,10 @@ DOWNLOAD_LOG = PAPERS_DIR / "download_log.json"
 # failure) + concurrent workers (the bottleneck is network-bound LLM calls).
 # Override worker counts via SUMMARIZE_WORKERS / SCAN_WORKERS (e.g. from CI
 # workflow_dispatch inputs) without touching the Dagster asset graph.
-SUMMARIZE_ARGS = ["--recover", "--workers", os.environ.get("SUMMARIZE_WORKERS", "4")]
+_summarize_args = ["--recover", "--workers", os.environ.get("SUMMARIZE_WORKERS", "4")]
+if os.environ.get("SUMMARIZE_FORCE", "").strip().lower() in ("1", "true", "yes"):
+    _summarize_args = ["--force", "--workers", os.environ.get("SUMMARIZE_WORKERS", "4")]
+SUMMARIZE_ARGS = _summarize_args
 
 # Focused data-availability pass. This updates the already-created per-paper
 # JSONs with data_availability/accession fields before the combined artifact is

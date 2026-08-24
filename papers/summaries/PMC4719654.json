@@ -3,47 +3,42 @@
   "title": "Mitochondrial oxidative DNA damage and exposure to particulate air pollution in mother-newborn pairs.",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "We recruited mother-newborn pairs (only singletons) in the East-Limburg Hospital in Genk, Belgium who are part of the ongoing birth cohort “ENVIRONAGE”.",
-  "summary": "Prospective birth cohort study assessing the association between prenatal particulate matter (PM10 and PM2.5) exposure and mitochondrial oxidative DNA damage (8-OHdG) in maternal and cord blood.",
+  "ehr_evidence": "We investigated maternal (n = 224) and cord blood (n = 293) from mother-newborn pairs that were enrolled in the ENVIRONAGE birth cohort; exposure to PM2.5 and PM10 was estimated by spatial temporal interpolation (Kriging) using official fixed site monitoring and CORINE land cover data combined with a dispersion model.",
+  "summary": "A prospective birth cohort study of 293 mother-newborn pairs in Genk, Belgium, examining the association between prenatal exposure to particulate matter (PM10 and PM2.5) and mitochondrial 8-OHdG oxidative DNA damage biomarkers in maternal and umbilical cord blood.",
   "key_findings": [
-    "PM10 exposure during the entire pregnancy was associated with an 18.3% (95% CI: 5.6 to 33.4%, p=0.004) increase in maternal mitochondrial 8-OHdG.",
-    "PM10 exposure during the third trimester was associated with a 28.1% (95% CI: 8.6 to 51.2%, p=0.004) increase in maternal 8-OHdG.",
-    "PM2.5 exposure during the entire pregnancy was associated with a 13.9% (95% CI: 0.4 to 29.4%, p=0.04) increase in maternal 8-OHdG.",
-    "PM2.5 exposure during the third trimester was associated with a 28.1% (95% CI: 3.6 to 58.4%, p=0.02) increase in maternal 8-OHdG.",
-    "PM10 exposure during the first and second trimesters was associated with 23.0% (95% CI: 5.9 to 42.8%, p=0.007) and 16.6% (95% CI: 1.8 to 33.5%, p=0.03) increases in cord blood 8-OHdG, respectively.",
-    "No significant association was found between PM exposure and cord blood 8-OHdG during the entire pregnancy (p>0.11).",
-    "High 8-OHdG levels correlated with high mtDNA content in maternal (r=0.44, p<0.0001) and cord blood (r=0.58, p<0.0001).",
-    "No association was found between PM exposure or 8-OHdG levels and birth weight or small for gestational age."
+    "For an IQR increment in PM10 exposure during the entire pregnancy, maternal mitochondrial 8-OHdG increased by 18.3% (95% CI: 5.6 to 32.4%, p = 0.004).",
+    "PM10 exposure during the third trimester was associated with a 28.1% increase in maternal 8-OHdG (95% CI: 8.6 to 51.2%, p = 0.004).",
+    "PM2.5 exposure was associated with a 13.9% increase in maternal 8-OHdG during entire pregnancy (95% CI: 0.4 to 29.4%, p = 0.04) and a 28.1% increase in the third trimester (95% CI: 3.6 to 58.4%, p = 0.02).",
+    "In umbilical cord blood, PM10 exposure during the first and second trimester was significantly associated with 8-OHdG increases of 23.0% (95% CI: 5.9 to 42.8%, p = 0.007) and 16.6% (95% CI: 1.8 to 33.5%, p = 0.03).",
+    "No significant association was observed between cord blood 8-OHdG and PM exposure during the entire pregnancy (p > 0.11).",
+    "High maternal 8-OHdG was positively correlated with mtDNA content (r = 0.44, p < 0.0001) and cord blood 8-OHdG with mtDNA content (r = 0.58, p < 0.0001).",
+    "Neither PM exposure nor 8-OHdG levels were associated with birth weight or small for gestational age."
   ],
   "captured_features": [
-    "maternal age",
-    "pre-gestational BMI",
-    "smoking status",
-    "alcohol consumption",
-    "maternal education",
-    "gestational age",
-    "newborn gender",
-    "birth weight",
-    "PM10",
-    "PM2.5",
-    "mitochondrial 8-OHdG",
-    "mtDNA content"
+    "Maternal mitochondrial 8-OHdG levels (qPCR)",
+    "Umbilical cord blood mitochondrial 8-OHdG levels (qPCR)",
+    "mtDNA content (ratio of mitochondrial to nuclear gene copies)",
+    "PM10 exposure over entire pregnancy and per trimester",
+    "PM2.5 exposure over entire pregnancy and per trimester",
+    "Maternal age, gestational age, smoking status, maternal education, alcohol consumption, season at conception",
+    "Newborn gender, date of delivery, birth weight, gestational age"
   ],
-  "pathologies_diseases": [],
-  "study_design": "Prospective birth cohort study",
-  "data_source_type": "Birth cohort and environmental monitoring",
-  "population": "293 pregnant women and their newborns from the ENVIRONAGE birth cohort in Genk, Belgium",
-  "exposure_domain": "Particulate air pollution (PM10 and PM2.5)",
+  "pathologies_diseases": [
+    "Small for gestational age (no association found)",
+    "Low birth weight (no association found)"
+  ],
+  "study_design": "Prospective birth cohort",
+  "data_source_type": "biospecimen",
+  "population": "293 singleton mother-newborn pairs recruited at East-Limburg Hospital in Genk, Belgium; maternal age range 17-44 years (mean 29), recruited during pregnancy with blood samples collected after delivery.",
+  "exposure_domain": "air pollution (particulate matter PM10 and PM2.5)",
   "limitations": [
-    "Mitochondrial 8-OHdG measured only at end of pregnancy, limiting assessment of changes during gestation.",
-    "Potential residual confounding by unknown factors.",
-    "Exposure estimated via spatial interpolation rather than personal monitoring.",
-    "No significant associations found with adverse pregnancy outcomes like birth weight."
+    "Mitochondrial 8-OHdG was measured only at the end of pregnancy, impairing the ability to investigate changes during the entire pregnancy.",
+    "Residual confounding by unknown factors associated with both 8-OHdG levels and ambient air pollution cannot be excluded."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

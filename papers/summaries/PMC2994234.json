@@ -4,49 +4,52 @@
   "year": "2010",
   "ehr_used": false,
   "ehr_evidence": "Age at menarche data were collected retrospectively by questionnaire from 81 606 women aged 16 – 98, resident in the UK and participating in the Breakthrough Generations Study.",
-  "summary": "Cohort study investigating determinants of age at menarche using self-reported questionnaire data from over 80,000 UK women.",
+  "summary": "A cohort study of 81,606 UK women (aged 16–98) using baseline questionnaire data to identify pre- and post-natal determinants of age at menarche.",
   "key_findings": [
-    "Menarche occurred earlier in women with low birthweight (Ptrend < 0.001), singletons (P < 0.001), prenatal pre-eclampsia (P < 0.001) or maternal smoking (P = 0.01), not breastfed (Ptrend = 0.03), non-white (P < 0.001), heavy or tall at age 7 (Ptrend < 0.001), and those who exercised little (Ptrend < 0.001).",
-    "Menarcheal age increased with number of siblings (P < 0.001) and had an inverse association with birth order (P < 0.001).",
-    "In the multivariate model, birthweight, ethnicity, weight, height, exercise, sibship size, birth order, and maternal age at birth remained significant.",
-    "A non-white girl who was much heavier and taller than peers at age 7 could reach menarche nearly 2 years earlier on average (difference = -22.8 months, 95% CI = -25.0 to -20.7 months) compared to a white girl of average weight and height.",
-    "Birthweight per 500 g increase was associated with 0.31 months later menarche in univariate analysis and 1.24 months in multivariate analysis.",
-    "No significant association was found with maternal age at birth in univariate analysis (Ptrend = 0.15) or vegetarian status before age 8 (P = 0.18)."
+    "Birthweight was positively associated with age at menarche (per 500 g increase: multivariate beta = 1.24 months, 95% CI 1.10–1.37, Ptrend <0.001).",
+    "Non-white ethnicity was associated with earlier menarche (multivariate beta = -7.80 months, 95% CI -9.90 to -5.70, Ptrend <0.001).",
+    "Higher childhood weight at age 7 was associated with earlier menarche (multivariate beta = -4.54 months per category, 95% CI -4.75 to -4.33).",
+    "Higher childhood height at age 7 was associated with earlier menarche (multivariate beta = -2.98 months per category, 95% CI -3.16 to -2.80).",
+    "More childhood exercise was associated with later menarche (multivariate beta = 1.18 months per 10 h/week, 95% CI 0.78–1.59).",
+    "Greater number of siblings was associated with later menarche (multivariate beta = 1.45 months per sibling, 95% CI 1.28–1.61).",
+    "Higher birth order was associated with earlier menarche after adjustment for sibship size (multivariate beta = -1.26 months, 95% CI -1.48 to -1.03).",
+    "Younger maternal age at birth was associated with earlier menarche (multivariate beta = 0.36 months per 5-year increase, 95% CI 0.19–0.53).",
+    "Twinning and prenatal pre-eclampsia/eclampsia exposure were significant in univariate analyses but not in the multivariate model.",
+    "No association with maternal age at birth in univariate analysis (Ptrend = 0.15) or vegetarian status before age 8 (P = 0.18).",
+    "A non-white girl who was much heavier and taller than peers at age 7 could reach menarche ~2 years earlier (difference = -22.8 months, 95% CI -25.0 to -20.7 months)."
   ],
   "captured_features": [
     "age at menarche",
     "birthweight",
-    "maternal smoking",
-    "pre-eclampsia/eclampsia",
-    "breastfeeding duration",
     "ethnicity",
-    "childhood weight at age 7",
-    "childhood height at age 7",
+    "weight at age 7 years",
+    "height at age 7 years",
     "childhood exercise",
     "number of siblings",
     "birth order",
     "maternal age at birth",
-    "twinning status"
+    "twinning",
+    "prenatal pre-eclampsia/eclampsia",
+    "maternal smoking during pregnancy",
+    "number of weeks breastfed"
   ],
   "pathologies_diseases": [
-    "age at menarche",
-    "breast cancer"
+    "age at menarche"
   ],
-  "study_design": "retrospective cohort study",
-  "data_source_type": "questionnaire-based cohort",
-  "population": "81,606 UK women aged 16-98 years",
-  "exposure_domain": "prenatal and early-life factors (birthweight, maternal smoking, pre-eclampsia, breastfeeding, childhood anthropometrics, exercise, family size, birth order, ethnicity, maternal age)",
+  "study_design": "Cohort study (retrospective data collection via baseline questionnaire)",
+  "data_source_type": "Questionnaire-based cohort (other)",
+  "population": "81,606 UK women aged 16–98 (mean age 46 years)",
+  "exposure_domain": "Prenatal and childhood growth, lifestyle, and family factors (birthweight, maternal smoking, pre-eclampsia, breastfeeding, childhood weight/height, exercise, sibship size, birth order, ethnicity, maternal age)",
   "limitations": [
-    "volunteer recruitment bias",
-    "retrospective self-reported data with recall error",
-    "survivor bias among older participants",
-    "imprecise measures of childhood weight and height",
-    "large amounts of missing data for breastfeeding and maternal smoking variables"
+    "Volunteer recruits rather than a population-based random sample, potentially biasing associations (particularly for ethnicity).",
+    "Retrospective self-reported data with possible recall bias, greater in older women.",
+    "Large amounts of missing data for breastfeeding and maternal smoking (available only when mother was also a study member).",
+    "Imprecise measure of childhood weight."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

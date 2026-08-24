@@ -3,29 +3,38 @@
   "title": "Childhood brain tumours and use of mobile phones: comparison of a case-control study with incidence data.",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "Rates are shown for the age group 5 –19 years living in the Nordic Countries obtained from NORDCAN",
-  "summary": "Commentary responding to a previous critique, arguing that stable childhood brain tumour incidence trends in the Nordic countries are inconsistent with the increased risk suggested by the CEFALO case-control study on mobile phone use.",
+  "ehr_evidence": "Rates are shown for the age group 5–19 years living in the Nordic Countries obtained from NORDCAN (aggregate age-standardized incidence rates); the underlying CEFALO case-control study relied on retrospectively self-reported mobile/cordless phone use via questionnaires, not individual-level computerised records.",
+  "summary": "A commentary responding to a critique of the CEFALO case-control study, arguing that relatively stable childhood brain tumour incidence trends in the Nordic countries are incompatible with a substantial mobile phone–associated risk.",
   "key_findings": [
-    "Commentary presents no new primary quantitative results; argues that stable childhood brain tumour incidence trends in the Nordic countries over the last 20 years are inconsistent with the increased risk suggested by the CEFALO case-control study."
+    "No plausible explanation exists for how a notably increased brain tumour risk from wireless phone use would correspond to the relatively stable incidence time trends for brain tumours among children and adolescents in the Nordic countries over the last 20 years.",
+    "An increased risk restricted to heavy mobile phone use, to very early life exposure, or to rare brain tumour subtypes may still be compatible with stable incidence trends, so continued monitoring of childhood brain tumour incidence time trends is warranted.",
+    "The original CEFALO finding that the absence of an exposure-response relationship (by amount of use or tumour localization) argues against a causal association, though a small risk cannot be ruled out.",
+    "Underreporting to the Swedish Cancer registry was mainly confined to patients 70 years or older and has little relevance to incidence trends in children and adolescents."
   ],
-  "captured_features": [],
+  "captured_features": [
+    "age-standardized brain and central nervous system tumour incidence rates",
+    "proportion of regular mobile phone users by age",
+    "cordless phone use (including first three years of use)",
+    "latency periods and age at exposure",
+    "brain tumour localization/subtypes"
+  ],
   "pathologies_diseases": [
     "brain tumours",
     "central nervous system tumours"
   ],
-  "study_design": "commentary",
-  "data_source_type": "cancer registry / case-control study",
-  "population": "children and adolescents aged 5-19 years in the Nordic countries",
-  "exposure_domain": "mobile phone use",
+  "study_design": "commentary (response to a commentary); synthesizing a multicenter case-control study (CEFALO) and population-based incidence trend data",
+  "data_source_type": "cancer registry (NORDCAN) aggregate incidence data; questionnaire-based case-control study (CEFALO)",
+  "population": "children and adolescents aged 5–19 years in the Nordic countries",
+  "exposure_domain": "mobile phone / wireless phone use (radiofrequency/microwave radiation)",
   "limitations": [
-    "reliance on retrospective self-reported exposure in the referenced case-control study",
-    "ecological comparison limitations",
-    "potential age-specific underreporting in cancer registry data"
+    "Well-described limitations of case-control studies using retrospectively self-reported wireless phone use, including exposure misclassification and recall bias.",
+    "Difficulty recalling early-life cordless phone use and missing/non-mutually-exclusive response categories.",
+    "Cannot rule out a small risk restricted to heavy use, very early-life exposure, or rare subtypes."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

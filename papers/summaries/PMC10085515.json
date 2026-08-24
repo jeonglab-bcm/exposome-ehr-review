@@ -3,37 +3,42 @@
   "title": "Evaluating Demographic Data to Improve Confidence in Equity Analytics in a Children's Hospital.",
   "year": "2023",
   "ehr_used": true,
-  "ehr_evidence": "Before we assessed any analyses or revision of analyst procedures, it was necessary to understand how we collect the data in Epic (Epic Systems, Verona, WI), ACH’s electronic health record (EHR).",
-  "summary": "Evaluation of demographic data collection, standardization, and visualization across multiple reporting tools at a children's hospital to improve health equity analytics.",
+  "ehr_evidence": "Before we assessed any analyses or revision of analyst procedures, it was necessary to understand how we collect the data in Epic (Epic Systems, Verona, WI), ACH's electronic health record (EHR).",
+  "summary": "In a quality improvement/data governance study at a children's hospital, the authors evaluated and standardized demographic fields (race, ethnicity, language, sex, zip code, payer, age) across 9 reporting tools using 6 months of EHR encounters.",
   "key_findings": [
-    "Race 2 was missing in 95% of EDW universe encounters.",
-    "Payer data was missing in 28% of appointment universe encounters.",
-    "Including null values significantly altered the distribution of race categories across all reporting tools."
+    "Race 2 field was almost entirely missing, with 95% missing in EDW universes (Medication, Surgery, Patient Experience) and 98% missing in QlikView Patients.",
+    "Payer data was 28% missing in the Appointment Universe, expected because payer is not collected until registration.",
+    "Fewer than 2% of patient encounters resulted in different payers across tools, so the payer source discrepancy was deemed insignificant.",
+    "Race 1 was 4–7% missing across tools; ethnicity was 4–5% missing (40% in QlikView Patients); language was 0% missing in most tools but 12% in the Ohio Hospital Association universe and 41% in QlikView Patients.",
+    "The study produced 7 recommendations to standardize race/ethnicity fields, add Child Opportunity Index 2.0, include null fields in analysis, and expand SDOH reporting."
   ],
   "captured_features": [
     "Race 1",
     "Race 2",
-    "Sex",
+    "Sex/gender",
     "Ethnicity",
     "Language",
-    "Zip Code",
+    "Zip code (at encounter)",
+    "Zip code (current)",
     "Payer",
-    "Age"
+    "Age (at encounter)",
+    "Age (current)"
   ],
   "pathologies_diseases": [],
-  "study_design": "Cross-sectional data evaluation",
+  "study_design": "Quality improvement / cross-sectional data evaluation study",
   "data_source_type": "EHR",
-  "population": "Pediatric patients and encounters at Akron Children's Hospital, Ohio (January 1, 2021 to June 30, 2021)",
-  "exposure_domain": "Demographic and health equity data",
+  "population": "Children treated at Akron Children's Hospital (a children's hospital system in northeast Ohio); 6 months of encounters between January 1, 2021 and June 30, 2021.",
+  "exposure_domain": "Social determinants of health / health-equity demographics (race, ethnicity, language, sex, zip code, payer, age)",
   "limitations": [
-    "Tools and technical infrastructure may be unique to ACH",
-    "Limited to 7 prioritized demographic fields",
-    "Upstream data collection accuracy was not fully assessed"
+    "Tools and technical infrastructure may be unique to Akron Children's Hospital.",
+    "Investigation was limited to 7 prioritized fields.",
+    "Upstream data collection accuracy was out of scope.",
+    "Race 2 field was seldom populated, limiting multiracial reporting."
   ],
   "data_availability": "in-house",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,40 +3,46 @@
   "title": "Is There a Causal Relation between Maternal Acetaminophen Administration and ADHD?",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "Pregnant CD1 mice (N = 8/group) were allocated to receive by gavage either APAP (150 mg/kg/day, equivalent to the FDA-approved maximum human clinical dose), or 0.5% carboxymethylcellulose (control group), starting on embryonic day 7 until delivery.",
-  "summary": "Preclinical experimental study investigating whether prenatal acetaminophen exposure causes hyperkinetic dysfunction/ADHD-like behavior in mouse offspring using behavioral, MRI, and histological assessments.",
+  "ehr_evidence": "The study used a murine model; 'Pregnant CD1 mice (N = 8/group) were allocated to receive by gavage either APAP (150 mg/kg/day...) or 0.5% carboxymethylcellulose (control group),' with outcomes assessed via ELISA, MRI, and histology rather than electronic health records.",
+  "summary": "In a controlled murine model, prenatal acetaminophen administration at the FDA-approved maximum human dose did not cause hyperkinetic dysfunction or ADHD-like behavioral, anatomical, or histological abnormalities in mouse offspring.",
   "key_findings": [
-    "Maternal serum APAP concentration peaked at 30 min after gavage, reaching a mean of 117 μg/ml.",
-    "No significant differences in maternal serum ALT concentrations between groups (P = 0.3 and P = 0.5).",
-    "No significant differences in locomotor activity parameters between groups (all P > 0.008).",
-    "No significant differences in volumes of 29 brain areas on MRI or neuronal quantification between groups."
+    "No significant differences in any locomotor activity parameter (total locomotor activity, rearing, central vs peripheral time, fine repetitive movements, total ambulation) between groups at the P<0.008 threshold.",
+    "No significant differences in volumes of 29 brain areas of interest on 11.7 Tesla MRI between the APAP and control groups.",
+    "No significant difference in cortical neuron density of Nissl-stained frontal cortex between groups (p<0.05; unpaired Student's t-test; n=5 control, n=3 treated).",
+    "No difference in maternal serum ALT concentrations between groups (ED7: 11.2 vs 11.7, P=0.3; ED18: 11.7 vs 12.7, P=0.5), indicating no hepatotoxicity.",
+    "Maternal serum APAP concentration peaked at 30 minutes after gavage, reaching a mean of 117 μg/ml.",
+    "Findings do not support a causal relationship between prenatal APAP exposure and hyperkinetic dysfunction/ADHD."
   ],
   "captured_features": [
-    "serum APAP concentration",
-    "serum ALT concentration",
-    "locomotor activity parameters",
-    "brain volumes (29 areas via MRI)",
-    "neuronal density (Nissl stain)"
+    "Total locomotor activity (TLMA)",
+    "Rearing (vertical activity)",
+    "Time spent in central vs peripheral enclosure areas",
+    "Fine repetitive movements",
+    "Total ambulation",
+    "Volumes of 29 brain areas on MRI",
+    "Cortical neuron density (Nissl-stained frontal cortex)",
+    "Maternal serum ALT concentration",
+    "Maternal serum APAP concentration"
   ],
   "pathologies_diseases": [
-    "ADHD",
-    "hyperkinetic dysfunction"
+    "ADHD (attention deficit hyperactivity disorder)",
+    "Hyperkinetic dysfunction"
   ],
-  "study_design": "experimental murine model study",
-  "data_source_type": "animal model",
-  "population": "pregnant CD1 mice and postnatal day 30 offspring",
-  "exposure_domain": "maternal acetaminophen administration",
+  "study_design": "Controlled experimental animal study (murine model)",
+  "data_source_type": "Biospecimen / animal model (murine)",
+  "population": "Pregnant CD1 (Swiss) mice and their offspring (murine model)",
+  "exposure_domain": "Medication/pharmaceutical (maternal acetaminophen)",
   "limitations": [
-    "lack of established animal model for ADHD",
-    "oral gavage may act as a stressor",
-    "absence of 24hr home cage activity monitoring",
-    "narrow focus on hyperkinetic behavior only",
-    "intervention limited to pregnancy without lactation period"
+    "No established animal model for ADHD, so no positive control was available for comparison.",
+    "Oral gavage itself may act as a stressor that could mask differences between groups.",
+    "No 24-hour home cage activity monitoring, which may better fit ADHD diagnostic criteria.",
+    "Narrow focus on hyperkinetic behavior only, without investigating inattention, impulsivity, or emotional dysregulation.",
+    "Results should be interpreted with caution when compared to clinical human data due to lack of accurate ADHD assessment in murine models."
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
   "data_availability_statement": "All relevant data are within the paper and its Supporting Information files.",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

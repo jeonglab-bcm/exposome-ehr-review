@@ -4,44 +4,45 @@
   "year": "2020",
   "ehr_used": true,
   "ehr_evidence": "Indiana utilizes an online registry, the Children and Hoosier Immunization Program (CHIRP), which was used by research assistants to access vaccination records for each participant.",
-  "summary": "Cross-sectional study comparing vaccination rates and parental attitudes toward vaccine safety and effectiveness between children with IBD and non-IBD controls.",
+  "summary": "Cross-sectional study comparing parental vaccine attitudes and vaccination rates between 50 children with IBD and 58 non-IBD children followed at a tertiary children's hospital in Indianapolis, Indiana.",
   "key_findings": [
-    "IBD families reported higher concern about vaccine safety (40% vs 16%, P=0.03) and effectiveness (34% vs 12%, P<0.01) compared to non-IBD families.",
-    "36% of IBD families worried vaccines would worsen their child's symptoms vs 10% of non-IBD (P≤0.01).",
-    "96% of IBD children on biologics were missing the PPSV23 booster.",
-    "51% of IBD children were missing at least one HPV-9 vaccine or had never received one.",
-    "56% of IBD children were missing an influenza vaccine from the 2018-2019 season.",
-    "0% of IBD children were missing HBV vaccines compared to 11% of non-IBD (P=0.022).",
-    "14% of IBD parents changed their vaccine opinion after diagnosis vs 3% of non-IBD parents (P=0.06)."
+    "IBD families were more concerned than non-IBD families that vaccines could worsen their child's GI illness (36% vs 10%, P < 0.001)",
+    "IBD families were more concerned about vaccine effectiveness than non-IBD families (34% vs 12%, P = 0.001)",
+    "Concern about vaccine safety was higher in IBD but not statistically significant (40% vs 16%, P = 0.084)",
+    "89% of IBD children on biologic agents were missing the PPSV23 vaccine",
+    "51% of IBD and 50% of non-IBD children were missing at least one HPV-9 vaccine (P = 0.921)",
+    "56% of IBD and 67% of non-IBD children were missing an influenza vaccine from the 2018-2019 season (P = 0.264)",
+    "0% of IBD vs 11% of non-IBD children were missing the HBV series (P = 0.022)"
   ],
   "captured_features": [
-    "parent survey responses",
-    "CHIRP registry vaccination records",
-    "demographic data",
-    "clinical data (IBD type, medications, surgery history)"
+    "Vaccination registry records for HPV-9, influenza, PCV7/PCV13, PPSV23, MCV4, MMR, varicella, HBV, hepatitis A, and Tdap",
+    "Parent/caregiver Likert-scale survey responses on vaccine attitudes and concerns",
+    "Child and parent demographics (age, sex, race, ethnicity, caregiver education, household income)",
+    "IBD subtype (Crohn disease, ulcerative colitis, indeterminate colitis)",
+    "Current IBD medications (anti-TNF/infliximab, immunomodulator, steroids, mesalamine)",
+    "History of GI-related surgery"
   ],
   "pathologies_diseases": [
-    "inflammatory bowel disease",
-    "Crohn disease",
-    "ulcerative colitis"
+    "Inflammatory bowel disease (Crohn disease, ulcerative colitis, indeterminate colitis)",
+    "Non-IBD GI conditions (abdominal pain, acid reflux, constipation)"
   ],
-  "study_design": "cross-sectional study",
-  "data_source_type": "Registry and survey",
-  "population": "Children aged 10–25 years with IBD (n=50) and non-IBD GI controls (n=58) from a tertiary children's hospital in Indianapolis, IN",
-  "exposure_domain": "N/A",
+  "study_design": "Cross-sectional",
+  "data_source_type": "registry",
+  "population": "108 children ages 10-25 years (mean age 15 for IBD, 14 for non-IBD) and their caregivers, with (n=50) and without (n=58) IBD, followed at a tertiary children's hospital in Indianapolis, Indiana",
+  "exposure_domain": "Vaccination uptake and parental vaccine attitudes/barriers",
   "limitations": [
-    "single tertiary care center setting",
-    "small sample size and convenience sampling",
-    "control group consisted of non-IBD GI clinic patients rather than healthy controls",
-    "CHIRP registry data may miss early childhood vaccinations due to 2015 mandate start date",
-    "demographically homogenous cohort (mostly white, high education)"
+    "Single tertiary care center with relatively homogenous attitudes and physician practice",
+    "Small sample size with convenience sampling (most IBD patients were on infliximab)",
+    "Comparator group was non-IBD GI clinic patients rather than healthy controls",
+    "Highly selected sample (88% white, 52% of IBD parents with graduate education)",
+    "CHIRP registry mandated only since 2015, so early childhood vaccinations may be incomplete"
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
     "https://doi.org/10.6084/m9.figshare.12442757.v1"
   ],
   "data_availability_statement": "Data stored and supported on figshare.com at https://doi.org/10.6084/m9.figshare.12442757.v1.",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

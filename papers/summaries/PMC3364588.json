@@ -3,38 +3,46 @@
   "title": "Maternal Distress during Pregnancy and Offspring Childhood Overweight.",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "We performed a cohort study using prospective data from 37,764 women and child dyads from the Danish National Birth Cohort (1996–2002).",
-  "summary": "Prospective cohort study examining the association between maternal distress during pregnancy and offspring childhood overweight at age 7.",
+  "ehr_evidence": "We perform a cohort study using prospective data from 37,764 women and child dyads from the Danish National Birth Cohort (1996–2002). Computerised telephone interviews at approximately gestational weeks 16 and 30 and when the child was 6 and 18 months old were used to obtain information about prenatal exposures, maternal health, use of medicine, lifestyle, and the health and development of the child.",
+  "summary": "A prospective cohort study of 37,764 Danish mother-child dyads from the Danish National Birth Cohort examining whether combined maternal distress (anxiety, depression, stress) during pregnancy was associated with childhood overweight at age 7.",
   "key_findings": [
-    "No significant association between maternal distress during pregnancy and childhood overweight at age 7 (adjusted OR 1.06, 95% CI 0.96–1.18).",
-    "A modest, non-significant increased risk of overweight was observed in boys (OR 1.15, 95% CI 0.99–1.33) but not in girls (OR 0.98, 95% CI 0.85–1.13).",
-    "Maternal worrying during pregnancy was associated with a slightly increased risk of childhood overweight (OR 1.10, 95% CI 1.00–1.22).",
-    "Children of mothers with low or medium socioeconomic status had an increased risk of overweight."
+    "No association between maternal distress during pregnancy and childhood overweight at 7 years (adjusted OR 1.06, 95% CI 0.96–1.18).",
+    "In sex-stratified analyses, a modest (non-significant) increased risk in boys (OR 1.15, 95% CI 0.99–1.33) but not in girls (OR 0.98, 95% CI 0.85–1.13).",
+    "Prevalence of overweight at 7 years was 9.9% (8.7% in boys, 11.5% in girls).",
+    "Children of mothers who worried during pregnancy had a slightly increased risk of overweight (OR 1.10, 95% CI 1.00–1.22).",
+    "Lack of social support seemed slightly protective against childhood overweight (OR 0.93, 95% CI 0.82–1.04)."
   ],
   "captured_features": [
-    "maternal anxiety, depression, and stress scores",
-    "child BMI and overweight status",
-    "maternal age, parity, prepregnancy BMI, smoking, exercise, gestational weight gain, breastfeeding duration",
-    "socioeconomic status",
-    "social support"
+    "Maternal distress combined score (anxiety, depression, stress) from SCL-92 and GHQ-60 interview items",
+    "Maternal anxiety, depression, and stress individual scores",
+    "Maternal worrying during pregnancy",
+    "Social support from surroundings",
+    "Child BMI and childhood overweight status (95th percentile Cole et al. reference)",
+    "Child sex",
+    "Maternal age, parity, prepregnancy BMI",
+    "Smoking during pregnancy",
+    "Gestational weight gain",
+    "Duration of breastfeeding",
+    "Recreational exercise during pregnancy",
+    "Socioeconomic status"
   ],
   "pathologies_diseases": [
-    "childhood overweight"
+    "Childhood overweight"
   ],
-  "study_design": "prospective cohort study",
-  "data_source_type": "birth cohort survey",
-  "population": "37,764 mother-child dyads from the Danish National Birth Cohort, children aged approximately 7 years",
-  "exposure_domain": "maternal psychosocial distress during pregnancy",
+  "study_design": "Prospective cohort",
+  "data_source_type": "other",
+  "population": "37,764 Danish mother-child dyads from the Danish National Birth Cohort (1996–2002); children aged ~7 years (age span 5–8, 80% aged 7), Denmark",
+  "exposure_domain": "Psychosocial/psychological stress (maternal anxiety, depression, and stress during pregnancy)",
   "limitations": [
-    "self-reported exposure and outcome data",
-    "potential selection bias due to 40% loss to follow-up",
-    "relatively low exposure contrast in a healthy, high-SES cohort",
-    "single time-point measurement of childhood overweight"
+    "Maternal distress exposure was self-reported via telephone interviews, risking misclassification.",
+    "Childhood overweight outcome was based on self-reported parental weight/height data, introducing measurement error.",
+    "Approximately 40% of initial participants were lost to the 7-year follow-up, raising selection bias concerns.",
+    "Low exposure contrast due to a relatively healthy, higher-socioeconomic-status population."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

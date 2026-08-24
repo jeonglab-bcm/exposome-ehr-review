@@ -3,46 +3,44 @@
   "title": "Severe and Moderate Asthma Exacerbations in Asthmatic Children and Exposure to Ambient Air Pollutants.",
   "year": "2016",
   "ehr_used": true,
-  "ehr_evidence": "We studied asthmatic children born between 1 April 1996 and 31 March 2011 in the province of Quebec (Canada) and identified from a population open birth cohort created with the Quebec Integrated Chronic Disease Surveillance System (QICDSS) [25].",
-  "summary": "Population-based cohort study assessing the association between birth and time-dependent exposure to ambient air pollutants (NO2, O3, PM2.5) and severe asthma exacerbations in asthmatic children in Quebec, Canada.",
+  "ehr_evidence": "We studied asthmatic children born between 1 April 1996 and 31 March 2011 in the province of Quebec (Canada) and identified from a population open birth cohort created with the Quebec Integrated Chronic Disease Surveillance System (QICDSS).",
+  "summary": "In a population-based cohort of asthmatic children in Quebec, Canada, time-dependent and birth exposure to ambient air pollutants (O3, NO2, PM2.5) was associated with severe asthma exacerbations (hospitalizations or emergency room visits).",
   "key_findings": [
-    "Of 162,752 asthmatic children followed, 35,229 had at least one exacerbation.",
-    "Time-dependent exposure to NO2 (IQR 4.95 ppb) was associated with an increased risk of exacerbation (HR 1.095, 95% CI 1.058–1.131).",
-    "Time-dependent exposure to O3 (IQR 3.85 ppb) was associated with an increased risk of exacerbation (HR 1.052, 95% CI 1.037–1.066).",
-    "Time-dependent exposure to PM2.5 (IQR 1.82 µg/m3) was associated with an increased risk of exacerbation (HR 1.025, 95% CI 1.017–1.031).",
-    "Birth exposure to PM2.5 was positively associated with exacerbation risk (HR 1.051, 95% CI 1.049–1.053).",
-    "No significant associations were found between birth exposure to NO2 (HR 1.001, 95% CI 0.995–1.005) or O3 and exacerbations.",
-    "A significant effect modification was found between NO2 exposure and sex, with increased risk observed in girls."
+    "Time-dependent exposure to NO2 (IQR 4.95 ppb) was positively associated with asthma exacerbation (HR 1.095, 95% CI 1.058–1.131).",
+    "Time-dependent exposure to O3 (IQR 3.85 ppb) was positively associated with asthma exacerbation (HR 1.052, 95% CI 1.037–1.066).",
+    "Time-dependent exposure to PM2.5 (IQR 1.82 µg/m3) was positively associated with asthma exacerbation (HR 1.025, 95% CI 1.017–1.031).",
+    "No significant association was found between exposure at birth to NO2 or O3 and asthma exacerbation.",
+    "Exposure at birth to PM2.5 was positively associated with asthma exacerbation (HR 1.051, 95% CI 1.049–1.053).",
+    "A significant effect modification was found between NO2 exposure and sex, with increased exacerbation risk for girls (interaction HR 1.057, 95% CI 1.005–1.112)."
   ],
   "captured_features": [
-    "QICDSS health insurance registry",
-    "physician claims",
-    "hospital admissions",
-    "deaths",
-    "ICD codes for asthma",
-    "residential postal codes",
-    "Pampalon deprivation indices"
+    "Asthma exacerbations (hospitalization or emergency room visit with asthma diagnosis)",
+    "Annual average O3, NO2, and PM2.5 concentrations assigned to residential postal code",
+    "Age groups (<4, 4–8, >8 years)",
+    "Sex",
+    "Year of birth",
+    "Material and social deprivation indices",
+    "Ordinal number of recurring exacerbations",
+    "Residential postal code and person-years"
   ],
   "pathologies_diseases": [
-    "asthma",
-    "asthma exacerbations"
+    "Asthma (severe and moderate asthma exacerbations)"
   ],
-  "study_design": "Population-based cohort study",
-  "data_source_type": "Administrative health registry",
-  "population": "Asthmatic children born 1996-2011 in Quebec, Canada (<13 years)",
-  "exposure_domain": "Ambient air pollution (NO2, O3, PM2.5)",
+  "study_design": "Cohort (population-based cohort with Cox gap-time models)",
+  "data_source_type": "claims",
+  "population": "Asthmatic children under 13 years old in Quebec, Canada, born 1996–2011 (population-based cohort, 162,752 children, 1,020,280 person-years)",
+  "exposure_domain": "Air pollution (ambient air pollutants: O3, NO2, PM2.5)",
   "limitations": [
-    "Health care service use definition may miss milder exacerbations",
-    "30-day buffer period may underestimate recurring events",
-    "Exposure assigned at postal code centroid causing measurement error",
-    "PM2.5 exposure constant over follow-up period",
-    "Lack of individual-level SES and secondhand smoke data",
-    "Self-reported residential addresses"
+    "Asthma exacerbations defined by health care service use (hospital admissions and ER visits) rather than medication use or self-reported symptoms, potentially capturing only more severe cases.",
+    "Exposure assessed using models rather than individual measurements, with exposure assigned to postal code centroids introducing measurement error.",
+    "Individual-level information on socioeconomic status, secondhand smoke, and family history of asthma was unavailable.",
+    "Residential exposure based on self-reported addresses updated every four years.",
+    "PM2.5 exposure held constant (2001–2006 average) throughout follow-up, limiting assessment of temporal variation."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

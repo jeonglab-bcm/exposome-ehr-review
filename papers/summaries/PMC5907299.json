@@ -3,37 +3,37 @@
   "title": "Local- and regional-scale air pollution modelling (PM(10)) and exposure assessment for pregnancy trimesters, infancy, and childhood to age 15 years: Avon Longitudinal Study of Parents And Children (ALSPAC).",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "The study used residential address history from the ALSPAC contact database and hourly PM10 measurements from the UK Automatic Urban and Rural Network (AURN) monitoring sites.",
-  "summary": "Development and evaluation of local and regional-scale PM10 dispersion models to estimate individual-level historical air pollution exposures from pregnancy through age 15 years for the ALSPAC birth cohort.",
+  "ehr_evidence": "ALSPAC provided us with all residential addresses held in the ALSPAC contact database (n = 45,771); we downloaded hourly concentrations of PM10 from the AURN data archive for the Bristol Centre and Bristol St Paul's monitoring sites. The study used dispersion modelling (ADMS-Urban, NAME-III) of PM10, not electronic health records.",
+  "summary": "A PM10 exposure-modelling study using ADMS-Urban and NAME-III dispersion models to estimate source-specific particulate exposures across pregnancy trimesters, infancy, and childhood to age ~15 in the ALSPAC birth cohort (Bristol/Avon, England).",
   "key_findings": [
-    "PM10 exposures declined on average by 11.6 μg/m3 from the first year of life (mean 31.2 μg/m3) to age ~15 (mean 19.6 μg/m3).",
-    "Intra-subject exposure contrasts were largest between pregnancy trimesters (5th to 95th centile: 24.4–37.3 μg/m3).",
-    "Local sources contributed 18.5%–19.5% during pregnancy/infancy and 14.4%–17.0% for longer periods, with main roads contributing ~3.0%.",
-    "Model evaluation showed good correlation with measured weekly PM10 concentrations (r = 0.71, p < 0.001), though the model underestimated concentrations (MB = -4.1 μg/m3, MPB = 21%)."
+    "Model evaluation: ST-PM10TOTAL correlated with weekly measured PM10 at the Bristol Centre site (r = 0.71, p = 0.000), MSE-r2 = 0.41, RMSE = 11.4 μg/m3, MB = -4.1 μg/m3, MPB = 21%, FAC2 = 81% (n = 37 weeks).",
+    "Mean ST-PM10TOTAL exposure was 33.5 μg/m3 (5th-95th centile 25.7-42.6) in trimester 1, declining to 30.8 μg/m3 (25.9-35.8) in late infancy.",
+    "Local main roads (ROAD) contributed ~3% (2.9-3.0%) of total PM10; regional/long-range (NAME) contributed 42.2-45.6%; local sources (ROAD+GRID) contributed 18.6-19.5%.",
+    "Mean long-term PM10 exposures fell from 31.2 μg/m3 (year 1) to 19.6 μg/m3 (age ~15), with a 5.4 μg/m3 difference between ages 0-8 (27.9 μg/m3) and 9-16 (22.5 μg/m3).",
+    "Spatial contrasts were low (5th-95th centile 25.4-30.0 μg/m3 to age ~8; 20.7-23.9 μg/m3 from age ~8 to ~15), and 9.5% of address locations were within 50 m of a main road."
   ],
   "captured_features": [
-    "residential addresses",
-    "PM10 concentrations (total, local, regional)",
-    "traffic flow and emissions data",
-    "meteorological variables",
-    "model performance metrics (correlation, bias, RMSE)"
+    "Modelled PM10 concentrations (μg/m3) by exposure period (trimesters, early/late infancy, annual to age ~15)",
+    "Source components: local main roads (ROAD), local other sources (GRID), regional/long-range (NAME), natural/background",
+    "Residential address history and geocoded coordinates",
+    "Model performance statistics (Spearman rho, MSE-r2, RMSE, MB, MPB, FAC2)"
   ],
   "pathologies_diseases": [],
-  "study_design": "Methodological exposure assessment study using dispersion modelling within a prospective birth cohort",
-  "data_source_type": "Birth cohort (ALSPAC) with environmental monitoring and dispersion modelling data",
-  "population": "Children in the ALSPAC birth cohort from pregnancy through age ~15 years, residing in the Avon region/south west England",
-  "exposure_domain": "Air pollution (PM10), including local (traffic, industry, housing) and regional/long-range sources",
+  "study_design": "Cohort-based exposure assessment / dispersion-modelling methodology study (ALSPAC birth cohort)",
+  "data_source_type": "other",
+  "population": "ALSPAC birth cohort; pregnancies due to deliver 1991-1992 in Bristol/Avon, south west England; children followed from conception to age ~15 years (n = 11,929 for pregnancy/infancy; n = 10,383 to age ~15)",
+  "exposure_domain": "Air pollution (PM10 particulate matter, source-specific)",
   "limitations": [
-    "Single monitoring site used for model evaluation",
-    "Lack of historic emissions data for specific industrial and domestic sources",
-    "Inability to model terrain, buildings, and wet deposition effects",
-    "Use of constant value for natural PM10 sources due to lack of pre-1993 monitoring data",
-    "Potential overestimation of background concentrations from imputed central site data"
+    "Model evaluation limited to a single monitoring site at any time (1993-2008), so spatial bias could not be quantified.",
+    "No information on individual point sources (e.g. industrial stacks) for earlier years; aggregated 1 km grid emissions used.",
+    "SO2 emissions not included, so secondary sulphate chemistry was unaccounted for, possibly underestimating local PM10.",
+    "Terrain and building effects not modelled; single constant (12.0 μg/m3) used for natural sources.",
+    "Limited monitoring data for pregnancy periods (1990-1992) required imputation; study area excluded participants who moved far from the catchment."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

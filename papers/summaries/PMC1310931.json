@@ -4,46 +4,57 @@
   "year": "2005",
   "ehr_used": true,
   "ehr_evidence": "Birth certificate information for California-born children who participated in the CHS was obtained by computerized linkage of participants with the California Department of Health Services Birth Statistical Master Files and Birth Cohort Files.",
-  "summary": "Population-based cohort study examining associations between prenatal ambient air pollution exposure and birth weight, low birth weight, and intrauterine growth retardation in term infants in California.",
+  "summary": "In a population-based cohort of 3,901 term infants born in California (1975-1987) participating in the Children's Health Study, prenatal exposure to ambient air pollutants (ozone, carbon monoxide, PM10, NO2) was associated with reduced birth weight and increased risk of IUGR and LBW.",
   "key_findings": [
-    "A 12-ppb increase in 24-hr ozone averaged over the entire pregnancy was associated with 47.2 g lower birth weight (95% CI, 27.4–67.0 g).",
-    "A 1.4-ppm difference in first-trimester carbon monoxide exposure was associated with 21.7 g lower birth weight (95% CI, 1.1–42.3 g) and a 20% increased risk of intrauterine growth retardation (95% CI, 1.0–1.4).",
-    "A 20-µg/m3 difference in PM10 during the third trimester was associated with a 21.7-g lower birth weight (95% CI, 1.1–42.2 g), but this association was reduced and not significant after adjusting for ozone.",
-    "A 17-ppb difference in third-trimester ozone exposure increased the risk of intrauterine growth retardation by 20% (95% CI, 1.0–1.3).",
-    "NO2 levels were not associated with birth weight in this study."
+    "A 12-ppb increase in 24-hr ozone averaged over the entire pregnancy was associated with 47.2 g lower birth weight (95% CI, 27.4-67.0 g), most robust for second- and third-trimester exposures.",
+    "A 1.4-ppm difference in first-trimester carbon monoxide exposure was associated with 21.7 g lower birth weight (95% CI, 1.1-42.3 g) and a 20% increased risk of IUGR (95% CI, 1.0-1.4).",
+    "First-trimester CO and third-trimester O3 exposures were associated with a 20% increased risk of IUGR.",
+    "A 20-µg/m3 difference in PM10 during the third trimester was associated with 21.7 g lower birth weight (95% CI, 1.1-42.2 g), but this was reduced and no longer significant after adjusting for O3.",
+    "Third-trimester O3 exposure was associated with a 40% increased risk of LBW (95% CI, 1.0-1.9), though estimates had substantial uncertainty due to the small number of LBW newborns.",
+    "NO2 was not significantly associated with birth weight.",
+    "Exposures to PM10, NO2, and CO averaged over the entire pregnancy were not significantly associated with birth weight."
   ],
   "captured_features": [
     "birth weight",
     "gestational age",
     "maternal age at birth",
-    "maternal residence ZIP code",
+    "maternal residence ZIP code at birth",
     "parity",
+    "months since last live birth",
+    "gestational diabetes",
+    "marital status",
     "maternal smoking during pregnancy",
     "socioeconomic status",
     "race/ethnicity",
-    "ambient air pollutant levels (O3, CO, PM10, NO2)",
-    "intrauterine growth retardation",
-    "low birth weight"
+    "child's sex",
+    "monthly average ozone (O3)",
+    "carbon monoxide (CO)",
+    "particulate matter (PM10)",
+    "nitrogen dioxide (NO2)",
+    "temperature",
+    "elevation"
   ],
   "pathologies_diseases": [
-    "intrauterine growth retardation",
-    "low birth weight"
+    "low birth weight (LBW)",
+    "intrauterine growth retardation (IUGR)",
+    "reduced birth weight"
   ],
-  "study_design": "prospective cohort study",
-  "data_source_type": "Birth certificates (linked registry), environmental monitoring, questionnaires",
-  "population": "3,901 term infants (gestational age 37-44 weeks) born in California between 1975 and 1987",
-  "exposure_domain": "Ambient air pollution (ozone, carbon monoxide, PM10, nitrogen dioxide)",
+  "study_design": "cohort",
+  "data_source_type": "registry",
+  "population": "3,901 term infants (gestational age 37-44 weeks) born in California 1975-1987, participants in the population-based Children's Health Study across 12 southern California communities",
+  "exposure_domain": "air pollution (ozone, carbon monoxide, particulate matter PM10, nitrogen dioxide)",
   "limitations": [
-    "Exposure assigned based on ZIP code centroid at childbirth, which may not reflect actual exposure during the entire pregnancy due to residential mobility.",
-    "Lack of data on maternal employment location and commuting patterns.",
-    "Potential misclassification of gestational age based on maternal recall of last menstrual period.",
-    "Low prevalence of low birth weight limits statistical power for categorical outcomes.",
-    "Correlation between pollutants and environmental factors (temperature, elevation) may affect multipollutant model estimates."
+    "Air pollution exposure was assigned based on the ZIP code centroid of maternal residence at childbirth, which may not reflect actual exposure during the entire pregnancy, and residential address most often reflects the last trimester.",
+    "Lacked information on maternal employment location and commuting patterns, contributing to non-differential exposure misclassification.",
+    "No direct measures of maternal indoor and occupational pollutant exposures.",
+    "Small number of LBW newborns (<2% prevalence) led to substantial uncertainty in LBW estimates.",
+    "Gestational age was based on maternal recall of last menstrual period, which may be less accurate.",
+    "Measurement error in pollutant estimates, particularly in two-pollutant models, may attenuate effect estimates."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

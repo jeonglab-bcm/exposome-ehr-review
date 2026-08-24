@@ -3,43 +3,51 @@
   "title": "BCG Moreau Vaccine Safety Profile and NK Cells-Double Protection Against Disseminated BCG Infection in Retrospective Study of BCG Vaccination in 52 Polish Children with Severe Combined Immunodeficiency.",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "Retrospective hospital clinical records from the Children’s Memorial Health Institute (CMHI), Warsaw. 'The profiles of 52 SCID patients vaccinated at birth with BCG, hospitalized in Children’s Memorial Health Institute, Warsaw (CMHI), in the years 1980–2015 were compared with those of 349 BCG-vaccinated SCID patients from other countries analyzed by Beatriz E. Marciano et al. in a retrospective study.'",
-  "summary": "Retrospective study evaluating the safety profile and clinical outcomes of the BCG Moreau vaccine in 52 Polish children with severe combined immunodeficiency (SCID) hospitalized at the Children’s Memorial Health Institute in Warsaw between 1980 and 2015, compared with an international cohort.",
+  "ehr_evidence": "The profiles of 52 SCID patients vaccinated at birth with BCG, hospitalized in Children's Memorial Health Institute, Warsaw (CMHI), in the years 1980–2015 were compared with those of 349 BCG-vaccinated SCID patients from other countries analyzed by Beatriz E. Marciano et al.",
+  "summary": "A retrospective single-center study of 52 Polish SCID patients vaccinated at birth with the BCG Moreau vaccine at CMHI Warsaw (1980–2015) comparing rates of disseminated BCG infection and immunological predictors (NK cells) with a multicenter retrospective study of 349 SCID patients.",
   "key_findings": [
-    "Disseminated BCG infection occurred in 10 out of 52 SCID patients (19%), significantly lower than the 34% rate in the external Marciano cohort (p = 0.0028).",
-    "Localized BCG complications were observed in 12 patients (24%), not significantly different from the external cohort's 17% (p = 0.2417).",
-    "Disseminated BCG complications were exclusively found in SCID patients with low NK cell counts (p < 0.000001), while T cell counts showed no significant impact (p = 0.0915).",
-    "Hematopoietic stem cell transplantation (HSCT) was performed in 43 patients (83%), significantly higher than the 54% rate in the external cohort (p = 0.0001).",
-    "Mortality from BCG complications was 5% (3 deaths) in the CMHI cohort versus 13% (46 deaths) in the external cohort (p = 0.1724)."
+    "Disseminated BCG infection occurred in 10 of 52 (19%) CMHI patients versus 119 of 349 (34%) in the Marciano study (p = 0.0028).",
+    "The absolute number of NK cells was significantly lower (p = 0.0161) and B cells significantly higher (p = 0.0126) in the CMHI group with BCG complications.",
+    "Disseminated BCG complications occurred only in 18 of 52 SCID patients with low NK cell counts (p < 0.000001).",
+    "The number of T cells did not significantly influence disseminated BCG (p = 0.0915).",
+    "Localized BCG complication rate was higher but not significantly (12 of 52, 24% vs 60 of 349, 17%; p = 0.2417).",
+    "Mortality was not significantly different (46 of 349, 13% vs 3 of 52, 5%; p = 0.1724).",
+    "HSCT was performed significantly more often in the CMHI cohort (43 of 52, 83%) than in the Marciano study (190 of 349, 54%; p = 0.0001)."
   ],
   "captured_features": [
-    "clinical symptoms and infection localization",
-    "microbiological and histopathological findings",
-    "immunological cell counts (T, B, and NK cells)",
-    "genetic mutation status (e.g., IL2RG, JAK3, RAG1/2)",
-    "treatment records (anti-TB therapy, HSCT)",
-    "vaccination details and substrain"
+    "Disseminated BCG infection status",
+    "Localized BCG infection/complications",
+    "NK cell counts (CD56/CD16)",
+    "T cell counts (CD3)",
+    "B cell counts (CD19/CD20)",
+    "HSCT procedures",
+    "Anti-TB treatment",
+    "SCID phenotype (TB+NK-, TB-NK+)",
+    "Genetic mutations (IL2RG, JAK3, RAG1/2, IL7RA, Artemis, MHC II, ZAP-70, Cernunnos)",
+    "Age at first symptoms and at diagnosis",
+    "Mortality/deaths",
+    "Clinical manifestations (meningitis, bronchopneumonia, skin infection, osteomyelitis, liver/spleen abscess)"
   ],
   "pathologies_diseases": [
-    "severe combined immunodeficiency (SCID)",
-    "disseminated BCG infection",
-    "localized BCG infection",
-    "primary immunodeficiency diseases (PID)"
+    "Severe combined immunodeficiency (SCID)",
+    "Disseminated BCG infection",
+    "Localized BCG infection",
+    "Primary immunodeficiency diseases (PID)"
   ],
-  "study_design": "retrospective comparative cohort study",
-  "data_source_type": "Hospital clinical records",
-  "population": "52 Polish children with SCID, hospitalized at Children’s Memorial Health Institute, Warsaw (1980–2015)",
-  "exposure_domain": "BCG Moreau vaccine",
+  "study_design": "Retrospective single-center cohort compared with a multicenter retrospective study",
+  "data_source_type": "registry",
+  "population": "52 Caucasian Polish children with SCID, born in Central-Eastern Poland and vaccinated at birth with BCG Moreau vaccine, hospitalized at the Department of Immunology, CMHI Warsaw (1980–2015); mean age at first symptoms 3.3 months, mean age at diagnosis 13.5 months.",
+  "exposure_domain": "BCG Moreau vaccine (vaccination exposure)",
   "limitations": [
-    "retrospective single-center design",
-    "small sample size (n=52)",
-    "comparison with an external historical cohort rather than an internal control group",
-    "long study period (1980–2015) with potential variations in diagnostic and treatment practices over time"
+    "Single-center design limiting generalizability.",
+    "Retrospective design with long time span (1980–2015) and changing clinical practices.",
+    "Small sample size (52 patients).",
+    "Comparison with a different multicenter study (Marciano et al.) with differing cohort characteristics and vaccine policies."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,40 +3,45 @@
   "title": "Is intrauterine exposure to acetaminophen associated with emotional and hyperactivity problems during childhood? Findings from the 2004 Pelotas birth cohort.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "We performed a prospective longitudinal population-based study using data from the 2004 Pelotas birth cohort.",
-  "summary": "Prospective longitudinal birth cohort study investigating the association between prenatal acetaminophen exposure and childhood emotional and hyperactivity symptoms at ages 6 and 11 in a Brazilian population, finding sex-specific associations primarily in boys at age 6.",
+  "ehr_evidence": "We performed a prospective longitudinal population-based study using data from the 2004 Pelotas birth cohort; exposure (acetaminophen use during pregnancy) was collected retrospectively via a standardized perinatal questionnaire and outcomes via the parent-reported Strengths and Difficulties Questionnaire (SDQ).",
+  "summary": "A prospective longitudinal population-based cohort study of 4231 children from the 2004 Pelotas birth cohort examined the association between intrauterine acetaminophen exposure and emotional and hyperactivity/inattention problems at ages 6 and 11 years.",
   "key_findings": [
-    "At age 6, intrauterine acetaminophen exposure increased odds of emotional problems in boys (OR = 1.47; 95% CI: 1.07–2.02) and hyperactivity/inattention problems (OR = 1.42; 95% CI: 1.06–1.92).",
-    "At age 11, associations for boys were attenuated and lost statistical significance after adjustment (emotional: OR = 1.31; 95% CI: 0.99–1.73; hyperactivity/inattention: OR = 1.25; 95% CI: 0.95–1.65).",
-    "No significant associations were observed for girls at either age 6 or 11.",
-    "Sensitivity analyses confirmed the effect was specific to acetaminophen, as other nonsteroidal analgesics showed no association with behavioral outcomes."
+    "At 6 years, acetaminophen use in boys was associated with increased odds of emotional problems (adjusted OR = 1.47; 95% CI: 1.07–2.02) and hyperactivity/inattention problems (adjusted OR = 1.42; 95% CI: 1.06–1.92).",
+    "At 11 years, the effect attenuated and lost significance after adjustment for boys: emotional problems OR = 1.31 (95% CI: 0.99–1.73) and hyperactivity/inattention OR = 1.25 (95% CI: 0.95–1.65).",
+    "No association was observed for any phenotypes at either age in girls.",
+    "No associations between acetaminophen exposure and total difficulties or SDQ subscales were observed after adjustment in the total sample.",
+    "Sensitivity analysis found no association between other nonsteroidal analgesics and emotional (adjusted OR = 1.09; 95% CI: 0.77–1.55) or hyperactivity (adjusted OR = 1.07; 95% CI: 0.77–1.48) symptoms."
   ],
   "captured_features": [
-    "Maternal self-reported acetaminophen use during pregnancy",
-    "Strengths and Difficulties Questionnaire (SDQ) scores",
-    "Maternal sociodemographic characteristics",
-    "Maternal health behaviors and conditions",
-    "Child sex"
+    "Maternal acetaminophen use during pregnancy (at least once vs never)",
+    "Maternal age, parity, national economic index, maternal educational level, smoking and alcohol use during pregnancy, maternal skin color, infections during pregnancy, pre-gestational BMI, maternal mood issues, use of other analgesics",
+    "Child sex",
+    "SDQ total difficulties score",
+    "SDQ emotional symptoms subscale",
+    "SDQ conduct problems subscale",
+    "SDQ hyperactivity/inattention subscale",
+    "SDQ peer relationship problems subscale",
+    "SDQ prosocial behavior subscale"
   ],
   "pathologies_diseases": [
-    "emotional problems",
-    "hyperactivity/inattention problems",
-    "behavioral symptoms"
+    "Emotional problems",
+    "Hyperactivity/inattention problems",
+    "Behavioral problems (SDQ total difficulties)"
   ],
-  "study_design": "prospective longitudinal birth cohort study",
-  "data_source_type": "birth cohort",
-  "population": "children from the 2004 Pelotas birth cohort in Brazil, assessed at ages 6 and 11 years",
-  "exposure_domain": "prenatal acetaminophen (paracetamol) exposure",
+  "study_design": "Prospective longitudinal population-based birth cohort",
+  "data_source_type": "birth cohort (population-based, questionnaire- and assessment-based)",
+  "population": "Children from the 2004 Pelotas birth cohort in southern Brazil, assessed at ages 6 (N=3470) and 11 (N=3447) years",
+  "exposure_domain": "Prenatal medication exposure (acetaminophen/paracetamol use during pregnancy)",
   "limitations": [
-    "Retrospective recall of maternal medication use may lead to underreporting.",
-    "Lack of data on exposure timing (trimester) and dosage.",
-    "Potential residual confounding by socioeconomic position.",
-    "Absence of information on reasons for medication use (e.g., fever or infection)."
+    "Retrospective recall of maternal medication use during pregnancy likely caused underreporting and exposure misclassification.",
+    "Data did not allow evaluation of exposure by trimester of pregnancy or dose.",
+    "Residual confounding by socioeconomic position variables could not be fully excluded.",
+    "No information on reasons for medication use (e.g., fever/infection) during pregnancy."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

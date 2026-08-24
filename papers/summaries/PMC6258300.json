@@ -3,45 +3,46 @@
   "title": "Early-life antibiotics attenuate regulatory T cell generation and increase the severity of murine house dust mite-induced asthma.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "C57BL/6J nursing mothers with 3-week-old female pups were purchased from the Jackson Laboratory (Bar Harbor, ME, USA).",
-  "summary": "Experimental murine study investigating how early-life pulsed antibiotic exposure affects the severity of house dust mite-induced allergic airway disease, microbiome diversity, and regulatory T cell generation.",
+  "ehr_evidence": "C57BL/6J nursing mothers with 3-week-old female pups were purchased from the Jackson Laboratory (Bar Harbor, ME, USA); mice were exposed to three short courses of ABX following weaning and experimental asthma was thereafter induced, with BAL fluid, serum, lung tissue, hilar lymph nodes, and fecal microbiome characterized.",
+  "summary": "In a murine HDM-induced asthma model, early-life pulsed antibiotic exposure worsened airway inflammation and airway hyper-reactivity and reduced hilar lymph node Tregs, a reduction correlating with decreased fecal microbiome diversity.",
   "key_findings": [
-    "HDM+ABX Mix animals exhibited threefold higher BAL leukocytosis (29.0 × 10^5 vs. 9.0 × 10^5 cells, p < 0.01).",
-    "HDM+ABX Mix had twofold higher relative eosinophilia (43% vs. 20%, p < 0.01) and over fivefold higher total eosinophils (14.0 × 10^5 vs. 2.4 × 10^5, p < 0.01).",
-    "HDM+ABX Mix had significantly higher HDM-specific IgE (0.95 vs. 0.50 mean AUC, p < 0.05).",
-    "HDM+ABX Mix showed more severe lung histopathology (2.5 vs. 1.5 median score, p < 0.01).",
-    "HDM+ABX Mix had significantly higher respiratory system resistance AUC (5.1 vs. 3.8, p < 0.05).",
-    "ABX exposure reduced fecal microbiome diversity (Simpson index 0.747 vs. 0.954, p < 0.01).",
-    "HDM+ABX Mix had lower pulmonary Treg proportions (8.9% vs. 11.1%, p < 0.05).",
-    "Microbiome diversity positively correlated with Treg proportion (Spearman's r = 0.7109, p < 0.01)."
+    "HDM+ABX Mix animals exhibited threefold higher BAL leukocytosis than HDM alone (29.0 × 10^5 vs. 9.0 × 10^5 cells, p < 0.01)",
+    "HDM+ABX Mix animals had twofold higher relative eosinophilia (43% vs. 20%, p < 0.01) and over fivefold higher total eosinophil numbers (14.0 × 10^5 vs. 2.4 × 10^5 eosinophils, p < 0.01)",
+    "Serum HDM-specific IgE was significantly higher in HDM+ABX Mix animals (0.95 vs. 0.50 mean AUC, p < 0.05)",
+    "HDM+ABX Mix mice had more severe lung histopathology (2.5 vs. 1.5 median score, p < 0.01) with no significant difference in mucus scores",
+    "Airway hyper-reactivity (Rrs) was significantly higher in HDM+ABX Mix animals (5.1 vs. 3.8 mean AUC, p < 0.05)",
+    "Simpson diversity index was a third higher for HDM vs HDM+ABX Mix (0.954 vs. 0.747, p < 0.01)",
+    "HDM+Antibiotic Mix mice had significantly lower proportions of Foxp3+ Tregs as percent of CD4+ T cells (8.9% vs. 11.1%, p < 0.05)",
+    "Microbiome diversity positively correlated with Treg proportion (Spearman's r = 0.7109, p < 0.01)"
   ],
   "captured_features": [
-    "BAL leukocyte counts",
-    "eosinophil counts",
-    "serum HDM-specific IgE levels",
-    "lung histopathology scores",
-    "respiratory system resistance (Rrs)",
-    "fecal microbiome diversity (Simpson index, 16S rRNA sequencing)",
-    "pulmonary regulatory T cell proportions"
+    "BAL total leukocyte counts",
+    "BAL eosinophil counts and differentials",
+    "Serum HDM-specific IgE (ELISA)",
+    "Lung histopathology inflammation and mucus scores",
+    "Airway hyper-reactivity (total respiratory system resistance, Rrs)",
+    "Fecal microbiome diversity (16S rRNA sequencing, Simpson diversity index, LEfSe)",
+    "Hilar lymph node Foxp3+ CD4+ regulatory T cell proportions"
   ],
   "pathologies_diseases": [
-    "asthma",
-    "allergic airway disease"
+    "Allergic airway disease (asthma)",
+    "Airway inflammation",
+    "Airway hyper-reactivity"
   ],
-  "study_design": "experimental murine model",
-  "data_source_type": "animal model",
-  "population": "C57BL/6J mice",
-  "exposure_domain": "antibiotics",
+  "study_design": "Experimental murine model (antibiotic exposure followed by house dust mite-induced allergic airway disease)",
+  "data_source_type": "biospecimen",
+  "population": "C57BL/6J mice (female pups weaned at 3 weeks), house dust mite-induced asthma model",
+  "exposure_domain": "Early-life antibiotic exposure (ampicillin, metronidazole, neomycin, vancomycin)",
   "limitations": [
-    "ABX cocktail combination is unlikely to be utilized clinically.",
-    "Study does not conclusively establish that immunologic changes are exclusively derived from microbiome disruption.",
-    "Limited sample size for some Treg assessments.",
-    "Results may not directly translate to other diseases."
+    "The antibiotic cocktail used is unlikely to be utilized clinically",
+    "The study does not conclusively establish that immunologic changes are exclusively derived from microbiome disruption, as some antibiotics have direct immunomodulatory properties",
+    "Small sample sizes limited some analyses",
+    "Results should be applied with caution to other diseases"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

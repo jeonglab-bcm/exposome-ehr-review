@@ -2,48 +2,52 @@
   "pmcid": "PMC2717145",
   "title": "Childhood lead poisoning: conservative estimates of the social and economic benefits of lead hazard control.",
   "year": "2009",
-  "ehr_used": false,
-  "ehr_evidence": "Data for children with BLLs < 10 μg/dL are estimated from CDC NHANES 2003–2006. Data for > 10 μg/dL are from state-level surveillance and assume uniform distribution of cases within each BLL group.",
-  "summary": "Cost-benefit analysis quantifying the social and economic benefits of household lead paint hazard control compared to investment costs for children ≤ 6 years in the US.",
+  "ehr_used": true,
+  "ehr_evidence": "The estimated number of children affected in each group is a combination of two sets of data: pooled NHANES (2003–2006) and state child blood lead surveillance data from the National Center for Environmental Health (CDC 2007a).",
+  "summary": "A cost–benefit analysis quantifying the social and economic benefits of household lead paint hazard control in a 2006 U.S. cohort of children ≤ 6 years of age, finding large returns on investment.",
   "key_findings": [
-    "Each dollar invested in lead paint hazard control results in a return of $17–$221 or a net savings of $181–269 billion.",
-    "Total costs of lead hazard control range from $1.2 to $11.0 billion, while total benefits range from $192 to $270 billion.",
-    "Lead exposure is associated with 9.3–13.1 million points of IQ loss, translating to $165–233 billion in lost lifetime earnings."
+    "Each dollar invested in lead paint hazard control returns $17–$221, with a net benefit of $181–$269 billion.",
+    "Total benefits of lead hazard control range from $192–$270 billion versus costs of $1.2–$11.0 billion.",
+    "After adjusting for other lead sources, net benefit ranges from $124–$188 billion, a return of $12–$155 per dollar invested.",
+    "Total IQ loss from elevated BLLs falls between 9.3 and 13.1 million points, with net lifetime earnings loss of $165–$233 billion.",
+    "Lead-linked crime direct costs total approximately $1.8 billion."
   ],
   "captured_features": [
-    "blood lead levels (BLLs)",
-    "demographic characteristics",
-    "health care costs",
+    "blood lead levels (BLL) by group",
+    "number of children affected per BLL group",
+    "health care treatment costs",
+    "IQ loss points",
     "lifetime earnings loss",
+    "lost tax revenue",
     "special education costs",
-    "ADHD costs",
-    "crime costs"
+    "lead-linked ADHD costs",
+    "lead-linked crime costs"
   ],
   "pathologies_diseases": [
     "lead poisoning",
-    "attention deficit–hyperactivity disorder (ADHD)",
     "cognitive impairment",
+    "attention deficit–hyperactivity disorder",
     "hypertension",
     "heart disease",
     "stroke",
     "kidney malfunction",
-    "osteoporosis"
+    "osteoporosis",
+    "learning disabilities",
+    "mental retardation"
   ],
-  "study_design": "cost-benefit analysis",
-  "data_source_type": "NHANES survey data and state surveillance data",
-  "population": "children ≤ 6 years of age in the United States",
-  "exposure_domain": "lead exposure",
+  "study_design": "cost–benefit analysis (economic modeling)",
+  "data_source_type": "registry",
+  "population": "U.S. children ≤ 6 years of age (2006 cohort)",
+  "exposure_domain": "heavy metals (lead exposure from lead-based paint)",
   "limitations": [
-    "restricts analysis to lead-based paint as the primary source",
-    "uses conservative lower bounds for prevalence",
-    "excludes indirect crime costs and long-term adult health effects",
-    "assumes uniform distribution of BLLs within groups",
-    "small sample sizes prevent accurate categorizing of children into each BLL subgroup"
+    "Analysis restricted to lead-based paint as the only lead source, downwardly biasing cost estimates and inflating return on investment.",
+    "Uses conservative lower bounds of lead prevalence and excludes many costs (later-in-life health care, neonatal mortality, indirect crime costs, property value gains).",
+    "Small sample sizes prevent accurate categorization of children into BLL subgroups."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,41 +3,42 @@
   "title": "Reduced intellectual development in children with prenatal lead exposure.",
   "year": "2006",
   "ehr_used": false,
-  "ehr_evidence": "We recruited women at 12 weeks of pregnancy and measured BPb every 8 weeks to delivery. We evaluated children with psychometric tests, anthropometric measurements, and BPb at 6-month intervals after birth. We collected data on demographic, socioeconomic, and other factors that might constitute potential confounders or important control variables modifying the relationship between lead and child development.",
-  "summary": "Prospective longitudinal cohort study evaluating the association between serial prenatal and postnatal blood lead concentrations and child intelligence quotient (IQ) from ages 6 to 10 in Mexico City.",
+  "ehr_evidence": "The subjects belonged to a cohort of children born in Mexico City at the National Institute of Perinatology between 1987 and 1992, followed until 2002.",
+  "summary": "In a prospective cohort of children born in Mexico City (1987-1992) and followed to 2002, higher maternal third-trimester blood lead was associated with lower child full-scale IQ at ages 6-10 years.",
   "key_findings": [
-    "IQ at 6–10 years decreased significantly with increasing natural-log third-trimester BPb (β = –3.90; 95% CI, –6.45 to –1.36).",
-    "BPb at week 28 of pregnancy was the only prenatal lead measure significantly predicting lower FSIQ (β = –4.13, p < 0.001).",
-    "Higher 28- to 36-week BPb was associated with lower VIQ (β = –3.15, p = 0.007) and PIQ (β = –4.37, p = 0.004).",
-    "The logarithmic form of third-trimester BPb fit the data significantly better than a linear functional form (t = 2.15, p = 0.02).",
-    "No significant association was found between 6- to 10-year postnatal BPb and FSIQ after adjusting for covariates and other lead measures."
+    "Higher natural-log third-trimester (28-36 week) maternal blood lead was significantly associated with lower child FSIQ at 6-10 years (β = –3.90; 95% CI –6.45 to –1.36), controlling for other lead and covariates.",
+    "Blood lead at week 28 of pregnancy was the only prenatal lead measure significantly predicting lower FSIQ (β = –4.13; 95% CI –6.45 to –1.81; p = 0.0006).",
+    "The BPb-IQ dose-response relationship was log-linear, not linear-linear (J-test t = 2.15, p = 0.02).",
+    "In the VIQ model, higher 28-36 week BPb was associated with lower verbal IQ (β = –3.15, p = 0.007); in the PIQ model, 28-36 week BPb was inversely associated with performance IQ (β = –4.37, p = 0.004).",
+    "No significant association between contemporaneous 6-10 year BPb and FSIQ after adjustment for other prenatal and postnatal lead and covariates."
   ],
   "captured_features": [
-    "Blood lead concentration (BPb) at multiple prenatal and postnatal time points",
-    "Wechsler Intelligence Scale for Children–Revised (WISC-R) Full-scale, Verbal, and Performance IQ scores",
-    "Maternal IQ and education level",
+    "Blood lead (BPb) at prenatal weeks 12-20 and 28-36, and postnatal ages 1-10 years",
+    "Full-scale IQ (FSIQ) at ages 6-10 years",
+    "Verbal IQ (VIQ) and performance IQ (PIQ)",
+    "Maternal IQ",
     "Socioeconomic status index",
+    "Birth weight",
     "HOME scale score",
-    "Birth weight, gestational age, Apgar score, child sex"
+    "Child sex"
   ],
   "pathologies_diseases": [
-    "intellectual development impairment"
+    "Reduced intellectual development (lower IQ)"
   ],
-  "study_design": "Prospective longitudinal cohort study with repeated measures and linear mixed-effects modeling",
-  "data_source_type": "Prospective cohort / primary data collection",
-  "population": "175 children born in Mexico City between 1987 and 1992, followed until age 10 (150 with complete data)",
-  "exposure_domain": "Prenatal and postnatal lead exposure (blood lead concentration)",
+  "study_design": "Prospective cohort",
+  "data_source_type": "biospecimen",
+  "population": "Children born at the National Institute of Perinatology, Mexico City (1987-1992), followed to 2002; 175 children tested after 5 years and 150 with complete covariate data, with IQ assessed at ages 6-10 years.",
+  "exposure_domain": "heavy metals",
   "limitations": [
-    "High loss to follow-up from original sample of 321 to 150 with complete data",
-    "Relatively small sample size reducing statistical power",
-    "Potential test-learning bias from repeated administration of the same IQ test",
-    "Use of outdated Spanish versions of WISC-R and WAIS tests",
-    "Cultural bias of the HOME scale in the study population"
+    "Substantial loss to follow-up (from 321 to 175 to 150 with complete data), reducing power and increasing instability of coefficients.",
+    "Small sample size limiting detection of subtle effects.",
+    "Repeated use of the same IQ test could produce test-learning effects.",
+    "Outdated (superseded) Spanish WISC-R and WAIS versions used for IQ measurement."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

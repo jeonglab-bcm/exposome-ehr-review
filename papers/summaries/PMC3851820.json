@@ -3,38 +3,39 @@
   "title": "Monitoring the immune response to vaccination with an inactivated vaccine associated to bovine neonatal pancytopenia by deep sequencing transcriptome analysis in cattle.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "For this study, jugular blood was taken i mmediately prior a further booster vaccination with PregSure® and 14 days later.",
-  "summary": "Experimental RNAseq study monitoring the immune response to vaccination with an inactivated BVDV vaccine in cattle, identifying a novel cytokine-like gene and coordinated immune pathways.",
+  "ehr_evidence": "The data source was whole blood samples collected from cattle and analyzed by next-generation RNA sequencing (RNAseq); no electronic/computerised individual-level health records were used.",
+  "summary": "An experimental longitudinal transcriptomics study of 12 cows aged 3-5 years vaccinated with an inactivated BVDV vaccine (PregSure®), using RNAseq to characterize the whole-blood immune/transcriptome response.",
   "key_findings": [
-    "2901 differentially expressed loci at a significance threshold of q < 0.05.",
-    "Novel locus XLOC_032517 showed a highly significant (p < 0.0001) 3.51 fold upregulation after vaccination.",
-    "Three cows that had never encountered PregSure® vaccination showed a significantly lower XLOC_032517 expression (p = 0.008) compared to the 12 cows which had received at least three PregSure® vaccinations.",
-    "Pathway analysis revealed coordinated immune response to dsRNA or a dsRNA analogue, upregulation of T cell response, and suppression of B cell activation."
+    "Vaccination yielded 2901 differentially expressed loci at a significance threshold of q < 0.05 (1879 upregulated, 1022 downregulated).",
+    "A novel previously unannotated locus XLOC_032517 showed a highly significant 3.51-fold upregulation after vaccination (p < 0.0001).",
+    "Three cows never vaccinated with PregSure® showed significantly lower XLOC_032517 expression than the 12 vaccinated cows (p = 0.008).",
+    "Pathway analysis revealed a coordinated immune response to viral dsRNA (RIG-I-like receptor, TLR3, EIF2/PKR pathways) and upregulation of T cell receptor signaling.",
+    "No coordinated transcriptomic pattern indicating activation of the alloantigen response pathway was identified."
   ],
   "captured_features": [
-    "RNAseq read counts",
-    "differentially expressed loci",
-    "pathway enrichment scores",
-    "fold changes",
-    "p-values/q-values"
+    "RNAseq read counts (cpm) per locus",
+    "Differentially expressed loci/genes (q < 0.05)",
+    "KEGG and Ingenuity canonical pathway enrichment",
+    "Predicted upstream regulators (z-score, p-value of overlap)",
+    "XLOC_032517 expression across blood and tissues"
   ],
   "pathologies_diseases": [
-    "Bovine neonatal pancytopenia (BNP)",
-    "Bovine Virus Diarrhoea (BVDV)"
+    "Bovine neonatal pancytopenia (BNP) (context; four cows had calves with clinical BNP)"
   ],
-  "study_design": "experimental transcriptomics study",
+  "study_design": "Experimental longitudinal (before vs. 14 days after vaccination) transcriptomics study",
   "data_source_type": "biospecimen",
-  "population": "12 lactating and non-lactating cows aged three to five years (German Holstein × Charolais crossbred)",
-  "exposure_domain": "vaccination (inactivated BVDV vaccine)",
+  "population": "12 lactating and non-lactating cows aged 3-5 years, German Holstein × Charolais crossbred, kept on the FBN Dummerstorf experimental dairy farm",
+  "exposure_domain": "vaccination (inactivated BVDV vaccine PregSure®)",
   "limitations": [
-    "RNAseq restricted to blood transcriptome",
-    "small sample size (n=12)",
-    "lack of functional annotation for novel locus XLOC_032517"
+    "Small sample size (n = 12) limiting statistical power.",
+    "Single post-vaccination time point (day 14).",
+    "Whole-blood transcriptome does not capture peripheral/tissue-restricted immune regulation.",
+    "No coordinated alloantigen response identified, leaving BNP pathogenesis unresolved."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

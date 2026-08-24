@@ -3,43 +3,43 @@
   "title": "2014_PMC5779422_Human_papillomavirus_vaccination_coverage_among_adolescents_2007",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "CDC analyzed data from the 2007–2013 National Immunization Survey-Teen (NIS-Teen) and national postlicensure vaccine safety data among females and males.",
-  "summary": "Assessment of HPV vaccination coverage among US adolescents aged 13–17 years from 2007–2013 and postlicensure safety monitoring from 2006–2014.",
+  "ehr_evidence": "CDC analyzed data from the 2007–2013 National Immunization Survey-Teen (NIS-Teen) and national postlicensure vaccine safety data among females and males; NIS-Teen uses a random-digit-dialed sample with a questionnaire mailed to each provider to obtain a vaccination history from medical records, and safety data came from the Vaccine Adverse Event Reporting System (VAERS).",
+  "summary": "A cross-sectional, survey-based MMWR report analyzing HPV vaccination coverage among US adolescents aged 13–17 years (2007–2013) via NIS-Teen and postlicensure safety via VAERS.",
   "key_findings": [
-    "Vaccination coverage with ≥1 dose increased from 53.8% (2012) to 57.3% (2013) among girls and from 20.8% (2012) to 34.6% (2013) among boys.",
-    "Receipt of ≥1 dose by age 13 increased by an average of 5.9% (95% CI = 2.8%–9.0%) with each new birth cohort, reaching 46.8% (95% CI = 41.2%–52.5%) for the 2000 cohort.",
-    "Missed vaccination opportunities ranged from 9.3% (95% CI = 8.1%–10.8%) for the 1994 cohort to 83.7% (95% CI = 77.8%–88.2%) for the 2000 cohort.",
-    "If missed opportunities were eliminated, coverage for the 2000 cohort could have reached 91.3% (95% CI = 87.9%–93.8%) by age 13.",
-    "VAERS received 25,176 adverse event reports post-HPV vaccination; 92.4% of HPV4 reports were classified as nonserious."
+    "HPV vaccination coverage with ≥1 dose increased significantly from 53.8% (2012) to 57.3% (2013) among girls and from 20.8% (2012) to 34.6% (2013) among boys.",
+    "Among girls, receipt of ≥1 dose of HPV by age 13 years increased an average of 5.9% (95% CI = 2.8%–9.0%) with each new birth cohort, reaching 46.8% (CI = 41.2%–52.5%) for the 2000 birth cohort.",
+    "If all missed opportunities for HPV vaccination had been eliminated for the 2000 birth cohort, coverage with ≥1 dose could have reached 91.3% (CI = 87.9%–93.8%) by age 13 years, a 42.7 percentage-point difference.",
+    "The percentage of parents reporting a clinician HPV vaccine recommendation was significantly higher in 2013 than 2012 for parents of girls (64.4% vs 61.0%) and parents of boys (41.6% vs 28.0%).",
+    "VAERS received 25,176 adverse event reports after HPV vaccination (June 2006–March 2014), of which 92.4% of HPV4 reports were classified as nonserious."
   ],
   "captured_features": [
-    "vaccination coverage rates",
+    "provider-reported vaccination histories",
+    "HPV vaccination coverage estimates by dose and survey year",
     "missed vaccination opportunities",
-    "parent-reported reasons for non-vaccination",
-    "adverse event reports"
+    "clinician HPV vaccine recommendation to parents",
+    "VAERS adverse event reports",
+    "birth cohort"
   ],
   "pathologies_diseases": [
     "HPV infection",
     "cervical cancer",
     "genital warts"
   ],
-  "study_design": "Cross-sectional survey analysis with birth cohort analysis and passive safety monitoring",
-  "data_source_type": "Survey and passive reporting system",
-  "population": "Adolescents aged 13–17 years in the United States",
-  "exposure_domain": "HPV vaccination",
+  "study_design": "cross-sectional survey (with birth-cohort analysis) plus passive safety surveillance",
+  "data_source_type": "survey (NIS-Teen) and passive adverse-event reporting system (VAERS)",
+  "population": "US adolescents aged 13–17 years (girls and boys), 2007–2013",
+  "exposure_domain": "HPV vaccination (vaccine coverage)",
   "limitations": [
-    "Low cell phone household response rate (23.3%)",
-    "Incomplete provider-reported vaccination histories",
-    "Missed opportunity evaluation limited to encounters with other vaccinations",
-    "VAERS passive reporting cannot determine causality",
-    "Potential underreporting of adverse events"
+    "Low household response rates (landline 51.1%, cell phone 23.3%), with residual nonresponse/noncoverage bias possible.",
+    "Provider-reported vaccination histories may be incomplete, contributing to underestimation of coverage.",
+    "VAERS is a passive reporting system that cannot establish cause and effect and is subject to underreporting and reporting bias."
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
     "ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf"
   ],
-  "data_availability_statement": "CDC, National Opinion Research Center at the University of Chicago. National Immunization Survey-Teen: a user’s guide for the 2012 public-use data file. Chicago, IL: National Opinion Research Center; 2014. Available at ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf.",
+  "data_availability_statement": "CDC, National Opinion Research Center at the University of Chicago. National Immunization Survey-Teen: a user's guide for the 2012 public-use data file. Chicago, IL: National Opinion Research Center; 2014. Available at ftp://ftp.cdc.gov/pub/health_statistics/nchs/dataset_documentation/nis/nisteenpuf12_dug.pdf.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

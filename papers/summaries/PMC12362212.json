@@ -3,35 +3,36 @@
   "title": "Early Life Exposure to Manure-Fertilized Soil Shapes the Gut Antibiotic Resistome.",
   "year": "2025",
   "ehr_used": false,
-  "ehr_evidence": "Soil samples were collected from two distinct locations: red soil (RS, classified as Ultisols) from Xinhui District, Jiangmen City, Guangdong Province and black soil (BS, classified as Mollisols) from Hailun City, Suihua, Heilongjiang Province.",
-  "summary": "Experimental study investigating how early life exposure to manure-fertilized soil alters the gut antibiotic resistome and microbiome composition in mice.",
+  "ehr_evidence": "The study used metagenomic sequencing of soil and mouse gut fecal samples (raw data publicly available under accession number PRJNA1206751); no electronic or computerized health records were analyzed.",
+  "summary": "A controlled experimental mouse study raising pregnant BALB/c mice from birth in pig manure-fertilized red (Ultisols) or black (Mollisols) soils versus unfertilized controls and sampling gut microbiomes at 8 weeks, showing that early-life manure-fertilized soil exposure enriches gut antibiotic resistance genes, particularly tet(Q).",
   "key_findings": [
-    "Manured red soil ARG abundance was 0.63 ± 0.03 copies/cell, a 10.5% increase over unfertilized soil (0.57 ± 0.005 copies/cell, P < 0.05).",
-    "Manured black soil ARG abundance was 0.45 ± 0.02 copies/cell, a 12.5% increase over unfertilized soil (0.40 ± 0.02 copies/cell, P < 0.05).",
-    "Mouse gut ARG abundance in the manured red soil group was 3.34 ± 0.34 copies/cell, a 48.4% increase over the control group (2.25 ± 0.37 copies/cell).",
-    "Mouse gut ARG abundance in the manured black soil group was 3.89 ± 0.62 copies/cell, a 109% increase over the control group (1.86 ± 0.54 copies/cell).",
-    "Tetracycline resistance genes comprised 84.9% of gut ARGs, with tet(Q) constituting 90% of tetracycline ARGs.",
-    "MGE abundance was significantly higher in manured groups (Manured RS: 34.21 ± 2.47 copies/cell, 12.5% increase; Manured BS: 36.07 ± 4.43 copies/cell, 19.8% increase).",
-    "Virulence factor abundance was elevated in manured groups (Manured RS: 12.78 ± 1.09 copies/cell, 8.7% increase; Manured BS: 11.61 ± 0.61 copies/cell, 13.44% increase)."
+    "Manure application increased soil ARG abundance: Manured RS 0.63 ± 0.03 copies/cell (10.5% increase over RS 0.57 ± 0.005, P < 0.05) and Manured BS 0.45 ± 0.02 copies/cell (12.5% increase over BS 0.40 ± 0.02, P < 0.05).",
+    "Gut ARG abundance was markedly higher in manured-exposed mice: Manured RS 3.34 ± 0.34 copies/cell (48.4% increase over RS 2.25 ± 0.37) and Manured BS 3.89 ± 0.62 copies/cell (109% increase over BS 1.86 ± 0.54).",
+    "Tetracycline resistance genes dominated the gut resistome (84.9% of gut-resident ARGs), with tet(Q) the most dominant subtype, constituting 90% of tetracycline ARGs.",
+    "Manure-amended soils increased gut MGE abundance: Manured RS 34.21 ± 2.47 copies/cell (12.5% higher than RS 30.51 ± 3.29) and Manured BS 36.07 ± 4.43 copies/cell (19.8% higher than BS 30.1 ± 6.91).",
+    "Procrustes analysis revealed a significant correlation between ARGs and gut microbiome composition (M2 = 0.39, P = 0.001); Muribaculaceae and Bacteroidaceae were identified as key hosts of tet(Q).",
+    "Relative abundance of ARGs in the gut microbiota of mice living in fertilized soils was 4.6–8.7 times greater than in the soils."
   ],
   "captured_features": [
-    "ARG abundance and diversity (Shannon index)",
-    "Mobile genetic element (MGE) abundance",
-    "Virulence factor (VF) abundance",
-    "Gut microbiome composition (phylum and family level)",
-    "Metagenome-assembled genomes (MAGs)",
-    "tet(Q) gene relative abundance"
+    "ARG abundance (copies/cell)",
+    "ARG diversity (Shannon index)",
+    "tet(Q), tet(33), tet(37) tetracycline subtype abundances",
+    "mobile genetic element (MGE) abundance",
+    "virulence factor (VF) abundance",
+    "gut microbiome composition (phylum and family level)",
+    "metagenome-assembled genomes (MAGs)"
   ],
-  "pathologies_diseases": [],
-  "study_design": "controlled experimental animal study",
-  "data_source_type": "metagenomic sequencing of soil and fecal samples",
-  "population": "BALB/c mice (pregnant dams and offspring from birth to 8 weeks)",
-  "exposure_domain": "manure-fertilized soil",
+  "pathologies_diseases": [
+    "antimicrobial resistance (AMR) / antibiotic resistance genes"
+  ],
+  "study_design": "controlled experimental animal study (early-life exposure cohort in mice)",
+  "data_source_type": "biospecimen",
+  "population": "BALB/c mice exposed from birth (pregnant dams at 18 days gestation) to 8 weeks of age",
+  "exposure_domain": "agricultural manure-fertilized soil exposure",
   "limitations": [
-    "animal model (mice) limits direct human translatability",
-    "small sample size per group (n=3 pregnant mice)",
-    "controlled laboratory conditions may not reflect real-world agricultural environments",
-    "cross-sectional sampling at a single timepoint (8 weeks)"
+    "Very small sample size (n = 3 mice per group)",
+    "Mouse model not directly translatable to humans",
+    "Described as a pilot study with limited human generalizability"
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
@@ -40,5 +41,5 @@
   "data_availability_statement": "The raw metagenomic sequence data are publicly available under the accession number PRJNA1206751.",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

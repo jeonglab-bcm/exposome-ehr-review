@@ -3,38 +3,53 @@
   "title": "An integrated, multistudy analysis of the safety of Ann Arbor strain live attenuated influenza vaccine in children aged 2-17 years.",
   "year": "2011",
   "ehr_used": false,
-  "ehr_evidence": "An integrated analysis of randomized, controlled trials of LAIV.",
-  "summary": "Integrated safety analysis of Ann Arbor strain live attenuated influenza vaccine in children aged 2–17 years across 20 randomized controlled trials.",
+  "ehr_evidence": "An integrated analysis of randomized, controlled trials of LAIV. All clinical studies conducted with the Ann Arbor strain LAIV were reviewed for inclusion, with a data cutoff date of April 2008.",
+  "summary": "An integrated (pooled) analysis of randomized controlled trials assessing the safety and reactogenicity of Ann Arbor strain live attenuated influenza vaccine (LAIV) versus TIV or placebo in children aged 2–17 years.",
   "key_findings": [
-    "LAIV recipients exhibited increased runny/stuffy nose (+7% vs placebo, +12% vs TIV, P<0.01), headache (+7%, P=0.02), and tiredness/decreased activity (+2%, P=0.03) after dose 1.",
-    "Higher rate of decreased appetite (+4%) was observed after year 2 revaccination (P=0.03).",
-    "No evidence of an increase in any potential vaccine-related serious adverse event in LAIV recipients.",
-    "No evidence that lower respiratory illness or wheezing illness occurred at a higher rate in LAIV recipients aged 2–17 years or specifically 24–35 months."
+    "In TIV-controlled studies, runny/stuffy nose was statistically increased among LAIV recipients (rate differences 11.8% after dose 1 and 4.1% after dose 2; P < 0.01 for both).",
+    "After dose 1 in TIV-controlled studies, muscle aches were lower in LAIV than TIV recipients (P = 0.04).",
+    "In placebo-controlled studies, runny/stuffy nose was increased after dose 1 (rate difference 6.8%; P < 0.01); headache (6.9%; P = 0.02) and tiredness/decreased activity (2.1%; P = 0.03) were also increased after dose 1.",
+    "After dose 2 in placebo-controlled studies, decreased appetite was lower in LAIV recipients (rate difference −2.9%; P = 0.04); on year 2 revaccination, decreased appetite was higher (rate difference 3.9%; P = 0.03).",
+    "In TIV-controlled studies, more LAIV recipients reported ≥1 AE (rate difference 2.7%; P < 0.01), with significant increases in infections (1.5%; P < 0.01), nervous system disorders (0.6%; P = 0.04), and respiratory disorders (1.5%; P < 0.01) after dose 1.",
+    "In placebo-controlled studies, general disorders were increased after dose 1 (2.2%; P < 0.01), attributable to pyrexia (2.1%; P < 0.01); fewer lower respiratory illnesses occurred in LAIV recipients (rate difference −1.0%; P = 0.03).",
+    "There was no evidence of an increase in any potential vaccine-related serious AE in LAIV recipients versus TIV or placebo.",
+    "There was no evidence that lower respiratory illness or wheezing illness occurred at a higher rate in LAIV recipients among children aged 2–17 years or specifically aged 24–35 months.",
+    "In placebo-controlled studies after dose 2 in year 1, lower respiratory illness was significantly lower among LAIV recipients aged 24–35 months (rate difference −1.0%; P = 0.03)."
   ],
   "captured_features": [
-    "solicited reactogenicity events",
-    "unsolicited adverse events",
-    "serious adverse events",
-    "lower respiratory illness",
-    "wheezing illness"
+    "Solicited reactogenicity events (runny/stuffy nose, sore throat, cough, vomiting, headache, muscle ache, chills, decreased activity, irritability, abdominal pain, decreased appetite, fever)",
+    "Unsolicited adverse events by system organ class and preferred term (MedDRA 8.0)",
+    "Serious adverse events (days 0–42 and 0–180 post-last dose)",
+    "Lower respiratory illness and wheezing illness events of special interest",
+    "Age, gender, and region",
+    "Rate differences (LAIV minus comparator) with Fisher's exact P-values"
   ],
   "pathologies_diseases": [
-    "respiratory illness",
-    "wheezing"
+    "Lower respiratory illness",
+    "Wheezing illness",
+    "Runny/stuffy nose",
+    "Headache",
+    "Tiredness/decreased activity",
+    "Decreased appetite",
+    "Pyrexia/fever",
+    "Nasal congestion/rhinorrhea",
+    "Rhinitis",
+    "Ear pain"
   ],
-  "study_design": "integrated analysis of randomized controlled trials",
-  "data_source_type": "clinical trial data",
-  "population": "children aged 2–17 years",
-  "exposure_domain": "live attenuated influenza vaccine",
+  "study_design": "Integrated (pooled) analysis of randomized controlled trials",
+  "data_source_type": "Clinical trials",
+  "population": "Children aged 2–17 years (with subgroup analysis of children aged 24–35 months) across 20 studies from USA, Europe, Asia/Oceania, and Latin America",
+  "exposure_domain": "Vaccination (Ann Arbor strain live attenuated influenza vaccine, LAIV)",
   "limitations": [
-    "unadjusted P-values for multiplicity",
-    "aggregation across different annual vaccine formulations and seasons",
-    "data from multiple studies with varying follow-up periods"
+    "Analysis is descriptive in nature with no adjustment for multiplicity.",
+    "Data were integrated from multiple studies across multiple years and multiple vaccine strains, assuming consistency of safety/reactogenicity across annual formulations.",
+    "Race and ethnicity were not analyzed because data were not collected by common terms across studies.",
+    "Only the refrigerated formulation was used for reactogenicity/AE analyses, and frozen/refrigerated data were combined for SAE analyses."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

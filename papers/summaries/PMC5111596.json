@@ -3,45 +3,43 @@
   "title": "Moderate Prenatal Cadmium Exposure and Adverse Birth Outcomes: a Role for Sex-Specific Differences?",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "The sample was derived from the ALSPAC study, a population-based study investigating environmental and genetic influences on the health, behaviour, and development of children.",
-  "summary": "Prospective cohort study examining the association between moderate prenatal cadmium exposure (maternal blood Cd) and birth outcomes, with a focus on sex-specific effects.",
+  "ehr_evidence": "The sample was derived from the ALSPAC study, a population-based study investigating environmental and genetic influences on the health, behaviour, and development of children; whole blood samples were analysed for cadmium (n = 4191) and birth anthropometry and gestational age were collected by study staff/questionnaires.",
+  "summary": "In a prospective birth-cohort (ALSPAC) of 4191 singleton livebirths, higher prenatal maternal blood cadmium was adversely associated with reduced birthweight and crown–heel length overall and with reduced birthweight, head circumference, and crown–heel length in girls but not boys.",
   "key_findings": [
-    "Maternal blood Cd was adversely associated with birthweight (unstandardized B coefficient -62.7 g, 95% CI -107.0, -18.4) and crown-heel length (-0.28 cm, 95% CI -0.48, -0.07) in adjusted regression models.",
-    "Stratified by sex, maternal blood Cd was adversely associated with birthweight (-87.1 g, 95% CI -144.8, -29.4), head circumference (-0.22 cm, 95% CI -0.39, -0.04), and crown-heel length (-0.44 cm, 95% CI -0.71, -0.18) in girls but not in boys.",
-    "No significant association was found between maternal blood Cd and low birthweight or preterm delivery.",
-    "Maternal blood Cd did not mediate the association between smoking and birth outcomes."
+    "In adjusted regression models (Model 3), maternal blood Cd was adversely associated with birthweight (unstandardized B −62.7 g, 95% CI −107.0, −18.4) and crown–heel length (B −0.28 cm, 95% CI −0.48, −0.07) in the whole group.",
+    "On stratification by sex, maternal blood Cd was adversely associated with birthweight (B −87.1 g, 95% CI −144.8, −29.4), head circumference (B −0.22 cm, 95% CI −0.39, −0.04), and crown–heel length (B −0.44 cm, 95% CI −0.71, −0.18) in girls but not in boys, with a significant interaction term sex × maternal B-Cd for all anthropometric variables (P for interaction <0.001).",
+    "There was no evidence of an increased odds of low birthweight in adjusted logistic regression models.",
+    "Maternal B-Cd was not a strong mediator in the associations between smoking and birth outcomes.",
+    "In smokers there was evidence of a weak adverse association with birthweight, not evident in non-smokers."
   ],
   "captured_features": [
-    "maternal blood cadmium levels",
-    "birthweight",
-    "head circumference",
-    "crown-heel length",
-    "gestational age",
-    "low birthweight",
-    "preterm birth",
-    "maternal age",
-    "parity",
-    "education",
-    "BMI",
-    "alcohol consumption",
-    "smoking status",
-    "partner smoking status",
-    "sex of baby"
+    "Maternal blood cadmium level (B-Cd)",
+    "Birthweight",
+    "Head circumference",
+    "Crown–heel length",
+    "Gestational age",
+    "Low birthweight",
+    "Preterm birth",
+    "Sex of the baby",
+    "Maternal age, parity, education, pre-pregnancy BMI, height, alcohol intake, active and passive smoking"
   ],
-  "pathologies_diseases": [],
-  "study_design": "Prospective birth cohort study",
-  "data_source_type": "Primary cohort study with biospecimen analysis and questionnaire data",
-  "population": "Pregnant women and their singleton live-born infants from the ALSPAC cohort in the UK (n=4191)",
-  "exposure_domain": "Prenatal cadmium exposure (maternal blood cadmium levels)",
+  "pathologies_diseases": [
+    "Low birthweight",
+    "Preterm birth",
+    "Reduced fetal growth (anthropometric reduction)"
+  ],
+  "study_design": "Prospective birth cohort",
+  "data_source_type": "biospecimen",
+  "population": "Pregnant women from the former Avon Health Authority with expected delivery dates April 1991–December 1992 (UK), with 4191 singleton livebirths analysed; prenatal exposure measured in the first half of pregnancy.",
+  "exposure_domain": "Heavy metals (cadmium)",
   "limitations": [
-    "Potential unmeasured confounders such as other environmental pollutants",
-    "Large number of cadmium values below limit of detection affecting continuous variable modeling",
-    "Reliance on self-reported smoking data"
+    "A large number of B-Cd values were below the limit of detection, making use of Cd as a continuous variable in linear models less robust.",
+    "Unable to adjust for other environmental pollutants such as polychlorinated biphenols, with likely residual confounding."
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Additional Supporting Information may be found in the online version of this article at the publisher’s website:",
+  "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

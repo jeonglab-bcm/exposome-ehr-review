@@ -3,36 +3,41 @@
   "title": "Memory-like innate response to booster vaccination with MF-59 adjuvanted influenza vaccine in children.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "Blood for transcriptomics, HAI and cellular response was collected at all of the time points indicated in Fig. 1a.",
-  "summary": "Clinical study comparing transcriptional, cellular, and antibody responses to MF59-adjuvanted trivalent inactivated influenza vaccine in children (15–24 months) and young adults.",
+  "ehr_evidence": "The study used prospectively collected peripheral blood samples for transcriptomics, flow cytometry, and HAI assays in a randomized clinical trial (NCT02529904); no electronic health record, claims, or registry data were used.",
+  "summary": "A randomized clinical trial (NCT02529904) of MF59-adjuvanted trivalent inactivated influenza vaccine in 90 children aged 15-24 months and 30 young healthy adults, using systems-level transcriptional, flow cytometry, and antibody analyses to characterize memory-like innate immune responses to prime and booster vaccination.",
   "key_findings": [
-    "Post-boost vaccination induced a stronger transcriptional response with 221 significantly regulated genes (FDR < 0.05, fold-change > 1.5) in children.",
-    "Adults showed a stronger response with 678 significantly regulated genes.",
-    "Seroconversion rates for children were 23/24 for H1N1, 22/24 for H3N2, and 19/24 for B/Phuket.",
-    "Seroprotection (HAI ≥ 1:629) was achieved in 6/24 for H1N1, 20/24 for H3N2, and 0/24 for B/Phuket.",
-    "Elevated interferon response pathways correlated with early-onset local reactogenicity (erythema/swelling), but no correlates were found for fever."
+    "Booster vaccination induced a stronger transcriptional response with 221 genes passing significance cutoffs (FDR < 0.05 and fold-change > 1.5), nearly three times the number of upregulated genes compared with prime vaccination.",
+    "Elevated type 1 interferon response post-booster vaccination correlated with local reactogenicity (early-onset erythema and swelling) in toddlers.",
+    "Baseline interferon-signing transcriptional signature correlated with downstream hemagglutinin inhibition (HAI) antibody titers.",
+    "We found no transcriptional or cellular correlates of fever (systemic reactogenicity).",
+    "Strong and significant increase in the activation marker CD40 on all monocyte subsets at days 1 and 3 post boost, indicating enhanced memory-like innate response.",
+    "No significantly up- or down-regulated genes at the pre-boost baseline (day 28) compared with pre-prime baseline (day 0) at the gene level."
   ],
   "captured_features": [
-    "peripheral blood transcriptomics (Affymetrix)",
-    "flow cytometry (monocyte subsets, CD40 expression)",
-    "hemagglutination inhibition (HAI) titers",
-    "adverse effects (fever, redness, swelling, pain)"
+    "Peripheral blood gene expression (transcriptomics, Affymetrix HG-133plus2.0 chips)",
+    "Hemagglutinin inhibition (HAI) titers",
+    "Flow cytometry monocyte/myeloid cell subsets and CD40 expression",
+    "Reactogenicity adverse effects (fever, redness, swelling)",
+    "Gene set enrichment analysis blood transcriptional modules (BTMs)",
+    "Reactome interferon signaling pathways"
   ],
-  "pathologies_diseases": [],
-  "study_design": "Prospective clinical trial with staggered sample collection",
-  "data_source_type": "Clinical trial",
-  "population": "90 children aged 15–24 months and 30 healthy young adults aged 25–40 years",
-  "exposure_domain": "MF59-adjuvanted trivalent inactivated influenza vaccine",
+  "pathologies_diseases": [
+    "Influenza (vaccination target)",
+    "Vaccine reactogenicity (local adverse effects: erythema, swelling, fever)"
+  ],
+  "study_design": "Randomized controlled clinical trial (prime-boost design with staggered cohort sampling)",
+  "data_source_type": "biospecimen",
+  "population": "90 children aged 15-24 months and 30 young healthy adults (25-40 years)",
+  "exposure_domain": "vaccine (MF59-adjuvanted trivalent inactivated influenza vaccine)",
   "limitations": [
-    "Staggered sample collection design limited blood draw frequency per child.",
-    "Cohorts B and C lacked pre-vaccination baseline at day 1 and 3 post boost.",
-    "Small adult cohort size (n=30).",
-    "Most innate immunity module correlations with HAI titers did not reach statistical significance."
+    "Staggered sample collection design due to limits on blood draws from children, with cohorts B and C lacking pre-vaccination baseline.",
+    "Small cohort sizes and healthy-volunteer sampling may limit generalizability.",
+    "No transcriptional correlates of systemic reactogenicity (fever) were identified."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

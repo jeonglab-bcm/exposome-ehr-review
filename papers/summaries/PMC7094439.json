@@ -3,30 +3,32 @@
   "title": "Protection of newborn animals through maternal immunization.",
   "year": "2007",
   "ehr_used": false,
-  "ehr_evidence": "Narrative review of veterinary literature on maternal immunization in animals.",
-  "summary": "Narrative review discussing the use of maternal vaccination to provide passive immunity to neonatal animals (calves, puppies, piglets) against infectious diseases, highlighting safety, efficacy, and immunological mechanisms.",
+  "ehr_evidence": "This is a narrative review/overview of veterinary maternal vaccination literature; no electronic, individual-level, or routinely collected health data source was analysed.",
+  "summary": "A narrative review of maternal immunization in domestic animals (cattle, dogs, pigs) to provide neonates with passively transferred immunity against infectious diseases.",
   "key_findings": [
-    "No original empirical results reported; narrative review summarizing existing veterinary studies on maternal vaccine efficacy and passive immunity transfer."
+    "In a specific pathogen-free model, piglets born to PCV2-vaccinated gilts expressed significantly fewer clinical signs and lesions and had significantly lower viral load in serum, faeces and lymph nodes than piglets born to non-vaccinated gilts.",
+    "Field studies reported a significant decrease of post-weaning multisystemic syndrome and global mortality in neonatal and finishing pigs following maternal vaccination.",
+    "For the inactivated canine herpesvirus-1 vaccine, vaccination resulted in uniform seroconversion and high neutralizing antibody titres in bitches, with no cases of CHV disease recorded in puppies.",
+    "Maternal vaccination enhanced antibody titres in the colostrum and milk of vaccinated cows, with well-established safety and efficacy for pregnant cows and newborn calves."
   ],
   "captured_features": [],
   "pathologies_diseases": [
-    "neonatal calf diarrhoea",
-    "canine herpesvirus-1 disease",
-    "post-weaning multisystemic syndrome (PWMS)"
+    "Neonatal calf diarrhoea/enteritis (E. coli, rotavirus, coronavirus, Cryptosporidium parvum)",
+    "Canine herpesvirus-1 (CHV-1) infection and neonatal mortality/abortion",
+    "Post-weaning multisystemic syndrome (PWMS) caused by porcine circovirus type 2"
   ],
-  "study_design": "narrative review",
-  "data_source_type": "literature review",
-  "population": "neonatal animals (calves, puppies, piglets)",
-  "exposure_domain": "maternal vaccination/immunization",
+  "study_design": "Narrative review / overview",
+  "data_source_type": "other",
+  "population": "Newborn animals (calves, puppies, piglets) and their pregnant mothers (cows, bitches, sows)",
+  "exposure_domain": "Maternal immunization/vaccination (veterinary vaccines)",
   "limitations": [
-    "narrative review format",
-    "no original quantitative data",
-    "focuses on veterinary models rather than human/pediatric populations"
+    "Narrative review without primary data analysis or standardized methodology; findings are drawn from cited field and laboratory studies rather than a single analysed dataset.",
+    "No environmental or exposome exposure assessment; not applicable to EHR-based human studies."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

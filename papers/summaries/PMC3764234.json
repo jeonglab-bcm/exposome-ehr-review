@@ -3,44 +3,49 @@
   "title": "Environmental factors predicting blood lead levels in pregnant women in the UK: the ALSPAC study.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "The study sample was derived from the ALSPAC study, a population-based study investigating environmental and genetic influences on the health, behaviour and development of children.",
-  "summary": "Observational cohort study assessing environmental, lifestyle, and socioeconomic factors associated with blood lead levels in pregnant women and their children in the UK.",
+  "ehr_evidence": "Whole blood samples were collected at median gestational age of 11 weeks and analysed by inductively coupled plasma dynamic reaction cell mass spectrometry (n = 4285). Self-completion postal questionnaires were used to collect data during pregnancy on lifestyle, diet and other environmental exposures.",
+  "summary": "In a UK prospective cohort (ALSPAC) of 4285 pregnant women, environmental and lifestyle factors were modelled against blood lead levels measured by ICP-MS.",
   "key_findings": [
-    "Mean maternal blood lead level was 3.67 ± 1.47 mg/dl (n=4285).",
-    "Higher educational qualification was a strong independent predictor of BLL ≥5 mg/dl (OR 1.26, 95% CI 1.12–1.42; p<0.001).",
-    "Cigarette smoking, alcohol consumption, coffee drinking, and coal fire heating were independently associated with increased BLL.",
-    "Dietary calcium intake and iron supplementation showed protective effects against high lead levels.",
-    "Maternal and child BLL at 30 months were significantly correlated (r = 0.278, n = 233; p<0.001)."
+    "Mean maternal BLL was 3.67 ± 1.47 mg/dl (geometric mean 3.43, median 3.42, range 0.41–19.14; n = 4285).",
+    "Highest educational qualification was the strongest independent predictor of BLL ≥5 mg/dl (odds ratio 1.26, 95% CI 1.12–1.42; p <0.001).",
+    "Cigarette smoking, alcohol consumption, coffee consumption, and coal-fire home heating were independently associated with increased BLL (all p <0.001).",
+    "Dietary calcium intake (p = 0.001) and taking iron supplements (p = 0.046) were protective against high BLL.",
+    "The regression model explained 10.9% of the variance in BLL.",
+    "There was a significant correlation between maternal and child BLL (Pearson's r = 0.278, n = 233; p <0.001)."
   ],
   "captured_features": [
-    "maternal blood lead levels",
-    "child blood lead levels",
-    "educational qualification",
-    "smoking status",
-    "alcohol consumption",
-    "coffee consumption",
-    "coal fire use",
-    "dietary calcium and iron intake",
-    "haemoglobin levels",
-    "parity",
-    "gestational age",
-    "neighbourhood quality index"
+    "Blood lead level (mg/dl)",
+    "Highest educational qualification",
+    "Cigarette smoking (n/day)",
+    "Alcohol consumption (units/week)",
+    "Coffee consumption (cups/day)",
+    "Coal fire home heating",
+    "Dietary calcium intake",
+    "Iron supplement use",
+    "Haemoglobin level",
+    "Gestational age",
+    "Parity",
+    "Neighbourhood Quality Index",
+    "Maternal age",
+    "Ethnicity"
   ],
-  "pathologies_diseases": [],
-  "study_design": "prospective cohort study",
-  "data_source_type": "cohort study",
-  "population": "pregnant women in the Avon area of the UK (n=4285) and their children at 30 months",
-  "exposure_domain": "environmental lead exposure, lifestyle factors, diet, and socioeconomic status",
+  "pathologies_diseases": [
+    "Blood lead levels / lead exposure"
+  ],
+  "study_design": "Prospective cohort (observational)",
+  "data_source_type": "biospecimen",
+  "population": "Pregnant women resident in the Avon area of the UK enrolled in ALSPAC (1991–1992), n = 4285",
+  "exposure_domain": "heavy metals (lead) and lifestyle/environmental exposures",
   "limitations": [
-    "selection bias (women with BLL data were older and more educated than the full cohort)",
-    "lack of data on housing age and renovation activities",
-    "modest effect sizes (odds ratios)",
-    "child BLL samples analyzed using different methods and at different times than maternal samples"
+    "Sample bias: women with BLL measurement were older and had higher educational attainment than the rest of the ALSPAC cohort.",
+    "Environmental exposures (water, air, dust, occupation) were not included in the models, leaving ~89% of BLL variability unexplained.",
+    "Modest odds ratios for significant predictors.",
+    "Small sample sizes for some ethnic groups limited subgroup analyses."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

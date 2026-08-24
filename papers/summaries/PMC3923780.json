@@ -3,34 +3,40 @@
   "title": "Prenatal exposure to organophosphate pesticides and neurobehavioral development of neonates: a birth cohort study in Shenyang, China.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "Information on each subject was obtained by questionnaire. Dialkyl phosphate (DAP) metabolites were detected in the urine of mothers during pregnancy to evaluate the exposure level to OPs.",
-  "summary": "Prospective birth cohort study assessing the association between prenatal organophosphate pesticide exposure (urinary DAP metabolites) and neonatal neurobehavioral development (NBNA scores) in Shenyang, China.",
+  "ehr_evidence": "A cohort of the mothers and their neonates participated in the study and information on each subject was obtained by questionnaire; urine samples were collected for dialkyl phosphate (DAP) metabolite analysis.",
+  "summary": "A birth cohort study of 249 healthy pregnant women and their neonates in Shenyang, China (2011-2012) examining the association between prenatal organophosphate pesticide exposure (urinary DAP metabolites) and neonatal neurobehavioral development (NBNA scores).",
   "key_findings": [
-    "A 10-fold increase in total DAP concentration was associated with a decrease of 1.78 in NBNA Summary scores (95% CI, -2.12 to -1.45).",
-    "Neonates in the highest quintile of prenatal OP exposure had an estimated 2.11-point lower summary NBNA score compared to the lowest quintile.",
-    "Maternal OP exposure was the strongest risk factor for lower NBNA scores among tested prenatal factors."
+    "Prenatal total DAP concentrations were inversely associated with NBNA scores; a 10-fold increase in DAP concentration was associated with a decrease of 1.78 in NBNA Summary scores (95% CI, -2.12 to -1.45).",
+    "There was a 2.11-point difference in summary NBNA scores between neonates in the highest quintile of prenatal OP exposure versus the lowest quintile group.",
+    "Significantly negative correlations between summary NBNA scores and maternal DMs, DEs, and DAPs (r = -0.510, r = -0.494, r = -0.561, P<0.01).",
+    "Higher prenatal DAP concentrations were associated with lower scores in all NBNA scales, especially the Behavior Scale (β for a 10-fold increase = -0.65, 95% CI, -0.85 to -0.45, P<0.01).",
+    "Prenatal OP exposure was the strongest risk factor for lower NBNA scores (largest standardized regression coefficients, P<0.05).",
+    "For female neonates, maternal urinary DAP concentrations were associated with poorer summary NBNA scores (β = -2.03, P = 0.01); for male neonates, a 10-fold increase was associated with a 1.47-point decrease.",
+    "High umbilical cord blood lead concentration and prenatal BMI were associated with poor NBNA scores (P<0.05); maternal age, education, and neonatal bodyweight had no significant associations."
   ],
   "captured_features": [
-    "Urinary DAP metabolites (DMP, DMTP, DEP, DETP, DEDTP)",
-    "NBNA scores",
-    "maternal demographics and lifestyle factors",
-    "umbilical cord blood lead concentration"
+    "maternal age, education, gestational age, prenatal BMI, passive smoking",
+    "neonatal bodyweight and birth length",
+    "umbilical cord blood lead concentration",
+    "urinary DAP metabolite concentrations (DMP, DMTP, DEP, DETP, DEDTP) adjusted for creatinine",
+    "NBNA scores (Behavior, Passive Tone, Active Tone, Primary Reflexes, Summary)"
   ],
-  "pathologies_diseases": [],
-  "study_design": "Prospective birth cohort study",
-  "data_source_type": "Prospective cohort / biospecimen and questionnaire",
-  "population": "249 pregnant women and their neonates in Shenyang, China",
-  "exposure_domain": "Organophosphate pesticide exposure (urinary dialkyl phosphate metabolites)",
+  "pathologies_diseases": [
+    "impaired neonatal neurobehavioral/neurodevelopmental outcomes (lower NBNA scores)"
+  ],
+  "study_design": "birth cohort study",
+  "data_source_type": "biospecimen",
+  "population": "249 healthy pregnant women and their neonates recruited from obstetric wards at the Central Hospital Affiliated to Shenyang Medical College, Shenyang, China (February 2011 to August 2012)",
+  "exposure_domain": "organophosphate pesticide exposure (urinary dialkyl phosphate metabolites)",
   "limitations": [
-    "Single time-point urine measurement reflecting only recent exposure",
-    "Urinary DAPs cannot quantify exposure to specific pesticides",
-    "Potential residual confounding",
-    "Small sample size"
+    "OP urinary metabolites were measured at a single time point prior to delivery, and DAPs have a short half-life (<24 h), so concentrations reflect only recent exposure with high variability.",
+    "Urinary DAP concentrations cannot quantify exposure to a particular pesticide.",
+    "Selection bias from enrolling only healthy pregnant women and excluding neonates with neurodevelopmental disorders; response rate 81.1%."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,46 +3,50 @@
   "title": "Newborn glomerular function and gestational particulate air pollution.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "From February 2010 onwards, the ENVIRONAGE cohort includes over 2200 mothers giving birth at the East-Limburg hospital in Genk, Belgium.",
-  "summary": "Observational study assessing the association between gestational particulate air pollution exposure (PM2.5 and black carbon) and cord blood cystatin C levels as a marker of newborn glomerular function.",
+  "ehr_evidence": "The data source was the ENVIRONAGE birth cohort (mother–newborn pairs recruited at delivery at the East-Limburg Hospital, Genk, Belgium), with data from questionnaires, cord blood biospecimens, and modeled ambient air pollution exposure — not electronic health records.",
+  "summary": "In this prospective birth cohort of 1484 healthy term newborns and their mothers in Belgium, higher gestational exposure to particulate air pollution (black carbon and PM2.5) was associated with elevated cord blood cystatin C, a marker of glomerular function.",
   "key_findings": [
-    "Every 0.5 μg/m³ increment in gestational black carbon exposure was associated with a 0.04 mg/L (95% CI 0.01–0.07; p < 0.01) increase in cord blood cystatin C levels.",
-    "Every 5 μg/m³ increment in gestational PM2.5 exposure was associated with a 0.07 mg/L (95% CI 0.03–0.11; p < 0.01) increase in cord blood cystatin C levels.",
-    "Third-trimester exposure showed significant associations (BC: 0.04 mg/L, 95% CI 0.00–0.08, p < 0.02; PM2.5: 0.06 mg/L, 95% CI 0.04–0.09, p < 0.02).",
-    "No significant associations were observed for first and second trimester exposure.",
-    "Higher PM2.5 and BC exposure during the entire pregnancy and last trimester were significantly associated with a higher risk of having cord blood cystatin C levels above the 10th percentile (PM2.5 OR 1.80, 95% CI 1.23–2.65, p < 0.01; BC OR 1.37, 95% CI 1.04–1.80, p = 0.02)."
+    "Each 0.5 μg/m3 increment in gestational black carbon (BC) exposure was associated with a 0.04 mg/L (95% CI 0.01–0.07; p<0.01) increase in cord blood cystatin C.",
+    "Each 5 μg/m3 increment in PM2.5 exposure was associated with a 0.07 mg/L (95% CI 0.03–0.11; p<0.01) increase in cord blood cystatin C.",
+    "Third-trimester exposure showed similar significant associations (PM2.5 0.06 mg/L, 95% CI 0.04–0.09; BC 0.04 mg/L, 95% CI 0.00–0.08; p<0.02), while no significant associations were observed for first and second trimester.",
+    "A 0.5 μg/m3 increase in BC exposure was associated with a 37% higher risk (OR 1.37, 95% CI 1.04, 1.80) of having cord blood cystatin C above the 10th percentile.",
+    "A 5 μg/m3 increase in PM2.5 exposure was associated with an 80% higher risk (OR 1.80, 95% CI 1.23, 2.65) of having cord blood cystatin C above the 10th percentile.",
+    "Distributed lag models identified the beginning of the third trimester (week 27 onwards) as the most significant exposure window for both BC and PM2.5 in association with elevated cord blood cystatin C."
   ],
   "captured_features": [
-    "cord blood cystatin C levels",
-    "gestational PM2.5 exposure",
-    "gestational black carbon exposure",
+    "cord blood plasma cystatin C (mg/L)",
+    "gestational black carbon (BC) exposure (μg/m3)",
+    "gestational PM2.5 exposure (μg/m3)",
+    "birthweight",
+    "newborn sex",
+    "parity",
+    "season of delivery",
+    "gestational age/duration",
     "maternal age",
     "maternal education",
-    "smoking status",
-    "parity",
-    "birthweight",
-    "gestational duration",
-    "newborn sex",
-    "ethnicity",
-    "neighbourhood median annual income"
+    "smoking during pregnancy",
+    "neighbourhood median annual income",
+    "maternal pre-pregnancy BMI",
+    "alcohol consumption during pregnancy",
+    "ethnicity"
   ],
   "pathologies_diseases": [
-    "reduced glomerular filtration",
-    "kidney function impairment"
+    "glomerular kidney function (cord blood cystatin C as marker of glomerular filtration rate)"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "birth cohort with environmental exposure modeling",
-  "population": "1484 mother-newborn pairs from the ENVIRONAGE birth cohort in Genk, Belgium",
-  "exposure_domain": "ambient air pollution (PM2.5 and black carbon)",
+  "study_design": "prospective birth cohort",
+  "data_source_type": "biospecimen (cord blood) within a birth cohort",
+  "population": "1484 healthy term newborns and their mothers from the ENVIRONAGE birth cohort recruited at East-Limburg Hospital, Genk, Belgium (2010–2020)",
+  "exposure_domain": "air pollution (particulate matter PM2.5 and black carbon)",
   "limitations": [
-    "lack of other kidney function markers such as creatinine",
-    "exposure estimated via residential address spatial modeling rather than personal monitoring",
-    "single time-point measurement at birth limits longitudinal assessment"
+    "No other kidney function markers (e.g., creatinine) reflecting tubular function were available.",
+    "Exposure was estimated from modeled residential air pollution rather than individual monitoring.",
+    "Observational design with potential residual confounding.",
+    "Single cord blood measurement at birth limits inference about sustained kidney function."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

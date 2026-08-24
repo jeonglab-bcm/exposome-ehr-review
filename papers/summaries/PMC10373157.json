@@ -3,43 +3,50 @@
   "title": "Parental, gestational, and early-life exposure to indoor environmental hazardous factors on allergic rhinitis among preschool children in Urumqi City: a case-control study.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "Questionnaires were developed for all children in the case group and control group; the questionnaire contents were adapted from the questionnaires used in the CCHH survey study and were slightly revised according to the specific context of Urumqi City.",
-  "summary": "Case-control study investigating the association between parental, gestational, and early-life indoor environmental exposures and allergic rhinitis in preschool children in Urumqi City, China.",
+  "ehr_evidence": "Questionnaires were developed for all children in the case group and control group... the questionnaires were completed by the parents or other guardians of the children at home.",
+  "summary": "A case-control study of 2020 preschool children in Urumqi City, China, examining associations between parental, gestational, and early-life indoor environmental exposures and allergic rhinitis.",
   "key_findings": [
-    "Cesarean section was associated with AR (OR = 1.31, 95% CI = 1.02-1.67, p < 0.05).",
-    "Father with AR was associated with AR (OR = 2.67, 95% CI = 2.08-3.44, p < 0.05).",
-    "Mother with AR was associated with AR (OR = 3.70, 95% CI = 2.88-4.74, p < 0.05).",
-    "Mother with asthma was associated with AR (OR = 3.11, 95% CI = 1.18-8.20, p < 0.05).",
-    "Newly purchased furniture in parents' residence during pregnancy was associated with AR (OR = 1.49, 95% CI = 1.03-2.14, p < 0.05).",
-    "No significant association was found for passive smoking, petkeeping, or indoor dampness in the multivariate model."
+    "Cesarean section was a risk factor for childhood AR (OR = 1.31, 95% CI = 1.02-1.67, P < 0.05).",
+    "Father with AR was a risk factor for childhood AR (OR = 2.67, 95% CI = 2.08-3.44, P < 0.01).",
+    "Mother with AR was a risk factor for childhood AR (OR = 3.70, 95% CI = 2.88-4.74, P < 0.01).",
+    "Mother with asthma was a risk factor for childhood AR (OR = 3.11, 95% CI = 1.18-8.20, P < 0.05).",
+    "Newly purchased furniture in the parents' residence during pregnancy was a risk factor for childhood AR (OR = 1.49, 95% CI = 1.03-2.14, P < 0.05).",
+    "Passive smoking, petkeeping, house plants, and indoor dampness/mold were not significantly associated with AR in the final model."
   ],
   "captured_features": [
-    "Demographic characteristics (sex, ethnicity, age)",
-    "Feeding status and breastfeeding duration",
-    "Parental history of AR and asthma",
-    "Dwelling environment (renovation, furniture purchase, dampness/mold)",
-    "Living habits (pets, plants, smoking, air conditioning)",
-    "Mode of birth",
-    "Physician-diagnosed allergic rhinitis status"
+    "sex",
+    "ethnicity",
+    "age",
+    "mode of birth (cesarean section)",
+    "gestational cycle",
+    "birth weight",
+    "duration of breastfeeding",
+    "father with AR",
+    "mother with AR",
+    "mother with asthma",
+    "newly purchased furniture during pregnancy",
+    "renovation and dampness/mold in residence",
+    "passive smoking",
+    "keeping pets and house plants"
   ],
   "pathologies_diseases": [
     "allergic rhinitis",
-    "asthma"
+    "asthma (maternal)"
   ],
-  "study_design": "case-control study",
-  "data_source_type": "questionnaire",
-  "population": "preschool children in Urumqi City, China (mean age 5.18 years; 404 cases, 1616 controls)",
-  "exposure_domain": "indoor environmental hazardous factors",
+  "study_design": "case-control",
+  "data_source_type": "other",
+  "population": "Preschool children (mean age ~5.2 years) in Urumqi City, China; 404 physician-diagnosed AR cases and 1616 matched controls across 60 kindergartens.",
+  "exposure_domain": "indoor environmental exposures (indoor air quality, formaldehyde/new furniture, passive smoking, pets, house plants, dampness/mold)",
   "limitations": [
-    "case-control design limits causal inference",
-    "conservative case definition restricted to physician-diagnosed AR",
-    "self-reported exposure subject to recall bias",
-    "unmeasured confounding from regional air quality improvements"
+    "Case-control design with strict physician-diagnosed case definition may be overly conservative and introduce selection bias.",
+    "Parental report of exposures introduces recall bias.",
+    "Exposure assessment was largely retrospective, limiting causal inference.",
+    "Some environmental factors (passive smoking, pets, dampness) were not confirmed as associated, possibly due to design and outdoor air quality changes from the 'coal to gas' project."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "The datasets generated and/or analyzed during the current study are not publicly available due to the data belonging to the School of Public Health of Fudan University but are available from the corresponding author upon reasonable request.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

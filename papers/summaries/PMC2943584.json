@@ -3,43 +3,45 @@
   "title": "Efficacy of the pentavalent rotavirus vaccine, RotaTeq®, in Finnish infants up to 3 years of age: the Finnish Extension Study.",
   "year": "2010",
   "ehr_used": false,
-  "ehr_evidence": "Monitoring for health care encounters in FES followed the same approach that was used to monitor infants in REST... episodes of AGE requiring hospitalisation or an ED visit were collected at prespecified 12-week intervals by automated short message service contacts, sent via mobile phones, or by direct telephone calls... Case report forms in FES were modelled after the case report forms in REST",
-  "summary": "Extension study (FES) evaluating the sustained efficacy of the pentavalent rotavirus vaccine (RV5) against rotavirus gastroenteritis and acute gastroenteritis hospitalizations and ED visits in Finnish infants up to 3.1 years post-vaccination.",
+  "ehr_evidence": "in FES, episodes of AGE requiring hospitalisation or an ED visit were collected at prespecified 12-week intervals by automated short message service contacts, sent via mobile phones, or by direct telephone calls for those without access to text messaging, rather than at 6-week intervals as in REST.",
+  "summary": "In this randomised placebo-controlled trial extension study (FES), Finnish infants who received the pentavalent rotavirus vaccine (RV5/RotaTeq) or placebo were followed for rotavirus gastroenteritis (RVGE) hospitalisations and emergency department visits up to 3.1 years, showing sustained high vaccine efficacy.",
   "key_findings": [
-    "RV5 reduced RVGE hospitalizations and ED visits by 93.8% (95% CI: 90.8–95.9%) over up to 3.1 years.",
-    "Vaccine efficacy against combined hospitalizations and ED visits was 93.9% (95% CI: 89.1–96.9%) in children 4-11 months, 94.4% (95% CI: 90.2–97.0%) in 12-23 months, and 85.9% (95% CI: 51.6–97.2%) in 24-35 months.",
-    "RV5 reduced all-cause acute gastroenteritis hospitalizations and ED visits by 62.4% (95% CI: 57.6–66.6%).",
-    "Efficacy against G1 rotavirus was 95.3% (95% CI: 92.5–97.2%), but results for G4 were not significant due to low case numbers.",
-    "No cases of intussusception were observed during the FES period."
+    "Overall RV5 reduced combined RVGE hospitalisations and ED visits by 93.8% (95% CI: 90.8–95.9%) for up to 3.1 years following the last vaccine dose.",
+    "Vaccine efficacy against combined hospitalisations and ED visits was 93.9% (95% CI: 89.1–96.9%) at 4–11 months, 94.4% (95% CI: 90.2–97.0%) at 12–23 months, and 85.9% (95% CI: 51.6–97.2%) at 24–35 months.",
+    "RV5 reduced hospitalisations and ED visits due to any acute gastroenteritis (rotavirus or not) by 62.4% (95% CI: 57.6–66.6%) over the entire follow-up period.",
+    "In the per-protocol population, RV5 reduced the rate of RVGE hospitalisations and ED visits by 94.5% (95% CI: 91.2–96.9).",
+    "Against G1 rotaviruses, RV5 reduced combined hospitalisations and ED visits by 95.3% (95% CI: 92.5–97.2%).",
+    "Efficacy against G4 rotaviruses was 66.8% (95% CI: <0–94.2%) but not significant, and too few G2 encounters existed to demonstrate efficacy.",
+    "There were no cases of intussusception during the FES period."
   ],
   "captured_features": [
-    "RVGE hospitalizations",
-    "ED visits",
-    "acute gastroenteritis hospitalizations",
-    "rotavirus genotypes (G1, G2, G3, G4, G9)",
-    "intussusception cases",
-    "stool samples",
-    "demographic characteristics"
+    "RVGE hospitalisations",
+    "Emergency department visits",
+    "Person-years of follow-up",
+    "Rotavirus serotype/genotype (G1, G2, G3, G4, G9)",
+    "Age of child at health care encounter",
+    "Vaccine group (RV5 vs placebo)",
+    "Rate reduction with 95% confidence intervals"
   ],
   "pathologies_diseases": [
-    "rotavirus gastroenteritis",
-    "acute gastroenteritis",
-    "intussusception"
+    "Rotavirus gastroenteritis (RVGE)",
+    "Acute gastroenteritis (AGE)",
+    "Intussusception"
   ],
-  "study_design": "randomized, double-blind, placebo-controlled clinical trial (extension study)",
-  "data_source_type": "clinical trial registry / active surveillance",
-  "population": "Finnish infants enrolled at 6-13 weeks of age, followed up to 3.1 years post-vaccination",
-  "exposure_domain": "vaccine (rotavirus vaccine RV5)",
+  "study_design": "Randomised, double-blind, placebo-controlled trial with a Finnish Extension Study (FES) follow-up cohort",
+  "data_source_type": "other (prospective clinical trial follow-up via phone/SMS contacts and case report forms)",
+  "population": "Finnish infants enrolled in REST at 6–12 weeks of age, followed through FES up to 3.1 years post-vaccination (≈3.5 years of age); 21,151 in the large-scale safety study with 20,732 transitioning into FES",
+  "exposure_domain": "vaccine (pentavalent rotavirus vaccine, RV5/RotaTeq)",
   "limitations": [
-    "Small number of cases in year 3 limiting statistical power",
-    "Too few encounters for G2 and G4 serotypes to demonstrate significant efficacy",
-    "Wide confidence intervals for efficacy beyond 24 months",
-    "Variation in follow-up duration due to rolling enrollment"
+    "The clinical-efficacy cohort did not transition into FES, so severity of rotavirus disease was not determined.",
+    "Wide confidence intervals in the third year of life due to very few RVGE cases, preventing definitive conclusions beyond 24 months.",
+    "Rolling enrollment led to differing durations of follow-up among subjects.",
+    "G2 rotavirus was rare at the time, leaving too few encounters to demonstrate efficacy."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "high",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

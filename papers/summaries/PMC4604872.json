@@ -2,32 +2,35 @@
   "pmcid": "PMC4604872",
   "title": "Progress in immunization information systems--United States, 2011.",
   "year": "2013",
-  "ehr_used": false,
-  "ehr_evidence": "CDC annually surveys 56 immunization program grantees using the IIS Annual Report (IISAR).",
-  "summary": "Report on progress in U.S. Immunization Information Systems in 2011, assessing child participation rates and completeness of core vaccination data elements.",
+  "ehr_used": true,
+  "ehr_evidence": "To monitor progress toward achieving these and other program goals, CDC annually surveys 56 immunization program grantees using the IIS Annual Report (IISAR).",
+  "summary": "A 2011 cross-sectional surveillance report analysing immunization information system (IIS) participation and core data-element completeness among U.S. children aged <6 years using IIS Annual Report data.",
   "key_findings": [
-    "Nationally, 19.2 million U.S. children aged <6 years (84%) participated in an IIS in 2011.",
-    "32 of 54 grantees (59%) included fields for all 18 NVAC core data elements in their IIS.",
-    "Completeness of vaccine manufacturer and lot number fields increased from 37% in 2006 to 63% and 60%, respectively, in 2011."
+    "In 2011, 84% (19.2 million) of U.S. children aged <6 years participated in an IIS, an increase from 82% (18.8 million) in 2010.",
+    "Completeness of vaccine manufacturer data was 63% and vaccine lot number was 60% in 2011.",
+    "Average completeness of NVAC core data elements ranged from 38% (mother's middle name) to ≥98% for six fields.",
+    "Among 54 grantees reporting in 2011, 32 (59%) included a field for each of the 18 data elements."
   ],
   "captured_features": [
-    "IIS participation rates",
-    "core data element completeness",
-    "vaccine manufacturer and lot number fields"
+    "IIS participation rate (≥2 recorded vaccinations)",
+    "core data-element field completeness",
+    "vaccine manufacturer field completeness",
+    "vaccine lot number field completeness",
+    "patient demographic data elements"
   ],
   "pathologies_diseases": [],
-  "study_design": "Cross-sectional surveillance report based on annual grantee survey",
-  "data_source_type": "Survey / Registry",
-  "population": "U.S. children aged <6 years; 54 immunization program grantees",
-  "exposure_domain": "immunization systems / vaccination data",
+  "study_design": "Cross-sectional surveillance report",
+  "data_source_type": "Registry (immunization information system)",
+  "population": "U.S. children aged <6 years (2011)",
+  "exposure_domain": "Immunization/vaccination (IIS participation and data completeness)",
   "limitations": [
-    "Data from the IISAR were self-reported and self-validated.",
-    "Nationwide participation and completeness rates may be underestimated or overestimated because two of 56 grantees did not report data."
+    "IISAR data were self-reported and self-validated.",
+    "Nationwide participation rates and core data-element completeness might be underestimated or overestimated because two of 56 grantees did not report."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

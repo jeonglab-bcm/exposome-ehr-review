@@ -3,39 +3,46 @@
   "title": "2019_PMC6668241_Identification_of_the_determinants_of_incomplete_vaccination_in_",
   "year": "2019",
   "ehr_used": true,
-  "ehr_evidence": "Vaccination status was determined from the Australian Childhood Immunisation Register and deemed either “complete” (no doses overdue) or “incomplete” (1 or more doses overdue) at the time of questionnaire completion.",
-  "summary": "Cross-sectional study assessing sociodemographic and parental belief factors associated with incomplete childhood vaccination status in Western Australia.",
+  "ehr_evidence": "Vaccination status was verified using the Australian Childhood Immunisation Register, a comprehensive population-based register of all childhood immunisations delivered under the National Immunisation Program (NIP).",
+  "summary": "Cross-sectional survey of parents of children under 6 years attending outpatient clinics at Princess Margaret Hospital in Perth, Western Australia, examining sociodemographic and parental belief/attitude factors associated with incomplete vaccination status.",
   "key_findings": [
-    "20% (116/589) of children had incomplete vaccination status.",
-    "Children with incomplete status were more likely born overseas (OR: 3.52, 95% CI: 1.54 to 8.05).",
-    "More likely to have a healthcare professional advise delaying or not vaccinating (OR: 4.25, 95% CI: 2.07 to 8.69).",
-    "Associated with lower parental education (<Year 10 high school) (OR: 2.92, 95% CI: 1.34 to 6.39).",
-    "Associated with larger family size (OR: 1.39 per child increase, 95% CI: 1.03 to 1.87).",
-    "No significant association between parental beliefs/attitudes and vaccination status remained after adjusting for sociodemographic factors."
+    "116 of 589 children (20%) had incomplete vaccination status.",
+    "Children with incomplete vaccination were more likely to be born overseas (OR: 3.52, 95% CI: 1.54 to 8.05).",
+    "Receiving a recommendation from a healthcare professional to delay or not complete vaccination was associated with incomplete vaccination (OR: 4.25, 95% CI: 2.07 to 8.69).",
+    "Parent non-completion of high school was associated with incomplete vaccination (OR: 2.92, 95% CI: 1.34 to 6.39) versus university-level education.",
+    "Larger family size was associated with incomplete vaccination (OR: 1.39 per one child increase, 95% CI: 1.03 to 1.87).",
+    "Parental beliefs and attitudes toward vaccination showed no significant association with incomplete vaccination after adjusting for demographic factors.",
+    "Public transport use for vaccination appointments was not significantly associated with incomplete vaccination (OR: 2.11, 95% CI: 0.78 to 5.71)."
   ],
   "captured_features": [
-    "parental demographics",
-    "child demographics",
-    "parental vaccination beliefs (7-point Likert scale)",
-    "vaccination status from national register",
-    "hospital outpatient visit history"
+    "child vaccination status (complete vs incomplete from ACIR)",
+    "parent age and sex",
+    "parent highest education level",
+    "family/household size",
+    "child born overseas",
+    "use of public transport for vaccination appointments",
+    "healthcare professional recommendation to delay or not vaccinate",
+    "parental beliefs and attitudes toward vaccination (7-point Likert scale)",
+    "parent-reported vaccination status"
   ],
-  "pathologies_diseases": [],
-  "study_design": "cross-sectional",
-  "data_source_type": "Registry & Survey",
-  "population": "children <6 years old attending outpatient clinics in Perth, Western Australia, and their parents",
-  "exposure_domain": "sociodemographic factors, parental beliefs, healthcare access",
+  "pathologies_diseases": [
+    "incomplete vaccination status"
+  ],
+  "study_design": "cross-sectional survey linked to an immunization register",
+  "data_source_type": "registry + survey",
+  "population": "Parents/guardians of children under 6 years (aged 2 months to 6.8 years, mean 2.4 years) attending outpatient clinics at Princess Margaret Hospital, Perth, Western Australia",
+  "exposure_domain": "sociodemographic factors and parental beliefs/attitudes toward vaccination",
   "limitations": [
-    "convenience sample from hospital setting may underrepresent high SES, fathers, and ethnic minorities",
-    "self-reported survey data subject to recall and social desirability bias",
-    "cross-sectional design precludes causal inference",
-    "immunisation register may not accurately reflect status for overseas-born children",
-    "unverified healthcare professional advice on vaccine delay"
+    "Hospital-based sample may underrepresent high socio-economic status parents, fathers, ethnic minorities, and vaccine-refusing parents.",
+    "Survey responses were not anonymous, potentially biasing self-reported beliefs.",
+    "Cross-sectional design cannot establish causality or direction of effect.",
+    "Healthcare professional advice to delay/not vaccinate was parent-reported and not verified.",
+    "Discrepancy between parent-reported and register-recorded vaccination status may reflect incomplete overseas transfer of records."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,39 +3,43 @@
   "title": "Obesogen Holdover: Prenatal Exposure Predicts Cardiometabolic Risk Factors in Childhood.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The study included nearly 700 mother–child pairs from the Rhea cohort in Greece.",
-  "summary": "Observational birth cohort study examining the association between prenatal exposure to persistent organic pollutants (POPs) and cardiometabolic risk factors in 4-year-old children in Greece.",
+  "ehr_evidence": "The study included nearly 700 mother–child pairs from the Rhea cohort in Greece. The researchers measured concentrations of dichlorodiphenyldichloroethene (DDE), hexachlorobenzene (HCB), and polychlorinated biphenyls (PCBs) in blood samples taken from the mothers around the third or fourth month of pregnancy.",
+  "summary": "A prospective birth cohort study of nearly 700 mother–child pairs in Crete, Greece, found that higher prenatal exposure to persistent organic pollutants (HCB and DDE) was associated with increased cardiometabolic risk factors and adiposity in children at age 4.",
   "key_findings": [
-    "A 10-fold increase in maternal HCB concentrations was associated with higher risks of generalized and abdominal obesity, greater skinfold thickness, higher systolic blood pressure, and a modest increase in child BMI z-score.",
+    "A 10-fold increase in mothers' HCB concentrations was associated with higher risks of generalized and abdominal obesity in the children, greater skinfold thickness, higher systolic blood pressure, and a modest increase in child BMI z-score.",
     "Prenatal DDE exposure was associated with higher BMI z-score, increased risk of abdominal obesity, and higher diastolic blood pressure.",
-    "PCBs were not associated with any of the assessed cardiometabolic risk factors."
+    "PCBs were not associated with any of the cardiometabolic risk factors assessed.",
+    "Associations between POPs exposure and cardiometabolic risk factors did not appear to differ between boys and girls."
   ],
   "captured_features": [
-    "maternal blood concentrations of DDE, HCB, and PCBs",
-    "child weight, height, waist circumference, skinfold thickness",
-    "child blood pressure and blood lipid levels",
-    "child BMI z-scores"
+    "maternal blood DDE concentration",
+    "maternal blood HCB concentration",
+    "maternal blood PCB concentration",
+    "child weight",
+    "child height",
+    "child waist circumference",
+    "child skinfold thickness",
+    "child blood pressure (systolic and diastolic)",
+    "child blood lipid levels",
+    "child BMI z-score"
   ],
   "pathologies_diseases": [
-    "childhood obesity",
-    "generalized obesity",
+    "childhood obesity (generalized)",
     "abdominal obesity",
+    "elevated blood pressure",
     "cardiometabolic risk factors"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "birth cohort",
-  "population": "nearly 700 mother-child pairs from the Rhea cohort in Greece, children assessed at age 4",
-  "exposure_domain": "prenatal persistent organic pollutants (POPs)",
+  "study_design": "prospective birth cohort",
+  "data_source_type": "biospecimen",
+  "population": "nearly 700 mother–child pairs from the Rhea cohort in Crete, Greece; children assessed at 4 years of age",
+  "exposure_domain": "persistent organic pollutants (obesogens): DDE, HCB, PCBs",
   "limitations": [
-    "observational design limits causal inference",
-    "lack of sex-stratified analysis despite potential effect modification",
-    "unclear long-term health implications",
-    "single regional cohort may limit generalizability"
+    "The study population is relatively small (~700 pairs), and effect modification by sex and long-term health outcomes warrant exploration in larger populations."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

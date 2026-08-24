@@ -3,40 +3,38 @@
   "title": "Quantile regression to examine the association of air pollution with subclinical atherosclerosis in an adolescent population.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "Participants included in this study were part of the Prevention and Incidence of Asthma and Mite Allergy (PIAMA) population-based birth cohort established in the Netherlands in 1996.",
-  "summary": "Cross-sectional analysis using quantile regression to examine associations between early-life ambient air pollution exposure and carotid intima-media thickness (CIMT) at age 16 in a Dutch birth cohort.",
+  "ehr_evidence": "Participants were part of the Prevention and Incidence of Asthma and Mite Allergy (PIAMA) population-based birth cohort established in the Netherlands in 1996; data came from parent/child questionnaires and medical examinations, with air pollution exposure estimated from ESCAPE land-use regression models.",
+  "summary": "In a cross-sectional analysis of 363 16-year-olds from the PIAMA Dutch birth cohort, quantile regression was used to examine associations of childhood air pollution exposure (NO2, PM2.5, PM2.5 absorbance, PMcoarse, ultrafine particles) with carotid intima-media thickness (CIMT), a marker of subclinical atherosclerosis.",
   "key_findings": [
-    "PM2.5 absorbance exposure at birth was significantly associated with a 6.23 μm (95% CI: 0.15, 12.3) higher CIMT per IQR increment at the 10th quantile of CIMT.",
-    "No significant associations were found for NO2, PM2.5, PMcoarse, or ultrafine particles at other quantiles after false discovery rate correction.",
-    "PM2.5 exposure at birth was weakly associated with higher CIMT at the 10th quantile (estimate: 4.85 μm, 95% CI: −0.41, 10.10) and 20th quantile (estimate: 3.73 μm, 95% CI: −0.74, 8.20).",
-    "PMcoarse and ultrafine particles did not display any consistent patterns across CIMT deciles."
+    "PM2.5 absorbance (black carbon) exposure at birth was the only statistically significant association (FDR < 0.05), associated with a 6.23 μm (95% CI: 0.15, 12.30) higher CIMT per IQR increment at the 10th quantile of CIMT, but not at the 50th (estimate 1.69 μm, 95% CI: −5.59, 8.97) or 90th quantile (estimate −4.54 μm, 95% CI: −12.11, 3.03).",
+    "NO2 exposure at birth showed a similar effect size but much wider confidence interval (10th quantile estimate 7.11 μm, 95% CI: −17.1, 31.32) and was not statistically significant after FDR correction.",
+    "PM2.5 exposure at birth was weakly associated (p < 0.10) with higher CIMT at the 10th quantile (4.85 μm, 95% CI: −0.41, 10.10) and 20th quantile (3.73 μm, 95% CI: −0.74, 8.20) but not significant after FDR correction.",
+    "PMcoarse and ultrafine particles showed no statistically significant associations nor consistent patterns across any CIMT quantiles."
   ],
   "captured_features": [
-    "Carotid intima-media thickness (CIMT) measured via ultrasound",
-    "Annual average air pollution concentrations (NO2, PM2.5, PM2.5 absorbance, PMcoarse, ultrafine particles)",
-    "Covariates (age, sex, BMI, cholesterol, blood pressure, parental education, indoor smoke, maternal smoking/BMI, breastfeeding, nationality)",
-    "Residential addresses"
+    "Carotid intima-media thickness (CIMT) measured by ultrasound at age 16",
+    "Annual air pollution concentrations (NO2, PM2.5, PM2.5 absorbance, PMcoarse, ultrafine particles) assigned at residential birth addresses from ESCAPE land-use regression and national ultrafine models",
+    "Age, sex, BMI, total cholesterol, HDL cholesterol, systolic and diastolic blood pressure",
+    "Parental education, indoor tobacco smoke exposure, maternal smoking during pregnancy, maternal BMI, breastfeeding status, Dutch nationality"
   ],
   "pathologies_diseases": [
-    "Subclinical atherosclerosis",
-    "Carotid intima-media thickness (CIMT)",
-    "Cardiovascular disease risk"
+    "Subclinical atherosclerosis (measured by carotid intima-media thickness)"
   ],
-  "study_design": "Cross-sectional analysis within a prospective birth cohort using quantile regression",
-  "data_source_type": "Birth cohort",
-  "population": "363 adolescents aged 16 years from the PIAMA birth cohort in the Netherlands",
-  "exposure_domain": "Ambient air pollution (NO2, PM2.5, PM2.5 absorbance, PMcoarse, ultrafine particles)",
+  "study_design": "Cross-sectional analysis within a population-based birth cohort",
+  "data_source_type": "birth cohort",
+  "population": "363 adolescents aged 16 years from the PIAMA population-based birth cohort in the Netherlands",
+  "exposure_domain": "Air pollution (NO2, PM2.5, PM2.5 absorbance/black carbon, PMcoarse, ultrafine particles)",
   "limitations": [
-    "Cross-sectional design with only one CIMT measurement",
-    "Air pollution exposure estimated only at residential addresses, missing school/outdoor exposure",
-    "Low model R2 for PMcoarse (38%)",
-    "Relatively small sample size",
-    "Findings limited to the lowest decile of CIMT distribution"
+    "Cross-sectional design with only one CIMT measurement, so findings cannot support causal inference.",
+    "Air pollution exposure was estimated only at residential addresses and did not account for school or other non-home exposure.",
+    "Relatively small sample size (363 participants).",
+    "Low performance of the PMcoarse exposure model (leave-one-out cross-validation R2 = 38%).",
+    "Exposure models accounted for spatial but not temporal trends in air pollution."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

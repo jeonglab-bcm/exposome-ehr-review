@@ -3,42 +3,48 @@
   "title": "Maternal high-fat diet modifies myelin organization, microglial interactions, and results in social memory and sensorimotor gating deficits in adolescent mouse offspring.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "C57BL/6N female mice aged 5 – 6 weeks were obtained from Charles River and habituated to pair-housing for one week.",
-  "summary": "Preclinical study investigating how maternal high-fat diet modifies myelin organization, microglial interactions, and behavioral outcomes in adolescent mouse offspring.",
+  "ehr_evidence": "The study used a maternal high-fat diet (mHFD) mouse model (C57BL/6N mice); data were generated from brain tissue histology, electron microscopy, RT-qPCR, and behavioral assays, not from electronic health records.",
+  "summary": "In a maternal high-fat diet (mHFD) mouse model, adolescent (P30) offspring of both sexes showed sex-specific myelin changes (reduced cytosolic myelin channels and increased optical density in males), altered microglial phagolysosomal activity and increased synaptic contacts, and behavioral deficits including loss of social novelty preference and reduced prepulse inhibition.",
   "key_findings": [
-    "Increased myelin optical density in mHFD-exposed male offspring compared to female mHFD-exposed offspring (p=0.0082).",
-    "Reduced area of cytosolic myelin channels in mHFD-exposed male offspring compared to control males (p=0.0016).",
-    "Lower hippocampal expression of Mbp, Cspg4, Olig2, and Igf1 in mHFD-exposed males (Mbp p=0.0014 vs male CD).",
-    "mHFD-exposed microglia exhibited reduced numbers of mature tertiary lysosomes and increased synaptic contacts.",
-    "mHFD-exposed offspring of both sexes showed decreased social novelty preference and reduced prepulse inhibition at 9 dB prepulse.",
-    "No significant differences in oligodendrocyte density, distribution, or maturation between diet groups."
+    "Increased myelin optical density in mHFD-exposed male compared to female offspring (male CD vs male mHFD: p = 0.0081, vs female CD: p = 0.0023, vs female mHFD: p = 0.0082)",
+    "Reduced area of cytosolic myelin channels in the corpus callosum rostrum of mHFD-exposed male offspring (male CD vs male mHFD: p = 0.0016)",
+    "Decreased hippocampal transcripts of Mbp, Cspg4, Olig2, and Igf1 in mHFD-exposed male offspring (Mbp: p = 0.0014 vs male CD; Igf1: p = 0.0412 vs male CD)",
+    "No significant change in myelinated axon density, g-ratio, decompacted myelin, or oligodendrocyte density/distribution/maturation",
+    "mHFD-exposed microglia showed increased synaptic (pre- and postsynaptic) contacts and reduced mature tertiary lysosomes",
+    "Decreased social novelty preference in mHFD-exposed offspring regardless of sex",
+    "Reduced prepulse inhibition at the 9 dB prepulse in mHFD-exposed offspring regardless of sex",
+    "No significant change in anxiety-related behaviors (open/closed arm time, anxiety index)"
   ],
   "captured_features": [
-    "myelin optical density",
-    "cytosolic myelin channel area and ratio",
-    "gene expression (Mbp, Cspg4, Olig2, Igf1, Gpnmb)",
-    "microglial ultrastructure (lysosomes, synaptic contacts)",
-    "behavioral metrics (social preference, social novelty preference, anxiety index, prepulse inhibition)"
+    "Myelin optical density (calibrated OD)",
+    "Cytosolic myelin channel area and ratio",
+    "Myelinated axon density and g-ratio",
+    "Gene expression (Mbp, Plp1, Cspg4, Olig2, Igf1, Gpnmb) in hippocampus and prefrontal cortex",
+    "Oligodendrocyte density and maturation rate",
+    "Microglial density, morphology, lysosome counts, and synaptic contacts",
+    "Social novelty preference index",
+    "Prepulse inhibition percentage",
+    "Anxiety index (elevated plus maze)"
   ],
   "pathologies_diseases": [
-    "neurodevelopmental alterations",
-    "social memory deficits",
-    "sensorimotor gating deficits"
+    "Social memory/social novelty deficits",
+    "Sensorimotor gating deficits (reduced prepulse inhibition)",
+    "Neurodevelopmental disorder-related behavioral outcomes"
   ],
-  "study_design": "experimental animal study",
-  "data_source_type": "animal model",
-  "population": "adolescent C57BL/6N mouse offspring (male and female)",
-  "exposure_domain": "maternal high-fat diet",
+  "study_design": "Controlled experimental animal study (maternal high-fat diet mouse model, diet x sex design)",
+  "data_source_type": "biospecimen",
+  "population": "Adolescent C57BL/6N mouse offspring at P30-P40, both sexes",
+  "exposure_domain": "Maternal high-fat diet (maternal nutritional/dietary exposure)",
   "limitations": [
-    "preclinical mouse model limits direct human translation",
-    "small sample sizes per group (n=4-5 animals)",
-    "lack of direct microglial modulation to establish causality",
-    "sex-specific mechanisms not fully elucidated beyond male/female dichotomy"
+    "Mouse model with limited translational relevance to humans",
+    "Small sample sizes (n = 4-6 animals/group)",
+    "Single adolescent timepoint (P30)",
+    "Maternal diet effects on dams not directly quantified in offspring"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,54 +3,57 @@
   "title": "Sugar restriction in the first 1000 days after conception, and long-term respiratory health: a quasi-experiment study.",
   "year": "2025",
   "ehr_used": true,
-  "ehr_evidence": "Dates of death and causes were obtained by linking to the National Health Service (NHS) death registers in England and Wales, as well as the NHS central registry in Scotland.",
-  "summary": "Quasi-experimental study linking UK Biobank participants born during UK sugar rationing (1951–1956) to NHS health records to assess the long-term impact of early-life sugar restriction on adult respiratory disease risk, disease onset, and lung function.",
+  "ehr_evidence": "We used the cessation of the United Kingdom's sugar rationing in September 1953 as a quasi-experiment, comparing 58,670 UK Biobank participants born 1951–1956 exposed to varying durations of early-life sugar restriction.",
+  "summary": "In a quasi-experimental study of 58,670 UK Biobank participants born 1951–1956, early-life sugar rationing during the first 1000 days after conception was associated with lower risks of asthma and COPD and improved adult lung function.",
   "key_findings": [
-    "Early-life sugar rationing (in utero plus 1–2 years) was associated with a lower risk of asthma (HR: 0.75; 95% CI: 0.61, 0.91).",
-    "Sugar rationing was associated with a lower risk of COPD (HR: 0.73; 95% CI: 0.62, 0.88).",
-    "Rationed participants experienced a delayed disease onset of up to 3.6 years.",
-    "Rationing was associated with improved lung function: FEV1% increased by 6.0 (95% CI: 2.9, 9.1), FVC% by 5.9 (95% CI: 3.3, 8.5), and FEV1/FVC ratio by 0.045 (95% CI: 0.011, 0.079).",
-    "No significant association was found for idiopathic pulmonary fibrosis (HR: 0.72; 95% CI: 0.46, 1.13; P for trend = 0.145).",
-    "Diabetes and hypertension mediated 18.2% of the effect on lung disease risk, while birth weight contributed only 1.6%.",
-    "Placebo outcomes (influenza and herpes zoster) showed no significant associations (HRs close to 1)."
+    "Early-life sugar rationing (in utero plus 1–2 y) was associated with lower asthma risk (HR 0.75; 95% CI 0.61, 0.91) and lower COPD risk (HR 0.73; 95% CI 0.62, 0.88), with longer exposure conferring greater protection.",
+    "No significant association was found for idiopathic pulmonary fibrosis (HR 0.72; 95% CI 0.46, 1.13; P for trend 0.145).",
+    "Sugar rationing delayed disease onset by up to 3.62 y for asthma, 2.85 y for COPD, and 2.74 y for IPF (in utero plus 1–2 y exposure).",
+    "Sugar rationing improved lung function: FEV1% predicted increased by 6.03 (95% CI 2.87, 9.13), FVC% by 5.88 (95% CI 3.30, 8.46), and FEV1/FVC ratio by 0.045 (95% CI 0.011, 0.079).",
+    "Type 2 diabetes and hypertension jointly mediated 18.2% of the association between sugar rationing and lung disease risk, while birth weight contributed only 1.6%.",
+    "Placebo outcomes (influenza and herpes zoster) showed no significant associations, with HR estimates close to 1.",
+    "In validation cohorts (UKB internal control, HRS, ELSA), birth period had no significant association with lung disease incidence."
   ],
   "captured_features": [
-    "ICD-10 codes for respiratory diseases",
-    "NHS death and hospitalization records",
-    "spirometry indices (FEV1%, FVC%, FEV1/FVC)",
-    "demographic and socioeconomic covariates",
-    "lifestyle and clinical factors",
-    "polygenic risk scores",
-    "birth weight and early-life history"
+    "Age, sex, race, place of birth, birth month",
+    "Household income, Townsend deprivation index",
+    "Smoking status, pack-years, alcohol consumption, physical activity (MET min/wk)",
+    "BMI",
+    "Cardiovascular disease, hypertension, diabetes, high cholesterol, digestive/kidney/liver diseases",
+    "Parental lung disease, maternal smoking around birth, breastfeeding status",
+    "Birth weight",
+    "Polygenic risk score (PRS) for IPF, COPD, asthma",
+    "FEV1%, FVC%, FEV1/FVC ratio, PEF from spirometry",
+    "ICD-10 codes for asthma (J45), COPD (J44), IPF (J84.1)",
+    "Dates of disease diagnosis, hospitalization, and death",
+    "Placebo outcomes: influenza (J09–J11), herpes zoster (B02)"
   ],
   "pathologies_diseases": [
-    "asthma",
-    "chronic obstructive pulmonary disease (COPD)",
-    "idiopathic pulmonary fibrosis (IPF)",
-    "influenza",
-    "herpes zoster",
-    "type 2 diabetes",
-    "hypertension"
+    "Asthma",
+    "Chronic obstructive pulmonary disease (COPD)",
+    "Idiopathic pulmonary fibrosis (IPF)",
+    "Influenza (placebo)",
+    "Herpes zoster (placebo)"
   ],
-  "study_design": "quasi-experimental cohort study",
+  "study_design": "Quasi-experimental (event-study/regression-discontinuity design based on UK sugar rationing cessation), with Cox proportional hazards and parametric (Gompertz) survival models, validated across external cohorts",
   "data_source_type": "EHR",
-  "population": "58,670 UK Biobank participants born October 1951–March 1956, predominantly White, aged 40–70 at recruitment",
-  "exposure_domain": "early-life sugar restriction/rationing during the first 1000 days after conception",
+  "population": "58,670 UK Biobank participants born October 1951–March 1956, aged 40–70 at recruitment, predominantly White, UK-based; validated in the English Longitudinal Study of Ageing (UK) and Health and Retirement Study (US)",
+  "exposure_domain": "Dietary/nutritional (early-life sugar restriction via national sugar rationing policy during the first 1000 days after conception)",
   "limitations": [
-    "Unmeasured confounding and secular trends cannot be fully excluded",
-    "Right censoring and survivor bias due to lack of prestudy mortality data",
-    "UK Biobank is not nationally representative and is predominantly White",
-    "Lack of detailed individual-level dietary data",
-    "Recall error for early-life variables like breastfeeding status",
-    "Use of London air pollution data as a nationwide proxy may not be accurate",
-    "Median-based polygenic risk score grouping may not reflect true genetic risk distribution"
+    "Exposure was a proxy based on birth period relative to sugar rationing policy; actual individual-level sugar intake was not measured.",
+    "Unmeasured confounding or secular trends, including improvements in disease detection, cannot be fully excluded.",
+    "Right censoring and lack of prestudy mortality data may introduce survivor bias.",
+    "UK Biobank is not nationally representative and is predominantly White, limiting generalizability.",
+    "Early-life variables (birth weight, maternal smoking, breastfeeding) were collected via adult self-report and may be subject to recall error.",
+    "London data used as a proxy for nationwide air pollution exposure.",
+    "Median-based PRS grouping may not reflect true genetic risk distribution."
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
-    "https://github.com/benny817817/early-life-sugar-rationing-respiratory-health"
+    "https://github.com/benny817817/early-life-sugar-rationing-respiratory-health."
   ],
-  "data_availability_statement": "The data are accessible through a public, open-access repository . Data from the UKB, ELSA, and HRS are available to researchers on request.",
+  "data_availability_statement": "The data are accessible through a public, open-access repository. Data from the UKB, ELSA, and HRS are available to researchers on request.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

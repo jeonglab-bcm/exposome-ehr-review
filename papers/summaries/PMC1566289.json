@@ -3,52 +3,44 @@
   "title": "Air pollution and health effects: A study of medical visits among children in Santiago, Chile.",
   "year": "1999",
   "ehr_used": false,
-  "ehr_evidence": "Data on morbidity due to respiratory diseases among children under 15 years of age have been collected from a group of public primary health clinics.",
-  "summary": "Time-series study examining associations between daily air pollution (PM10, ozone) and clinic visit counts for respiratory symptoms among children in Santiago, Chile.",
+  "ehr_evidence": "Using a standardized form, the total number of child medical visits and respiratory morbidity diagnoses was collected every day from eight sentinel primary health clinics between 13 July 1992 and 31 December 1993 (aggregate daily counts, not individual-level electronic records).",
+  "summary": "An ecological daily time-series study of 8 sentinel public primary health clinics in Santiago, Chile (1992-1993) examining associations between daily PM10 and ozone exposure and respiratory morbidity medical visits among children under 2 and aged 3-15.",
   "key_findings": [
-    "PM10 was significantly associated with lower respiratory symptoms (LRS) in both children under 2 and children aged 3-15.",
-    "PM10 was associated with upper respiratory symptoms (URS) only in the older cohort.",
-    "Ozone was associated with both URS and LRS in the older cohort.",
-    "For children under 2, a 50-μg/m3 increase in PM10 was associated with a 4-12% increase in LRS.",
-    "For children aged 3-15, a 50-μg/m3 increase in PM10 was associated with a 3-9% increase in LRS, and a 50 ppb increase in ozone was associated with a 5% increase.",
-    "No significant association was found between PM10 or ozone and nonrespiratory symptoms.",
-    "Ozone was not significantly associated with respiratory symptoms in children under 2."
+    "PM10 was significantly associated with lower respiratory symptoms (LRS) in both the young (<2 years) cohort (β=0.076, SE 0.026, p<0.01) and the older (3-15 years) cohort (β=0.076, SE 0.028, p<0.01).",
+    "For children under 2, a 50 µg/m³ change in PM10 (approximate interquartile range) was associated with a 4-12% increase in LRS.",
+    "For children aged 3-15, the increase in LRS ranged 3-9% for a 50 µg/m³ change in PM10 and 5% per 50 ppb change in ozone.",
+    "PM10 was associated with upper respiratory symptoms (URS) in the older cohort (β=0.052, SE 0.022, p<0.05); ozone was associated with URS (β=0.117, SE 0.035, p<0.01) and LRS (β=0.109, SE 0.046, p<0.01) in the older cohort.",
+    "PM10 was not associated with nonrespiratory symptoms."
   ],
   "captured_features": [
-    "daily clinic visit counts",
-    "respiratory symptom diagnoses (URS, LRS)",
-    "PM10 concentrations",
-    "ozone concentrations",
-    "temperature",
+    "daily counts of child medical visits",
+    "respiratory morbidity diagnoses (lower respiratory symptoms, upper respiratory symptoms)",
+    "daily PM10 (24-hr average µg/m³)",
+    "daily ozone (1-hr maximum ppb)",
+    "daily temperature",
     "humidity",
     "day of week",
-    "season/month"
+    "month",
+    "year"
   ],
   "pathologies_diseases": [
-    "lower respiratory symptoms",
-    "upper respiratory symptoms",
-    "bronchitis",
-    "pneumonia",
-    "bronchial asthma",
-    "pharyngitis",
-    "common cold",
-    "otitis media"
+    "lower respiratory symptoms/illness (bronchitis, pneumonia, bronchopneumonia, bronchial asthma, acute obstructive bronchitis, acute laryngitis, acute tracheitis)",
+    "upper respiratory symptoms/illness (pharyngitis, common cold, adenoiditis, sinusitis, tonsillitis, otitis media)"
   ],
-  "study_design": "time-series study",
-  "data_source_type": "clinic visit records",
-  "population": "children under 15 years old in Santiago, Chile (<2 years and 3-15 years)",
-  "exposure_domain": "air pollution (PM10, ozone)",
+  "study_design": "ecological daily time-series analysis",
+  "data_source_type": "other",
+  "population": "Children served by 8 sentinel public primary health clinics in Santiago, Chile; two age groups: under 2 years old and 3-15 years old (population under 15 years).",
+  "exposure_domain": "air pollution (PM10 particulate matter, ozone)",
   "limitations": [
-    "aggregate daily counts rather than individual patient records",
-    "clinic visits reflect subjective parental decisions and may be influenced by clinic capacity and operating hours",
-    "data only represent lower and moderate income populations",
-    "lack of data on sulfur dioxide and nitrogen dioxide",
-    "potential for discouraged demand bias at high pollution levels"
+    "Data reflect medical visits rather than episodes and do not discriminate first versus follow-up visits; some parents did not seek treatment, potentially attenuating the dose-response at high pollution levels.",
+    "Clinics are only open on weekdays during working hours and physician hours vary daily, so demand may be discouraged on high-pollution days, biasing the dose-response downward.",
+    "Clinics primarily serve the lower 70% income population, so estimates are not necessarily representative of all children in Santiago.",
+    "No data on sulfur dioxide or nitrogen dioxide were available."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

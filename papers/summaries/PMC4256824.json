@@ -3,56 +3,41 @@
   "title": "2014_PMC4256824_Determinants_of_vaccination_coverage_and_adherence_to_the_Greek_",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "The infant was considered as immunized or not based on the immunization card, as provided by the National Greek Health Care System.",
-  "summary": "Cross-sectional survey evaluating vaccination coverage and socioeconomic determinants among infants aged 2-24 months in Athens, Greece during 2009-2011.",
+  "ehr_evidence": "parents and/or legal representative of the infant were asked to complete a brief questionnaire to obtain information on demographic and socioeconomic characteristics, health care providers and utilization of immunization health services. The infant was considered as immunized or not based on the immunization card, as provided by the National Greek Health Care System.",
+  "summary": "A prospective convenience-sample survey of 1,667 infants aged 2-24 months in metropolitan Athens (2009-2011) assessing vaccination coverage and adherence to the Greek national immunization program and associated socioeconomic factors during the economic crisis.",
   "key_findings": [
-    "4.9% (95% CI 3.9%-6.0%) of parents admitted omitting a vaccine due to beliefs.",
-    "Infants were less likely to be fully vaccinated if they belonged to a minority group, had >1 sibling, young/illiterate parents, non-public insurance, or unemployed parents.",
-    "Appropriate hepatitis B immunization was strongly associated with hexavalent vaccine use (97.5% vs 54.2% at 6 months, 92.8% vs 25.7% at 12 months, p<0.01).",
-    "Multivariate analysis confirmed parental age, educational/occupational status, and family size (>3 children) as independent predictors of immunization status.",
-    "Lack of insurance was not associated with missed vaccine doses (57.8% vs 57.8%, p=NS)."
+    "Overall, 1,667 infants were enrolled (mean age 13.1 ± 6.6 months, 51.5% boys); 4.9% (95% CI 3.9%-6.0%) admitted omitting a vaccine due to belief it was not necessary or potentially harmful.",
+    "Vaccination coverage was highest for DTP-IPV-Hib and lowest for hepatitis A (42.4%) and rotavirus (10.3%).",
+    "Use of the hexavalent vaccine was strongly associated with timely hepatitis B vaccination (97.5% versus 54.2% and 92.8% versus 25.7%, p < 0.01).",
+    "Minority children were less likely to receive the hexavalent vaccine (15.6% versus 32.4%, p < 0.01) but had comparable hepatitis B coverage (73.2% versus 80.9%, p = 0.16).",
+    "Multivariate analysis found parental age, occupational and educational statuses and family size (>3 children) independently associated with immunization coverage at 6 and 12 months (e.g., >3 children adjusted OR 0.36, 95% CI 0.21-0.63, p < 0.001 at 6 months; 0.42, 95% CI 0.24-0.72, p < 0.001 at 12 months).",
+    "Lack of insurance was not associated with missed vaccine doses (57.8%, 95% CI 55.1%-60.7%)."
   ],
   "captured_features": [
+    "parental age, education and occupation",
+    "family size / number of children",
+    "nationality/ethnicity (minority vs non-minority, immigrants, Roma)",
+    "child's health insurance status",
+    "vaccination coverage per vaccine (DTP-IPV-Hib, PCV, MCC, HepB, MMR, varicella, rotavirus, HAV)",
     "immunization card status",
-    "parental age, education, occupation",
-    "family size",
-    "health insurance status",
-    "vaccination coverage rates",
-    "minority/immigrant status"
+    "health care utilization patterns"
   ],
   "pathologies_diseases": [
-    "vaccine-preventable diseases",
-    "hepatitis B",
-    "diphtheria",
-    "tetanus",
-    "pertussis",
-    "polio",
-    "Haemophilus influenzae type b",
-    "pneumococcal disease",
-    "meningococcal C",
-    "measles",
-    "mumps",
-    "rubella",
-    "varicella",
-    "hepatitis A",
-    "rotavirus",
-    "tuberculosis"
+    "None as primary outcome; outcome is vaccination coverage/adherence to the Greek National Immunization Programme (vaccine-preventable diseases context)."
   ],
-  "study_design": "cross-sectional survey",
-  "data_source_type": "questionnaire and immunization cards",
-  "population": "infants aged 2-24 months visiting a tertiary public outpatient clinic in Athens, Greece (2009-2011)",
-  "exposure_domain": "socioeconomic status, parental demographics, economic crisis period",
+  "study_design": "Prospective cross-sectional survey (convenience sample)",
+  "data_source_type": "other (parent questionnaire and immunization cards)",
+  "population": "1,667 infants aged 2-24 months visiting a tertiary public outpatient clinic in metropolitan Athens, Greece, 2009-2011",
+  "exposure_domain": "socioeconomic factors and economic crisis (parental age, education, occupation, family size, insurance, minority status)",
   "limitations": [
-    "convenience sample not representative of general population",
-    "overrepresentation of minority and low-SES children",
-    "underrepresentation of high-SES and rural families",
-    "less stringent criteria used to define complete vaccination",
-    "potential selection bias from outpatient clinic recruitment"
+    "Sample of convenience, not representative; overrepresentation of minority/urban working-class families and underrepresentation of higher SES and rural Greece.",
+    "Less stringent criteria used to define complete vaccination at 6 and 12 months, based on Greek pediatrician practices.",
+    "Potential sample bias from recruiting in an outpatient department."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

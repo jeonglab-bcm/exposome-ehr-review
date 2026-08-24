@@ -3,44 +3,45 @@
   "title": "Assessment of Nutritional Status of Infants Living in Arsenic-Contaminated Areas in Bangladesh and Its Association with Arsenic Exposure.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "Interviewers collected information by face to face interview using a structured questionnaire on socio-demographics, drinking, bathing, washing, use of cooking water and history of water use. Trained field workers took anthropometric measurements. Drinking water samples from the selected tube wells were transferred and analyzed.",
-  "summary": "Longitudinal prospective cohort study assessing the association between household arsenic exposure in drinking water and infant nutritional status (stunting, wasting, underweight) from birth to 9 months in rural Bangladesh.",
+  "ehr_evidence": "Trained field workers took anthropometric measurements such as weight and length of all participating infants at 3, 6 and 9 months of age, and interviewers collected information by face to face interview using a structured questionnaire; arsenic exposure was characterized from tube well drinking water samples analyzed by flow injection-hydride generation atomic absorption spectrometry.",
+  "summary": "A prospective longitudinal cohort of 120 mother-infant pairs followed from birth to 9 months in an arsenic-contaminated rural area of Bangladesh assessed the association between household tube-well arsenic exposure (<50 vs ≥50 μg/L) and infant malnutrition (WAZ, HAZ, WHZ Z-scores).",
   "key_findings": [
-    "Stunting rates were 10% at 3 months and 44% at 6 and 9 months.",
-    "Wasting rates were 23.3% at 3 months and 0% at 6 and 9 months.",
-    "Underweight rates were 25% at 3 months and 10% at 6 months, with 0% at 9 months.",
-    "Significant association found between stunting at 9 months and household drinking water arsenic exposure ≥50 μg/L (p = 0.009).",
-    "No significant association was found between household arsenic exposure and other nutritional indices (wasting, underweight) over time."
+    "Stunting prevalence was 10% at 3 months and 44% at both 6 and 9 months of age.",
+    "Wasting was 23.3% at 3 months with no wasted infants at 6 and 9 months; underweight was 25% at 3 months and 10% at 6 months.",
+    "A significant association of stunting with household drinking water arsenic exposure ≥50 μg/L was observed only at 9 months of age (p = 0.009).",
+    "No significant association was found between household arsenic exposure and underweight or wasting (acute malnutrition) during infancy.",
+    "The significant stunting association at 9 months was interpreted as a likely statistical incongruity/anomaly given the small sample size and short follow-up."
   ],
   "captured_features": [
-    "Anthropometric measurements (weight, length/height)",
-    "Z-scores (WAZ, HAZ, WHZ)",
-    "Household tube well water arsenic concentration",
-    "Breastfeeding practices",
-    "Socio-demographic and dietary information",
-    "Household asset score"
+    "Infant weight and length/height measurements at 3, 6 and 9 months",
+    "Weight-for-age Z-score (WAZ, underweight)",
+    "Height-for-age Z-score (HAZ, stunting)",
+    "Weight-for-height Z-score (WHZ, wasting)",
+    "Tube-well drinking water arsenic concentration (<50 vs ≥50 μg/L)",
+    "Socio-demographic and household asset score",
+    "Breastfeeding and complementary feeding information"
   ],
   "pathologies_diseases": [
-    "malnutrition",
-    "stunting",
-    "wasting",
-    "underweight"
+    "Infant malnutrition",
+    "Stunting",
+    "Wasting",
+    "Underweight"
   ],
-  "study_design": "prospective longitudinal cohort study",
-  "data_source_type": "field-based prospective cohort",
-  "population": "120 mother-infant pairs in rural Bangladesh, followed from birth to 9 months of age",
-  "exposure_domain": "arsenic exposure via household drinking water (tube well concentration <50 μg/L vs ≥50 μg/L)",
+  "study_design": "Prospective longitudinal cohort",
+  "data_source_type": "other",
+  "population": "120 mother-infant pairs (infants followed from birth to 9 months) in an arsenic-contaminated rural upazilla of Bangladesh",
+  "exposure_domain": "Heavy metals (arsenic)",
   "limitations": [
-    "Small sample size (n=120)",
-    "Short follow-up period (9 months)",
-    "Potential change in household drinking water sources during the study leading to exposure misclassification",
-    "Lack of maternal anthropometric and nutritional intake data",
-    "Possible statistical anomaly for the observed stunting association"
+    "Small sample size (120 mother-infant pairs) limiting statistical power.",
+    "Short follow-up period (birth to 9 months).",
+    "Exposure misclassification due to households changing drinking water sources after baseline water sampling.",
+    "No maternal anthropometric data available.",
+    "No data captured on maternal or infant dietary/nutritional intake."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

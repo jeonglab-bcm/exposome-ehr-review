@@ -11,6 +11,11 @@ on:
         description: "Pilot run: only process the first N papers (blank = all)"
         default: ""
         required: false
+      force:
+        description: "Re-summarize all papers even if cached (true/false)"
+        type: boolean
+        default: false
+        required: false
 
 permissions:
   contents: write
@@ -52,6 +57,7 @@ jobs:
           SUMMARIZE_WORKERS: ${{ inputs.workers }}
           SCAN_WORKERS: ${{ inputs.workers }}
           PIPELINE_LIMIT: ${{ inputs.limit }}
+          SUMMARIZE_FORCE: ${{ inputs.force }}
         run: dagster asset materialize -m pipeline --select "*"
 
       - name: Commit and push results

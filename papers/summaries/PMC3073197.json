@@ -3,45 +3,44 @@
   "title": "Molecular Epidemiology, prenatal exposure and prevention of cancer.",
   "year": "2011",
   "ehr_used": false,
-  "ehr_evidence": "In the New York City -based “Mothers and Newborns Cohort Study ”, pregnant mothers wore personal air monitors to measure their exposure to PAHs during pregnancy [9].",
-  "summary": "Review and summary of molecular epidemiology studies on prenatal environmental exposures and their association with biomarkers of cancer risk in a birth cohort.",
+  "ehr_evidence": "The study did not use electronic health records; data sources were biospecimens (cord blood and maternal blood), personal air monitors measuring PAH exposure, maternal urinary PAH metabolites, and biomarker assays (DNA adducts, chromosomal aberrations, DNA methylation).",
+  "summary": "A narrative review summarizing molecular epidemiology birth-cohort studies (NYC Mothers and Newborns Cohort and a Poland cohort) examining prenatal in utero exposure to air-pollutant PAHs and associated biomarkers of cancer risk.",
   "key_findings": [
-    "Maternal and cord white blood cells had equivalent levels of PAH-DNA adducts despite the estimated fetal dose being about 10 times lower.",
-    "High prenatal PAH exposure was associated with a higher frequency of stable chromosomal aberrations in cord blood.",
-    "Global DNA methylation levels in cord blood decreased with increasing prenatal PAH exposure.",
-    "Global DNA methylation levels in cord blood were positively correlated with levels of PAH-DNA adducts.",
-    "Methylation levels in cord blood and blood collected at age 3 did not vary significantly over time."
+    "High prenatal PAH exposure was associated with a higher frequency of stable chromosomal aberrations in cord blood (FISH/whole-chromosome painting).",
+    "Maternal and cord white blood cells had equivalent PAH-DNA adduct levels despite an estimated fetal dose ~10 times lower than the mother.",
+    "Global DNA methylation levels in cord blood white blood cells decreased with increasing prenatal PAH exposure.",
+    "Global DNA methylation in cord blood was positively correlated with PAH-DNA adduct levels, suggesting adducts do not mediate the inverse association.",
+    "Methylation levels in cord blood did not vary significantly over time compared with blood collected at age 3.",
+    "Differential DNA methylation of specific genes (e.g., 5'-CpG island of ACSL3) was identified between low and high prenatal PAH exposure groups."
   ],
   "captured_features": [
-    "personal air monitor measurements",
-    "maternal urinary PAH metabolites",
+    "Personal air monitor PAH exposure during pregnancy",
+    "Maternal urinary PAH metabolites",
     "PAH-DNA adducts in cord and maternal blood",
-    "chromosomal aberrations in cord blood lymphocytes",
-    "global DNA methylation levels in cord blood",
-    "blood samples at age 3"
+    "Chromosomal aberrations in cord blood (FISH, whole-chromosome painting)",
+    "Global DNA methylation levels in cord blood white blood cells",
+    "Gene-specific DNA methylation (ACSL3)",
+    "Birth cohort linkage (NYC and Poland)"
   ],
   "pathologies_diseases": [
-    "childhood cancer",
-    "adult cancer",
-    "leukemia",
-    "asthma",
-    "obesity",
-    "immune disorders"
+    "Childhood cancer",
+    "Adult cancer",
+    "Childhood acute lymphoblastic leukemia",
+    "Childhood asthma"
   ],
-  "study_design": "birth cohort study / molecular epidemiology perspective",
-  "data_source_type": "birth cohort with biospecimen and environmental monitoring",
-  "population": "pregnant mothers and newborns in New York City",
-  "exposure_domain": "prenatal environmental exposures (PAHs, tobacco smoke, pesticides, solvents, radiation, endocrine disruptors)",
+  "study_design": "Narrative review of birth cohort studies",
+  "data_source_type": "biospecimen",
+  "population": "Pregnant women and newborns/children in NYC (Mothers and Newborns Cohort) and Poland; prenatal/fetal exposure window",
+  "exposure_domain": "Air pollution (polycyclic aromatic hydrocarbons) and environmental carcinogens, prenatal/in utero exposure",
   "limitations": [
-    "measured overall DNA methylation levels rather than specific genes",
-    "observational design",
-    "focus on biomarkers rather than clinical disease outcomes",
-    "limited to specific geographic cohort"
+    "Measured overall/global DNA methylation rather than methylation status of specific genes.",
+    "Biomarker-based cross-sectional measurements with limited causal inference.",
+    "Relies on summary of prior cohort studies rather than a single primary analysis."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,50 +3,43 @@
   "title": "Effects of low-level prenatal lead exposure on child IQ at 4 and 8 years in a UK birth cohort study.",
   "year": "2017",
   "ehr_used": false,
-  "ehr_evidence": "The study sample was derived from the ALSPAC, a population-based study investigating environmental and genetic influences on the health, behaviour and development of children.",
-  "summary": "Prospective birth cohort study evaluating the association between low-level prenatal lead exposure and child IQ at ages 4 and 8 years, including sex-specific effects and moderation by prenatal exposure.",
+  "ehr_evidence": "\"The study sample was derived from the ALSPAC, a population-based study investigating environmental and genetic influences on the health, behaviour and development of children.\" Lead exposure was measured from whole blood samples analysed by inductively-coupled plasma mass spectrometry (biospecimen assay), and IQ was measured at research clinics, not from electronic health records.",
+  "summary": "A prospective UK birth cohort study (ALSPAC) examining the association between prenatal (first-trimester) blood lead concentrations and child IQ (verbal, performance, total) at 4 and 8 years.",
   "key_findings": [
-    "No association of prenatal lead exposure with child IQ at 4 or 8 years in adjusted regression models.",
-    "Positive association for IQ at age 8 years in girls: predicted increase per 1 mg/dl prenatal B-Pb was verbal 0.71 (p=0.021), performance 0.57 (p=0.099), and total 0.73 (p=0.017).",
-    "In boys, coefficients tended to be negative: verbal -0.15, performance -0.42, and total -0.29 points per 1 mg/dl (all p > 0.200).",
-    "No evidence for prenatal B-Pb moderating the association between child B-Pb and IQ at age 4 or 8 years."
+    "No association of prenatal blood lead with child IQ at 4 or 8 years in adjusted regression models (all p > 0.05).",
+    "No moderation effect of prenatal B-Pb on the association between child B-Pb and IQ at age 4 or 8 years (all p > 0.05).",
+    "In girls, positive association between prenatal B-Pb and IQ at 8 years: +0.71 verbal (p=0.021), +0.57 performance (p=0.099), +0.73 total IQ points per 1 mg/dl (p=0.017).",
+    "In boys, coefficients tended to be negative at 8 years: -0.15 verbal, -0.42 performance, -0.29 total IQ points per 1 mg/dl (all p > 0.200).",
+    "Maternal education was the strongest confounder, fully attenuating the crude associations in models 2 and 3.",
+    "No evidence for an effect of early-pregnancy maternal haemoglobin on the association between prenatal B-Pb and child IQ."
   ],
   "captured_features": [
-    "Prenatal blood lead concentration",
-    "Child blood lead concentration",
-    "Verbal IQ",
-    "Performance IQ",
-    "Total IQ",
-    "Maternal education",
-    "Smoking in pregnancy",
-    "Alcohol consumption",
-    "Maternal age",
-    "Parity",
-    "Housing tenure",
-    "Household crowding",
-    "Family adversity index",
-    "Weighted life events score",
-    "Haemoglobin level"
+    "Prenatal (first-trimester) maternal whole blood lead concentration (B-Pb)",
+    "Child verbal IQ, performance IQ and total IQ (WPPSI at 4 years, WISC-III at 8 years)",
+    "Child sex",
+    "Maternal education, first-trimester smoking, first-trimester alcohol, maternal age, parity, time resident in Avon",
+    "Housing tenure, household crowding, family adversity index, weighted life events score",
+    "Maternal haemoglobin level at booking",
+    "Child age at testing"
   ],
-  "pathologies_diseases": [],
+  "pathologies_diseases": [
+    "Cognitive function (IQ scores)"
+  ],
   "study_design": "Prospective birth cohort study",
-  "data_source_type": "Birth cohort (ALSPAC)",
-  "population": "Pregnant women and their offspring enrolled in the Avon Longitudinal Study of Parents and Children (ALSPAC), UK",
-  "exposure_domain": "Prenatal lead exposure",
+  "data_source_type": "biospecimen",
+  "population": "UK population-based birth cohort (ALSPAC); 4285 pregnant women with prenatal blood lead measured (delivery 1991-1992, Avon); offspring followed to IQ testing at 4 and 8 years.",
+  "exposure_domain": "heavy metals (lead)",
   "limitations": [
-    "Small sample size for IQ at age 4 and moderation analysis",
-    "Potential measurement error in IQ tests due to child factors",
-    "Unmeasured confounders such as maternal and paternal IQ",
-    "Lack of data on concomitant exposure to other pollutants like cadmium",
-    "Unknown childhood lead exposure not accounted for",
-    "Single time-point prenatal blood sampling may not capture full gestational exposure"
+    "Relatively small number of children with IQ measured at age 4 years and low numbers measured at both ages; particularly small sample in the moderation analysis.",
+    "IQ tests subject to error (child boredom, mood, tiredness, rapport with examiner).",
+    "Unable to adjust for maternal and paternal IQ, contributing to residual confounding.",
+    "Role of concomitant exposure to other pollutants (e.g., cadmium) not included.",
+    "Time lapse between exposure and outcome means unknown further childhood lead exposure was not accounted for."
   ],
-  "data_availability": "public-repository",
-  "data_accession_links": [
-    "http://dx.doi.org/10.1016/j.neuro.2017.07.025"
-  ],
-  "data_availability_statement": "Data relating to prenatal lead exposure and child IQ at 4 and 8 years old in the Avon Longitudinal Study of Parents and Children doi:http://dx.doi.org/10.1016/j.neuro.201 7.07.025 Data in Brief.",
+  "data_availability": "not-stated",
+  "data_accession_links": [],
+  "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

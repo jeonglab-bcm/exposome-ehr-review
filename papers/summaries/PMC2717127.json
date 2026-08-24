@@ -3,42 +3,50 @@
   "title": "Prenatal exposure to cigarette smoke induces diet- and sex-dependent dyslipidemia and weight gain in adult murine offspring.",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "The study used B6C3F1 mice exposed to mainstream cigarette smoke via whole-body inhalation from gestational day 4 to parturition.",
-  "summary": "Controlled experimental study investigating whether prenatal exposure to cigarette smoke alters body weight and plasma lipid profiles in adult murine offspring, with diet and sex as modifying factors.",
+  "ehr_evidence": "We exposed B6C3F1 mice (via whole-body inhalation) to either filtered air or mainstream cigarette smoke (MCS, at a particle concentration of 15 mg/m3) from gestational day 4 to parturition; plasma lipid parameters, lipoprotein subclass particle numbers and sizes, and total antioxidant capacities were measured.",
+  "summary": "In a controlled experimental mouse study, B6C3F1 offspring prenatally exposed to mainstream cigarette smoke via whole-body inhalation developed sex- and diet-dependent increases in body weight and dyslipidemia in adulthood.",
   "key_findings": [
-    "Adult female mice prenatally exposed to MCS demonstrated significantly higher body weight and plasma HDL and LDL levels than air-exposed counterparts.",
-    "MCS-exposed dams showed a 31% decrease in triglyceride levels compared to air-exposed dams.",
-    "Male offspring prenatally exposed to MCS gained substantially more weight when fed a high-fat diet compared to sex-matched air-exposed controls.",
-    "NMR analysis showed significantly increased total LDL particle concentrations in MCS-exposed female offspring (air vs. MCS: 5.9 ± 5.9 vs. 56.6 ± 3.0 nmol/L).",
-    "Male offspring exposed to MCS had higher plasma HDL levels on a normal diet (air vs. MCS: 45.5 ± 3.2 vs. 63.6 ± 4.0 mg/dL).",
-    "No significant differences were observed in total antioxidant capacity between air- and smoke-exposed groups in either sex."
+    "Adult female mice prenatally exposed to MCS and fed a normal diet weighed significantly more than air-exposed counterparts (p < 0.05) with no difference in male body weight on normal diet.",
+    "When fed a high-fat diet for 2 weeks, male offspring prenatally exposed to MCS gained substantially more weight than sex-matched air-exposed counterparts (p < 0.05).",
+    "Only triglyceride (TRI) levels were significantly altered (decreased by 31%) in dams after direct MCS inhalation compared with air-exposed counterparts.",
+    "Prenatal MCS exposure significantly increased total LDL particle concentration (air vs. MCS, 5.9 ± 5.9 vs. 56.6 ± 3.0 nmol/L) and large LDL particle concentration (4.3 ± 4.3 vs. 42.4 ± 4.2 nmol/L) in adult female offspring.",
+    "MCS exposure had no effect on HDL or VLDL and chylomicron particle concentrations in female offspring, and no differences in particle concentrations or size in male offspring.",
+    "No significant differences were observed between air- and smoke-exposed groups in total antioxidant capacity (TAC) in either sex.",
+    "Female offspring exposed to MCS on a normal diet showed significant increases in plasma HDL, LDL, and total protein levels; these effects were no longer visible in the HFD-fed group."
   ],
   "captured_features": [
     "body weight",
-    "plasma lipid parameters (total cholesterol, HDL, LDL, triglycerides, phospholipids, albumin, total protein)",
-    "lipoprotein subclass particle numbers and sizes (NMR)",
-    "total antioxidant capacity",
-    "organ weights (heart, liver, kidneys, lungs)"
+    "organ weights (heart, liver, kidneys, lungs)",
+    "plasma total cholesterol",
+    "plasma triglycerides",
+    "plasma HDL cholesterol",
+    "plasma LDL cholesterol",
+    "HDL/LDL ratio",
+    "phospholipids",
+    "albumin",
+    "total protein",
+    "NMR lipoprotein subclass particle numbers and sizes (HDL, LDL, VLDL)",
+    "total antioxidant capacity"
   ],
   "pathologies_diseases": [
-    "cardiovascular disease",
     "dyslipidemia",
-    "atherosclerosis"
+    "weight gain/obesity risk",
+    "cardiovascular disease risk"
   ],
-  "study_design": "controlled experimental animal study with in utero exposure and postnatal diet intervention",
-  "data_source_type": "animal study",
-  "population": "B6C3F1 mice (pregnant dams and adult offspring, both sexes)",
-  "exposure_domain": "prenatal cigarette smoke exposure (mainstream cigarette smoke via whole-body inhalation)",
+  "study_design": "controlled experimental animal exposure study",
+  "data_source_type": "biospecimen",
+  "population": "B6C3F1 mice exposed in utero to cigarette smoke, assessed through gestation to adult offspring at 13-14 weeks of age",
+  "exposure_domain": "cigarette smoke (tobacco smoke, whole-body inhalation)",
   "limitations": [
-    "small sample size for NMR analysis (n=3)",
-    "protein content differed between normal and high-fat diets, potentially confounding metabolic outcomes",
-    "findings are based on a murine model and may not fully translate to human physiology",
-    "exact biological mechanisms underlying the observed changes remain unknown"
+    "Protein content differed between the normal chow and high-fat diets, so observed changes may be partly attributable to dietary calorie/protein differences.",
+    "Small sample sizes in some analyses (e.g., n = 3 for NMR HDL particle concentration comparisons).",
+    "Mouse exposure model reflects only the first two trimesters of human gestation.",
+    "The specific underlying mechanism(s) by which prenatal MCS exposure caused the observed changes remains unknown."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

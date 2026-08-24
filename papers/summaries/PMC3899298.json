@@ -3,43 +3,40 @@
   "title": "Selenium protects neonates against neurotoxicity from prenatal exposure to manganese.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "Data were collected prospectively through face-to-face interviews, umbilical cord blood sampling, and clinical NBNA tests.",
-  "summary": "Prospective birth cohort study evaluating the protective effect of prenatal selenium against manganese-induced neurotoxicity in neonates using cord blood metal levels and behavioral assessments.",
+  "ehr_evidence": "Umbilical cord blood was collected and serum was separated... Serum Mn and Se concentrations were measured by Inductively Coupled Plasma Mass Spectrometry (ICP-MS)... face-to-face interviews were conducted to collect information on their socio-demographic characteristics. Neonatal Behavioral Neurological Assessment (NBNA) was administered when the infants were 3 days old",
+  "summary": "A birth cohort of 933 mother-newborn pairs in Shanghai, China (2008-2009) examined whether prenatal selenium protects against manganese neurotoxicity, using umbilical cord serum Mn and Se concentrations and Neonatal Behavioral Neurological Assessment (NBNA) scores",
   "key_findings": [
-    "High cord blood Mn (≥P75, ≥9.1 μg/L) was associated with lower NBNA scores (adjusted ß = -1.2, 95% CI: -1.4 to -1.0, p<0.001) and higher risk of low NBNA (adjusted OR = 8.0, 95% CI: 2.8 to 23.0, p<0.001).",
-    "With low cord Se (<P50, <63.1 μg/L), Mn was negatively associated with NBNA scores (adjusted ß = -1.1, 95% CI: -1.3 to -0.9, p<0.001) and increased risk of low NBNA (adjusted OR = 5.7, 95% CI: 2.8 to 11.5, p<0.001).",
-    "With high cord Se (≥P50, ≥63.1 μg/L), the adverse effect of Mn was attenuated (NBNA: adjusted ß = 0.1, 95% CI: -0.3 to 0.5, p = 0.746; Low NBNA: adjusted OR = 4.5, 95% CI: 0.4 to 46.7, p = 0.205).",
-    "High Mn/low Se group had significantly lower NBNA scores than high Mn/high Se group (38.0 ± 1.6 vs 39.5 ± 0.9, p<0.001).",
-    "Mn/Se ratio was moderately correlated with NBNA scores (r = -0.41, p<0.001)."
+    "High Mn exposure (≥P75, 9.1 mg/L) was associated with lower NBNA score (adjusted ß = -1.2, 95% CI: -1.4 to -1.0, p<0.001) and higher risk of low NBNA (adjusted OR = 8.0, 95% CI: 2.8 to 23.0, p<0.001)",
+    "With Se <P50 (63.1 mg/L), higher cord blood Mn was negatively associated with NBNA scores (adjusted ß = -1.1, 95% CI: -1.3 to -0.9, p<0.001) and increased risk of low NBNA (adjusted OR = 5.7, 95% CI: 2.8 to 11.5, p<0.001)",
+    "The adverse effect of Mn was reduced with Se ≥P50 (63.1 mg/L) (NBNA: adjusted ß = 0.1, 95% CI: -0.3 to 0.5, p=0.746; Low NBNA: adjusted OR = 4.5, 95% CI: 0.4 to 46.7, p=0.205)",
+    "High Mn exposure group with low Se (Mn≥9.1 mg/L and Se<63.1 mg/L) had much lower NBNA scores than high Mn with high Se (38.0±1.6 vs 39.5±0.9, p<0.001)",
+    "Mn/Se ratio and NBNA scores were moderately correlated (r = -0.41, p<0.001)"
   ],
   "captured_features": [
-    "cord serum manganese",
-    "cord serum selenium",
-    "NBNA scores",
-    "maternal age",
-    "maternal education",
-    "paternal education",
-    "maternal occupation",
-    "paternal occupation",
-    "household income",
-    "gestational age",
-    "birth weight",
-    "infant sex"
+    "Umbilical cord serum manganese concentration (mg/L)",
+    "Umbilical cord serum selenium concentration (mg/L)",
+    "Neonatal Behavioral Neurological Assessment (NBNA) score",
+    "Mn/Se ratio",
+    "Maternal age, maternal/paternal education, maternal/paternal occupation, household income",
+    "Gestational age, birth weight, infant gender"
   ],
-  "pathologies_diseases": [],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "primary prospective cohort (interviews, biospecimens, clinical exams)",
-  "population": "933 term newborns and mothers in Shanghai, China (2008-2009)",
-  "exposure_domain": "prenatal manganese and selenium",
+  "pathologies_diseases": [
+    "Neonatal neurotoxicity",
+    "Low NBNA score (neurobehavioral developmental impairment)"
+  ],
+  "study_design": "Birth cohort (prospective)",
+  "data_source_type": "biospecimen",
+  "population": "933 healthy pregnant women delivering term singleton infants (37-42 weeks gestation) and their neonates in Shanghai, China, 2008-2009",
+  "exposure_domain": "heavy metals (manganese) and selenium",
   "limitations": [
-    "dietary manganese and selenium intake not assessed",
-    "no long-term neurodevelopmental follow-up",
-    "potential residual confounding despite multivariable adjustment"
+    "Dietary Mn and Se intake was not investigated",
+    "No long-term follow-up to assess persistent effects",
+    "Residual confounding cannot be ruled out despite adjustment for potential confounders"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

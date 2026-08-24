@@ -4,41 +4,45 @@
   "year": "2015",
   "ehr_used": true,
   "ehr_evidence": "Numerator data for all analyses were obtained from routinely collected data extracted from the Lead Management Program ACCESS database, which contains information on all blood lead tests conducted at both the mainstream and Indigenous health clinics.",
-  "summary": "Before-after study evaluating the impact of switching from venous to capillary blood lead screening and linking it with routine immunization appointments on screening participation rates among young children in Broken Hill, Australia.",
+  "summary": "A before-after study evaluating the impact of introducing point-of-care capillary blood lead screening and linking screening with routine immunization appointments on screening participation among children aged 7-59 months resident in Broken Hill, NSW, Australia.",
   "key_findings": [
-    "Annual screening participation increased from 0.39 in 2008 to 0.75 in 2012.",
-    "Cumulative screening by 24 months increased from 0.63 for the 2007 birth cohort to 0.98 for the 2010 birth cohort.",
-    "Attendance stabilized after capillary screening was introduced and increased markedly when linked with immunization.",
-    "No evidence that changing to capillary sampling affected the estimate of the underlying population blood lead level, which continued to fluctuate at or slightly below previous levels.",
-    "No consistent change in the proportion of children with blood lead levels equal to or greater than 5 or 10 μg/dL."
+    "Overall annual screening participation of 12-59 month old children increased from 0.39 in 2008 to 0.75 in 2012 (increase of 0.31, 95% CI increase of 0.27-0.35).",
+    "The proportion of children screened at least once by 24 months increased from 0.63 for children born in 2007 to 0.98 for children born in 2010 (0.34 increase in screening, 95% CI increase of 0.28-0.41).",
+    "The number of screening days more than doubled after screening was offered at immunization, from 80 screening days in 2010 to 184 screening days in 2012.",
+    "There was no evidence that changing to capillary sampling affected the estimate of the underlying population blood lead level; geometric means fluctuated at or slightly below previously observed levels."
   ],
   "captured_features": [
     "birth date",
     "sex",
     "date of test",
     "address",
-    "area of town",
+    "area of town (lead risk zone)",
     "numeric identifier",
-    "blood lead test results"
+    "annual screening proportion",
+    "cumulative attendance by birth cohort",
+    "geometric mean blood lead level",
+    "age",
+    "gender",
+    "locality",
+    "year of testing"
   ],
   "pathologies_diseases": [
-    "elevated blood lead levels",
-    "lead poisoning"
+    "Blood lead exposure / elevated blood lead levels (lead poisoning risk)",
+    "Lead exposure"
   ],
-  "study_design": "before-after study",
+  "study_design": "Before-after study (quasi-experimental, single-community, no control group)",
   "data_source_type": "EHR",
-  "population": "7–59 month old children resident in Broken Hill, NSW, Australia",
-  "exposure_domain": "blood lead levels",
+  "population": "Children aged 7-59 months (1-4 years old) resident in Broken Hill, NSW, Australia",
+  "exposure_domain": "Heavy metals (lead)",
   "limitations": [
-    "use of administrative data sets to calculate denominators with assumed linear change between census years",
-    "uncertainty in NSW Midwives Data Collection due to time delays and lack of migration accounting",
-    "before-and-after design limits ability to control for other factors",
-    "single community setting without a control group"
+    "Before-after study design limited the ability to examine other factors that might have influenced screening rates and to rule out that offering venous screening at routine visits may have similarly increased attendance.",
+    "No control community, so broader factors (e.g., national health promotion campaigns) could not be ruled out.",
+    "Denominators were estimated from census data and the NSW Midwives Database, introducing uncertainty due to assumed linear change between censuses, time delays in data entry, and lack of in/out migration accounting."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }
