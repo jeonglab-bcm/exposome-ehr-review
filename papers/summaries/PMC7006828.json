@@ -3,40 +3,45 @@
   "title": "2020_PMC7006828_Kansan_Guardian_Perceptions_of_HPV_and_the_HPV_Vaccine_and_the_R",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "Eligible Kansas guardians of children aged 9 - 17 years completed an online survey.",
-  "summary": "Cross-sectional survey study assessing Kansas guardians' perceptions of HPV and the HPV vaccine, and the influence of social media messages on those perceptions and vaccination decisions.",
+  "ehr_evidence": "From January 31 - March 21, 2017, data were collected via an online survey.",
+  "summary": "A cross-sectional online survey of Kansas guardians of children aged 9-17 years (n=95) assessing perceptions of HPV and the HPV vaccine, social media exposure, and their influence on vaccination decisions.",
   "key_findings": [
-    "57.9% (n=55) of guardians reported seeing information about HPV and the HPV vaccine on social media.",
-    "Guardians who saw HPV vaccine information on social media were significantly more likely to perceive the vaccine could kill their child compared to those who did not (M=2.50, SD=1.62 vs M=1.74, SD=0.85; t(79)=0.019).",
-    "Children of guardians with annual household income ≥$100,000 were significantly more likely to have received at least one HPV vaccine dose than children of guardians earning <$100,000 (p=0.003).",
-    "Higher HPV vaccine harm perception scores significantly predicted lower effectiveness perception scores (β=-0.451, R=0.620, F[1,57]=35.63, p<0.0001), explaining 38.5% of the variance."
+    "Of 95 eligible participants, 55 (57.9%) indicated seeing information about HPV and the HPV vaccine on social media.",
+    "Children of guardians with annual household income of $100,000 or more were significantly more likely to have received at least one dose of the HPV vaccine compared to children of guardians earning under $100,000 (p = 0.003).",
+    "Participants who had seen information on social media about the HPV vaccine (M = 2.50, SD = 1.62) were significantly more likely to perceive that the HPV vaccine could kill their child than those who had not seen information (M = 1.74, SD = 0.85; t(79) = 0.019).",
+    "Higher scores on the HPV vaccine harm perception scale (β = -0.451) significantly predicted lower scores on the HPV vaccine effectiveness perception scale, explaining 38.5% of the variance (R = 0.620; F[1, 57] = 35.63; p < 0.0001).",
+    "Region had a significant effect on perception of HPV vaccine inconvenience for children (F[6, 80) = 2.96; p = 0.012).",
+    "Participants perceived their fears about getting their child the HPV vaccine were neither significantly increased nor decreased by social media (M = 0.11, SD = 0.50; t(54) = 1.63, p = 0.109).",
+    "No significant differences were found between groups on HPV-related items when comparing those who had or had not seen information on social media."
   ],
   "captured_features": [
-    "Demographic characteristics (sex, age, race, education, income, region)",
-    "Child demographic characteristics and age",
-    "Self-reported HPV vaccination status",
-    "Social media use and exposure to HPV/HPV vaccine information",
-    "Perception scales (susceptibility, severity, benefits, barriers, cues to action, self-efficacy)"
+    "guardian demographics (sex, guardian identity, age/generation, race, ethnicity, education, annual household income, region of residence)",
+    "children's demographics (sex, age)",
+    "child HPV vaccination status",
+    "HPV and HPV vaccine perceptions (health belief model and social amplification of risk scales)",
+    "source and social media use",
+    "perceptions of social media messages about HPV and HPV vaccine"
   ],
   "pathologies_diseases": [
-    "Human papillomavirus (HPV)",
-    "HPV-related cancers",
-    "Genital warts"
+    "HPV infection",
+    "genital warts",
+    "HPV-related cancers (cervical, vulvar, vaginal, penile, anal, oropharyngeal)",
+    "HPV vaccine hesitance/fear"
   ],
-  "study_design": "Cross-sectional online survey",
-  "data_source_type": "Survey",
-  "population": "Kansas guardians of children aged 9-17 years",
-  "exposure_domain": "Social media messages about HPV and HPV vaccine",
+  "study_design": "cross-sectional survey",
+  "data_source_type": "other",
+  "population": "Kansas guardians of children aged 9-17 years (n = 95 eligible online survey participants; 87.4% female, 87.4% mothers, predominantly White, non-Hispanic)",
+  "exposure_domain": "social media messages about HPV and the HPV vaccine",
   "limitations": [
-    "Convenience sampling with a small, non-representative sample (n=95)",
-    "Self-reported vaccination status and perceptions subject to recall and social desirability bias",
-    "Cross-sectional design precludes causal inference",
-    "Limited generalizability to other regions or demographics"
+    "Convenience sample with limited representativeness and small sample size (n = 95).",
+    "Self-reported data with potential recall and social desirability bias.",
+    "Low survey completion rate (41.6% of those who began the survey).",
+    "Cross-sectional design precludes causal inference."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

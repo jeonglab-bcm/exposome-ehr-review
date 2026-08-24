@@ -3,40 +3,46 @@
   "title": "Quantity and diversity of environmental microbial exposure and development of asthma: a birth cohort study.",
   "year": "2014",
   "ehr_used": false,
-  "ehr_evidence": "House dust samples were collected at 2 months of age, and health outcomes were assessed using repeated questionnaires and venous blood samples for specific IgE.",
-  "summary": "Prospective birth cohort study evaluating the association between environmental microbial exposure (quantity and diversity scores from house dust) and the development of asthma, respiratory symptoms, atopic dermatitis, and allergic sensitization in children up to age 6.",
+  "ehr_evidence": "Bacterial endotoxin, 3-hydroxy fatty acids, N-acetyl-muramic acid, fungal extracellular polysaccharides (EPS) from Penicillium and Aspergillus spp., b-D-glucan, ergosterol, and bacterial or fungal quantitative polymerase chain reactions (qPCRs) were analyzed from dust samples collected at 2 months of age; asthma, wheezing, cough, and atopic dermatitis were assessed using repeated questionnaires; specific IgEs were determined from blood samples at age 1 and 6 years.",
+  "summary": "A prospective birth cohort of 410 children followed to 6 years of age examined associations between house dust microbial exposure markers (total quantity and diversity scores) and asthma, respiratory symptoms, atopic dermatitis, and allergen sensitization.",
   "key_findings": [
-    "Total microbial quantity score showed a significant inverted-U-shaped association with asthma incidence (P < 0.001), with the highest risk at medium levels (aOR 2.24, 95% CI 0.87–5.75 for 3rd quintile) and lowest risk at highest levels (aOR 0.34, 95% CI 0.09–1.36 for 5th quintile).",
-    "Microbial diversity score was inversely associated with wheezing risk and significantly associated (inverted-U shape) with sensitization to inhalant allergens at age 6.",
-    "No significant associations were found between single microbial markers and asthma, respiratory symptoms, atopic dermatitis, or sensitization."
+    "Total microbial quantity score (sum of ergosterol, endotoxin, and muramic acid) had a significant inverted-U-shaped association with asthma ever (P < 0.001): highest risk at medium level (aOR 2.24, 95% CI 0.87-5.75 for 3rd quintile) and lowest risk at highest level (aOR 0.34, 95% CI 0.09-1.36 for 5th quintile).",
+    "Microbial diversity score (sum of detected qPCRs) was inversely associated with risk of any wheezing (P < 0.001 for linear trend).",
+    "Microbial diversity score was significantly (inverted-U shape) associated with sensitization to inhalant allergens at 6 years (P = 0.001 for quadratic trend).",
+    "Only few associations were found between single microbial markers and the studied outcomes; total microbial quantity score was not associated with atopic dermatitis or sensitization.",
+    "Association of diversity score with asthma ever was nonsignificant (P = 0.67) and sensitive to adjustment for farming."
   ],
   "captured_features": [
-    "house dust microbial markers (endotoxin, muramic acid, ergosterol, β-D-glucan, qPCR for specific bacteria/fungi)",
-    "parent-reported respiratory symptoms and asthma diagnoses",
-    "specific IgE levels",
-    "microbial quantity and diversity scores"
+    "House dust bacterial endotoxin, 3-hydroxy fatty acids, N-acetyl-muramic acid, fungal EPS, b-D-glucan, ergosterol, LPS 10:0-16:0, and qPCR-based microbial DNA markers",
+    "Total microbial quantity score (sum of quintiles of ergosterol, endotoxin, and muramic acid)",
+    "Microbial diversity score (number of detected qPCRs)",
+    "Amount of dust (mg/m2)",
+    "Doctor-diagnosed asthma ever, current asthma, any wheezing, nocturnal cough, cough",
+    "Atopic dermatitis ever",
+    "Sensitization to inhalant allergens (specific IgE)",
+    "Parent-reported respiratory symptoms from repeated questionnaires"
   ],
   "pathologies_diseases": [
-    "asthma",
-    "wheezing",
-    "cough",
-    "atopic dermatitis",
-    "allergic sensitization"
+    "Asthma",
+    "Wheezing",
+    "Cough",
+    "Atopic dermatitis",
+    "Allergen sensitization"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "primary cohort data",
-  "population": "410 children born in Eastern and Middle Finland, followed from birth to 6 years of age",
-  "exposure_domain": "environmental microbial exposure (house dust bacterial and fungal markers)",
+  "study_design": "Prospective birth cohort",
+  "data_source_type": "biospecimen",
+  "population": "410 children born in Eastern and Middle Finland (2002-2005) from farmer and nonfarmer households, followed from birth to 6 years of age",
+  "exposure_domain": "Environmental microbial exposure (house dust microbial markers: endotoxin, muramic acid, ergosterol, beta-D-glucan, fungal EPS, qPCR-based diversity)",
   "limitations": [
-    "small cohort size (N=410)",
-    "lack of adjustment for multiple testing",
-    "microbial markers do not capture total microbial exposure without error",
-    "potential misclassification of exposure based on single dust sample at 2 months"
+    "Small cohort size limiting statistical power and requiring confirmation in larger studies.",
+    "No adjustments for multiple testing.",
+    "Microbial markers and combinations used to build quantity scores do not measure total microbial exposure without error (e.g., muramic acid overestimates Gram-negative bacteria).",
+    "Diversity score based on only 6 fungal and 2 bacterial qPCR assays provides only a rough estimate of overall microbial diversity."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

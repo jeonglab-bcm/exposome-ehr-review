@@ -3,49 +3,50 @@
   "title": "Traffic-related air pollution and respiratory symptoms in children living along trunk roads in Chiba Prefecture, Japan.",
   "year": "2003",
   "ehr_used": false,
-  "ehr_evidence": "A survey of respiratory symptoms was conducted on all subjects in September or October of each year from 1992 through 1995... a standard respiratory symptom questionnaire... was sent through the schools to the parents of all subjects.",
-  "summary": "Prospective four-year cohort study evaluating the association between traffic-related air pollution (proximity to trunk roads) and respiratory symptoms in schoolchildren in Chiba Prefecture, Japan.",
+  "ehr_evidence": "In the first and fourth surveys, a standard respiratory symptom questionnaire, the modified Japanese version of ATS-DLD-78-C, was sent through the schools to the parents of all subjects; exposure was estimated from ambient air monitoring stations, so the data source was a parent-completed survey, not an electronic health record.",
+  "summary": "A four-year prospective cohort study of 2,506 schoolchildren aged 6-9 years in eight communities in Chiba Prefecture, Japan, examining the association between living near trunk roads with heavy traffic (traffic-related air pollution) and the prevalence and incidence of asthma and respiratory symptoms.",
   "key_findings": [
-    "Prevalence of asthma was higher among girls living <50 m from trunk roads.",
-    "Incidence of asthma significantly increased among boys living in roadside areas relative to rural areas (odds ratio = 3.75; 95% confidence interval: 1.00-14.06).",
-    "Incidence of asthma increased among girls living in roadside areas but was not statistically significant (odds ratio = 4.06; 95% confidence interval: 0.91-18.10).",
-    "Prevalence of bronchitis was significantly higher in children living in steel or reinforced concrete houses compared to wooden houses.",
-    "No significant association was found between maternal smoking and respiratory symptoms.",
-    "History of allergic diseases was significantly associated with increased incidence of asthma and wheeze in both sexes."
+    "The incidence of asthma significantly increased among boys living in roadside areas relative to rural areas (adjusted odds ratio = 3.77; 95% CI reflecting significance, p<0.05), even after adjustment for allergic history and indoor environment.",
+    "Among girls, the adjusted odds ratios for incidence of asthma were 4.03 for roadside and 1.74 for non-roadside areas relative to rural areas, but the roadside estimate was not statistically significant (95% CI included 1).",
+    "Among girls, testing for trends showed the prevalence of asthma increased significantly in the order of roadside > non-roadside > rural areas.",
+    "The incidence of wheeze did not differ in relation to the location of the home among either boys or girls.",
+    "A history of allergic diseases was associated with increased incidence of asthma in both sexes; maternal smoking and heating appliance type were not associated with any respiratory symptom."
   ],
   "captured_features": [
-    "Parental-reported respiratory symptoms (asthma, wheeze, bronchitis, cough/phlegm)",
-    "Distance of home to trunk roads (<50 m vs ≥50 m vs rural)",
-    "Ambient air pollutant concentrations (NO2, SPM)",
-    "Traffic density",
-    "Maternal smoking habits",
-    "House structure and heating type",
-    "History of allergic diseases and parental allergy history"
+    "distance of home from trunk roads (<50 m roadside vs 50+ m vs rural)",
+    "ambient NO2 and suspended particulate matter (SPM) concentrations",
+    "daytime traffic density and proportion of heavy/diesel vehicles",
+    "sex",
+    "maternal/household smoking habits",
+    "house structure (wooden vs steel/reinforced concrete)",
+    "type of heating appliance",
+    "history of allergic diseases (atopy, allergic rhinitis)",
+    "parental history of allergic diseases",
+    "feeding method in infancy",
+    "school grade",
+    "respiratory diseases before age 2"
   ],
   "pathologies_diseases": [
     "asthma",
     "wheeze",
     "bronchitis",
-    "allergic diseases",
-    "atopy",
-    "allergic rhinitis",
-    "eczema",
-    "pollinosis"
+    "respiratory symptoms",
+    "allergic diseases (atopy, allergic rhinitis)"
   ],
-  "study_design": "prospective cohort study",
-  "data_source_type": "questionnaires and environmental monitoring",
-  "population": "schoolchildren aged 6-9 years in Chiba Prefecture, Japan",
-  "exposure_domain": "traffic-related air pollution and proximity to trunk roads",
+  "study_design": "prospective cohort",
+  "data_source_type": "other",
+  "population": "schoolchildren aged 6-9 years (first to third grade) in eight communities in Chiba Prefecture, Japan",
+  "exposure_domain": "traffic-related air pollution (automobile exhaust, NO2, suspended particulate matter)",
   "limitations": [
-    "loss to follow-up due to residential changes",
-    "potential response bias from varying questionnaire formats across surveys",
-    "exposure assessment based on residential distance and area-level monitoring rather than personal measurements",
-    "potential selective migration bias"
+    "Loss to follow-up and selective migration (families with respiratory symptoms may have moved away), potentially underestimating the risk of living in roadside areas.",
+    "Exposure was estimated from ambient monitoring stations and distance from roads rather than individual personal exposure measurements.",
+    "Outcomes were self-reported by parents via questionnaire, risking misclassification.",
+    "Small number of children whose mothers smoked limited analysis of environmental tobacco smoke."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

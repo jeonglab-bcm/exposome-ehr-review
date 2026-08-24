@@ -3,34 +3,26 @@
   "title": "The Rotavirus Vaccine Story: From Discovery to the Eventual Control of Rotavirus Disease.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "This manuscript is a narrative review article summarizing the history, development, and global impact of rotavirus vaccines; it does not analyze primary electronic health record or linked health data.",
-  "summary": "This narrative review summarizes the historical development, clinical trial efficacy, and post-licensure global impact of rotavirus vaccines, highlighting reduced mortality and hospitalizations but persistent challenges with vaccine effectiveness in low-income settings.",
-  "key_findings": [
-    "Rotavirus vaccine introduction reduced rotavirus hospitalizations by a median of 59%, acute gastroenteritis hospitalizations by 36%, and diarrhea mortality by 36% in countries with routine immunization programs.",
-    "Vaccine effectiveness showed a gradient by setting: median 87% in countries with lowest under-5 mortality, 75% in intermediate, and 60% in highest under-5 mortality countries.",
-    "Rotavac demonstrated an efficacy of 56% (95% CI, 37%–70%) against severe rotavirus gastroenteritis in the first 2 years of life in India.",
-    "Rotasiil demonstrated an efficacy of 36% (95% CI, 12%–49%) in India and 67% (95% CI, 50%–78%) in Niger against severe rotavirus gastroenteritis.",
-    "Post-licensure monitoring in high- and middle-income countries observed an increased risk of intussusception of 1 to 6 excess cases per 100,000 vaccinated infants in the 1–7 days after the first dose, whereas no increased risk was seen in high-mortality countries in sub-Saharan Africa or India."
-  ],
+  "ehr_evidence": "This is a narrative review/supplement article summarizing published literature on rotavirus vaccine discovery, development, and global impact; no primary individual-level data source was analyzed.",
+  "summary": "Narrative review of the history of rotavirus vaccine discovery, development, licensure, and global implementation impact in children younger than 5 years.",
+  "key_findings": [],
   "captured_features": [],
   "pathologies_diseases": [
-    "Rotavirus disease",
-    "Severe rotavirus gastroenteritis",
-    "Intussusception",
-    "Acute gastroenteritis",
-    "Diarrhea"
+    "rotavirus disease",
+    "severe rotavirus gastroenteritis/diarrhea",
+    "intussusception"
   ],
   "study_design": "Narrative review",
-  "data_source_type": "other",
-  "population": "Children <5 years globally, with specific focus on low-, middle-, and high-income countries",
-  "exposure_domain": "Vaccination (rotavirus vaccines)",
+  "data_source_type": "Other (narrative review)",
+  "population": "Children younger than 5 years, globally",
+  "exposure_domain": "Rotavirus vaccine",
   "limitations": [
-    "This is a narrative review summarizing existing literature and clinical trial data rather than a primary observational study; it does not generate new primary data from EHR or linked health records."
+    "Narrative review synthesizing cited literature without primary data analysis or quantitative synthesis"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author.",
-  "confidence": "high",
+  "data_availability_statement": "Supplementary materials are available at The Journal of Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author. The complete references are available as online Supplemental Material.",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "Qwen3.6-35B-A3B-4bit"
+  "model": "ornith-1.5-35b"
 }

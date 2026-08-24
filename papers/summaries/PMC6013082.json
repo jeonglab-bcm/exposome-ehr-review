@@ -3,40 +3,43 @@
   "title": "2018_PMC6013082_Strategic_Response_to_an_Outbreak_of_Circulating_Vaccine-Derived",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "Data were derived from acute flaccid paralysis (AFP) case surveillance, stool specimen testing, administrative vaccination coverage records, and postcampaign monitoring surveys.",
-  "summary": "Descriptive report of a circulating vaccine-derived poliovirus type 2 (cVDPV2) outbreak in Syria (2017–2018), detailing case epidemiology, surveillance performance, and the impact of monovalent OPV type 2 vaccination campaigns and environmental surveillance on interrupting transmission.",
+  "ehr_evidence": "The report relies on polio surveillance data rather than electronic health records; as stated, 'The vaccination status of patients aged 6–59 months with nonpolio AFP (NPAFP) can be used as a proxy for OPV vaccination coverage' and cases were identified through acute flaccid paralysis (AFP) surveillance and stool specimen testing.",
+  "summary": "This MMWR outbreak report describes the epidemiology and public health response to a circulating vaccine-derived poliovirus type 2 (cVDPV2) outbreak in Syria (2017–2018), identifying 74 cases and reporting that intensified AFP surveillance, environmental sewage sampling, and three rounds of mOPV2 vaccination campaigns interrupted transmission.",
   "key_findings": [
-    "74 cVDPV2 cases were identified, with a median age of 15 months.",
-    "46 of 74 cases (62%) occurred in females.",
-    "30 cases (41%) occurred in children who had never received an OPV dose.",
-    "71 cases (96%) were reported from Deir-ez-Zor governorate.",
-    "Environmental sewage sampling and mOPV2 vaccination campaigns successfully interrupted cVDPV2 transmission."
+    "74 cVDPV2 cases were identified with the most recent case in September 2017; 46 (62%) occurred in females.",
+    "The median patient age was 15 months, with 26 (35%) aged <12 months, 35 (47%) aged 12–23 months, 11 (15%) aged 24–59 months, and 2 (3%) aged ≥5 years.",
+    "71 (96%) of 74 cases were reported from Deir-ez-Zor governorate (58 from Mayadeen district, 12 from Boukamal district, 1 from Deir-ez-Zor district).",
+    "30 cases (41%) had never received a dose of OPV, 32 (43%) received 1–2 doses, and 12 (16%) received ≥3 OPV doses.",
+    "Administrative mOPV2 coverage in Deir-ez-Zor was ~79% (postcampaign monitoring recall 88%) in the first campaign and 77% in the second; in Raqqa, administrative coverage was 86% then 114% with postcampaign monitoring of 57% and 84% respectively.",
+    "Enhanced surveillance coupled with mOPV2 vaccination successfully interrupted cVDPV2 transmission in Syria."
   ],
   "captured_features": [
-    "AFP case reports",
-    "stool specimen test results",
-    "administrative vaccination coverage",
-    "postcampaign monitoring survey data"
+    "cVDPV2 case counts by governorate and month of paralysis onset",
+    "patient sex and age distribution",
+    "OPV vaccination status/dose history",
+    "stool specimen adequacy and AFP surveillance rates",
+    "administrative vaccination coverage and postcampaign monitoring (recall) coverage",
+    "genomic sequence differences from Sabin vaccine virus (22 nucleotides in VP1)",
+    "environmental sewage surveillance site locations"
   ],
   "pathologies_diseases": [
-    "acute flaccid paralysis",
+    "circulating vaccine-derived poliovirus type 2 (cVDPV2) infection",
     "poliomyelitis",
-    "circulating vaccine-derived poliovirus type 2"
+    "acute flaccid paralysis (AFP)"
   ],
-  "study_design": "descriptive outbreak investigation",
-  "data_source_type": "public health surveillance",
-  "population": "children in Syria, primarily aged <5 years",
-  "exposure_domain": "vaccine-derived poliovirus / vaccination status",
+  "study_design": "Descriptive outbreak/surveillance report (cross-sectional descriptive epidemiology)",
+  "data_source_type": "other",
+  "population": "Children in Syria, particularly those aged <5 years (median 15 months) in Deir-ez-Zor governorate, during the 2017–2018 cVDPV2 outbreak",
+  "exposure_domain": "vaccination (OPV/mOPV2 coverage) and low routine immunization coverage",
   "limitations": [
-    "subnational gaps in AFP surveillance performance",
-    "delays in receiving laboratory results due to transport and security constraints",
-    "administrative coverage denominators may not reflect actual population due to migration",
-    "postcampaign monitoring relies on parental recall"
+    "Administrative vaccination coverage denominators may not reflect the actual target population because of frequent population movement to and from the outbreak-affected area.",
+    "Delays in receiving laboratory results due to difficulties transporting stool specimens during the humanitarian emergency.",
+    "Subnational gaps in AFP surveillance performance limited earlier detection of the outbreak."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

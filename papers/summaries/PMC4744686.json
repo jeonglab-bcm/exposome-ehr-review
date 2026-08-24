@@ -3,39 +3,42 @@
   "title": "Exposure to grass pollen--but not birch pollen--affects lung function in Swedish children.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "Children belonging to the Swedish birth cohort BAMSE underwent clinical examination including lung-function testing and blood sampling for measuring serum immunoglobulin E (IgE) against common airborne and food allergens (ImmunoCAP System; Phadia AB, Uppsala, Sweden) at eight (N = 1838) and sixteen years of age (N = 2063) (year 2003 – 2004 and 2011 –2012, respectively).",
-  "summary": "Investigation of the effect of grass and birch pollen exposure on lung function in 8- and 16-year-old children from the Swedish BAMSE birth cohort.",
+  "ehr_evidence": "Children belonging to the Swedish birth cohort BAMSE underwent clinical examination including lung-function testing and blood sampling for measuring serum immunoglobulin E (IgE) against common airborne and food allergens (ImmunoCAP System; Phadia AB, Uppsala, Sweden) at eight (N = 1838) and sixteen years of age (N = 2063).",
+  "summary": "In the Swedish BAMSE birth cohort, daily pollen and air pollution concentrations were associated with reduced FEV1 in 8-year-old children exposed to grass pollen, with stronger effects among pollen-sensitized children.",
   "key_findings": [
-    "Increased grass pollen exposure the day before testing was associated with reduced FEV1 in 8-year-olds (-32.4 ml; 95% CI: -50.6 to -14.2 per 3 pollen counts/m³).",
-    "The negative effect was stronger in children sensitized to pollen allergens (FEV1: -41.6 ml; 95% CI: -68.3 to -14.8).",
-    "No associations were found for birch or other pollen exposure in 8-year-olds.",
-    "Pollen exposure was not related to lung function in 16-year-olds."
+    "Grass pollen exposure the day before lung-function testing was associated with reduced FEV1 in 8-year-olds (-32.4 ml; 95% CI: -50.6 to -14.2, for an increase in three pollen counts/m³).",
+    "The negative effect of grass pollen on lung function was stronger in children sensitized to different pollen allergens (FEV1; -41.6 ml; 95% CI: -68.3 to -14.8).",
+    "An interaction between grass pollen exposure and sensitization to pollen allergens was detected (P = 0.05 and 0.01 for FEV1 and FVC, respectively).",
+    "No associations were found for birch or other pollen exposure in the 8-year-olds.",
+    "Pollen exposure was not related to lung function in the 16-year-olds."
   ],
   "captured_features": [
-    "FEV1 and FVC measurements",
-    "serum IgE sensitization status",
-    "daily pollen counts for 9 species",
-    "ambient air pollution levels (ozone, NO2, PM10, PM2.5)",
-    "demographic and clinical covariates (sex, age, height, allergic heredity)"
+    "FEV1",
+    "FVC",
+    "FEV1/FVC ratio",
+    "serum IgE and pollen sensitization",
+    "daily pollen counts for nine pollen types",
+    "ozone, NO2, PM10, PM2.5",
+    "sex, age, height, allergic heredity"
   ],
   "pathologies_diseases": [
-    "allergic sensitization",
-    "reduced lung function"
+    "Reduced lung function (FEV1)",
+    "Pollen sensitization/allergy"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "birth cohort and environmental monitoring stations",
-  "population": "children aged 8 and 16 years from the BAMSE birth cohort in Stockholm, Sweden",
-  "exposure_domain": "airborne pollen and ambient air pollution",
+  "study_design": "Cohort (birth cohort)",
+  "data_source_type": "cohort",
+  "population": "Swedish children from the BAMSE birth cohort living in the Stockholm region, aged 8 (N = 1838) and 16 (N = 2063) years.",
+  "exposure_domain": "Pollen/allergen exposure (grass, birch, and other pollen) with air pollution",
   "limitations": [
-    "Lung function tests were not conducted during the peak summer pollen season, limiting assessment of acute exposure.",
-    "Lack of IgG/IgG4 data to evaluate tolerance development.",
-    "Potential confounding by differences in indoor/outdoor time between age groups.",
-    "Relatively low pollen concentrations during study years."
+    "Lung-function measurements were not performed during the summer, so it is not possible to judge whether effects relate to acute exposure or longer-term exposure.",
+    "No data on serum-specific IgG and IgG4 against pollen to evaluate tolerance development.",
+    "Pollen concentrations in 2003 and 2004 were relatively low for both birch and grass.",
+    "Observational design with potential residual confounding."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,43 +3,43 @@
   "title": "Prenatal exposure to insecticides and child cardiometabolic risk factors in the VHEMBE birth cohort.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "Mothers giving birth at Tshilizidini hospital in South Africa’s Limpopo Province were recruited into the VHEMBE study between August 2012 and December 2013.",
-  "summary": "Prospective birth cohort study evaluating associations between prenatal exposure to DDT and pyrethroid insecticides and child cardiometabolic risk factors at 5 years of age in Limpopo, South Africa.",
+  "ehr_evidence": "We measured the serum concentration of DDT and dichlorodiphenyldichloroethylene (DDE) and urinary concentration of pyrethroid metabolites (cis-DBCA, cis-DCCA, trans-DCCA, 3-PBA) in peripartum samples collected between August 2012 and December 2013 from 637 women participating in the Venda Health Examination of Mothers, Babies and their Environment (VHEMBE), a birth cohort study based in Limpopo, South Africa.",
+  "summary": "In this prospective birth cohort of 637 South African mother-child pairs, higher maternal peripartum biomarker concentrations of DDT/E and pyrethroid insecticides were inversely associated with child adiposity measures at 5 years of age, with no associations with height, weight, or blood pressure.",
   "key_findings": [
-    "Maternal concentrations of all four pyrethroid metabolites were associated with reduced BMI z-scores (e.g., β cis-DBCA = −0.18, 95% CI = −0.33, −0.03), smaller waist circumferences (e.g., β cis-DBCA = −0.57, 95% CI = −1.09, −0.06), and decreased body fat percentages (e.g., β cis-DBCA = −0.75, 95% CI = −1.34, −0.17) per 10-fold higher concentration.",
-    "Reductions in BMI z-score were observed only among children of mothers with sufficient energy intake during pregnancy (β cis-DCCA = −0.43, 95% CI = −0.73, −0.14; β trans-DCCA = −0.40, 95% CI = −0.67, −0.12; p interaction = 0.03 and 0.04, respectively).",
-    "Maternal p,p’-DDT concentrations were associated with a reduction in body fat percentage (β = −0.39%, 95% CI = −0.76, −0.02).",
+    "Maternal concentrations of all four pyrethroid metabolites were inversely associated with child adiposity: per 10-fold higher concentration, β cis-DBCA = −0.18 (95% CI = −0.33, −0.03) for BMI z-score, β cis-DBCA = −0.57 cm (95% CI = −1.09, −0.06) for waist circumference, and β cis-DBCA = −0.75% (95% CI = −1.34, −0.17) for body fat percentage.",
+    "Inverse associations between pyrethroid metabolites and BMI z-score were present only among children of mothers with sufficient energy intake during pregnancy: β cis-DCCA = −0.43 (95% CI = −0.73, −0.14; p interaction = 0.03) and β trans-DCCA = −0.40 (95% CI = −0.67, −0.12; p interaction = 0.05).",
+    "Maternal p,p'-DDT concentrations were associated with a reduction in body fat percentage of 0.39% (95% CI = −0.76, −0.02) per 10-fold higher concentration.",
     "Pyrethroids were not associated with child height or weight z-scores or blood pressure overall.",
-    "trans-DCCA concentrations were associated with higher height z-score among girls (β = 0.23, 95% CI = 0.05, 0.41) but not boys (β = −0.06, 95% CI = −0.25, 0.14; p interaction = 0.04)."
+    "trans-DCCA was associated with higher height z-score among girls (β = 0.23, 95% CI = 0.05, 0.41) but not boys (β = −0.06, 95% CI = −0.25, 0.14; p interaction = 0.04)."
   ],
   "captured_features": [
-    "maternal serum DDT/E concentrations",
-    "urinary pyrethroid metabolite concentrations",
-    "child height, weight, BMI, body fat percentage, waist circumference",
-    "blood pressure",
-    "maternal sociodemographic and dietary data",
-    "household wealth and food security indices",
-    "child sex and gestational age"
+    "Maternal serum DDT/E isomer concentrations (o,p'-DDT, p,p'-DDT, o,p'-DDE, p,p'-DDE)",
+    "Urinary pyrethroid metabolite concentrations (cis-DBCA, cis-DCCA, trans-DCCA, 3-PBA)",
+    "Child height z-score, weight z-score, BMI z-score",
+    "Body fat percentage (bioelectrical impedance)",
+    "Waist circumference",
+    "Systolic and diastolic blood pressure",
+    "Covariates: child sex, household food poverty, food insecurity, wealth index, maternal age/height/postdelivery weight, education, marital status, energy intake, alcohol use, HIV status, breastfeeding duration, parity, gestational age"
   ],
   "pathologies_diseases": [
-    "cardiometabolic risk factors",
-    "adiposity",
-    "obesity/overweight"
+    "Cardiometabolic risk factors",
+    "Adiposity (overweight/obesity)",
+    "Elevated blood pressure"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "cohort study",
-  "population": "pregnant women and their children in Limpopo, South Africa; children assessed at 5 years of age (n=637)",
-  "exposure_domain": "prenatal exposure to insecticides (DDT, DDE, pyrethroids) from indoor residual spraying",
+  "study_design": "Prospective birth cohort",
+  "data_source_type": "biospecimen",
+  "population": "637 Black African mother-child pairs from Limpopo Province, South Africa; children assessed at 5 years of age; maternal mean age 26.4 years",
+  "exposure_domain": "Insecticides (DDT/pyrethroid endocrine-disrupting chemicals from indoor residual spraying)",
   "limitations": [
-    "single peripartum measurement of exposure may introduce nondifferential measurement error",
-    "residual confounding or chance could explain findings",
-    "relies on untestable causal assumptions",
-    "exposure may originate from sources other than IRS"
+    "Exposure assessed by a single peripartum measurement, risking nondifferential measurement error and attenuation of effect estimates.",
+    "Residual and unmeasured confounding remains possible despite inverse probability weighting.",
+    "Findings may be due to chance, particularly for DDT isomers with confidence intervals including the null.",
+    "Loss to follow-up, partially addressed via inverse probability of censoring weights."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

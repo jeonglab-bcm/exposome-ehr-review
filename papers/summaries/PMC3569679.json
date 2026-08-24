@@ -3,40 +3,44 @@
   "title": "Prenatal p,p´-DDE exposure and neurodevelopment among children 3.5-5 years of age.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "In 2001 we started a perinatal cohort study in four municipalities in the state of Morelos, Mexico, an endemic area for malaria where DDT was used until 1998 as part of an anti-malaria campaign.",
-  "summary": "Prospective perinatal cohort study assessing the association between prenatal DDE exposure and child neurodevelopment at 42–60 months of age in Morelos, Mexico.",
+  "ehr_evidence": "From 1 January 2001 through 30 June 2005, a prospective perinatal cohort study was assembled in Morelos, Mexico.",
+  "summary": "In a prospective perinatal cohort study in Morelos, Mexico, prenatal maternal serum DDE exposure was negatively associated with child neurodevelopment (McCarthy Scales) scores at 42-60 months of age in 203 children.",
   "key_findings": [
-    "A doubling of serum DDE in the third trimester was associated with statistically significant reductions of –1.37, –0.88, –0.84, and –0.80 points in the general cognitive index, quantitative, verbal, and memory components, respectively.",
-    "Among children with DDE measurements in all three trimesters, third-trimester DDE was significantly associated with reductions of –2.01, –2.06, –1.14, and –1.26 points in GCI, quantitative, verbal, and memory components, respectively.",
-    "Average DDE exposure during pregnancy was significantly associated with a –1.78 point reduction in the quantitative component (95% CI: –3.2, –0.4; p = 0.01).",
-    "No significant statistical interactions with sex or breastfeeding were observed."
+    "A doubling of serum DDE during the third trimester of pregnancy was associated with statistically significant reductions of –1.37, –0.88, –0.84, and –0.80 points in the general cognitive index, quantitative, verbal, and memory components respectively (β values).",
+    "Among the 84 children whose mothers had DDE measurements for all three trimesters, third-trimester DDE associations were significant and larger (β = –2.01, –2.06, –1.14, and –1.26 for GCI, quantitative, verbal, and memory).",
+    "The association with average DDE levels during pregnancy among children whose mothers had DDE measurements for all trimesters was significant for the quantitative component only (β = –1.78; 95% CI: –3.2, –0.4; p = 0.01).",
+    "No significant interactions with sex or breastfeeding were observed (interaction p-values > 0.10).",
+    "The association between third-trimester maternal serum DDE and the quantitative component varied by age, with a statistically significant interaction at 54 months versus 42 months, resulting in a weaker association at 42 months."
   ],
   "captured_features": [
-    "maternal DDE serum levels",
-    "McCarthy Scales of Children’s Abilities components",
-    "HOME scale scores",
-    "maternal IQ",
-    "blood lead levels",
-    "sociodemographic and clinical covariates"
+    "Maternal serum DDE levels (ng/mL) by trimester",
+    "McCarthy Scales components (GCI, perceptual-performance, quantitative, verbal, memory, motor)",
+    "Maternal age, education, IQ, and marital status",
+    "HOME scale score",
+    "Blood lead levels",
+    "Birth weight, gestational age, and type of birth",
+    "Breastfeeding history",
+    "Child's sex",
+    "Child care attendance at 4 years"
   ],
   "pathologies_diseases": [
-    "child neurodevelopment"
+    "Neurodevelopment (McCarthy Scales cognitive/psychomotor scores)"
   ],
-  "study_design": "prospective perinatal cohort study",
-  "data_source_type": "Cohort study / Biospecimen assays",
-  "population": "203 children aged 3.5–5 years (42–60 months) and their mothers from Morelos, Mexico",
-  "exposure_domain": "Prenatal DDE (organochlorine) exposure",
+  "study_design": "Prospective perinatal cohort",
+  "data_source_type": "biospecimen",
+  "population": "203 children at 42-60 months of age (3.5-5 years) from a perinatal cohort in Morelos, Mexico; mothers recruited before pregnancy.",
+  "exposure_domain": "Organochlorine pesticides (p,p'-DDE, DDT metabolite)",
   "limitations": [
-    "Lack of information regarding postnatal DDE exposure",
-    "Lack of validation of the McCarthy Scale in the Mexican population",
-    "Potential residual confounding",
-    "Attrition rate of about 30% before 42 months",
-    "Lack of information on postnatal lead exposure or infant nutrition"
+    "Loss to follow-up (attrition up to 42 months of about 30%).",
+    "Lack of information on postnatal DDE exposure.",
+    "Lack of validation of the McCarthy Scale in the Mexican population.",
+    "Possible residual confounding.",
+    "No information on postnatal lead exposure or infant nutrition."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "high",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

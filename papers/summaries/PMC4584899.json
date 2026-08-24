@@ -2,38 +2,43 @@
   "pmcid": "PMC4584899",
   "title": "Notes from the field: rotavirus vaccine administration errors--United States, 2006-2013.",
   "year": "2014",
-  "ehr_used": false,
-  "ehr_evidence": "CDC searched for reports to the Vaccine Adverse Event Reporting System (VAERS) (2) of rotavirus vaccine administration errors involving injection and eye splashes in the United States during the period January 1, 2006–August 1, 2013.",
-  "summary": "Analysis of 66 VAERS reports on rotavirus vaccine administration errors (injection and eye splashes) in the US from 2006 to 2013.",
+  "ehr_used": true,
+  "ehr_evidence": "To assess that hypothesis, CDC searched for reports to the Vaccine Adverse Event Reporting System (VAERS) of rotavirus vaccine administration errors involving injection and eye splashes in the United States during the period January 1, 2006–August 1, 2013.",
+  "summary": "A passive surveillance analysis of 66 VAERS reports of rotavirus vaccine (RotaTeq/Rotarix) administration errors (injection and eye splashes) in the United States, 2006–2013.",
   "key_findings": [
-    "66 total reports of rotavirus vaccine administration errors were identified.",
-    "39 reports involved administration by injection (33 for RV1, 6 for RV5).",
-    "19 of 39 injection reports (49%) documented an adverse event, most commonly irritability (7 cases) and injection site redness (5).",
-    "30 of 39 injection reports (77%) lacked an explanation for the error.",
-    "27 reports involved eye splashes, with 21 cases (78%) describing nonserious minor eye irritation."
+    "A total of 66 rotavirus vaccine administration error reports were found in VAERS (January 1, 2006–August 1, 2013).",
+    "39 reports involved administration by injection (33 for RV1/Rotarix and 6 for RV5/RotaTeq), including a cluster of six involving RV1 by a nurse who did not receive proper training or read the package insert.",
+    "19 of 39 reports (49%) documented an adverse event, with irritability (7 cases) and injection site redness (5) the most commonly reported adverse events.",
+    "30 of 39 reports (77%) did not have an explanation for the error; among those that did, reasons included misinterpreting package insert instructions, confusing the oral applicator syringe with an injectable syringe, confusing the vial, inadequate training, and not reading the package insert.",
+    "27 reports involved eye splashes, of which 21 cases involved infants coughing, sneezing, or spit vaccine into the eyes of vaccination providers (17), parents (1), or themselves (3).",
+    "Nonserious adverse events consistent with minor eye irritation were described in 21 of 27 eye-splash reports."
   ],
   "captured_features": [
-    "VAERS report data",
-    "administration error type",
-    "adverse event descriptions",
-    "vaccine product (RV1/RV5)"
+    "Number of VAERS reports of rotavirus vaccine administration errors",
+    "Vaccine product (RV1/Rotarix vs RV5/RotaTeq)",
+    "Route of administration error (injection vs eye splash)",
+    "Documented adverse events (irritability, injection site redness, eye irritation)",
+    "Explanations/cause of error"
   ],
   "pathologies_diseases": [
-    "rotavirus gastroenteritis"
+    "rotavirus gastroenteritis",
+    "irritability",
+    "injection site redness",
+    "minor eye irritation"
   ],
-  "study_design": "descriptive surveillance analysis",
-  "data_source_type": "VAERS database",
-  "population": "infants and children in the United States, 2006–2013",
-  "exposure_domain": "rotavirus vaccine administration errors",
+  "study_design": "Descriptive passive surveillance analysis of adverse event reports (cross-sectional)",
+  "data_source_type": "registry (Vaccine Adverse Event Reporting System, passive adverse-event surveillance)",
+  "population": "Infants receiving rotavirus oral vaccines and vaccination providers in the United States, 2006–2013",
+  "exposure_domain": "Vaccines / rotavirus vaccine administration",
   "limitations": [
-    "passive surveillance system likely captures only a small fraction of errors",
-    "reporting bias inherent to VAERS",
-    "no denominator data to calculate error rates"
+    "As a passive surveillance system, VAERS likely captures only a small fraction of vaccine administration errors (underreporting).",
+    "No denominator or dose distribution by product to calculate true error rates.",
+    "Descriptive analysis with no comparison group and no statistical testing."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

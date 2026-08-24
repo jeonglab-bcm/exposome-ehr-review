@@ -3,39 +3,46 @@
   "title": "SSRIs target prefrontal to raphe circuits during development modulating synaptic connectivity and emotional behavior.",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "The study used genetically modified and wild-type mice (C57BL/6 background) for behavioral, histological, and electrophysiological experiments.",
-  "summary": "Preclinical study investigating the role of transient serotonin transporter (SERT) expression in prefrontal cortex neurons during early postnatal development and its impact on synaptic connectivity and emotional behavior in adult mice.",
+  "ehr_evidence": "The study used mice (C57BL/6 and transgenic SERT-Cre, SERT fl/fl, Emx1bCre, Pet1Cre, Ai14 reporter lines) and ex vivo brain tissue; no electronic/computerised health records were used.",
+  "summary": "A preclinical experimental mouse study examining how developmental exposure to the SSRI fluoxetine and genetic SERT loss-of-function alter PFC-to-dorsal raphe nucleus (DRN) synaptic wiring and adult emotional/stress-coping behavior.",
   "key_findings": [
-    "SERT-KO mice have a 40% increase in the number of VGLUT1+ axon boutons in the DRN compared to SERT+/- mice at 4 weeks of age.",
-    "Postnatal fluoxetine induces a 47% increase in the number of VGLUT1+ cortical synaptic innervations in the DRN.",
-    "Cortex-specific conditional SERT invalidation led to a 30% increase in the number of VGLUT1+ synaptic boutons in the DRN.",
-    "67 ± 8.0% of the VGLUT1+/synapsin+ terminals in the DRN were colabeled with TdTomato, indicating they arise from PFC-SERT+ neurons.",
-    "Acute inhibition of PFC-SERT+ neurons increased immobility time in the forced swim test and latency to feed in the novelty-suppressed feeding test, while activation rescued these behavioral deficits."
+    "SERT-KO mice showed a 40% increase in VGLUT1+ cortical axon boutons in the DRN (F1,6 = 36.45, p < 0.001), with VGLUT2+ and GAD2+ inputs unchanged (F1,6 = 0.24, p = 0.64; F1,6 = 0.34, p = 0.58).",
+    "Postnatal fluoxetine (P2–P14, 10 mg/kg/day) reproduced this effect with a 47% increase in VGLUT1+ cortical synaptic innervations in the DRN (F1,8 = 9.94, p < 0.02).",
+    "PFC-SERT+ neurons provided the majority of cortical inputs to the DRN, with 67 ± 8.0% of VGLUT1+/synapsin+ terminals colabeled with TdTomato.",
+    "Cortex-specific SERT ablation (SERT-KOCTX) increased VGLUT1+ synaptic boutons by 30% (Welch's statistic = 11.20, p < 0.03), whereas raphe-specific ablation (SERT-KORaphe) produced no change (F1,5 = 3.76, p = 0.11).",
+    "SERT-KO mice showed larger optogenetically evoked AMPAR-EPSCs in the DRN (genotype main effect F1,29 = 9.32, p < 0.01) with no change in AMPAR/NMDAR ratios (F1,30 = 0.16, p = 0.69).",
+    "Early-life fluoxetine increased FST immobility (treatment main effect F1,44 = 5.228, p < 0.03) and NSF feeding latency (F3,40 = 6.994, p < 0.001); chemogenetic activation of PFC-SERT+ neurons rescued these deficits while inhibition enhanced them.",
+    "VGLUT2+ and GAD2+ synaptic inputs onto 5-HT neurons were unaffected by SERT loss-of-function (no significant changes)."
   ],
   "captured_features": [
-    "VGLUT1+ synaptic bouton density",
-    "electrophysiological AMPA/NMDA ratios",
-    "forced swim test immobility time",
-    "novelty-suppressed feeding latency",
-    "RNA-sequencing read counts"
+    "VGLUT1+/synapsin+ synaptic bouton density (array tomography)",
+    "VGLUT2+ and GAD2+ synaptic inputs",
+    "RNA-sequencing gene expression (FACS-isolated PFC-SERT+ neurons)",
+    "Optogenetically evoked AMPAR/NMDAR-EPSCs (patch clamp)",
+    "Forced swim test immobility time",
+    "Novelty-suppressed feeding latency",
+    "Locomotor activity",
+    "Immunohistochemical markers (Foxp2, Ctip2, TPH2)"
   ],
   "pathologies_diseases": [
-    "anxiety",
-    "depression"
+    "Anxiety-like behavior",
+    "Depressive-like behavior",
+    "Mood disorders (depression/anxiety)"
   ],
-  "study_design": "preclinical animal study",
-  "data_source_type": "animal models",
-  "population": "mice (C57BL/6, SERT-KO, SERT-Cre)",
-  "exposure_domain": "SSRI exposure (fluoxetine), genetic SERT knockout",
+  "study_design": "Experimental preclinical animal study (genetic and pharmacological manipulation in mice)",
+  "data_source_type": "other",
+  "population": "Mice (C57BL/6 and transgenic lines) from postnatal (P2) to adulthood (P80+)",
+  "exposure_domain": "SSRIs (fluoxetine) and genetic SERT loss-of-function (serotonin transporter, Slc6a4)",
   "limitations": [
-    "preclinical animal model limits direct translational relevance to humans",
-    "focus on a single brain circuit may not capture whole-brain effects",
-    "behavioral tests may not fully model complex human psychiatric disorders"
+    "Mouse model limits human translational relevance.",
+    "Small per-group sample sizes (n = 3–5 mice/genotype).",
+    "Electrophysiology performed in anesthetized animals.",
+    "Synaptic changes observed in juvenile animals; persistence into adult life undetermined."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

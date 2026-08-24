@@ -3,51 +3,47 @@
   "title": "Association between prenatal glucocorticoid exposure and adolescent neurodevelopment: An observational follow-up study.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "Pregnancy and birth data were obtained from hospital records or the German maternity passport.",
-  "summary": "Prospective observational follow-up study assessing the long-term effects of prenatal betamethasone exposure on cognitive performance, neuroendocrine stress reactivity, autonomic nervous system activity, and electrocortical activity in 14- to 15-year-old adolescents.",
+  "ehr_evidence": "Data were collected prospectively through in-person clinical assessments (RIAS IQ test, EEG, salivary cortisol and alpha-amylase, ECG/heart rate variability, TSST stress test) and parent questionnaires; pregnancy and birth data were obtained from hospital records or the German maternity passport, and the reference group was selected from medical birth records.",
+  "summary": "A prospective observational follow-up study of 21 betamethasone-exposed and 35 unexposed 14- to 15-year-old adolescents assessed whether prenatal glucocorticoid exposure was associated with cognitive performance (IQ), ADHD symptoms, metabolic markers, and neurophysiological outcomes.",
   "key_findings": [
-    "No statistically significant difference in global IQ between betamethasone-exposed and unexposed groups (adjusted mean difference −2.0, 95% CI: −7.12 to 3.12, p = 0.44).",
-    "No significant differences in ADHD symptoms, BMI, or HOMA-IR between groups.",
-    "No significant differences in HPAA or ANS activity overall.",
-    "Betamethasone-exposed adolescents exhibited reduced electrocortical activity in the frontal brain region compared to controls (adjusted SEF 16.0 Hz vs 17.8 Hz, mean difference −1.83 Hz, 95% CI: −3.21 to −0.45, p = 0.01)."
+    "No statistically significant difference in global IQ between betamethasone and reference groups (adjusted mean difference −2.0, 95% CI: −7.12 to 3.12, p = 0.44).",
+    "No statistically significant differences in ADHD core symptoms, BMI, or HOMA-IR (insulin resistance) between groups.",
+    "No statistically significant differences in HPAA (salivary cortisol) or autonomic nervous system activity during the stress test.",
+    "Betamethasone-exposed adolescents exhibited reduced frontal electrocortical activity (spectral edge frequency 16.0 Hz vs 17.8 Hz, mean difference −1.83 Hz, 95% CI: −3.21 to −0.45, p = 0.01)."
   ],
   "captured_features": [
-    "IQ scores",
-    "ADHD symptoms",
-    "BMI",
-    "HOMA-IR",
-    "salivary cortisol",
-    "salivary α-amylase",
-    "heart rate variability",
-    "EEG spectral edge frequency",
-    "socioeconomic status",
-    "gestational age",
-    "birth weight",
-    "maternal/paternal age",
-    "life events"
+    "RIAS composite IQ and verbal/non-verbal subscale scores",
+    "FBB-ADHS/DISYPS ADHD symptom scores",
+    "Body mass index",
+    "HOMA-IR (fasting insulin and glucose)",
+    "Salivary free cortisol",
+    "Salivary alpha-amylase",
+    "Heart rate variability (mean heart rate, LF/HF band power)",
+    "EEG spectral edge frequency (frontal, temporal, parietal, occipital)",
+    "Gestational age and birthweight",
+    "Socioeconomic status and Zurich Life-Event List scores"
   ],
   "pathologies_diseases": [
-    "ADHD",
-    "insulin resistance",
-    "metabolic syndrome markers",
-    "neurodevelopmental outcomes"
+    "ADHD symptoms",
+    "Cognitive impairment (IQ)",
+    "Neurodevelopmental outcomes",
+    "Insulin resistance/metabolic syndrome markers"
   ],
   "study_design": "Prospective observational follow-up cohort study",
-  "data_source_type": "Direct clinical assessments, questionnaires, biological sampling, and historical hospital/maternity records",
-  "population": "56 adolescents aged 14–15 years (21 exposed to prenatal betamethasone, 35 unexposed controls), born at term or near-term in Germany",
-  "exposure_domain": "Prenatal glucocorticoid (betamethasone) exposure",
+  "data_source_type": "other",
+  "population": "21 betamethasone-exposed and 35 unexposed 14- to 15-year-old adolescents born near term with weight appropriate for gestational age, recruited from Jena and Gera, Germany",
+  "exposure_domain": "Prenatal glucocorticoid (betamethasone) exposure for fetal lung maturation",
   "limitations": [
-    "Small sample size and reduced statistical power",
-    "Selective participation and loss to follow-up",
-    "Potential residual confounding",
-    "Observational design limits causal inference",
-    "No adjustment for multiple comparisons",
-    "Possible confounding by tocolytic treatment and late preterm birth"
+    "Small sample size and reduced statistical power risking a type II error.",
+    "Selection bias from selective participation and loss of follow-up, particularly among children with extreme IQ scores.",
+    "Potential residual confounding and inability to establish causality due to the observational design.",
+    "No adjustment for multiple comparisons raising false-positive risk.",
+    "Maternal psychosocial stress associated with preterm birth may have modified outcomes."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

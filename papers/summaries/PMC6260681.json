@@ -3,40 +3,39 @@
   "title": "Quantitative characterization of the urine and serum metabolomes of children is essential for 'omics' studies.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "Lau et al. have compiled robust, translatable quantitative metabolomics data on urine and serum samples for European children across six study locations.",
-  "summary": "Commentary discussing the establishment of a quantitative reference metabolome for children using urine and serum samples from the HELIX birth cohort project.",
+  "ehr_evidence": "Metabolomic data were generated from urine and serum biospecimens analyzed by LC-MS and NMR in European children recruited across six HELIX birth cohort study locations; no electronic or computerized health records were used.",
+  "summary": "This commentary discusses the Lau et al. study that quantitatively characterized urine and serum metabolomes of European children and associated metabolites with BMI, diet, and demographics.",
   "key_findings": [
-    "Metabolites were associated with body mass index, diet, and demographics.",
-    "Novel association found between urinary 4-deoxyerythronic acid and body mass index."
+    "The commentary highlights the Lau et al. finding of a novel association between urinary 4-deoxyerythronic acid and body mass index, suggesting the threonine metabolic pathway as a target for future obesity and type 2 diabetes studies.",
+    "Metabolite concentrations were associated with age, sex, BMI, and dietary intake and correlated within and between urine and serum biofluids."
   ],
   "captured_features": [
-    "urine metabolites",
-    "serum metabolites",
-    "BMI",
-    "diet",
-    "demographics",
+    "urine metabolome (LC-MS/NMR)",
+    "serum metabolome (Biocrates Absolute IDQ p180 kit, 177 metabolites)",
+    "body mass index (BMI)",
+    "dietary intake",
     "age",
-    "sex"
+    "sex",
+    "geographical location/demographics"
   ],
   "pathologies_diseases": [
+    "obesity",
     "metabolic syndrome",
     "type 2 diabetes",
-    "obesity",
-    "inborn errors of metabolism"
+    "cardiovascular disease"
   ],
-  "study_design": "Commentary",
-  "data_source_type": "Birth cohort biospecimens",
-  "population": "European children across six longitudinal birth cohort study locations",
-  "exposure_domain": "Early-life exposome (diet, demographics, geography, socioeconomic status, pollutants)",
+  "study_design": "Commentary on a cohort study (HELIX six longitudinal birth cohorts)",
+  "data_source_type": "biospecimen",
+  "population": "European children across six birth cohort study locations (HELIX)",
+  "exposure_domain": "early-life exposome (diet, demographics, geographical location, environmental exposures)",
   "limitations": [
-    "Commentary format rather than primary research",
-    "Metabolome characterization limited to targeted kit and not fully comprehensive",
-    "Historical lack of pediatric metabolomic reference profiles"
+    "The Biocrates p180 kit is not a comprehensive characterization of the metabolome and would require multiple analytical platforms and sample preparations.",
+    "Many differentiating metabolites remain unidentified and cannot be linked to metabolic pathways or genomic/proteomic data."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "Not applicable.",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

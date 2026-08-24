@@ -3,47 +3,44 @@
   "title": "Nasal spray live attenuated influenza vaccine: the first experience in Italy in children and adolescents during the 2020-21 season.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "A questionnaire was given out to parents on the day of the vaccination, on a voluntary and anonymous basis, through which information about children and their parents was collected.",
-  "summary": "Observational study evaluating the safety, adverse events, and parental satisfaction of the first use of nasal quadrivalent live attenuated influenza vaccine (qLAIV) in Italian children and adolescents aged 2-17 years during the 2020-21 season.",
+  "ehr_evidence": "A questionnaire was given out to parents on the day of the vaccination, on a voluntary and anonymous basis, through which information about children and their parents was collected... Between one and 3 months later, the parents were contacted by phone to check if there had been any adverse reactions following (Fluenz Tetra™) administration.",
+  "summary": "An observational survey study of the quadrivalent live attenuated influenza vaccine (qLAIV/Fluenz Tetra) administered to 3,226 children and adolescents aged 2-17 years in Milan, Italy during the 2020-21 season, assessing adverse events, parental satisfaction, and intention to repeat vaccination.",
   "key_findings": [
-    "Adverse events were reported in 24.8% of children (80.6% mild, 18.1% moderate, 1.3% significant).",
-    "Most common adverse events were cold/rhinitis (52.5%) and fever (24.4%).",
-    "Children aged 2-5 years had an increased risk of adverse events compared to 6-10 years (aRR 1.7, 95% CI 1.5-1.9, p<0.001) and 11-17 years (aRR 1.5, 95% CI 1-2.2, p=0.051).",
-    "Children with at least one acute infectious disease in 2020 had higher risk (aRR 1.2, 95% CI 1.1-1.4, p=0.004) and those with chronic diseases had higher risk (aRR 1.6, 95% CI 1.2-2.1, p=0.001).",
-    "Males had a decreased probability of adverse reactions compared to females (aRR 0.9, 95% CI 0.8-1, p=0.011).",
-    "No significant association was found between adverse events and prematurity (aRR 0.9, 95% CI 0.7-1.1, p=0.220), allergic diseases (aRR 1.1, 95% CI 0.7-1.5, p=0.667), or previous influenza vaccination (aRR 0.9, 95% CI 0.8-1.1, p=0.382).",
-    "83.3% of parents were very satisfied and 83.8% intended to re-vaccinate their children.",
-    "Adverse reactions were the main reason for not repeating vaccination (aRR 5.5, 95% CI 2.4-12.5, p<0.001)."
+    "Adverse events were reported in 24.8% of children (80.6% mild, 18.1% moderate, 1.3% significant); the most common were rhinitis/cold (52.5%) and fever (24.4%).",
+    "Children aged 2-5 years had an increased risk of adverse events compared with 6-10 years (aRR 1.7, 95% CI 1.5-1.9, p<0.001) and 11-17 years (aRR 1.5, 95% CI 1-2.2, p=0.051).",
+    "Children with at least one acute infectious disease in 2020 had higher risk (aRR 1.2, 95% CI 1.1-1.4, p=0.004) and those with a chronic disease had higher risk (aRR 1.6, 95% CI 1.2-2.1, p=0.001).",
+    "Males had a decreased probability of adverse reactions compared with females (aRR 0.9, 95% CI 0.8-1, p=0.011); prematurity was not associated with adverse events (aRR 0.9, 95% CI 0.7-1.1, p=0.220).",
+    "83.3% of parents were very satisfied and 83.8% intended to re-vaccinate their children with qLAIV the following year.",
+    "Adverse reactions were the main factor influencing the decision not to repeat vaccination (aRR 5.5, 95% CI 2.4-12.5, p<0.001)."
   ],
   "captured_features": [
-    "Demographic data (age, sex, birthplace, gestational age, siblings, daycare attendance)",
-    "Vaccination history (previous flu vaccine, chronic diseases, acute infectious diseases)",
-    "Adverse event type and severity (mild, moderate, significant)",
-    "Parental satisfaction and intention to re-vaccinate",
-    "Awareness channels for vaccination campaign"
+    "Child gender, date and place of birth, gestational age, siblings, daycare attendance",
+    "Parent age, place of birth, level of education, chronic diseases, prior flu vaccination",
+    "Acute infectious diseases in 2020 prior to vaccination",
+    "Chronic diseases and allergic diseases",
+    "Adverse event type and severity (mild/moderate/significant)",
+    "Parental satisfaction and intention to repeat vaccination",
+    "Health worker satisfaction and willingness to repeat"
   ],
   "pathologies_diseases": [
-    "influenza",
-    "chronic diseases",
-    "allergic diseases",
-    "acute infectious diseases",
-    "pneumonia",
-    "asthma"
+    "Adverse events/reactions following qLAIV vaccination (rhinitis, fever, malaise)",
+    "Pneumonia (Mycoplasma pneumoniae) - one hospitalized case",
+    "Allergic diseases, pulmonary diseases, and other chronic conditions studied as factors"
   ],
-  "study_design": "observational prospective survey study",
-  "data_source_type": "questionnaire survey",
-  "population": "children and adolescents aged 2-17 years in Milan, Italy",
-  "exposure_domain": "influenza vaccination (quadrivalent live attenuated influenza vaccine)",
+  "study_design": "Observational cross-sectional survey with telephone follow-up",
+  "data_source_type": "other",
+  "population": "3,226 children and adolescents aged 2-17 years (59.8% preschoolers, 36.6% primary school-age, 3.6% adolescents) from 2,152 families in Milan, Italy, 2020-21 influenza season",
+  "exposure_domain": "Vaccination (quadrivalent live attenuated influenza vaccine, qLAIV/Fluenz Tetra)",
   "limitations": [
-    "self-reported data via questionnaires and phone calls",
-    "selection bias due to high proportion of university-educated parents and Italian nationality",
-    "low representation of adolescents (3.6%)",
-    "telephone follow-up attrition (600 null questionnaires excluded)"
+    "Self-reported, questionnaire-based data subject to recall and reporting bias.",
+    "Low follow-up response rate (2,152 of 3,571 selected families responded).",
+    "Selection bias: population over-represented by highly educated parents and did not reach all social sections.",
+    "Anonymous and voluntary participation may limit generalizability."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

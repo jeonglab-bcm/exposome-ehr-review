@@ -3,41 +3,41 @@
   "title": "2009_PMC2685976_A_liposome-based_mycobacterial_vaccine_induces_potent_adult_and_",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "Specific pathogen-free C57BL/6 mice (7 days of age (1-week-old, neonates) or 8–12 weeks old (adult), Charles River) were bred and kept under specific pathogen-free conditions in the university zootechnology unit.",
-  "summary": "Preclinical murine study evaluating the immunogenicity, dendritic cell targeting, and protective efficacy of the CAF01 liposome-based adjuvant against tuberculosis in neonatal and adult mice.",
+  "ehr_evidence": "The study used no electronic health records; data were generated from experimental immunization of C57BL/6 mice (7 days of age, neonates, or 8–12 weeks old, adults) followed by Mycobacterium bovis BCG challenge and immune readouts.",
+  "summary": "A preclinical murine study showing that the CAF01 adjuvant with Ag85B-ESAT-6 confers similar protection against M. bovis BCG challenge and induces adult-like multifunctional Th1/Th17 CD4+ T cells in both neonatal and adult mice, via sustained but limited dendritic cell targeting.",
   "key_findings": [
-    "Ag85B-ESAT-6/CAF01 significantly reduced post-challenge M. bovis BCG bacterial counts in spleen and lungs compared to Alum control (p<0.05).",
-    "Ag85B-ESAT-6/Alum did not confer protective efficacy, with CFU counts as high as in unimmunized controls.",
-    "Twenty-four hours post-immunization, 84.2 ± 4.8% of adjuvant-bearing cells in adult draining lymph nodes were CD11c+ DCs.",
-    "The proportion of total DCs bearing antigen and adjuvant was low (0.09 ± 0.04%), translating to 523 ± 254 Ag+Adj+ DCs per adult mouse.",
-    "In neonates, adjuvant-bearing cells were 71.2 ± 9.8% CD11c+ DCs, with a lower Ag+Adj+ proportion (28.6 ± 8.6%) and count (151 ± 119 DCs per mouse).",
-    "Vaccine-associated DCs peaked around Day 5 and were not detected by Day 21 post-immunization.",
-    "CAF01 induced sustained adult-like Th1 (IFN-γ, TNF-α) and Th17 (IL-17) responses in neonates comparable to adults (p>0.05)."
+    "Ag85B-ESAT-6/CAF01 significantly reduced bacterial CFU counts in spleen and lungs versus Alum and control (p<0.05) in both neonatal and adult mice, whereas Alum conferred no protection.",
+    "Ag85B-ESAT-6/CAF01 induced similarly high IFN-γ and modest IL-5 responses in adults and neonates, unlike Alum which produced a Th2-preferential pattern.",
+    "Multifunctional Th1 cells persisted at high levels at 6 months, even after a single neonatal dose (Table 1).",
+    "Very few dendritic cells in draining lymph nodes bore the labeled antigen/adjuvant (0.09±0.04% of total DCs; ~523±254 Ag+Adj+ DCs per adult mouse), indicating potent adjuvanticity was not mediated by massive DC targeting.",
+    "CD40 and CD86 activation was restricted to the minute adjuvant-bearing DC population, and IL-12p40 was not detected in any sample.",
+    "Ag-specific CD8+ T cells were not detected, indicating protection is associated with Th1 and Th17 CD4+ T cells."
   ],
   "captured_features": [
-    "Cytokine production (IFN-γ, TNF-α, IL-2, IL-17, IL-5)",
-    "Dendritic cell surface markers (CD11c, CD40, CD86, CD205)",
-    "Bacterial colony-forming units (CFU) in spleen and lungs",
-    "T cell activation markers (CD44)",
-    "Fluorochrome-labeled antigen and adjuvant uptake"
+    "Spleen and lung CFU counts after mycobacterial challenge",
+    "Cytokine levels (IFN-γ, TNF-α, IL-2, IL-17, IL-5) by ELISA/ELISPOT/flow cytometry",
+    "Frequency of antigen-specific CD4+ T cell subsets",
+    "Dendritic cell proportions and numbers in draining lymph nodes",
+    "CD40 and CD86 co-stimulation marker expression on DCs",
+    "IL-12p40 expression"
   ],
   "pathologies_diseases": [
-    "Tuberculosis (Mycobacterium tuberculosis / M. bovis BCG infection)"
+    "Tuberculosis (Mycobacterium bovis BCG infection)",
+    "Mycobacterial infection"
   ],
-  "study_design": "Preclinical murine immunization and challenge model",
-  "data_source_type": "Animal model / experimental immunology",
-  "population": "C57BL/6 mice (neonates at 1 week of age and adults at 8-12 weeks)",
-  "exposure_domain": "Vaccine adjuvant (CAF01 formulation)",
+  "study_design": "Preclinical experimental immunization and challenge model in neonatal and adult mice",
+  "data_source_type": "biospecimen",
+  "population": "C57BL/6 mice, neonatal (1 week old) and adult (8–12 weeks old)",
+  "exposure_domain": "Vaccine/adjuvant (CAF01 cationic liposome with Ag85B-ESAT-6 antigen)",
   "limitations": [
-    "Mouse model limitations in predicting human vaccine efficacy",
-    "Fluorochrome labeling intensity may not capture all labeled cell populations in vivo",
-    "Detection limits of the method may affect DC migration timing estimates",
-    "Short half-life of activated DCs complicates duration estimation of the phenomenon"
+    "Mouse model may not reliably predict human vaccine efficacy",
+    "Fluorochrome labeling may not reveal the full labeled cell population",
+    "Duration of DC recruitment/activation difficult to estimate due to detection limits"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

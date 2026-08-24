@@ -3,34 +3,43 @@
   "title": "The effect of H1N1 vaccination on serum miRNA expression in children: A tale of caution for microRNA microarray studies.",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "Serum samples were obtained from children aged 6 months to 12 years enrolled in an open label randomised control trial of two pandemic influenza (H1N1) vaccines, in which participants received either ASO3B adjuvanted split virion or a whole virion non-adjuvanted vaccine.",
-  "summary": "A randomized controlled trial sub-study profiling serum microRNA expression in children before and 21 days after H1N1 vaccination using microarray and RT-qPCR, highlighting validation challenges.",
+  "ehr_evidence": "Serum samples were obtained from children aged 6 months to 12 years enrolled in an open label randomised control trial of two pandemic influenza (H1N1) vaccines (clinical trial registration number: NCT00980850); miRNA expression was profiled from these biospecimens, not from electronic health records.",
+  "summary": "In an open-label randomised controlled trial of two H1N1 influenza vaccines in 44 children aged 6 months to 12 years, Agilent microarray profiling of paired serum samples identified 19 differentially expressed miRNAs 21 days post-vaccination, but these were largely not validated by RT-qPCR and the one validated signal (miR-142-3p) was not replicated in an independent validation cohort.",
   "key_findings": [
-    "Microarray analysis identified 19 differentially expressed miRNAs post-vaccination (fold-change >1.2, adjusted p<0.05).",
-    "RT-qPCR confirmed significant downregulation of miR-142-3p in the discovery cohort (mean log2 fold-change = -0.312, p = 0.003).",
-    "Downregulation of miR-142-3p was not replicated in the validation cohort (mean log2 fold-change = 0.15, p = 0.89).",
-    "Only 3 out of 19 differentially expressed miRNAs were detectable by RT-qPCR, with many showing no amplification or high background."
+    "19 miRNAs were differentially expressed post-vaccination (16 upregulated, 3 downregulated) with fold-change magnitude >1.2 after Benjamini-Hochberg FDR adjustment.",
+    "Most upregulated miRNA was miR-575 (fold-change = 1.57, adjusted p-value <0.001); most downregulated was miR-142-3p (fold-change = 0.77, adjusted p-value = 0.004).",
+    "RT-qPCR confirmed downregulation of miR-142-3p in the discovery cohort (mean fold-change = 0.805, log2 fold-change = -0.312, sd = 0.44, p = 0.003).",
+    "Downregulation of miR-30b was of borderline significance in the discovery cohort (p = 0.05).",
+    "miR-142-3p downregulation was not replicated in the independent validation cohort (mean fold-change = 1.1, log2 fold-change = 0.15, sd = 0.55, p = 0.89).",
+    "miR-30b-5p was not significantly differentially expressed in the validation cohort (mean fold-change = 1.11, log2 fold-change = 0.16, sd = 0.66, p = 0.86).",
+    "The majority of differentially expressed miRNAs could not be reliably detected/validated by RT-qPCR across both cohorts."
   ],
   "captured_features": [
-    "serum miRNA expression levels",
-    "microarray fluorescence values",
-    "RT-qPCR Ct values"
+    "Serum miRNA expression levels from Agilent miRNA microarray 60K (fluorescence values, log2 fold-change)",
+    "RT-qPCR Ct values and relative expression (2-ΔΔCt)",
+    "Benjamini-Hochberg FDR-adjusted p-values",
+    "Participant ID (paired/batch effect)",
+    "Vaccine group (AS03B adjuvanted split virion vs whole virion non-adjuvanted)",
+    "Sex and age"
   ],
   "pathologies_diseases": [],
-  "study_design": "randomized controlled trial sub-study with microarray and RT-qPCR validation",
-  "data_source_type": "biospecimen / omics",
-  "population": "children aged 6 months to 12 years",
-  "exposure_domain": "H1N1 influenza vaccination",
+  "study_design": "Open-label randomised controlled trial with a microarray discovery cohort (n=22) and an independent RT-qPCR validation cohort (n=22)",
+  "data_source_type": "biospecimen",
+  "population": "Children aged 6 months to 12 years enrolled in a UK multicentre H1N1 pandemic influenza vaccine trial",
+  "exposure_domain": "Vaccination (pandemic influenza A H1N1 vaccine)",
   "limitations": [
-    "lack of replication in independent validation cohort",
-    "potential false positives from microarray cross-hybridization",
-    "single microarray platform used",
-    "limited to one post-vaccination timepoint"
+    "Only one microarray platform was used, limiting generalisation to other miRNA array technologies.",
+    "Many differentially expressed miRNAs could not be validated by RT-qPCR, with evidence of false-positive cross-hybridisation signals.",
+    "The validated miR-142-3p finding was not replicated in an independent validation cohort.",
+    "Only a single post-vaccination timepoint (3 weeks) was available, potentially missing early immune-response changes.",
+    "Low miRNA content in serum near the limit of detection and small sample sizes (22 per cohort)."
   ],
-  "data_availability": "not-stated",
-  "data_accession_links": [],
-  "data_availability_statement": "",
-  "confidence": "medium",
+  "data_availability": "public-repository",
+  "data_accession_links": [
+    "GSE134227"
+  ],
+  "data_availability_statement": "Microarray expression data have been deposited into NCBI GEO (Series:GSE134227). RT-PCR data is included in the SupportingInformationfiles.",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

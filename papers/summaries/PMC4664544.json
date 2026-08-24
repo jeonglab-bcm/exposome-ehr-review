@@ -3,41 +3,42 @@
   "title": "Long-term effect of early-life stress from earthquake exposure on working memory in adulthood.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The subjects of present study were recruited from workers of Kailuan Mining Group in six coal reserve bases, two communities, and two related units.",
-  "summary": "Observational study investigating the long-term effect of early-life earthquake exposure on working memory performance in adulthood.",
+  "ehr_evidence": "The questionnaires and psychological evaluation were finished using a one-on-one method involving the study subjects and investigators who received unified training.",
+  "summary": "A cohort study of 907 adults born and raised in Tangshan examining the long-term effect of 1976 Tangshan earthquake early-life exposure on working memory (visuospatial memory) in adulthood.",
   "key_findings": [
-    "BVMT-R scores were markedly decreased in the infant exposure group compared with the no exposure group (P<0.05).",
-    "Subjects exposed prenatally in the second and third trimesters had significantly lower BVMT-R scores compared with the first trimester (P=0.035 for 2nd test, P=0.038 for total score).",
-    "HVLT-R scores did not show significant differences across the three groups (P>0.05).",
-    "Education level (OR=2.289, 95% CI=1.435–3.650, P<0.001) and earthquake exposure (OR=1.437, 95% CI=1.061–1.947, P=0.019) were independent risk factors for impaired visuospatial memory."
+    "BVMT-R total scores were significantly lower in the infant exposure group compared with the no-exposure group (P=0.006), indicating impaired visuospatial memory.",
+    "HVLT-R scores showed no significant difference across the three exposure groups (P>0.05), indicating verbal learning was unaffected.",
+    "Among prenatal subgroups, second and third trimester exposure had significantly lower BVMT-R total scores than first trimester (P=0.038).",
+    "Education level (OR=2.289, 95% CI=1.435–3.650, P<0.001) and earthquake exposure (OR=1.437, 95% CI=1.061–1.947, P=0.019) were independent risk factors for impaired visuospatial memory.",
+    "Physical neglect (P<0.001), emotional abuse (P=0.021), and sexual abuse (P=0.018) were associated with reduced visuospatial memory performance."
   ],
   "captured_features": [
     "HVLT-R scores",
     "BVMT-R scores",
-    "CTQ scores",
-    "LES scores",
     "education level",
-    "sex",
+    "LES scores",
+    "CTQ scores",
     "age",
-    "earthquake exposure status"
+    "sex",
+    "earthquake exposure group"
   ],
   "pathologies_diseases": [
-    "working memory impairment",
-    "visuospatial memory deficits"
+    "impaired visuospatial memory (reduced working memory performance)"
   ],
-  "study_design": "observational cross-sectional study based on historical birth dates and natural disaster exposure",
-  "data_source_type": "questionnaires and psychological testing",
-  "population": "907 adult workers born in Tangshan, China between 1975 and 1978",
-  "exposure_domain": "early-life stress from earthquake exposure (prenatal and infant periods)",
+  "study_design": "cohort",
+  "data_source_type": "other",
+  "population": "907 adults (mean age ~37–38 years) born and raised in Tangshan, recruited from Kailuan Mining Group workers",
+  "exposure_domain": "early-life stress from earthquake exposure (natural disaster)",
   "limitations": [
-    "confounding factors such as genetic background, adult life events, lifestyle, diet, alcohol, and drug abuse were difficult to quantify",
-    "no imaging or biological studies were performed to explore underlying mechanisms",
-    "relatively small sample size"
+    "Earthquake and pregnancy information was obtained retrospectively from parents or insiders, introducing recall bias.",
+    "No neuroimaging or biological studies were performed to explore underlying mechanisms.",
+    "Potential confounders (genetic background, adult life events, lifestyle, diet, alcohol, drug abuse) could not be quantitatively analyzed.",
+    "Small sample size limits statistical power."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

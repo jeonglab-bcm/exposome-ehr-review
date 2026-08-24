@@ -3,39 +3,38 @@
   "title": "Feasibility and acceptability of oral cholera vaccine mass vaccination campaign in response to an outbreak and floods in Malawi.",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "This study made use of the available health facility data and reports on cholera outbreak and oral cholera vaccine campaign.",
-  "summary": "Documentation of the feasibility, acceptability, and coverage of a reactive mass oral cholera vaccine campaign in Nsanje district, Malawi, following floods and a cholera outbreak.",
+  "ehr_evidence": "This study made use of the available health facility data and reports on cholera outbreak and oral cholera vaccine campaign. Data from OCV registers and tally sheets were summarized on daily summary sheets. Data from daily summary sheets were entered and analyzed in Microsoft excel.",
+  "summary": "A documentation/feasibility study of the first large-scale reactive oral cholera vaccine (OCV) mass vaccination campaign targeting over 160,000 people aged one year and older in 19 internally displaced people camps and surrounding communities in Nsanje district, Malawi, reporting administrative coverage, demographic characteristics, and safety.",
   "key_findings": [
-    "Round 1 campaign achieved 97.6% coverage (156,592 of 160,482 target population).",
-    "Round 2 achieved 85.8% coverage (137,629 recipients), with 67.6% fully immunized (108,247).",
-    "Of 320,000 doses sourced, 294,221 (91.9%) were administered.",
-    "Demographics of vaccinated individuals showed 54.4% females and 55.4% children under 15 years.",
-    "No severe adverse events following immunization were reported.",
-    "The main reason for non-vaccination or incomplete dosing was absence during the campaign period.",
-    "The 2014/2015 cholera outbreak across eight districts resulted in 693 cases and 11 deaths (CFR 1.6%)."
+    "First round coverage was 156,592 (97.6%) of 160,482 target population; second round coverage was 137,629 (85.8%).",
+    "Of 320,000 OCV doses received, 294,221 (91.9%) were administered, with 108,247 (67.6%) receiving the second dose.",
+    "Among 134,836 people with known gender and sex, 54.4% were females and 55.4% were children under 15 years of age.",
+    "No severe adverse event following immunization was reported.",
+    "The 2014/2015 outbreak produced 693 cases and 11 deaths (case fatality rate 1.6%, attack rate 0.013%)."
   ],
   "captured_features": [
-    "OCV vaccination registers",
-    "tally sheets",
-    "daily summary sheets",
-    "health facility reports"
+    "OCV administrative coverage by round and health facility catchment area",
+    "Number of doses administered (first and second dose)",
+    "Age and gender distribution of vaccinated individuals",
+    "Adverse events following immunization",
+    "Number of cholera cases and deaths by district and week"
   ],
   "pathologies_diseases": [
     "cholera"
   ],
-  "study_design": "descriptive documentation of a mass vaccination campaign",
-  "data_source_type": "health facility registers and administrative reports",
-  "population": "over 160,000 people aged one year or more in 19 displacement camps and surrounding communities in Nsanje district, Malawi",
-  "exposure_domain": "oral cholera vaccine campaign",
+  "study_design": "Documentation of a reactive mass vaccination campaign (descriptive feasibility/acceptability study)",
+  "data_source_type": "other",
+  "population": "Over 160,000 people aged one year and older living in 19 camps of internally displaced people and surrounding communities in Nsanje district, Malawi",
+  "exposure_domain": "vaccination (oral cholera vaccine mass campaign)",
   "limitations": [
-    "Reliance on health facility data and reports leads to incompleteness and bias.",
-    "Information only obtained from individuals who visited health facilities.",
-    "Data on non-vaccinated individuals could not be captured."
+    "Facility-based data subject to incompleteness and bias, with information obtained only from people who attended health facilities.",
+    "Information could not be obtained from non-vaccinated individuals.",
+    "No comparison group to assess vaccine effectiveness."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

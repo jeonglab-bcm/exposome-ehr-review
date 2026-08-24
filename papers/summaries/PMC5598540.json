@@ -3,46 +3,50 @@
   "title": "Effects of 4-nonylphenol on oxidant/antioxidant balance system inducing hepatic steatosis in male rat.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "Twenty-four male Sprague-Dawley rats (70–80 g) were obtained from the Experimental Animal Center of Tongji Medical College Animal Laboratory (Wuhan, China).",
-  "summary": "Experimental study investigating the effects of intraperitoneal administration of 4-nonylphenol on hepatic steatosis, oxidative stress, and apoptosis in male rats.",
+  "ehr_evidence": "The study used 24 male Sprague-Dawley rats (70–80 g) from the Experimental Animal Center of Tongji Medical College; data were derived from intraperitoneal 4-nonylphenol administration, serum hepatic marker enzyme assays, liver histology, TUNEL/PCNA immunohistochemistry, and liver gene expression profiling (RT-PCR) — no electronic or computerised individual-level health records were used.",
+  "summary": "In a controlled subchronic animal toxicology study, intraperitoneal administration of 4-nonylphenol (0, 2, 10, 50 mg/kg) to male Sprague-Dawley rats for 30 days induced hepatic steatosis associated with oxidative stress, decreased antioxidants, and apoptosis.",
   "key_findings": [
-    "Liver weight significantly increased at 10 mg/kg (9.23 ± 0.78 g) and 50 mg/kg (9.44 ± 0.67 g) compared to control (7.63 ± 1.54 g).",
-    "Serum GOT, GPT, LDH, and γ-GT activities significantly increased in 4-NP-treated groups (p < 0.05 to p < 0.001).",
-    "H2O2 levels significantly increased at 50 mg/kg (3.066 ± 0.47 μmol/mg prot, p < 0.01) and MDA increased at 10 mg/kg (3.013 ± 0.46 nmol/mg prot, p < 0.01) and 50 mg/kg (3.199 ± 0.81 nmol/mg prot, p < 0.01).",
-    "Antioxidant enzymes CAT, GSH-Px, and SOD significantly decreased (p < 0.05 to p < 0.001).",
-    "Gene expression of Casp-9, Bax, Fas, FasL, and TNF-α significantly increased, while Bcl-2 significantly decreased (p < 0.05).",
-    "PCNA positive cells increased to 4.64%, 8.87%, and 9.07% at 2, 10, and 50 mg/kg doses respectively."
+    "Serum GOT, GPT and LDH were significantly increased in 4-NP-treated groups versus control (p < 0.01, p < 0.001) and γ-GT was significantly increased (p < 0.05).",
+    "H2O2 levels were significantly increased at 50 mg/kg (p < 0.01) and MDA levels significantly increased at 10 and 50 mg/kg (p < 0.01).",
+    "Antioxidant enzyme activities (SOD, CAT, GSH-Px) were significantly decreased in 4-NP-treated groups versus control (p < 0.05, p < 0.01, p < 0.001).",
+    "Liver SOD1 and GPx expression significantly decreased (p < 0.05, p < 0.01) while HSP70 expression significantly increased (p < 0.05).",
+    "Caspase-9 and Bax expression significantly increased (p < 0.05) while Bcl-2 expression significantly decreased (p < 0.05).",
+    "Fas, FasL and TNF-α expression significantly increased (p < 0.05, p < 0.01).",
+    "TUNEL-positive apoptotic cells significantly increased at 10 and 50 mg/kg versus none in controls.",
+    "PCNA-positive cell index was 4.64%, 8.87% and 9.07% at 2, 10 and 50 mg/kg respectively versus negligible in controls.",
+    "Relative liver weight was significantly increased at 10 and 50 mg/kg (p < 0.05) with no significant change in final body weight."
   ],
   "captured_features": [
-    "Liver weight",
-    "Serum hepatic enzymes (GOT, GPT, LDH, γ-GT)",
-    "Oxidative stress markers (H2O2, MDA)",
-    "Antioxidant enzyme activities (CAT, GSH-Px, SOD)",
-    "Gene expression (SOD1, GPx, HSP70, Casp-9, Bax, Bcl-2, Fas, FasL, TNF-α)",
-    "Histological steatosis scores",
+    "Serum GOT, GPT, LDH, γ-GT activities",
+    "H2O2 and MDA levels",
+    "SOD, CAT, GSH-Px enzyme activities",
+    "Liver gene expression (SOD1, GPx, HSP70, Caspase-9, Bax, Bcl-2, Fas, FasL, TNF-α) via RT-PCR",
+    "Liver histology grades (steatosis, ballooning, lobular inflammation)",
     "TUNEL apoptotic index",
-    "PCNA proliferation index"
+    "PCNA-positive cell index",
+    "Body weight, absolute and relative liver weight"
   ],
   "pathologies_diseases": [
     "Hepatic steatosis",
-    "Nonalcoholic fatty liver disease (NAFLD)",
-    "Liver injury"
+    "Non-alcoholic fatty liver disease (NAFLD)",
+    "Oxidative stress",
+    "Hepatic injury/apoptosis"
   ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Animal model",
-  "population": "Male Sprague-Dawley rats (70–80 g)",
-  "exposure_domain": "Chemical exposure (4-nonylphenol)",
+  "study_design": "Controlled experimental subchronic exposure (animal toxicology) study",
+  "data_source_type": "biospecimen",
+  "population": "24 male Sprague-Dawley rats, 70–80 g, from Tongji Medical College Animal Laboratory, Wuhan, China",
+  "exposure_domain": "Chemical/endocrine-disrupting chemical (4-nonylphenol)",
   "limitations": [
-    "Small sample size (n=6 per group)",
-    "Short exposure duration (30 days)",
-    "Intraperitoneal administration route may not reflect typical human environmental exposure",
-    "Lack of protein-level validation (immunoblotting recommended for future work)",
-    "Single species and strain limits generalizability"
+    "Small sample size (n = 6 per group)",
+    "Only male rats used, limiting sex-generalizability",
+    "Acute/subchronic intraperitoneal exposure may not reflect real-world human exposure routes",
+    "Rat model may not translate to humans",
+    "No protein-level validation (e.g., immunoblot) performed"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

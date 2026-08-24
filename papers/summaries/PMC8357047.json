@@ -3,41 +3,41 @@
   "title": "Immunogenicity and Safety of AS03-adjuvanted H5N1 Influenza Vaccine in Children 6-35 Months of Age: Results From a Phase 2, Randomized, Observer-blind, Multicenter, Dose-ranging Study.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "The study collected primary data through clinical trial visits, blood samples for serologic testing, cell-mediated immunity assessments, and adverse event reporting.",
-  "summary": "Phase 2 randomized, multicenter, dose-ranging clinical trial evaluating the immunogenicity and safety of different formulations of an AS03-adjuvanted H5N1 influenza vaccine in children 6–35 months of age.",
+  "ehr_evidence": "The study was a phase 2 randomized, multicenter, observer-blind, dose-ranging clinical trial (ClinicalTrials.gov NCT02719743); data were collected prospectively through clinical trial procedures including blood sampling for serologic assays and adverse-event recording, not from electronic health records.",
+  "summary": "A phase 2 randomized, observer-blind, multicenter, dose-ranging clinical trial evaluated immunogenicity and safety of five formulations of AS03-adjuvanted H5N1 influenza vaccine in 185 healthy children 6–35 months of age in Thailand and Taiwan.",
   "key_findings": [
-    "All formulations elicited strong homologous immune responses with seroconversion rates of 100% and seroprotection rates of 100% at day 42.",
-    "The 1.9 µg HA/AS03B formulation ranked highest on the immunogenicity-fever index.",
-    "Antibody levels persisted >4 times above baseline at day 385 for all formulations.",
-    "Overall per-subject incidence of fever ranged from 28.6% (3.75 µg HA/AS03D) to 60.5% (1.9 µg HA/AS03B).",
-    "Grade 3 fever (≥39.0 °C) was reported in 18.4% of subjects in the 1.9 µg HA/AS03B group.",
-    "Serious adverse events were reported for 29 subjects (15.7%), none of which were fatal or related to vaccination."
+    "All formulations elicited strong homologous immune responses with all subjects' hemagglutination inhibition (HI) titers ≥1:40 post-vaccination (SCR = 100%, SPR = 100%).",
+    "The 1.9 µg HA/AS03B formulation ranked highest on the immunogenicity-fever index based on HI and microneutralization (MN) assays.",
+    "Antibody levels persisted >4 times above baseline 12 months after primary vaccination (day 385) with all formulations (SPR >70%, SCR >40%, MGI Day 385/Day 0 >4).",
+    "Antibodies increased >4-fold after antigen challenge (day 392/day 385); VRR was 100% for all formulations at day 392.",
+    "Overall per-subject incidence of fever ranged from 28.6% (3.75 µg HA/AS03D) to 60.5% (1.9 µg HA/AS03B); grade 3 fever (≥39.0°C) occurred in 18.4% of 1.9 µg HA/AS03B.",
+    "Serious adverse events were reported in 29 subjects (15.7%); none were fatal or related to vaccination, and no safety signal was identified.",
+    "No vaccine-specific CD8+ T-cell response was detected with any formulation."
   ],
   "captured_features": [
-    "Hemagglutination inhibition (HI) titers",
-    "Microneutralization (MN) titers",
-    "Cell-mediated immunity (CD4+ T-cell responses)",
-    "Solicited and unsolicited adverse events",
-    "Fever incidence and duration",
-    "Geometric mean titers (GMT), seroprotection rate (SPR), seroconversion rate (SCR)"
+    "Hemagglutination inhibition (HI) titers, GMT, seroprotection rate (SPR), seroconversion rate (SCR), mean geometric increase (MGI)",
+    "Microneutralization (MN) titers, GMT, vaccine response rate (VRR)",
+    "CD4+ T-cell (polypositive) responses",
+    "Fever incidence and grade 3 fever",
+    "Solicited and unsolicited adverse events, medically attended AEs, AESIs, serious AEs",
+    "Kawasaki disease (immune-mediated event)"
   ],
   "pathologies_diseases": [
-    "H5N1 influenza"
+    "Kawasaki disease (one reported immune-mediated event, assessed as unrelated to vaccine)"
   ],
-  "study_design": "Phase 2, randomized, observer-blind, multicenter, dose-ranging clinical trial",
-  "data_source_type": "Clinical trial primary data",
-  "population": "Children 6–35 months of age (n=185) from Thailand and Taiwan",
-  "exposure_domain": "AS03-adjuvanted H5N1 influenza vaccine formulations",
+  "study_design": "Phase 2 randomized, observer-blind, multicenter, dose-ranging clinical trial (no placebo control)",
+  "data_source_type": "biospecimen (clinical trial with serologic assays and adverse-event collection)",
+  "population": "185 healthy children 6–35 months of age (male and female) at 7 centers in Thailand and Taiwan",
+  "exposure_domain": "vaccine (AS03-adjuvanted H5N1 influenza vaccine formulations/doses)",
   "limitations": [
-    "Small sample size",
-    "Absence of a placebo control to assess vaccine safety",
-    "Immunogenicity-fever index did not include other reactogenicity indicators",
-    "Limited generalizability"
+    "Small sample size (185 subjects).",
+    "Absence of a placebo control limits the ability to assess vaccine safety and generalizability.",
+    "The immunogenicity-fever index did not include other reactogenicity indicators such as drowsiness and loss of appetite, using fever alone as a proxy."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

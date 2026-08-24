@@ -4,36 +4,35 @@
   "year": "2025",
   "ehr_used": true,
   "ehr_evidence": "We make use of data from CareSource Ohio, a nonprofit health plan with the largest Medicaid enrollment in the state of Ohio.",
-  "summary": "Machine learning predictive modeling study using Medicaid claims and social determinants of health data to identify children at risk of future foster care admission.",
+  "summary": "A predictive modeling study using Medicaid claims data for children under 18 enrolled in a Ohio health plan to compare gradient-boosted tree and logistic regression performance in predicting future foster care admission.",
   "key_findings": [
-    "The gradient-boosted tree model classified 2408 children as at risk, with 1599 (66.4%) actually transitioning into foster care.",
-    "The SDOH model achieved a positive predictive value (PPV) of 84.72%, compared to 27.44% for the non-SDOH model.",
-    "Logistic regression yielded a PPV of 0% without SDOH variables and 12.7% with SDOH variables, both substantially worse than the gradient-boosted tree model.",
-    "Average precision was 0.75 for the SDOH model and 0.16 for the non-SDOH model."
+    "Using a gradient-boosted tree algorithm, 2408 children (1.32%) were identified as at risk of foster care admission in a sample of 181 841, of whom 1599 entered foster care within 1 year, yielding a PPV of 66.4% (F1 = 55.5%, specificity = 99.5%, sensitivity = 47.67%).",
+    "Accuracy was substantially better when using SDOH data (PPV of 84.72% with SDOH data compared to 27.44% without).",
+    "The gradient-boosted tree substantially outperformed logistic regression; without SDOH variables logistic regression yielded a PPV of 0%, and with SDOH variables a PPV of 12.7%.",
+    "Average Precision was 0.75 for the SDOH model and 0.16 for the non-SDOH model."
   ],
   "captured_features": [
-    "Medicaid claims data",
-    "clinical diagnoses",
-    "healthcare utilization",
-    "linked parental adult diagnoses and utilization",
+    "Clinical diagnoses and healthcare utilization of children",
+    "Diagnoses and utilization of linked parental adults",
     "Johns Hopkins ACG System health analytics scores",
-    "21 SDOH risk scores (geographic and household-level factors)"
+    "21 SDOH risk scores (geographic/contextual and household-level socioeconomic factors such as education spending, household liens, bankruptcies, evictions, and criminal justice involvement)"
   ],
-  "pathologies_diseases": [],
-  "study_design": "Predictive modeling study comparing gradient-boosted tree machine learning to logistic regression",
-  "data_source_type": "Claims data",
-  "population": "Children under 18 years enrolled in CareSource Medicaid plan in Ohio (2019-2022), with linked parental adult data",
-  "exposure_domain": "Social determinants of health (SDOH) and clinical/healthcare utilization factors",
+  "pathologies_diseases": [
+    "Foster care admission (outcome)"
+  ],
+  "study_design": "Predictive modeling cohort study",
+  "data_source_type": "claims",
+  "population": "Children under 18 years enrolled in CareSource's Ohio Medicaid plan, January 2019 through June 2022",
+  "exposure_domain": "Social determinants of health (SDOH) factors",
   "limitations": [
-    "Potential missing foster care admissions due to enrollment in different health plans",
-    "Model may not generalize to demographically or clinically distinct populations",
-    "Lack of sibling status data preventing proper training/validation split",
-    "Risk of replicating racial, disability, and socioeconomic biases in the existing child welfare system"
+    "Some prior or future foster care admissions may be missing from the data or due to enrollment with a different health plan.",
+    "The model was trained on a single health plan population and may not generalize to demographically and clinically distinct populations.",
+    "No information on sibling status, preventing control for household clustering across training and validation sets."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

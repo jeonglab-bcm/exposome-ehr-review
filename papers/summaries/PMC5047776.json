@@ -3,49 +3,47 @@
   "title": "Bisphenol A and Adiposity in an Inner-City Birth Cohort.",
   "year": "2016",
   "ehr_used": false,
-  "ehr_evidence": "Study subjects are participants in the prospective birth cohort of the Columbia Center for Children’s Environmental Health (CCCEH) in Northern Manhattan and the South Bronx, New York.",
-  "summary": "Longitudinal birth cohort study examining associations between prenatal and early-childhood urinary bisphenol A (BPA) exposures and childhood adiposity measures (FMI, %BF, WC, BMIZ) in an inner-city NYC population.",
+  "ehr_evidence": "Study subjects are participants in the prospective birth cohort of the Columbia Center for Children's Environmental Health (CCCEH) in Northern Manhattan and the South Bronx, New York; BPA concentrations were measured in prenatal and child spot urine samples and anthropometric/bioelectrical impedance outcomes were collected prospectively.",
+  "summary": "In a prospective inner-city NYC birth cohort of African-American and Dominican mother-child pairs, prenatal and early-childhood urinary BPA exposure was examined in relation to childhood adiposity measures (FMI, %BF, WC, BMIZ) at ages 5 and 7 years.",
   "key_findings": [
-    "Prenatal urinary BPA was positively associated with age 7 FMI (β = 0.31 kg/m2; 95% CI: 0.01, 0.60, p = 0.04), %BF (β = 0.79; 95% CI: 0.03, 1.55, p = 0.04), and WC (β = 1.29 cm; 95% CI: 0.29, 2.30, p = 0.01).",
-    "Prenatal BPA was not associated with BMIZ at ages 5 or 7, or change in BMIZ between ages 5 and 7 (all p > 0.1).",
-    "The association between prenatal BPA and FMI was sex-specific, with positive associations observed in girls but not boys.",
-    "Child urinary BPA concentrations were not associated with childhood anthropometric outcomes (all p > 0.05).",
-    "Child BPA concentrations showed a borderline negative association with ΔBMIZ from 5 to 7 years (β = –0.10; 95% CI: –0.02, 0.005, p = 0.06)."
+    "Prenatal urinary BPA was positively associated with age-7 fat mass index (β = 0.31 kg/m2; 95% CI: 0.01, 0.60, p = 0.04), percent body fat (β = 0.79; 95% CI: 0.03, 1.55, p = 0.04), and waist circumference (β = 1.29 cm; 95% CI: 0.29, 2.30, p = 0.01) but not BMIZ or change in BMIZ.",
+    "The association of prenatal BPA with FMI was sex-specific, significant among girls (FMI β = 0.48; 95% CI: 0.5, 0.91; WC β = 1.45; 95% CI: 0.5, 2.85) but not boys, with a significant BPA×sex interaction (p = 0.04).",
+    "Child (postnatal) urinary BPA concentrations were not associated with FMI, %BF, or WC at age 7 years (all p > 0.05).",
+    "Child BPA had a borderline negative association with change in BMIZ from age 5 to 7 years (β = –0.10; 95% CI: –0.02, 0.005, p = 0.06), significant for girls only.",
+    "Prenatal BPA was not associated with birth weight."
   ],
   "captured_features": [
-    "Urinary BPA concentrations",
-    "Urinary DEHP metabolites",
-    "Specific gravity",
-    "Height and weight",
-    "Body mass index z-scores (BMIZ)",
-    "Fat mass index (FMI)",
-    "Percent body fat (%BF)",
-    "Waist circumference (WC)",
-    "Birth weight",
-    "Gestational age",
-    "Maternal prepregnancy BMI and obesity status",
-    "Child sex and race/ethnicity"
+    "prenatal and child urinary BPA concentrations (specific gravity-adjusted, ln-transformed, tertiles)",
+    "fat mass index (FMI)",
+    "percent body fat (%BF)",
+    "waist circumference (WC)",
+    "body mass index z-score (BMIZ)",
+    "change in BMIZ (ΔBMIZ)",
+    "birth weight",
+    "maternal prepregnancy BMI/obesity",
+    "child sex",
+    "urinary DEHP metabolites (ΣDEHP)",
+    "urinary specific gravity"
   ],
   "pathologies_diseases": [
-    "Adiposity",
-    "Overweight",
-    "Obesity"
+    "adiposity",
+    "childhood obesity/overweight"
   ],
-  "study_design": "Prospective longitudinal birth cohort study",
-  "data_source_type": "Prospective birth cohort / Biospecimen collection",
-  "population": "African American and Dominican mother-child pairs in Northern Manhattan and the South Bronx, New York (children followed to age 7 years)",
-  "exposure_domain": "Chemical exposure (Bisphenol A / endocrine disruptor)",
+  "study_design": "prospective birth cohort (longitudinal)",
+  "data_source_type": "biospecimen",
+  "population": "NYC inner-city birth cohort (Northern Manhattan and South Bronx); African-American and Dominican women aged 18–35 at enrollment in third trimester; children followed to age 7 years",
+  "exposure_domain": "bisphenol A (endocrine disruptor / chemical)",
   "limitations": [
-    "Use of spot urine samples leading to potential exposure misclassification due to low intraclass correlation",
-    "Lack of dietary data during pregnancy and childhood",
-    "Body composition assessed via bioelectrical impedance analysis rather than gold-standard methods",
-    "Lack of pubertal timing data to account for sex-specific developmental differences",
-    "Missing anthropometric and biomarker data due to loss to follow-up"
+    "Single spot urine samples for BPA lead to nondifferential exposure misclassification and likely underestimate true effects.",
+    "Lack of dietary data during pregnancy and childhood.",
+    "Body composition at age 7 assessed by bioelectrical impedance, not compared to gold-standard reference methods.",
+    "No pubertal timing/hormonal data, so pubertal development cannot be excluded as a driver of sex-specific associations.",
+    "Missing anthropometric and biomarker data, though IPW suggested loss to follow-up did not bias results."
   ],
-  "data_availability": "supplementary-only",
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "Associated DataSupplementary Materials(177 KB) PDFClick here for additional data file.",
+  "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

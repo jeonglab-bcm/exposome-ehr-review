@@ -3,42 +3,49 @@
   "title": "Estimated risk for altered fetal growth resulting from exposure to fine particles during pregnancy: an epidemiologic prospective cohort study in Poland.",
   "year": "2004",
   "ehr_used": false,
-  "ehr_evidence": "The study relied on personal air monitoring, questionnaires, and reviewed maternal and child hospital records.",
-  "summary": "Prospective cohort study in Poland assessing the association between personal prenatal exposure to fine particulate matter (PM2.5) and environmental tobacco smoke (ETS) and fetal growth outcomes.",
+  "ehr_evidence": "After participating women had given birth, maternal and child hospital records were reviewed to obtain data on complications of delivery; exposure was measured by personal environmental monitoring sampler (PEMS) over 48 hr during the second trimester and data on demographics, house characteristics, and reproductive history were collected via questionnaires.",
+  "summary": "A prospective community-based cohort study of 362 nonsmoking pregnant women in Krakow, Poland, examining the effect of personal PM2.5 exposure during pregnancy on birth weight, length, and head circumference.",
   "key_findings": [
-    "Higher personal PM2.5 exposure was associated with significantly lower birth weight (β = –200.8, p = 0.03), birth length (β = –1.44, p = 0.01), and head circumference (β = –0.73, p = 0.02).",
-    "An increase in PM2.5 exposure from 10 to 50 µg/m3 was predicted to reduce birth weight by 140.3 g, birth length by 1.0 cm, and head circumference by 0.5 cm.",
-    "No significant association was found between PM2.5 or ETS and gestational age.",
-    "The effect of ETS on birth outcomes was insignificant in all regression models."
+    "The regression model explained 33.4% of the variability in birth weight (β = –200.8, p = 0.03).",
+    "PM2.5 was significantly associated with shorter birth length (β = –1.44, p = 0.01) and smaller head circumference (β = –0.73, p = 0.02).",
+    "Newborns of mothers with higher PM2.5 exposure (above the median of 36.3 µg/m3) had shorter length at birth by 0.9 cm, with reductions in HC of 0.3 cm and birth weight of 128.3 g.",
+    "An increase in PM2.5 exposure from 10 to 50 µg/m3 was predicted to reduce birth weight by 140.3 g, birth length by 1.0 cm, and HC by 0.5 cm.",
+    "The effect of environmental tobacco smoke (ETS) was insignificant in all regression models.",
+    "No significant association was found between PM2.5 or ETS and shortened gestational age."
   ],
   "captured_features": [
-    "personal PM2.5 levels via air monitoring",
-    "self-reported ETS exposure",
-    "birth weight, length, and head circumference",
+    "birth weight",
+    "birth length",
+    "head circumference",
     "gestational age",
-    "maternal height and prepregnancy weight",
-    "parity",
+    "maternal height",
+    "prepregnancy weight",
+    "parity (number of pregnancies)",
     "sex of child",
-    "season of birth"
+    "season of birth",
+    "maternal age",
+    "education (years of schooling)",
+    "personal PM2.5 exposure (log transformed)",
+    "environmental tobacco smoke (ETS)"
   ],
   "pathologies_diseases": [
-    "adverse birth outcomes",
-    "fetal growth restriction"
+    "adverse fetal growth (reduced birth weight, length, and head circumference)",
+    "intrauterine growth retardation"
   ],
-  "study_design": "prospective cohort study",
-  "data_source_type": "prospective cohort with personal air monitoring and chart review",
-  "population": "362 pregnant women aged 18-35 years in Poland, nonsmoking, singleton pregnancies",
-  "exposure_domain": "fine particulate matter (PM2.5), environmental tobacco smoke",
+  "study_design": "prospective cohort",
+  "data_source_type": "other",
+  "population": "362 nonsmoking women with singleton pregnancies, aged 18-35, free from chronic diseases such as diabetes and hypertension, attending prenatal clinics in Krakow, Poland, giving birth between 34 and 42-43 weeks of gestation (2001-2003)",
+  "exposure_domain": "air pollution (personal fine particulate matter PM2.5)",
   "limitations": [
-    "Personal exposure monitoring was limited to a short 48-hour period during the second trimester.",
-    "ETS exposure was based on self-reported questionnaires, which may be subject to recall or reporting bias.",
-    "PM2.5 may act as a proxy for a complex mixture of other toxic environmental agents.",
-    "Ambient monitor correlations may not perfectly capture individual exposure variability."
+    "Personal exposure to PM2.5 was measured over only a short 48-hr period in the second trimester.",
+    "ETS and PM2.5 were significantly correlated, making it difficult to separate their effects.",
+    "ETS exposure was self-reported and may be subject to underestimation bias.",
+    "PM2.5 may act as a proxy for a complex mixture of other toxic agents (e.g., PAHs)."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

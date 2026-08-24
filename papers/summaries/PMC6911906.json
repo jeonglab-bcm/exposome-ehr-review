@@ -3,36 +3,41 @@
   "title": "Repeated holdout validation for weighted quantile sum regression.",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "Using data from 718 mother-child pairs in the Swedish Environmental Longitudinal, Mother and Child, Asthma and Allergy (SELMA) study, we assessed the association between prenatal exposure to 26 endocrine disrupting chemicals and child Intelligence Quotient (IQ).",
-  "summary": "Methodological paper demonstrating repeated holdout validation for weighted quantile sum regression using SELMA cohort data to assess prenatal chemical mixture exposure and child IQ.",
+  "ehr_evidence": "Our example data comes from a study of prenatal exposure to 26 endocrine disrupting chemicals in relation to child Intelligence Quotient (IQ) among mother-child pairs from the Swedish Environmental Longitudinal, Mother and Child, Asthma and Allergy (SELMA) study, a birth cohort study; exposures were measured from biospecimens and IQ from clinical testing, not from electronic health records or administrative data.",
+  "summary": "Methods paper proposing repeated holdout validation for weighted quantile sum (WQS) regression, demonstrated on 718 mother-child pairs from the SELMA birth cohort assessing prenatal exposure to 26 endocrine disrupting chemicals and child IQ.",
   "key_findings": [
-    "WQS index estimate was significant when all data was used (β = -2.2, CI = -3.43, -0.98), but attenuated and nonsignificant using repeated holdout validation (β = -0.82, CI = -2.11, 0.45).",
-    "DPHP had the second highest mean weight (10%) but seven of 100 repetitions were below the chemical of concern threshold.",
-    "Triclosan mean weight was 3% but 26% of repetitions had weights above the threshold."
+    "Single-partition WQS index estimate was significant on the full dataset (β = -2.20, 95% CI -3.43 to -0.98) but attenuated and nonsignificant with repeated holdout validation (β = -0.83, 95% CI -2.11 to 0.45).",
+    "Repeated holdout results were attenuated toward the null and nonsignificant compared to training and testing on the full dataset (resubstitution error).",
+    "Repeated holdout median estimation gave β = -0.86 (95% CI -1.99 to 0.43).",
+    "DPHP had the second-highest mean weight (10%) but 7 of 100 repeated holdouts fell below the 3.8% chemical-of-concern threshold, illustrating instability of single partitions.",
+    "Triclosan mean weight (3%) was below the threshold, yet 26% of repetitions exceeded it."
   ],
   "captured_features": [
-    "prenatal exposure to 26 endocrine disrupting chemicals",
-    "child Intelligence Quotient (IQ)",
-    "mother-child pair data"
+    "Concentrations of 26 endocrine disrupting chemicals (triclosan, bisphenols A/F/S, phthalate metabolites, PFAS, HCB, Nonachlor, DDT/DDT metabolite, summed PCBs)",
+    "Child IQ scores",
+    "Chemical weights and WQS index β coefficients",
+    "Chemical-of-concern threshold (3.8%)"
   ],
-  "pathologies_diseases": [],
-  "study_design": "methodological demonstration using a prospective birth cohort",
-  "data_source_type": "birth cohort",
-  "population": "718 mother-child pairs in Sweden",
-  "exposure_domain": "prenatal chemical mixtures (endocrine disrupting chemicals)",
+  "pathologies_diseases": [
+    "None (outcome is child IQ, a neurodevelopmental measure, not a disease)"
+  ],
+  "study_design": "Cohort (method-validation study applied to SELMA birth cohort data)",
+  "data_source_type": "biospecimen (birth cohort)",
+  "population": "718 mother-child pairs from the SELMA study in Sweden; prenatal chemical exposure assessed in relation to child IQ",
+  "exposure_domain": "Endocrine disrupting chemical mixtures (triclosan, bisphenols, phthalates, PFAS, organochlorines, PCBs)",
   "limitations": [
-    "computationally intensive (100 times longer than typical WQS)",
-    "finite sample sizes may limit stability",
-    "training-test split percentages are somewhat arbitrary",
-    "potential for random error or unmeasured confounding"
+    "Computationally intensive, taking ~100x longer than typical WQS implementations.",
+    "Training-test split percentages are somewhat arbitrary (40%/60% used).",
+    "A larger number of repetitions would provide better normal approximations.",
+    "Single partitions may lead to incorrect conclusions about individual chemicals of concern."
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
     "http://dx.doi.org/10.5281/zenodo.2658697",
-    "https://doi.org/10.5281/zenodo.2658697"
+    "zenodo.2658697"
   ],
-  "data_availability_statement": "",
+  "data_availability_statement": "E.M. Tanner, C. Gennings, evamtanner/Repeated_Holdout_WQS: 1st Rodeo (Version v1.0.0). [WWW Document]. Zenodo., (2019), doi:http://dx.doi.org/10.5281/zenodo.2658697.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,38 +3,38 @@
   "title": "Vaccine-Associated Measles Encephalitis in Immunocompromised Child, California, USA.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "Clinical case report of a single 1-year-old infant in California, USA, with laboratory confirmation via brain tissue sequencing and nasopharyngeal swab.",
-  "summary": "Case report of a fatal vaccine-associated measles encephalitis in an immunocompromised 1-year-old child in California, USA, confirmed by whole-genome RNA sequencing of brain tissue showing biased matrix-gene hypermutation.",
+  "ehr_evidence": "The study was a single-patient case report; data were derived from clinical notes, a nasopharyngeal swab, MRI/PET imaging, and formalin-fixed, paraffin-embedded (FFPE) brain tissue analyzed by histopathology and metagenomic RNA sequencing—not from any electronic or computerized health-record database.",
+  "summary": "A case report of a fatal vaccine-associated measles encephalitis caused by the Edmonston-Enders vaccine strain in an immunocompromised infant with acute myeloid leukemia in California, USA, confirmed by whole-genome RNA sequencing of measles virus from brain tissue.",
   "key_findings": [
-    "38.0% (68/179) of uracil-containing codons in the matrix (M) gene contained >1 uracil-to-cytosine mutation at levels ≥5%.",
-    "Metagenomic RNA sequencing of brain tissue acquired 50.7 million reads, 190,303 of which aligned to Edmonston-Enders (Moraten) MV.",
-    "The patient experienced persistent dysautonomia, respiratory failure, and myoclonus, and died shortly after extubation."
+    "38.0% (68/179) of uracil-containing codons in the matrix (M) gene contained >1 uracil-to-cytosine mutation at levels ≥5%, indicating biased M-gene hypermutation consistent with persistent CNS measles virus infection.",
+    "Metagenomic RNA sequencing of brain tissue acquired 50.7 million reads, of which 190,303 aligned to the Edmonston-Enders (Moraten) vaccine measles virus, yielding 500× coverage over 98.2% of the genome (mean coverage 1,540×).",
+    "No known hyperfusogenic fusion gene mutations were identified.",
+    "The patient died despite treatment with intravenous ribavirin, intrathecal interferon-α, and inosine pranobex; the family declined autopsy."
   ],
   "captured_features": [
-    "nasopharyngeal swab RT-PCR",
-    "brain tissue FFPE sections",
-    "metagenomic RNA sequencing",
-    "MRI/PET imaging",
-    "histology"
+    "Whole-genome RNA sequencing of measles virus from FFPE brain tissue",
+    "Matrix (M) gene hypermutation (U-to-C mutations at ≥5% allele frequency)",
+    "Histopathology (H&E and GFAP immunoperoxidase staining) showing astrogliosis without inflammation, neoplastic cells, or definite inclusions",
+    "MRI abnormal signals and PET hyperperfusion of the insula and thalamus",
+    "Nasopharyngeal swab positive for MV RNA by multiplex RT-PCR",
+    "Clinical course of acute myeloid leukemia and stem cell transplant"
   ],
   "pathologies_diseases": [
-    "measles encephalitis",
-    "acute myeloid leukemia"
+    "Vaccine-associated measles encephalitis (measles inclusion body encephalitis)",
+    "Acute myeloid leukemia",
+    "Immunocompromise"
   ],
-  "study_design": "case report",
-  "data_source_type": "clinical case report / biospecimen analysis",
-  "population": "1-year-old infant, California, USA",
-  "exposure_domain": "MMR vaccine",
+  "study_design": "Case report",
+  "data_source_type": "other",
+  "population": "A single immunocompromised infant/child (1-year-old) in California, USA, with acute myeloid leukemia",
+  "exposure_domain": "Vaccination (live-attenuated MMR/ProQuad measles vaccine)",
   "limitations": [
-    "single case report",
-    "family declined autopsy",
-    "limited to one patient",
-    "observational nature"
+    "Single case report (n=1) with no autopsy (family declined), limiting generalizability and causal inference."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

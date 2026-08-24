@@ -2,45 +2,47 @@
   "pmcid": "PMC5945909",
   "title": "2018_PMC5945909_Parents_attitudes_towards_topical_fluoride_and_vaccines_for_chil",
   "year": "2018",
-  "ehr_used": false,
-  "ehr_evidence": "We analyzed data collected from 2011 to 12 for 361 children from three Washington state dental clinics.",
-  "summary": "Case-control study examining the overlap between parental attitudes and internet use regarding topical fluoride and vaccines, and their association with refusal of these preventive treatments.",
+  "ehr_used": true,
+  "ehr_evidence": "We assessed dental chart-based topical ﬂuoride refusal occurring in 2009 or 2010 and parent-reported vaccine refusal.",
+  "summary": "A 1:1 matched case-control study of 361 parents of children from three Washington state dental clinics examining whether parental attitudes and Internet use regarding topical fluoride and vaccines overlap and correlate with child fluoride and vaccine refusal.",
   "key_findings": [
-    "51.5% of parents refused fluoride, only 27.7% reported refusing vaccinations.",
-    "Topical fluoride and vaccine refusal are modestly correlated (r = 0.23).",
-    "In adjusted models, only not using fluoride toothpaste was significantly associated with fluoride refusal (PR = 1.36, 95% CI 1.02–1.89).",
-    "For vaccine refusal, in the full adjusted model, vaccine safety concerns (PR = 1.81, 95% CI 1.49–2.20), internet use for vaccine information (PR = 2.84, 95% CI 2.09–3.87), and perceived severity of preventable cavities (PR = 1.29, 95% CI 1.04–1.60) remained significant predictors.",
-    "White respondents reported 62% higher likelihood of vaccine refusal (PR = 1.62, 95% CI 1.24–2.70)."
+    "Topical fluoride and vaccine refusal were modestly correlated (r = 0.23).",
+    "In adjusted full models, none of the fluoride-specific items were significantly associated with fluoride refusal; only non-fluoride toothpaste use remained significant (PR = 2.25, 95% CI 1.56-3.23).",
+    "For vaccine refusal, in the full model, perceived severity of preventable cavities (PR = 1.29, 95% CI 1.04-1.60), vaccine concern, and Internet use for vaccine information remained significant.",
+    "White respondents (vs. non-white) reported a 62% higher likelihood of vaccine refusal (PR = 1.62).",
+    "Income >$40,000-$60,000 (vs. >$60,000) was associated with 45% lower likelihood of fluoride refusal."
   ],
   "captured_features": [
-    "parental demographics",
-    "dental insurance status",
-    "topical fluoride refusal",
-    "vaccine refusal",
-    "safety concerns",
-    "perceived disease severity",
-    "internet use for health information",
-    "attitudes towards dental procedures",
-    "fluoride toothpaste use"
+    "Topical fluoride refusal (chart-based)",
+    "Vaccine refusal (parent self-report)",
+    "Fluoride safety/side-effect concern",
+    "Vaccine safety/side-effect concern",
+    "Perceived severity of preventable cavity/disease",
+    "Internet use for fluoride/vaccine information",
+    "Disapproval of dental x-rays, amalgam and composite fillings",
+    "Non-fluoride toothpaste use",
+    "Parent age, education, income, dental insurance; child sex, age, race/ethnicity; clinic site"
   ],
   "pathologies_diseases": [
-    "dental caries",
-    "vaccine-preventable diseases"
+    "Dental caries (preventable cavities)",
+    "Vaccine-preventable diseases",
+    "Topical fluoride refusal",
+    "Vaccine refusal"
   ],
-  "study_design": "case-control study",
-  "data_source_type": "Survey and dental chart records",
-  "population": "361 parents and children from three dental clinics in Washington state, USA",
-  "exposure_domain": "Parental attitudes and internet use for health information",
+  "study_design": "Case-control study (matched 1:1 on fluoride status, clinic, age, gender) with survey-based cross-sectional analysis",
+  "data_source_type": "EHR (dental chart records) and survey",
+  "population": "361 parents of children from three Washington state dental clinics; children seen for dental checkups in 2009-2010; mean child age 11.14 years (range 2.33-20.12); US setting",
+  "exposure_domain": "Parental attitudes (safety concerns, perceived severity, Internet information-seeking) and vaccine/fluoride hesitancy",
   "limitations": [
-    "Limited to three dental clinics in Washington state",
-    "Vaccine refusal based on self-report",
-    "Lack of data on parental dental and medical history",
-    "Incomplete coverage of theoretical model domains"
+    "Vaccine refusal was self-reported while fluoride refusal was chart-based, introducing differential measurement.",
+    "Small sample (n = 361) limiting statistical power.",
+    "Limited generalizability to three Washington state clinics all in fluoridated-water areas.",
+    "Did not account for parental dental/medical history and omitted domains of the Health Belief and Extended Parallel Process Models."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

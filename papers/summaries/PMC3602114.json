@@ -3,45 +3,46 @@
   "title": "Prospective surveillance study of acute respiratory infections, influenza-like illness and seasonal influenza vaccine in a cohort of juvenile idiopathic arthritis patients.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "Routine clinical evaluations, including the Pediatric American College of Rheumatology 30% ( ACRPed30) were conducted during both surveillance periods prior to and at 30, 90 and 180 days after influenza vaccination.",
-  "summary": "Prospective surveillance study evaluating the frequency and impact of acute respiratory infections and influenza-like illness on juvenile idiopathic arthritis disease activity, and assessing the immunogenicity and safety of the influenza vaccine in JIA patients.",
+  "ehr_evidence": "Surveillance of respiratory viruses was conducted in JIA patients during ARI season in two consecutive years (2007 and 2008) at a tertiary Pediatric Rheumatology Clinic; nasopharyngeal swabs were collected for real-time PCR and serum was tested by hemagglutination inhibition, with medical records analyzed retrospectively to identify temporal associations between ARI/ILI episodes and disease worsening.",
+  "summary": "A prospective longitudinal surveillance cohort study of children and adolescents with juvenile idiopathic arthritis evaluated the frequency of acute respiratory infections and influenza-like illness episodes, their temporal association with JIA flares, and the immunogenicity and safety of trivalent split influenza vaccine.",
   "key_findings": [
-    "105 ARI episodes were reported, with 26.6% classified as ILI.",
-    "60% of 33 respiratory samples were positive for at least one virus, with influenza and rhinovirus detected in 30% of samples.",
-    "20% of 50 observed JIA flares were temporally associated with ARI episodes.",
+    "ARI attack rate was 7.6 (95% CI 5.9-9.8) per 1000 child-days in SV1 and 3.9 (95% CI 2.8-5.5) in SV2, significantly more frequent in SV1 (p<0.01).",
+    "26.6% (28/105) of ARI episodes were classified as influenza-like illness.",
+    "60.6% (20/33) of nasopharyngeal samples were positive for at least one respiratory virus, with influenza and rhinovirus the most frequently detected (~30% each).",
+    "20% (10/50) of JIA flares or worsening episodes were temporally associated with ARI/ILI, more frequently in systemic-onset JIA (p=0.03).",
     "Influenza seroprotection rates exceeded 70% (91-100%) and seroconversion rates exceeded 40% (74-93%).",
-    "Patients using anti-TNF alpha drugs presented lower seroconversion to the H1N1 strain (p=0.03).",
-    "No significant differences were found in ACRPed30 scores after vaccination (p=0.22).",
-    "No patient reported ILI symptoms during the 6-month post-vaccination follow-up period."
+    "Patients on anti-TNF alpha drugs had lower seroconversion to the H1N1 strain (p=0.03) and 60% seroprotection.",
+    "No significant difference in ACRPed30 before vs after vaccination (p=0.22), and no patient reported ILI during the 6-month post-vaccine follow-up."
   ],
   "captured_features": [
-    "ARI episodes",
-    "ILI episodes",
-    "respiratory virus PCR results",
-    "JIA flares",
-    "ACRPed30 scores",
-    "influenza antibody titers",
-    "vaccine adverse events"
+    "ARI episode counts and attack rate per 1000 child-days",
+    "ILI episode classification",
+    "Respiratory virus detection by real-time PCR (nasopharyngeal swabs)",
+    "JIA flare/worsening events (ACRPed30)",
+    "Influenza hemagglutination inhibition antibody titers (GMT, seroprotection, seroconversion)",
+    "Vaccine safety and adverse events",
+    "Immunosuppressive/anti-TNF therapy and disease activity"
   ],
   "pathologies_diseases": [
-    "juvenile idiopathic arthritis",
-    "acute respiratory infections",
-    "influenza-like illness"
+    "Juvenile idiopathic arthritis",
+    "Acute respiratory infections",
+    "Influenza-like illness",
+    "Influenza"
   ],
-  "study_design": "prospective surveillance study",
-  "data_source_type": "clinical surveillance",
-  "population": "children and adolescents with juvenile idiopathic arthritis (JIA), mean age 10.7-11.0 years, Brazil",
-  "exposure_domain": "respiratory viral infections and influenza vaccination",
+  "study_design": "Prospective longitudinal surveillance cohort",
+  "data_source_type": "other",
+  "population": "Children and adolescents with juvenile idiopathic arthritis attending a tertiary Pediatric Rheumatology Clinic in Brazil (mean age ~11 years), studied across two ARI seasons (2007 and 2008), with a healthy control group of 10 children vaccinated in 2008.",
+  "exposure_domain": "Respiratory viral infections (acute respiratory infections/influenza-like illness) and influenza vaccination",
   "limitations": [
-    "small sample size",
-    "observational design limits causal inference between ARI and JIA flares",
-    "potential confounding by seasonality and immunosuppressive therapy",
-    "lack of statistical power to adjust for all covariates"
+    "Small sample size, limiting power for subgroup and adjusted analyses (e.g., anti-TNF response).",
+    "Retrospective chart review for temporal association cannot establish causality between ARI and JIA flares.",
+    "Single-center design with potential selection bias from loss to follow-up.",
+    "No unvaccinated comparison for ARI frequency and differing seasonality between surveillance periods limits vaccine effectiveness inference."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

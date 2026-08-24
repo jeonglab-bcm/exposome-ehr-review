@@ -3,39 +3,37 @@
   "title": "Windblown lead carbonate as the main source of lead in blood of children from a seaside community: an example of local birds as \"canaries in the mine\".",
   "year": "2009",
   "ehr_used": false,
-  "ehr_evidence": "Blood samples were collected from residents who wished to be tested, and analyzed for lead concentration and lead isotope ratios using thermal ionization mass spectrometry.",
-  "summary": "Cross-sectional study evaluating blood lead levels and isotopic signatures in children and adults in Esperance, Western Australia, following a community exposure to windblown lead carbonate concentrate from a local port.",
+  "ehr_evidence": "The DoH undertook opportunistic sampling, taking blood from any resident who wished to have his or her PbB measured.",
+  "summary": "In a cross-sectional isotope source-apportionment study of 49 children and 18 adults in the seaside community of Esperance, Western Australia, lead isotope ratios were used to attribute the proportion of blood lead derived from the Magellan mine lead carbonate concentrate.",
   "key_findings": [
-    "Mean blood lead level in children was 7.5 µg/dL (range 1.5–25.7 µg/dL; n=49).",
-    "Magellan mine lead contributed 27% to 93% (mean 64%, median 71%) to children's blood lead.",
-    "A significant positive relationship was found between blood lead concentration and percentage of Magellan lead (R²=0.12, p=0.018).",
-    "Estimated background blood lead level for young children was approximately 2.3 µg/dL.",
-    "Inhalation of fine lead carbonate particles was identified as a significant exposure pathway for very young children and some adults."
+    "Mean blood lead (PbB) level in children was 7.5 µg/dL (range 1.5-25.7 µg/dL; n=49; geometric mean 6.6 µg/dL), with four children whose PbB was >12 µg/dL.",
+    "The contribution of Magellan mine Pb to PbB in young children ranged from 27% up to 93% (mean 64%, median 71%).",
+    "There was a significant positive relationship between PbB concentration and proportion of Magellan Pb (R2=0.12, p=0.018).",
+    "Subtraction of the Magellan ore component gave a mean background PbB of 2.3 µg/dL."
   ],
   "captured_features": [
-    "blood lead concentration",
-    "lead isotope ratios (206Pb/204Pb, 207Pb/204Pb, 208Pb/204Pb)",
-    "age",
-    "percentage contribution from Magellan mine lead"
+    "Pb isotope ratios (208Pb/206Pb, 207Pb/206Pb, 206Pb/204Pb, 207Pb/204Pb, 208Pb/204Pb)",
+    "Blood lead (PbB) concentration (µg/dL)",
+    "Age (years)",
+    "Percentage of Magellan Pb contribution",
+    "Blood sample type (children, adults, cord blood)"
   ],
   "pathologies_diseases": [
-    "elevated blood lead levels",
-    "lead poisoning"
+    "Lead exposure / lead poisoning (elevated blood lead levels)"
   ],
-  "study_design": "cross-sectional observational study with opportunistic blood sampling and isotopic source apportionment",
-  "data_source_type": "primary biospecimen collection (blood) and environmental sampling",
-  "population": "49 children (mostly <5 years), 18 adults (>20 years), and 2 cord blood samples from Esperance, Western Australia",
-  "exposure_domain": "environmental lead exposure from windblown lead carbonate concentrate at a shipping port",
+  "study_design": "Cross-sectional isotope source-apportionment study with opportunistic sampling",
+  "data_source_type": "biospecimen",
+  "population": "49 children (48 aged <5 years) and 18 adults (>20 years), all living within 3 km of the Esperance port, Western Australia",
+  "exposure_domain": "Heavy metals (lead) / environmental lead exposure",
   "limitations": [
-    "lack of isotopic data for environmental samples from individual houses",
-    "opportunistic sampling biased toward higher blood lead levels",
-    "small sample size for some subgroups",
-    "inability to fully identify non-Magellan lead sources"
+    "Lack of isotopic data for environmental samples within individual houses, limiting identification of non-Magellan Pb sources.",
+    "Opportunistic, self-selected sampling biased toward higher PbB values.",
+    "Lack of knowledge of potential Pb sources other than the concentrate."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

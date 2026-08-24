@@ -4,47 +4,46 @@
   "year": "2022",
   "ehr_used": false,
   "ehr_evidence": "The tools used included an informatic platform, VigiFarmacoVax, and a mobile phone system.",
-  "summary": "Active SMS-based surveillance study evaluating the reporting rate, characteristics, and severity of adverse events following immunization (AEFI) in young children in Ferrara, Italy.",
+  "summary": "An active pharmacovigilance surveillance study using SMS-based parent reporting of adverse events following immunization (AEFI) in children aged ≤2 years in Ferrara, Italy (March 2018–May 2019).",
   "key_findings": [
-    "1,494 consents and 983 SMS replies were obtained from parents.",
-    "561 AEFI reports were validated, comprising 1,248 adverse events.",
-    "99.5% of AEFI were classified as not serious.",
-    "Pyrexia was the most frequent adverse event (37.5%), followed by mood disorders (26.5%) and gastrointestinal disorders (12.5%)."
+    "A total of 1,494 consents and 983 SMS replies (65.8% response rate) were obtained from parents of 1,130 children aged 0–2 years.",
+    "Of 983 responses, 561 were validated as AEFI reporting 1,248 adverse events.",
+    "Almost all AEFI (558; 99.5%) were classified as 'not serious' and 0.5% (severe) included upper respiratory tract infection, acute otitis and seizures.",
+    "By Organ System Class, most reports were 'General disorders and conditions related to the administration site' (653; 52.3%), followed by 'Psychiatric disorders' (331; 26.5%) and 'Metabolism and nutrition disorders' (156; 12.5%).",
+    "Pyrexia was the most frequent specific AEFI (468; 37.5%), followed by mood disorders (331; 26.5%), gastrointestinal disorders (156; 12.5%), local disturbances (116; 9.3%) and sleep disturbances (104; 8.3%).",
+    "Hexavalent vaccine accounted for the most doses (561; 28.3%), followed by PCV13 (555; 28%), anti-rotavirus (338; 17%) and Men-B (283; 14.3%)."
   ],
   "captured_features": [
-    "consent status",
-    "SMS responses",
-    "vaccine type and dose",
-    "adverse event description",
-    "severity classification",
-    "MedDRA SOC coding",
-    "outcome",
-    "demographics (age, gender)"
+    "number of reports",
+    "gender",
+    "age distribution",
+    "type of vaccine",
+    "adverse event (MedDRA-coded)",
+    "severity/outcome",
+    "date of onset",
+    "actions taken",
+    "vaccine batch and expiration",
+    "date, time and site of administration",
+    "pharmaceutical form",
+    "ethnic origin"
   ],
   "pathologies_diseases": [
-    "adverse events following immunization (AEFI)",
-    "pyrexia",
-    "mood disorders",
-    "gastrointestinal disorders",
-    "local disturbances",
-    "sleep disturbances",
-    "seizures",
-    "upper respiratory tract infection",
-    "acute otitis"
+    "Adverse events following immunization (AEFI): pyrexia, hyperpyrexia, mood disorders, gastrointestinal disorders, local disturbances, sleep disturbances, crying, general malaise/asthenia, upper respiratory tract infection, acute otitis, seizures"
   ],
-  "study_design": "prospective active surveillance study",
-  "data_source_type": "SMS and study platform (VigiFarmacoVax)",
-  "population": "children aged ≤ 2 years who received vaccinations per the regional calendar in Ferrara, Italy (March 2018 - May 2019)",
-  "exposure_domain": "vaccination (hexavalent, PCV13, rotavirus, meningococcal B)",
+  "study_design": "Active pharmacovigilance surveillance study (cross-sectional analysis of SMS-based reporting data)",
+  "data_source_type": "other (pharmacovigilance SMS surveillance platform, VigiFarmacoVax)",
+  "population": "Children aged ≤2 years (0–2 years) in Ferrara, Italy, who received a vaccine per the regional vaccination calendar, March 2018–May 2019",
+  "exposure_domain": "Vaccination/immunization (vaccines)",
   "limitations": [
-    "impossibility of knowing the outcome of the adverse event at the time of reporting",
-    "lack of guarantee of equity in adhering to the study due to language and mobile phone requirements",
-    "potential confounding by increased vaccination coverage and mandatory law debate"
+    "Impossibility of knowing the outcome of the adverse event at the time of reporting, especially for 'serious' events.",
+    "Lack of guarantee of equity in adherence, given the need to know Italian and to use mobile telephony.",
+    "Observed increase in reports may be confounded by rising vaccination coverage and post-mandatory-vaccination-law debate.",
+    "Under-reporting inherent to spontaneous/parent reporting."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

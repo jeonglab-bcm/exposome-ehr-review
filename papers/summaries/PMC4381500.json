@@ -4,46 +4,44 @@
   "year": "2015",
   "ehr_used": true,
   "ehr_evidence": "The data were available from Statistics Netherlands, who linked demographic data of persons included in the Municipal Personal Records Database (GBA) with causes of death derived from Statistics Netherlands.",
-  "summary": "Observational study of gender-specific mortality among Dutch children aged 0-11 years (2000-2011) to assess sex-differential effects of DTP-IPV and MMR ± MenC vaccinations.",
+  "summary": "A large national observational cohort study of all Dutch children aged 0-11 years (2000-2011) comparing gender-specific mortality rates across age groups defined by the last scheduled vaccine received.",
   "key_findings": [
-    "Mortality rate for natural causes was higher among boys than girls in all age groups.",
+    "During the study period, 14,038 children (0.22%) died, 91% attributed to a known natural cause of death.",
+    "The mortality rate for natural causes was higher among boys than girls in all age groups.",
     "Adjusted IRRs for girls compared with boys ranged between 0.81 (95% CI 0.74-0.89) and 0.91 (95% CI 0.77-1.07) across age groups.",
-    "No statistically significant differences in IRRs were observed between vaccine-related age groups (p = 0.723, p = 0.493, p = 0.868).",
-    "Sensitivity analyses including only indigenous Dutch children, specific death categories, and time periods yielded no statistically significant differences in IRR between vaccine-related age groups."
+    "No significant difference in IRR was observed between all vaccine-related age groups (p = 0.723), between children 2-13 months (following DTP-IPV) and 14 months-3 years (following MMR±MenC) (p = 0.493), or between children 14 months-3 years and 4-8 years (p = 0.868).",
+    "Sensitivity analyses (indigenous Dutch children only, before/after September 2002, excluding perinatal/congenital causes, infectious/parasitic diseases only) showed no significant differences in IRR between vaccine-related age groups."
   ],
   "captured_features": [
-    "demographic data",
     "age",
-    "gender",
-    "vaccination schedule/age groups",
-    "causes of death",
-    "mortality rates",
-    "incidence rate ratios",
-    "calendar year"
+    "sex/gender",
+    "age group (by last vaccine received)",
+    "cause of death",
+    "mortality rate per 10,000 person-years",
+    "incidence rate ratio (IRR)",
+    "calendar year",
+    "vaccination schedule",
+    "person-years of follow-up"
   ],
   "pathologies_diseases": [
+    "all-cause natural mortality",
     "natural causes of death",
-    "infectious and parasitic diseases",
-    "perinatal conditions",
-    "congenital anomalies",
-    "neoplasms",
-    "diseases of the nervous, circulatory, and respiratory systems"
+    "infectious and parasitic diseases (sensitivity analysis)"
   ],
-  "study_design": "population-based observational cohort study",
-  "data_source_type": "national registry / administrative database",
-  "population": "all Dutch children aged 0-11 years from 2000 to 2011 (N=6,261,472)",
-  "exposure_domain": "routine childhood vaccinations (DTP-IPV, MMR ± MenC, and boosters)",
+  "study_design": "observational cohort study (dynamic national cohort)",
+  "data_source_type": "registry",
+  "population": "All Dutch children aged 0-11 years, born/living in the Netherlands 2000-2011 (N = 6,261,472)",
+  "exposure_domain": "vaccination (DTP-IPV, MMR±MenC, booster vaccines)",
   "limitations": [
-    "individual vaccination status could not be verified and was assumed based on national schedule",
-    "changes in vaccination schedule during the study period",
-    "low overall childhood mortality limits statistical power to detect non-specific effects",
-    "potential selection and survival bias",
-    "BCG vaccination for specific subgroups could interfere with results"
+    "Individual vaccination status could not be verified; the study assumed all children were vaccinated according to the national schedule, which may have underestimated the effect of the last received vaccine.",
+    "Very low childhood mortality in this high-income setting limits statistical power to detect non-specific sex-differential effects.",
+    "Changes in the vaccination schedule during the study period and possible interference from BCG vaccination.",
+    "Assumption of complete adherence to schedule may introduce selection/survival bias."
   ],
-  "data_availability": "not-stated",
+  "data_availability": "in-house",
   "data_accession_links": [],
-  "data_availability_statement": "",
+  "data_availability_statement": "We thank Statistics Netherlands, who have made the data available and made it possible to link demographic data of persons included in the Municipal Personal Records Database (GBA) with causes of death.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

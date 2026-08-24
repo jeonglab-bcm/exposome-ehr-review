@@ -4,37 +4,40 @@
   "year": "2024",
   "ehr_used": false,
   "ehr_evidence": "In this open-label, self-paired clinical trial conducted in Donghai County, Jiangsu Province, China (ClinicalTrials.gov number: NCT05313893), we enrolled healthy children aged 3–8 years.",
-  "summary": "Open-label, self-paired clinical trial comparing immunogenicity and safety of one versus two doses of quadrivalent influenza vaccine in children aged 3–8 years, stratified by prior vaccination history.",
+  "summary": "An open-label, self-paired clinical trial comparing one versus two doses of quadrivalent influenza vaccine in 252 healthy children aged 3-8 years, assessing immunogenicity (GMT, GMFI, SCR, SPR) and safety by prior vaccination/serostatus.",
   "key_findings": [
-    "Group A (previously vaccinated) showed GMT fold increases of 4.84–8.51 after dose 1, with slight decreases after dose 2 for H1N1 (0.92-fold, 95% CI: 0.85, 0.99) and BV (0.86-fold, 95% CI: 0.80, 0.93).",
-    "Group B (vaccine-naive) showed GMT fold increases of 6.09–20.41 after dose 1, with further increases after dose 2 for H1N1 (1.48-fold, 95% CI: 1.04, 1.31), BY (2.15-fold, 95% CI: 1.74, 2.66), and BV (1.57-fold, 95% CI: 1.33, 1.84).",
-    "Baseline serostatus significantly impacted antibody titers, with seropositive individuals consistently exhibiting higher titers regardless of dosage.",
-    "Adverse reaction incidence was 38.8% in Group A and 22.5% in Group B over 28 days, with no serious adverse events reported."
+    "In Group A (2+ prior doses), the second dose produced a slight decrease in antibody titers against H1N1 (0.92-fold, 95% CI: 0.85, 0.99) and BV (0.86-fold, 95% CI: 0.80, 0.93) versus the first dose, with no significant differences in SCR and SPR except a slight increase in SCR for BY strains after the second dose (P=0.039).",
+    "In Group B (vaccine-naive), the second dose increased SCR and SPR for H3N2, BY, and BV versus the first dose (P<0.001), with GMFIs of 1.48 (95% CI: 1.04, 1.31) for H1N1, 2.15 (95% CI: 1.74, 2.66) for BY, and 1.57 (95% CI: 1.33, 1.84) for BV.",
+    "Baseline serostatus significantly impacted antibody titers against all four strains; seropositive individuals consistently exhibited higher HI GMTs than seronegative individuals.",
+    "Overall adverse reaction incidence was 38.8% (50/129) in Group A and 22.5% (29/123) in Group B, with adverse reactions mainly grade 1-2 and no serious adverse events reported."
   ],
   "captured_features": [
-    "geometric mean titers (GMT)",
+    "H antibody titers (HI assay)",
+    "geometric mean titer (GMT)",
+    "geometric mean fold increase (GMFI)",
     "seroconversion rate (SCR)",
     "seroprotection rate (SPR)",
-    "adverse event incidence",
+    "adverse reactions (local, systemic, serious)",
     "baseline serostatus",
-    "vaccination history"
+    "age",
+    "sex",
+    "vaccine dose number"
   ],
   "pathologies_diseases": [
     "influenza"
   ],
-  "study_design": "open-label, self-paired clinical trial",
+  "study_design": "Open-label, self-paired clinical trial",
   "data_source_type": "clinical trial",
-  "population": "children aged 3–8 years in Jiangsu Province, China",
-  "exposure_domain": "influenza vaccination",
+  "population": "252 healthy children aged 3-8 years in Donghai County, Jiangsu Province, China",
+  "exposure_domain": "Vaccination (quadrivalent influenza vaccine)",
   "limitations": [
-    "failure to investigate the durability of immune responses following vaccination",
-    "did not assess vaccine efficacy",
-    "lack of randomized comparison between one and two doses for long-term durability"
+    "Durability/persistence of immune responses over time was not investigated.",
+    "Vaccine efficacy was not assessed."
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
   "data_availability_statement": "Supplementary data to this article can be found online.",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

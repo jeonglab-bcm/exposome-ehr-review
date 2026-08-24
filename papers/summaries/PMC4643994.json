@@ -3,41 +3,44 @@
   "title": "Early-Life Exposure to Clostridium leptum Causes Pulmonary Immunosuppression.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The study utilized an experimental murine model using BALB/c mice delivered by caesarean section or vaginal delivery, with exposure to Clostridium leptum and ovalbumin allergen.",
-  "summary": "Experimental study evaluating the impact of early-life Clostridium leptum exposure on asthma development, airway hyper-responsiveness, and pulmonary immune responses in a murine model.",
+  "ehr_evidence": "Virgin female BALB/c mice (6–8 weeks old, 18–22 g) were obtained from the Jilin University Animal Research Center and housed in a specific pathogen–free (SPF) facility; the study used murine models and biospecimens (lung tissue, mediastinal lymph nodes, bronchoalveolar lavage fluid), not electronic health records.",
+  "summary": "A controlled murine study feeding infant cesarean-delivered BALB/c mice Clostridium leptum before ovalbumin sensitization showed that early-life C. leptum exposure induced a pulmonary immunosuppressive environment with increased Treg cells and attenuated OVA-induced allergic airway inflammation and asthma phenotype.",
   "key_findings": [
-    "Early-life C. leptum feeding increased Treg cell frequency and number in caesarean-delivered mice compared to vaginally delivered mice.",
-    "C. leptum exposure significantly reduced airway hyper-responsiveness and BALF cell counts (eosinophils, neutrophils, lymphocytes, macrophages) in OVA-sensitized mice compared to controls.",
-    "Th1, Th2, Th9, and Th17 cell levels and associated cytokines were statistically decreased in C. leptum-exposed OVA-sensitized mice compared to OVA-sensitized controls (p < 0.05).",
-    "IL-10 and TGF-β1 levels were significantly higher in C. leptum-exposed OVA-sensitized mice compared to OVA-sensitized controls.",
-    "No significant difference in Th22 frequency or IL-22 production was observed between C. leptum-exposed and control OVA-sensitized groups."
+    "Early-life fed-CL increased MLN CD4+CD25+FOXP3+ Treg frequency and number in cesarean-delivered mice versus vaginally delivered mice, though the between-mode difference was not statistically significant.",
+    "C. leptum + OVA exposure did not produce the typical asthma phenotype; airway resistance to methacholine was significantly reduced versus OVA alone (p < 0.05).",
+    "Total BALF cells, eosinophils, neutrophils, lymphocytes, and macrophages were significantly increased in C/-/OVA mice versus control and significantly decreased in C/CL/OVA mice versus C/-/OVA (p < 0.05).",
+    "Th1, Th2, Th9, and Th17 lymphocyte levels and their cytokines (IFN-γ, IL-4, IL-5, IL-13, IL-9, IL-17A, IL-17F, IL-21, IL-23) were significantly higher in C/-/OVA versus control and significantly lower in C/CL/OVA versus C/-/OVA (p < 0.05).",
+    "IL-10 and TGF-β1 in BALF were significantly decreased in C/-/OVA versus control and significantly higher in C/CL/OVA versus C/-/OVA (p < 0.05).",
+    "Th22 frequency and BALF IL-22 were significantly decreased in C/-/OVA versus control, and fed-CL did not significantly affect Th22 frequency or IL-22 (no significant difference between C/-/OVA and C/CL/OVA)."
   ],
   "captured_features": [
-    "Treg cell frequency and number",
-    "airway resistance to methacholine",
-    "BALF differential cell counts",
-    "lung tissue inflammation scores",
-    "Th1/2/9/17/22 cytokine concentrations",
-    "Foxp3 mRNA expression",
-    "IL-10 and TGF-β1 levels"
+    "MLN CD4+CD25+FOXP3+ Treg frequency and number (flow cytometry)",
+    "Th1, Th2, Th9, Th17, Th22 cell levels",
+    "BALF and cytokine concentrations (IL-4, IL-5, IL-13, IL-9, IL-22, IL-21, IL-23, IL-17A, IL-17F, IFN-γ, IL-10, TGF-β1, IL-25, IL-33)",
+    "Airway resistance to methacholine (flexiVent)",
+    "BALF total and differential cell counts (eosinophils, neutrophils, lymphocytes, macrophages)",
+    "Lung histological inflammation scores",
+    "Lung Foxp3 mRNA expression",
+    "In vitro Treg inhibitory function"
   ],
   "pathologies_diseases": [
-    "asthma",
-    "allergic airway inflammation"
+    "Allergic asthma",
+    "Airway inflammation",
+    "Airway hyper-responsiveness"
   ],
-  "study_design": "experimental murine model study",
-  "data_source_type": "animal model",
-  "population": "BALB/c mice (caesarean-delivered and vaginally delivered)",
-  "exposure_domain": "gut microbiota / Clostridium leptum exposure",
+  "study_design": "Controlled experimental animal study (murine OVA-induced asthma model)",
+  "data_source_type": "biospecimen",
+  "population": "Infant cesarean-delivered and vaginally delivered BALB/c mice, early-life C. leptum feeding before OVA sensitization",
+  "exposure_domain": "Gut microbiota / bacterial exposure (Clostridium leptum)",
   "limitations": [
-    "murine model may not fully replicate human asthma pathophysiology",
-    "single bacterial strain and allergen model limits generalizability",
-    "lack of human clinical validation"
+    "Murine model with limited translatability to human pediatric asthma",
+    "Small group sizes (25 mice per group) and short observation window",
+    "Findings derived from a single bacterial strain rather than whole microbiome"
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
   "data_availability_statement": "All relevant data are within the paper.",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,41 +3,44 @@
   "title": "Maternal exposure to cyclophosphamide during prepubertal life does not affect the cryosusceptibility of in vitro derived mouse embryos.",
   "year": "2026",
   "ehr_used": false,
-  "ehr_evidence": "Using a mouse model, this study evaluated the impact of prepubertal CY exposure (2 successive weekly doses of 75 mg/kg body weight at 2 weeks of age) on the cryosusceptibility of embryos derived via in vitro fertilization (IVF) at their reproductive phase.",
-  "summary": "Experimental study using a prepubertal female Swiss albino mouse model to evaluate the impact of cyclophosphamide exposure on the cryosusceptibility, developmental competence, and pluripotency marker expression of in vitro derived embryos.",
+  "ehr_evidence": "The study used healthy prepubertal female Swiss albino mice bred and housed in the Central Animal Research Facility of the Manipal Academy of Higher Education; no electronic health records were used.",
+  "summary": "A controlled experimental mouse study evaluating whether prepubertal cyclophosphamide exposure (two weekly doses of 75 mg/kg at 2 weeks of age) affects cryosusceptibility and developmental competence of IVF-derived embryos.",
   "key_findings": [
-    "Cyclophosphamide exposure caused a significant (P <0.0001) decline in total ovarian follicle count compared to controls.",
-    "Fertilization rates were comparable between control (84.3 ± 6.8) and CY (88.3 ± 4.9) groups.",
-    "Post-warming embryo survival rates were comparable between control (99.5 ± 0.5) and CY (99 ± 1) groups.",
-    "Blastocyst formation, apoptotic index, ICM outgrowth rates, and mRNA levels of Oct4, Sox2, and Nanog showed no significant differences between vitrified and non-vitrified CY embryos compared to controls."
+    "Significant decline in total ovarian follicle count in the CY group versus control (P<0.0001), with reduced primordial, preantral, and antral follicles (P<0.01–0.0001)",
+    "Fertilization rate comparable between control (84.3±6.8) and CY (88.3±4.9) groups",
+    "Post-warming embryo survival rate comparable between control (99.5±0.5) and CY (99±1) groups",
+    "No significant differences in blastocyst formation, apoptotic index, ICM outgrowth rate, or pluripotency marker (Oct4, Sox2, Nanog) expression between CY-exposed and control groups",
+    "Significant (P<0.01) downregulation of Oct4 and Sox2 transcript levels in CY in vitro-derived embryos versus in vivo-derived CY counterparts"
   ],
   "captured_features": [
     "ovarian follicle count",
     "fertilization rate",
-    "embryo survival rate",
+    "embryo post-warming survival rate",
     "blastocyst formation rate",
-    "apoptotic index",
+    "apoptotic index (TUNEL-positive cells)",
     "ICM outgrowth rate",
-    "mRNA expression of Oct4, Sox2, Nanog"
+    "mRNA expression of Oct4, Sox2, and Nanog"
   ],
   "pathologies_diseases": [
     "gonadotoxicity",
-    "infertility"
+    "diminished ovarian reserve",
+    "infertility",
+    "embryo cryosusceptibility"
   ],
-  "study_design": "experimental animal study",
-  "data_source_type": "animal model",
-  "population": "prepubertal female Swiss albino mice",
-  "exposure_domain": "chemotherapy (cyclophosphamide)",
+  "study_design": "controlled experimental animal study (mouse model) with treatment and control groups",
+  "data_source_type": "biospecimen",
+  "population": "prepubertal female Swiss albino mice exposed to cyclophosphamide at 2 weeks of age, assessed at reproductive phase",
+  "exposure_domain": "chemotherapy drug (cyclophosphamide)",
   "limitations": [
-    "inability to assess in vivo implantation potential",
-    "restricted to a single chemotherapeutic agent and specific dosage",
-    "mouse model limitations for direct human translation",
-    "lack of direct dosage equivalence between mice and humans"
+    "Mouse model limits direct human applicability",
+    "Single cyclophosphamide dosage tested, not clinical combination regimens",
+    "No in vivo implantation or post-implantation outcomes assessed",
+    "No direct dosage equivalence between mice and humans due to metabolic and pharmacokinetic differences"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

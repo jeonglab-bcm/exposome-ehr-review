@@ -3,41 +3,40 @@
   "title": "Assessment of prenatal exposure to arsenic in Tenerife Island.",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "A structured questionnaire on sociodemographic, lifestyle and dietary habits during pregnancy was administered to all participants the day after the delivery. Neonatal meconium was collected from the infant’s diaper.",
-  "summary": "Cross-sectional study evaluating prenatal arsenic exposure via meconium analysis in 96 mother-infant pairs in Tenerife, Spain, and its association with maternal diet, lifestyle, and neonatal outcomes.",
+  "ehr_evidence": "Neonatal meconium was collected from the infant's diaper and total arsenic was quantified by inductively coupled plasma-optical emission spectrometer (ICP-OES); a structured questionnaire on sociodemographic, lifestyle and dietary habits during pregnancy was administered the day after delivery.",
+  "summary": "A cross-sectional descriptive pilot study of 96 mother-child pairs in Tenerife, Spain, assessing prenatal arsenic exposure via meconium analysis and examining associations with maternal diet/lifestyle and neonatal outcomes.",
   "key_findings": [
-    "Prenatal arsenic exposure was detected in 38.5% of meconium samples.",
-    "Frequent vegetable intake was associated with detectable arsenic (OR: 1.31; 95% CI: 1.02–1.68).",
-    "Low weekly egg intake was associated with arsenic exposure (OR: 0.56; 95% CI: 0.34–0.94).",
-    "Children with detectable arsenic had significantly higher birth weight (OR: 1.00; 95% CI: 1.00–1.02).",
-    "No significant association was found between arsenic exposure and other obstetric or perinatal outcomes (p > 0.05)."
+    "Total arsenic was detected in 37 (38.5%) of 96 meconium samples, with a range of 0.10 to 31.40 ng/g.",
+    "Frequent intake of vegetables was associated with prenatal arsenic exposure (OR 1.19; 95% CI 1.01-1.41) and remained the only factor significantly and independently associated in the adjusted multivariate model (OR 1.31; 95% CI 1.02-1.68).",
+    "Low weekly intake of eggs was associated with prenatal arsenic exposure (OR 0.56; 95% CI 0.34-0.94).",
+    "Frequent intake of processed meat showed a non-significant trend toward arsenic exposure (OR 8.54; 95% CI 0.80-90.89).",
+    "No significant association was found between meconium arsenic and obstetric or neonatal outcomes, with the exception of a significantly higher birth weight in exposed newborns (OR 1.00; 95% CI 1.00-1.02).",
+    "Arsenic concentration was significantly correlated only with average consumption of white meat (Spearman's rho -0.45; p = 0.02)."
   ],
   "captured_features": [
-    "meconium arsenic concentration",
-    "maternal sociodemographic data",
-    "dietary frequency questionnaire",
-    "lifestyle factors",
-    "neonatal birth weight",
-    "gestational age",
-    "maternal education level",
-    "tobacco smoke exposure"
+    "Total arsenic concentration in meconium (ng/g, ppb)",
+    "Maternal dietary habits via 16-item food frequency questionnaire",
+    "Maternal lifestyle factors (tobacco smoke, alcohol, medicine use, chemical exposure)",
+    "Sociodemographic variables (maternal/father education, social class, age, country of origin, area of residence)",
+    "Neonatal outcomes (birth weight, gestational age, length, cranial perimeter, prematurity, clinical diagnosis)"
   ],
-  "pathologies_diseases": [],
-  "study_design": "cross-sectional descriptive study",
-  "data_source_type": "biospecimen and questionnaire",
-  "population": "96 pregnant women and their newborns in Tenerife, Spain",
-  "exposure_domain": "dietary arsenic exposure",
+  "pathologies_diseases": [
+    "No significant neonatal pathologies; only birth weight was significantly associated with arsenic exposure"
+  ],
+  "study_design": "Cross-sectional descriptive pilot study",
+  "data_source_type": "biospecimen",
+  "population": "96 pregnant women and their newborns in Tenerife, Spain; enrolled August 2006 to June 2007",
+  "exposure_domain": "heavy metals (arsenic)",
   "limitations": [
-    "no arsenic speciation data to differentiate inorganic vs organic forms",
-    "small sample size (n=96)",
-    "cross-sectional design prevents causal inference",
-    "dietary intake based on self-reported frequency rather than quantitative mg/day",
-    "results limited to Tenerife and not generalizable"
+    "No data on arsenic speciation, so inorganic versus organic arsenic exposure could not be differentiated, risking overestimation of health risk.",
+    "Small sample size and single-island setting make results difficult to generalize.",
+    "Poor correlation between detected arsenic and food consumption, likely because intake was expressed as frequency per week rather than mg/day/person.",
+    "ICP-OES used rather than atomic absorption spectrometry, and the small meconium amount precluded arsenic speciation."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

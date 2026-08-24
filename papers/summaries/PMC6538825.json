@@ -4,39 +4,45 @@
   "year": "2019",
   "ehr_used": false,
   "ehr_evidence": "We used the serum and ALS (antibody in lymphocyte supernatant) samples from the volunteers vaccinated with ACE527 vaccine and placebo volunteers challenged with H10407 ETEC for validation of the multiplex ECL assay.",
-  "summary": "Development and validation of a novel 8-plex multiplex electrochemiluminescent (ECL) immunoassay using the MSD platform to measure immune responses to ETEC antigens, compared against conventional ELISA.",
+  "summary": "A laboratory proof-of-concept study developing and validating an 8-plex electrochemiluminescent (MSD) immunoassay for measuring immune responses to ETEC antigens and comparing it with conventional ELISA using serum and ALS specimens from ACE527 vaccine volunteers.",
   "key_findings": [
-    "Intra-assay variability showed percent CV below 20% (range 5.3%–18.1%) for all 8 antigens.",
-    "Inter-assay variability showed percent CV below 20% (range 7.7%–17.9%) across 3 consecutive days.",
-    "Dilution linearity yielded R² values between 90% and 100% for high titer samples and 75% to 90% for low titer samples.",
-    "Specificity testing showed over 60% inhibition for all antigens.",
-    "Concordance analysis showed no significant difference between ECL and ELISA for most antigens (p < .05), except CS3 (p = .0087) and LTB IgG (p = .0200).",
-    "ECL demonstrated higher sensitivity than ELISA, with a maximum to minimum signal ratio of 1434.62 compared to 87.63 for ELISA."
+    "Intra-assay precision (CV) was below 20% (range 5.3%-18.1%) for all 8 antigens.",
+    "Inter-assay precision (CV) was below 20% (range 7.7%-17.9%) across 3 consecutive days.",
+    "Dilution linearity R² values were 90-100% for high titer and 75-90% for low titer serum.",
+    "Specificity: percent inhibition was over 60% for all antigens in the competitive inhibition assay.",
+    "No significant difference between ELISA and ECL for serum IgA except CS3 (p=.0087).",
+    "No significant difference for serum IgG except LTB IgG (p=.0200).",
+    "MSD platform was more sensitive than ELISA (max-to-min ratio 1434.62 vs 87.63)."
   ],
   "captured_features": [
-    "Serum IgA and IgG antibody titers",
-    "ALS IgA antibody levels",
-    "Intra- and inter-assay CV",
-    "Dilution linearity R²",
-    "Competitive inhibition percentages"
+    "Serum IgA titers",
+    "Serum IgG titers",
+    "ALS IgA titers",
+    "ECL signal units",
+    "Antigen-specific antibody responses to CFA/I, CS1, CS2, CS3, CS5, CS6, LTA, LTB",
+    "Intra- and inter-assay coefficient of variation (CV%)",
+    "Dilution linearity (R²)",
+    "Percent inhibition (specificity)"
   ],
   "pathologies_diseases": [
-    "Enterotoxigenic Escherichia coli (ETEC) infection"
+    "Enterotoxigenic Escherichia coli (ETEC) infection",
+    "ETEC-associated diarrhea"
   ],
-  "study_design": "Assay development and validation study",
-  "data_source_type": "Biospecimens (serum and ALS from vaccine trial volunteers)",
-  "population": "Healthy American adults enrolled in the ACE527 ETEC vaccine trial",
-  "exposure_domain": "",
+  "study_design": "In vitro assay development and validation study (proof-of-concept comparison of multiplex ECL vs ELISA)",
+  "data_source_type": "biospecimen",
+  "population": "Healthy American adults who received the ACE527 ETEC vaccine or placebo and were challenged with ETEC H10407",
+  "exposure_domain": "Vaccine/ETEC antigen-specific immune responses (colonization factors and heat-labile toxin antigens)",
   "limitations": [
-    "High reader and plate costs compared to ELISA",
-    "Specialist printing requirements for multiplex plates",
-    "Antigens not commercially available",
-    "Observed cross-reactivity between some antigens"
+    "Small sample sizes (e.g., 10 serum samples for inter-assay precision).",
+    "ETEC antigens used are not commercially available, limiting reproducibility and standardization.",
+    "Relatively high MSD reader and plate costs and specialist printing requirements.",
+    "Observed cross-reactivity between antigens.",
+    "Study conducted in healthy adults, not the target pediatric/endemic population."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

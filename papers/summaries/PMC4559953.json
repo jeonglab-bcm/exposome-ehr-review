@@ -3,43 +3,43 @@
   "title": "Perinatal Exposure to Traffic-Related Air Pollution and Atopy at 1 Year of Age in a Multi-Center Canadian Birth Cohort Study.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "The CHILD study (http://www.canadianchildstudy.ca) is a prospective longitudinal national birth cohort that recruited over 3,600 families between 2008 and 2012 in four Canadian cities.",
-  "summary": "Prospective multi-center birth cohort study examining the association between perinatal traffic-related air pollution (NO2) exposure and atopy at 1 year of age in Canadian children.",
+  "ehr_evidence": "The CHILD study is a prospective longitudinal national birth cohort that recruited over 3,600 families between 2008 and 2012 in four Canadian cities [Vancouver, Edmonton, Winnipeg, and Toronto]",
+  "summary": "A prospective multi-center birth cohort study of 2,477 children at approximately 1 year of age in four Canadian cities examining the association between perinatal traffic-related air pollution (NO2) exposure and atopy/allergic sensitization.",
   "key_findings": [
-    "TRAP exposure after birth increased risk for atopy to any allergens (aOR = 1.16 per 10 μg/m3 NO2; 95% CI: 1.00, 1.41).",
-    "No association was found during pregnancy (aOR = 1.02; 95% CI: 0.86, 1.22).",
-    "Association was stronger among non-daycare attendees (aOR = 1.61; 95% CI: 1.28, 2.01) compared to daycare attendees (aOR = 1.05; 95% CI: 0.81, 1.28).",
-    "Positive but non-significant trends were found for food (aOR = 1.17; 95% CI: 0.95, 1.47) and inhalant allergens (aOR = 1.28; 95% CI: 0.93, 1.76)."
+    "TRAP exposure after birth increased the risk for development of atopy to any allergens (aOR per 10 μg/m3 NO2 = 1.16; 95% CI: 1.00, 1.41), but not during pregnancy (aOR = 1.02; 95% CI: 0.86, 1.22)",
+    "The association was stronger among children not attending daycare (aOR = 1.61; 95% CI: 1.28, 2.01) compared with daycare attendees (aOR = 1.05; 95% CI: 0.81, 1.28)",
+    "Trends to increased risk were found for food allergens (aOR = 1.17; 95% CI: 0.95, 1.47) and inhalant allergens (aOR = 1.28; 95% CI: 0.93, 1.76)",
+    "During pregnancy, effect estimates were null for sensitization to any allergens (aOR = 1.02; 95% CI: 0.86, 1.22) and food allergens (aOR = 1.00; 95% CI: 0.77, 1.61)"
   ],
   "captured_features": [
-    "Skin-prick test results for 10 allergens",
-    "Residential addresses and mobility history",
-    "Time-activity patterns and daycare attendance",
-    "Home ventilation/infiltration estimates",
-    "Maternal atopy, asthma, smoking, and SES",
-    "Diet and breastfeeding practices",
-    "Modeled NO2 exposure concentrations"
+    "City-specific land use regression NO2 exposure estimates temporally adjusted at bi-weekly intervals",
+    "Residential address history and residential mobility (time-weighted average exposure)",
+    "Atopy status defined by positive skin-prick test response to any allergen",
+    "Inhalant and food allergen sensitization clusters",
+    "Daycare attendance",
+    "Time spent away from home (time-activity patterns)",
+    "Modeled home infiltration efficiency",
+    "Maternal atopy, SES, furry pets, mold, nutrition, secondhand smoke"
   ],
   "pathologies_diseases": [
-    "atopy",
-    "allergic sensitization"
+    "Atopy",
+    "Allergic sensitization (inhalant and food allergens)"
   ],
-  "study_design": "prospective multi-center birth cohort study",
-  "data_source_type": "birth cohort",
-  "population": "2,477 children approximately 1 year of age from four Canadian cities",
-  "exposure_domain": "traffic-related air pollution (NO2)",
+  "study_design": "Prospective multi-center birth cohort",
+  "data_source_type": "birth cohort (prospective longitudinal national cohort)",
+  "population": "2,477 children at approximately 1 year of age from four Canadian cities (Vancouver, Edmonton, Winnipeg, Toronto), recruited 2008-2012",
+  "exposure_domain": "Traffic-related air pollution (NO2)",
   "limitations": [
-    "Exposure assessment derived from modeled estimates rather than direct measurements",
-    "Reliance on self-reported environmental and parental risk factors",
-    "Cohort bias toward higher socioeconomic status",
-    "Infiltration model developed for US cities applied to Canadian homes",
-    "Missing covariate data reduced sample sizes for some analyses",
-    "Lack of sufficient power for certain subgroup analyses"
+    "Exposure derived from modeled LUR estimates rather than measurements, increasing error propagation",
+    "Self-reported environmental risk factors may be biased by parental health status",
+    "Bias toward higher socioeconomic status compared with the general population",
+    "Infiltration model developed for U.S. cities may not apply to Canadian homes",
+    "Missing covariates substantially reduced sample sizes for individual analyses"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

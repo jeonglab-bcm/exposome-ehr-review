@@ -3,36 +3,46 @@
   "title": "Influence of glutathione S-transferase polymorphisms on cognitive functioning effects induced by p,p'-DDT among preschoolers.",
   "year": "2008",
   "ehr_used": false,
-  "ehr_evidence": "We used data from 326 children assessed in a prospective population-based birth cohort at the age of 4 years.",
-  "summary": "Gene-environment interaction study investigating how GSTP1, GSTM1, and GSTT1 polymorphisms modify the association between prenatal p,p´-DDT exposure and neurodevelopmental outcomes at age 4 in a Spanish birth cohort.",
+  "ehr_evidence": "We used data from 326 children assessed in a prospective population-based birth cohort at the age of 4 years. In that study, the McCarthy Scales of Children's Abilities were administrated by psychologists, organochlorine compounds were measured in cord serum, and genotyping was conducted for the coding variant Ile105Val from GSTP1 and for null alleles from GSTM1 and GSTT1.",
+  "summary": "In a prospective population-based birth cohort of 326 preschoolers at 4 years of age in Menorca, Spain, prenatal p,p'-DDT exposure (cord serum) was inversely associated with cognitive functioning, with effect modification by GSTP1 (but not GSTM1/GSTT1) polymorphisms.",
   "key_findings": [
-    "p,p´-DDT cord serum concentration was inversely associated with general cognitive, memory, quantitative, verbal skills, executive function, and working memory in children with any GSTP1 Val-105 allele (general cognitive β = -8.41, p = 0.04).",
-    "Statistically significant gene-environment interactions were found between GSTP1 polymorphisms and prenatal p,p´-DDT exposure for general cognitive skills (p interaction = 0.05), quantitative skills (p = 0.02), executive function (p = 0.01), and working memory (p = 0.02).",
-    "No significant associations or interactions were found between p,p´-DDT and cognitive functioning according to GSTM1 and GSTT1 polymorphisms.",
-    "p,p´-DDE levels showed weak, non-significant associations with neurodevelopmental scores that were not modified by GST polymorphisms."
+    "p,p'-DDT cord serum concentration was inversely associated with general cognitive, memory, quantitative, verbal, executive function, and working memory scores in children carrying any GSTP1 Val-105 allele, with the strongest effect being an >8-point decrement in general cognitive skills.",
+    "GSTP1 polymorphisms and prenatal p,p'-DDT exposure showed statistically significant interactions for general cognitive skills (p for interaction = 0.05), quantitative skills (p = 0.02), executive function (p = 0.01), and working memory (p = 0.02).",
+    "There were no significant associations between p,p'-DDT and cognitive functioning at 4 years according to GSTM1 and GSTT1 polymorphisms.",
+    "Adjusted associations between p,p'-DDE levels and neurodevelopmental scores were weak and not significantly modified by any of the GSTP1, GSTM1, or GSTT1 polymorphisms."
   ],
   "captured_features": [
-    "Cord serum p,p´-DDT and p,p´-DDE concentrations",
-    "GSTP1, GSTM1, and GSTT1 genotypes",
-    "McCarthy Scales of Children's Abilities (MCSA) scores",
-    "Maternal socio-demographics and prenatal exposures",
-    "Birth characteristics"
+    "p,p'-DDT cord serum concentration (ng/mL)",
+    "p,p'-DDE cord serum concentration (ng/mL)",
+    "GSTP1 genotype (Ile/Ile, Ile/Val, Val/Val)",
+    "GSTM1 genotype (present, null)",
+    "GSTT1 genotype (present, null)",
+    "McCarthy Scales of Children's Abilities scores (general cognitive, verbal, perceptual performance, quantitative, memory, motor, executive function, working memory)",
+    "Birth weight, birth length, gestational age",
+    "Breast-feeding duration",
+    "Maternal age and social class",
+    "Maternal tobacco and alcohol use during pregnancy",
+    "Child's sex",
+    "School trimester at examination and psychologist"
   ],
-  "pathologies_diseases": [],
-  "study_design": "Prospective population-based birth cohort study",
-  "data_source_type": "Birth cohort",
-  "population": "326 preschool children (age 4 years) from Menorca, Spain, born in 1997",
-  "exposure_domain": "Prenatal organochlorine exposure (p,p´-DDT and p,p´-DDE)",
+  "pathologies_diseases": [
+    "Cognitive functioning/neurodevelopmental outcomes (decreased cognitive skills, executive function, working memory)"
+  ],
+  "study_design": "Prospective population-based birth cohort",
+  "data_source_type": "biospecimen",
+  "population": "326 preschoolers at 4 years of age from the Menorca cohort, Spain (recruited 1997-1999)",
+  "exposure_domain": "Organochlorine pesticides (prenatal p,p'-DDT and p,p'-DDE exposure)",
   "limitations": [
-    "Selection bias due to incomplete genotyping and exposure data",
-    "Small subgroup sizes limiting statistical power for interaction analyses",
-    "Lack of lipid adjustment for organochlorine measurements",
-    "Potential linkage disequilibrium with unmeasured genetic variants"
+    "Selection bias possible because genotyping and exposure data were not available from all eligible children, though effects were likely minimal.",
+    "Small numbers of subjects in each subgroup limit conclusions about gene-environment interactions.",
+    "Exposure misclassification assumed to be nondifferential.",
+    "Organochlorines were not adjusted for lipid content.",
+    "Association may be secondary to linkage disequilibrium with a variant outside GSTP1."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -2,41 +2,42 @@
   "pmcid": "PMC8986305",
   "title": "Safety profile comparison of chimeric live attenuated and Vero cell-derived inactivated Japanese encephalitis vaccines through an active surveillance system in Australia.",
   "year": "2022",
-  "ehr_used": false,
-  "ehr_evidence": "Data were retrieved from SmartVax ( www.smartvax.com.au ), an active surveillance system for monitoring vaccine safety utilized by more than 450 clinics and other immunization providers in major cities and regional areas, in all states and territories throughout Australia including general practices, travel medicine clinics, and other immunization clinics (public, council, and hospital).",
-  "summary": "Post-marketing safety comparison of chimeric live attenuated (Imojev) and Vero cell-derived inactivated (JEspect) Japanese encephalitis vaccines using active surveillance data from Australian clinics.",
+  "ehr_used": true,
+  "ehr_evidence": "Data were retrieved from SmartVax (www.smartvax.com.au), an active surveillance system for monitoring vaccine safety utilized by more than 450 clinics and other immunization providers.",
+  "summary": "In a retrospective active surveillance study of 2756 patients receiving either the chimeric live attenuated JE vaccine (Imojev) or the Vero cell-derived inactivated JE vaccine (JEspect) at Australian primary care and travel medicine clinics, overall, systemic, and local adverse events following immunization (AEFIs) were compared between the two vaccines.",
   "key_findings": [
-    "Overall AEFI rate was 7.0% (systemic 2.8%, local 1.9%).",
-    "No significant difference in odds of overall (OR = 1.27; 95%CI: 0.91–1.77), systemic (OR = 1.23; 95%CI: 0.74–2.06), or local (OR = 1.20; 95%CI: 0.65–2.22) AEFIs between Imojev and JEspect.",
-    "Higher odds of overall (OR = 2.39; 95%CI: 1.10–5.19) and local (OR = 4.13; 95%CI: 1.08–15.74) AEFIs observed in patients aged <5 years compared to >50 years.",
-    "No statistically significant interaction between sex and number of concomitant vaccines, though a trend suggested increased AEFI odds in females with more vaccines."
+    "Overall (7.0%), systemic (2.8%), and local (1.9%) AEFIs were uncommon and not significantly different between Imojev and JEspect (overall OR = 1.27; 95%CI: 0.91–1.77; systemic OR = 1.23; 95%CI: 0.74–2.06; local OR = 1.20; 95%CI: 0.65–2.22).",
+    "Patients aged <5 years had higher odds of overall AEFI (OR = 2.39; 95%CI: 1.10–5.19) and local AEFI (OR = 4.13; 95%CI: 1.08–15.74) compared to those aged >50 years.",
+    "There was a non-significant trend of differential effect by sex and number of concomitant vaccines, with odds of AEFI increasing in females as the number of vaccines increased.",
+    "In the sensitivity analysis restricted to patients who received only a JE vaccine (n = 637), odds of AEFI with Imojev were higher than JEspect but not statistically significant (overall OR = 2.16, 95%CI 0.93–5.01; systemic OR = 3.27, 95%CI 0.73–14.67; local OR = 1.98, 95%CI 0.22–17.87)."
   ],
   "captured_features": [
-    "age",
+    "vaccine type (Imojev vs JEspect)",
+    "age group",
     "sex",
-    "vaccine type",
-    "number of concomitant vaccines",
-    "AEFI type (overall, systemic, local)",
-    "specific symptoms (tiredness, headache, pain, swelling, rash, fever, etc.)",
-    "time to symptom onset"
+    "number of other vaccines received on the same encounter",
+    "overall/systemic/local AEFI status",
+    "specific AEFI symptoms (tiredness, headache, fever, irritability, sleep disturbance, diarrhea, vomiting, rigors, convulsions, hypotonia, pain, swelling, rash)",
+    "time to onset of AEFI post-immunization"
   ],
   "pathologies_diseases": [
-    "Japanese encephalitis"
+    "adverse events following immunization (AEFIs) - overall, systemic, and local"
   ],
-  "study_design": "observational cohort study using active vaccine safety surveillance",
-  "data_source_type": "active vaccine safety surveillance system",
-  "population": "2756 patients receiving Japanese encephalitis vaccines at Australian clinics (median age 34 years, 52.6% female)",
-  "exposure_domain": "vaccines (Japanese encephalitis vaccines)",
+  "study_design": "retrospective active surveillance cohort study comparing two vaccines",
+  "data_source_type": "registry",
+  "population": "2756 patients (median age 34 years, IQR 22–51; 52.6% female) receiving Imojev (n = 1855) or JEspect (n = 901) at Australian primary health-care centers and specialist travel medicine clinics, 2015–2020",
+  "exposure_domain": "vaccination (Japanese encephalitis vaccines)",
   "limitations": [
-    "small sample size for children <5 years and lack of symptom severity data",
-    "AEFI intensity difficult to ascertain in young children",
-    "limited to 5-day post-vaccination follow-up due to SMS timing",
-    "small subgroup sizes prevented statistical analysis for some vaccine combinations and sex"
+    "Small sample size in children aged <5 years (n = 64), limiting subgroup analysis.",
+    "Severity of AEFIs was not recorded in the system.",
+    "Only 3–5 day follow-up via SMS, missing late-onset AEFIs (e.g. cardiovascular or neurologic complications).",
+    "Self-reported AEFIs with potential age-dependent reporting bias.",
+    "Small subgroups prevented analysis of specific vaccine combinations by sex."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

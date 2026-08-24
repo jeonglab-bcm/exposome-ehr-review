@@ -3,40 +3,39 @@
   "title": "Mitotically heritable effects of BMAA on striatal neural stem cell proliferation and differentiation.",
   "year": "2019",
   "ehr_used": false,
-  "ehr_evidence": "We used primary neuronal cell cultures and embryonic neural stem cells from rat striatum.",
-  "summary": "In vitro study investigating the direct and mitotically heritable effects of the cyanobacterial neurotoxin BMAA on rat striatal neural stem cell proliferation, differentiation, and morphology.",
+  "ehr_evidence": "The study used primary striatal neurons and embryonic neural stem cells from rats (in vitro cell cultures) and pregnant outbred Wistar rats; no electronic or computerised health records were used.",
+  "summary": "An in vitro/in vivo developmental neurotoxicology study using primary striatal neurons and embryonic neural stem cells from rats exposed to the cyanobacterial toxin BMAA, showing that neural stem cells are more susceptible than neurons to BMAA-induced reduced proliferation, increased apoptosis, impaired differentiation, and mitotically heritable morphological alterations.",
   "key_findings": [
-    "250 µM BMAA reduced neural stem cell proliferation through apoptosis and G2/M arrest.",
-    "50-100 µM BMAA reduced differentiation into neurons, astrocytes, and oligodendrocytes.",
-    "BMAA-induced morphological alterations (reduced neurite length, processes, and branches) were mitotically heritable to daughter cells (D1 and D2).",
-    "P1 cells treated with 100 µM BMAA showed decreased neuron percentage (31.72% to 16.66%, p<0.001), astrocyte percentage (34.38% to 15.49%, p<0.01), and oligodendrocyte percentage (15.75% to 9.42%, p<0.05).",
-    "Glutamate antagonists MK-801 and MCPG completely protected against BMAA-induced decreases in cell viability, proliferation, and morphological alterations."
+    "BMAA at 250 µM–3 mM reduced neural stem cell proliferation (decreased MTT production) and increased apoptosis and G2/M arrest, whereas primary striatal neurons were unaffected even at 3 mM.",
+    "At 50–100 µM, BMAA significantly reduced differentiation into neurons, astrocytes, and oligodendrocytes (e.g., 100 µM BMAA reduced neurons from 31.72% to 16.66%, p<0.001; astrocytes from 34.38% to 15.49%, p<0.01; oligodendrocytes from 15.75% to 9.42%, p<0.05) while increasing undifferentiated cells.",
+    "BMAA-induced reductions in proliferation, differentiation, and neurite outgrowth were mitotically heritable to daughter cells (D1 and D2).",
+    "The NMDA antagonist MK-801 and metabotropic antagonist MCPG, but not the non-NMDA antagonist CNQX, completely protected against BMAA-induced effects on viability, proliferation, and morphology."
   ],
   "captured_features": [
-    "cell viability (MTT assay)",
-    "cell proliferation (DAPI staining)",
-    "cell cycle distribution (flow cytometry)",
-    "apoptosis/necrosis (Annexin V-PI assay)",
-    "differentiation markers (β III-tubulin, GFAP, Oligo4, nestin)",
-    "neurite morphometry (length, processes, branches)"
+    "Cell viability (MTT assay)",
+    "Cell proliferation (DAPI cell counts)",
+    "Cell cycle phase distribution (G0/G1, G2/M) via flow cytometry",
+    "Apoptosis/necrosis (Annexin V–PI)",
+    "Differentiation marker expression (β III-tubulin, GFAP, oligo4, nestin) via immunocytochemistry and flow cytometry",
+    "Neurite length, processes per cell, branches per cell, and cell body area (morphometric analysis)"
   ],
   "pathologies_diseases": [
     "neurodevelopmental disorders",
-    "neurodegenerative disease (ALS/PDC, Alzheimer's)"
+    "neurodegenerative disease (ALS/PDC, Alzheimer's disease)"
   ],
-  "study_design": "in vitro mechanistic cell culture study",
-  "data_source_type": "in vitro cell culture",
-  "population": "embryonic rat striatal neural stem cells and primary neurons",
-  "exposure_domain": "cyanobacterial neurotoxin (BMAA)",
+  "study_design": "in vitro/in vivo experimental neurotoxicology study (cell culture and animal model)",
+  "data_source_type": "biospecimen (rat striatal cell cultures and pregnant Wistar rats)",
+  "population": "embryonic rat (Wistar) striatum at embryonic day 15/18; pregnant Wistar dams",
+  "exposure_domain": "cyanobacterial neurotoxin (BMAA) / environmental toxin",
   "limitations": [
-    "in vitro model limitations",
-    "lack of randomization",
-    "extrapolation to human development requires caution"
+    "In vitro/in vivo study using rat cells and animals; findings may not translate to humans",
+    "High micromolar-to-millimolar BMAA concentrations used that may exceed realistic human exposure",
+    "No randomization of samples"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

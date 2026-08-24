@@ -4,41 +4,46 @@
   "year": "2009",
   "ehr_used": true,
   "ehr_evidence": "The main basis for the analyses are the data from the medical check-up of the cohort starting school in 2004, provided by the Department for Health and Environment of the City of Munich, Germany.",
-  "summary": "Analysis of a whole birth cohort of 6-year-old children in Munich, Germany, examining regional and social differences in overweight, preventive health check-up participation, and vaccination coverage.",
+  "summary": "A cross-sectional multilevel analysis of 9,353 six-year-old children in a whole 2004 Munich school cohort examining individual and regional social differences in overweight, preventive health check-up participation, and vaccination.",
   "key_findings": [
-    "Children with non-German speaking parents had a 2.96 times higher risk of overweight (OR 2.96, 95% CI 2.56–3.42) compared to German-speaking parents.",
-    "Non-German speaking parents were associated with higher odds of incomplete health check-ups (OR 2.94, 95% CI 2.63–3.28) but lower odds of incomplete immunizations (OR 0.60, 95% CI 0.55–0.66).",
-    "School districts with a high percentage of low-education households showed increased odds of overweight (OR 1.81, 95% CI 1.47–2.24) and incomplete check-ups (OR 1.63, 95% CI 1.40–1.90), but decreased odds of incomplete immunizations (OR 0.77, 95% CI 0.68–0.88).",
-    "Children without kindergarten attendance had higher odds of incomplete check-ups (OR 2.07, 95% CI 1.67–2.56) and incomplete immunizations (OR 1.31, 95% CI 1.07–1.59)."
+    "Prevalence of overweight (BMI ≥90th percentile) was 10.29%, incomplete U1-U9 check-ups 23.15%, and incomplete immunizations 55.14%.",
+    "Non-German mother tongue was associated with about three times higher overweight risk (OR 2.96, 95% CI 2.56-3.42) and higher incomplete check-ups (OR 2.94, 95% CI 2.63-3.28) versus German mother tongue.",
+    "Non-German mother tongue was associated with lower incomplete immunizations (OR 0.60, 95% CI 0.55-0.66), an opposite association.",
+    "Kindergarten visit 'no' was associated with higher incomplete check-ups (OR 2.07, 95% CI 1.67-2.56) and incomplete immunizations (OR 1.31, 95% CI 1.07-1.59).",
+    "High percentage of low-education households was associated with higher overweight (OR 1.81, 95% CI 1.47-2.24) and incomplete check-ups (OR 1.63, 95% CI 1.40-1.90) and lower immunizations (OR 0.77, 95% CI 0.68-0.88) with a dose-response pattern.",
+    "In multilevel analysis, high percentage of single-parent households was associated with lower incomplete immunizations (OR 0.83, 95% CI 0.73-0.94) only.",
+    "No school district showed problematic values (high overweight, low check-ups, low immunizations) for all three variables simultaneously."
   ],
   "captured_features": [
-    "BMI/overweight status",
-    "preventive health check-up participation (U1-U9)",
-    "vaccination status",
-    "child sex",
-    "parental mother tongue",
-    "kindergarten attendance",
-    "percentage of single-parent households per school district",
-    "percentage of low-education households per school district"
+    "Body-mass-index/overweight (BMI ≥90th percentile)",
+    "Participation in preventive health check-ups U1-U9",
+    "Vaccination/immunization status",
+    "Child sex",
+    "Mother tongue of parents",
+    "Kindergarten visit (≥12 months)",
+    "Percentage of single-parent households (school district)",
+    "Percentage of households with lowest educational level (school district)"
   ],
   "pathologies_diseases": [
-    "overweight"
+    "Overweight (obesity)",
+    "Incomplete preventive health check-ups",
+    "Incomplete immunizations"
   ],
-  "study_design": "Cross-sectional multilevel analysis",
-  "data_source_type": "School-entry medical check-up registry",
-  "population": "9,353 children starting school in 2004 in Munich, Germany",
-  "exposure_domain": "Socioeconomic and regional deprivation factors",
+  "study_design": "Cross-sectional multilevel analysis of a whole birth/school cohort",
+  "data_source_type": "registry",
+  "population": "9,353 six-year-old children (2004 Munich school cohort) in Munich, Germany",
+  "exposure_domain": "Individual and regional social/socioeconomic factors (migration background, single-parent households, low educational level)",
   "limitations": [
-    "Limited number of social and health indicators in the dataset",
-    "Lack of environmental exposure data (e.g., air pollution, traffic noise, green spaces)",
-    "Overweight classification based on German-specific 90th percentile cutoff",
-    "Regional variables act as ecological surrogates",
-    "Cross-sectional design limits causal inference"
+    "Dataset includes only a few variables on health and health-related risks for each child.",
+    "No environmental factors (traffic noise, air pollution, availability of parks/playgrounds) could be included at the regional level.",
+    "Limited social indicators per child/family; no detailed social status information.",
+    "Some health variables (e.g., vision/hearing) were assessed imprecisely and disregarded.",
+    "Overweight classification based on the 90th percentile German definition."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

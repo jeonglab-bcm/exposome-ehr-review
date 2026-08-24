@@ -2,37 +2,43 @@
   "pmcid": "PMC11252050",
   "title": "The Epidemiological Characteristics and Spatiotemporal Clustering of Measles - China, 2005-2022.",
   "year": "2024",
-  "ehr_used": false,
-  "ehr_evidence": "We utilized data from the China Disease Prevention and Control Information System for our comprehensive analysis.",
-  "summary": "Spatiotemporal and epidemiological analysis of measles incidence trends and clustering in China from 2005 to 2022.",
+  "ehr_used": true,
+  "ehr_evidence": "We obtained measles reporting data from the China Disease Prevention and Control Information System to assess the epidemiological characteristics of measles based on the date of illness onset.",
+  "summary": "A spatiotemporal surveillance analysis of measles epidemiology in China from 2005 to 2022 using national infectious disease reporting data, examining incidence trends and spatial clustering.",
   "key_findings": [
-    "732,218 measles cases were reported in China from 2005 to 2022, with a male-to-female ratio of 1.43:1.",
-    "Overall incidence declined significantly (AAPC: -31.55, 95% CI: -43.03, -27.12, P<0.05), with sharp drops during 2008–2011 (APC: -51.17, 95% CI: -62.35, -37.01, P<0.05) and 2015–2022 (APC: -55.28, 95% CI: -73.83, -44.01, P<0.05).",
-    "The highest incidence was observed in infants under 8 months (75.41 per 100,000), followed by the 0–4 year age group (26.03 per 100,000).",
-    "51.18% of all cases occurred in children under 5 years old.",
-    "A high-incidence spatiotemporal cluster persisted from 2005 to 2008 (RR=4.69, LLR=140,816, P<0.001), while a low-incidence cluster was detected from 2016 to 2022 (RR=0.08, LLR=113,675, P<0.001)."
+    "A total of 732,218 measles cases were reported in China from 2005 to 2022, with a male-to-female ratio of 1.43:1 and an average reported incidence of 3.00 per 100,000.",
+    "The average annual percentage change (AAPC) was -31.55 (95% CI: -43.03, -27.12, P<0.05), indicating a significant decline in incidence from 2005 to 2022.",
+    "The highest incidence was observed in the 0-4 year age group at 26.03 per 100,000, and infants had the highest incidence at 75.41 per 100,000, with 51.18% of cases in children under 5 years old.",
+    "Significant global spatial clustering of measles was identified during 2010-2011 and 2014-2017 (Moran's I values over 0, P<0.05), with no global spatial clustering observed after 2017.",
+    "The high-risk spatiotemporal cluster persisted from 2005 to 2008 (RR=4.69, LLR=140,816, P<0.001), while the low-risk cluster persisted from 2016 to 2022 (RR=0.08, LLR=113,675, P<0.001)."
   ],
   "captured_features": [
-    "reported measles cases",
-    "age and sex distribution",
-    "provincial incidence rates",
-    "spatiotemporal cluster boundaries"
+    "number of reported measles cases",
+    "incidence rate per 100,000",
+    "age group",
+    "sex",
+    "date of illness onset",
+    "province/provincial-level administrative division",
+    "year",
+    "Moran's I",
+    "Getis-Ord Gi*",
+    "relative risk from space-time scan"
   ],
   "pathologies_diseases": [
     "measles"
   ],
-  "study_design": "ecological spatiotemporal analysis",
-  "data_source_type": "national infectious disease surveillance system",
-  "population": "children and general population in China, 2005–2022",
-  "exposure_domain": "",
+  "study_design": "cross-sectional spatiotemporal surveillance study",
+  "data_source_type": "registry",
+  "population": "All reported measles cases in China (excluding Hong Kong SAR, Macao SAR, and Taiwan), 2005-2022, predominantly young children",
+  "exposure_domain": "none (spatiotemporal surveillance, no environmental exposure assessed)",
   "limitations": [
-    "using provincial administrative divisions as spatial units may underestimate clustering and miss localized outbreaks",
-    "early reporting system stages may have introduced information biases such as underreporting or misreporting"
+    "Using provincial administrative divisions as spatial units might underestimate clustering and fail to identify some localized outbreaks or epidemics.",
+    "Some data from the years immediately following the 2004 implementation of the reporting system may have information biases such as underreporting or misreporting."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

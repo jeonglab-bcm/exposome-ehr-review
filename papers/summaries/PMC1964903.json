@@ -3,41 +3,43 @@
   "title": "Secondary sex ratio among women exposed to diethylstilbestrol in utero.",
   "year": "2007",
   "ehr_used": false,
-  "ehr_evidence": "Data were provided by women participating in the National Cancer Institute (NCI) DES Combined Cohort Study.",
-  "summary": "Cohort study evaluating the association between in utero diethylstilbestrol (DES) exposure and the secondary sex ratio of offspring among US women.",
+  "ehr_evidence": "Data were provided by women participating in the National Cancer Institute (NCI) DES Combined Cohort Study, with information collected via mailed questionnaires (1994 and 1997) and telephone interviews; DES exposure status was verified by medical record.",
+  "summary": "In a US combined cohort of parous women exposed to DES in utero and unexposed women, in utero DES exposure was not associated with secondary sex ratio overall, but higher odds of male births were observed among women first exposed earlier in gestation to higher cumulative doses.",
   "key_findings": [
-    "Overall, no significant association was observed between in utero DES exposure and secondary sex ratio (adjusted OR 1.05, 95% CI 0.95–1.17).",
-    "Among women with complete dose and timing data (33%), those first exposed earlier in gestation (<13 weeks) and to higher cumulative doses (≥5 g) had a significantly higher odds of a male birth (adjusted OR 1.24, 95% CI 1.04–1.48).",
-    "Results did not vary appreciably by maternal age, parity, cohort, or infertility history."
+    "No overall association between in utero DES exposure and secondary sex ratio: adjusted OR 1.05 (95% CI, 0.95–1.17) for having a male birth comparing DES-exposed to unexposed women.",
+    "Odds of conceiving a male birth increased with increasing DES dose (p-trend = 0.038).",
+    "Among women with complete data on dose and timing (33%), first exposure at < 13 weeks to ≥ 5 g DES had the highest odds of a male birth (adjusted OR 1.24, 95% CI, 1.04–1.48) versus no exposure.",
+    "No statistically significant trend by gestational age at first DES exposure (p-trend = 0.186).",
+    "Among first births only, the fully adjusted OR for having a male birth was 1.37 (95% CI, 1.06–1.77) for first exposure at < 13 weeks to ≥ 5 g versus no exposure."
   ],
   "captured_features": [
-    "maternal age",
+    "DES exposure status (verified by medical record)",
+    "cumulative DES dose (< 5 g vs ≥ 5 g)",
+    "gestational age at first DES exposure (< 13 vs ≥ 13 weeks)",
+    "offspring sex / proportion of male births (secondary sex ratio)",
+    "maternal age at conception",
     "parity",
-    "cohort",
+    "child's birth year",
+    "study cohort (DESAD, Dieckmann, Horne, WHS)",
     "infertility history",
-    "fertility drug use",
-    "smoking status",
-    "BMI",
-    "DES cumulative dose",
-    "gestational timing of first DES exposure",
-    "offspring sex",
-    "singleton live births"
+    "fertility drug use"
   ],
-  "pathologies_diseases": [],
-  "study_design": "cohort study",
-  "data_source_type": "Research cohort / Questionnaires and medical records",
-  "population": "Parous US women (daughters of DES-exposed mothers) from four NCI cohorts",
-  "exposure_domain": "Diethylstilbestrol (DES) / Endocrine disruptors",
+  "pathologies_diseases": [
+    "None (outcome is secondary sex ratio, a reproductive measure, not a disease)"
+  ],
+  "study_design": "Cohort (combined prospective/retrospective cohort of DES-exposed and unexposed women)",
+  "data_source_type": "other (research cohort using mailed questionnaires and telephone interviews)",
+  "population": "US parous women exposed to DES in utero (DES daughters) and unexposed women from the NCI DES Combined Cohort Study, born in the 1950s–1960s, analyzed in the mid-1990s",
+  "exposure_domain": "Endocrine-disrupting chemical (diethylstilbestrol, synthetic estrogen)",
   "limitations": [
-    "High proportion of missing data on DES dose and timing (67%)",
-    "Reliance on self-reported reproductive and medical history",
-    "Potential for residual confounding despite adjustment",
-    "Small sample sizes in some cohort subgroup analyses"
+    "High proportion of missing data on DES dose and timing (67% of exposed women), limiting dose-response analysis.",
+    "ORs overestimate prevalence ratios because the outcome (male birth) is common.",
+    "Exposure information varied in completeness across cohorts, and dose was imputed from field-center medians for women with missing data."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -4,35 +4,41 @@
   "year": "2008",
   "ehr_used": true,
   "ehr_evidence": "We obtained data on Apgar scores by linking cohort members to the National Hospital Discharge Register (Copenhagen, Denmark) through use of the unique personal identification number assigned to all Danish residents at birth or immigration.",
-  "summary": "Prospective birth cohort study investigating associations between maternal plasma PFOA/PFOS levels in early pregnancy and infant motor/mental developmental milestones at 6 and 18 months.",
+  "summary": "A prospective study within the Danish National Birth Cohort of 1,400 mother-child pairs examining associations between first-trimester maternal plasma PFOA/PFOS levels and child developmental milestones (motor and mental) and Apgar scores.",
   "key_findings": [
-    "No significant association was found between PFC levels and Apgar score (OR for Apgar < 10: 1.20 [95% CI, 0.67–2.14] for PFOS and 1.14 [95% CI, 0.57–2.25] for PFOA).",
-    "Children whose mothers had higher PFOS levels were more likely to start sitting without support at a later age (adjusted HR: 0.85 [95% CI, 0.72–0.99] for Q3 and 0.86 [95% CI, 0.73–1.01] for Q4 vs Q1; p for trend = 0.041).",
-    "Women with higher PFOS levels were more likely to have babies who did not use word-like sounds (OR for Q4 vs Q1 = 2.93; 95% CI, 1.00–8.56; p for trend = 0.04).",
-    "No significant associations were observed between PFOA or PFOS levels and the age when children could walk, or with most other developmental milestones at 6 or 18 months."
+    "No significant association between maternal plasma PFOA or PFOS levels and Apgar score; OR for Apgar score < 10 (fourth vs first quartile) was 1.20 (95% CI, 0.67–2.14) for PFOS and 1.14 (95% CI, 0.57–2.25) for PFOA after adjustment.",
+    "No significant associations between PFOA or PFOS levels and the age at which children could walk without support.",
+    "Higher maternal PFOS levels were associated with a later age of sitting without support; adjusted HRs 0.85 (95% CI, 0.72–0.99) for the third quartile and 0.86 (95% CI, 0.73–1.01) for the fourth quartile versus the first quartile (p for trend = 0.041).",
+    "Higher maternal PFOS (but not PFOA) levels were associated with higher odds of infants not using word-like sounds (OR for fourth vs first quartile = 2.93; 95% CI, 1.00–8.56; p for trend = 0.04).",
+    "No associations between PFC exposure and motor or mental development were observed at the 6-month interview."
   ],
   "captured_features": [
-    "maternal plasma PFOA and PFOS concentrations",
-    "Apgar scores",
-    "developmental milestone achievement (sitting, walking, language, fine motor, attention, cognition)",
-    "maternal and infant demographic and lifestyle covariates"
+    "First-trimester maternal plasma PFOA and PFOS concentrations (ng/mL)",
+    "Apgar score (from National Hospital Discharge Register)",
+    "Motor developmental milestones (sitting and walking without support)",
+    "Mental developmental milestones (language, cognition, attention, social-personal)",
+    "Covariates: maternal age, parity, education, occupation, prepregnancy BMI, smoking, alcohol consumption, breast-feeding, out-of-home child care, home density, child's sex"
   ],
-  "pathologies_diseases": [],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "Birth cohort with national registry linkage",
-  "population": "1,400 pregnant women and their infants from the Danish National Birth Cohort",
-  "exposure_domain": "Prenatal PFOA and PFOS exposure",
+  "pathologies_diseases": [
+    "Motor developmental milestones (sitting/walking without support)",
+    "Mental developmental milestones (language, cognition, attention)",
+    "Apgar score (neonatal health assessment)"
+  ],
+  "study_design": "Prospective cohort (study within the Danish National Birth Cohort)",
+  "data_source_type": "biospecimen",
+  "population": "1,400 mother-child pairs from the Danish National Birth Cohort; women recruited in early pregnancy (1996–2002); children assessed at ~6 and ~18 months of age",
+  "exposure_domain": "perfluorinated chemicals (PFOA and PFOS)",
   "limitations": [
-    "potential nondifferential misclassification of exposure and outcomes",
-    "residual confounding by childhood exposure variables",
-    "multi-collinearity between PFOA and PFOS",
-    "strong confounding by parity",
-    "lack of highly sensitive developmental measures to rule out subtle effects"
+    "Maternal blood measured early in pregnancy may not reflect critical fetal brain exposures throughout pregnancy and early childhood.",
+    "Reliance on maternal self-report for developmental milestones introduces potential measurement error, though nondifferential.",
+    "Residual confounding by childhood exposure variables (breast-feeding, household exposure) cannot be ruled out.",
+    "PFOA and PFOS levels were correlated (r = 0.62), limiting mutual adjustment.",
+    "Small number of infants with low Apgar scores limits precision of that outcome."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

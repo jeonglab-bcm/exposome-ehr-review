@@ -3,39 +3,43 @@
   "title": "Prenatal exposure to perfluorinated chemicals and behavioral or coordination problems at age 7 years.",
   "year": "2011",
   "ehr_used": false,
-  "ehr_evidence": "We used data from the Danish National Birth Cohort, which enrolled mothers in early pregnancy, and we measured maternal blood levels of PFOA and PFOS using specimens drawn around 8 weeks of gestation.",
-  "summary": "Prospective birth cohort study investigating whether prenatal exposure to PFOA and PFOS is associated with behavioral or coordination problems in children at age 7.",
+  "ehr_evidence": "We used data from the Danish National Birth Cohort, which enrolled mothers in early pregnancy, and we measured maternal blood levels of PFOA and PFOS using specimens drawn around 8 weeks of gestation; outcomes were assessed by parent-reported SDQ and DCDQ questionnaires completed via online or mailed paper forms.",
+  "summary": "A nested prospective cohort study within the Danish National Birth Cohort examining whether maternal blood PFOA and PFOS levels in early pregnancy are associated with behavioral (SDQ) and motor coordination (DCDQ) problems at age 7 years.",
   "key_findings": [
-    "No significant association between maternal PFOA or PFOS levels and behavioral problems (SDQ total difficulties OR=0.91, 95% CI: 0.43–1.92 for highest vs lowest PFOA quartile) or motor coordination disorders (DCD OR=1.14, 95% CI: 0.46–2.81).",
-    "Inverse associations were observed for some PFOA quartiles with emotional symptoms (OR=0.48, 95% CI: 0.24–0.97) and hyperactivity (OR=0.51, 95% CI: 0.28–0.94), but overall background levels were not associated with neurodevelopmental problems."
+    "No significant association between higher maternal PFOS or PFOA levels and behavioral problems (SDQ) or motor coordination disorders (DCDQ) at 7 years.",
+    "For PFOA, women in the second quartile had significantly lower odds of a high total difficulties score (OR 0.36, 95% CI 0.15–0.82) and hyperactivity (OR 0.39, 95% CI 0.20–0.76) versus the lowest quartile.",
+    "No significant association between PFOA exposure and prosocial behavior or DCD.",
+    "For PFOS, no clear association with behavioral problems, prosocial behavior, or DCD.",
+    "Linear and ordinal regression analyses showed no significant association with PFOA or PFOS, except an inverse association with prosocial behavior scores.",
+    "Median maternal concentrations were 34.4 ng/mL for PFOS (IQR 26.6–44.5) and 5.4 ng/mL for PFOA (IQR 4.0–7.1)."
   ],
   "captured_features": [
-    "maternal plasma PFOA and PFOS concentrations",
-    "SDQ behavioral scores",
-    "DCDQ motor coordination scores",
-    "maternal demographics and lifestyle factors",
-    "child sex and birth year"
+    "Maternal plasma/serum PFOA and PFOS concentrations (ng/mL) and quartiles",
+    "SDQ total difficulties score and subscales (emotional symptoms, hyperactivity, conduct problems, peer problems, prosocial)",
+    "DCDQ/DCD coordination score",
+    "Covariates: parity, maternal age, prepregnancy BMI, smoking and alcohol during pregnancy, maternal SES, sex of child, breast-feeding, birth year, household density, gestational age at blood drawing, parental behavioral scores",
+    "n=787 (SDQ) and n=526/537 (DCDQ)"
   ],
   "pathologies_diseases": [
-    "behavioral problems",
-    "developmental coordination disorder",
-    "hyperactivity",
-    "attention problems"
+    "Behavioral problems (SDQ-defined)",
+    "Hyperactivity/attention problems",
+    "Developmental coordination disorder (DCD)",
+    "Conduct and peer problems"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "birth cohort",
-  "population": "children aged 7 years from the Danish National Birth Cohort (n=787 for behavioral outcomes, n=537 for coordination outcomes)",
-  "exposure_domain": "perfluorinated compounds (PFOA, PFOS)",
+  "study_design": "Nested prospective cohort within a birth cohort",
+  "data_source_type": "biospecimen",
+  "population": "Danish mothers and their children from the Danish National Birth Cohort; blood drawn ~8 weeks gestation, children assessed at 7 years (n=787 for SDQ, n=526 for DCDQ)",
+  "exposure_domain": "Perfluorinated chemicals (PFOA and PFOS) - persistent environmental pollutants",
   "limitations": [
-    "selection bias due to higher socioeconomic status and healthier characteristics of participating mothers",
-    "loss to follow-up with approximately 35% not completing the 7-year interview",
-    "reliance on parent-reported questionnaires for outcomes",
-    "background exposure levels may not reflect high-dose effects observed in animal studies"
+    "Selection bias and loss to follow-up (~35% did not complete the 7-year interview; participants were healthier and of higher SES than the general population)",
+    "Parent-reported outcomes via questionnaires rather than clinical diagnosis",
+    "Background-level exposure may be too low to detect effects on clinical conditions such as ADHD",
+    "Single measurement of maternal exposure in early pregnancy"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

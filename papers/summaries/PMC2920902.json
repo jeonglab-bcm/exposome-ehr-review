@@ -3,40 +3,43 @@
   "title": "Childhood incident asthma and traffic-related air pollution at home and school.",
   "year": "2010",
   "ehr_used": false,
-  "ehr_evidence": "Parent-reported physician diagnosis of new-onset asthma (n = 120) was identified during 3 years of follow-up of a cohort of 2,497 kindergarten and first-grade children who were asthma- and wheezing-free at study entry into the Southern California Children’s Health Study.",
-  "summary": "Prospective longitudinal cohort study evaluating the association between new-onset childhood asthma and traffic-related air pollution exposure at home and school, along with regional ambient pollutants, in Southern California.",
+  "ehr_evidence": "Parent-reported physician diagnosis of new-onset asthma (n = 120) was identified during 3 years of follow-up of a cohort of 2,497 kindergarten and first-grade children who were asthma- and wheezing-free at study entry into the Southern California Children's Health Study; exposure was estimated from a line source dispersion model and regional O3, NO2, PM10, and PM2.5 measured continuously at one central site monitor in each of 13 communities.",
+  "summary": "In a prospective longitudinal cohort of 2,497 kindergarten and first-grade children in Southern California, modeled traffic-related pollution exposure at home and school and regional ambient pollutants were associated with increased risk of new-onset asthma.",
   "key_findings": [
-    "Nonfreeway traffic-related pollution (TRP) at home was associated with increased asthma risk (HR 1.51; 95% CI, 1.25–1.81; p < 0.001).",
-    "Nonfreeway TRP at school was associated with increased asthma risk (HR 1.45; 95% CI, 1.06–1.98).",
-    "Combined weighted exposure at home and school showed a stronger association (HR 1.61; 95% CI, 1.29–2.00).",
-    "Ambient NO2 measured at community monitors was associated with increased risk (HR 2.17; 95% CI, 1.18–4.00; p = 0.01), but this association was attenuated (HR 1.37; 95% CI, 0.69–2.71) when adjusted for modeled TRP.",
-    "No significant main effects were found for PM10, PM2.5, or O3 on new-onset asthma."
+    "Nonfreeway traffic-related pollution (TRP) at home was associated with increased new-onset asthma risk (HR 1.51; 95% CI, 1.25–1.82; p < 0.001).",
+    "Nonfreeway TRP at school was associated with increased risk (HR 1.45; 95% CI, 1.06–1.98).",
+    "Combined time-weighted home and school nonfreeway TRP exposure had a stronger association (HR 1.61; 95% CI, 1.29–2.00).",
+    "Ambient NO2 measured at a community central site was associated with more than double the risk of new-onset asthma (HR 2.17; 95% CI, 1.18–4.00; p = 0.01).",
+    "In models co-adjusting for NO2 and modeled traffic exposures, associations of asthma with home (HR 1.46) and school (HR 1.45) TRP remained independent, whereas the NO2 estimate was attenuated (HR 1.37; 95% CI, 0.69–2.71).",
+    "Freeway TRP and PM10, PM2.5, and O3 were not significantly associated with new-onset asthma.",
+    "There were no significant interactions of residential or school nonfreeway TRP with sex, allergy, or parental history of asthma."
   ],
   "captured_features": [
-    "parent-reported physician diagnosis of asthma",
-    "geocoded home and school addresses",
-    "modeled traffic-related pollution metrics",
-    "central site ambient air pollutant measurements",
-    "demographic and clinical covariates from questionnaires"
+    "Modeled nonfreeway, freeway, and total traffic-related pollution (TRP) at home and school",
+    "Distance to nearest freeway/highway/arterial road and traffic volume within 150 m of home and school",
+    "Meteorology (wind speed, wind direction, mixing layer height)",
+    "Ambient central-site NO2, O3, PM10, and PM2.5",
+    "Parent-reported physician diagnosis of new-onset asthma",
+    "Age, sex, race/ethnicity, secondhand smoke, wildfire smoke, health insurance, housing, allergy history, parental asthma, maternal smoking, pets, income, parental education"
   ],
   "pathologies_diseases": [
-    "new-onset asthma"
+    "New-onset (incident) asthma"
   ],
-  "study_design": "prospective longitudinal cohort study",
-  "data_source_type": "cohort study with environmental monitoring and questionnaires",
-  "population": "2,497 kindergarten and first-grade children (ages 4.8–9.0 at entry) in Southern California",
-  "exposure_domain": "traffic-related air pollution at home and school, regional ambient pollutants",
+  "study_design": "Prospective longitudinal cohort",
+  "data_source_type": "other",
+  "population": "2,497 kindergarten and first-grade children (ages ~4.8–9.0 years) asthma- and wheezing-free at baseline, from 45 schools in 13 Southern California communities",
+  "exposure_domain": "Traffic-related air pollution (NO2, PM, O3, traffic volume, proximity, meteorology)",
   "limitations": [
-    "3-year follow-up period",
-    "retrospective questionnaire assessment of early-life risk factors",
-    "conservative TRP estimates for school building centers may underestimate exposure",
-    "asthma diagnosis based on parent-reported physician diagnosis may involve misclassification",
-    "potential selection bias from loss to follow-up"
+    "Conservative TRP estimates for the center of school buildings likely underestimate true student exposure, especially during dropoff/pickup.",
+    "Short 3-year follow-up period.",
+    "Retrospective questionnaire assessment of early-life risk factors (not a pregnancy cohort).",
+    "Asthma has no sensitive/specific diagnostic test; parent-reported physician diagnosis may introduce misclassification.",
+    "Selection bias from loss to follow-up and exclusion of children who left the community or had asthma/wheeze at entry."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,46 +3,40 @@
   "title": "The influence of BCG vaccine strain on mycobacteria-specific and non-specific immune responses in a prospective cohort of infants in Uganda.",
   "year": "2012",
   "ehr_used": false,
-  "ehr_evidence": "Data were collected from the Entebbe Mother and Baby Study, a prospective birth cohort in Uganda, using questionnaires, blood samples, ELISA assays, and clinical follow-up.",
-  "summary": "Prospective cohort study evaluating the influence of three BCG vaccine strains (Russia, Bulgaria, Denmark) on mycobacteria-specific and non-specific immune responses, scarring, adverse events, and mortality in 1341 infants in Uganda.",
+  "ehr_evidence": "Infants from the Entebbe Mother and Baby Study (ISRCTN32849447) who received BCG-Russia, BCG-Bulgaria or BCG-Denmark at birth were analysed; data were collected prospectively via questionnaires during antenatal care, blood/stool biospecimens, ELISA cytokine assays, and clinical examination for BCG scars at 12 months.",
+  "summary": "In a prospective birth cohort of infants in Entebbe, Uganda, comparison of three BCG vaccine strains (Russia, Bulgaria, Denmark) on mycobacteria-specific and non-specific cytokine immune responses, scarring, adverse events, and mortality at 1 year.",
   "key_findings": [
-    "BCG-Denmark immunised infants showed the highest cytokine responses, with significantly higher IFN-γ geometric mean ratios compared to BCG-Russia across all stimuli (e.g., GMR 2.24 for cCFP, 3.09 for PHA).",
-    "BCG scar frequency differed significantly by strain: 52.2% for Russia, 64.1% for Bulgaria, and 92.6% for Denmark (p < 0.001).",
-    "Infants with BCG scars had higher IFN-γ and IL-13 responses to mycobacterial antigens than those without scars.",
-    "BCG-related adverse events were highest in the Denmark group (1.8%) compared to Russia (0.3%) and Bulgaria (1.0%) (p = 0.025).",
-    "Mortality differences between strain groups were not significant (HR 1.22 for Denmark vs Russia, 95% CI 0.42-3.53, p = 0.87)."
+    "BCG-Denmark infants had the highest cytokine responses; IFN-γ GMR for Denmark vs Russia to cCFP was 2.24 (95% CI 1.42-4.00, p<0.001).",
+    "BCG scar frequency differed significantly by strain: 52.2% (Russia), 64.1% (Bulgaria), 92.6% (Denmark), p<0.001.",
+    "Scarred infants had higher IFN-γ (GMR 1.59, 95% CI 1.21-2.10) and IL-13 (GMR 1.63, 95% CI 1.26-2.10) responses to cCFP than non-scarred infants, but no difference for TT/PHA.",
+    "BCG-Denmark had the highest frequency of BCG-related adverse events (1.8% vs 1.0% Bulgaria, 0.3% Russia), p=0.025.",
+    "Mortality differences between strain groups were not significant (underpowered); HR for Denmark 1.22 (95% CI 0.42-3.53)."
   ],
   "captured_features": [
-    "cytokine levels (IFN-γ, IL-5, IL-13, IL-10)",
-    "BCG scar presence and size",
-    "adverse event frequency",
-    "mortality rates",
-    "maternal and infant socio-demographics",
-    "helminth and malaria infection status",
-    "HIV status",
-    "BCG vaccine strain"
+    "IFN-γ, IL-5, IL-13, IL-10 cytokine concentrations (ELISA) to cCFP, Ag85, TT, PHA",
+    "BCG scar presence and diameter",
+    "BCG vaccine strain (Russia/Bulgaria/Denmark)",
+    "BCG-related adverse events",
+    "All-cause mortality rates",
+    "Birth weight, lymphocyte count, malaria parasitaemia, HIV status"
   ],
   "pathologies_diseases": [
-    "tuberculosis",
-    "malaria",
-    "HIV",
-    "helminth infections",
-    "BCG-related adverse events (ulcers, abscesses)"
+    "Tuberculosis (context)",
+    "Malaria parasitaemia (confounder)"
   ],
-  "study_design": "Prospective birth cohort study",
-  "data_source_type": "Prospective cohort",
-  "population": "1341 infants from the Entebbe Mother and Baby Study in Uganda, followed up to 12 months of age",
+  "study_design": "Prospective cohort (observational strain comparison within a randomised anthelminthic trial cohort)",
+  "data_source_type": "biospecimen",
+  "population": "Infants born at Entebbe Hospital, Uganda (2003-2005), 1341 with immunological results at 12 months",
   "exposure_domain": "BCG vaccine strain (Russia, Bulgaria, Denmark)",
   "limitations": [
-    "Not randomised to BCG strain, potential for confounding by seasonal exposures",
-    "Underpowered to detect significant mortality differences",
-    "Could not analyse TB outcomes or long-term effects",
-    "Analysis was a post-hoc subset of the original trial"
+    "Infants were not randomised to BCG strain, so confounding by calendar time/seasonal exposures could not be fully accounted for.",
+    "Study was underpowered to detect mortality differences.",
+    "Single time point at 1 year; no TB outcomes or long-term effects analysed."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,45 +3,49 @@
   "title": "Long-Term Effects of Environmental Lead on Erythropoietin Production in Young Adults: A Follow-Up Study of a Prospective Cohort in Kosovo.",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "BPb measurements from childhood were already available from the parent cohort study, measured every six months from birth through age 12 years; those measurements were conducted in the same laboratory using the same method.",
-  "summary": "Follow-up study of a prospective birth cohort in Kosovo examining the long-term effects of environmental lead exposure on erythropoietin production in young adults.",
+  "ehr_evidence": "From our prospective birth cohort study in Mitrovica (a mining town) and Pristina (a control town), Kosovo, from 1985 to 1998, we located and assessed blood lead concentration (BPb) and serum EPO in 101 participants (mean age 24.9 years) in 2011.",
+  "summary": "A follow-up of a prospective birth cohort in Kosovo assessed 101 young adults (mean age 24.9 years) for the association between prenatal, early childhood, and concurrent blood lead exposure and serum erythropoietin (EPO) concentration.",
   "key_findings": [
-    "Positive association between concurrent BPb and serum EPO levels after adjusting for hemoglobin (β = 0.19; 95% CI 0.06, 0.31).",
-    "Significant positive associations found between cumulative BPb (AUC birth-age 2, ages 2-4, ages 4-7) and EPO, though associations diminished with age.",
-    "No significant relationship between log BPb and log serum EPO in the unadjusted model (β = 0.05; 95% CI −0.09, 0.20).",
-    "Mean serum EPO concentration was significantly higher in the exposed town of Mitrovica (10.99 mIU/ml) compared to Prishtina (8.49 mIU/ml; P < 0.04)."
+    "When adjusted for hemoglobin as a continuous variable, the relationship between log BPb and log serum EPO became significant (estimated β = 0.19; 95% CI 0.06, 0.31).",
+    "A simple unadjusted linear regression relating log BPb to log serum EPO found no significant relationship (estimated β = 0.05; 95% CI −0.09, 0.20).",
+    "Significant positive associations were found between cumulative BPb (AUC between birth and age 2, ages 2–4, and ages 4–7) and EPO, but the estimated associations diminished with child age after adjustment for Hgb.",
+    "No association was found between cumulative BPb between ages 7 and 12 and EPO, though the sign of the association changed from hyperproduction to hypoproduction of EPO.",
+    "Mean serum EPO was significantly higher in Mitrovica (10.99 mIU/ml) than Prishtina (8.49 mIU/ml) (P < 0.04).",
+    "The association was stronger in anemic subjects (Hgb < 12.5 g/dl; β = 0.41; 95% CI 0.13, 0.70) than in non-anemic subjects (β = 0.05; 95% CI −0.10, 0.20)."
   ],
   "captured_features": [
-    "blood lead concentration (BPb)",
-    "serum erythropoietin (EPO)",
-    "hemoglobin (Hgb)",
-    "body mass index (BMI)",
-    "smoking status",
-    "employment status",
-    "education level",
-    "ethnicity",
-    "age"
+    "Blood lead concentration (BPb)",
+    "Serum erythropoietin (EPO)",
+    "Hemoglobin (Hgb)",
+    "Body mass index (BMI)",
+    "Smoking status",
+    "Ethnicity",
+    "Sex",
+    "Education",
+    "Employment status",
+    "Age",
+    "Cumulative lead exposure (area under the curve)"
   ],
   "pathologies_diseases": [
-    "anemia",
-    "lead toxicity"
+    "Anemia (Hgb < 12.5 g/dl)"
   ],
-  "study_design": "prospective birth cohort follow-up study",
-  "data_source_type": "prospective cohort with laboratory assays and questionnaires",
-  "population": "101 young adults (mean age 24.9 years) from a birth cohort in Mitrovica and Pristina, Kosovo",
-  "exposure_domain": "environmental lead (Pb) exposure",
+  "study_design": "Prospective cohort (follow-up of a birth cohort)",
+  "data_source_type": "biospecimen",
+  "population": "101 young adults (mean age 24.9 years) from a prospective birth cohort in Mitrovica (lead-exposed) and Prishtina (unexposed), Kosovo",
+  "exposure_domain": "heavy metals",
   "limitations": [
-    "small follow-up sample size (20% of original cohort)",
-    "12.5-year gap between childhood measurements and follow-up",
-    "single EPO measurement per participant",
-    "oversampling of highly exposed children",
-    "lack of bone marrow biopsy and liver function tests",
-    "limited generalizability to lower exposure populations or other regions"
+    "Only 20% of the original cohort was followed up (101 of 574).",
+    "A 12.5-year gap between the last childhood BPb measurements and the single EPO measure.",
+    "EPO was measured only once per participant, so results may be affected by inter-assay variability.",
+    "The sample oversampled highly exposed children.",
+    "No bone marrow biopsy was performed.",
+    "No liver function tests were included.",
+    "Results may not be generalizable to populations with lower lead exposure or to other settings."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "All pertinent data are in our study files and can be made available upon request.",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

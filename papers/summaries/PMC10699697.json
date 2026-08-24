@@ -3,41 +3,43 @@
   "title": "Laboratory response to an infant with suspected measles vaccine associated fever and rash in Sri Lanka.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "This single center, laboratory-based case investigation was carried out in NML, Department of Virolgy at MRI, SL.",
-  "summary": "Laboratory investigation of a single 9-month-old infant in Sri Lanka who developed fever and rash following MMR vaccination, identifying vaccine-type measles virus and influenza A co-infection.",
+  "ehr_evidence": "This single center, laboratory-based case investigation was carried out in NML, Department of Virology at MRI, SL. Data sharing not applicable to this article as no datasets were generated or analyzed during the current study.",
+  "summary": "A single-case laboratory investigation describing the diagnosis of a vaccine-associated measles-like illness in a 9-month-old immunocompetent boy in Sri Lanka following MMR vaccination.",
   "key_findings": [
-    "Measles vaccine-type A (Edmonston-strain) virus was detected in 1 throat swab via RT-PCR and sequencing.",
-    "Measles IgM and IgG were positive at the sixth week of illness onset.",
-    "Influenza A RNA was detected in 1 throat swab at day three.",
-    "Parvovirus B19 IgM was detected in serum at the sixth week.",
-    "No evidence of human-to-human measles transmission was detected."
+    "Measles vaccine-type A (Edmonson-strain) virus was detected by sequencing in a throat swab collected at day 3 of illness.",
+    "Measles IgM and IgG were positive at the sixth week of illness, indicating seroconversion following MMR immunization.",
+    "Influenza A RNA was detected in the throat swab at day 3 of illness.",
+    "Parvovirus B19 IgM was detected in serum at the sixth week with negative IgG, but clinical significance was uncertain due to insufficient day-3 sample volume.",
+    "No laboratory-confirmed human-to-human transmission was detected during contact tracing."
   ],
   "captured_features": [
-    "throat swab RT-PCR results",
-    "serum IgM/IgG serology",
-    "viral genotyping/sequencing data",
-    "clinical symptom timeline",
-    "vaccination history"
+    "Measles IgM/IgG serology",
+    "Rubella IgM/IgG serology",
+    "Measles RT-PCR and genotyping",
+    "Measles virus sequencing (N-gene)",
+    "Multiplex respiratory PCR (influenza A/B, coronavirus, parainfluenza, hMPV, RSV, rhinovirus, enterovirus, parechovirus, bocavirus, adenovirus, Mycoplasma pneumoniae)",
+    "Parvovirus B19 IgM/IgG",
+    "CMV and EBV serology"
   ],
   "pathologies_diseases": [
-    "measles",
-    "influenza",
-    "parvovirus B19 infection"
+    "Measles (vaccine-associated measles-like illness)",
+    "Fever and rash",
+    "Influenza A infection",
+    "Parvovirus B19 infection"
   ],
-  "study_design": "case report",
-  "data_source_type": "laboratory testing",
-  "population": "9-month-old immunocompetent infant in Sri Lanka",
-  "exposure_domain": "MMR vaccination",
+  "study_design": "Case report (single-case laboratory investigation)",
+  "data_source_type": "biospecimen",
+  "population": "A single 9-month-old immunocompetent boy in Sri Lanka in the post-measles-elimination period",
+  "exposure_domain": "Measles-containing (MMR) live-attenuated vaccine",
   "limitations": [
-    "single case report (n=1)",
-    "potential confounding from concurrent influenza A infection",
-    "limited clinical and laboratory data due to sample volume constraints",
-    "resource-limited setting"
+    "Single case report with no generated or analyzed dataset, limiting generalizability.",
+    "Insufficient sample volume prevented day-3 parvovirus B19 testing, and the clinical significance of parvovirus B19 IgM required wider evidence.",
+    "Resource-limited setting with reliance on clinical correlation for interpretation."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "Data sharing not applicable to this article as no datasets were generated or analyzed during the current study.",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

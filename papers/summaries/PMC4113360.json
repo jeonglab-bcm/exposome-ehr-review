@@ -4,46 +4,50 @@
   "year": "2014",
   "ehr_used": true,
   "ehr_evidence": "The unique personal identification number, which is assigned to all live-born children and new residents, was used to link children to their relatives and to obtain information on demographic variables, vital statistics, health outcomes and socio-economic variables from different national registers.",
-  "summary": "Population-based cohort study examining the association between prenatal exposure to maternal bereavement and fertility outcomes in offspring.",
+  "summary": "This population-based cohort study of 4,121,596 Danish and Swedish subjects born in the late 1960s–1990s examined whether prenatal exposure to maternal bereavement (death of a close relative during pregnancy or the year before) was associated with age at first child and age-specific number of childbirths.",
   "key_findings": [
-    "No overall association between prenatal maternal bereavement and having a child (HR=0.98 [0.96–1.01] for males, HR=1.01 [0.98–1.03] for females).",
-    "Females born to mothers who lost a parent had a slightly reduced probability of having children (HR=0.97 [0.94–0.99]).",
-    "Females born to mothers who lost another child (HR=1.09 [1.04–1.14]), spouse (HR=1.29 [1.12–1.48]), or sibling (HR=1.13 [1.01–1.27]) had an increased probability.",
-    "Sudden death of a relative was associated with increased probability in females (HR=1.21 [1.14–1.29]).",
-    "No difference in age-specific mean number of childbirths between exposed and unexposed (HR=0.99 [0.96–1.01] males, HR=1.00 [0.98–1.02] females)."
+    "No overall association between prenatal maternal bereavement and having at least one child: HR = 0.98 (95% CI 0.96–1.01) for males and HR = 1.01 (95% CI 0.98–1.03) for females.",
+    "Slightly reduced probability of having children in females born to mothers who lost a parent during pregnancy/year before: HR = 0.97 (95% CI 0.94–0.99).",
+    "Increased probability in females born to mothers who lost another child: HR = 1.09 (95% CI 1.04–1.14).",
+    "Increased probability in females born to mothers who lost the spouse: HR = 1.29 (95% CI 1.12–1.48).",
+    "Increased probability in females born to mothers who lost a sibling: HR = 1.13 (95% CI 1.01–1.27).",
+    "Increased probability in females exposed to sudden/unexpected death of a relative: HR = 1.21 (95% CI 1.14–1.29).",
+    "No difference in age-specific mean number of childbirths between exposed and unexposed: HR = 0.99 (95% CI 0.96–1.01) for males and HR = 1.00 (95% CI 0.98–1.02) for females."
   ],
   "captured_features": [
     "age at first child",
-    "number of childbirths",
+    "age-specific mean number of childbirths",
     "maternal age",
+    "maternal country of origin",
     "maternal education",
-    "maternal origin",
     "birth year",
-    "sex",
-    "country",
-    "vital statistics",
-    "demographic variables",
-    "socio-economic variables"
+    "sex of offspring",
+    "country (Denmark/Sweden)",
+    "type of relative deceased",
+    "timing of bereavement",
+    "type/cause of death (unexpected vs other)",
+    "birth weight",
+    "preterm birth",
+    "singleton",
+    "maternal parity"
   ],
   "pathologies_diseases": [
-    "fertility outcomes",
-    "childbirths"
+    "Fertility outcomes: age at first child and number of childbirths (no disease outcome assessed)."
   ],
-  "study_design": "population-based cohort study",
-  "data_source_type": "National population registers",
-  "population": "2,112,770 males and 2,008,826 females born in Denmark (1968-1996) and Sweden (1973-1994), followed from age 12 to 41",
-  "exposure_domain": "prenatal maternal bereavement/stress",
+  "study_design": "Population-based cohort study",
+  "data_source_type": "registry",
+  "population": "4,121,596 subjects born in Denmark (1968–1996) and Sweden (1973–1994), followed from age 12 up to age 41 years",
+  "exposure_domain": "Psychosocial stress: prenatal maternal bereavement (death of a close relative during pregnancy)",
   "limitations": [
-    "inability to adjust for lifestyle factors or directly measure fecundity using registry data",
-    "follow-up only until age 41 does not cover full fertility life",
-    "incomplete linkage of mothers to relatives in early years in Denmark leading to exposure misclassification",
-    "potential for multiple testing false positives",
-    "possible confounding by postnatal paternal behavior"
+    "Registry data cannot adjust for lifestyle factors or directly measure fecundity.",
+    "Follow-up only reached age 41, not covering the full fertility life.",
+    "Exposure misclassification in early follow-up years in Denmark due to incomplete familial linkage in registers.",
+    "Multiple testing may explain some statistically significant subanalysis findings."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
-  "data_availability_statement": "The authors confirm that, for approved reasons, some access restrictions apply to the data underlying the findings. All data is stored at the secure platform of Denmark Statistics, which is the central authority on Danish statistics with the mission to collect, compile and publish statisti cs on the Danish society. By legislations, researchers who want to get access to the data must apply for permissions from Both Statistics Denmark and Danish Data Prote ction Agency. Anyone with interests in this data can contact the authors of the study.",
+  "data_availability_statement": "The authors confirm that, for approved reasons, some access restrictions apply to the data underlying the findings. All data is stored at the secure platform of Denmark Statistics, which is the central authority on Danish statistics with the mission to collect, compile and publish statistics on the Danish society. By legislations, researchers who want to get access to the data must apply for permissions from Both Statistics Denmark and Danish Data Protection Agency. Anyone with interests in this data can contact the authors of the study.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

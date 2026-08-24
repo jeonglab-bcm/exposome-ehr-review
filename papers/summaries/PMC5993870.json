@@ -3,34 +3,38 @@
   "title": "Total mercury exposure in early pregnancy has no adverse association with scholastic ability of the offspring particularly if the mother eats fish.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "The Avon Longitudinal Study of Parents and Children (ALSPAC) aimed to study all births to women resident in a geographic area (Avon) in the UK, whose expected date of delivery lay between the 1st April 1991 and 31st December 1992. (Data source is a prospective birth cohort with questionnaires and biospecimen assays, not EHR.)",
-  "summary": "Prospective birth cohort study assessing the association between prenatal total blood mercury levels and offspring scholastic abilities, with stratification by maternal fish consumption.",
+  "ehr_evidence": "we therefore used the comprehensive data collected on a population of pregnant women in the UK in 1991–2, whose total blood mercury level is available for the first half of pregnancy; blood samples were sent to the Centers for Disease Control and Prevention (CDC) for analysis of whole blood mercury, and maternal fish consumption was obtained via a 32-week gestation food frequency questionnaire.",
+  "summary": "In the ALSPAC prospective birth cohort, prenatal total blood mercury (measured in the first trimester) showed no adverse association with offspring scholastic abilities (reading, spelling, phoneme, mathematics, science) after adjustment, an effect that was conditional on maternal fish consumption.",
   "key_findings": [
-    "After adjustment, no significant associations were found between prenatal total blood mercury and any of the 15 scholastic test outcomes (all p > 0.05).",
-    "Stratified analysis revealed a significant interaction with maternal fish consumption: children of non-fish-eating mothers showed negative associations between mercury and mathematics/science reasoning scores, whereas children of fish-eating mothers showed positive associations.",
-    "No statistically significant differences were observed between boys and girls (data not shown)."
+    "After adjustment there were no significant associations between prenatal total blood mercury and any of the 15 scholastic outcomes (e.g. spelling 7-year adjusted β +0.02 (−0.16, +0.20), P=0.833; word reading 7-year adjusted β +0.09 (−0.30, +0.48), P=0.646).",
+    "Scientific reasoning SY6 was weakly significant unadjusted (β +0.36 (0.26, 0.47), P<0.0001) but not after adjustment (β +0.12 (−0.00, +0.27), P=0.054).",
+    "Logistic regression for being in the lowest 15% of each score showed apparent protective effects that became non-significant after adjustment (e.g. spelling 7-year adjusted OR 0.94 (0.83, 1.08), P=0.408).",
+    "No significant associations for either fish eaters or non-fish eaters after adjustment, but significant interactions: maternal mercury was negatively associated with mathematics (SY6, SY8) and science reasoning (SY6) results when the mother did not eat fish, versus positive associations when she did.",
+    "No statistically significant sex differences (boys vs girls) were found."
   ],
   "captured_features": [
-    "maternal first-trimester blood mercury levels",
-    "maternal fish consumption frequency",
-    "offspring scholastic test scores (reading, spelling, phoneme, mathematics, science)",
-    "demographic and lifestyle covariates (maternal age, parity, education, housing, smoking, alcohol, breastfeeding, stress, family adversity)"
+    "maternal whole blood total mercury (μg/L, first trimester)",
+    "maternal fish consumption (white/oily fish frequency via questionnaire)",
+    "scholastic test scores (spelling, reading, phoneme, mathematics reasoning, scientific reasoning)",
+    "maternal age, parity, maternal education, housing tenure, household crowding, stressful life events, prenatal smoking, prenatal alcohol, breastfeeding, family adversity index",
+    "age at testing, sex of child",
+    "quintile/centile categories of mercury for threshold analysis"
   ],
   "pathologies_diseases": [],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "Prospective birth cohort",
-  "population": "children born in Avon, UK (1991–1992), followed into childhood and adolescence (ages 7–13)",
-  "exposure_domain": "prenatal mercury exposure and maternal fish consumption",
+  "study_design": "Prospective birth cohort (longitudinal cohort)",
+  "data_source_type": "biospecimen",
+  "population": "ALSPAC UK cohort; women with due dates 1 April 1991–31 December 1992; offspring followed into childhood, analysis sample of 1569–2224 children tested at ages 7–13 years.",
+  "exposure_domain": "Heavy metals (prenatal total mercury exposure)",
   "limitations": [
-    "notable attrition bias with excess drop-out from young parents, smokers, and lower socioeconomic groups",
-    "relatively small sample size of children whose mothers did not eat fish",
-    "single first-trimester blood draw may not reflect mercury levels later in pregnancy",
-    "observational design limits causal inference"
+    "Notable attrition among children requiring clinic attendance, causing bias toward higher socioeconomic participants.",
+    "Relatively small numbers of children whose mothers did not eat fish (minimum 120–121), limiting power in the non-fish subgroup.",
+    "Single first-trimester blood measurement may not represent mercury exposure later in pregnancy.",
+    "Missing data not assumed to be at random and were not analysed."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

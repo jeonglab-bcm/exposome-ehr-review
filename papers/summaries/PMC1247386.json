@@ -3,46 +3,45 @@
   "title": "Blood lead secular trend in a cohort of children in Mexico City (1987-2002).",
   "year": "2004",
   "ehr_used": false,
-  "ehr_evidence": "We extracted air lead information from the Statistical Compendium of the System of Atmospheric Monitoring of the Metropolitan Zone of the Valley of Mexico (MZVM), 1986–2002.",
-  "summary": "Prospective cohort study evaluating secular trends in blood lead levels and environmental exposures in children born in Mexico City from 1987 to 1992 over their first 10 years of life.",
+  "ehr_evidence": "We recruited 502 pregnant women attending the prenatal clinic at 12 weeks of pregnancy at the National Institute of Perinatology in Mexico City and followed 321 children through structured interviews of the parents and with psychometric tests and blood lead determinations every 6 months from delivery; blood samples were analyzed by anodic stripping voltammetry at ESA Labs, and air lead was obtained from the Automatic Network of Atmospheric Monitoring (ANAM) of the Metropolitan Zone of the Valley of Mexico.",
+  "summary": "A prospective birth cohort of 321 children born in Mexico City between 1987 and 1992, followed every 6 months for 10 years, examined the secular trend in blood lead levels and the relative contribution of air lead, lead-glazed ceramics, socioeconomic status, and place of residence.",
   "key_findings": [
-    "Yearly mean air lead decreased from 2.80 µg/m³ in 1987 to 0.07 µg/m³ in 2002.",
-    "Each natural log decrease in air lead was accompanied by a 23.7% decrease in blood lead concentration for children born in 1987, falling to nearly zero for those born in 1992.",
-    "Geometric mean blood lead rose from 8.4 µg/dL (95% CI, 7.7 to 9.2) at 1 year to 10.1 µg/dL (95% CI, 9.3 to 11.0) at 2 years, then decreased to 6.4 µg/dL (95% CI, 5.8 to 7.1) at 10 years.",
-    "Children from the lowest socioeconomic stratum had 32.3% (95% CI, 17.0 to 49.5) higher geometric mean blood lead than the highest stratum.",
-    "Children from families using lead-glazed ceramics had 18.5% (95% CI, 10.0 to 27.6) higher geometric mean blood lead than nonusers.",
-    "Children living in the northeast sector had 10.9% (95% CI, 2.4 to 18.6) higher geometric mean blood lead than those in the southwest.",
-    "Significant decrease (p < 0.01) in the percentage of children with blood lead ≥ 10 µg/dL across year of birth during the first 7 years of life."
+    "Yearly mean air lead of the Valley of Mexico decreased from 2.80 µg/m3 in 1987 to 0.07 µg/m3 in 2002.",
+    "The contribution of air lead to blood lead was strongest for subjects born in 1987 (each natural log decrease in air lead accompanied by a 23.7% decrease in blood lead) and fell to nearly zero for children born in 1992.",
+    "The geometric mean of blood lead rose from 8.4 µg/dL (95% CI, 7.7 to 9.2) in the first year of life to 10.1 µg/dL (95% CI, 9.3 to 11.0) in the second year and decreased to 6.4 µg/dL (95% CI, 5.8 to 7.1) at 10 years of age.",
+    "Children of families using lead-glazed ceramics had blood lead levels 18.5% (95% CI, 10.0 to 27.6) higher than children of nonusing families.",
+    "Children in the lowest socioeconomic stratum had blood lead levels 32.3% (95% CI, 17.0 to 49.5) higher than those in the highest stratum.",
+    "Children living in the northeast sector had blood lead levels 10.9% (95% CI, 2.4 to 18.6) higher than those in the southwest.",
+    "The difference in lifetime blood lead between subcohorts born in 1987/1988 versus 1991/1992 was 43.0% (t = 5.919, df = 725.9, p < 0.0005).",
+    "There was a significant decrease (p < 0.01) in the percentage of children with blood lead ≥ 10 µg/dL across year of birth during the first 7 years of life."
   ],
   "captured_features": [
-    "blood lead concentrations",
-    "air lead concentrations",
+    "venous blood lead concentration (µg/dL)",
+    "yearly mean air lead concentration (µg/m3)",
+    "year of birth (subcohort)",
+    "age at blood lead measurement",
     "socioeconomic status",
     "family use of lead-glazed ceramics",
-    "place of residence",
-    "age",
-    "year of birth",
-    "complete vs incomplete blood lead data"
+    "place of residence (northeast/center/southwest)",
+    "complete versus incomplete blood lead data"
   ],
   "pathologies_diseases": [
-    "lead exposure"
+    "lead exposure / elevated blood lead (≥10 µg/dL)"
   ],
-  "study_design": "prospective longitudinal cohort study",
-  "data_source_type": "prospective cohort / biospecimen assays / environmental monitoring",
-  "population": "321 children born in Mexico City between 1987 and 1992, followed from birth to 10 years of age",
-  "exposure_domain": "environmental lead (air lead, lead-glazed ceramics, socioeconomic status, residential location)",
+  "study_design": "prospective birth cohort with repeated measures",
+  "data_source_type": "biospecimen and environmental monitoring",
+  "population": "321 children born in Mexico City between 1987 and 1992, followed from birth through 10 years of age",
+  "exposure_domain": "heavy metals (lead) and air pollution",
   "limitations": [
-    "used only three air monitoring stations not necessarily representative of all subjects' residences",
-    "lead-glazed ceramic use not quantified and only assessed at study start",
-    "potential collinearity between air lead and age",
-    "loss to follow-up and incomplete blood lead data",
-    "reliance on maternal self-report for pottery use",
-    "unable to account for many sources of lead variance"
+    "Only three air monitoring stations were used to estimate annual atmospheric lead, which were not necessarily representative of each child's place of residence.",
+    "Use of lead-glazed ceramic pottery was not quantified and was assessed only at the start of the study using maternal self-report during pregnancy.",
+    "Air lead nested within subcohort showed collinearity with age of the child.",
+    "Address change was unverifiable for 53 subjects (16.5%), and data on these subjects are likely incomplete."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

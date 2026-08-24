@@ -4,23 +4,21 @@
   "year": "2019",
   "ehr_used": true,
   "ehr_evidence": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
-  "summary": "This correction notice addresses errors in a previously published population-based prospective cohort study evaluating the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions using the Clinical Practice Research Datalink.",
+  "summary": "A correction notice to a population-based prospective cohort study evaluating the safety of live attenuated influenza vaccine (LAIV) in children and adolescents with asthma and high-risk conditions using the Clinical Practice Research Datalink in England.",
   "key_findings": [],
   "captured_features": [],
   "pathologies_diseases": [
     "asthma"
   ],
-  "study_design": "prospective cohort",
+  "study_design": "population-based prospective cohort study",
   "data_source_type": "EHR",
-  "population": "children and adolescents with asthma and high-risk conditions in England",
-  "exposure_domain": "vaccination",
-  "limitations": [
-    "None explicitly stated in the correction text; the correction addresses protocol approval and reference citations rather than study limitations."
-  ],
-  "data_availability": "available-upon-request",
+  "population": "Children and adolescents with asthma and high-risk conditions in England",
+  "exposure_domain": "Vaccination (live attenuated influenza vaccine)",
+  "limitations": [],
+  "data_availability": "not-stated",
   "data_accession_links": [],
-  "data_availability_statement": "The study protocol was approved by the CPRD Independent Scientific Advisory Committee (ISAC; protocol 14_062) and registered at ENCePP (EUPAS18527).",
+  "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "Qwen3.6-35B-A3B-4bit"
+  "model": "ornith-1.5-35b"
 }

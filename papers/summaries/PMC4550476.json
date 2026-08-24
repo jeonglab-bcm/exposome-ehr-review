@@ -3,38 +3,45 @@
   "title": "In vitro and in vivo growth alter the population dynamic and properties of a Jeryl Lynn mumps vaccine.",
   "year": "2015",
   "ehr_used": false,
-  "ehr_evidence": "JL-CK vaccine was provided by the Official Medicines Control Laboratory-Prague, Czech Republic. Mu90, a clinical mumps isolate passaged four times on Vero cells, and RIT4385 were archived material held at NIBSC. African green monkey (Vero) and Madin Darby canine kidney (MDCK) cell lines were used. Neonatal rat pups were inoculated intracerebrally.",
-  "summary": "Comparative genomic and phenotypic analysis of two Jeryl Lynn mumps vaccine strains to assess genetic heterogeneity, in vitro growth kinetics, and in vivo neurovirulence in neonatal rats.",
+  "ehr_evidence": "The study used no electronic health record data; data were generated from in vitro virus growth in Vero and MDCK cell lines, in vivo neonatal rat neurovirulence testing, plaque assays, Sanger and deep sequencing, and mass spectrometry.",
+  "summary": "An in vitro and in vivo comparative laboratory study of two closely related Jeryl Lynn-5 mumps vaccine strains (JL-CK grown on primary canine kidney cells and RIT4385 grown on chicken embryo fibroblasts) showing that propagation in cell lines or neonatal rat brains dramatically alters the virus population dynamics and properties.",
   "key_findings": [
-    "JL-CK produced 100-fold more progeny virus in Vero cells (p < 0.0001) and MDCK cells (p = 0.0365) compared to RIT4385.",
-    "Sanger sequencing identified 14 regions of heterogeneity in JL-CK, with only 4% of the population corresponding to the parental strain.",
-    "JL-CK showed significantly higher neurovirulence than RIT4385 in neonatal rats (p = 0.0035), but lower than wild-type Mu90 (p < 0.001).",
-    "In vivo passage in rat brains increased the K36R mutation frequency 9.6-fold, indicating preferential selection of the JL-CK1 variant."
+    "JL-CK produced 100-fold more progeny virus than RIT4385 in Vero cells (p < 0.0001) and MDCK cells (p = 0.0365).",
+    "JL-CK plaques were at least three times smaller than RIT4385 plaques (p < 0.0001).",
+    "JL-CK had higher neurovirulence potential than RIT4385 in neonatal rats (p = 0.0035) but significantly less than the wild-type Mu90 (p < 0.001).",
+    "Sanger sequencing identified 14 regions of heterogeneity in JL-CK, and plaque purification revealed five distinct Jeryl Lynn-5 variants plus a parent-like variant at only 4% frequency.",
+    "K36R mutation increased 9.6-fold during in vivo growth in neonatal rat brains, indicating preferential selection of JL-CK1.",
+    "RIT4385 was more genetically stable than JL-CK across Vero and MDCK passage.",
+    "JL-CK5 grew slowest (max titre 1.46 × 10^6 pfu/ml at 5 d.p.i.) while JL-CK1 produced the highest titre (1.35 × 10^7 pfu/ml at 3 d.p.i.)."
   ],
   "captured_features": [
-    "Virus titres (pfu/ml)",
-    "plaque sizes",
-    "mutation frequencies via deep sequencing",
-    "neurovirulence scores (ventricle area percentage)",
-    "mass spectrometry peptide data"
+    "Progeny virus titres (pfu/ml)",
+    "Plaque size (ImageJ units)",
+    "Growth kinetics / 50% cell lysis time",
+    "Mutation variant frequencies (deep sequencing)",
+    "Nucleoprotein C-terminus (mass spectrometry)",
+    "Neurovirulence score (ventricle cross-sectional area as percentage of whole brain)",
+    "Hydrocephalus severity"
   ],
   "pathologies_diseases": [
-    "mumps"
+    "Mumps",
+    "Hydrocephalus",
+    "Neurovirulence"
   ],
-  "study_design": "Experimental laboratory study (in vitro and in vivo)",
-  "data_source_type": "Laboratory experiments / Cell culture and animal model",
-  "population": "Neonatal rats, Vero and MDCK cell lines",
-  "exposure_domain": "Vaccine production substrate (canine kidney cells vs chicken embryo fibroblasts)",
+  "study_design": "Comparative experimental in vitro and in vivo virology study",
+  "data_source_type": "other",
+  "population": "In vitro: Vero and MDCK cell lines; in vivo: neonatal rat pups (n = 9 per group, Mu90 n = 3)",
+  "exposure_domain": "Vaccine production cell substrate / viral propagation in cell lines and animal tissue",
   "limitations": [
-    "Small sample sizes for animal groups",
-    "Lack of human clinical correlation",
-    "Limited cell lines tested",
-    "Conflicting data between neurovirulence scores and in vivo variant frequencies"
+    "Small animal group sizes used to minimise animal usage.",
+    "Significant variation in results between individual animals.",
+    "No established correlate of protection and no animal model mimicking human mumps disease.",
+    "Impact of genetic variation on vaccinated populations is not understood."
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Associated DataSupplementary Materials",
+  "data_availability_statement": "Associated Data Supplementary Materials",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

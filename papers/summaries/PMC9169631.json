@@ -3,41 +3,47 @@
   "title": "Early-life exposure to hardship increased risk tolerance and entrepreneurship in adulthood with gender differences.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "Our study used data from multiple sources. The principal sources of information are 1) the 1990 Population Census (1% sample) for the population by county and year of birth used to estimate cohort losses; 2) the 2005 Population Mini-Census (20% sample) used to measure entrepreneurship defined in two ways— narrowly as those who owned an enterprise in the private sector and broadly to also include the self-employed; 3) the 2013 nationally representative CHFS for business ownership and risk tolerance; and 4) the China Meteorological Administration for daily instrumental temperature records at 727 stations between 1951 and 1970",
-  "summary": "Quasi-experimental study using Chinese census and survey data to investigate how early-life exposure to the Great Famine affects adult entrepreneurship and risk tolerance, with a focus on gender differences and conditioning versus selection mechanisms.",
+  "ehr_evidence": "The principal sources of information are 1) the 1990 Population Census (1% sample) for the population by county and year of birth used to estimate cohort losses; 2) the 2005 Population Mini-Census (20% sample) used to measure entrepreneurship; 3) the 2013 nationally representative CHFS for business ownership and risk tolerance; and 4) the China Meteorological Administration for daily instrumental temperature records at 727 stations between 1951 and 1970.",
+  "summary": "A quasi-natural experiment exploiting China's Great Famine via census and household-survey data to test whether early-life hardship increases adult entrepreneurship and risk tolerance, with gender differences.",
   "key_findings": [
-    "In counties where the famine was one SD more severe, women and men were 17.1% and 12.7% more likely to engage in entrepreneurship, respectively (beta=0.058, SE=0.010 for women; beta=0.111, SE=0.018 for men, P<0.01).",
-    "Among male entrepreneurs, the coefficient of famine intensity on log income was 0.724 (SE=0.169, P<0.01), while for females it was positive but not statistically significant (0.423, SE=0.279).",
-    "If hardship was one SD higher, women and men were 18.4% and 13.2% more likely to be risk tolerant, respectively.",
-    "Male entrepreneurship increased with the wife’s risk tolerance (coefficient=0.081, SE=0.023, P<0.01), but not vice versa.",
-    "Among women, neither hardship nor risk tolerance significantly increased engagement in entrepreneurship."
+    "In counties where the famine was one SD more severe, women and men were 17.1% and 12.7% more likely to engage in entrepreneurship (self-employed or business owner), with famine-intensity coefficients of 0.058 (SE 0.010) for women and 0.111 (SE 0.018) for men (P < 0.01).",
+    "Among male entrepreneurs, the famine-intensity coefficient on the log of monthly income was positive and significant and 1.7 times that among female entrepreneurs; among female entrepreneurs it was positive but not significant.",
+    "Hardship increased risk tolerance among both women and men: a one-SD higher famine intensity made women and men 18.4% and 13.2% more likely to be risk tolerant.",
+    "Among men only, both hardship and own risk tolerance increased business ownership, and the famine-intensity coefficient fell about 15% after controlling for risk tolerance, indicating partial mediation.",
+    "Male entrepreneurship increased with the wife's risk tolerance but not vice versa, consistent with intrahousehold risk pooling.",
+    "Self-confidence, tenacity, resilience, and opportunism were not significant in the direction that would increase entrepreneurship."
   ],
   "captured_features": [
-    "entrepreneurship status",
-    "business ownership",
-    "monthly/annual income",
-    "risk tolerance",
+    "famine-intensity construct (weather-shock-induced cohort loss)",
+    "entrepreneurship indicator (self-employed or business owner; narrow business ownership)",
+    "risk tolerance indicator (choosing high/above-average risk)",
+    "log of monthly income among entrepreneurs",
     "cohort loss rate",
-    "thermal agricultural productivity",
-    "weather/temperature records"
+    "daily instrumental temperature records",
+    "individual controls (age, ethnicity, education, rural residence, health status)"
   ],
   "pathologies_diseases": [],
-  "study_design": "Quasi-experimental observational study exploiting geographical variation in famine intensity due to random weather shocks",
-  "data_source_type": "Census and household survey data",
-  "population": "Adults born before 1962 in China residing in their county of hukou registration for ≥5 years",
-  "exposure_domain": "Early-life hardship (Great Famine intensity proxied by weather-induced cohort loss)",
+  "study_design": "quasi-natural experiment (cohort exploiting the Great Famine with region fixed effects)",
+  "data_source_type": "census and household survey",
+  "population": "Chinese adults born before 1962 exposed during the Great Famine (1959-1961); 729,401 persons in 2,589 counties (2005 Mini-Census) and 12,188 persons in 167 counties (2013 CHFS)",
+  "exposure_domain": "early-life famine/nutritional and economic hardship",
   "limitations": [
-    "Relies on correlation between risk tolerance and ambiguity aversion rather than direct ambiguity tolerance measures.",
-    "Individual-level estimates combined effects of selective mortality and operant conditioning, potentially overestimating conditioning.",
-    "CHFS only surveyed risk tolerance of one spouse, preventing joint estimation of own and spouse's risk tolerance.",
-    "Limited quantification of the exact degree to which hardship conditioned individuals to engage in entrepreneurship."
+    "Analysis relied on risk tolerance as a proxy for ambiguity tolerance rather than measuring ambiguity directly.",
+    "Individual-level estimates combined selective mortality and operant conditioning, potentially overestimating the conditioning effect, and county-level estimates could not fully separate the two mechanisms.",
+    "The CHFS surveyed risk tolerance of only one spouse, preventing estimation of an equation with both own and spouse risk tolerance.",
+    "Exposure and outcomes were based on census and self-reported survey data rather than clinical or health records."
   ],
   "data_availability": "public-repository",
   "data_accession_links": [
-    "https://zenodo.org/record/6084180"
+    "http://www.isss.pku.edu.cn/cfps/ (Institute of Social Science Survey, Peking University)",
+    "https://zenodo.org/record/6084180",
+    "https://zenodo.org/record/6084180#.YgsDzt9BxEY (China daily instrumental temperature records, Zenodo)",
+    "http://cgss.ruc.edu.cn/English/Contact_Us.htm (National Survey Research Center, Renmin University of China)",
+    "https://microdata.stats.gov.cn/ (NBS-PKU Research Data Center, Peking University)",
+    "https://chfs.swufe.edu.cn/ (Survey and Research Center for China Household Finance, Southwestern University of Finance and Economics)"
   ],
-  "data_availability_statement": "Data Availability. China Population Census 1990, China Population Census 2000, China Population Mini-Census 2005, and China Economic Census data are available from the National Bureau of Statistics-Peking University (NBS-PKU) Research Data Center, Peking University (https://microdata.stats.gov.cn/; c l i c k o n the third link). CHFSs 2011 and 2013 data are available from the Survey and Research Center for China Household Finance, Southwestern University of Finance and Economics, Chengdu ( https://chfs.swufe.edu.cn/; to access the data, apply through the of ﬁcial platform ( https://chfser.swufe.edu.cn/datas/). China General Social Surveys 2008, 2010, 2011, 2012, and 2013 data are available from the National Survey Research Center, Renmin University of China, Beijing (http://cgss.ruc.edu.cn/English/Contact_Us.htm; to access the data, contact cgss@ruc.edu.cn). China Family Panel Studies 2010 data are available from the Institute of Social Science Survey, Peking University (http://www.isss.pku.edu.cn/cfps/; to access the restricted county-level data, apply through http://www.isss.pku.edu.cn/cfps/sjzx/xzsj/index.htm). China daily instrumental temperature records at 727 stations from 1951 to 1970 are available in Zenodo (https://zenodo.org/record/6084180#.YgsDzt9BxEY).",
+  "data_availability_statement": "China Population Census 1990, China Population Census 2000, China Population Mini-Census 2005, and China Economic Census data are available from the National Bureau of Statistics-Peking University (NBS-PKU) Research Data Center, Peking University (https://microdata.stats.gov.cn/; click on the third link). CHFSs 2011 and 2013 data are available from the Survey and Research Center for China Household Finance, Southwestern University of Finance and Economics, Chengdu ( https://chfs.swufe.edu.cn/; to access the data, apply through the official platform ( https://chfser.swufe.edu.cn/datas/). China General Social Surveys 2008, 2010, 2011, 2012, and 2013 data are available from the National Survey Research Center, Renmin University of China, Beijing (http://cgss.ruc.edu.cn/English/Contact_Us.htm; to access the data, contact cgss@ruc.edu.cn). China Family Panel Studies 2010 data are available from the Institute of Social Science Survey, Peking University (http://www.isss.pku.edu.cn/cfps/; to access the restricted county-level data, apply through http://www.isss.pku.edu.cn/cfps/sjzx/xzsj/index.htm). China daily instrumental temperature records at 727 stations from 1951 to 1970 are available in Zenodo (https://zenodo.org/record/6084180#.YgsDzt9BxEY).",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,39 +3,41 @@
   "title": "Aspartame and cancer - new evidence for causation.",
   "year": "2021",
   "ehr_used": false,
-  "ehr_evidence": "RI subjected all HLTs from aspartame-exposed animals to immunohistochemical analysis using a battery of markers and to morphological reassessment using the most recent Internationally Harmonized Nomenclature and Diagnostic (INHAND) criteria.",
-  "summary": "Commentary re-evaluating Ramazzini Institute rodent toxicology studies, confirming aspartame-induced hematolymphatic malignancies and prenatal carcinogenic effects through immunohistochemical and morphological reassessment.",
+  "ehr_evidence": "The manuscript is a commentary reanalyzing Ramazzini Institute rodent carcinogenicity bioassays; the underlying data source was tissue from Sprague-Dawley rats and Swiss mice analyzed by immunohistochemistry and morphological reclassification, not electronic health records.",
+  "summary": "A commentary reanalyzing Ramazzini Institute rodent carcinogenicity bioassays of aspartame, finding that immunohistochemical and morphological re-evaluation confirmed aspartame causes dose-related hematolymphatic malignancies in rats and mice.",
   "key_findings": [
-    "Immunohistochemical and morphological re-evaluation confirmed malignancy in 92.3% of originally diagnosed hematopoietic and lymphoid tissue tumors.",
-    "Six lesions originally diagnosed as lymphoma were reclassified: 3 to lymphoid hyperplasia and 3 to chronic inflammation with fibrosis.",
-    "No histological evidence of Mycoplasma pulmonis infection was found.",
-    "Statistically significant increase in incidence of all hematolymphatic malignancies (p = 0.006), including lymphomas (p = 0.032) and leukemias (p = 0.031).",
-    "Positive dose-response relationship observed between aspartame exposure and hematolymphatic malignancy incidence.",
-    "Prenatal exposures produced dose-related increases in malignancies at lower exposure levels and shorter latency than adult exposures."
+    "Reanalysis confirmed 72 (92.3%) of 78 lesions originally diagnosed as hematopoietic and lymphoid tissue tumors (HLTs) were malignant, with 3 (3.8%) premalignant and 3 reclassified as chronic inflammation with fibrosis.",
+    "Statistically significant increase in incidence of all hematolymphatic malignancies (p=0.006), including significant increases in lymphomas (p=0.032) and leukemias (p=0.031) in rodents exposed to aspartame.",
+    "No histological evidence of infection caused by Mycoplasma pulmonis or other microorganisms."
   ],
   "captured_features": [
     "immunohistochemical markers (Ki67, CD3, PAX5, CD20, CD68, TdT, CD45, CD14, CD33)",
-    "morphological reassessment using INHAND criteria",
-    "hematopoietic and lymphoid tissue tumor diagnoses"
+    "clonality assessment of hematologic/lymphoid tissue",
+    "morphological reclassification using INHAND criteria",
+    "hematopoietic and lymphoid tissue tumor incidence and dose-response"
   ],
   "pathologies_diseases": [
-    "hematopoietic and lymphoid tissue tumors",
+    "hematopoietic and lymphoid tissue tumors (HLTs)",
     "lymphoma",
     "leukemia",
-    "malignant tumors"
+    "renal pelvis carcinoma",
+    "ureter carcinoma",
+    "mammary cancer",
+    "malignant schwannoma"
   ],
-  "study_design": "re-evaluation of animal toxicology bioassays",
-  "data_source_type": "animal toxicology data / histopathology",
-  "population": "Sprague-Dawley rats and Swiss mice",
-  "exposure_domain": "aspartame (artificial sweetener)",
+  "study_design": "Commentary/review reanalyzing prior rodent carcinogenicity bioassays (chronic toxicology/carcinogenesis study)",
+  "data_source_type": "biospecimen (rodent tissue/histopathology)",
+  "population": "Rodents: Sprague-Dawley rats and Swiss mice (2270 rats, 852 mice)",
+  "exposure_domain": "Aspartame (artificial sweetener), dietary exposure including prenatal",
   "limitations": [
-    "re-evaluation based on existing rodent bioassay data",
-    "extrapolation of rodent findings to human health risks"
+    "Commentary based on animal (rodent) data, not human epidemiological studies",
+    "Relies on reanalysis of a single institute's (Ramazzini Institute) bioassays",
+    "No direct human cancer incidence data analyzed"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

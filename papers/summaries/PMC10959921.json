@@ -3,44 +3,45 @@
   "title": "Activated fibroblasts modify keratinocyte stem niche through TET1 and IL-6 to promote their rapid transformation in a mouse model of prenatal arsenic exposure.",
   "year": "2024",
   "ehr_used": false,
-  "ehr_evidence": "BALB/c female mice, aged five weeks, were acquired from the animal rearing facility at the CSIR- Indian Institute of Toxicology Research.",
-  "summary": "In vivo and in vitro study examining how prenatal arsenic exposure in mice activates dermal fibroblasts to secrete IL-6, which modifies the keratinocyte stem cell niche via TET1-mediated epigenetic changes and JAK2/STAT3 signaling, promoting epithelial-mesenchymal transition and skin tumorigenesis.",
+  "ehr_evidence": "The study used a BALB/c mouse model of prenatal arsenic exposure with primary dermal fibroblast and keratinocyte stem cell cultures; no electronic or computerised individual-level health records were used.",
+  "summary": "In a BALB/c mouse model of prenatal arsenic exposure, activated dermal fibroblasts secrete IL-6 via TET1-mediated 5-hmC accumulation at the IL-6 promoter, driving JAK2/STAT3 signaling and EMT in unexposed keratinocyte stem cells to promote skin tumorigenesis.",
   "key_findings": [
-    "Prenatal arsenic exposure increased α-SMA positive cells in offspring skin at PND 2 (37 ± 2.7) and 18 weeks (26.2 ± 2.6) compared to controls.",
-    "Conditioned media from exposed fibroblasts increased IL-6 levels (MFI 7919 ± 350.4 vs 4086 ± 50.4) and reduced KSC apoptosis (2 ± 0.3% vs 10.4 ± 0.5%).",
-    "KSCs cultured in exposed fibroblast media showed increased proliferation (BrdU uptake 11.2 ± 0.7% vs 3 ± 0.8%) and EMT markers (N-cadherin 1.6 ± 1.2 fold, Vimentin 2.9 ± 1.8 fold).",
-    "TET1 protein increased 1.8 ± 0.06 fold and IL-6 mRNA increased 8.1 ± 1.4 fold in exposed fibroblasts, with an 8.4 ± 1.5% rise in 5-hmC/5-mC ratio at the IL-6 promoter."
+    "Prenatal arsenic exposure reduced E-cadherin (MFI 4.1 ± 0.6) and increased N-cadherin (MFI 8.5 ± 1.2), Vimentin (MFI 4.4 ± 0.2) and Fibronectin (MFI 8.6 ± 1.2) in offspring skin at 18 weeks versus controls.",
+    "α-SMA positive dermal fibroblast counts were higher in prenatally exposed offspring (26.2 ± 2.6) versus control (6.2 ± 1.0) at 18 weeks and (37 ± 2.7) versus (9.6 ± 1.2) at PND 2.",
+    "IL-6 levels in prenatally exposed dermal fibroblast lysates were higher (MFI 342.2 ± 31.6) than control (MFI 91 ± 14.4), and in supernatant (MFI 7919 ± 350.4) versus control (MFI 4086 ± 50.4).",
+    "TUNEL-positive apoptotic KSCs were reduced in IL-6-rich conditioned media (2 ± 0.3%) versus unexposed cells (10.4 ± 0.5%), indicating increased survival.",
+    "BrdU-positive proliferating KSCs increased to 11.2 ± 0.7% in IL-6-rich media versus 3 ± 0.8% in control, and declined to 3.4 ± 0.5% after pSTAT3 inhibition with SC144.",
+    "TET1 protein was upregulated 1.8 ± 0.06 fold and IL-6 mRNA 8.1 ± 1.4 fold in prenatally exposed fibroblasts, with an 8.4 ± 1.5% increase in 5-hmC/5-mC ratio at the IL-6 promoter versus 0.5 ± 0.1% in controls.",
+    "pSTAT3 inhibition with SC144 reduced N-cadherin from 1.8 ± 0.1 to 1.2 ± 0.14 fold, Vimentin from 1.7 ± 0.14 to 0.8 ± 0.09 fold, and Fibronectin from 1.8 ± 0.08 to 1.1 ± 0.07 fold."
   ],
   "captured_features": [
-    "EMT markers (E-cadherin, N-cadherin, Vimentin, Fibronectin)",
-    "α-SMA, Collagen IV",
-    "IL-6 levels (lysate and supernatant)",
-    "JAK2/STAT3 pathway proteins (GP130, pJAK2, pSTAT3)",
-    "BrdU proliferation",
-    "TET1 expression",
-    "5-hmC/5-mC methylation ratio",
-    "colony formation and migration assays"
+    "E-cadherin, N-cadherin, Vimentin, Fibronectin, α-SMA protein expression (MFI and positive cell counts per field)",
+    "IL-6 cytokine levels in cell lysate and supernatant (ELISA/MFI)",
+    "TUNEL-positive apoptotic cell percentage",
+    "BrdU-positive proliferating cell percentage",
+    "Clonogenic colony counts",
+    "GP130, JAK2, STAT3, pSTAT3, pJAK2 protein levels",
+    "TET1 protein and IL-6 mRNA expression (fold change)",
+    "5-hmC/5-mC ratio at IL-6 promoter (MeDIP)"
   ],
   "pathologies_diseases": [
-    "skin tumorigenesis",
-    "basal cell carcinoma",
-    "squamous cell carcinoma",
-    "epithelial-mesenchymal transition"
+    "Skin tumorigenesis",
+    "Basal cell carcinoma",
+    "Squamous cell carcinoma",
+    "Epithelial-to-mesenchymal transition"
   ],
-  "study_design": "in vivo mouse model and in vitro cell culture study",
-  "data_source_type": "animal model / in vitro cell culture",
-  "population": "BALB/c mice (prenatally exposed to arsenic and control offspring), primary dermal fibroblasts and keratinocyte stem cells",
-  "exposure_domain": "prenatal arsenic exposure",
+  "study_design": "Experimental animal (mouse) model with in vitro primary cell culture and mechanistic intervention",
+  "data_source_type": "biospecimen",
+  "population": "BALB/c mice, prenatal (transplacental) arsenic exposure, offspring assessed at PND 2 and 18 weeks",
+  "exposure_domain": "heavy metals (inorganic arsenic)",
   "limitations": [
-    "animal model may not fully recapitulate human pathophysiology",
-    "in vitro conditioned media does not fully replicate the complex in vivo microenvironment",
-    "small sample sizes (n=3-5 per group)",
-    "lack of human clinical validation"
+    "Findings are derived from a mouse model and in vitro cell culture, limiting direct extrapolation to humans.",
+    "Mechanistic in vitro conditioned-media experiments do not fully recapitulate the in vivo tumor microenvironment."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "The datasets generated and analyzed during the current study are submitted to CSIR-IITR repository and will be made available by corresponding author on request.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

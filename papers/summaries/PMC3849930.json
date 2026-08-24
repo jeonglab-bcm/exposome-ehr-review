@@ -3,47 +3,47 @@
   "title": "Exposure to the Chinese famine in early life and the risk of anaemia in adulthood.",
   "year": "2013",
   "ehr_used": false,
-  "ehr_evidence": "We used the data of 2007 adults born between 1954 and 1964 in Jiangsu province from the 2002 Chinese National Nutrition and Health Survey.",
-  "summary": "Cross-sectional analysis examining the association between early life exposure to the Chinese famine (1959–1961) and the risk of anaemia in adulthood.",
+  "ehr_evidence": "We used the data of 2007 adults born between 1954 and 1964 in Jiangsu province from the 2002 Chinese National Nutrition and Health Survey (data collected via in-person interviews, anthropometric measurements, fasting blood samples, and 3-day weighed food diaries, not an EHR/claims/registry).",
+  "summary": "A cross-sectional study of 2007 adults born 1954-1964 in Jiangsu province, China, examining whether fetal early-life exposure to the 1959-1961 Chinese famine is associated with increased risk of anaemia in adulthood.",
   "key_findings": [
-    "Fetal exposure to famine was associated with a 37% increased risk of anaemia compared to non-exposed (RR 1.37, 95% CI 1.09-1.71).",
-    "The association was stronger in men (RR 1.87, 95% CI 1.21-2.87), overweight/obese individuals (RR 1.75, 95% CI 1.20-2.56), and those with low education (RR 2.07, 95% CI 1.37-3.12).",
-    "No significant association between famine exposure and anaemia was found among urban residents.",
-    "Total iron intake did not differ significantly across famine exposure groups."
+    "Fetal exposure to famine was associated with a 37% increased risk of adult anaemia versus non-exposed after adjustment (RR 1.37, 95% CI 1.09-1.71).",
+    "The association was stronger among men (RR 1.87, 95% CI 1.21-2.87) than women (RR 1.17, 95% CI 0.90-1.53), though the interaction was not statistically significant.",
+    "The association was strongest among overweight/obese individuals (RR 1.75, 95% CI 1.20-2.56) and those with low education (RR 2.07, 95% CI 1.37-3.12).",
+    "There was no significant association between famine exposure and anaemia among urban residents, with a significant interaction between residence (urban/rural) and famine exposure (p=0.023).",
+    "Haemoglobin levels were lower in the fetal-exposed cohort (regression coefficients -0.32 in men, -0.24 in men and women combined)."
   ],
   "captured_features": [
-    "Haemoglobin concentration",
-    "BMI",
-    "blood pressure",
-    "smoking status",
-    "alcohol consumption",
-    "education level",
-    "occupation",
+    "haemoglobin concentration",
+    "anaemia status (Hb <13 g/dl men, <12 g/dl women)",
+    "famine exposure cohort (non-exposed, fetal, early/mid/late childhood)",
+    "BMI and overweight status",
+    "hypertension",
+    "income, education, occupation",
     "residence (urban/rural)",
-    "income",
-    "dietary iron intake",
-    "serum ferritin"
+    "smoking and alcohol drinking",
+    "ferritin",
+    "height and weight",
+    "dietary iron intake"
   ],
   "pathologies_diseases": [
     "anaemia",
     "hypertension",
-    "overweight/obesity"
+    "overweight"
   ],
-  "study_design": "cross-sectional survey study",
-  "data_source_type": "national health survey",
-  "population": "2007 adults born between 1954 and 1964 in Jiangsu province, China",
-  "exposure_domain": "early life famine exposure (Chinese famine 1959–1961)",
+  "study_design": "cross-sectional",
+  "data_source_type": "survey",
+  "population": "2007 adults (905 men, 1102 women) born 1954-1964 in Jiangsu province, China, aged ~38-49 in 2002",
+  "exposure_domain": "early-life famine exposure (nutritional)",
   "limitations": [
-    "Lack of iron metabolism biomarkers and menstruation status data",
-    "Unassessed regional variation in famine severity",
-    "Small sample size in fetal-exposed group limiting subgroup power",
-    "Potential selection bias from selective mortality or reduced fertility",
-    "Absence of inflammation biomarkers to explore anaemia aetiology"
+    "No information on iron metabolism biomarkers or menstruation status in women that may affect body iron stores and anaemia.",
+    "Regional differences in famine severity were not assessed due to small numbers in the fetal-exposed group.",
+    "Selection bias possible due to selective mortality and reduced fertility across famine exposure groups.",
+    "Small sample size in some subgroups limited power of stratified analyses, making findings suggestive rather than conclusive."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

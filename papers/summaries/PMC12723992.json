@@ -3,38 +3,45 @@
   "title": "Moderate prenatal alcohol exposure differentially alters acute ethanol sensitivity of GABAergic transmission in CRFR1- and CRFR1+ CeM Neurons.",
   "year": "2025",
   "ehr_used": false,
-  "ehr_evidence": "Male CRF1-Cre transgenic rats were obtained for breeding from Dr. Nicholas Gilpin, Louisiana State University Health Sciences Center (New Orleans, LA, USA).",
-  "summary": "Experimental study investigating how moderate prenatal alcohol exposure (PAE) on gestational day 12 alters acute ethanol modulation of GABAergic neurotransmission onto CRFR1+ and CRFR1- neurons in the central amygdala of adult rat offspring.",
+  "ehr_evidence": "Whole-cell electrophysiology was performed in the CeM to assess the actions of acute EtOH (44, 66, & 88 mM) on GABAergic transmission onto CRFR1+ and CRFR1- neurons in adult CRF1-Cre-tdTomato rats.",
+  "summary": "This animal study exposed pregnant CRF1-Cre-tdTomato rat dams to vaporized ethanol on gestational day 12 and used whole-cell electrophysiology to assess sex- and cell type-specific effects of moderate PAE on acute ethanol modulation of GABAergic transmission onto CeM CRFR1+ and CRFR1- neurons in adult offspring.",
   "key_findings": [
-    "PAE increased basal sIPSC amplitude in CRFR1+ neurons (F(1, 127) = 5.026, p = 0.027).",
-    "In air males, 66 mM EtOH decreased CRFR1- sIPSC frequency (t(11) = 2.658, p = 0.022), but PAE males showed no significant change at 44 mM (p = 0.279), 66 mM (p = 0.138), or 88 mM (p = 0.484).",
-    "PAE males exhibited a significant decrease in CRFR1+ sIPSC frequency at 44 mM EtOH (t(8) = 2.465, p = 0.039).",
-    "PAE females showed significant decreases in CRFR1- sIPSC frequency at 44 mM (t(11) = 3.805, p = 0.003) and 66 mM (t(9) = 2.775, p = 0.022) EtOH.",
-    "PAE females exhibited significant decreases in CRFR1+ sIPSC frequency (t(8) = 3.196, p = 0.013) and amplitude (t(9) = 2.719, p = 0.023) at 44 mM EtOH."
+    "PAE increased basal sIPSC amplitude of CRFR1+ neurons in both sexes (F(1,127) = 5.026, p = 0.027), indicating postsynaptic modifications.",
+    "In air males, 66 mM EtOH significantly decreased sIPSC frequency (t(11) = 2.658, p = 0.022), whereas PAE males were insensitive to acute EtOH at all concentrations.",
+    "PAE males showed a significant decrease in sIPSC frequency at 44 mM in CRFR1+ neurons (t(8) = 2.465, p = 0.039) with a main effect of exposure (F(1,59) = 7.255, p = 0.009).",
+    "PAE females showed significant decreases in CRFR1- sIPSC frequency at 44 mM (t(11) = 3.805, p = 0.003) and 66 mM (t(9) = 2.775, p = 0.022) with a main effect of exposure (F(1,57) = 4.070, p = 0.048).",
+    "PAE females showed significant decreases in CRFR1+ sIPSC frequency at 44 mM (t(8) = 3.196, p = 0.013) and amplitude at 44 mM (t(9) = 2.719, p = 0.023).",
+    "Air-exposed control females were unresponsive to acute EtOH in both cell types across all concentrations."
   ],
   "captured_features": [
     "sIPSC frequency (Hz)",
     "sIPSC amplitude (pA)",
-    "membrane resistance (MΩ)",
-    "membrane capacitance (pF)",
-    "blood ethanol concentrations (BECs)",
-    "gestational and postnatal body weights"
+    "blood ethanol concentration (BEC)",
+    "membrane resistance (Rm)",
+    "membrane capacitance (Cm)",
+    "gestational and postnatal litter weights",
+    "sex",
+    "CRFR1+ vs CRFR1- neuron identity",
+    "EtOH concentration (44, 66, 88 mM)"
   ],
-  "pathologies_diseases": [],
-  "study_design": "Experimental animal study (whole-cell patch-clamp electrophysiology)",
-  "data_source_type": "Animal model",
-  "population": "Adult CRF1-Cre transgenic rat offspring (P80-110), both males and females",
-  "exposure_domain": "Prenatal alcohol exposure (PAE) and acute ethanol",
+  "pathologies_diseases": [
+    "Fetal Alcohol Spectrum Disorder (FASD)",
+    "Alcohol Use Disorder (AUD) predisposition"
+  ],
+  "study_design": "Animal experimental study (prenatal alcohol exposure model with whole-cell electrophysiology)",
+  "data_source_type": "biospecimen",
+  "population": "Adult CRF1-Cre-tdTomato rats (P80-105), both sexes, bred in-house at Binghamton University",
+  "exposure_domain": "Prenatal alcohol exposure (moderate, gestational day 12 vaporized ethanol, target BEC 60-120 mg/dL)",
   "limitations": [
-    "Use of transgenic reporter lines may alter neurophysiology via insertional mutagenesis or promoter leakiness.",
+    "Use of transgenic CRF1-Cre-tdTomato reporter line may alter neurophysiology via insertional mutagenesis, promoter promiscuity/leakiness, and transient reporter expression not reflecting endogenous receptor timing.",
     "Recordings performed at room temperature rather than physiologically relevant temperature.",
-    "Potential incongruence between reporter gene expression and endogenous CRFR1 expression.",
-    "Small sample sizes per experimental group (n=9-12 cells/animals)."
+    "Findings limited to adult rats and cannot be generalized to humans.",
+    "Single gestational exposure window (G12) limits understanding of dose-response and timing effects."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
-  "confidence": "medium",
+  "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

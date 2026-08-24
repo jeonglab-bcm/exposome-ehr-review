@@ -3,34 +3,38 @@
   "title": "2022_PMC8993071_COVID-19_vaccination_in_5-11_years_old_children_Drivers_of_vacci",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "four focus group discussions were conducted with 28 vaccine-hesitant parents on November 8 and 9, 2021, three weeks after the submission of Pfizer-BioNTech’ application to Health Canada for approval of its pediatric formulation of its COVID-19 vaccine.",
-  "summary": "Qualitative study exploring drivers of COVID-19 vaccine hesitancy among parents of 5-11 year old children in Quebec using focus group discussions.",
+  "ehr_evidence": "To better understand drivers of vaccine hesitancy among parents of 5 to 11 years old children, 4 focus group discussions were conducted with 28 vaccine-hesitant parents on November 8 and 9, 2021",
+  "summary": "A qualitative study using four focus group discussions with 28 vaccine-hesitant parents of children aged 5-11 in Quebec to explore drivers of COVID-19 vaccine hesitancy",
   "key_findings": [
-    "Out of 28 participants, seven intended to vaccinate their child(ren) while the remaining were unsure or unwilling.",
-    "Parents perceived vaccination as unnecessary due to low child risk and were concerned about side effects and political pressure.",
-    "Focus group findings may not be representative of most parents due to recruitment of vaccine-hesitant participants."
+    "Out of 28 participants, seven intended to vaccinate their child(ren) while the remaining were unsure or unwilling",
+    "Parents perceived vaccination as unnecessary due to the low risk of complications for children and were concerned about vaccine safety (e.g., myocarditis, unknown risks from rapid development)",
+    "Parents with positive vaccination intention were mainly motivated by a desire to return to normality, to decrease transmission, and to protect their children and society",
+    "Parents reported feeling political pressure and stigmatization around childhood vaccination and deplored the nonrecognition of natural immunity"
   ],
   "captured_features": [
-    "focus group transcripts",
-    "parental vaccination intentions",
-    "perceptions of vaccine safety and necessity"
+    "parental perception of COVID-19 risk to children",
+    "concerns about vaccine side effects and safety",
+    "perception of vaccine necessity",
+    "motivation to protect children and society",
+    "perceived political pressure and stigmatization",
+    "attitudes toward natural immunity"
   ],
   "pathologies_diseases": [
-    "COVID-19"
+    "COVID-19",
+    "myocarditis (reported vaccine side-effect concern)"
   ],
-  "study_design": "qualitative focus group study",
-  "data_source_type": "focus group interviews",
-  "population": "parents of 5-11 year old children in Quebec, Canada",
-  "exposure_domain": "N/A",
+  "study_design": "Qualitative focus group study",
+  "data_source_type": "other (focus group interviews)",
+  "population": "28 vaccine-hesitant parents of children aged 5-11 years in Quebec, Canada",
+  "exposure_domain": "COVID-19 vaccine hesitancy/acceptance",
   "limitations": [
-    "recruited only vaccine-hesitant parents, limiting representativeness",
-    "small sample size (N=28)",
-    "qualitative design limits generalizability"
+    "Focus groups were conducted with vaccine-hesitant parents only, so their views might not be representative of those of most parents",
+    "Small sample size (28 participants) across four focus groups"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

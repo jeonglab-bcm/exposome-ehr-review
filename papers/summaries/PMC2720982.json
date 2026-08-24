@@ -4,36 +4,43 @@
   "year": "2009",
   "ehr_used": false,
   "ehr_evidence": "Participant information was captured on paper case report forms (CRFs), which were double-entered into a Microsoft Access data base.",
-  "summary": "Phase Ib dose-escalation trial evaluating the safety and immunogenicity of the MSP3 malaria vaccine candidate in Tanzanian children aged 12–24 months.",
+  "summary": "A double-blind, randomized, dose-escalation Phase Ib trial assessed the safety and immunogenicity of the MSP3 malaria vaccine candidate in 45 Tanzanian children aged 12-24 months in Korogwe.",
   "key_findings": [
-    "Grade 3 adverse events were infrequent, with only five detected throughout the study, all transient and resolved without sequelae.",
-    "Both 15 μg and 30 μg MSP3 dose regimens elicited strong cytophilic IgG1 and IgG3 antibody responses.",
-    "At day 84, 100% (15/15) and 83.3% (10/12) of children in the 15 μg and 30 μg MSP3 groups, respectively, showed an 8-fold increase in IgG1 antibodies.",
-    "All infants in the comparative analysis seroconverted with a mean titre of 10.68 ± 4.64 AU."
+    "A total of 45 children were enrolled, 15 in each of the two MSP3 dose groups and 15 in the Engerix B group.",
+    "Grade 3 adverse events were infrequent; only five were detected throughout the study, all transient and resolved without sequelae, and no serious adverse event was related to MSP3.",
+    "The only major difference in reactogenicity was induration between MSP3 and Engerix B groups (Fisher's exact p-value = 0.07).",
+    "Both MSP3 dose regimens elicited strong cytophilic IgG responses (IgG1 and IgG3), with 100% and 86.7% of 15 μg responders showing an 8-fold increase at day 84.",
+    "Vaccination induced seroconversion in all vaccinees, with a mean titre ± SD of 10.68 ± 4.64 versus 6.12 ± 1.66 in European volunteers.",
+    "No significant difference was observed in haematology or biochemical parameters between vaccine groups."
   ],
   "captured_features": [
-    "solicited local and systemic adverse events",
-    "haematological parameters (Hb, WBC, platelets)",
-    "biochemical parameters (ALT, creatinine, bilirubin)",
-    "anti-MSP3 antibody titres (IgG, IgG1, IgG3, IgG2, IgG4, IgM)"
+    "Solicited local adverse reactions (pain, swelling, induration, erythema, pruritus)",
+    "Solicited systemic reactions (fever, drowsiness, loss of appetite, irritability)",
+    "Unsolicited and serious adverse events",
+    "Haematological parameters (Hb, WBC, platelets)",
+    "Biochemical parameters (ALT, creatinine, bilirubin)",
+    "Anti-MSP3 antibody levels (total IgG, IgM, IgG1-IgG4 subclasses)",
+    "Seroconversion and cytophilic-to-noncytophilic antibody ratio"
   ],
   "pathologies_diseases": [
-    "malaria (Plasmodium falciparum)"
+    "Plasmodium falciparum malaria (vaccine target)",
+    "Pneumonia (serious adverse event)",
+    "Acute gastroenteritis (serious adverse event)",
+    "Febrile episodes"
   ],
-  "study_design": "randomized, double-blind, dose-escalation phase Ib clinical trial",
-  "data_source_type": "Clinical trial data",
-  "population": "children aged 12–24 months in Korogwe, Tanzania",
-  "exposure_domain": "malaria vaccine (MSP3 antigen)",
+  "study_design": "Double-blind, randomized, controlled, dose-escalation Phase Ib clinical trial",
+  "data_source_type": "other (clinical trial with paper CRFs entered into a Microsoft Access database)",
+  "population": "45 healthy Tanzanian children aged 12-24 months in Kwashemshi village, Korogwe District, Tanzania",
+  "exposure_domain": "vaccine (MSP3 malaria vaccine candidate adjuvanted with aluminium hydroxide)",
   "limitations": [
-    "small sample size (N=45)",
-    "subcutaneous administration route for MSP3 versus intramuscular for control may confound reactogenicity comparison",
-    "short follow-up period (84 days)",
-    "no efficacy or protective outcome data collected"
+    "Inherent design weakness for evaluating reactogenicity due to subcutaneous MSP3 administration versus intramuscular control vaccine.",
+    "Small sample size (45 children) limiting power to detect adverse events.",
+    "Low malaria transmission in the study area meant most children had little prior exposure, limiting generalizability to high-transmission settings."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

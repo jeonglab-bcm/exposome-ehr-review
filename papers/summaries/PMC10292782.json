@@ -3,49 +3,42 @@
   "title": "The exposome in respiratory diseases: multiple preventable risk factors from early life to adulthood.",
   "year": "2023",
   "ehr_used": false,
-  "ehr_evidence": "This journal club article reviews three recent publications investigating the effects of environmental exposures... using data from the INMA and RHINESSA cohorts... NutriNet-Santé cohort. The actual sources were prospective/retrospective cohort data, questionnaires, biospecimen assays (urine), and environmental monitoring/GIS, not EHR.",
-  "summary": "Journal club commentary reviewing three cohort studies investigating the impact of environmental exposures (phthalates, air pollution, greenness, lifestyle factors) on respiratory health outcomes (lung function, asthma, rhinitis) from early life to adulthood.",
+  "ehr_evidence": "The three reviewed studies used prospective cohorts rather than EHR data: the INMA Spanish birth cohort (urine phthalate metabolites and repeated spirometry), the RHINESSA cohort (questionnaire-based diagnoses and land-use-regression air pollution/NDVI exposure modeling), and the web-based NutriNet-Santé cohort (self-reported questionnaires and GIS-based residential exposures).",
+  "summary": "This journal club commentary reviews three cohort studies (INMA, RHINESSA, NutriNet-Santé) investigating environmental exposures (gestational phthalates, air pollution, greenness, and a multi-domain exposome) and their associations with respiratory outcomes (childhood lung function, asthma, rhinitis, and impaired lung function).",
   "key_findings": [
-    "Gestational phthalate exposure associated with lower FVC and FEV1 in children, especially early childhood (e.g., FEV1 z-score coefficient at age 4: −0.024 for 10% increase in MiBP).",
-    "Air pollutants associated with increased risk of asthma attacks (adjusted OR 1.60–2.46), rhinitis, and impaired lung function.",
-    "Greenness not associated with asthma or rhinitis, but associated with impaired lung function (adjusted OR 1.68–1.53).",
-    "Three early-life and one lifestyle exposure profiles associated with increased risk of asthma symptoms (mean score ratio 1.11–1.96) and uncontrolled asthma (OR 1.45–2.88)."
+    "INMA: gestational phthalate metabolite mixture associated with lower childhood FVC and FEV1, especially in early childhood; FEV1 z-score coefficient at age 4 was -0.024 (95% CI -0.041 to -0.008) per 10% increase in MiBP and -0.018 (95% CI -0.032 to -0.004) per 10% increase in MBzP, with most individual associations not statistically significant; WQS regression identified MBzP as an important contributor to the mixture effect.",
+    "RHINESSA: air pollutants associated with increased risk of asthma attack for the 'year before the study' window (adjusted OR 1.60-2.46); NO2, O3 and PM10 associated for other windows (adjusted OR 1.29-2.25); air pollutants except O3 associated with rhinitis only for the year-before window (adjusted OR 1.25-1.50); PM2.5 and O3 during childhood/adolescence associated with FEV1/FVC <LLN (adjusted OR 2.65-5.95); greenness (NDVI) not associated with asthma or rhinitis but associated with FEV1/FVC <LLN (adjusted OR 1.68 and 1.53).",
+    "NutriNet-Santé: three early-life and one lifestyle exposure profiles associated with more asthma symptoms (mean score ratio 1.11-1.96) and uncontrolled asthma (OR 1.45-2.88), with dose-response findings for all early-life profiles."
   ],
   "captured_features": [
-    "phthalate metabolites in urine",
-    "spirometry measures (FVC, FEV1)",
-    "air pollution levels (NO2, PM10, PM2.5, black carbon, O3)",
-    "greenness (NDVI)",
-    "physician-diagnosed asthma",
-    "asthma attacks",
-    "rhinitis",
-    "impaired lung function",
-    "87 exposome factors",
-    "asthma symptom score",
-    "asthma control status"
+    "Nine gestational phthalate metabolites in maternal urine (MEP, MiBP, MnBP, MCMHP, MBzP, MEHHP, MEOHP, MECPP, MEHP)",
+    "Repeated spirometry: FVC, FEV1, FEV1/FVC z-scores at ages 4, 7, 9 and 11 years",
+    "Air pollution exposures: NO2, PM10, PM2.5, black carbon, O3 via land-use regression",
+    "Greenness estimated by NDVI from satellite measurements at 300 m buffer",
+    "Questionnaire-defined physician-diagnosed asthma, asthma attack, current rhinitis",
+    "Impaired lung function below lower limit of normal (z-score <1.64)",
+    "87 exposome variables across socioeconomic, external environment, early-life environment and lifestyle-anthropometric domains",
+    "Asthma symptom score (0-5) and asthma control categories"
   ],
   "pathologies_diseases": [
-    "asthma",
-    "rhinitis",
-    "impaired lung function",
-    "reduced lung function"
+    "Asthma",
+    "Rhinitis",
+    "Impaired lung function (FEV1/FVC <LLN)",
+    "Reduced childhood lung function"
   ],
-  "study_design": "journal club commentary reviewing cohort and cross-sectional studies",
-  "data_source_type": "cohort study data, questionnaires, biospecimen assays, environmental monitoring, spirometry",
-  "population": "mother-child pairs from Spain, adults from Norway and Sweden, and adults from France",
-  "exposure_domain": "phthalates, air pollution, greenness, socioeconomic, early-life environment, lifestyle-anthropometric factors",
+  "study_design": "Journal club commentary reviewing three cohort studies (INMA prospective birth cohort, RHINESSA retrospective cohort with matched case-control, and NutriNet-Santé cross-sectional analysis from a web-based cohort)",
+  "data_source_type": "cohort",
+  "population": "INMA: 641 mother-child pairs from Spain; RHINESSA: 3428 adults from Norway and Sweden (mean age 28 years); NutriNet-Santé: 20,833 adults from France (mean age 56.2 years, 72% women)",
+  "exposure_domain": "Environmental exposome: gestational phthalate exposure, air pollution (NO2, PM10, PM2.5, black carbon, O3), greenness (NDVI), and multi-domain exposome (socioeconomic, external environment, early-life environment, lifestyle-anthropometric)",
   "limitations": [
-    "small sample size and sociodemographic differences (INMA)",
-    "low response rate and selection bias (RHINESSA)",
-    "highly correlated exposures and lack of multi-pollutant models (RHINESSA)",
-    "health-conscious participant bias and lack of generalizability (NutriNet-Santé)",
-    "missing indoor/aeroallergen exposures",
-    "classification bias using symptom scores"
+    "INMA: relatively small sample size at each time-point, difficulty obtaining spirometry in young children, sample differences in sociodemographic characteristics, and no accounting for childhood phthalate exposure.",
+    "RHINESSA: low response rate (~40%) suggesting selection bias; highly correlated exposure windows and pollutants preventing multi-pollutant models.",
+    "NutriNet-Santé: health-conscious, better-educated participants limiting generalisability; missing exposures (aeroallergens, indoor dampness, built environment); non-binary asthma classification inducing potential classification bias."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

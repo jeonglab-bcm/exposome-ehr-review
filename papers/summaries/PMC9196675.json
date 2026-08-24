@@ -3,38 +3,41 @@
   "title": "Willingness toward COVID-19 vaccination, coadministration with other vaccines and receive a COVID-19 vaccine booster: a cross-sectional study on the guardians of children in China.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "The self-administered questionnaire was distributed through the “Xiao Dou Miao” app and 9424 guardians with access to this app participated in the survey that was conducted from September 15 to October 8, 2021.",
-  "summary": "Cross-sectional survey study investigating changes in guardians' willingness to vaccinate their children against COVID-19, allow coadministration with other vaccines, and receive booster doses, conducted 6 months after a previous survey in China.",
+  "ehr_evidence": "The self-administered questionnaire was distributed through the 'Xiao Dou Miao' app and 9424 guardians with access to this app participated in the survey that was conducted from September 15 to October 8, 2021.",
+  "summary": "A cross-sectional follow-up survey of 9424 guardians of children aged <6 years in China assessing willingness toward COVID-19 vaccination, vaccine coadministration, and booster doses before and after the child vaccination policy.",
   "key_findings": [
-    "86.68% of guardians were willing to vaccinate their children with the COVID-19 vaccine.",
-    "Guardians aged 40–49 years (OR=1.54, 95% CI: 1.19–2.00), ≥50 years (OR=2.37, 95% CI: 1.29–4.35), healthcare workers (OR=1.65, 95% CI: 1.17–2.31), and those with children aged ≥3 years (OR=1.50, 95% CI: 1.30–1.73) were more willing.",
-    "77% were willing toward coadministration of COVID-19 and influenza vaccines.",
-    "64% were willing toward coadministration of other nonimmunization program vaccines.",
-    "92% were willing to receive a COVID-19 vaccine booster and 82% were willing to vaccinate their children with a booster.",
-    "Higher education and income were associated with lower willingness to vaccinate (e.g., postgraduate education OR=0.40, 95% CI: 0.28–0.58)."
+    "86.68% of guardians were willing to vaccinate their children with the COVID-19 vaccine, approximately 16% higher than the previous survey (6861/7915).",
+    "Guardians aged 40-49 years (OR=1.54, 95% CI: 1.19-2.00), aged ≥50 years (OR=2.37, 95% CI: 1.29-4.35), healthcare workers (OR=1.65, 95% CI: 1.17-2.31), and guardians with children aged ≥3 years (OR=1.50, 95% CI: 1.30-1.73) were more willing to vaccinate their children.",
+    "Guardians with college (OR=0.75, 95% CI: 0.60-0.92), undergraduate (OR=0.52, 95% CI: 0.41-0.65), and postgraduate education (OR=0.40, 95% CI: 0.28-0.58), and those with children with an underlying disease (OR=0.70, 95% CI: 0.56-0.88) were less willing.",
+    "76.97% of guardians were willing toward coadministration of COVID-19 and influenza vaccines.",
+    "64.47% of guardians were willing toward coadministration of other nonimmunization program vaccines with the COVID-19 vaccine for their children.",
+    "92.21% of guardians were willing to receive a COVID-19 vaccine booster and 82.38% were willing to vaccinate their children with a COVID-19 booster.",
+    "Guardians who had received the COVID-19 vaccine themselves were far more willing to receive a booster (OR=4.23, 95% CI: 3.57-5.02)."
   ],
   "captured_features": [
-    "guardian age, education, occupation, income",
-    "child age, gender, underlying disease",
-    "willingness to vaccinate, coadminister, and receive booster",
-    "reasons for vaccine hesitancy"
+    "guardian age, sex, education, occupation, family income",
+    "child age, child gender, underlying disease in child",
+    "guardian COVID-19 and influenza vaccination status",
+    "willingness to vaccinate children, coadministration willingness, booster willingness",
+    "reasons for willingness/unwillingness"
   ],
   "pathologies_diseases": [
-    "COVID-19"
+    "COVID-19",
+    "influenza"
   ],
-  "study_design": "cross-sectional survey study",
-  "data_source_type": "Survey",
-  "population": "9424 guardians of children aged <6 years in China",
-  "exposure_domain": "vaccination willingness",
+  "study_design": "cross-sectional (follow-up survey)",
+  "data_source_type": "other",
+  "population": "9424 guardians of children aged <6 years in China (via the 'Xiao Dou Miao' app)",
+  "exposure_domain": "COVID-19 vaccine willingness/policy (vaccine hesitancy)",
   "limitations": [
-    "online questionnaire prevents effective random sampling and limits representativeness",
-    "privacy protection prevented longitudinal follow-up of individual respondents",
-    "self-reported data may contain information deviation"
+    "Online questionnaire prevented effective random sampling, so the study was not representative of the whole population in China.",
+    "Privacy protection prevented following up individual respondents to map changes in attitudes at the individual level.",
+    "Self-administered questionnaires introduced potential information bias."
   ],
   "data_availability": "supplementary-only",
   "data_accession_links": [],
-  "data_availability_statement": "Supplemental data for this article can be accessed on the publisher’s website at https://doi.org/10.1080/21645515.2022.2049169.",
+  "data_availability_statement": "Supplemental data for this article can be accessed on the publisher's website at https://doi.org/10.1080/21645515.2022.2049169.",
   "confidence": "medium",
   "source_format": "xml",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

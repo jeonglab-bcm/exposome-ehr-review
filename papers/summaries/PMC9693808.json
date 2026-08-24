@@ -3,41 +3,38 @@
   "title": "Maternal use of methamphetamine induces sex-dependent changes in myocardial gene expression in adult offspring.",
   "year": "2022",
   "ehr_used": false,
-  "ehr_evidence": "The study utilized adult Sprague-Dawley rat offspring from pregnant dams administered methamphetamine or saline during gestation.",
-  "summary": "Experimental study examining sex-dependent changes in myocardial gene expression in adult rat offspring following prenatal methamphetamine exposure.",
+  "ehr_evidence": "The manuscript contains no data or description of human patients. All procedures involving animals were approved by the Institutional Animal Care and Use Committee of Marshall University. (Data source was rat heart tissue: 'Hearts were then flash frozen in liquid nitrogen and stored at −80°C.')",
+  "summary": "In an experimental animal study, pregnant Sprague-Dawley rats were injected with methamphetamine during gestation and RNA sequencing/Western blotting of adult offspring hearts revealed sex-dependent, persistent changes in myocardial gene expression.",
   "key_findings": [
-    "RNA sequencing identified 346 differentially expressed mRNAs in adult hearts.",
-    "184 changes occurred only in females, 89 only in males, and 74 were common to both sexes.",
-    "BDH1 protein expression was significantly decreased in both male (p < 0.01) and female (p < 0.05) offspring.",
-    "DDAH2 protein expression was significantly decreased in female hearts (p < 0.01) but not in male hearts."
+    "RNA sequencing identified 346 differentially expressed (FDR <0.01) mRNAs in adult hearts from prenatal methamphetamine exposure, with 74 changes common to both sexes, 184 occurring only in females, and 89 occurring only in males.",
+    "BDH1 protein expression was significantly decreased in hearts from both male (p < 0.01) and female (p < 0.05) offspring prenatally exposed to methamphetamine.",
+    "DDAH2 protein expression was significantly decreased in female hearts (p < 0.01) but was not significantly altered in adult male hearts.",
+    "Adult female offspring exhibited a greater number of methamphetamine-induced gene expression changes than males (184 vs 89)."
   ],
   "captured_features": [
-    "RNA sequencing data",
-    "differentially expressed gene counts",
-    "Log2 fold changes",
-    "FDR-adjusted p-values",
-    "Western blot protein densities",
-    "DDAH2 and BDH1 expression levels"
+    "RNA sequencing (DESeq2, FDR <0.01, Log2 fold change)",
+    "Log2 fold change values and Benjamini-Hochberg adjusted p-values for differentially expressed genes",
+    "Western blot band intensities of DDAH2 and BDH1 normalized to GAPDH",
+    "Sex-specific differential gene expression"
   ],
   "pathologies_diseases": [
-    "heart failure",
-    "cardiovascular disorders",
-    "ischemic injury"
+    "Heart failure",
+    "Cardiovascular/cardiac disorders",
+    "Myocardial ischemic injury"
   ],
-  "study_design": "Experimental animal study",
-  "data_source_type": "Animal model",
-  "population": "Adult Sprague-Dawley rat offspring",
-  "exposure_domain": "Prenatal methamphetamine",
+  "study_design": "Experimental animal model (prenatal exposure)",
+  "data_source_type": "biospecimen",
+  "population": "Adult Sprague-Dawley rat offspring (males and females) prenatally exposed to methamphetamine in utero",
+  "exposure_domain": "drug abuse (prenatal methamphetamine exposure)",
   "limitations": [
-    "Animal model limits direct translation to human physiology",
-    "Small sample sizes per group (N=5-6)",
-    "Lack of in vivo functional cardiac outcome measures",
-    "Cross-sectional assessment without longitudinal follow-up"
+    "Small sample size (N = 5-6 per group)",
+    "Animal model (rats) limits direct human extrapolation",
+    "No overt contractile dysfunction or hypertrophy observed, so clinical significance of gene expression changes is unclear"
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

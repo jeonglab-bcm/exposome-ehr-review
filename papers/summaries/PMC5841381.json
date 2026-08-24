@@ -3,43 +3,44 @@
   "title": "Low-fidelity Venezuelan equine encephalitis virus polymerase mutants to improve live-attenuated vaccine safety and efficacy.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "This study utilized in vitro cell cultures (Vero, HEK-293, BHK, C7/10, U4.4) and in vivo murine models (6-day-old and 7-week-old CD-1 mice) for viral passaging, plaque assays, and survival/immunogenicity testing.",
-  "summary": "Experimental study evaluating low-fidelity RdRp mutations in the Venezuelan equine encephalitis virus (VEEV) TC-83 vaccine strain to assess attenuation, immunogenicity, and genetic stability in cell culture and murine models.",
+  "ehr_evidence": "The study used in vitro cell cultures (Vero, HEK-293, BHK, C7/10, U4.4) and in vivo murine models (6-day-old and adult CD-1 mice) with Illumina and Sanger sequencing; no electronic/computerised individual-level health records were used.",
+  "summary": "An experimental in vitro and in vivo study testing low-fidelity RNA-dependent RNA-polymerase (RdRp) mutants of the live-attenuated VEEV vaccine strain TC-83 in cell culture and CD-1 mice to assess attenuation, immunogenicity, and vaccine phenotypic stability.",
   "key_findings": [
-    "TC-83 3x and 4x mutants produced significantly higher mean neutralizing antibody titers compared with TC-83 (p = 0.0049 and p = 0.0012, respectively; n = 8 per group).",
-    "All vaccinated animals (n = 8 per group) showed complete protection from weight loss and death following lethal VEEV challenge, whereas sham-vaccinated controls all succumbed by Day 9.",
-    "TC-83 3x was significantly more virulent than parent virus in intracranial infant mice (mean time to death 3.91 days vs 5.36–5.54 days, p < 0.05).",
-    "Subcutaneous injection of 3x and 4x mutants in infant mice initially showed reduced mortality compared to TC-83, but outcomes varied significantly by electroporation pool.",
-    "After 10 serial intracranial passages in infant mice, 3x and 4x mutants reached virulence equivalent to unpassaged TC-83 and could not increase virulence past that point.",
-    "TC-83 4x passage 10 survived up to 1 week longer than passage 5, suggesting decreased fitness with additional passaging.",
-    "Illumina sequencing showed the 3x mutant produced a significantly higher amount of genetic diversity than parental TC-83, independent of the cell type used."
+    "The TC-83 3x mutant produced significantly higher genetic diversity than the parent TC-83, independent of cell type (Illumina sequencing).",
+    "TC-83 3x and 4x mutants produced significantly higher mean neutralizing antibody titers compared with TC-83 (repeated measures ANOVA, p = 0.0049 and 0.0012, respectively).",
+    "All vaccinated animals showed complete protection from weight loss and death after challenge with VEEV subtype IC strain 3908, whereas sham-vaccinated animals all succumbed by Day 9 post-challenge.",
+    "TC-83 3x was significantly more virulent than the parent virus after intracranial injection (p ≤ 0.05, Kaplan-Meier test), with mean time to death of 3.91 days versus 5.36-5.54 days.",
+    "TC-83 3x and 4x exhibited significantly reduced mortality when injected subcutaneously compared with parent TC-83 (Kaplan-Meier test, p ≤ 0.05).",
+    "TC-83, TC-83 3x and TC-83 4x all gained virulence by passage 5 versus unpassaged counterparts (Kaplan-Meier test, p ≤ 0.0001), but did not exceed parent virulence.",
+    "E37G was significantly more sensitive to 5FU than parent TC-83 (p < 0.01 for 50 µg/ml, p < 0.0001 for 100-300 µg/ml)."
   ],
   "captured_features": [
-    "viral titers (PFU/ml)",
-    "neutralizing antibody titers (PRNT80)",
-    "survival times and mortality rates",
-    "genetic diversity and mutation frequency via Illumina sequencing",
-    "plaque assay results",
-    "weight change post-vaccination/challenge"
+    "Virus titers (log10 PFU/ml) by plaque assay",
+    "Replication kinetics in Vero and HEK-293 cells",
+    "Neutralizing antibody titers (PRNT80)",
+    "Survival and time to death",
+    "Viremia titers post-vaccination",
+    "Genome diversity/mutation frequency (Illumina sequencing)",
+    "SNPs and diversity hotspots",
+    "Nucleoside analog (5FU, Ribavirin) resistance"
   ],
   "pathologies_diseases": [
-    "Venezuelan equine encephalitis (VEEV)",
-    "vaccine attenuation and immunogenicity"
+    "Venezuelan equine encephalitis (VEEV infection)",
+    "Viral virulence/attenuation"
   ],
-  "study_design": "Experimental in vitro and in vivo murine model study",
-  "data_source_type": "Cell culture and animal model data",
-  "population": "Vero, HEK-293, BHK, C7/10, U4.4 cell lines; 6-day-old and 7-week-old CD-1 mice",
-  "exposure_domain": "Viral RdRp fidelity mutations and nucleoside analog treatment",
+  "study_design": "Experimental in vitro and in vivo study (cell culture and murine vaccine/challenge model)",
+  "data_source_type": "biospecimen",
+  "population": "6-day-old and adult (7-week) CD-1 mice and mammalian/insect cell lines (Vero, HEK-293, BHK, C7/10, U4.4)",
+  "exposure_domain": "Viral RdRp fidelity (low-fidelity) mutations in the TC-83 vaccine strain",
   "limitations": [
-    "Phenotypic instability of low-fidelity mutants dependent on electroporation pool and mutant spectrum",
-    "Lack of atomic resolution structure for alphavirus RdRp limits mechanistic understanding",
-    "Results derived exclusively from murine models and cell culture, lacking human clinical or epidemiological data",
-    "Short-term passaging may not reflect long-term vaccine stability in natural settings"
+    "Findings are limited to cell culture and mouse models and do not establish efficacy or safety in humans.",
+    "Phenotypic instability driven by minority variants generated during electroporation produced inconsistent attenuation across replicates.",
+    "The 4x mutant showed no diversity change after one passage yet behaved as low-fidelity in vivo, indicating single-passage fidelity assessment is insufficient."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "Data are not publically available, but will be provided upon request.",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

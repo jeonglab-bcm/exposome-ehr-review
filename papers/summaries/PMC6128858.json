@@ -3,43 +3,42 @@
   "title": "Analysis By Deep Sequencing of Discontinued Neurotropic Yellow Fever Vaccine Strains.",
   "year": "2018",
   "ehr_used": false,
-  "ehr_evidence": "Viruses. Wild-type French viscerotropic (FVV) and Asibi strains were obtained from the World Reference Center for Emerging Viruses and Arboviruses (Galveston, TX, USA) as lyophilized cell culture supernatant.",
-  "summary": "Deep sequencing and in silico analysis of archived yellow fever vaccine strains (FNV and 17D) and wild-type parental strains to assess genetic diversity, population structure, and reversion to wild-type identity in relation to neurotropic phenotypes.",
+  "ehr_evidence": "Four examples of the FNV (FNV-IP, FNV-Yale, FNV-FC, FNV-NT), 17D-204 vaccine and wild-type parental strains Asibi and FVV were all subjected to next generation sequencing; viral RNAs were sequenced and analyzed by massively parallel, in silico methods from archived laboratory strains.",
+  "summary": "An in silico deep-sequencing study of discontinued French neurotropic yellow fever vaccine strains compared with wild-type parental strains, showing that FNV is genetically unstable with variable reversion to wild-type associated with neurotropy.",
   "key_findings": [
-    "FNV strains showed lower genetic diversity than wild-type FVV, with 19 conserved amino acid substitutions across all four FNV strains.",
-    "Eight nucleotide positions were highly unstable, with reversion to wild-type identity most evident in low-neurotropism strains FNV-FC and FNV-NT.",
-    "FNV-FC and FNV-NT had higher variant counts (n=131 and n=165) and higher revertant frequencies than high-neurotropism strains FNV-Yale and FNV-IP (n=91 variants each).",
-    "17D-204 vaccine diversity was significantly lower than parental Asibi (mean NSE 0.029 vs 0.118, p < 0.001).",
-    "Kruskal-Wallis tests showed significant differences in NSE (X2 = 2773.51, df = 6, p < 0.001) and RMSD (X2 = 29970, df = 6, p < 0.001) across all seven strains."
+    "FNV vaccine strains were of lower normalized Shannon's entropy diversity than wild-type FVV (Kruskal-Wallis X² = 2773.51, df = 6, p < 0.001 for the ORF).",
+    "Pairwise Wilcoxon tests showed significant NSE differences between all strain pairs except Asibi/FNV-IP (p = 0.36), Asibi/FNV-NT (p = 0.11), FNV-FC/FNV-Yale (p = 0.53), and FNV-IP/FNV-NT (p = 0.5).",
+    "Loss of neurotropism in mice was associated with an abundance of wild-type RNA populations, and reversion to wild-type identity was variably observed across FNV strains.",
+    "Eight nucleotide positions were especially unstable, showing high diversity and high genetic distance from FVV in at least one FNV strain.",
+    "Highly neurotropic strains FNV-Yale and FNV-IP had fewer variants (n = 91 each) than low-neurotropism strains FNV-FC (131) and FNV-NT (165)."
   ],
   "captured_features": [
-    "viral RNA sequences",
-    "single-nucleotide variants (SNPs)",
-    "consensus genotypes",
+    "nucleotide differences and amino acid substitutions vs wild-type FVV",
     "normalized Shannon's entropy (NSE)",
-    "root-mean square distance (RMSD)",
-    "neurovirulence metrics (AST, LD50)"
+    "root-mean-square distance (RMSD) from FVV",
+    "single-nucleotide variant counts and frequencies",
+    "revertant-to-wild-type variant frequencies",
+    "sequencing error rates"
   ],
   "pathologies_diseases": [
-    "yellow fever",
     "post-vaccination encephalitis",
-    "neurotropism",
-    "viscerotropism"
+    "neurotropy/neurovirulence",
+    "yellow fever"
   ],
-  "study_design": "in vitro genomic sequencing and in silico bioinformatics analysis",
-  "data_source_type": "archived viral strains / biobank collections",
-  "population": "archived yellow fever virus strains (FNV, 17D-204, Asibi, FVV) from institutional and commercial collections",
-  "exposure_domain": "N/A",
+  "study_design": "in vitro/in silico comparative genomic study of archived viral strains (not a human cohort, case-control, or cross-sectional design)",
+  "data_source_type": "biospecimen (archived viral vaccine strains subjected to next-generation sequencing)",
+  "population": "Seven viral strains: four discontinued FNV vaccine strains (FNV-IP, FNV-Yale, FNV-FC, FNV-NT), the 17D-204 vaccine, and wild-type parental strains Asibi and FVV",
+  "exposure_domain": "none (viral genetics/genomics; not an environmental exposome exposure)",
   "limitations": [
-    "passage histories of archived strains are unknown",
-    "limited sample size of four FNV strains",
-    "neurovirulence data is historical and cited rather than generated in this study",
-    "relationship to original Dakar strain is unknown"
+    "Passage histories of the FNV strains were unavailable and their relationship to the original Dakar strain is unknown.",
+    "Very small sample size (n = 7 viral strains).",
+    "All strains were passaged once in Vero cells before sequencing, which may alter variant frequencies.",
+    "Neurotropic and viscerotropic determinants could not be cleanly parsed due to limited animal models."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "Pre-reduction datasets from sequencing analyses are available from the authors upon request.",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

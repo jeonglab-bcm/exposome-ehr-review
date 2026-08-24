@@ -4,40 +4,56 @@
   "year": "2022",
   "ehr_used": true,
   "ehr_evidence": "We requested electronic health records from the Clinical Data Repository (University of Arkansas for Medical Sciences Translational Research Institute, 2022) for all patients with chronic conditions (i.e., asthma, diabetes, heart disease, congestive heart failure, coronary artery disease, heart attack, and stroke), or contagious respiratory illness (i.e., influenza or COVID-19) between 2015 and 2020.",
-  "summary": "Proof-of-concept study developing a repeatable process to integrate commercial consumer data with EHR to enrich social determinants of health (SDOH) factors, followed by preliminary analysis of SDOH differences between COVID-19 positive and negative patients.",
+  "summary": "In this proof-of-concept pilot study, commercial consumer marketing data was mapped to SDOH concepts and linked at the individual level to EHR records from ~55,422 adults with chronic or respiratory conditions to compare social risk factors between COVID-19 positive and negative patients.",
   "key_findings": [
-    "Consumer data coverage ranged from ~90% to ~54% across two vendors, with inter-compiler match rates between ~21% and 64%.",
-    "Several SDOH factors (home-ownership, marital status, presence of children, household size, economic stability indicator, and education) were significantly different between COVID-19 positive (N=1,092) and negative (N=54,330) groups (p<0.001), while estimated family-income and home market-value showed no significant difference (p=0.4 and p=0.9, respectively)."
+    "Consumer compiler data coverage ranged from ~70% to ~54% and the match rate between compilers was between ~21% and ~64%.",
+    "Of 55,422 initial EHR patients, 30,895 (compiler 1) and 54,880 (compiler 2) were linked to SDOH data.",
+    "Home-ownership, marital-status, presence of children, number of members per household, economic stability indicator, and education were significantly different between COVID-19 positive and negative groups (p<0.001), while estimated family-income (p=0.4) and home market-value (p=0.9) were not significantly different.",
+    "Lower economic stability (ESI) trends associated with higher COVID-19 positivity at the zip-code level, though not true for all zip codes due to SDOH confounders."
   ],
   "captured_features": [
-    "demographics (age, gender, race)",
-    "clinical diagnoses (ICD codes)",
-    "home-ownership status",
+    "gender",
+    "age",
+    "race/ethnicity",
+    "home owner/renter status",
     "marital status",
     "presence of children",
-    "household size",
+    "number of members per household",
+    "estimated family income",
+    "estimated home market value",
     "economic stability indicator",
     "education level",
-    "estimated family income",
-    "home market value"
+    "diagnosis",
+    "procedures",
+    "inpatient status",
+    "vital signs"
   ],
   "pathologies_diseases": [
-    "chronic conditions (asthma, diabetes, heart disease, congestive heart failure, coronary artery disease, heart attack, stroke)",
-    "respiratory illness (influenza, COVID-19)"
+    "COVID-19",
+    "influenza",
+    "asthma",
+    "diabetes",
+    "heart disease",
+    "congestive heart failure",
+    "coronary artery disease",
+    "heart attack",
+    "stroke"
   ],
-  "study_design": "proof-of-concept data integration study with preliminary cross-sectional comparison",
-  "data_source_type": "EHR and commercial consumer data",
-  "population": "55,422 patients with chronic conditions or respiratory illness (2015-2020) from a US academic medical center",
-  "exposure_domain": "social determinants of health (SDOH)",
+  "study_design": "Proof-of-concept pilot study with cross-sectional comparison of COVID-19 positive versus negative patients",
+  "data_source_type": "EHR",
+  "population": "Adults with chronic conditions or contagious respiratory illness (2015-2020) from the Arkansas Clinical Data Repository (AR-CDR); 55,422 patients; 45% >65, 49% 31-65, 6% <30 years; 55% female, 45% male",
+  "exposure_domain": "Social determinants of health (SDOH): economic stability, education, social and community context, health and healthcare access, neighborhood and built environment",
   "limitations": [
-    "restricted to only two commercial data vendors due to budget",
-    "significant missing data across datasets",
-    "low concordance between overlapping data elements from different vendors"
+    "Due to budgetary constraints, SDOH data sources were restricted to only two commercial vendors.",
+    "Significant missing data in each data set.",
+    "Low concordance/consistency between overlapping data elements across compilers.",
+    "Coverage varied substantially between compilers.",
+    "Persistence of data over time could not be measured without multiple consumer data batches."
   ],
   "data_availability": "available-upon-request",
   "data_accession_links": [],
   "data_availability_statement": "The datasets presented in this article are not readily available because it contains clinical information. Requests to access the datasets should be directed to mlgreer@uams.edu.",
-  "confidence": "low",
+  "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

@@ -3,38 +3,40 @@
   "title": "Serious adverse event: late neurotropic disease associated with yellow fever vaccine.",
   "year": "2020",
   "ehr_used": false,
-  "ehr_evidence": "Clinical case report of a 9-month-old infant at Hospital Geral de Carapicuíba, with data from physical examination, laboratory tests, computed tomography, and vaccination records.",
-  "summary": "Case report of a previously healthy 9-month-old infant who developed late neurotropic disease 20 days after yellow fever vaccination, presenting with fever, strabismus, cervical muscle weakness, and leg weakness, followed by complete recovery after supportive care.",
+  "ehr_evidence": "The study is a single-patient case report based on clinical evaluation at Hospital Geral de Carapicuíba, São Paulo, Brazil; no electronic/computerised individual-level health database was analysed.",
+  "summary": "A case report of a previously healthy 9-month-old male infant in São Paulo who developed late neurotropic disease (acute disseminated encephalomyelitis) 20 days after yellow fever vaccination, with full neurological recovery.",
   "key_findings": [
-    "Positive IgM for yellow fever virus in cerebrospinal fluid confirmed vaccine-associated neurotropic disease (N=1).",
-    "Patient showed clinical improvement by day 5 and complete recovery by day 10.",
-    "Tests for bacteria and herpes-virus were negative."
+    "The patient developed neurotropic disease associated with the yellow fever vaccine, confirmed by positive anti-yellow fever IgM antibodies in cerebrospinal fluid (risk of neurotropic disease after yellow fever vaccine reported as 1:8000).",
+    "All other causes of meningoencephalitis were excluded (negative bacterial cultures, negative Gram stain, undetectable herpes-virus PCR), and the patient achieved complete neurological recovery within 10 days of hospitalization.",
+    "Published literature reports a mean time of adverse reaction after yellow fever vaccine ranging between 7 and 27 days, and the patient's onset at 20 days fell within this expected range."
   ],
   "captured_features": [
-    "clinical symptoms",
-    "laboratory tests (CSF, blood biochemistry, leukogram, liver/renal function, CRP)",
-    "computed tomography of skull",
-    "vaccination record",
-    "IgM antibodies in CSF"
+    "Cerebrospinal fluid biochemistry and cell count (leukocytes, lymphocytes, proteins, glucose, lactate)",
+    "Leukogram (leukocytes, eosinophils, lymphocytes, monocytes, platelets)",
+    "Liver function tests (TGO, TGP)",
+    "Renal function (urea, creatinine)",
+    "C-reactive protein",
+    "Bacterial antigen testing (LATEX) and Gram stain",
+    "No alterations on computed tomography of the skull",
+    "Anti-yellow fever IgM antibodies in cerebrospinal fluid"
   ],
   "pathologies_diseases": [
-    "yellow fever vaccine-associated neurotropic disease",
-    "encephalomyelitis"
+    "Neurotropic disease associated with yellow fever vaccine",
+    "Acute disseminated encephalomyelitis",
+    "Meningoencephalitis"
   ],
-  "study_design": "case report",
-  "data_source_type": "case report",
-  "population": "9-month-old male infant, previously healthy, from São Paulo, Brazil",
-  "exposure_domain": "yellow fever vaccine",
+  "study_design": "Case report",
+  "data_source_type": "other",
+  "population": "Single 9-month-old male infant, previously healthy, from the municipality of São Paulo, Brazil",
+  "exposure_domain": "Yellow fever vaccine (immunization/vaccination)",
   "limitations": [
-    "single case report",
-    "no control group",
-    "cannot establish causality or incidence",
-    "limited generalizability"
+    "Single patient case report, so no causal inference or generalizability is possible.",
+    "No control group and no quantitative effect estimates; relies on temporal association and exclusion of alternative diagnoses."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "low",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

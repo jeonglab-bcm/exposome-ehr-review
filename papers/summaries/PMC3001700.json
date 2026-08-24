@@ -3,43 +3,52 @@
   "title": "Impact of air pollution on pulmonary function and respiratory symptoms in children. Longitudinal repeated-measures study.",
   "year": "2010",
   "ehr_used": false,
-  "ehr_evidence": "Environmental monitoring network of Salamanca and direct clinical/demographic data collection via questionnaires and spirometry.",
-  "summary": "Longitudinal repeated-measures study assessing the impact of ambient air pollution on pulmonary function and respiratory symptoms in school-age children in Salamanca, Mexico.",
+  "ehr_evidence": "The study used a school-based prospective cohort with spirometry and ISAAC questionnaires collected for the study, and ambient air pollutant data provided by the network of atmospheric monitoring of Salamanca (automated environmental monitoring of the Institute of Ecology of the State of Guanajuato).",
+  "summary": "A longitudinal repeated-measures cohort study of 464 school-age children (6-14 years) from two public schools in Salamanca, Mexico differing in distance from stationary air pollution sources, examining associations of O3, SO2, NO2, and PM10 with pulmonary function and respiratory symptoms.",
   "key_findings": [
-    "Obstructive lung function abnormalities were more frequent in highly exposed students (10.4% vs. 5.3%; OR = 1.95, 95% CI 1.0-3.7).",
-    "A 10 μg/m3 increase in PM10 was associated with increased wheezing (OR = 1.0478), rhinorrhea (OR = 1.0318), ARTI (OR = 1.0977), and dyspnea (OR = 1.0184).",
-    "An IQR increase in PM10 (18.8 μg/m3) was associated with 3-month deficits in FEV1 of -0.37% in girls and -0.43% in boys.",
-    "No significant effects were observed for NO2 on respiratory symptoms."
+    "More children from the school closer to pollution sources had lung-function abnormalities than the distant school (17.9% vs 11.5%; p = 0.02).",
+    "Obstructive pattern was more frequent in students with greater exposure (10.4% vs 5.3%; OR = 1.95, 95% CI 1.03-3.7).",
+    "Mixed pattern was more frequent in the same students (4.1% vs 0.9%; OR = 4.69, 95% CI 1.04-21.1).",
+    "A 10 μg/m3 increase in O3 was associated with increased wheezing (OR = 1.0460), rhinorrhea (OR = 1.0429), ARTI (OR = 1.0820), and dyspnea (OR = 1.0313).",
+    "A 10 μg/m3 increase in PM10 was associated with wheezing (OR = 1.0478), rhinorrhea (OR = 1.0318), ARTI (OR = 1.0977), and dyspnea (OR = 1.0184).",
+    "A 10 μg/m3 increase in SO2 was associated with wheezing (OR = 1.0213) and ARTI (OR = 1.0521).",
+    "No significant effects were observed with NO2.",
+    "Asthma (22.5% vs 9.7%; p = 0.0005), rhinitis (44.7% vs 34.2%; p = 0.01), and eczema (13.3% vs 4.4%; p = 0.001) were more frequent in the closer school.",
+    "An IQR increase in PM10 (18.8 μg/m3) was associated with 3-month FEV1 deficits of -0.37% in girls and -0.43% in boys and PEF deficits of -0.29% in girls and -0.36% in boys.",
+    "There was no consistent effect of air pollution levels on symptom rates or lung function."
   ],
   "captured_features": [
+    "FVC, FEV1, FEV1/FVC, PEF spirometric values",
+    "respiratory symptoms (wheezing, rhinorrhea, eczema, acute respiratory tract infections, dyspnea, hospitalization)",
     "ISAAC questionnaire responses",
-    "spirometry parameters (FVC, FEV1, PEF, FEV1/FVC)",
-    "air pollutant levels (O3, SO2, NO, NO2, NOx, PM10)",
-    "demographic and clinical history"
+    "ambient pollutant levels (O3, SO2, NO, NO2, NOx, PM10)",
+    "age, sex, height, weight, BMI",
+    "socioeconomic status, atopy, fossil fuel use, passive smoking"
   ],
   "pathologies_diseases": [
-    "respiratory symptoms",
+    "reduced pulmonary function / obstructive, restrictive, and mixed lung-function abnormalities",
+    "wheezing",
+    "allergic rhinitis",
+    "eczema",
     "acute respiratory tract infections",
     "asthma",
-    "rhinitis",
-    "eczema",
-    "obstructive lung function abnormalities"
+    "dyspnea"
   ],
-  "study_design": "Longitudinal repeated-measures cohort study",
-  "data_source_type": "Environmental monitoring and direct clinical/demographic data collection",
-  "population": "464 school-age children (6-14 years) from two public schools in Salamanca, Mexico",
-  "exposure_domain": "Ambient air pollution (O3, SO2, NO, NO2, NOx, PM10)",
+  "study_design": "longitudinal repeated-measures cohort (multilevel panel) study",
+  "data_source_type": "other",
+  "population": "464 school-age children aged 6-14 years from two public schools in Salamanca, Guanajuato, Mexico",
+  "exposure_domain": "air pollution (O3, SO2, NO2, PM10, CO, NO, NOx)",
   "limitations": [
-    "Lacked a non-polluted control area",
-    "Small sample size",
-    "Results cannot be generalized due to particular environmental and geographic features",
-    "Potential confounding from multi-collinearity among air pollution and weather variables",
-    "Unmeasured characteristics such as natural allergens, other pollutants, seasonal viral infections, and genetic predisposition"
+    "Lack of a non-polluted control area.",
+    "Small sample size.",
+    "Results cannot be generalized due to the particular environmental and geographic features of the city.",
+    "Potential confounding and multi-collinearity among air pollution and meteorological variables.",
+    "Unmeasured characteristics such as natural allergens, other pollutants, seasonal viral infections, and genetic predisposition."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }

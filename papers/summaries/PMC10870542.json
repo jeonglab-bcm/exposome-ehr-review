@@ -2,41 +2,40 @@
   "pmcid": "PMC10870542",
   "title": "Association between prenatal exposure to alkylphenols and intelligence quotient among preschool children: sex-specific effects.",
   "year": "2024",
-  "ehr_used": false,
-  "ehr_evidence": "This research was conducted using a subset of mother-child pairs from the Guangxi Zhuang Birth Cohort (GZBC), a prospective population-based study initiated in June 2015, to examine the effects of prenatal environmental exposures on the health outcomes of both mothers and children [23].",
-  "summary": "Prospective birth cohort study evaluating the association between prenatal maternal serum alkylphenol exposure and childhood intelligence quotient at ages 3-6, including sex-stratified and mixture effect analyses.",
+  "ehr_used": true,
+  "ehr_evidence": "Reproductive and birth outcome information including gestational hypertension, gestational diabetes mellitus, gestational age, maternal age at delivery, child sex, birth weight and birth length was abstracted from the electronic medical records.",
+  "summary": "A prospective birth-cohort study of 221 mother-child pairs from the Guangxi Zhuang Birth Cohort examining associations between early-pregnancy maternal serum alkylphenol concentrations and childhood IQ assessed by WPPSI-IV at 3 to 6 years.",
   "key_findings": [
-    "Each unit increase in log10-transformed maternal NP exposure was associated with a 2.38 (95% CI: -4.59, -0.16) decrease in full-scale IQ.",
-    "Maternal 4-T-OP in the second tertile was inversely associated with working memory index (β = -5.24; 95% CI: -9.58, -0.89).",
-    "Maternal 4-N-NP in the third tertile was positively associated with fluid reasoning index (β = 4.95; 95% CI: 1.14, 8.77).",
-    "Among girls, each unit increase in log10-transformed maternal 4-N-NP exposure was associated with a 13.48 (95% CI: 1.09, 25.87) increase in working memory index.",
-    "Among girls, each unit increase in log10-transformed maternal 4-N-OP exposure was associated with a 10.30 (95% CI: 1.18, 19.43) increase in working memory index.",
-    "Combined maternal AP mixture exposure above the 50th percentile exhibited a decreasing trend on VCI, VSI, WMI, PSI, and FSIQ in total children and girls."
+    "Each unit increase in log10-transformed maternal nonylphenol (NP) exposure was associated with a 2.38 (95% CI: -4.59, -0.16) decrease in full-scale IQ (FSIQ).",
+    "Mothers in the second tertile of 4-tert-octylphenol (4-T-OP) were inversely associated with working memory index (WMI) (β = -5.24; 95% CI: -9.58, -0.89).",
+    "Mothers in the third tertile of 4-n-nonylphenol (4-N-NP) were positively associated with fluid reasoning index (FRI) (β = 4.95; 95% CI: 1.14, 8.77).",
+    "A U-shaped/nonlinear relationship was found between maternal 4-T-OP and WMI in total children (P nonlinear = 0.017).",
+    "Among girls, each unit increase in 4-n-octylphenol (4-N-OP) was associated with a 10.30 (95% CI: 1.18, 19.43) increase in WMI, and the third tertile of 4-N-NP with a 6.66 (95% CI: 0.96, 12.36) increase in FRI.",
+    "No significant combined effects of the AP mixture on childhood IQ were found in the BKMR model.",
+    "Significant decreases in FSIQ were observed when NP concentrations increased from the 25th to the 75th percentiles, but not significantly in boys or girls separately."
   ],
   "captured_features": [
-    "maternal serum alkylphenol concentrations",
-    "childhood IQ scores (VCI, VSI, WMI, FRI, PSI, FSIQ)",
-    "maternal sociodemographic and clinical covariates",
-    "birth outcomes"
+    "Maternal serum alkylphenol concentrations (NP, 4-N-NP, 4-T-OP, 4-N-OP) measured by UPLC-MS/MS in early pregnancy",
+    "WPPSI-IV subscale scores (VCI, VSI, WMI, FRI, PSI) and full-scale IQ (FSIQ)",
+    "Maternal age at delivery, pre-pregnancy BMI, maternal education, passive smoking, household income, folic acid supplementation, breastfeeding duration, child age and sex",
+    "Gestational age, birth weight, birth length, gestational hypertension, gestational diabetes mellitus"
   ],
   "pathologies_diseases": [
-    "cognitive function",
-    "intelligence quotient"
+    "Childhood cognitive function / intelligence quotient (neurocognitive development outcomes); no specific disease"
   ],
-  "study_design": "prospective birth cohort study",
-  "data_source_type": "birth cohort",
-  "population": "221 mother-child pairs from the Guangxi Zhuang Birth Cohort in China; children aged 3-6 years",
-  "exposure_domain": "prenatal chemical exposure (alkylphenols)",
+  "study_design": "Prospective birth-cohort study (subset of the Guangxi Zhuang Birth Cohort)",
+  "data_source_type": "birth cohort (biospecimen exposure; electronic medical records for covariates)",
+  "population": "221 mother-child pairs from the Guangxi Zhuang Birth Cohort, China; children aged 3 to 6 years at IQ assessment",
+  "exposure_domain": "Alkylphenols (endocrine-disrupting chemicals, prenatal environmental chemical exposure)",
   "limitations": [
-    "small sample size (n=221)",
-    "potential unmeasured confounding (e.g., maternal occupation, maternal IQ)",
-    "single early-pregnancy serum measurement may cause exposure misclassification",
-    "cross-sectional IQ assessment at 3-6 years"
+    "Relatively small sample size (n = 221).",
+    "Potential confounders not considered, such as maternal occupation and maternal IQ.",
+    "AP levels measured only in maternal serum in early pregnancy, risking exposure misclassification and uncertainty of the exposure window."
   ],
   "data_availability": "not-stated",
   "data_accession_links": [],
   "data_availability_statement": "",
   "confidence": "medium",
   "source_format": "pdf",
-  "model": "qwen3.6-35b-vllm-nvfp4"
+  "model": "ornith-1.5-35b"
 }
