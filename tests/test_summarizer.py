@@ -130,3 +130,29 @@ def test_merge_partials_unions_and_or_ehr():
     assert set(m["captured_features"]) == {"BMI", "HES codes"}
     assert set(m["pathologies_diseases"]) == {"obesity", "T1DM"}
     assert m["confidence"] == "high"         # highest across chunks
+
+
+# ── cohort_type ──────────────────────────────────────────────────────────────
+
+def test_every_summary_already_on_disk_still_loads_after_adding_cohort_type():
+    """Load all 185 real summaries in papers/summaries/ against the new schema.
+
+    Those files were written before cohort_type existed and none of them carry
+    the key. Adding a *required* field would break every one of them at load
+    time; this reads the actual files rather than a synthetic record, so it
+    fails if the field is ever made mandatory.
+    """
+    import json
+    import pytest
+    from summarizer.schema import ManuscriptChecklist
+
+    files = sorted(Path("papers/summaries").glob("*.json"))
+    if not files:
+        pytest.skip("no summaries checked out")
+
+    assert not any("cohort_type" in json.loads(f.read_text()) for f in files), (
+        "fixture assumption broken: a summary already has cohort_type"
+    )
+    for f in files:
+        record = ManuscriptChecklist.model_validate_json(f.read_text())
+        assert record.cohort_type == "not-stated"
