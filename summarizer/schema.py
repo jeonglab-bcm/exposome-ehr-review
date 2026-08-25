@@ -83,7 +83,23 @@ class ManuscriptChecklist(BaseModel):
     )
     population: str = Field(
         default="",
-        description="Study population, e.g. 'children 0-9 yrs across England'.",
+        description="Study population as described, e.g. 'children 0-9 yrs "
+                    "across England'. Free text; see cohort_type for the "
+                    "groupable facet.",
+    )
+    cohort_type: Literal[
+        "birth-cohort",
+        "pediatric",
+        "adolescent",
+        "adult",
+        "older-adult",
+        "mixed",
+        "not-stated",
+    ] = Field(
+        default="not-stated",
+        description="Age stratum the study actually enrolled. A groupable "
+                    "facet, not an eligibility criterion: no cohort_type makes "
+                    "a study more or less in scope.",
     )
     exposure_domain: str = Field(
         default="",
@@ -122,9 +138,8 @@ class ManuscriptChecklist(BaseModel):
     )
     confidence: Literal["high", "medium", "low", "unclear"] = Field(
         default="unclear",
-        description="Confidence that the study fits a pediatric EHR/exposome "
-                    "review, based on how clearly EHR + pediatric + exposure "
-                    "are established.",
+        description="Confidence in the extracted study-design, population, "
+                    "cohort, exposure, and outcome evidence.",
     )
 
     # ── provenance ─────────────────────────────────────────────────────────
@@ -223,6 +238,10 @@ LLM_FIELDS_SCHEMA = {
         "study_design": {"type": "string"},
         "data_source_type": {"type": "string"},
         "population": {"type": "string"},
+        "cohort_type": {"type": "string", "enum": [
+            "birth-cohort", "pediatric", "adolescent", "adult",
+            "older-adult", "mixed", "not-stated",
+        ]},
         "exposure_domain": {"type": "string"},
         "limitations": {"type": "array", "items": {"type": "string"}},
         "confidence": {"type": "string", "enum": ["high", "medium", "low", "unclear"]},
@@ -230,7 +249,8 @@ LLM_FIELDS_SCHEMA = {
     "required": [
         "ehr_used", "ehr_evidence", "summary", "key_findings",
         "captured_features", "pathologies_diseases", "study_design",
-        "data_source_type", "population", "exposure_domain", "limitations",
+        "data_source_type", "population", "cohort_type", "exposure_domain",
+        "limitations",
         "confidence",
     ],
     "additionalProperties": False,

@@ -130,3 +130,60 @@ def test_merge_partials_unions_and_or_ehr():
     assert set(m["captured_features"]) == {"BMI", "HES codes"}
     assert set(m["pathologies_diseases"]) == {"obesity", "T1DM"}
     assert m["confidence"] == "high"         # highest across chunks
+
+
+# ── cohort_type: a groupable facet, never an eligibility filter ──────────────
+
+def _record(**overrides):
+    """Minimal valid checklist; ehr_used/ehr_evidence/summary are required."""
+    from summarizer.schema import ManuscriptChecklist
+
+    fields = dict(
+        pmcid="PMC1", title="t", year="2020",
+        ehr_used=False, ehr_evidence="", summary="s",
+    )
+    fields.update(overrides)
+    return ManuscriptChecklist(**fields)
+
+
+def test_cohort_type_defaults_to_not_stated_so_legacy_summaries_stay_valid():
+    """Existing summaries predate the field; they must still validate."""
+    assert _record().cohort_type == "not-stated"
+
+
+def test_cohort_type_accepts_every_documented_stratum():
+    from summarizer.schema import LLM_FIELDS_SCHEMA
+
+    strata = LLM_FIELDS_SCHEMA["properties"]["cohort_type"]["enum"]
+    assert strata == [
+        "birth-cohort", "pediatric", "adolescent", "adult",
+        "older-adult", "mixed", "not-stated",
+    ]
+    for stratum in strata:
+        assert _record(cohort_type=stratum).cohort_type == stratum
+
+
+def test_cohort_type_rejects_an_undocumented_stratum():
+    import pytest
+    from pydantic import ValidationError
+
+    with pytest.raises(ValidationError):
+        _record(cohort_type="toddler")
+
+
+def test_prompt_and_schema_agree_on_the_extracted_keys():
+    """The prompt pins an exact key list; drift silently drops a field."""
+    from summarizer.llm_client import SYSTEM_PROMPT
+    from summarizer.schema import LLM_FIELDS_SCHEMA
+
+    for key in LLM_FIELDS_SCHEMA["required"]:
+        assert key in SYSTEM_PROMPT, f"{key} missing from SYSTEM_PROMPT"
+
+
+def test_extraction_scope_is_not_narrowed_by_age_or_ehr_use():
+    """Age and EHR use are facets to record, not inclusion criteria."""
+    from summarizer.llm_client import SYSTEM_PROMPT
+
+    assert "pediatric environmental-exposure" not in SYSTEM_PROMPT
+    assert "all-age" not in SYSTEM_PROMPT
+    assert "never reasons" in SYSTEM_PROMPT

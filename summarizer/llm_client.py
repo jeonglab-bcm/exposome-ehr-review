@@ -89,15 +89,19 @@ def get_client() -> tuple[OpenAI, str]:
 
 # ── prompt ───────────────────────────────────────────────────────────────────
 SYSTEM_PROMPT = (
-    "You are a strict structured-data extractor for a systematic review on "
-    "pediatric environmental-exposure (exposome / EWAS) studies that use EHR "
-    "or linked health data. Read the manuscript text and extract a single JSON "
-    "object with EXACTLY these keys and no others: ehr_used, ehr_evidence, "
-    "summary, key_findings, captured_features, pathologies_diseases, "
-    "study_design, data_source_type, population, exposure_domain, "
-    "limitations, confidence. Do NOT invent keys like article, authors, title, "
-    "abstract. ehr_used must be a JSON boolean (true/false). confidence must be "
-    "one of: high, medium, low, unclear. Output ONLY a JSON object starting "
+    "You are a strict structured-data extractor for a systematic review of "
+    "environmental-exposure (exposome / EWAS) studies. Read the manuscript text "
+    "and extract a single JSON object with EXACTLY these keys and no others: "
+    "ehr_used, ehr_evidence, summary, key_findings, captured_features, "
+    "pathologies_diseases, study_design, data_source_type, population, "
+    "cohort_type, exposure_domain, limitations, confidence. Do NOT invent keys "
+    "like article, authors, title, abstract. ehr_used must be a JSON boolean "
+    "(true/false). cohort_type must be exactly one of: birth-cohort, pediatric, "
+    "adolescent, adult, older-adult, mixed, not-stated — report the age stratum "
+    "the study actually enrolled, and use not-stated when the manuscript does "
+    "not say. Age and EHR use are descriptive facets to record, never reasons "
+    "to skip or downgrade a study. confidence must be one of: high, medium, "
+    "low, unclear. Output ONLY a JSON object starting "
     "with { and ending with } — no markdown fences, no reasoning, no prose."
 )
 
