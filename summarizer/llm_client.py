@@ -88,6 +88,12 @@ def get_client() -> tuple[OpenAI, str]:
 
 
 # ── prompt ───────────────────────────────────────────────────────────────────
+# The prompt has to ask for JSON in words. Pydantic validates what came back;
+# it cannot constrain what the model emits. The served endpoint accepts an
+# OpenAI `response_format` / `json_schema` argument but ignores it (verified
+# 2026-08-25 against ornith-1.5-35b: the reply was prose). Until the server
+# enforces guided decoding, the wording below plus extract_json_object() and
+# the corrective-reprompt loop are what actually keep the output parseable.
 SYSTEM_PROMPT = (
     "You are a strict structured-data extractor for a systematic review of "
     "environmental-exposure (exposome / EWAS) studies. Read the manuscript text "
