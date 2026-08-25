@@ -134,18 +134,25 @@ _EHR = re.compile(
     r"health registr(?:y|ies)|record linkage|linked health)\b",
     re.IGNORECASE,
 )
-_CORE = re.compile(
+# ── search-arm vocabularies ──────────────────────────────────────────────────
+# One regex per scope value. "Core" is the review's high-precision arm, named
+# after the search strategy in #46: the field's own vocabulary (exposom*, ExWAS,
+# environment/exposure-wide association). A paper using these terms is exposome
+# research *proper*, as opposed to `operational-mixtures` (multi-pollutant work
+# that is exposome-shaped without using the word) or `adjacent-single-exposure`
+# (one exposure, adjacent to the core question).
+_CORE_EXPOSOMICS = re.compile(
     r"\b(exposom\w*|ExWAS|P[- ]?ExWAS|environment[- ]wide association|"
     r"exposure[- ]wide association)\b",
     re.IGNORECASE,
 )
-_MIXTURES = re.compile(
+_OPERATIONAL_MIXTURES = re.compile(
     r"\b(chemical mixtures?|exposure mixtures?|multiple exposures?|"
     r"combined exposures?|cumulative exposures?|multi[- ]pollutant|"
     r"environmental risk score|internal exposome|external exposome)\b",
     re.IGNORECASE,
 )
-_VACCINE = re.compile(
+_VACCINE_TOPIC = re.compile(
     r"\b(vaccines?|vaccination|vaccinated|immuni[sz]ation)\b",
     re.IGNORECASE,
 )
@@ -234,11 +241,11 @@ class ScreeningDecision:
 def classify_scope(text: str, query_arms: Iterable[str] = ()) -> ScopeClassification:
     """Classify scope using record text plus the arms that retrieved it."""
     tokens = _arm_tokens(query_arms)
-    if _CORE.search(text) or "core" in tokens:
+    if _CORE_EXPOSOMICS.search(text) or "core" in tokens:
         return "core-exposomics"
-    if _VACCINE.search(text) or "vaccine" in tokens:
+    if _VACCINE_TOPIC.search(text) or "vaccine" in tokens:
         return "vaccine-exposure"
-    if _MIXTURES.search(text) or {"mixture", "mixtures", "operational"} & tokens:
+    if _OPERATIONAL_MIXTURES.search(text) or {"mixture", "mixtures", "operational"} & tokens:
         return "operational-mixtures"
     if {"single", "adjacent", "ehr"} & tokens:
         return "adjacent-single-exposure"
