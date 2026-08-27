@@ -13,6 +13,8 @@ The DB file defaults to ``papers/db.json`` (gitignored, like the rest of
 from __future__ import annotations
 
 import json
+import os
+import tempfile
 from pathlib import Path
 from typing import Any, Iterable, Mapping
 
@@ -31,6 +33,23 @@ DEFAULT_SUMMARY_DIR = Path("papers/summaries")
 # batch ``model`` from the records themselves (most common non-empty value),
 # falling back to an empty string. ``build_results.py`` does not read it.
 EXPORT_MODEL = ""
+
+
+def _atomic_write_text(path: Path, text: str) -> None:
+    """Publish one complete JSON file without exposing a partial write."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, raw_tmp = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp",
+                                   dir=str(path.parent))
+    tmp = Path(raw_tmp)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            handle.write(text)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(tmp, path)
+    finally:
+        if tmp.exists():
+            tmp.unlink()
 
 
 def _normalize_pmcid(pmcid: str) -> str:
@@ -177,9 +196,28 @@ class Store:
         batch = SummaryBatch(n=len(summaries), model=_most_common_model(summaries), summaries=summaries)
         payload = batch.model_dump_json(indent=2)
         out = Path(path)
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(payload)
+        _atomic_write_text(out, payload + "\n")
         return json.loads(payload)
+
+    def replace_all(self, records: Iterable[Mapping[str, Any]]) -> int:
+        """Replace the store with exactly ``records`` after validating them all.
+
+        Callers that need publication-level atomicity should populate a Store
+        at a temporary path and replace the final database after this method
+        succeeds (as ``pipeline_ops.rebuild_combined`` does).
+        """
+        validated_by_pmcid: dict[str, dict] = {}
+        for record in records:
+            validated = _validated_dump(record)
+            pmcid = validated["pmcid"]
+            if pmcid in validated_by_pmcid:
+                raise ValueError(f"duplicate pmcid in replacement set: {pmcid}")
+            validated_by_pmcid[pmcid] = validated
+        rows = [validated_by_pmcid[key] for key in sorted(validated_by_pmcid)]
+        self._db.truncate()
+        if rows:
+            self._db.insert_multiple(rows)
+        return len(rows)
 
     # ── import ──────────────────────────────────────────────────────────────
     def import_records(self, records: Iterable[Mapping[str, Any]]) -> tuple[int, int]:

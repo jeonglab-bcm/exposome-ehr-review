@@ -157,7 +157,7 @@ def render_table(combined: dict, q: str = "") -> str:
  pre {{ background: #f6f8fa; padding: 14px; border-radius: 6px; overflow: auto; font-size: 12px; }}
 </style></head><body>
 <header>
-  <h1>Pediatric Exposome / EWAS Literature Collection</h1>
+  <h1>All-age Exposome / EWAS Evidence Map</h1>
   <p>{len(rows)} papers shown · {sum(1 for r in rows if r.get('ehr_used'))} EHR-based · {sum(1 for r in rows if _is_vaccine(r))} vaccine/immunization · combined JSON at <code>/api/summaries</code></p>
 </header>
 <nav>

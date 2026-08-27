@@ -28,24 +28,33 @@ def test_definitions_loads_and_has_pipeline_assets():
     assert isinstance(pipeline.defs, Definitions)
     graph = pipeline.defs.resolve_asset_graph()
     keys = {".".join(k.path) for k in graph.get_all_asset_keys()}
-    assert keys == {"download_log", "per_paper_summaries", "data_availability_scan",
-                    "manuscript_summaries", "results"}
+    assert keys == {"download_log", "paper_state", "paper_summary", "per_paper_summaries",
+                    "data_availability_scan", "manuscript_summaries", "results",
+                    "site", "artifact_consistency"}
 
 
 def test_asset_lineage_is_wired():
     deps = {name: {".".join(k.path) for k in fn.dependency_keys}
             for name, fn in [
                 ("download_log", pipeline.download_log),
+                ("paper_state", pipeline.paper_state),
+                ("paper_summary", pipeline.paper_summary),
                 ("per_paper_summaries", pipeline.per_paper_summaries),
                 ("data_availability_scan", pipeline.data_availability_scan),
                 ("manuscript_summaries", pipeline.manuscript_summaries),
                 ("results", pipeline.results),
+                ("site", pipeline.site),
+                ("artifact_consistency", pipeline.artifact_consistency),
             ]}
     assert deps["download_log"] == set()
-    assert deps["per_paper_summaries"] == {"download_log"}
+    assert deps["paper_state"] == {"download_log"}
+    assert deps["paper_summary"] == {"paper_state"}
+    assert deps["per_paper_summaries"] == {"paper_state"}
     assert deps["data_availability_scan"] == {"per_paper_summaries"}
     assert deps["manuscript_summaries"] == {"data_availability_scan"}
     assert deps["results"] == {"manuscript_summaries"}
+    assert deps["site"] == {"results"}
+    assert deps["artifact_consistency"] == {"paper_summary", "site"}
 
 
 # ── subprocess wrappers (mocked — no network / no LLM) ───────────────────────
@@ -128,7 +137,10 @@ def test_rebuild_combined_roundtrips_through_summarybatch(tmp_path: Path):
     (d / "README.txt").write_text("ignore")  # non-json skipped
 
     out = tmp_path / "combined.json"
-    data = pipeline_ops.rebuild_combined(summary_dir=d, out_path=out, db_path=tmp_path/"db.json")
+    data = pipeline_ops.rebuild_combined(
+        summary_dir=d, out_path=out, db_path=tmp_path/"db.json",
+        included_pmcids={"PMC1", "PMC2"},
+    )
     assert data["n"] == 2
     assert len(data["summaries"]) == 2
     batch = SummaryBatch.model_validate(data)  # re-validates every record
@@ -142,13 +154,19 @@ def test_rebuild_combined_sorted_by_year_then_pmcid(tmp_path: Path):
     _write_per_paper(d, "PMC9", year="2019")
     _write_per_paper(d, "PMC1", year="2021")
     _write_per_paper(d, "PMC2", year="2019")
-    data = pipeline_ops.rebuild_combined(summary_dir=d, out_path=tmp_path/"c.json", db_path=tmp_path/"db.json")
+    data = pipeline_ops.rebuild_combined(
+        summary_dir=d, out_path=tmp_path/"c.json", db_path=tmp_path/"db.json",
+        included_pmcids={"PMC1", "PMC2", "PMC9"},
+    )
     assert [s["pmcid"] for s in data["summaries"]] == ["PMC2", "PMC9", "PMC1"]
 
 
 def test_rebuild_combined_empty_is_valid(tmp_path: Path):
     d = tmp_path / "summaries"; d.mkdir()
-    data = pipeline_ops.rebuild_combined(summary_dir=d, out_path=tmp_path/"c.json", db_path=tmp_path/"db.json")
+    data = pipeline_ops.rebuild_combined(
+        summary_dir=d, out_path=tmp_path/"c.json", db_path=tmp_path/"db.json",
+        included_pmcids=set(),
+    )
     assert data["n"] == 0
     SummaryBatch.model_validate(data)  # empty batch is valid
 
@@ -159,5 +177,8 @@ def test_rebuild_combined_skips_invalid_per_paper_file(tmp_path: Path):
     (d / "PMC_BAD.json").write_text("{not valid json")  # corrupt → skipped, not fatal
     import pytest
     with pytest.warns(UserWarning, match="PMC_BAD"):
-        data = pipeline_ops.rebuild_combined(summary_dir=d, out_path=tmp_path/"c.json", db_path=tmp_path/"db.json")
+        data = pipeline_ops.rebuild_combined(
+            summary_dir=d, out_path=tmp_path/"c.json", db_path=tmp_path/"db.json",
+            included_pmcids={"PMC1", "PMC_BAD"},
+        )
     assert data["n"] == 1  # only the good one kept

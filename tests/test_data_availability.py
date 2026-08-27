@@ -88,7 +88,9 @@ def test_scan_preserves_existing_fields(tmp_path: Path):
     }
     with patch("scan_data_availability.extract", return_value=("text", "text")), \
          patch("scan_data_availability.ask_llm_data_availability", return_value=scan_result):
-        result = sda.scan_one(txt, summary_dir=tmp_path)
+        result = sda.scan_one(
+            txt, summary_dir=tmp_path, client=MagicMock(), model="test-model"
+        )
 
     assert result["data_availability"] == "public-repository"
     # existing fields preserved
@@ -110,7 +112,13 @@ def test_scan_handles_no_existing_summary(tmp_path: Path):
                    "data_availability_statement": "In-house cohort."}
     with patch("scan_data_availability.extract", return_value=("text", "text")), \
          patch("scan_data_availability.ask_llm_data_availability", return_value=scan_result):
-        result = sda.scan_one(txt, summary_dir=tmp_path, meta={"PMC99": {"title": "T", "year": "2021"}})
+        result = sda.scan_one(
+            txt,
+            summary_dir=tmp_path,
+            meta={"PMC99": {"title": "T", "year": "2021"}},
+            client=MagicMock(),
+            model="test-model",
+        )
 
     assert result["data_availability"] == "in-house"
     assert result["title"] == "T"
@@ -118,6 +126,78 @@ def test_scan_handles_no_existing_summary(tmp_path: Path):
     assert on_disk["data_availability"] == "in-house"
     # required analytical fields absent -> written as partial (full summarize completes later)
     assert "ehr_used" not in on_disk
+
+
+def test_scan_missing_manifest_does_not_replace_existing_combined(tmp_path: Path):
+    import scan_data_availability as sda
+
+    papers = tmp_path / "papers"
+    summaries = papers / "summaries"
+    combined = papers / "manuscript_summaries.json"
+    papers.mkdir()
+    combined.write_text('{"sentinel": true}\n')
+
+    with patch("scan_data_availability.PAPERS_DIR", papers), \
+         patch("scan_data_availability.SUMMARY_DIR", summaries), \
+         patch("scan_data_availability.COMBINED_PATH", combined), \
+         patch("scan_data_availability.MANIFEST_PATH", papers / "manifest.json"):
+        rc = sda.main([])
+
+    assert rc == 2
+    assert json.loads(combined.read_text()) == {"sentinel": True}
+
+
+def test_scan_refuses_incomplete_downloaded_manifest_projection(tmp_path: Path):
+    import scan_data_availability as sda
+    from paper_manifest import PaperManifest, sha256_file
+    import pytest
+
+    papers = tmp_path / "papers"
+    papers.mkdir()
+    manifest = PaperManifest(papers / "manifest.json")
+    for pmcid, status in (("PMC70", "summarized"), ("PMC71", "downloaded")):
+        source = papers / f"2020_{pmcid}_paper.pdf"
+        source.write_bytes(b"%PDF-1.7\n" + b"full text " * 2_500)
+        manifest.upsert(
+            pmcid,
+            status=status,
+            path=source,
+            checksum=sha256_file(source),
+            screening={"decision": "included"},
+            timestamp="2026-08-21T12:34:56Z",
+        )
+    manifest.save(timestamp="2026-08-21T12:34:56Z")
+
+    with patch("scan_data_availability.PAPERS_DIR", papers), \
+         patch("scan_data_availability.MANIFEST_PATH", manifest.path):
+        with pytest.raises(ValueError, match="PMC71=downloaded"):
+            sda.discover_files()
+
+    assert (papers / "2020_PMC70_paper.pdf").exists()
+    assert (papers / "2020_PMC71_paper.pdf").exists()
+
+
+def test_scan_refuses_stale_cache_without_replacing_combined(tmp_path: Path):
+    import scan_data_availability as sda
+
+    summaries = tmp_path / "summaries"
+    combined = tmp_path / "combined.json"
+    source = tmp_path / "2020_PMC72_paper.pdf"
+    source.write_bytes(b"%PDF-1.7\n" + b"full text " * 2_500)
+    combined.write_text('{"sentinel": true}\n')
+
+    with patch("scan_data_availability.SUMMARY_DIR", summaries), \
+         patch("scan_data_availability.COMBINED_PATH", combined), \
+         patch("scan_data_availability.discover_files", return_value=[source]), \
+         patch("scan_data_availability.load_metadata", return_value={}), \
+         patch("scan_data_availability.get_client", return_value=(MagicMock(), "model-a")), \
+         patch("summarizer.run._cached_checklist", return_value=None), \
+         patch("scan_data_availability.scan_one") as scan_one:
+        rc = sda.main([])
+
+    assert rc == 2
+    scan_one.assert_not_called()
+    assert json.loads(combined.read_text()) == {"sentinel": True}
 
 
 def test_ask_llm_returns_none_on_failure(tmp_path: Path):

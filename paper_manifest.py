@@ -223,6 +223,19 @@ def deduplicate_paper_files(
     )
 
 
+def discover_unique_papers(
+    papers_dir: str | Path = DEFAULT_PAPERS_DIR,
+    *,
+    validate: bool = False,
+) -> list[Path]:
+    """Discover a PMCID-sorted, deduplicated list of local full texts."""
+    root = Path(papers_dir)
+    result = deduplicate_paper_files(
+        [*root.glob("*.pdf"), *root.glob("*.xml")], validate=validate,
+    )
+    return [result.selected[pmcid] for pmcid in sorted(result.selected)]
+
+
 def canonical_manifest_path(
     path: str | Path,
     *,
@@ -542,6 +555,17 @@ def discover_included_papers(
             f"included studies have no validated local full text: {states}; "
             "rerun make download"
         )
+    return [selected[pmcid] for pmcid in sorted(selected)]
+
+
+def discover_summarized_papers(
+    manifest_path: str | Path = DEFAULT_MANIFEST_PATH,
+    papers_dir: str | Path = DEFAULT_PAPERS_DIR,
+    *,
+    validate: bool = True,
+) -> list[Path]:
+    """Return current, included summarized sources in deterministic order."""
+    selected = summarized_paper_files(manifest_path, papers_dir, validate=validate)
     return [selected[pmcid] for pmcid in sorted(selected)]
 
 

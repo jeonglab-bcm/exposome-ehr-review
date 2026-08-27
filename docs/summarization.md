@@ -1,64 +1,75 @@
-# Manuscript summarization & data-availability
+# Manuscript summarization and data availability
 
-How each downloaded paper is turned into a structured, validated checklist and
-how its data-availability is captured.
+Each included, validated full text is converted into a Pydantic-validated
+`ManuscriptChecklist`. The LLM is selected with `EXPOSOME_LLM_MODEL` and called
+through the configured OpenAI-compatible endpoint; generated reports derive
+model provenance from each record rather than hard-coded prose.
 
 ← back to the [README](../README.md)
 
-## Manuscript summarization (Qwen3.6-MoE → Pydantic JSON)
-
-Each manuscript is summarized into a structured **checklist** by **Qwen3.6-MoE**
-via an external OpenAI-compatible endpoint, validated with a Pydantic schema.
-`--workers N` runs papers concurrently (the OpenAI client is thread-safe;
-bottleneck is network-bound LLM calls).
+## Run
 
 ```bash
-cp .env.example .env        # fill in EXPOSOME_LLM_API_KEY (never committed)
-make summarize              # all manuscripts (resume-only, chunked recovery)
-make summarize-paper PMC=PMC7145790   # single paper
-python -m summarizer.run --recover --workers 4   # 4 concurrent
+cp .env.example .env        # EXPOSOME_LLM_* (key optional on the tailnet)
+make summarize
+make summarize-paper PMC=PMC7145790
+make scan
+make results
+python -m summarizer.run --recover --workers 4
 ```
 
-**Output:** `papers/summaries/<pmcid>.json` (one per paper) +
-`papers/manuscript_summaries.json` (combined).
+`paper_manifest.discover_included_papers` validates the manifest's explicit
+included-study projection and selects one PDF/XML representation per PMCID
+before concurrent work begins. Publication consumers use the narrower
+`summarized_paper_files` projection, so a failed refresh cannot republish an old
+JSON after its source changes. Excluded or pending full text may remain on disk
+for audit but cannot enter summaries or publication outputs. A cached summary
+is reused only when all of these identities still match:
 
-### Checklist schema (`summarizer/schema.py`, `ManuscriptChecklist`)
+- canonical source path, source SHA-256 checksum, title, and year;
+- prompt checksum;
+- Pydantic schema checksum;
+- configured model ID;
+- extraction/processing-code checksum and summarization execution mode.
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `pmcid` / `title` / `year` | str | identity (from download log) |
-| `ehr_used` | bool | does the study use EHR/EMR/claims/admin data? |
-| `ehr_evidence` | str | sentence(s) justifying `ehr_used` |
-| `summary` | str | 2-4 sentence summary |
-| `key_findings` | list[str] | main results |
-| `captured_features` | list[str] | EHR features/variables captured |
-| `pathologies_diseases` | list[str] | disease(s)/outcome(s) |
-| `study_design` / `data_source_type` / `population` / `exposure_domain` | str | review fields |
-| `limitations` | list[str] | stated limitations |
-| `confidence` | high\|medium\|low\|unclear | fit for a pediatric EHR/exposome review |
-| **`data_availability`** | enum | public-repository\|available-upon-request\|in-house\|supplementary-only\|not-stated |
-| **`data_accession_links`** | list[str] | accession IDs / repository URLs / names |
-| **`data_availability_statement`** | str | verbatim sentence(s) justifying the call |
-| `source_format` / `model` | str | provenance |
+Cache sidecars live under `papers/summaries/.cache/`, outside the per-paper JSON
+glob. Missing or mismatched metadata triggers re-summarization. Summary JSON and
+combined outputs are published atomically where they become shared state. A
+missing manifest is an error and leaves existing combined output untouched;
+run download/reconciliation before a standalone summarization or scan.
 
-The model wraps JSON in chain-of-thought, so the client uses a strict
-fixed-key prompt, robust fenced/balanced-JSON extraction with light repair for
-truncated responses, lenient field validators, and a retry-with-nudge loop.
+## Checklist
 
-## Data-availability scan
+| Field | Meaning |
+|---|---|
+| `pmcid`, `title`, `year` | Identity from retrieval metadata |
+| `ehr_used`, `ehr_evidence` | Whether routinely collected individual electronic clinical/administrative data were used, with evidence |
+| `summary`, `key_findings` | Plain-language study description and results |
+| `captured_features` | EHR/administrative features, empty for non-EHR work |
+| `pathologies_diseases` | Health outcomes |
+| `study_design`, `data_source_type`, `population`, `exposure_domain` | Review facets |
+| `limitations`, `confidence` | Limitations and extraction confidence |
+| `data_availability`, `data_accession_links`, `data_availability_statement` | Data-access classification and evidence |
+| `source_format`, `model` | Source and model provenance |
 
-[`scan_data_availability.py`](../scan_data_availability.py) asks Qwen3.6-MoE
-(32k-token budget, pydantic-validated) **only** about how a study's data can be
-obtained, in a focused window around the "Data availability" section. A
-deterministic regex safety-net supplements any accession/URL (dbGaP / GSE /
-PRJEB / Zenodo / GitHub / figshare / Dryad) the model drops, and repairs URLs
-broken across PDF line wraps.
+Population and EHR status are descriptive facets. Adult and non-EHR records do
+not receive lower eligibility solely for those characteristics.
 
-```bash
-python scan_data_availability.py                 # all papers
-python scan_data_availability.py --limit 5       # pilot
-python scan_data_availability.py --workers 4     # concurrent
-```
+## Focused data-availability pass
 
-Latest scan (185 papers): 145 not-stated, 14 supplementary-only,
-13 available-upon-request, **12 public-repository** (with accession/links), 1 in-house.
+[`scan_data_availability.py`](../scan_data_availability.py) performs a focused
+second pass around data-availability text. Its Pydantic result distinguishes
+public repositories, upon-request access, in-house data, supplementary-only
+data, and unstated availability. A deterministic regex safety net preserves
+repository URLs and accessions such as dbGaP, GEO, ArrayExpress, Zenodo,
+figshare, Dryad, and GitHub identifiers.
+
+The final combined JSON is rebuilt from the current included-and-summarized
+projection of validated per-paper summaries. A manifest status alone is not
+enough: the rebuild rechecks the source, prompt, schema, model, processing, and
+execution-mode cache identity before publishing, and every explicitly included
+record must be ready. A failed refresh updates manifest state but leaves the
+last combined artifact unchanged for a clean retry. A limited/selected run also
+leaves it unchanged unless the complete included set is current. TinyDB is
+replaced from the exact complete set, so deleted, stale, or screened-out
+summaries cannot survive as rows.
