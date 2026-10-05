@@ -1,0 +1,931 @@
+# Exposome / EHR facet vocabulary.
+#
+# A facet is a labelled axis, not a category a paper must fall into: a paper
+# carries any number of exposures, outcomes, data sources and age strata. The
+# same file feeds three things:
+#
+#   pubmed_query  - AND-ed with the corpus query to tag which papers discuss it.
+#   mesh_terms    - descriptor names for a second, indexing-based tag path.
+#                   For the population group these are NLM's age check tags,
+#                   which is what makes "pediatric" a tag instead of a filter.
+#   concepts      - search terms for the OMOP concept resolver. SEARCH TERMS,
+#                   not codes: no concept_id or code is hand-written here, and
+#                   every resolved mapping lands as mapping_status='unreviewed'.
+#
+# The terms of the decision-model questions (scripts/judge_paragraphs.py) are
+# the labels and the first clause of each definition below, so a definition's
+# first sentence is written to be read as an answer option.
+#
+# STATUS: draft, 2026-10-05. Written from the previous pipeline's 185 summaries
+# and the seed papers' abstracts, not yet from a full reading of the seeds.
+# source_refs name the seed(s) that motivated a facet; the seed-reading run
+# (extraction/) confirms or replaces them, as it did for POTS-phenotyping.
+#
+# groups: exposure | outcome | data_source | assessment | design | population
+
+groups:
+  exposure:
+    label: Exposure
+    definition: >
+      An environmental, chemical, social or medical factor a person encounters,
+      studied as a possible cause of a health outcome. The left-hand side of an
+      exposure-outcome link.
+  outcome:
+    label: Health outcome
+    definition: >
+      A disease, diagnosis, measurement or event studied as the consequence of an
+      exposure. The right-hand side of an exposure-outcome link.
+  data_source:
+    label: Data source
+    definition: >
+      Where the individual-level data came from. Routinely collected sources
+      (EHR, claims, registries) are what the review is about; research cohorts
+      and surveys are recorded so they can be told apart.
+  assessment:
+    label: Exposure assessment method
+    definition: >
+      How an exposure was assigned to a person: from an address, a model, a
+      monitor, a biological sample, a questionnaire or a record.
+  design:
+    label: Study design or analysis
+    definition: >
+      The design or analytic approach. Recorded so that exposome-wide designs,
+      mixture methods and self-controlled vaccine designs can be selected.
+  population:
+    label: Age stratum
+    definition: >
+      The life stage the study enrolled or the exposure window it studied. A
+      tag, never an eligibility rule: pediatric is a WHERE clause downstream.
+
+facets:
+
+  # ------------------------------------------------------------------ exposure
+  - id: particulate_matter
+    group: exposure
+    label: Particulate matter air pollution
+    definition: >
+      Ambient fine or coarse particles (PM2.5, PM10, black carbon, ultrafine
+      particles), usually assigned from a residential address.
+    pubmed_query: '"particulate matter"[tiab] OR "PM2.5"[tiab] OR "PM 2.5"[tiab] OR "PM10"[tiab] OR "fine particles"[tiab] OR "black carbon"[tiab] OR "ultrafine particles"[tiab]'
+    mesh_terms: ['Particulate Matter', 'Soot']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to particulate matter'}
+      - {vocabulary: SNOMED, search_term: 'exposure to air pollution'}
+    source_refs: [maitre2018, vrijheid2020, brokamp2018, hu2023]
+
+  - id: traffic_related_air_pollution
+    group: exposure
+    label: Traffic-related air pollution
+    definition: >
+      Nitrogen dioxide, nitrogen oxides and other markers of road traffic,
+      including distance to a major road and traffic density.
+    pubmed_query: '"nitrogen dioxide"[tiab] OR NO2[tiab] OR "nitrogen oxides"[tiab] OR NOx[tiab] OR "traffic-related air pollution"[tiab] OR "traffic related air pollution"[tiab] OR "proximity to major roads"[tiab] OR "distance to major road"[tiab] OR "traffic density"[tiab] OR "traffic pollution"[tiab]'
+    mesh_terms: ['Nitrogen Dioxide', 'Vehicle Emissions', 'Nitrogen Oxides']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to vehicle exhaust'}
+    source_refs: [maitre2018, vrijheid2020, brokamp2018]
+
+  - id: ozone
+    group: exposure
+    label: Ozone
+    definition: >
+      Ground-level ozone, a secondary photochemical air pollutant.
+    pubmed_query: 'ozone[tiab] OR O3[tiab]'
+    mesh_terms: ['Ozone']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to ozone'}
+    source_refs: [hu2023]
+
+  - id: wildfire_smoke
+    group: exposure
+    label: Wildfire smoke
+    definition: >
+      Smoke from wildfires, bushfires or landscape fires, as an episodic air
+      pollution exposure.
+    pubmed_query: 'wildfire[tiab] OR wildfires[tiab] OR "wildfire smoke"[tiab] OR bushfire[tiab] OR bushfires[tiab] OR "forest fire"[tiab] OR "landscape fire"[tiab]'
+    mesh_terms: ['Wildfires', 'Smoke']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to smoke'}
+    source_refs: [wild2005]
+
+  - id: indoor_air
+    group: exposure
+    label: Indoor air and household fuel
+    definition: >
+      Indoor sources: gas stoves, household solid fuel, mould and dampness,
+      indoor allergens and radon.
+    pubmed_query: '"indoor air"[tiab] OR "gas stove"[tiab] OR "gas stoves"[tiab] OR "gas cooking"[tiab] OR "household air pollution"[tiab] OR "solid fuel"[tiab] OR dampness[tiab] OR mould[tiab] OR mold[tiab] OR radon[tiab]'
+    mesh_terms: ['Air Pollution, Indoor', 'Radon', 'Fungi']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to indoor air pollution'}
+    source_refs: [maitre2018, vrijheid2020]
+
+  - id: tobacco_smoke
+    group: exposure
+    label: Tobacco smoke
+    definition: >
+      Active smoking, maternal smoking in pregnancy, or second-hand
+      (environmental) tobacco smoke, including e-cigarette aerosol.
+    pubmed_query: '"tobacco smoke"[tiab] OR "secondhand smoke"[tiab] OR "second-hand smoke"[tiab] OR "environmental tobacco smoke"[tiab] OR "passive smoking"[tiab] OR "maternal smoking"[tiab] OR "smoking during pregnancy"[tiab] OR "prenatal smoking"[tiab] OR cotinine[tiab] OR "e-cigarette"[tiab]'
+    mesh_terms: ['Tobacco Smoke Pollution', 'Cotinine', 'Smoking']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to second hand tobacco smoke'}
+      - {vocabulary: SNOMED, search_term: 'maternal tobacco use in pregnancy'}
+      - {vocabulary: LOINC, search_term: 'cotinine'}
+    source_refs: [maitre2018, vrijheid2020, patel2010]
+
+  - id: lead
+    group: exposure
+    label: Lead
+    definition: >
+      Lead from paint, dust, water or soil, usually measured as blood lead
+      concentration in children.
+    pubmed_query: '"blood lead"[tiab] OR "lead exposure"[tiab] OR "lead poisoning"[tiab] OR "lead levels"[tiab] OR "elevated lead"[tiab] OR "lead-based paint"[tiab]'
+    mesh_terms: ['Lead', 'Lead Poisoning']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'lead poisoning'}
+      - {vocabulary: LOINC, search_term: 'lead [mass/volume] in blood'}
+    source_refs: [patel2010, wild2005]
+
+  - id: other_metals
+    group: exposure
+    label: Mercury, arsenic, cadmium and other metals
+    definition: >
+      Toxic metals and metalloids other than lead (mercury, arsenic, cadmium,
+      manganese), measured in blood, urine, hair or water.
+    pubmed_query: 'mercury[tiab] OR methylmercury[tiab] OR arsenic[tiab] OR cadmium[tiab] OR manganese[tiab] OR "heavy metals"[tiab] OR "toxic metals"[tiab] OR metalloids[tiab]'
+    mesh_terms: ['Mercury', 'Arsenic', 'Cadmium', 'Metals, Heavy', 'Manganese']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'toxic effect of mercury'}
+      - {vocabulary: SNOMED, search_term: 'arsenic poisoning'}
+      - {vocabulary: LOINC, search_term: 'mercury [mass/volume] in blood'}
+    source_refs: [maitre2018, vrijheid2020, patel2010]
+
+  - id: endocrine_disruptors
+    group: exposure
+    label: Phthalates, phenols and other endocrine disruptors
+    definition: >
+      Non-persistent endocrine-disrupting chemicals: phthalates, bisphenol A and
+      other phenols, parabens, triclosan.
+    pubmed_query: 'phthalate[tiab] OR phthalates[tiab] OR bisphenol[tiab] OR BPA[tiab] OR paraben[tiab] OR parabens[tiab] OR triclosan[tiab] OR "endocrine disruptor"[tiab] OR "endocrine disruptors"[tiab] OR "endocrine disrupting"[tiab]'
+    mesh_terms: ['Endocrine Disruptors', 'Phthalic Acids', 'Benzhydryl Compounds', 'Parabens']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to endocrine disrupting chemical'}
+    source_refs: [maitre2018, vrijheid2020, patel2010]
+
+  - id: persistent_organic_pollutants
+    group: exposure
+    label: PFAS and persistent organic pollutants
+    definition: >
+      Persistent chemicals: per- and polyfluoroalkyl substances, PCBs,
+      organochlorine pesticides such as DDT/DDE, dioxins, flame retardants.
+    pubmed_query: 'PFAS[tiab] OR perfluoroalkyl[tiab] OR polyfluoroalkyl[tiab] OR PFOA[tiab] OR PFOS[tiab] OR "polychlorinated biphenyl"[tiab] OR "polychlorinated biphenyls"[tiab] OR PCB[tiab] OR PCBs[tiab] OR DDT[tiab] OR DDE[tiab] OR dioxin[tiab] OR dioxins[tiab] OR "persistent organic pollutants"[tiab] OR PBDE[tiab] OR "flame retardant"[tiab] OR "flame retardants"[tiab]'
+    mesh_terms: ['Fluorocarbons', 'Polychlorinated Biphenyls', 'Persistent Organic Pollutants', 'Dioxins', 'Halogenated Diphenyl Ethers']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to polychlorinated biphenyl'}
+    source_refs: [maitre2018, vrijheid2020, patel2010]
+
+  - id: pesticides
+    group: exposure
+    label: Pesticides
+    definition: >
+      Current-use pesticides: organophosphates, pyrethroids, herbicides such as
+      glyphosate, and agricultural pesticide application near the home.
+    pubmed_query: 'pesticide[tiab] OR pesticides[tiab] OR organophosphate[tiab] OR organophosphates[tiab] OR pyrethroid[tiab] OR pyrethroids[tiab] OR glyphosate[tiab] OR herbicide[tiab] OR herbicides[tiab] OR insecticide[tiab] OR insecticides[tiab]'
+    mesh_terms: ['Pesticides', 'Organophosphates', 'Pyrethrins', 'Herbicides', 'Insecticides']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to pesticide'}
+    source_refs: [maitre2018, vrijheid2020, patel2010]
+
+  - id: drinking_water_contamination
+    group: exposure
+    label: Drinking water contamination
+    definition: >
+      Contaminants in drinking water: nitrate, disinfection by-products, lead
+      service lines, fluoride and water system violations.
+    pubmed_query: '"drinking water"[tiab] AND (contamination[tiab] OR contaminant[tiab] OR contaminants[tiab] OR nitrate[tiab] OR trihalomethane[tiab] OR trihalomethanes[tiab] OR "disinfection by-products"[tiab] OR fluoride[tiab] OR violation[tiab] OR violations[tiab])'
+    mesh_terms: ['Drinking Water', 'Water Pollutants, Chemical', 'Trihalomethanes']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'contaminated drinking water'}
+    source_refs: [maitre2018, vrijheid2020]
+
+  - id: temperature_heat
+    group: exposure
+    label: Ambient temperature and heat
+    definition: >
+      Outdoor temperature, heat waves, cold spells and humidity, as a
+      short-term or long-term exposure.
+    pubmed_query: '"ambient temperature"[tiab] OR "extreme heat"[tiab] OR heatwave[tiab] OR heatwaves[tiab] OR "heat wave"[tiab] OR "heat waves"[tiab] OR "high temperature"[tiab] OR "cold spell"[tiab] OR "heat exposure"[tiab] OR humidity[tiab]'
+    mesh_terms: ['Hot Temperature', 'Extreme Heat', 'Cold Temperature', 'Humidity']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to excessive heat'}
+    source_refs: [maitre2018, vrijheid2020, hu2023]
+
+  - id: noise
+    group: exposure
+    label: Environmental noise
+    definition: >
+      Road, rail and aircraft noise at the residence or school.
+    pubmed_query: '"traffic noise"[tiab] OR "road noise"[tiab] OR "aircraft noise"[tiab] OR "environmental noise"[tiab] OR "noise exposure"[tiab] OR "residential noise"[tiab]'
+    mesh_terms: ['Noise', 'Noise, Transportation']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to noise'}
+    source_refs: [maitre2018, vrijheid2020]
+
+  - id: green_blue_space
+    group: exposure
+    label: Greenness and blue space
+    definition: >
+      Vegetation and water near the home: NDVI greenness, parks, tree canopy,
+      access to blue space.
+    pubmed_query: 'greenness[tiab] OR greenspace[tiab] OR "green space"[tiab] OR "green spaces"[tiab] OR NDVI[tiab] OR "normalized difference vegetation index"[tiab] OR "tree canopy"[tiab] OR "blue space"[tiab] OR "blue spaces"[tiab] OR parks[tiab]'
+    mesh_terms: ['Parks, Recreational']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'green space'}
+    source_refs: [maitre2018, vrijheid2020, brokamp2018, correa2022]
+
+  - id: built_environment
+    group: exposure
+    label: Built environment
+    definition: >
+      The physical form of the neighbourhood: walkability, land use, building
+      density, food outlets, urbanicity.
+    pubmed_query: '"built environment"[tiab] OR walkability[tiab] OR "land use"[tiab] OR "food environment"[tiab] OR "food desert"[tiab] OR "food deserts"[tiab] OR "fast food"[tiab] OR urbanicity[tiab] OR urbanization[tiab] OR "population density"[tiab] OR "building density"[tiab]'
+    mesh_terms: ['Built Environment', 'Urbanization', 'Residence Characteristics']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'neighborhood environment'}
+    source_refs: [maitre2018, vrijheid2020, brokamp2018, hu2023]
+
+  - id: neighborhood_deprivation
+    group: exposure
+    label: Neighbourhood deprivation and opportunity
+    definition: >
+      Area-level socioeconomic disadvantage measured by a composite index (Area
+      Deprivation Index, Child Opportunity Index, Social Vulnerability Index,
+      census-tract poverty).
+    pubmed_query: '"area deprivation"[tiab] OR "deprivation index"[tiab] OR "neighborhood deprivation"[tiab] OR "neighbourhood deprivation"[tiab] OR "child opportunity index"[tiab] OR "social vulnerability index"[tiab] OR "census tract poverty"[tiab] OR "neighborhood poverty"[tiab] OR "neighborhood socioeconomic"[tiab] OR "area-level socioeconomic"[tiab] OR "index of multiple deprivation"[tiab]'
+    mesh_terms: ['Neighborhood Characteristics', 'Poverty Areas', 'Socioeconomic Factors']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'lives in deprived area'}
+    source_refs: [brokamp2018, hu2023, correa2022]
+
+  - id: individual_social_factors
+    group: exposure
+    label: Household social and economic factors
+    definition: >
+      Individual or household social determinants: income, insurance type,
+      parental education, food insecurity, housing instability, homelessness.
+    pubmed_query: '"social determinants of health"[tiab] OR "food insecurity"[tiab] OR "housing instability"[tiab] OR "housing insecurity"[tiab] OR homelessness[tiab] OR "household income"[tiab] OR "parental education"[tiab] OR "maternal education"[tiab] OR "insurance status"[tiab] OR Medicaid[tiab]'
+    mesh_terms: ['Social Determinants of Health', 'Food Insecurity', 'Housing Instability', 'Ill-Housed Persons', 'Income']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'food insecurity'}
+      - {vocabulary: SNOMED, search_term: 'housing problem'}
+    source_refs: [maitre2018, correa2022, hu2023]
+
+  - id: structural_racism
+    group: exposure
+    label: Structural racism and segregation
+    definition: >
+      Residential segregation, historical redlining, discrimination and other
+      structural measures of racism.
+    pubmed_query: '"structural racism"[tiab] OR "systemic racism"[tiab] OR redlining[tiab] OR "residential segregation"[tiab] OR "racial segregation"[tiab] OR "racial discrimination"[tiab] OR "Index of Concentration at the Extremes"[tiab]'
+    mesh_terms: ['Systemic Racism', 'Racism', 'Social Segregation']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'victim of racial discrimination'}
+    source_refs: [correa2022]
+
+  - id: violence_crime
+    group: exposure
+    label: Violence and crime exposure
+    definition: >
+      Neighbourhood violent crime, gun violence, community violence and
+      adverse childhood experiences.
+    pubmed_query: '"violent crime"[tiab] OR "community violence"[tiab] OR "gun violence"[tiab] OR "neighborhood violence"[tiab] OR "crime rate"[tiab] OR "adverse childhood experiences"[tiab] OR ACEs[tiab]'
+    mesh_terms: ['Exposure to Violence', 'Crime', 'Adverse Childhood Experiences', 'Gun Violence']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'exposure to violence'}
+    source_refs: [correa2022]
+
+  - id: vaccination
+    group: exposure
+    label: Vaccination
+    definition: >
+      Receipt of a vaccine, its type, dose or timing, studied as an exposure
+      that may precede an adverse event or another health outcome.
+    pubmed_query: 'vaccine[tiab] OR vaccines[tiab] OR vaccination[tiab] OR immunization[tiab] OR immunisation[tiab] OR MMR[tiab] OR MMRV[tiab] OR DTaP[tiab]'
+    mesh_terms: ['Vaccination', 'Vaccines', 'Measles-Mumps-Rubella Vaccine', 'Immunization']
+    concepts:
+      - {vocabulary: RxNorm, search_term: 'measles, mumps, rubella, and varicella virus vaccine'}
+      - {vocabulary: RxNorm, search_term: 'measles, mumps and rubella virus vaccine'}
+      - {vocabulary: SNOMED, search_term: 'administration of vaccine'}
+    source_refs: [macdonald2014]
+
+  - id: prenatal_medication
+    group: exposure
+    label: Medication use in pregnancy or early life
+    definition: >
+      A medicine taken in pregnancy or infancy studied as an exposure:
+      antibiotics, acid suppressants, acetaminophen, antidepressants.
+    pubmed_query: '("prenatal exposure"[tiab] OR "in utero exposure"[tiab] OR "during pregnancy"[tiab] OR "early-life"[tiab] OR infancy[tiab]) AND (antibiotic[tiab] OR antibiotics[tiab] OR acetaminophen[tiab] OR paracetamol[tiab] OR antidepressant[tiab] OR antidepressants[tiab] OR SSRI[tiab] OR "acid suppressant"[tiab] OR "proton pump inhibitor"[tiab])'
+    mesh_terms: ['Prenatal Exposure Delayed Effects', 'Anti-Bacterial Agents', 'Acetaminophen']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'drug exposure in pregnancy'}
+    source_refs: [hu2023]
+
+  # ------------------------------------------------------------------- outcome
+  - id: asthma_wheeze
+    group: outcome
+    label: Asthma and wheeze
+    definition: >
+      Asthma incidence, prevalence, exacerbation, emergency visit or
+      hospitalisation, and recurrent or persistent wheeze.
+    pubmed_query: 'asthma[tiab] OR wheeze[tiab] OR wheezing[tiab] OR "asthma exacerbation"[tiab]'
+    mesh_terms: ['Asthma', 'Respiratory Sounds']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'asthma'}
+      - {vocabulary: SNOMED, search_term: 'wheezing'}
+    source_refs: [maitre2018, correa2022]
+
+  - id: lung_function
+    group: outcome
+    label: Lung function
+    definition: >
+      Spirometric or other lung function measurements: FEV1, FVC, FEV1/FVC.
+    pubmed_query: '"lung function"[tiab] OR spirometry[tiab] OR FEV1[tiab] OR FVC[tiab] OR "forced expiratory volume"[tiab]'
+    mesh_terms: ['Respiratory Function Tests', 'Spirometry', 'Forced Expiratory Volume']
+    concepts:
+      - {vocabulary: LOINC, search_term: 'FEV1'}
+      - {vocabulary: LOINC, search_term: 'FVC'}
+    source_refs: [maitre2018]
+
+  - id: allergic_disease
+    group: outcome
+    label: Allergic disease
+    definition: >
+      Atopic dermatitis, food allergy, allergic rhinitis and allergic
+      sensitisation.
+    pubmed_query: '"atopic dermatitis"[tiab] OR eczema[tiab] OR "food allergy"[tiab] OR "allergic rhinitis"[tiab] OR "allergic sensitization"[tiab] OR "allergic sensitisation"[tiab] OR atopy[tiab] OR atopic[tiab]'
+    mesh_terms: ['Dermatitis, Atopic', 'Food Hypersensitivity', 'Rhinitis, Allergic', 'Hypersensitivity, Immediate']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'atopic dermatitis'}
+      - {vocabulary: SNOMED, search_term: 'food allergy'}
+    source_refs: [maitre2018, correa2022]
+
+  - id: obesity_adiposity
+    group: outcome
+    label: Obesity and adiposity
+    definition: >
+      BMI, BMI z-score, overweight, obesity, waist circumference or body fat,
+      including rapid infant weight gain.
+    pubmed_query: 'obesity[tiab] OR overweight[tiab] OR "body mass index"[tiab] OR BMI[tiab] OR adiposity[tiab] OR "waist circumference"[tiab] OR "weight gain"[tiab]'
+    mesh_terms: ['Pediatric Obesity', 'Obesity', 'Body Mass Index', 'Adiposity', 'Overweight']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'childhood obesity'}
+      - {vocabulary: LOINC, search_term: 'body mass index'}
+    source_refs: [vrijheid2020, maitre2018]
+
+  - id: cardiometabolic
+    group: outcome
+    label: Cardiometabolic risk
+    definition: >
+      Blood pressure, hypertension, insulin resistance, type 2 diabetes,
+      dyslipidaemia and metabolic syndrome.
+    pubmed_query: '"blood pressure"[tiab] OR hypertension[tiab] OR "type 2 diabetes"[tiab] OR "insulin resistance"[tiab] OR "metabolic syndrome"[tiab] OR dyslipidemia[tiab] OR dyslipidaemia[tiab] OR cholesterol[tiab] OR HbA1c[tiab]'
+    mesh_terms: ['Diabetes Mellitus, Type 2', 'Hypertension', 'Blood Pressure', 'Metabolic Syndrome', 'Insulin Resistance']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'type 2 diabetes mellitus'}
+      - {vocabulary: SNOMED, search_term: 'hypertensive disorder'}
+      - {vocabulary: LOINC, search_term: 'hemoglobin A1c'}
+    source_refs: [patel2010, maitre2018]
+
+  - id: type1_diabetes_autoimmunity
+    group: outcome
+    label: Type 1 diabetes and autoimmune disease
+    definition: >
+      Type 1 diabetes, coeliac disease, juvenile idiopathic arthritis,
+      inflammatory bowel disease and other autoimmune conditions.
+    pubmed_query: '"type 1 diabetes"[tiab] OR "celiac disease"[tiab] OR "coeliac disease"[tiab] OR "juvenile idiopathic arthritis"[tiab] OR "inflammatory bowel disease"[tiab] OR "Crohn"[tiab] OR "autoimmune disease"[tiab] OR "autoimmune diseases"[tiab]'
+    mesh_terms: ['Diabetes Mellitus, Type 1', 'Celiac Disease', 'Arthritis, Juvenile', 'Inflammatory Bowel Diseases', 'Autoimmune Diseases']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'type 1 diabetes mellitus'}
+      - {vocabulary: SNOMED, search_term: 'coeliac disease'}
+    source_refs: [macdonald2014]
+
+  - id: neurodevelopment
+    group: outcome
+    label: Neurodevelopment and cognition
+    definition: >
+      Cognitive function, IQ, developmental delay, language and motor
+      development, school performance.
+    pubmed_query: 'neurodevelopment[tiab] OR neurodevelopmental[tiab] OR cognition[tiab] OR cognitive[tiab] OR IQ[tiab] OR "developmental delay"[tiab] OR "school performance"[tiab] OR "academic achievement"[tiab]'
+    mesh_terms: ['Neurodevelopmental Disorders', 'Cognition', 'Developmental Disabilities', 'Intelligence', 'Child Development']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'developmental delay'}
+    source_refs: [maitre2018, wild2005]
+
+  - id: adhd_autism
+    group: outcome
+    label: ADHD and autism
+    definition: >
+      Attention-deficit/hyperactivity disorder and autism spectrum disorder
+      diagnoses or symptom scores.
+    pubmed_query: 'ADHD[tiab] OR "attention deficit"[tiab] OR "attention-deficit"[tiab] OR hyperactivity[tiab] OR autism[tiab] OR autistic[tiab] OR ASD[tiab]'
+    mesh_terms: ['Attention Deficit Disorder with Hyperactivity', 'Autism Spectrum Disorder', 'Autistic Disorder']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'attention deficit hyperactivity disorder'}
+      - {vocabulary: SNOMED, search_term: 'autism spectrum disorder'}
+    source_refs: [maitre2018]
+
+  - id: mental_health
+    group: outcome
+    label: Mental and behavioural health
+    definition: >
+      Depression, anxiety, behavioural problems, self-harm, substance use
+      disorder and psychiatric emergency visits.
+    pubmed_query: 'depression[tiab] OR depressive[tiab] OR anxiety[tiab] OR "behavioral problems"[tiab] OR "behavioural problems"[tiab] OR "mental health"[tiab] OR "self-harm"[tiab] OR suicide[tiab] OR "substance use disorder"[tiab] OR "opioid use disorder"[tiab]'
+    mesh_terms: ['Mental Disorders', 'Depression', 'Anxiety', 'Problem Behavior', 'Opioid-Related Disorders']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'depressive disorder'}
+      - {vocabulary: SNOMED, search_term: 'anxiety disorder'}
+    source_refs: [maitre2018]
+
+  - id: preterm_birth
+    group: outcome
+    label: Preterm birth and gestational age
+    definition: >
+      Birth before 37 weeks, gestational age at birth, and spontaneous preterm
+      labour.
+    pubmed_query: '"preterm birth"[tiab] OR "preterm delivery"[tiab] OR prematurity[tiab] OR "gestational age"[tiab] OR "premature birth"[tiab]'
+    mesh_terms: ['Premature Birth', 'Gestational Age', 'Infant, Premature']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'preterm birth'}
+    source_refs: [maitre2018]
+
+  - id: fetal_growth
+    group: outcome
+    label: Birth weight and fetal growth
+    definition: >
+      Birth weight, low birth weight, small or large for gestational age, and
+      fetal growth measured by ultrasound.
+    pubmed_query: '"birth weight"[tiab] OR birthweight[tiab] OR "low birth weight"[tiab] OR "small for gestational age"[tiab] OR "large for gestational age"[tiab] OR "fetal growth"[tiab] OR "foetal growth"[tiab]'
+    mesh_terms: ['Birth Weight', 'Infant, Low Birth Weight', 'Infant, Small for Gestational Age', 'Fetal Development', 'Fetal Growth Retardation']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'low birth weight infant'}
+      - {vocabulary: SNOMED, search_term: 'small for gestational age'}
+    source_refs: [maitre2018]
+
+  - id: congenital_anomalies
+    group: outcome
+    label: Congenital anomalies
+    definition: >
+      Birth defects: congenital heart defects, neural tube defects, orofacial
+      clefts and others.
+    pubmed_query: '"birth defect"[tiab] OR "birth defects"[tiab] OR "congenital anomaly"[tiab] OR "congenital anomalies"[tiab] OR "congenital heart"[tiab] OR "neural tube defect"[tiab] OR "neural tube defects"[tiab] OR "orofacial cleft"[tiab] OR "cleft lip"[tiab]'
+    mesh_terms: ['Congenital Abnormalities', 'Heart Defects, Congenital', 'Neural Tube Defects', 'Cleft Lip']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'congenital anomaly'}
+    source_refs: [wild2005]
+
+  - id: pregnancy_complications
+    group: outcome
+    label: Pregnancy complications
+    definition: >
+      Maternal outcomes of pregnancy: hypertensive disorders including
+      preeclampsia, gestational diabetes, stillbirth and severe maternal
+      morbidity.
+    pubmed_query: 'preeclampsia[tiab] OR pre-eclampsia[tiab] OR "gestational hypertension"[tiab] OR "hypertensive disorders of pregnancy"[tiab] OR "gestational diabetes"[tiab] OR stillbirth[tiab] OR "severe maternal morbidity"[tiab]'
+    mesh_terms: ['Pre-Eclampsia', 'Hypertension, Pregnancy-Induced', 'Diabetes, Gestational', 'Stillbirth']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'pre-eclampsia'}
+      - {vocabulary: SNOMED, search_term: 'gestational diabetes mellitus'}
+    source_refs: [hu2023]
+
+  - id: childhood_cancer
+    group: outcome
+    label: Childhood cancer
+    definition: >
+      Cancer in children and adolescents, chiefly leukaemia, brain tumours and
+      lymphoma.
+    pubmed_query: '("childhood cancer"[tiab] OR "pediatric cancer"[tiab] OR "paediatric cancer"[tiab] OR leukemia[tiab] OR leukaemia[tiab] OR "brain tumor"[tiab] OR "brain tumour"[tiab] OR lymphoma[tiab] OR neuroblastoma[tiab])'
+    mesh_terms: ['Neoplasms', 'Leukemia', 'Precursor Cell Lymphoblastic Leukemia-Lymphoma', 'Brain Neoplasms']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'acute lymphoid leukemia'}
+    source_refs: [wild2005]
+
+  - id: infection
+    group: outcome
+    label: Infection and infection-related care
+    definition: >
+      Infections and their consequences: respiratory infections, COVID-19,
+      bronchiolitis, otitis media, infection-related hospitalisation.
+    pubmed_query: 'infection[tiab] OR infections[tiab] OR COVID-19[tiab] OR SARS-CoV-2[tiab] OR bronchiolitis[tiab] OR pneumonia[tiab] OR "otitis media"[tiab] OR "respiratory syncytial virus"[tiab] OR influenza[tiab]'
+    mesh_terms: ['Respiratory Tract Infections', 'COVID-19', 'Bronchiolitis', 'Otitis Media', 'Pneumonia']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'COVID-19'}
+      - {vocabulary: SNOMED, search_term: 'bronchiolitis'}
+    source_refs: [hu2023]
+
+  - id: vaccine_adverse_event
+    group: outcome
+    label: Vaccine adverse event
+    definition: >
+      An event studied as a possible adverse reaction to a vaccine: febrile
+      seizure, fever, anaphylaxis, Guillain-Barre syndrome, intussusception,
+      myocarditis.
+    pubmed_query: '"febrile seizure"[tiab] OR "febrile seizures"[tiab] OR "febrile convulsion"[tiab] OR "febrile convulsions"[tiab] OR "adverse event following immunization"[tiab] OR "adverse events following immunization"[tiab] OR "adverse events following immunisation"[tiab] OR intussusception[tiab] OR "Guillain-Barre"[tiab] OR anaphylaxis[tiab] OR myocarditis[tiab]'
+    mesh_terms: ['Seizures, Febrile', 'Intussusception', 'Guillain-Barre Syndrome', 'Anaphylaxis', 'Drug-Related Side Effects and Adverse Reactions']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'febrile convulsion'}
+      - {vocabulary: SNOMED, search_term: 'adverse reaction to vaccine product'}
+    source_refs: [macdonald2014]
+
+  - id: mortality
+    group: outcome
+    label: Mortality
+    definition: >
+      Death from any cause or a specific cause, including infant mortality and
+      sudden infant death.
+    pubmed_query: 'mortality[tiab] OR death[tiab] OR deaths[tiab] OR "sudden infant death"[tiab] OR SIDS[tiab]'
+    mesh_terms: ['Mortality', 'Infant Mortality', 'Sudden Infant Death', 'Death']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'death'}
+      - {vocabulary: SNOMED, search_term: 'sudden infant death syndrome'}
+    source_refs: [patel2010, hu2023]
+
+  - id: healthcare_utilization
+    group: outcome
+    label: Health care use
+    definition: >
+      Emergency department visits, hospitalisation, primary care visits or
+      costs, studied as an outcome.
+    pubmed_query: '"emergency department"[tiab] OR "emergency visits"[tiab] OR hospitalization[tiab] OR hospitalizations[tiab] OR hospitalisation[tiab] OR "hospital admission"[tiab] OR "hospital admissions"[tiab] OR "health care utilization"[tiab] OR "healthcare utilization"[tiab]'
+    mesh_terms: ['Emergency Service, Hospital', 'Hospitalization', 'Patient Acceptance of Health Care']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'emergency department visit'}
+      - {vocabulary: SNOMED, search_term: 'hospital admission'}
+    source_refs: [hu2023, correa2022]
+
+  - id: puberty_growth
+    group: outcome
+    label: Puberty timing and linear growth
+    definition: >
+      Age at puberty or menarche, precocious puberty, and height or linear
+      growth.
+    pubmed_query: 'puberty[tiab] OR pubertal[tiab] OR menarche[tiab] OR "precocious puberty"[tiab] OR "linear growth"[tiab] OR stunting[tiab]'
+    mesh_terms: ['Puberty', 'Menarche', 'Puberty, Precocious', 'Growth Disorders']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'precocious puberty'}
+    source_refs: [maitre2018]
+
+  # --------------------------------------------------------------- data_source
+  - id: ehr
+    group: data_source
+    label: Electronic health records
+    definition: >
+      Electronic health or medical records from clinical care: diagnoses,
+      encounters, vital signs, laboratory results, medications.
+    pubmed_query: '"electronic health record"[tiab] OR "electronic health records"[tiab] OR "electronic medical record"[tiab] OR "electronic medical records"[tiab] OR EHR[tiab] OR EHRs[tiab] OR EMR[tiab] OR EMRs[tiab] OR "clinical data warehouse"[tiab] OR PCORnet[tiab] OR OneFlorida[tiab] OR PEDSnet[tiab] OR "TriNetX"[tiab]'
+    mesh_terms: ['Electronic Health Records', 'Medical Records Systems, Computerized']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'electronic health record'}
+    source_refs: [brokamp2018, hu2023]
+
+  - id: claims
+    group: data_source
+    label: Insurance claims
+    definition: >
+      Billing or insurance claims data: Medicaid, Medicare, commercial claims,
+      national health insurance databases.
+    pubmed_query: '"claims data"[tiab] OR "insurance claims"[tiab] OR "administrative claims"[tiab] OR "claims database"[tiab] OR "Medicaid claims"[tiab] OR MarketScan[tiab] OR "National Health Insurance"[tiab] OR "health insurance database"[tiab]'
+    mesh_terms: ['Administrative Claims, Healthcare', 'Insurance Claim Review', 'Medicaid']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'insurance claim'}
+    source_refs: [hu2023]
+
+  - id: health_registry
+    group: data_source
+    label: Health registry
+    definition: >
+      A population or disease registry: birth, death, cancer, prescription,
+      patient or national health registers.
+    pubmed_query: 'registry[tiab] OR registries[tiab] OR register[tiab] OR registers[tiab] OR "birth certificate"[tiab] OR "birth certificates"[tiab] OR "vital statistics"[tiab] OR "vital records"[tiab]'
+    mesh_terms: ['Registries', 'Birth Certificates', 'Vital Statistics']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'registry'}
+    source_refs: [macdonald2014]
+
+  - id: immunization_surveillance
+    group: data_source
+    label: Immunization registry or vaccine surveillance system
+    definition: >
+      An immunization information system or vaccine safety surveillance
+      system: Vaccine Safety Datalink, VAERS, provincial vaccine registries.
+    pubmed_query: '"immunization registry"[tiab] OR "immunisation registry"[tiab] OR "immunization information system"[tiab] OR "Vaccine Safety Datalink"[tiab] OR VAERS[tiab] OR "Vaccine Adverse Event Reporting System"[tiab]'
+    mesh_terms: ['Adverse Drug Reaction Reporting Systems', 'Immunization Programs']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'immunization record'}
+    source_refs: [macdonald2014]
+
+  - id: record_linkage
+    group: data_source
+    label: Record linkage
+    definition: >
+      Individual-level linkage of two or more data sources, such as hospital
+      records to a birth registry or to environmental data by address.
+    pubmed_query: '"record linkage"[tiab] OR "linked data"[tiab] OR "data linkage"[tiab] OR "linked administrative"[tiab] OR "population-based linked"[tiab] OR "deterministic linkage"[tiab] OR "probabilistic linkage"[tiab]'
+    mesh_terms: ['Medical Record Linkage']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'record linkage'}
+    source_refs: [macdonald2014, brokamp2018]
+
+  - id: research_cohort
+    group: data_source
+    label: Research cohort
+    definition: >
+      Data collected for research by a prospective cohort, most often a birth
+      or mother-child cohort with its own visits, samples and questionnaires.
+    pubmed_query: '"birth cohort"[tiab] OR "birth cohorts"[tiab] OR "mother-child cohort"[tiab] OR "prospective cohort"[tiab] OR "longitudinal cohort"[tiab] OR HELIX[tiab] OR ECHO[tiab] OR "Generation R"[tiab] OR ALSPAC[tiab] OR "Project Viva"[tiab]'
+    mesh_terms: ['Cohort Studies', 'Prospective Studies', 'Longitudinal Studies']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'cohort study'}
+    source_refs: [maitre2018, vrijheid2020]
+
+  - id: national_survey
+    group: data_source
+    label: National health survey
+    definition: >
+      A repeated cross-sectional national survey with examination or biomarker
+      data, such as NHANES.
+    pubmed_query: 'NHANES[tiab] OR "National Health and Nutrition Examination Survey"[tiab] OR "National Survey of Children''s Health"[tiab] OR "Behavioral Risk Factor Surveillance"[tiab] OR "national survey"[tiab]'
+    mesh_terms: ['Nutrition Surveys', 'Health Surveys']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'health survey'}
+    source_refs: [patel2010]
+
+  - id: biobank
+    group: data_source
+    label: Biobank
+    definition: >
+      A biobank linking stored samples or genotypes to health records, such as
+      UK Biobank or All of Us.
+    pubmed_query: 'biobank[tiab] OR biobanks[tiab] OR "UK Biobank"[tiab] OR "All of Us"[tiab] OR "Million Veteran Program"[tiab]'
+    mesh_terms: ['Biological Specimen Banks']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'biobank'}
+    source_refs: [wild2005]
+
+  # ---------------------------------------------------------------- assessment
+  - id: residential_geocoding
+    group: assessment
+    label: Residential address geocoding
+    definition: >
+      Assigning area-level exposures from a geocoded home address, census tract
+      or postcode.
+    pubmed_query: 'geocoded[tiab] OR geocoding[tiab] OR "residential address"[tiab] OR "residential addresses"[tiab] OR "home address"[tiab] OR "census tract"[tiab] OR "census tracts"[tiab] OR "zip code"[tiab] OR postcode[tiab] OR "geographic information system"[tiab] OR GIS[tiab]'
+    mesh_terms: ['Geographic Information Systems', 'Geographic Mapping', 'Spatial Analysis']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'geographic location'}
+    source_refs: [brokamp2018, hu2023, correa2022]
+
+  - id: spatial_model
+    group: assessment
+    label: Spatial or satellite exposure model
+    definition: >
+      An exposure surface estimated by land-use regression, dispersion,
+      chemical transport, satellite remote sensing or machine-learning models.
+    pubmed_query: '"land use regression"[tiab] OR "land-use regression"[tiab] OR "satellite-based"[tiab] OR "remote sensing"[tiab] OR "dispersion model"[tiab] OR "chemical transport model"[tiab] OR "spatiotemporal model"[tiab] OR "exposure model"[tiab] OR "aerosol optical depth"[tiab]'
+    mesh_terms: ['Remote Sensing Technology', 'Spatio-Temporal Analysis', 'Models, Theoretical']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'environmental exposure assessment'}
+    source_refs: [brokamp2018, maitre2018]
+
+  - id: monitoring_station
+    group: assessment
+    label: Fixed monitoring station
+    definition: >
+      Exposure taken from the nearest regulatory air quality or weather
+      monitor.
+    pubmed_query: '"monitoring station"[tiab] OR "monitoring stations"[tiab] OR "air quality monitor"[tiab] OR "air quality monitors"[tiab] OR "nearest monitor"[tiab] OR "Air Quality System"[tiab]'
+    mesh_terms: ['Environmental Monitoring']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'environmental monitoring'}
+    source_refs: [wild2005]
+
+  - id: biomonitoring
+    group: assessment
+    label: Biomonitoring
+    definition: >
+      Measuring a chemical or its metabolite in blood, urine, hair, breast milk
+      or another biological sample.
+    pubmed_query: 'biomonitoring[tiab] OR biomarker[tiab] OR biomarkers[tiab] OR "urinary concentrations"[tiab] OR "blood concentrations"[tiab] OR "serum concentrations"[tiab] OR metabolomics[tiab] OR "cord blood"[tiab]'
+    mesh_terms: ['Biological Monitoring', 'Biomarkers', 'Metabolomics', 'Fetal Blood']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'biological monitoring'}
+    source_refs: [patel2010, maitre2018, vrijheid2020, wild2005]
+
+  - id: questionnaire
+    group: assessment
+    label: Questionnaire or interview
+    definition: >
+      Exposure reported by the participant or a parent in a questionnaire or
+      interview.
+    pubmed_query: 'questionnaire[tiab] OR questionnaires[tiab] OR "self-reported"[tiab] OR "parent-reported"[tiab] OR "parental report"[tiab] OR interview[tiab] OR interviews[tiab]'
+    mesh_terms: ['Surveys and Questionnaires', 'Self Report']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'questionnaire'}
+    source_refs: [maitre2018, vrijheid2020]
+
+  - id: personal_sensor
+    group: assessment
+    label: Personal sensor or wearable
+    definition: >
+      A personal monitor, wearable sensor, smartphone or GPS tracking used to
+      measure an individual's exposure directly.
+    pubmed_query: '"personal monitoring"[tiab] OR "personal exposure"[tiab] OR "personal monitor"[tiab] OR "wearable sensor"[tiab] OR "wearable sensors"[tiab] OR wearable[tiab] OR smartphone[tiab] OR GPS[tiab]'
+    mesh_terms: ['Wearable Electronic Devices', 'Geographic Information Systems']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'personal exposure monitoring'}
+    source_refs: [maitre2018, wild2005]
+
+  - id: record_based_exposure
+    group: assessment
+    label: Exposure taken from health records
+    definition: >
+      An exposure read from the health record itself: a vaccination record, a
+      prescription, a recorded smoking status or a screening test result.
+    pubmed_query: '("vaccination record"[tiab] OR "vaccination records"[tiab] OR "immunization record"[tiab] OR "immunization records"[tiab] OR "prescription records"[tiab] OR "dispensing records"[tiab] OR "smoking status"[tiab]) AND (record[tiab] OR records[tiab] OR registry[tiab] OR EHR[tiab])'
+    mesh_terms: ['Medical Records', 'Drug Prescriptions']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'medical record'}
+    source_refs: [macdonald2014, hu2023]
+
+  # -------------------------------------------------------------------- design
+  - id: exposome_wide_design
+    group: design
+    label: Exposome-wide association design
+    definition: >
+      Testing many exposures agnostically against one outcome with correction
+      for multiple testing (EWAS, ExWAS), including polyexposure risk scores.
+    pubmed_query: '"environment-wide association"[tiab] OR "exposome-wide association"[tiab] OR "exposome wide association"[tiab] OR ExWAS[tiab] OR EWAS[tiab] OR "polyexposure"[tiab] OR "polyexposomic"[tiab] OR "exposome-wide"[tiab]'
+    mesh_terms: ['Exposome', 'Genome-Wide Association Study']
+    concepts:
+      - {vocabulary: NCIt, search_term: 'exposome'}
+    source_refs: [patel2010, vrijheid2020, hu2023]
+
+  - id: mixture_methods
+    group: design
+    label: Exposure mixture methods
+    definition: >
+      Statistical methods for joint effects of correlated exposures: weighted
+      quantile sum, Bayesian kernel machine regression, quantile g-computation.
+    pubmed_query: '"weighted quantile sum"[tiab] OR WQS[tiab] OR "Bayesian kernel machine regression"[tiab] OR BKMR[tiab] OR "quantile g-computation"[tiab] OR "mixture analysis"[tiab] OR "exposure mixture"[tiab] OR "exposure mixtures"[tiab] OR "chemical mixtures"[tiab]'
+    mesh_terms: ['Complex Mixtures']
+    concepts:
+      - {vocabulary: NCIt, search_term: 'statistical method'}
+    source_refs: [vrijheid2020]
+
+  - id: self_controlled_design
+    group: design
+    label: Self-controlled design
+    definition: >
+      A design in which each person is their own control: self-controlled case
+      series, case-crossover, risk-interval designs.
+    pubmed_query: '"self-controlled case series"[tiab] OR "self controlled case series"[tiab] OR SCCS[tiab] OR "case-crossover"[tiab] OR "case crossover"[tiab] OR "risk interval"[tiab] OR "risk-interval"[tiab]'
+    mesh_terms: ['Cross-Over Studies']
+    concepts:
+      - {vocabulary: NCIt, search_term: 'case-crossover study'}
+    source_refs: [macdonald2014]
+
+  - id: time_series_design
+    group: design
+    label: Time-series design
+    definition: >
+      Daily or weekly counts of events regressed on short-term exposure
+      variation, often with distributed lags.
+    pubmed_query: '"time-series"[tiab] OR "time series"[tiab] OR "distributed lag"[tiab] OR "short-term exposure"[tiab]'
+    mesh_terms: ['Interrupted Time Series Analysis']
+    concepts:
+      - {vocabulary: NCIt, search_term: 'time series analysis'}
+    source_refs: [wild2005]
+
+  - id: machine_learning
+    group: design
+    label: Machine learning
+    definition: >
+      Random forests, gradient boosting, neural networks, LASSO or other
+      machine learning used for prediction or variable selection.
+    pubmed_query: '"machine learning"[tiab] OR "random forest"[tiab] OR "gradient boosting"[tiab] OR XGBoost[tiab] OR "neural network"[tiab] OR "deep learning"[tiab] OR LASSO[tiab] OR "elastic net"[tiab]'
+    mesh_terms: ['Machine Learning', 'Neural Networks, Computer']
+    concepts:
+      - {vocabulary: NCIt, search_term: 'machine learning'}
+    source_refs: [vrijheid2020, hu2023]
+
+  - id: gene_environment
+    group: design
+    label: Gene-environment interaction
+    definition: >
+      Joint analysis of genotypes and exposures, including GxE interaction
+      tests and polygenic-by-exposure models.
+    pubmed_query: '"gene-environment"[tiab] OR "gene environment"[tiab] OR "GxE"[tiab] OR "G x E"[tiab] OR "polygenic risk"[tiab]'
+    mesh_terms: ['Gene-Environment Interaction']
+    concepts:
+      - {vocabulary: NCIt, search_term: 'gene-environment interaction'}
+    source_refs: [wild2005, patel2010]
+
+  # ---------------------------------------------------------------- population
+  - id: prenatal_window
+    group: population
+    label: Pregnancy or prenatal window
+    definition: >
+      Exposure in pregnancy, or pregnant people enrolled.
+    pubmed_query: 'prenatal[tiab] OR pregnancy[tiab] OR pregnant[tiab] OR "in utero"[tiab] OR gestational[tiab] OR antenatal[tiab] OR maternal[tiab]'
+    mesh_terms: ['Pregnancy', 'Prenatal Exposure Delayed Effects']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'pregnancy'}
+    source_refs: [maitre2018, vrijheid2020, hu2023]
+
+  - id: infant
+    group: population
+    label: Infants
+    definition: >
+      Newborns and infants under two years old.
+    pubmed_query: 'infant[tiab] OR infants[tiab] OR newborn[tiab] OR newborns[tiab] OR neonatal[tiab] OR neonate[tiab] OR neonates[tiab] OR toddler[tiab] OR toddlers[tiab]'
+    mesh_terms: ['Infant', 'Infant, Newborn']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'infant'}
+    source_refs: [macdonald2014]
+
+  - id: child
+    group: population
+    label: Children
+    definition: >
+      Children from two to twelve years old.
+    pubmed_query: 'child[tiab] OR children[tiab] OR childhood[tiab] OR pediatric[tiab] OR paediatric[tiab] OR preschool[tiab] OR "school-age"[tiab]'
+    mesh_terms: ['Child', 'Child, Preschool']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'child'}
+    source_refs: [maitre2018, vrijheid2020, correa2022]
+
+  - id: adolescent
+    group: population
+    label: Adolescents
+    definition: >
+      Young people from thirteen to eighteen years old.
+    pubmed_query: 'adolescent[tiab] OR adolescents[tiab] OR adolescence[tiab] OR teenager[tiab] OR teenagers[tiab] OR youth[tiab]'
+    mesh_terms: ['Adolescent']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'adolescent'}
+    source_refs: [maitre2018]
+
+  - id: adult
+    group: population
+    label: Adults
+    definition: >
+      Adults, including older adults.
+    pubmed_query: 'adult[tiab] OR adults[tiab] OR "older adults"[tiab] OR elderly[tiab] OR "middle-aged"[tiab]'
+    mesh_terms: ['Adult', 'Middle Aged', 'Aged', 'Young Adult']
+    concepts:
+      - {vocabulary: SNOMED, search_term: 'adult'}
+    source_refs: [patel2010, hu2023]
+
+seed_references:
+  wild2005:
+    citation: 'Wild CP. Complementing the genome with an "exposome": the outstanding challenge of environmental exposure measurement in molecular epidemiology. Cancer Epidemiol Biomarkers Prev, 2005.'
+    pubmed_lookup: 'Complementing the genome with an exposome[Title] AND Wild CP[Author]'
+    expected_title: 'Complementing the genome with an "exposome": the outstanding challenge of environmental exposure measurement in molecular epidemiology.'
+    expected_pmid: '16103423'
+  patel2010:
+    citation: 'Patel CJ, Bhattacharya J, Butte AJ. An Environment-Wide Association Study (EWAS) on type 2 diabetes mellitus. PLoS ONE, 2010.'
+    pubmed_lookup: 'Environment-Wide Association Study EWAS on type 2 diabetes mellitus[Title] AND Patel CJ[Author]'
+    expected_title: 'An Environment-Wide Association Study (EWAS) on type 2 diabetes mellitus.'
+    expected_pmid: '20505766'
+  maitre2018:
+    citation: 'Maitre L, de Bont J, Casas M, et al. Human Early Life Exposome (HELIX) study: a European population-based exposome cohort. BMJ Open, 2018.'
+    pubmed_lookup: 'Human Early Life Exposome HELIX study European population-based exposome cohort[Title] AND Maitre L[Author]'
+    expected_title: 'Human Early Life Exposome (HELIX) study: a European population-based exposome cohort.'
+    expected_pmid: '30206078'
+  vrijheid2020:
+    citation: 'Vrijheid M, Fossati S, Maitre L, et al. Early-life environmental exposures and childhood obesity: an exposome-wide approach. Environ Health Perspect, 2020.'
+    pubmed_lookup: 'Early-Life Environmental Exposures and Childhood Obesity Exposome-Wide Approach[Title]'
+    expected_title: 'Early-Life Environmental Exposures and Childhood Obesity: An Exposome-Wide Approach.'
+    expected_pmid: '32579081'
+  brokamp2018:
+    citation: 'Brokamp C, Wolfe C, Lingren T, Harley J, Ryan P. Decentralized and reproducible geocoding and characterization of community and environmental exposures for multisite studies. J Am Med Inform Assoc, 2018.'
+    pubmed_lookup: 'Decentralized and reproducible geocoding[Title] AND Brokamp C[Author]'
+    expected_title: 'Decentralized and reproducible geocoding and characterization of community and environmental exposures for multisite studies.'
+    expected_pmid: '29126118'
+  hu2023:
+    citation: 'Hu H, et al. A spatial and contextual exposome-wide association study and polyexposomic score of COVID-19 hospitalization. Exposome, 2023.'
+    pubmed_lookup: 'spatial and contextual exposome-wide association study polyexposomic score COVID-19 hospitalization[Title]'
+    expected_title: 'A spatial and contextual exposome-wide association study and polyexposomic score of COVID-19 hospitalization.'
+    expected_pmid: '37089437'
+  correa2022:
+    citation: 'Correa-Agudelo E, et al. Understanding racial disparities in childhood asthma using individual- and neighborhood-level risk factors. J Allergy Clin Immunol, 2022.'
+    pubmed_lookup: 'Understanding racial disparities in childhood asthma using individual- and neighborhood-level risk factors[Title]'
+    expected_title: 'Understanding racial disparities in childhood asthma using individual- and neighborhood-level risk factors.'
+    expected_pmid: '35970309'
+  macdonald2014:
+    citation: 'MacDonald SE, Dover DC, Simmonds KA, et al. Risk of febrile seizures after first dose of measles-mumps-rubella-varicella vaccine: a population-based cohort study. CMAJ, 2014.'
+    pubmed_lookup: 'Risk of febrile seizures after first dose of measles-mumps-rubella-varicella vaccine[Title]'
+    expected_title: 'Risk of febrile seizures after first dose of measles-mumps-rubella-varicella vaccine: a population-based cohort study.'
+    expected_pmid: '24914115'

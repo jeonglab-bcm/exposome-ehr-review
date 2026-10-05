@@ -1,0 +1,212 @@
+# Ontology over the exposome / EHR vocabulary.
+#
+# The evidence graph runs from exposures to outcomes, and from both to the
+# data and methods they were observed through. The questions its links answer
+# are in docs/COMPETENCY_QUESTIONS.md.
+#
+# Two kinds of edge live here:
+#
+#   1. Taxonomy (`is_a`, provenance 'taxonomy'): what kind of thing each topic
+#      is. Hand-maintained below. Structure, not a literature claim.
+#
+#   2. Literature links (every other predicate): generated from the quoted
+#      claims in config/relation_excerpts.yaml by scripts/build_relations.py.
+#      Do not edit that block by hand. Provenance names the papers whose
+#      passages back the link.
+#
+# Predicates. `domain` and `range` are facet groups (or class kinds); they limit
+# which ordered pairs the decision models are offered, and nothing else.
+# `option` is the stage-3 answer text and `statement` the stage-4 template, so
+# the questions are defined here, next to the predicates they ask about.
+#
+#   is_a               - what kind of thing a topic is. Transitive.
+#   risk_factor_for    - the paper reports that the exposure is associated with
+#                        more of, or a higher risk of, the outcome.
+#   protective_for     - the paper reports that the exposure is associated with
+#                        less of, or a lower risk of, the outcome.
+#   no_association_with- the paper reports no association between the exposure
+#                        and the outcome. Null results are kept: an evidence
+#                        map without them over-states every exposure.
+#   assessed_by        - how the exposure was assigned to people.
+#   ascertained_from   - which data source the outcome or exposure was taken
+#                        from (e.g. asthma from EHR diagnosis codes).
+#   linked_with        - two data sources (or a data source and an exposure
+#                        model) joined at the individual level. Symmetric.
+
+predicates:
+  is_a:                {transitive: true,  subsumption: true,  inverse: subsumes}
+  risk_factor_for:
+    transitive: false
+    subsumption: false
+    inverse: has_risk_factor
+    domain: [exposure]
+    range: [outcome]
+    option: 'an exposure associated with more of, or a higher risk of, an outcome'
+    statement: '{a} is associated with more {b} or a higher risk of {b}'
+  protective_for:
+    transitive: false
+    subsumption: false
+    inverse: has_protective_factor
+    domain: [exposure]
+    range: [outcome]
+    option: 'an exposure associated with less of, or a lower risk of, an outcome'
+    statement: '{a} is associated with less {b} or a lower risk of {b}'
+  no_association_with:
+    transitive: false
+    subsumption: false
+    inverse: no_association_with
+    symmetric: false
+    domain: [exposure]
+    range: [outcome]
+    option: 'an exposure found not to be associated with an outcome'
+    statement: '{a} was not associated with {b}'
+  assessed_by:
+    transitive: false
+    subsumption: false
+    inverse: assesses
+    domain: [exposure]
+    range: [assessment]
+    option: 'how an exposure was measured or assigned'
+    statement: '{a} was measured or assigned by {b}'
+  ascertained_from:
+    transitive: false
+    subsumption: false
+    inverse: source_of
+    domain: [outcome, exposure]
+    range: [data_source]
+    option: 'the data source an outcome or exposure was taken from'
+    statement: '{a} was identified or taken from {b}'
+  linked_with:
+    transitive: false
+    subsumption: false
+    inverse: linked_with
+    symmetric: true
+    domain: [data_source, assessment]
+    range: [data_source, assessment]
+    option: 'two data sources joined person by person, or by address'
+    statement: '{a} was linked to {b}'
+
+# Abstract nodes. Nothing is harvested for them; they exist so the taxonomy can
+# group facets, and so OMOP domains can be read off a facet's ancestors.
+classes:
+  - {id: exposome_axis, label: 'Exposome and EHR topics', kind: root}
+  - {id: external_exposure, label: 'External exposure', kind: class}
+  - {id: air_pollution, label: 'Air pollution', kind: exposure_class}
+  - {id: chemical_exposure, label: 'Chemical exposure', kind: exposure_class}
+  - {id: physical_environment, label: 'Physical environment', kind: exposure_class}
+  - {id: social_environment, label: 'Social environment', kind: exposure_class}
+  - {id: medical_exposure, label: 'Medical exposure', kind: exposure_class}
+  - {id: health_outcome, label: 'Health outcome', kind: class}
+  - {id: respiratory_allergic_outcome, label: 'Respiratory and allergic outcome', kind: outcome_class}
+  - {id: perinatal_outcome, label: 'Perinatal outcome', kind: outcome_class}
+  - {id: neurodevelopmental_outcome, label: 'Neurodevelopmental and mental health outcome', kind: outcome_class}
+  - {id: metabolic_growth_outcome, label: 'Metabolic and growth outcome', kind: outcome_class}
+  - {id: immune_infectious_outcome, label: 'Immune and infectious outcome', kind: outcome_class}
+  - {id: data_source_class, label: 'Data source', kind: class}
+  - {id: routinely_collected_data, label: 'Routinely collected individual-level data', kind: data_class}
+  - {id: research_collected_data, label: 'Data collected for research', kind: data_class}
+  - {id: exposure_assessment, label: 'Exposure assessment', kind: class}
+  - {id: area_level_assessment, label: 'Area-level (address-based) assessment', kind: assessment_class}
+  - {id: individual_level_assessment, label: 'Individual-level assessment', kind: assessment_class}
+  - {id: study_design_class, label: 'Study design or analysis', kind: class}
+  - {id: life_stage, label: 'Life stage', kind: class}
+
+relations:
+
+  # ---- taxonomy (is_a), hand-maintained ------------------------------------
+  - [external_exposure, is_a, exposome_axis, 'taxonomy']
+  - [health_outcome, is_a, exposome_axis, 'taxonomy']
+  - [data_source_class, is_a, exposome_axis, 'taxonomy']
+  - [exposure_assessment, is_a, exposome_axis, 'taxonomy']
+  - [study_design_class, is_a, exposome_axis, 'taxonomy']
+  - [life_stage, is_a, exposome_axis, 'taxonomy']
+
+  - [air_pollution, is_a, external_exposure, 'taxonomy']
+  - [chemical_exposure, is_a, external_exposure, 'taxonomy']
+  - [physical_environment, is_a, external_exposure, 'taxonomy']
+  - [social_environment, is_a, external_exposure, 'taxonomy']
+  - [medical_exposure, is_a, external_exposure, 'taxonomy']
+  - [particulate_matter, is_a, air_pollution, 'taxonomy']
+  - [traffic_related_air_pollution, is_a, air_pollution, 'taxonomy']
+  - [ozone, is_a, air_pollution, 'taxonomy']
+  - [wildfire_smoke, is_a, air_pollution, 'taxonomy']
+  - [indoor_air, is_a, air_pollution, 'taxonomy']
+  - [tobacco_smoke, is_a, air_pollution, 'taxonomy']
+  - [lead, is_a, chemical_exposure, 'taxonomy']
+  - [other_metals, is_a, chemical_exposure, 'taxonomy']
+  - [endocrine_disruptors, is_a, chemical_exposure, 'taxonomy']
+  - [persistent_organic_pollutants, is_a, chemical_exposure, 'taxonomy']
+  - [pesticides, is_a, chemical_exposure, 'taxonomy']
+  - [drinking_water_contamination, is_a, chemical_exposure, 'taxonomy']
+  - [temperature_heat, is_a, physical_environment, 'taxonomy']
+  - [noise, is_a, physical_environment, 'taxonomy']
+  - [green_blue_space, is_a, physical_environment, 'taxonomy']
+  - [built_environment, is_a, physical_environment, 'taxonomy']
+  - [neighborhood_deprivation, is_a, social_environment, 'taxonomy']
+  - [individual_social_factors, is_a, social_environment, 'taxonomy']
+  - [structural_racism, is_a, social_environment, 'taxonomy']
+  - [violence_crime, is_a, social_environment, 'taxonomy']
+  - [vaccination, is_a, medical_exposure, 'taxonomy']
+  - [prenatal_medication, is_a, medical_exposure, 'taxonomy']
+
+  - [respiratory_allergic_outcome, is_a, health_outcome, 'taxonomy']
+  - [perinatal_outcome, is_a, health_outcome, 'taxonomy']
+  - [neurodevelopmental_outcome, is_a, health_outcome, 'taxonomy']
+  - [metabolic_growth_outcome, is_a, health_outcome, 'taxonomy']
+  - [immune_infectious_outcome, is_a, health_outcome, 'taxonomy']
+  - [asthma_wheeze, is_a, respiratory_allergic_outcome, 'taxonomy']
+  - [lung_function, is_a, respiratory_allergic_outcome, 'taxonomy']
+  - [allergic_disease, is_a, respiratory_allergic_outcome, 'taxonomy']
+  - [preterm_birth, is_a, perinatal_outcome, 'taxonomy']
+  - [fetal_growth, is_a, perinatal_outcome, 'taxonomy']
+  - [congenital_anomalies, is_a, perinatal_outcome, 'taxonomy']
+  - [pregnancy_complications, is_a, perinatal_outcome, 'taxonomy']
+  - [neurodevelopment, is_a, neurodevelopmental_outcome, 'taxonomy']
+  - [adhd_autism, is_a, neurodevelopmental_outcome, 'taxonomy']
+  - [mental_health, is_a, neurodevelopmental_outcome, 'taxonomy']
+  - [obesity_adiposity, is_a, metabolic_growth_outcome, 'taxonomy']
+  - [cardiometabolic, is_a, metabolic_growth_outcome, 'taxonomy']
+  - [puberty_growth, is_a, metabolic_growth_outcome, 'taxonomy']
+  - [type1_diabetes_autoimmunity, is_a, immune_infectious_outcome, 'taxonomy']
+  - [infection, is_a, immune_infectious_outcome, 'taxonomy']
+  - [vaccine_adverse_event, is_a, immune_infectious_outcome, 'taxonomy']
+  - [childhood_cancer, is_a, health_outcome, 'taxonomy']
+  - [mortality, is_a, health_outcome, 'taxonomy']
+  - [healthcare_utilization, is_a, health_outcome, 'taxonomy']
+
+  - [routinely_collected_data, is_a, data_source_class, 'taxonomy']
+  - [research_collected_data, is_a, data_source_class, 'taxonomy']
+  - [ehr, is_a, routinely_collected_data, 'taxonomy']
+  - [claims, is_a, routinely_collected_data, 'taxonomy']
+  - [health_registry, is_a, routinely_collected_data, 'taxonomy']
+  - [immunization_surveillance, is_a, routinely_collected_data, 'taxonomy']
+  - [record_linkage, is_a, routinely_collected_data, 'taxonomy']
+  - [research_cohort, is_a, research_collected_data, 'taxonomy']
+  - [national_survey, is_a, research_collected_data, 'taxonomy']
+  - [biobank, is_a, research_collected_data, 'taxonomy']
+
+  - [area_level_assessment, is_a, exposure_assessment, 'taxonomy']
+  - [individual_level_assessment, is_a, exposure_assessment, 'taxonomy']
+  - [residential_geocoding, is_a, area_level_assessment, 'taxonomy']
+  - [spatial_model, is_a, area_level_assessment, 'taxonomy']
+  - [monitoring_station, is_a, area_level_assessment, 'taxonomy']
+  - [biomonitoring, is_a, individual_level_assessment, 'taxonomy']
+  - [questionnaire, is_a, individual_level_assessment, 'taxonomy']
+  - [personal_sensor, is_a, individual_level_assessment, 'taxonomy']
+  - [record_based_exposure, is_a, individual_level_assessment, 'taxonomy']
+
+  - [exposome_wide_design, is_a, study_design_class, 'taxonomy']
+  - [mixture_methods, is_a, study_design_class, 'taxonomy']
+  - [self_controlled_design, is_a, study_design_class, 'taxonomy']
+  - [time_series_design, is_a, study_design_class, 'taxonomy']
+  - [machine_learning, is_a, study_design_class, 'taxonomy']
+  - [gene_environment, is_a, study_design_class, 'taxonomy']
+
+  - [prenatal_window, is_a, life_stage, 'taxonomy']
+  - [infant, is_a, life_stage, 'taxonomy']
+  - [child, is_a, life_stage, 'taxonomy']
+  - [adolescent, is_a, life_stage, 'taxonomy']
+  - [adult, is_a, life_stage, 'taxonomy']
+
+  # >>> generated from config/relation_excerpts.yaml by scripts/build_relations.py; do not edit
+  # <<< end of generated links

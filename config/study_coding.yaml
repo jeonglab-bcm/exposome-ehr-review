@@ -1,0 +1,108 @@
+# Per-paper study coding: the questions that replace the old ManuscriptChecklist.
+#
+# The previous pipeline asked one generative model to write a JSON checklist.
+# Here every field is a typed decision: a yes/no or a fixed set of options,
+# answered by a decision model with a probability, never free text. A field is
+# answered from the passages named in `read`:
+#
+#   abstract   - the title and abstract (every paper has these, PubMed or PMC)
+#   methods    - full-text paragraphs from Methods-like sections (PMC JATS only)
+#   availability - the data-availability statement (PMC JATS <back>, if present)
+#
+# `type`:
+#   yes_no  - one probability; the answer is yes when p >= `gate` (default 0.5).
+#             Asked of each passage; the paper's answer is the largest p.
+#   one_of  - a single answer; options always include `none`. Asked of each
+#             passage; the paper's answer is the option with the largest p over
+#             all passages, and `none` only if nothing beats it anywhere.
+#   any_of  - several answers, asked in rounds (pick the top, remove it, ask
+#             again) until `none` comes out on top, as in judge_paragraphs.py.
+#             The paper's answer is the union over passages.
+#
+# Every round is stored with its probabilities, so a stricter threshold is an
+# offline change, never a re-run.
+#
+# The free-text fields of the old checklist (summary, key findings,
+# limitations) are not decisions and are not asked. Each paper's verbatim
+# evidence is the passage that won each decision, kept by id.
+
+fields:
+
+  primary_research:
+    type: yes_no
+    read: [abstract]
+    question: 'Does `paragraph` report original research on data the authors analysed (not a review, commentary, protocol or editorial)?'
+    replaces: 'the publication-type and "review" filters of the old search'
+
+  routinely_collected_data:
+    type: yes_no
+    read: [abstract, methods]
+    question: 'Does `paragraph` say the study analysed individual-level data that were routinely collected for clinical care, billing or public-health administration before the study (EHR, claims, registry or linked administrative records)?'
+    replaces: 'ehr_used'
+    note: >
+      Same definition as the old ehr_used field: electronic, individual-level
+      and routinely collected. Chart review by study staff, research
+      questionnaires and aggregate counts do not count.
+
+  data_sources:
+    type: any_of
+    read: [abstract, methods]
+    question: 'Which of these data sources does `paragraph` say the study analysed?'
+    options_from_group: data_source
+    none: 'none of these data sources, or only another one'
+    replaces: 'data_source_type'
+
+  age_strata:
+    type: any_of
+    read: [abstract, methods]
+    question: 'Which of these life stages does `paragraph` say the study enrolled or studied exposure in?'
+    options_from_group: population
+    none: 'none of these life stages, or not stated'
+    replaces: 'cohort_type, population'
+
+  study_design:
+    type: one_of
+    read: [abstract, methods]
+    question: 'Which design does `paragraph` describe for this study?'
+    options:
+      cohort: 'cohort study (prospective or retrospective)'
+      case_control: 'case-control study'
+      cross_sectional: 'cross-sectional study'
+      self_controlled: 'self-controlled case series or case-crossover'
+      time_series: 'time-series or ecological study of counts'
+      trial: 'randomised or controlled trial'
+      exposome_wide: 'exposome-wide or environment-wide association study'
+    none: 'none of these designs, or not stated'
+    replaces: 'study_design'
+
+  exposures_studied:
+    type: any_of
+    read: [abstract]
+    question: 'Which of these exposures does `paragraph` say the study analysed?'
+    options_from_group: exposure
+    none: 'none of these exposures, or only another one'
+    replaces: 'exposure_domain'
+
+  outcomes_studied:
+    type: any_of
+    read: [abstract]
+    question: 'Which of these health outcomes does `paragraph` say the study analysed?'
+    options_from_group: outcome
+    none: 'none of these outcomes, or only another one'
+    replaces: 'pathologies_diseases'
+
+  data_availability:
+    type: one_of
+    read: [availability, methods]
+    question: 'How does `paragraph` say the study data can be obtained?'
+    options:
+      public_repository: 'deposited in a public repository or archive, with an accession number or link'
+      on_request: 'available from the authors or a data owner on request'
+      restricted: 'not shareable: held by an institution, registry or health system with access restrictions'
+      supplementary_only: 'only in the supplementary material'
+    none: 'not stated in this paragraph'
+    replaces: 'data_availability'
+    note: >
+      Accession numbers and repository URLs are still found by the regex
+      safety net from the previous pipeline (legacy/scan_data_availability.py),
+      which is deterministic and needs no model.

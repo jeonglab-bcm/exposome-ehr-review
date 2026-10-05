@@ -14,3 +14,20 @@ webapp.log
 
 # Local tooling
 .kanbots/
+
+# Corpus layer (ported from POTS-phenotyping). data/articles/*.jsonl IS tracked:
+# it is the reproducible corpus, sharded by PMID range. Everything below rebuilds from it offline.
+data/raw/
+data/db/
+data/*.sqlite
+data/*.sqlite-*
+data/articles.jsonl
+data/*.jsonl.tmp
+data/articles/*.tmp
+.pytest_cache/
+*.egg-info/
+_site/
+
+# Paragraph texts for the decision models are copyrighted; only their ids and
+# hashes (extraction/<run>/paragraphs.tsv) are committed.
+work/

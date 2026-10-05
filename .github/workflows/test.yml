@@ -1,0 +1,31 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Offline only: no model endpoint, no NCBI. The decision models are
+      # replaced by a fake in tests/test_decision_pipeline.py.
+      - name: Validate the vocabulary
+        run: PYTHONPATH=src python -m exposome_ehr.cli validate-vocab
+
+      - name: Literature links are generated from the excerpts
+        run: python scripts/build_relations.py --check
+
+      - name: Run tests
+        run: python -m pytest -q

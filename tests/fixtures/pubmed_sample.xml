@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<PubmedArticleSet>
+<PubmedArticle>
+  <MedlineCitation Status="MEDLINE" Owner="NLM" IndexingMethod="Curated">
+    <PMID Version="1">99900001</PMID>
+    <Article PubModel="Print-Electronic">
+      <Journal>
+        <ISSN IssnType="Electronic">1111-2222</ISSN>
+        <JournalIssue CitedMedium="Internet">
+          <Volume>14</Volume>
+          <Issue>3</Issue>
+          <PubDate><Year>2024</Year><Month>Mar</Month><Day>07</Day></PubDate>
+        </JournalIssue>
+        <Title>Journal of Test Autonomics</Title>
+        <ISOAbbreviation>J Test Auton</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Sudomotor and volume phenotypes in postural orthostatic tachycardia syndrome.</ArticleTitle>
+      <Pagination><MedlinePgn>101-115</MedlinePgn></Pagination>
+      <Abstract>
+        <AbstractText Label="BACKGROUND" NlmCategory="BACKGROUND">Phenotypes <i>overlap</i> substantially.</AbstractText>
+        <AbstractText Label="RESULTS" NlmCategory="RESULTS">QSART was reduced in 33% of patients.</AbstractText>
+      </Abstract>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Doe</LastName><ForeName>Jane A</ForeName><Initials>JA</Initials>
+          <Identifier Source="ORCID">0000-0002-1825-0097</Identifier>
+          <AffiliationInfo><Affiliation>Department of Neurology, Test University.</Affiliation></AffiliationInfo>
+          <AffiliationInfo><Affiliation>Second affiliation.</Affiliation></AffiliationInfo>
+        </Author>
+        <Author ValidYN="Y"><CollectiveName>The Test Autonomic Consortium</CollectiveName></Author>
+      </AuthorList>
+      <Language>eng</Language>
+      <GrantList CompleteYN="Y">
+        <Grant><GrantID>R01 TS000001</GrantID><Agency>NINDS NIH HHS</Agency><Country>United States</Country></Grant>
+      </GrantList>
+      <PublicationTypeList>
+        <PublicationType UI="D016428">Journal Article</PublicationType>
+        <PublicationType UI="D013485">Research Support, Non-U.S. Gov't</PublicationType>
+      </PublicationTypeList>
+      <ArticleDate DateType="Electronic"><Year>2024</Year><Month>02</Month><Day>28</Day></ArticleDate>
+    </Article>
+    <MedlineJournalInfo>
+      <Country>England</Country>
+      <NlmUniqueID>101234567</NlmUniqueID>
+    </MedlineJournalInfo>
+    <ChemicalList>
+      <Chemical><NameOfSubstance UI="D009638">Norepinephrine</NameOfSubstance></Chemical>
+    </ChemicalList>
+    <CommentsCorrectionsList>
+      <CommentsCorrections RefType="ErratumIn">
+        <RefSource>J Test Auton. 2024;14(5):301</RefSource>
+        <PMID Version="1">99900009</PMID>
+      </CommentsCorrections>
+    </CommentsCorrectionsList>
+    <MeshHeadingList>
+      <MeshHeading><DescriptorName UI="D000068917" MajorTopicYN="Y">Postural Orthostatic Tachycardia Syndrome</DescriptorName>
+        <QualifierName UI="Q000175" MajorTopicYN="N">diagnosis</QualifierName>
+        <QualifierName UI="Q000503" MajorTopicYN="Y">physiopathology</QualifierName>
+      </MeshHeading>
+      <MeshHeading><DescriptorName UI="D006801" MajorTopicYN="N">Humans</DescriptorName></MeshHeading>
+      <MeshHeading><DescriptorName UI="D052638" MajorTopicYN="N">Particulate Matter</DescriptorName></MeshHeading>
+    </MeshHeadingList>
+    <KeywordList Owner="NOTNLM">
+      <Keyword MajorTopicYN="Y">dysautonomia</Keyword>
+      <Keyword MajorTopicYN="N">QSART</Keyword>
+    </KeywordList>
+  </MedlineCitation>
+  <PubmedData>
+    <History>
+      <PubMedPubDate PubStatus="pubmed"><Year>2024</Year><Month>3</Month><Day>7</Day></PubMedPubDate>
+      <PubMedPubDate PubStatus="entrez"><Year>2024</Year><Month>3</Month><Day>1</Day></PubMedPubDate>
+    </History>
+    <PublicationStatus>ppublish</PublicationStatus>
+    <ArticleIdList>
+      <ArticleId IdType="pubmed">99900001</ArticleId>
+      <ArticleId IdType="doi">10.1000/test.2024.0001</ArticleId>
+      <ArticleId IdType="pmc">PMC9990001</ArticleId>
+    </ArticleIdList>
+    <ReferenceList>
+      <Reference>
+        <Citation>Some earlier work.</Citation>
+        <ArticleIdList><ArticleId IdType="pubmed">19207771</ArticleId></ArticleIdList>
+      </Reference>
+    </ReferenceList>
+  </PubmedData>
+</PubmedArticle>
+<PubmedArticle>
+  <MedlineCitation Status="PubMed-not-MEDLINE" Owner="NLM">
+    <PMID Version="1">99900002</PMID>
+    <Article PubModel="Electronic">
+      <Journal>
+        <JournalIssue CitedMedium="Internet">
+          <PubDate><MedlineDate>2019 Sep-Oct</MedlineDate></PubDate>
+        </JournalIssue>
+        <Title>Revista de Prueba</Title>
+      </Journal>
+      <ArticleTitle>Taquicardia ortostatica postural: reporte de caso.</ArticleTitle>
+      <VernacularTitle>Taquicardia ortostática postural.</VernacularTitle>
+      <Language>spa</Language>
+      <PublicationTypeList>
+        <PublicationType UI="D002363">Case Reports</PublicationType>
+        <PublicationType UI="D016441">Retracted Publication</PublicationType>
+      </PublicationTypeList>
+    </Article>
+    <OtherAbstract Type="Publisher" Language="eng">
+      <AbstractText>An English publisher abstract for a Spanish record.</AbstractText>
+    </OtherAbstract>
+    <CommentsCorrectionsList>
+      <CommentsCorrections RefType="RetractionIn">
+        <RefSource>Revista de Prueba. 2020;5:12</RefSource>
+        <PMID Version="1">99900010</PMID>
+      </CommentsCorrections>
+    </CommentsCorrectionsList>
+  </MedlineCitation>
+  <PubmedData>
+    <PublicationStatus>epublish</PublicationStatus>
+    <ArticleIdList><ArticleId IdType="pubmed">99900002</ArticleId></ArticleIdList>
+  </PubmedData>
+</PubmedArticle>
+</PubmedArticleSet>

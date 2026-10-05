@@ -1,0 +1,73 @@
+# Broad-recall PubMed query for the exposome / EHR corpus.
+#
+# Design (carried over from POTS-phenotyping): one high-recall query defines the
+# corpus. Exposures, outcomes, data sources, designs and age strata are applied
+# as TAGS on top of this corpus (see facets.yaml), never as retrieval filters.
+#
+# What changed from the previous pipeline (legacy/fetch_pmc_papers.py):
+#
+#   - No pediatric clause. Age stratum is a tag (facets.yaml, group
+#     `population`, from the title/abstract and from NLM's age check tags), so a
+#     pediatric corpus is a WHERE clause, and adult EHR exposome work that the
+#     pediatric studies build on is no longer invisible.
+#   - No open-access, publication-type or "review" filter. Publication type
+#     and PMC availability are recorded per record and filtered downstream.
+#   - No per-query cap. The old fetcher kept at most 200 hits per query
+#     (MAX_PER_QUERY), so its broad clauses were silently truncated.
+#
+# Blocks are OR-ed together. `article_query_block` records which block(s)
+# retrieved each PMID, so a block's contribution can be measured and a block can
+# be dropped downstream without re-crawling.
+
+profiles:
+
+  core:
+    description: >
+      Exposome and environment-wide association studies, environmental and
+      social exposures studied in routinely collected individual-level health
+      data (EHR, claims, registries, record linkage), and vaccines studied as an
+      exposure in the same kinds of data.
+    blocks:
+      - id: exposome
+        rationale: >
+          The exposome concept itself (Wild 2005). MeSH "Exposome" was
+          introduced in 2023, so the text words carry the older literature.
+        query: 'exposome[tiab] OR exposomes[tiab] OR exposomic[tiab] OR exposomics[tiab] OR "Exposome"[MeSH Terms]'
+
+      - id: ewas
+        rationale: >
+          Agnostic, many-exposure association designs (Patel 2010) whose
+          abstracts do not always say "exposome".
+        query: '"environment-wide association"[tiab] OR "environment wide association"[tiab] OR "exposome-wide association"[tiab] OR "exposome wide association"[tiab] OR "exposure-wide association"[tiab] OR "exposure wide association"[tiab] OR ExWAS[tiab] OR "polyexposure"[tiab] OR "poly-exposure"[tiab] OR "polyexposomic"[tiab]'
+
+      - id: environment_in_health_records
+        rationale: >
+          The core of the old Tiers 2-4: an environmental or social exposure,
+          studied in routinely collected individual-level data. Both halves are
+          required; either alone is most of PubMed. Birth certificates, vital
+          records and hospital discharge data are routinely collected sources
+          that abstracts name instead of "registry"; social determinants of
+          health and "air pollutants" were in the previous pipeline's terms
+          and were missing here (found by checking its EHR-positive papers). "Environmental Exposure" is
+          not exploded: exploded, it pulls in its Occupational Exposure child
+          (1,647 records reached only that way, 2026-10-05), a separate
+          literature. The children that matter here (maternal, prenatal,
+          inhalation) are named instead.
+        query: '("Environmental Exposure"[MeSH:noexp] OR "Maternal Exposure"[MeSH Terms] OR "Prenatal Exposure Delayed Effects"[MeSH Terms] OR "Inhalation Exposure"[MeSH Terms] OR "Air Pollution"[MeSH Terms] OR "environmental exposure"[tiab] OR "environmental exposures"[tiab] OR "air pollution"[tiab] OR "particulate matter"[tiab] OR "PM2.5"[tiab] OR "nitrogen dioxide"[tiab] OR "built environment"[tiab] OR greenspace[tiab] OR "green space"[tiab] OR greenness[tiab] OR "area deprivation"[tiab] OR "deprivation index"[tiab] OR "neighborhood deprivation"[tiab] OR "neighbourhood deprivation"[tiab] OR "child opportunity index"[tiab] OR "social vulnerability index"[tiab] OR "endocrine disruptor"[tiab] OR "endocrine disrupting"[tiab] OR "blood lead"[tiab] OR pesticide[tiab] OR pesticides[tiab] OR PFAS[tiab] OR "perfluoroalkyl"[tiab] OR "extreme heat"[tiab] OR "ambient temperature"[tiab] OR wildfire[tiab] OR wildfires[tiab] OR "traffic noise"[tiab] OR "environmental noise"[tiab] OR "social determinants of health"[tiab] OR SDOH[tiab] OR "neighborhood-level"[tiab] OR "neighbourhood-level"[tiab] OR "air pollutant"[tiab] OR "air pollutants"[tiab] OR "ambient air"[tiab]) AND ("Electronic Health Records"[MeSH Terms] OR "Medical Records Systems, Computerized"[MeSH Terms] OR "Registries"[MeSH Terms] OR "Medical Record Linkage"[MeSH Terms] OR "Administrative Claims, Healthcare"[MeSH Terms] OR "electronic health record"[tiab] OR "electronic health records"[tiab] OR "electronic medical record"[tiab] OR "electronic medical records"[tiab] OR EHR[tiab] OR EMR[tiab] OR "claims data"[tiab] OR "insurance claims"[tiab] OR "administrative data"[tiab] OR "administrative health data"[tiab] OR "health records"[tiab] OR "medical records"[tiab] OR registry[tiab] OR registries[tiab] OR "record linkage"[tiab] OR "linked data"[tiab] OR "birth certificate"[tiab] OR "birth certificates"[tiab] OR "vital records"[tiab] OR "vital statistics"[tiab] OR "hospital discharge"[tiab] OR "discharge data"[tiab] OR Medicaid[tiab])'
+
+      - id: vaccine_as_exposure
+        rationale: >
+          Old Tier 5: a vaccine as the exposure and a health event as the
+          outcome, in surveillance, registry, claims or cohort data. Uptake,
+          coverage and hesitancy studies treat vaccination as the outcome and
+          are excluded here, the one exclusion in the query, because they are a
+          different literature rather than a subset of this one. The exclusion
+          is on titles only: a safety study's abstract often reports its
+          cohort's vaccine coverage in passing (a nationwide registry study of
+          febrile seizures after H1N1 vaccination was lost that way,
+          2026-10-05).
+        query: '(vaccine[tiab] OR vaccines[tiab] OR vaccination[tiab] OR immunization[tiab] OR immunisation[tiab]) AND ("vaccine safety"[tiab] OR "adverse event following immunization"[tiab] OR "adverse events following immunization"[tiab] OR "adverse events following immunisation"[tiab] OR "febrile seizure"[tiab] OR "febrile seizures"[tiab] OR "Vaccine Safety Datalink"[tiab] OR "self-controlled case series"[tiab]) AND ("Vaccine Safety Datalink"[tiab] OR claims[tiab] OR registry[tiab] OR registries[tiab] OR "linked data"[tiab] OR "record linkage"[tiab] OR "electronic health record"[tiab] OR "electronic health records"[tiab] OR cohort[tiab]) NOT (hesitancy[ti] OR uptake[ti] OR coverage[ti])'
+
+# Retrieval filters applied to every profile. Deliberately empty: retrieve
+# everything, decide later.
+filters: []

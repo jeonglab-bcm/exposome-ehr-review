@@ -1,0 +1,6 @@
+# Runtime. The harvester itself is standard library only; PyYAML is used solely
+# to read the curated vocabulary files under config/.
+PyYAML>=6.0
+
+# Development.
+pytest>=7.0

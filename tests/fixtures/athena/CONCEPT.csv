@@ -1,0 +1,9 @@
+concept_id	concept_name	domain_id	vocabulary_id	concept_class_id	standard_concept	concept_code	valid_start_date	valid_end_date	invalid_reason
+4185565	Postural orthostatic tachycardia syndrome	Condition	SNOMED	Clinical Finding	S	371073003	20020131	20991231	
+4143474	Orthostatic intolerance	Condition	SNOMED	Clinical Finding	S	870368003	20020131	20991231	
+314665	Tachycardia	Condition	SNOMED	Clinical Finding	S	3424008	20020131	20991231	
+4212540	Tilt table test	Procedure	SNOMED	Procedure	S	252465000	20020131	20991231	
+40213154	Small fiber neuropathy	Condition	SNOMED	Clinical Finding	S	709489006	20140131	20991231	
+1309799	midodrine	Drug	RxNorm	Ingredient	S	30125	19700101	20991231	
+3013707	Norepinephrine [Moles/volume] in Plasma --supine	Measurement	LOINC	Lab Test	S	33844-2	19700101	20991231	
+4321234	Deprecated autonomic concept	Condition	SNOMED	Clinical Finding		999999001	19700101	20200101	D
