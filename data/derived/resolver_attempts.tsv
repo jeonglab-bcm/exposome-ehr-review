@@ -1,0 +1,6 @@
+resolver	status	n
+athena_api	error	1
+nlm_clinical_tables	ok	7
+ols4	no_match	20
+ols4	ok	62
+rxnav	no_match	2

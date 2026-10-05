@@ -1,0 +1,7 @@
+facet_id	vocabulary_id	search_term	concept_code	concept_name	resolver
+mixture_methods	NCIt	statistical method	C19044	Statistical Technique	ols4
+particulate_matter	SNOMED	exposure to air pollution	102424008	Exposure to polluted air	ols4
+questionnaire	SNOMED	questionnaire	763111006	Assessment using ICIQ-UI-SF (International Consultation on Incontinence Questionnaire-Urinary Incontinence-Short Form)	ols4
+residential_geocoding	SNOMED	geographic location	758638001	Geographical location	ols4
+tobacco_smoke	LOINC	cotinine	35140-3	Trans-3-Hydroxycotinine [Mass/volume] in Serum or Plasma	nlm_clinical_tables
+type1_diabetes_autoimmunity	SNOMED	coeliac disease	396331005	Celiac disease (disorder)	ols4

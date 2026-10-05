@@ -1,0 +1,5 @@
+run_id	block_id	esearch_count	n_in_corpus
+run_20261005T023634Z	environment_in_health_records	11624	11624
+run_20261005T023634Z	ewas	297	297
+run_20261005T023634Z	exposome	3123	3123
+run_20261005T023634Z	vaccine_as_exposure	1116	1116

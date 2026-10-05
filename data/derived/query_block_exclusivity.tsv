@@ -1,0 +1,5 @@
+block_id	n_in_corpus	n_only_this_block
+environment_in_health_records	11624	11558
+exposome	3123	2892
+vaccine_as_exposure	1116	1109
+ewas	297	113

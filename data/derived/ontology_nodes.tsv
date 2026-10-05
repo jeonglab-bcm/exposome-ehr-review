@@ -1,0 +1,89 @@
+node_id	label	kind	group_id	definition
+area_level_assessment	Area-level (address-based) assessment	assessment_class		
+individual_level_assessment	Individual-level assessment	assessment_class		
+data_source_class	Data source	class		
+exposure_assessment	Exposure assessment	class		
+external_exposure	External exposure	class		
+health_outcome	Health outcome	class		
+life_stage	Life stage	class		
+study_design_class	Study design or analysis	class		
+research_collected_data	Data collected for research	data_class		
+routinely_collected_data	Routinely collected individual-level data	data_class		
+air_pollution	Air pollution	exposure_class		
+chemical_exposure	Chemical exposure	exposure_class		
+medical_exposure	Medical exposure	exposure_class		
+physical_environment	Physical environment	exposure_class		
+social_environment	Social environment	exposure_class		
+adhd_autism	ADHD and autism	facet	outcome	Attention-deficit/hyperactivity disorder and autism spectrum disorder diagnoses or symptom scores.
+adolescent	Adolescents	facet	population	Young people from thirteen to eighteen years old.
+adult	Adults	facet	population	Adults, including older adults.
+allergic_disease	Allergic disease	facet	outcome	Atopic dermatitis, food allergy, allergic rhinitis and allergic sensitisation.
+asthma_wheeze	Asthma and wheeze	facet	outcome	Asthma incidence, prevalence, exacerbation, emergency visit or hospitalisation, and recurrent or persistent wheeze.
+biobank	Biobank	facet	data_source	A biobank linking stored samples or genotypes to health records, such as UK Biobank or All of Us.
+biomonitoring	Biomonitoring	facet	assessment	Measuring a chemical or its metabolite in blood, urine, hair, breast milk or another biological sample.
+built_environment	Built environment	facet	exposure	The physical form of the neighbourhood: walkability, land use, building density, food outlets, urbanicity.
+cardiometabolic	Cardiometabolic risk	facet	outcome	Blood pressure, hypertension, insulin resistance, type 2 diabetes, dyslipidaemia and metabolic syndrome.
+child	Children	facet	population	Children from two to twelve years old.
+childhood_cancer	Childhood cancer	facet	outcome	Cancer in children and adolescents, chiefly leukaemia, brain tumours and lymphoma.
+claims	Insurance claims	facet	data_source	Billing or insurance claims data: Medicaid, Medicare, commercial claims, national health insurance databases.
+congenital_anomalies	Congenital anomalies	facet	outcome	Birth defects: congenital heart defects, neural tube defects, orofacial clefts and others.
+drinking_water_contamination	Drinking water contamination	facet	exposure	Contaminants in drinking water: nitrate, disinfection by-products, lead service lines, fluoride and water system violations.
+ehr	Electronic health records	facet	data_source	Electronic health or medical records from clinical care: diagnoses, encounters, vital signs, laboratory results, medications.
+endocrine_disruptors	Phthalates, phenols and other endocrine disruptors	facet	exposure	Non-persistent endocrine-disrupting chemicals: phthalates, bisphenol A and other phenols, parabens, triclosan.
+exposome_wide_design	Exposome-wide association design	facet	design	Testing many exposures agnostically against one outcome with correction for multiple testing (EWAS, ExWAS), including polyexposure risk scores.
+fetal_growth	Birth weight and fetal growth	facet	outcome	Birth weight, low birth weight, small or large for gestational age, and fetal growth measured by ultrasound.
+gene_environment	Gene-environment interaction	facet	design	Joint analysis of genotypes and exposures, including GxE interaction tests and polygenic-by-exposure models.
+green_blue_space	Greenness and blue space	facet	exposure	Vegetation and water near the home: NDVI greenness, parks, tree canopy, access to blue space.
+health_registry	Health registry	facet	data_source	A population or disease registry: birth, death, cancer, prescription, patient or national health registers.
+healthcare_utilization	Health care use	facet	outcome	Emergency department visits, hospitalisation, primary care visits or costs, studied as an outcome.
+immunization_surveillance	Immunization registry or vaccine surveillance system	facet	data_source	An immunization information system or vaccine safety surveillance system: Vaccine Safety Datalink, VAERS, provincial vaccine registries.
+individual_social_factors	Household social and economic factors	facet	exposure	Individual or household social determinants: income, insurance type, parental education, food insecurity, housing instability, homelessness.
+indoor_air	Indoor air and household fuel	facet	exposure	Indoor sources: gas stoves, household solid fuel, mould and dampness, indoor allergens and radon.
+infant	Infants	facet	population	Newborns and infants under two years old.
+infection	Infection and infection-related care	facet	outcome	Infections and their consequences: respiratory infections, COVID-19, bronchiolitis, otitis media, infection-related hospitalisation.
+lead	Lead	facet	exposure	Lead from paint, dust, water or soil, usually measured as blood lead concentration in children.
+lung_function	Lung function	facet	outcome	Spirometric or other lung function measurements: FEV1, FVC, FEV1/FVC.
+machine_learning	Machine learning	facet	design	Random forests, gradient boosting, neural networks, LASSO or other machine learning used for prediction or variable selection.
+mental_health	Mental and behavioural health	facet	outcome	Depression, anxiety, behavioural problems, self-harm, substance use disorder and psychiatric emergency visits.
+mixture_methods	Exposure mixture methods	facet	design	Statistical methods for joint effects of correlated exposures: weighted quantile sum, Bayesian kernel machine regression, quantile g-computation.
+monitoring_station	Fixed monitoring station	facet	assessment	Exposure taken from the nearest regulatory air quality or weather monitor.
+mortality	Mortality	facet	outcome	Death from any cause or a specific cause, including infant mortality and sudden infant death.
+national_survey	National health survey	facet	data_source	A repeated cross-sectional national survey with examination or biomarker data, such as NHANES.
+neighborhood_deprivation	Neighbourhood deprivation and opportunity	facet	exposure	Area-level socioeconomic disadvantage measured by a composite index (Area Deprivation Index, Child Opportunity Index, Social Vulnerability Index, census-tract poverty).
+neurodevelopment	Neurodevelopment and cognition	facet	outcome	Cognitive function, IQ, developmental delay, language and motor development, school performance.
+noise	Environmental noise	facet	exposure	Road, rail and aircraft noise at the residence or school.
+obesity_adiposity	Obesity and adiposity	facet	outcome	BMI, BMI z-score, overweight, obesity, waist circumference or body fat, including rapid infant weight gain.
+other_metals	Mercury, arsenic, cadmium and other metals	facet	exposure	Toxic metals and metalloids other than lead (mercury, arsenic, cadmium, manganese), measured in blood, urine, hair or water.
+ozone	Ozone	facet	exposure	Ground-level ozone, a secondary photochemical air pollutant.
+particulate_matter	Particulate matter air pollution	facet	exposure	Ambient fine or coarse particles (PM2.5, PM10, black carbon, ultrafine particles), usually assigned from a residential address.
+persistent_organic_pollutants	PFAS and persistent organic pollutants	facet	exposure	Persistent chemicals: per- and polyfluoroalkyl substances, PCBs, organochlorine pesticides such as DDT/DDE, dioxins, flame retardants.
+personal_sensor	Personal sensor or wearable	facet	assessment	A personal monitor, wearable sensor, smartphone or GPS tracking used to measure an individual's exposure directly.
+pesticides	Pesticides	facet	exposure	Current-use pesticides: organophosphates, pyrethroids, herbicides such as glyphosate, and agricultural pesticide application near the home.
+pregnancy_complications	Pregnancy complications	facet	outcome	Maternal outcomes of pregnancy: hypertensive disorders including preeclampsia, gestational diabetes, stillbirth and severe maternal morbidity.
+prenatal_medication	Medication use in pregnancy or early life	facet	exposure	A medicine taken in pregnancy or infancy studied as an exposure: antibiotics, acid suppressants, acetaminophen, antidepressants.
+prenatal_window	Pregnancy or prenatal window	facet	population	Exposure in pregnancy, or pregnant people enrolled.
+preterm_birth	Preterm birth and gestational age	facet	outcome	Birth before 37 weeks, gestational age at birth, and spontaneous preterm labour.
+puberty_growth	Puberty timing and linear growth	facet	outcome	Age at puberty or menarche, precocious puberty, and height or linear growth.
+questionnaire	Questionnaire or interview	facet	assessment	Exposure reported by the participant or a parent in a questionnaire or interview.
+record_based_exposure	Exposure taken from health records	facet	assessment	An exposure read from the health record itself: a vaccination record, a prescription, a recorded smoking status or a screening test result.
+record_linkage	Record linkage	facet	data_source	Individual-level linkage of two or more data sources, such as hospital records to a birth registry or to environmental data by address.
+research_cohort	Research cohort	facet	data_source	Data collected for research by a prospective cohort, most often a birth or mother-child cohort with its own visits, samples and questionnaires.
+residential_geocoding	Residential address geocoding	facet	assessment	Assigning area-level exposures from a geocoded home address, census tract or postcode.
+self_controlled_design	Self-controlled design	facet	design	A design in which each person is their own control: self-controlled case series, case-crossover, risk-interval designs.
+spatial_model	Spatial or satellite exposure model	facet	assessment	An exposure surface estimated by land-use regression, dispersion, chemical transport, satellite remote sensing or machine-learning models.
+structural_racism	Structural racism and segregation	facet	exposure	Residential segregation, historical redlining, discrimination and other structural measures of racism.
+temperature_heat	Ambient temperature and heat	facet	exposure	Outdoor temperature, heat waves, cold spells and humidity, as a short-term or long-term exposure.
+time_series_design	Time-series design	facet	design	Daily or weekly counts of events regressed on short-term exposure variation, often with distributed lags.
+tobacco_smoke	Tobacco smoke	facet	exposure	Active smoking, maternal smoking in pregnancy, or second-hand (environmental) tobacco smoke, including e-cigarette aerosol.
+traffic_related_air_pollution	Traffic-related air pollution	facet	exposure	Nitrogen dioxide, nitrogen oxides and other markers of road traffic, including distance to a major road and traffic density.
+type1_diabetes_autoimmunity	Type 1 diabetes and autoimmune disease	facet	outcome	Type 1 diabetes, coeliac disease, juvenile idiopathic arthritis, inflammatory bowel disease and other autoimmune conditions.
+vaccination	Vaccination	facet	exposure	Receipt of a vaccine, its type, dose or timing, studied as an exposure that may precede an adverse event or another health outcome.
+vaccine_adverse_event	Vaccine adverse event	facet	outcome	An event studied as a possible adverse reaction to a vaccine: febrile seizure, fever, anaphylaxis, Guillain-Barre syndrome, intussusception, myocarditis.
+violence_crime	Violence and crime exposure	facet	exposure	Neighbourhood violent crime, gun violence, community violence and adverse childhood experiences.
+wildfire_smoke	Wildfire smoke	facet	exposure	Smoke from wildfires, bushfires or landscape fires, as an episodic air pollution exposure.
+immune_infectious_outcome	Immune and infectious outcome	outcome_class		
+metabolic_growth_outcome	Metabolic and growth outcome	outcome_class		
+neurodevelopmental_outcome	Neurodevelopmental and mental health outcome	outcome_class		
+perinatal_outcome	Perinatal outcome	outcome_class		
+respiratory_allergic_outcome	Respiratory and allergic outcome	outcome_class		
+exposome_axis	Exposome and EHR topics	root		

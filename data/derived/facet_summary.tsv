@@ -1,0 +1,68 @@
+facet_id	group_id	label	n_query_hits	n_mesh_hits	n_articles_any
+biomonitoring	assessment	Biomonitoring	1253	542	1324
+monitoring_station	assessment	Fixed monitoring station	119	490	583
+personal_sensor	assessment	Personal sensor or wearable	173	91	243
+questionnaire	assessment	Questionnaire or interview	1880	549	2062
+record_based_exposure	assessment	Exposure taken from health records	171	129	298
+residential_geocoding	assessment	Residential address geocoding	1247	159	1332
+spatial_model	assessment	Spatial or satellite exposure model	214	103	311
+biobank	data_source	Biobank	272	48	279
+claims	data_source	Insurance claims	570	484	964
+ehr	data_source	Electronic health records	2267	545	2348
+health_registry	data_source	Health registry	5468	2435	6040
+immunization_surveillance	data_source	Immunization registry or vaccine surveillance system	344	174	440
+national_survey	data_source	National health survey	184	202	305
+record_linkage	data_source	Record linkage	413	52	443
+research_cohort	data_source	Research cohort	1007	2581	2914
+exposome_wide_design	design	Exposome-wide association design	320	767	948
+gene_environment	design	Gene-environment interaction	257	117	300
+machine_learning	design	Machine learning	551	157	554
+mixture_methods	design	Exposure mixture methods	224	9	229
+self_controlled_design	design	Self-controlled design	403	137	415
+time_series_design	design	Time-series design	330	10	331
+built_environment	exposure	Built environment	695	709	1259
+drinking_water_contamination	exposure	Drinking water contamination	63	189	209
+endocrine_disruptors	exposure	Phthalates, phenols and other endocrine disruptors	402	166	416
+green_blue_space	exposure	Greenness and blue space	302	34	302
+individual_social_factors	exposure	Household social and economic factors	3771	1089	3840
+indoor_air	exposure	Indoor air and household fuel	191	189	276
+lead	exposure	Lead	219	211	249
+neighborhood_deprivation	exposure	Neighbourhood deprivation and opportunity	1833	1150	2446
+noise	exposure	Environmental noise	127	91	137
+other_metals	exposure	Mercury, arsenic, cadmium and other metals	449	213	464
+ozone	exposure	Ozone	421	168	430
+particulate_matter	exposure	Particulate matter air pollution	1263	829	1318
+persistent_organic_pollutants	exposure	PFAS and persistent organic pollutants	562	266	568
+pesticides	exposure	Pesticides	903	482	931
+prenatal_medication	exposure	Medication use in pregnancy or early life	162	1657	1681
+structural_racism	exposure	Structural racism and segregation	111	26	120
+temperature_heat	exposure	Ambient temperature and heat	400	145	422
+tobacco_smoke	exposure	Tobacco smoke	565	693	872
+traffic_related_air_pollution	exposure	Traffic-related air pollution	683	353	738
+vaccination	exposure	Vaccination	1315	683	1324
+violence_crime	exposure	Violence and crime exposure	50	46	75
+wildfire_smoke	exposure	Wildfire smoke	100	75	126
+adhd_autism	outcome	ADHD and autism	339	223	343
+allergic_disease	outcome	Allergic disease	213	84	219
+asthma_wheeze	outcome	Asthma and wheeze	756	483	766
+cardiometabolic	outcome	Cardiometabolic risk	904	350	931
+childhood_cancer	outcome	Childhood cancer	600	857	1083
+congenital_anomalies	outcome	Congenital anomalies	455	284	516
+fetal_growth	outcome	Birth weight and fetal growth	840	566	919
+healthcare_utilization	outcome	Health care use	1621	837	1778
+infection	outcome	Infection and infection-related care	1952	742	1973
+lung_function	outcome	Lung function	161	75	169
+mental_health	outcome	Mental and behavioural health	1072	360	1161
+mortality	outcome	Mortality	2731	232	2748
+neurodevelopment	outcome	Neurodevelopment and cognition	719	297	809
+obesity_adiposity	outcome	Obesity and adiposity	980	309	998
+pregnancy_complications	outcome	Pregnancy complications	393	235	419
+preterm_birth	outcome	Preterm birth and gestational age	840	536	956
+puberty_growth	outcome	Puberty timing and linear growth	71	20	74
+type1_diabetes_autoimmunity	outcome	Type 1 diabetes and autoimmune disease	342	226	371
+vaccine_adverse_event	outcome	Vaccine adverse event	400	212	466
+adolescent	population	Adolescents	578	2456	2629
+adult	population	Adults	2176	6668	7290
+child	population	Children	3786	3122	4356
+infant	population	Infants	1612	2858	3236
+prenatal_window	population	Pregnancy or prenatal window	3507	3003	3697

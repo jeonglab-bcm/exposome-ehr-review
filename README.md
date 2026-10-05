@@ -1,77 +1,104 @@
-# Pediatric Exposome / EWAS Literature Collection
+# exposome-ehr-review
 
-A reproducible pipeline that searches PubMed Central for **pediatric / childhood
-environmental-exposure (exposome / EWAS) studies** and **pediatric
-vaccine/immunization-exposure studies**, using EHR, administrative / claims, or
-linked cohort data, downloads the open-access full text, summarizes each
-manuscript with **Gemma 4 12B**, and captures **data-availability** (accession
-numbers / repository links) for systematic-review work.
+A PubMed corpus, a controlled vocabulary and a decision-model reading pipeline
+for the exposome studied in routinely collected health data: environmental,
+social and medical exposures (including vaccines) in electronic health
+records, claims, registries and linked administrative data.
 
-> **Current collection: 185 full-text papers**, 1990–2026, **18 EHR-based**.
-> Browse the live inventory at
-> **[hyunhwan-bcm.github.io/exposome-ehr-review](https://hyunhwan-bcm.github.io/exposome-ehr-review/)**
-> or see [`paper_summary.md`](./paper_summary.md).
+Built the same way as [POTS-phenotyping](https://github.com/jeonglab-bcm/pots-phenotyping),
+and sharing its code: one broad query, facets as tags rather than filters,
+concept mappings with provenance, and literature links found by System One
+decision models and confirmed by Claude with verbatim quotes. The previous
+generative-summary pipeline is frozen in [`legacy/`](legacy/README.md).
+
+## The premise
+
+The old pipeline decided scope at search time (pediatric terms required, open
+access only, reviews dropped, at most 200 hits per query) and then had one
+generative model write a free-text checklist per paper. Nothing it produced
+could be compared across papers or checked against the text.
+
+Here every scope decision is made afterwards, on recorded evidence:
+
+- **Retrieve broadly, decide later.** Age stratum, publication type and full-
+  text availability are tags and columns. The pediatric corpus is a `WHERE`
+  clause (`v_article_age_strata.pediatric = 1`), not a query.
+- **Typed answers, not prose.** Each paper is coded with yes/no and fixed-
+  option questions (`config/study_coding.yaml`), each answer stored with its
+  probability and the paragraph that carried it.
+- **Links are quoted claims.** An exposure-outcome link exists only when two
+  decision models found it in a paragraph and Claude confirmed it with a quote
+  that is word for word in the paper. Harm, protection and null results are
+  separate predicates, so the evidence map does not drop null findings.
+
+## What is here
+
+| Path | Contents |
+| --- | --- |
+| `config/query.yaml` | The broad-recall query: four named blocks with a rationale each, no filters. |
+| `config/facets.yaml` | 67 facets in six groups (exposure, outcome, data source, exposure assessment, design, age stratum) with PubMed queries, MeSH descriptors, OMOP concept search terms and eight seed papers. |
+| `config/relations.yaml` | The ontology: `is_a` taxonomy, and six literature predicates whose decision-model questions (domain, range, option, statement) are defined next to them. |
+| `config/study_coding.yaml` | The per-paper questions that replace the old checklist. |
+| `docs/COMPETENCY_QUESTIONS.md` | What the graph and the coding must answer. |
+| `docs/DECISION_MODELS.md` | How links and codes are made, the backends, licences, and the validation still to do. |
+| `docs/HARVEST_REPORT.md` | Generated validation report for the committed harvest. |
+| `src/exposome_ehr/` | Harvester, parser, SQLite store, concept resolvers and report (ported from POTS-phenotyping), plus `paragraphs.py` and `decision.py`. |
+| `scripts/` | Paragraph building, the decision-model readers, study coding, candidate assembly, the Claude judge, quote verification. |
+| `extraction/<run>/` | Stored reader runs: paragraph ids and hashes, model answers, judge verdicts. No paper text. |
+| `data/articles/pmid_NN.jsonl` | The harvested corpus, one JSON object per article, sharded by PMID range. Everything else under `data/` rebuilds from it. |
+| `legacy/` | The previous pipeline, frozen. |
+
+## Results of the committed harvest
+
+Profile `core`, harvested 2026-10-05. Full numbers in
+[`docs/HARVEST_REPORT.md`](docs/HARVEST_REPORT.md).
+
+| | |
+| --- | --- |
+| Articles | 15,913 (all of them; esearch reported 15,913) |
+| Tagged pediatric (prenatal, infant, child or adolescent) | 6,951 |
+| Seed papers in the corpus | 8 of 8 |
+| MeSH descriptors declared | 201, all valid |
+| Candidate concept mappings | 181 across SNOMED, LOINC and NCIt, all unreviewed; 19 of 67 facets unmapped |
+| Literature links | none yet: the seed reader run is set up, not run |
+| Validation checks | 24 of 26 pass (the two failures are the unmapped concept terms) |
 
 ## Quick start
 
 ```bash
-make setup      # create .venv + install deps (requests, openai, pypdf, pydantic, tinydb, dagster)
-make download   # pediatric PMC fetcher (incremental — skips what's on disk)
-make summarize  # Gemma 4 12B -> per-paper + combined JSON (concurrent; --workers via SUMMARIZE_ARGS)
-make results    # export readable results/ (SUMMARY.md, checklist.md, combined JSON)
-make site       # regenerate the static GitHub Pages site in docs/
-make test       # unit tests (no live API calls)
+pip install -r requirements.txt
+
+make check        # validate the vocabulary and the generated links, no network
+make counts       # corpus and facet sizes, esearch only
+make harvest      # full corpus harvest with facet tagging
+make ontology     # resolve facets to OMOP concepts
+make report       # regenerate docs/HARVEST_REPORT.md and data/derived/
+make test         # offline test suite
+
+make paragraphs PAPERS=seeds   # then see docs/DECISION_MODELS.md
 ```
 
-`papers/` (PDFs, XML, `download_log.json`, TinyDB `db.json`) is tracked in
-Git — large/binary files (`*.pdf`, `*.xml`, `db.json`) go through **Git LFS**
-(see `.gitattributes`); run `git lfs install` once after cloning.
+Set `NCBI_API_KEY` to lift the E-utilities rate limit, and `NCBI_TOOL_EMAIL`.
 
-## Pipeline overview
+## Known limitations
 
-<table>
-<tr><td align="center">
-<img src="docs/pipeline.png" alt="Pipeline diagram: PubMed Central → make download → make summarize (⇄ Gemma 4 12B) → scan_data_availability.py (⇄ Gemma) → TinyDB → make results → results/, with make web served from TinyDB" width="540">
-</td></tr>
-<tr><td>
-
-**Figure 1. End-to-end literature pipeline.** From **PubMed Central**, `make download` fetches and filters open-access full text (20 tiered queries; reviews / meta-analyses / epigenome / conference abstracts dropped; full-text fallback OA PDF → tar.gz → Europe PMC → JATS XML). `make summarize` extracts each manuscript into a Pydantic `ManuscriptChecklist` via **Gemma 4 12B**, and `scan_data_availability.py` classifies data availability (public-repo / on-request / in-house / …) with a regex safety-net for accession links (dbGaP · GEO · Zenodo · GitHub). Both LLM stages round-trip with Gemma and write to the **TinyDB** store (`papers/db.json`), the single source of truth. `make results` exports it to `results/` (`SUMMARY.md`, `checklist.md`, `manuscript_summaries.json`) and `make web` serves it as a browsable app on `:8010`.
-
-</td></tr>
-</table>
-
-> Diagram source: [`docs/pipeline.d2`](./docs/pipeline.d2) — re-render with
-> [d2](https://d2lang.com) (`d2 --layout elk docs/pipeline.d2 docs/pipeline.svg`).
-> The PNG is embedded because GitHub strips an SVG's `foreignObject` text labels.
-
-## Documentation
-
-| Guide | Contents |
-|-------|----------|
-| [docs/data-collection.md](./docs/data-collection.md) | Search strategy (Tier 1–5), the seven-stage fetch process, full-text resolution & validation |
-| [docs/summarization.md](./docs/summarization.md) | Gemma 4 12B summarization, the `ManuscriptChecklist` schema, and the data-availability scan |
-| [docs/orchestration.md](./docs/orchestration.md) | TinyDB store, Dagster asset graph, GitHub Actions, and the full list of generated outputs |
-
-## Static site (GitHub Pages)
-
-A self-contained, Tailwind-styled site in [`docs/`](./docs/) presents the
-headline stats and a **searchable / filterable / sortable inventory** of every
-summarized paper (data embedded inline, no runtime fetch), served at
-**[hyunhwan-bcm.github.io/exposome-ehr-review](https://hyunhwan-bcm.github.io/exposome-ehr-review/)**.
-`make site` regenerates `docs/index.html` + the minified `docs/tailwind.css`;
-both are committed so Pages needs no build step. Pages source: **`main` / `/docs`**.
-
-## Files
-
-| File | Purpose |
-|------|---------|
-| `fetch_pmc_papers.py` | Search + filter + download pipeline |
-| `build_summary.py` | Regenerates `paper_summary.md` from the download log |
-| `build_results.py` | Exports readable `results/` from the combined JSON |
-| `build_site.py` | Generates the static GitHub Pages site (`docs/index.html`) from the combined JSON |
-| `summarizer/` | Manuscript summarization (Pydantic schema + Gemma client + extractor + runner) |
-| `scan_data_availability.py` | Focused LLM + regex scan for data-availability / accession links |
-| `database.py` / `db.py` | TinyDB store + CRUD CLI |
-| `pipeline.py` / `pipeline_ops.py` | Dagster asset orchestration (fetch → summarize → combined → results) |
-| `Makefile` | `setup` / `download` / `summarize` / `results` / `site` / `db-*` / `dagster` / `materialize` / `test` targets |
-| `paper_summary.md` | Generated inventory (do not hand-edit) |
+- **The vocabulary is a draft.** It was written from the previous pipeline's
+  summaries and the seed abstracts, not yet from reading the seeds; the seed
+  reader run is what tests it.
+- **Recall against the old pipeline.** Of its 30 EHR-positive papers, 11 are
+  retrieved; 15 of the other 19 are out of scope (corrections, programme
+  reports, research cohorts) and 4 are real misses (listed in
+  `legacy/README.md`). Widening the vaccine block to name surveillance and
+  pharmacovigilance would add about 1,600 records and recover one of them.
+- **Studies that name only their outcomes of care are missed.** An
+  administrative-data cohort whose abstract says "hospitalization or emergency
+  room visit" but never names its data source is not retrieved. Adding those
+  phrases grows the corpus to about 19,800, mostly aggregate time-series
+  studies; that trade was declined for now (2026-10-05).
+- **Nothing is validated against people yet.** See the validation plan in
+  `docs/DECISION_MODELS.md`.
+- **Concept mappings are candidates.** OLS4 carries only part of SNOMED;
+  exposure-type concepts ("exposure to particulate matter") mostly need an
+  ATHENA bundle.
+- **Pages.** The old GitHub Pages site lived in `docs/` and is now in
+  `legacy/docs/`; a new site for this corpus is not built yet.

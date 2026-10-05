@@ -1,0 +1,182 @@
+facet_id	vocabulary_id	search_term	concept_code	concept_name	concept_id	domain_id	match_rank	label_match	resolver	mapping_status
+adhd_autism	SNOMED	attention deficit hyperactivity disorder	406506008	Attention deficit hyperactivity disorder			1	exact	ols4	unreviewed
+adhd_autism	SNOMED	autism spectrum disorder	35919005	Autism spectrum disorder			1	exact	ols4	unreviewed
+adhd_autism	SNOMED	attention deficit hyperactivity disorder	31177006	Attention deficit hyperactivity disorder, combined type			2	contains	ols4	unreviewed
+adhd_autism	SNOMED	autism spectrum disorder	733623005	Autism spectrum disorder, epilepsy, arthrogryposis syndrome			2	contains	ols4	unreviewed
+adhd_autism	SNOMED	attention deficit hyperactivity disorder	7461003	Attention deficit hyperactivity disorder, predominantly hyperactive impulsive type			3	contains	ols4	unreviewed
+adhd_autism	SNOMED	autism spectrum disorder	771512003	Autism spectrum disorder due to AUTS2 activator of transcription and developmental regulator deficiency (disorder)			3	contains	ols4	unreviewed
+adolescent	SNOMED	adolescent	133937008	Adolescent			1	exact	ols4	unreviewed
+adolescent	SNOMED	adolescent	48826008	Conduct disorder, adolescent-onset type			2	contains	ols4	unreviewed
+adolescent	SNOMED	adolescent	113164004	Childhood or adolescent antisocial behavior (finding)			3	contains	ols4	unreviewed
+adult	SNOMED	adult	133936004	Adult			1	exact	ols4	unreviewed
+adult	SNOMED	adult	720465002	Adult-onset autosomal recessive sideroblastic anemia (disorder)			2	contains	ols4	unreviewed
+adult	SNOMED	adult	1299152003	Adult-onset progressive leukoencephalopathy, early-onset deafness (disorder)			3	contains	ols4	unreviewed
+allergic_disease	SNOMED	atopic dermatitis	24079001	Atopic dermatitis			1	exact	ols4	unreviewed
+allergic_disease	SNOMED	food allergy	409002	Food allergy diet			1	contains	ols4	unreviewed
+allergic_disease	SNOMED	atopic dermatitis	402186001	Generalized atopic dermatitis (disorder)			2	contains	ols4	unreviewed
+allergic_disease	SNOMED	food allergy	432807008	Pollen-food allergy			2	contains	ols4	unreviewed
+allergic_disease	SNOMED	atopic dermatitis	1251408006	Childhood impetiginized atopic dermatitis (disorder)			3	contains	ols4	unreviewed
+allergic_disease	SNOMED	food allergy	429625007	No known food allergy			3	contains	ols4	unreviewed
+asthma_wheeze	SNOMED	asthma	195967001	Asthma			1	exact	ols4	unreviewed
+asthma_wheeze	SNOMED	wheezing	56018004	Wheezing			1	exact	ols4	unreviewed
+asthma_wheeze	SNOMED	asthma	10692761000119107	Asthma-chronic obstructive pulmonary disease overlap syndrome			2	contains	ols4	unreviewed
+asthma_wheeze	SNOMED	wheezing	1338041004	Wheeze clears with coughing			2	loose	ols4	unreviewed
+asthma_wheeze	SNOMED	asthma	10692721000119102	Chronic obstructive asthma co-occurrent with acute exacerbation of asthma			3	contains	ols4	unreviewed
+asthma_wheeze	SNOMED	wheezing	161947006	Nocturnal cough and wheeze			3	loose	ols4	unreviewed
+biobank	SNOMED	biobank	1351963007	Biobank information system			1	contains	ols4	unreviewed
+biobank	SNOMED	biobank	840566006	Specimen collection for biobank			2	contains	ols4	unreviewed
+built_environment	SNOMED	neighborhood environment	224153006	Local environment and neighborhood details (observable entity)			1	contains	ols4	unreviewed
+built_environment	SNOMED	neighborhood environment	365503002	Finding of local environment and neighborhood details (finding)			2	contains	ols4	unreviewed
+cardiometabolic	LOINC	hemoglobin A1c	112870-1	Hemoglobin A1c and estimated average glucose panel - Blood		Measurement	1	contains	nlm_clinical_tables	unreviewed
+cardiometabolic	LOINC	hemoglobin A1c	55454-3	Deprecated Hemoglobin A1c in Blood		Measurement	2	contains	nlm_clinical_tables	unreviewed
+cardiometabolic	LOINC	hemoglobin A1c	71875-9	Hemoglobin A1c/Hemoglobin.total [Pure mass fraction] in Blood		Measurement	3	contains	nlm_clinical_tables	unreviewed
+cardiometabolic	SNOMED	hypertensive disorder	38341003	Hypertensive disorder			1	exact	ols4	unreviewed
+cardiometabolic	SNOMED	type 2 diabetes mellitus	44054006	Diabetes mellitus type 2 (disorder)			1	exact	ols4	unreviewed
+cardiometabolic	SNOMED	hypertensive disorder	340441000119107	Disorder of left retina co-occurrent and due to hypertension (disorder)			2	loose	ols4	unreviewed
+cardiometabolic	SNOMED	type 2 diabetes mellitus	120731000119103	Hypoglycemia due to type 2 diabetes mellitus (disorder)			2	contains	ols4	unreviewed
+cardiometabolic	SNOMED	hypertensive disorder	334831000119106	Disorder of right retina co-occurrent and due to hypertension (disorder)			3	loose	ols4	unreviewed
+cardiometabolic	SNOMED	type 2 diabetes mellitus	137931000119102	Hyperlipidemia due to type 2 diabetes mellitus (disorder)			3	contains	ols4	unreviewed
+child	SNOMED	child	67822003	Child			1	exact	ols4	unreviewed
+child	SNOMED	child	773492007	Childhood-onset spasticity with hyperglycinemia (disorder)			2	loose	ols4	unreviewed
+child	SNOMED	child	1167373005	Childhood-onset motor and cognitive regression syndrome with extrapyramidal movement disorder			3	loose	ols4	unreviewed
+childhood_cancer	SNOMED	acute lymphoid leukemia	91857003	Acute lymphoid leukemia, disease (disorder)			1	contains	ols4	unreviewed
+childhood_cancer	SNOMED	acute lymphoid leukemia	12301000132103	Acute lymphoid leukemia relapse (disorder)			2	contains	ols4	unreviewed
+childhood_cancer	SNOMED	acute lymphoid leukemia	12311000132101	Refractory acute lymphoid leukemia (disorder)			3	contains	ols4	unreviewed
+claims	SNOMED	insurance claim	171375004	Insurance claim examination			1	contains	ols4	unreviewed
+claims	SNOMED	insurance claim	69619008	Preparation of routine medical insurance claim			2	contains	ols4	unreviewed
+congenital_anomalies	SNOMED	congenital anomaly	69771008	Congenital anomaly of esophagus (disorder)			1	contains	ols4	unreviewed
+congenital_anomalies	SNOMED	congenital anomaly	40888008	Congenital anomaly of the hematopoietic system (disorder)			2	contains	ols4	unreviewed
+congenital_anomalies	SNOMED	congenital anomaly	443413004	Color Doppler ultrasound with spectral display for congenital anomaly (procedure)			3	contains	ols4	unreviewed
+fetal_growth	SNOMED	low birth weight infant	276610007	Low birth weight infant			1	exact	ols4	unreviewed
+fetal_growth	SNOMED	small for gestational age	267258002	Small for gestational age fetus			1	contains	ols4	unreviewed
+fetal_growth	SNOMED	low birth weight infant	276611006	Very low birth weight infant			2	contains	ols4	unreviewed
+fetal_growth	SNOMED	small for gestational age	722525006	Symmetrical small for gestational age fetus			2	contains	ols4	unreviewed
+fetal_growth	SNOMED	low birth weight infant	276612004	Extremely low birth weight infant			3	contains	ols4	unreviewed
+fetal_growth	SNOMED	small for gestational age	722835006	Asymmetrical small for gestational age fetus			3	contains	ols4	unreviewed
+gene_environment	NCIt	gene-environment interaction	C18092	Gene-Environment Interaction			1	exact	ols4	unreviewed
+gene_environment	NCIt	gene-environment interaction	C20179	Toxicogenomics			2	loose	ols4	unreviewed
+gene_environment	NCIt	gene-environment interaction	C185887	Augmented Reality Intervention			3	loose	ols4	unreviewed
+green_blue_space	SNOMED	green space	1220613005	Perceived proximity to green space			1	contains	ols4	unreviewed
+health_registry	SNOMED	registry	1287374007	Portuguese Registry of Acute Coronary Syndromes risk score			1	contains	ols4	unreviewed
+healthcare_utilization	SNOMED	emergency department visit	4525004	Emergency department patient visit			1	contains	ols4	unreviewed
+healthcare_utilization	SNOMED	hospital admission	32485007	Hospital admission			1	exact	ols4	unreviewed
+healthcare_utilization	SNOMED	hospital admission	183458009	Pediatric emergency hospital admission (procedure)			2	contains	ols4	unreviewed
+healthcare_utilization	SNOMED	hospital admission	183459001	Gynecological emergency hospital admission (procedure)			3	contains	ols4	unreviewed
+immunization_surveillance	SNOMED	immunization record	41000179103	Immunization record (record artifact)			1	exact	ols4	unreviewed
+immunization_surveillance	SNOMED	immunization record	4331000179104	Clinical immunology report			2	loose	ols4	unreviewed
+immunization_surveillance	SNOMED	immunization record	171288004	No immunization history record (finding)			3	contains	ols4	unreviewed
+individual_social_factors	SNOMED	food insecurity	733423003	Food insecurity			1	exact	ols4	unreviewed
+individual_social_factors	SNOMED	housing problem	105531004	Housing problem			1	exact	ols4	unreviewed
+individual_social_factors	SNOMED	food insecurity	464681000124109	Counseling for food insecurity care plan participation barriers (procedure)			2	contains	ols4	unreviewed
+individual_social_factors	SNOMED	housing problem	185960001	Housing problem solved			2	contains	ols4	unreviewed
+individual_social_factors	SNOMED	food insecurity	464671000124106	Counseling for readiness to implement food insecurity care plan (procedure)			3	contains	ols4	unreviewed
+infant	SNOMED	infant	133931009	Infant			1	exact	ols4	unreviewed
+infant	SNOMED	infant	1172603005	Infantile-onset generalized dyskinesia with orofacial involvement (disorder)			2	loose	ols4	unreviewed
+infant	SNOMED	infant	1197476009	Infantile-onset pulmonary alveolar proteinosis, hypogammaglobulinemia (disorder)			3	loose	ols4	unreviewed
+infection	SNOMED	COVID-19	1119304009	Chronic post-COVID-19 syndrome			1	contains	ols4	unreviewed
+infection	SNOMED	bronchiolitis	4120002	Bronchiolitis			1	exact	ols4	unreviewed
+infection	SNOMED	bronchiolitis	112677002	Bronchiolo-alveolar adenocarcinoma			2	loose	ols4	unreviewed
+infection	SNOMED	bronchiolitis	1260059007	Mucinous bronchiolo-alveolar carcinoma of lung			3	loose	ols4	unreviewed
+lead	LOINC	lead [mass/volume] in blood	5671-3	Lead [Mass/volume] in Blood		Measurement	1	exact	nlm_clinical_tables	unreviewed
+lead	LOINC	lead [mass/volume] in blood	10368-9	Lead [Mass/volume] in Capillary blood		Measurement	2	contains	nlm_clinical_tables	unreviewed
+lead	LOINC	lead [mass/volume] in blood	77307-7	Lead [Mass/volume] in Venous blood		Measurement	3	contains	nlm_clinical_tables	unreviewed
+lead	SNOMED	lead poisoning	216780005	Accidental poisoning by lead fumes			1	contains	ols4	unreviewed
+lead	SNOMED	lead poisoning	216662006	Accidental poisoning by lead paints			2	contains	ols4	unreviewed
+lead	SNOMED	lead poisoning	1145155005	Lead and/or lead compound poisoning			3	contains	ols4	unreviewed
+lung_function	LOINC	FEV1	20150-9	FEV1		Measurement	1	exact	nlm_clinical_tables	unreviewed
+lung_function	LOINC	FVC	19871-3	FVC pre bronchodilation measured/predicted		Measurement	1	contains	nlm_clinical_tables	unreviewed
+lung_function	LOINC	FEV1	20149-1	FEV1 Predicted		Measurement	2	contains	nlm_clinical_tables	unreviewed
+lung_function	LOINC	FVC	64029-2	Post-bronchodilator forced vital capacity (FVC) attempt [PhenX]		Measurement	2	contains	nlm_clinical_tables	unreviewed
+lung_function	LOINC	FEV1	64593-7	FEV1 quality attribute Respiratory system [PhenX]		Measurement	3	contains	nlm_clinical_tables	unreviewed
+lung_function	LOINC	FVC	19873-9	FVC post bronchodilation measured/predicted		Measurement	3	contains	nlm_clinical_tables	unreviewed
+machine_learning	NCIt	machine learning	C176231	Machine Learning			1	exact	ols4	unreviewed
+machine_learning	NCIt	machine learning	C176258	Deep Learning			2	loose	ols4	unreviewed
+machine_learning	NCIt	machine learning	C192294	Automated Single Institution Validated - Artificial Intelligence/Machine Learning Planning Structure Generation			3	contains	ols4	unreviewed
+mental_health	SNOMED	anxiety disorder	197480006	Anxiety disorder			1	exact	ols4	unreviewed
+mental_health	SNOMED	depressive disorder	35489007	Depressive disorder			1	exact	ols4	unreviewed
+mental_health	SNOMED	anxiety disorder	10743001000119103	Anxiety disorder in mother complicating childbirth			2	contains	ols4	unreviewed
+mental_health	SNOMED	depressive disorder	16238181000119101	Depressive disorder caused by amphetamine			2	contains	ols4	unreviewed
+mental_health	SNOMED	anxiety disorder	21897009	Generalized anxiety disorder (disorder)			3	contains	ols4	unreviewed
+mental_health	SNOMED	depressive disorder	10835871000119104	Depressive disorder in mother complicating childbirth			3	contains	ols4	unreviewed
+mixture_methods	NCIt	statistical method	C19044	Statistical Technique			1	loose	ols4	unreviewed
+mixture_methods	NCIt	statistical method	C218482	Trial-Related Statistical Analysis Method			2	contains	ols4	unreviewed
+mixture_methods	NCIt	statistical method	C218631	ICH M11 Protocol Section 10.4.1.1 Statistical Analysis Method			3	contains	ols4	unreviewed
+mortality	SNOMED	death	419620001	Death			1	exact	ols4	unreviewed
+mortality	SNOMED	sudden infant death syndrome	51178009	Sudden infant death syndrome			1	exact	ols4	unreviewed
+mortality	SNOMED	death	270115005	Unexpected death-Coroner told			2	contains	ols4	unreviewed
+mortality	SNOMED	sudden infant death syndrome	392562007	At increased risk for sudden infant death syndrome			2	contains	ols4	unreviewed
+mortality	SNOMED	death	718464003	Number of previous sudden infant death syndrome deaths			3	contains	ols4	unreviewed
+mortality	SNOMED	sudden infant death syndrome	408433001	Recommendation to caregiver regarding prevention of sudden infant death syndrome			3	contains	ols4	unreviewed
+national_survey	SNOMED	health survey	273596002	Medical outcomes study short form general health survey			1	contains	ols4	unreviewed
+national_survey	SNOMED	health survey	273597006	Medical outcomes study short form general health survey - 36			2	contains	ols4	unreviewed
+national_survey	SNOMED	health survey	273598001	Medical outcomes study short form general health survey - 20			3	contains	ols4	unreviewed
+neurodevelopment	SNOMED	developmental delay	248290002	Developmental delay			1	exact	ols4	unreviewed
+neurodevelopment	SNOMED	developmental delay	1340174002	Developmental delay, immunodeficiency, leukoencephalopathy, hypohomocysteinemia syndrome (disorder)			2	contains	ols4	unreviewed
+neurodevelopment	SNOMED	developmental delay	1172685001	Macrothrombocytopenia, lymphedema, developmental delay, facial dysmorphism, camptodactyly syndrome (disorder)			3	contains	ols4	unreviewed
+noise	SNOMED	exposure to noise	78427001	Occupational exposure to noise			1	contains	ols4	unreviewed
+noise	SNOMED	exposure to noise	218226008	Accident caused by exposure to noise			2	contains	ols4	unreviewed
+obesity_adiposity	LOINC	body mass index	39156-5	Body mass index (BMI) [Ratio]		Measurement	1	contains	nlm_clinical_tables	unreviewed
+obesity_adiposity	LOINC	body mass index	59576-9	Body mass index (BMI) [Percentile] Per age and sex		Measurement	2	contains	nlm_clinical_tables	unreviewed
+obesity_adiposity	LOINC	body mass index	97057-4	BMI score for risk calculation		Measurement	3	loose	nlm_clinical_tables	unreviewed
+obesity_adiposity	SNOMED	childhood obesity	444862003	Childhood obesity			1	exact	ols4	unreviewed
+obesity_adiposity	SNOMED	childhood obesity	1359760004	Genetic childhood obesity disorder			2	contains	ols4	unreviewed
+obesity_adiposity	SNOMED	childhood obesity	1359761000	Common polygenetic childhood obesity			3	contains	ols4	unreviewed
+other_metals	LOINC	mercury [mass/volume] in blood	5685-3	Mercury [Mass/volume] in Blood		Measurement	1	exact	nlm_clinical_tables	unreviewed
+other_metals	LOINC	mercury [mass/volume] in blood	12774-6	Mercury [Mass/volume] in Red Blood Cells		Measurement	2	contains	nlm_clinical_tables	unreviewed
+other_metals	SNOMED	arsenic poisoning	89738003	Organic arsenic poisoning			1	contains	ols4	unreviewed
+other_metals	SNOMED	toxic effect of mercury	767299002	Toxic effect of mercury and/or mercury compound			1	contains	ols4	unreviewed
+other_metals	SNOMED	arsenic poisoning	62210001	Inorganic arsenic poisoning			2	contains	ols4	unreviewed
+other_metals	SNOMED	arsenic poisoning	216795007	Accidental poisoning by arsenic fumes			3	contains	ols4	unreviewed
+particulate_matter	SNOMED	exposure to air pollution	102424008	Exposure to polluted air			1	loose	ols4	unreviewed
+particulate_matter	SNOMED	exposure to air pollution	102425009	Occupational exposure to polluted air			2	loose	ols4	unreviewed
+particulate_matter	SNOMED	exposure to air pollution	102426005	Exposure to polluted air, non-occupational			3	loose	ols4	unreviewed
+pregnancy_complications	SNOMED	gestational diabetes mellitus	11687002	Gestational diabetes mellitus			1	exact	ols4	unreviewed
+pregnancy_complications	SNOMED	pre-eclampsia	398254007	Pre-eclampsia			1	exact	ols4	unreviewed
+pregnancy_complications	SNOMED	gestational diabetes mellitus	1268646002	Gestational diabetes mellitus screening			2	contains	ols4	unreviewed
+pregnancy_complications	SNOMED	pre-eclampsia	67359005	Pre-eclampsia added to pre-existing hypertension			2	contains	ols4	unreviewed
+pregnancy_complications	SNOMED	gestational diabetes mellitus	40791000119105	Postpartum gestational diabetes mellitus			3	contains	ols4	unreviewed
+pregnancy_complications	SNOMED	pre-eclampsia	198997005	Pre-eclampsia or eclampsia with pre-existing hypertension			3	contains	ols4	unreviewed
+prenatal_window	SNOMED	pregnancy	289908002	Pregnancy			1	exact	ols4	unreviewed
+prenatal_window	SNOMED	pregnancy	77386006	Pregnancy			2	exact	ols4	unreviewed
+prenatal_window	SNOMED	pregnancy	1156098006	Past pregnancy history of Rhesus isoimmunization affecting pregnancy (situation)			3	contains	ols4	unreviewed
+preterm_birth	SNOMED	preterm birth	440013005	Number of preterm births			1	contains	ols4	unreviewed
+puberty_growth	SNOMED	precocious puberty	400179000	Precocious puberty			1	exact	ols4	unreviewed
+puberty_growth	SNOMED	precocious puberty	736606009	Gonadotropin independent precocious puberty			2	contains	ols4	unreviewed
+puberty_growth	SNOMED	precocious puberty	344646511000119102	Peripheral precocious puberty due to hyperestrogenism (disorder)			3	contains	ols4	unreviewed
+questionnaire	SNOMED	questionnaire	763111006	Assessment using ICIQ-UI-SF (International Consultation on Incontinence Questionnaire-Urinary Incontinence-Short Form)			1	loose	ols4	unreviewed
+questionnaire	SNOMED	questionnaire	736639007	International Consultation on Incontinence Questionnaire-Urinary Incontinence-Short Form			2	contains	ols4	unreviewed
+questionnaire	SNOMED	questionnaire	761871008	ICIQ-UI-SF (International Consultation on Incontinence Questionnaire-Urinary Incontinence-Short Form) score			3	contains	ols4	unreviewed
+record_based_exposure	SNOMED	medical record	129465004	Medical record			1	exact	ols4	unreviewed
+record_based_exposure	SNOMED	medical record	5491000179105	Medical record summary			2	contains	ols4	unreviewed
+record_based_exposure	SNOMED	medical record	305212007	Medical records transfer			3	contains	ols4	unreviewed
+residential_geocoding	SNOMED	geographic location	758638001	Geographical location			1	loose	ols4	unreviewed
+residential_geocoding	SNOMED	geographic location	308916002	Environment or geographical location			2	loose	ols4	unreviewed
+residential_geocoding	SNOMED	geographic location	223496003	Geographical and/or political region of the world			3	loose	ols4	unreviewed
+self_controlled_design	NCIt	case-crossover study	C127779	Observational Case-Crossover Study			1	contains	ols4	unreviewed
+time_series_design	NCIt	time series analysis	C18235	Time Series Analysis			1	exact	ols4	unreviewed
+time_series_design	NCIt	time series analysis	C16224	SAGE Library			2	loose	ols4	unreviewed
+time_series_design	NCIt	time series analysis	C18480	Serial Analysis of Gene Expression			3	loose	ols4	unreviewed
+tobacco_smoke	LOINC	cotinine	35140-3	Trans-3-Hydroxycotinine [Mass/volume] in Serum or Plasma		Measurement	1	loose	nlm_clinical_tables	unreviewed
+tobacco_smoke	LOINC	cotinine	33916-8	Trans-3-Hydroxycotinine [Mass/volume] in Urine		Measurement	2	loose	nlm_clinical_tables	unreviewed
+tobacco_smoke	LOINC	cotinine	78887-7	Trans-3-Hydroxycotinine [Mass/volume] in Saliva (oral fluid)		Measurement	3	loose	nlm_clinical_tables	unreviewed
+tobacco_smoke	SNOMED	exposure to second hand tobacco smoke	16090371000119103	Exposure to second hand tobacco smoke			1	exact	ols4	unreviewed
+tobacco_smoke	SNOMED	maternal tobacco use in pregnancy	100801000119107	Maternal tobacco use in pregnancy			1	exact	ols4	unreviewed
+traffic_related_air_pollution	SNOMED	exposure to vehicle exhaust	242384008	Accidental exposure to exhaust gas from motor vehicle in motion			1	contains	ols4	unreviewed
+type1_diabetes_autoimmunity	SNOMED	coeliac disease	396331005	Celiac disease (disorder)			1	loose	ols4	unreviewed
+type1_diabetes_autoimmunity	SNOMED	type 1 diabetes mellitus	46635009	Diabetes mellitus type 1 (disorder)			1	exact	ols4	unreviewed
+type1_diabetes_autoimmunity	SNOMED	coeliac disease	703970007	Celiac disease monitoring (regime/therapy)			2	loose	ols4	unreviewed
+type1_diabetes_autoimmunity	SNOMED	type 1 diabetes mellitus	367991000119101	Hyperglycemia due to type 1 diabetes mellitus (disorder)			2	contains	ols4	unreviewed
+type1_diabetes_autoimmunity	SNOMED	coeliac disease	391475007	Screening for celiac disease (procedure)			3	loose	ols4	unreviewed
+type1_diabetes_autoimmunity	SNOMED	type 1 diabetes mellitus	137941000119106	Hyperlipidemia due to type 1 diabetes mellitus (disorder)			3	contains	ols4	unreviewed
+vaccination	SNOMED	administration of vaccine	9856004	Administration of vaccine product containing only Francisella tularensis antigen (procedure)			1	contains	ols4	unreviewed
+vaccination	SNOMED	administration of vaccine	170378007	Administration of first dose of pediatric vaccine product containing only Hepatitis A virus antigen (procedure)			2	contains	ols4	unreviewed
+vaccination	SNOMED	administration of vaccine	871752004	Administration of second dose of pediatric vaccine product containing only Hepatitis A virus antigen (procedure)			3	contains	ols4	unreviewed
+vaccine_adverse_event	SNOMED	adverse reaction to vaccine product	293104008	Adverse reaction to component of vaccine product (disorder)			1	contains	ols4	unreviewed
+vaccine_adverse_event	SNOMED	febrile convulsion	41497008	Febrile convulsion			1	exact	ols4	unreviewed
+vaccine_adverse_event	SNOMED	adverse reaction to vaccine product	408672009	Adverse reaction to component of vaccine product containing virus antigen (disorder)			2	contains	ols4	unreviewed
+vaccine_adverse_event	SNOMED	febrile convulsion	230432008	Familial febrile convulsions			2	contains	ols4	unreviewed
+vaccine_adverse_event	SNOMED	adverse reaction to vaccine product	219083000	Adverse reaction to component of vaccine product containing Yersinia pestis antigen (disorder)			3	contains	ols4	unreviewed
+vaccine_adverse_event	SNOMED	febrile convulsion	307200007	Recurrent febrile convulsion			3	contains	ols4	unreviewed
+wildfire_smoke	SNOMED	exposure to smoke	16060351000119105	Neonatal exposure to tobacco smoke			1	contains	ols4	unreviewed
+wildfire_smoke	SNOMED	exposure to smoke	714151003	Environmental tobacco smoke exposure			2	loose	ols4	unreviewed
+wildfire_smoke	SNOMED	exposure to smoke	713096001	Education about second hand smoke exposure			3	loose	ols4	unreviewed

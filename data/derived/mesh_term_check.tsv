@@ -1,0 +1,202 @@
+facet_id	descriptor_name	is_valid	pubmed_count	corpus_count
+adhd_autism	Attention Deficit Disorder with Hyperactivity	1	39942	114
+adhd_autism	Autism Spectrum Disorder	1	53509	102
+adhd_autism	Autistic Disorder	1	30548	50
+adolescent	Adolescent	1	2433009	2456
+adult	Adult	1	8905082	5135
+adult	Aged	1	3945332	3172
+adult	Middle Aged	1	5363274	3732
+adult	Young Adult	1	1258529	1840
+allergic_disease	Dermatitis, Atopic	1	28971	46
+allergic_disease	Food Hypersensitivity	1	26792	21
+allergic_disease	Hypersensitivity, Immediate	1	283026	7
+allergic_disease	Rhinitis, Allergic	1	25812	24
+asthma_wheeze	Asthma	1	153283	464
+asthma_wheeze	Respiratory Sounds	1	15667	46
+biobank	Biological Specimen Banks	1	23158	48
+biomonitoring	Biological Monitoring	1	1990	60
+biomonitoring	Biomarkers	1	1015486	287
+biomonitoring	Fetal Blood	1	33454	65
+biomonitoring	Metabolomics	1	43846	186
+built_environment	Built Environment	1	2029	43
+built_environment	Residence Characteristics	1	88734	670
+built_environment	Urbanization	1	10570	14
+cardiometabolic	Blood Pressure	1	324238	66
+cardiometabolic	Diabetes Mellitus, Type 2	1	203802	176
+cardiometabolic	Hypertension	1	341632	110
+cardiometabolic	Insulin Resistance	1	113750	11
+cardiometabolic	Metabolic Syndrome	1	44245	23
+child	Child	1	2353859	2785
+child	Child, Preschool	1	1081898	1852
+childhood_cancer	Brain Neoplasms	1	192194	72
+childhood_cancer	Leukemia	1	270093	118
+childhood_cancer	Neoplasms	1	4300435	660
+childhood_cancer	Precursor Cell Lymphoblastic Leukemia-Lymphoma	1	37563	60
+claims	Administrative Claims, Healthcare	1	784	5
+claims	Insurance Claim Review	1	7464	32
+claims	Medicaid	1	30451	454
+congenital_anomalies	Cleft Lip	1	18978	40
+congenital_anomalies	Congenital Abnormalities	1	702959	174
+congenital_anomalies	Heart Defects, Congenital	1	181705	63
+congenital_anomalies	Neural Tube Defects	1	32436	21
+drinking_water_contamination	Drinking Water	1	15022	67
+drinking_water_contamination	Trihalomethanes	1	8334	13
+drinking_water_contamination	Water Pollutants, Chemical	1	167533	159
+ehr	Electronic Health Records	1	36845	520
+ehr	Medical Records Systems, Computerized	1	57589	25
+endocrine_disruptors	Benzhydryl Compounds	1	26393	23
+endocrine_disruptors	Endocrine Disruptors	1	12081	101
+endocrine_disruptors	Parabens	1	3237	15
+endocrine_disruptors	Phthalic Acids	1	30020	52
+exposome_wide_design	Exposome	1	689	689
+exposome_wide_design	Genome-Wide Association Study	1	59423	95
+fetal_growth	Birth Weight	1	49617	324
+fetal_growth	Fetal Development	1	110067	82
+fetal_growth	Fetal Growth Retardation	1	20662	56
+fetal_growth	Infant, Low Birth Weight	1	42033	183
+fetal_growth	Infant, Small for Gestational Age	1	9784	113
+gene_environment	Gene-Environment Interaction	1	9091	117
+green_blue_space	Parks, Recreational	1	3608	34
+health_registry	Birth Certificates	1	1676	40
+health_registry	Registries	1	141373	2381
+health_registry	Vital Statistics	1	1216186	28
+healthcare_utilization	Emergency Service, Hospital	1	115917	264
+healthcare_utilization	Hospitalization	1	336582	529
+healthcare_utilization	Patient Acceptance of Health Care	1	187993	155
+immunization_surveillance	Adverse Drug Reaction Reporting Systems	1	11587	132
+immunization_surveillance	Immunization Programs	1	17913	55
+individual_social_factors	Food Insecurity	1	3557	52
+individual_social_factors	Housing Instability	1	142	6
+individual_social_factors	Ill-Housed Persons	1	12720	38
+individual_social_factors	Income	1	75391	86
+individual_social_factors	Social Determinants of Health	1	10776	953
+indoor_air	Air Pollution, Indoor	1	18316	153
+indoor_air	Fungi	1	483774	12
+indoor_air	Radon	1	7271	47
+infant	Infant	1	1355402	1853
+infant	Infant, Newborn	1	726868	1968
+infection	Bronchiolitis	1	10803	13
+infection	COVID-19	1	318575	632
+infection	Otitis Media	1	26943	17
+infection	Pneumonia	1	426706	38
+infection	Respiratory Tract Infections	1	725955	51
+lead	Lead	1	41790	184
+lead	Lead Poisoning	1	12427	106
+lung_function	Forced Expiratory Volume	1	30131	35
+lung_function	Respiratory Function Tests	1	263039	39
+lung_function	Spirometry	1	25105	18
+machine_learning	Machine Learning	1	136965	150
+machine_learning	Neural Networks, Computer	1	110507	10
+mental_health	Anxiety	1	139861	42
+mental_health	Depression	1	186834	112
+mental_health	Mental Disorders	1	1628474	153
+mental_health	Opioid-Related Disorders	1	39775	78
+mental_health	Problem Behavior	1	4981	3
+mixture_methods	Complex Mixtures	1	1419127	9
+monitoring_station	Environmental Monitoring	1	206633	490
+mortality	Death	1	176365	5
+mortality	Infant Mortality	1	33311	54
+mortality	Mortality	1	458548	161
+mortality	Sudden Infant Death	1	8091	19
+national_survey	Health Surveys	1	683470	120
+national_survey	Nutrition Surveys	1	45644	84
+neighborhood_deprivation	Neighborhood Characteristics	1	2430	237
+neighborhood_deprivation	Poverty Areas	1	7006	47
+neighborhood_deprivation	Socioeconomic Factors	1	556276	961
+neurodevelopment	Child Development	1	73953	128
+neurodevelopment	Cognition	1	233405	77
+neurodevelopment	Developmental Disabilities	1	24737	59
+neurodevelopment	Intelligence	1	145781	18
+neurodevelopment	Neurodevelopmental Disorders	1	236362	57
+noise	Noise	1	30052	45
+noise	Noise, Transportation	1	1956	47
+obesity_adiposity	Adiposity	1	17958	15
+obesity_adiposity	Body Mass Index	1	170506	177
+obesity_adiposity	Obesity	1	300339	147
+obesity_adiposity	Overweight	1	312718	40
+obesity_adiposity	Pediatric Obesity	1	18155	67
+other_metals	Arsenic	1	24172	73
+other_metals	Cadmium	1	44835	43
+other_metals	Manganese	1	29015	11
+other_metals	Mercury	1	33779	51
+other_metals	Metals, Heavy	1	717476	71
+ozone	Ozone	1	20397	168
+particulate_matter	Particulate Matter	1	92144	827
+particulate_matter	Soot	1	2577	10
+persistent_organic_pollutants	Dioxins	1	13766	28
+persistent_organic_pollutants	Fluorocarbons	1	26313	140
+persistent_organic_pollutants	Halogenated Diphenyl Ethers	1	5726	24
+persistent_organic_pollutants	Persistent Organic Pollutants	1	837	19
+persistent_organic_pollutants	Polychlorinated Biphenyls	1	18537	89
+personal_sensor	Geographic Information Systems	1	10727	81
+personal_sensor	Wearable Electronic Devices	1	27816	11
+pesticides	Herbicides	1	23029	50
+pesticides	Insecticides	1	57822	67
+pesticides	Organophosphates	1	36907	30
+pesticides	Pesticides	1	133816	379
+pesticides	Pyrethrins	1	13059	16
+pregnancy_complications	Diabetes, Gestational	1	22166	107
+pregnancy_complications	Hypertension, Pregnancy-Induced	1	48308	45
+pregnancy_complications	Pre-Eclampsia	1	40311	57
+pregnancy_complications	Stillbirth	1	7553	52
+prenatal_medication	Acetaminophen	1	22736	26
+prenatal_medication	Anti-Bacterial Agents	1	526187	95
+prenatal_medication	Prenatal Exposure Delayed Effects	1	39703	1597
+prenatal_window	Pregnancy	1	1097207	2994
+prenatal_window	Prenatal Exposure Delayed Effects	1	39703	1597
+preterm_birth	Gestational Age	1	95960	234
+preterm_birth	Infant, Premature	1	72887	92
+preterm_birth	Premature Birth	1	26068	304
+puberty_growth	Growth Disorders	1	40686	5
+puberty_growth	Menarche	1	5882	6
+puberty_growth	Puberty	1	20318	5
+puberty_growth	Puberty, Precocious	1	5584	5
+questionnaire	Self Report	1	51378	88
+questionnaire	Surveys and Questionnaires	1	1410476	478
+record_based_exposure	Drug Prescriptions	1	41718	58
+record_based_exposure	Medical Records	1	172768	72
+record_linkage	Medical Record Linkage	1	4960	52
+research_cohort	Cohort Studies	1	2958311	1736
+research_cohort	Longitudinal Studies	1	205013	353
+research_cohort	Prospective Studies	1	763893	787
+residential_geocoding	Geographic Information Systems	1	10727	81
+residential_geocoding	Geographic Mapping	1	1808	25
+residential_geocoding	Spatial Analysis	1	19602	63
+self_controlled_design	Cross-Over Studies	1	62743	137
+spatial_model	Models, Theoretical	1	2157852	76
+spatial_model	Remote Sensing Technology	1	6818	4
+spatial_model	Spatio-Temporal Analysis	1	10636	24
+structural_racism	Racism	1	9568	17
+structural_racism	Social Segregation	1	12537	8
+structural_racism	Systemic Racism	1	642	1
+temperature_heat	Cold Temperature	1	85930	38
+temperature_heat	Extreme Heat	1	1161	34
+temperature_heat	Hot Temperature	1	137492	78
+temperature_heat	Humidity	1	19649	23
+time_series_design	Interrupted Time Series Analysis	1	3074	10
+tobacco_smoke	Cotinine	1	4837	39
+tobacco_smoke	Smoking	1	170766	505
+tobacco_smoke	Tobacco Smoke Pollution	1	15509	315
+traffic_related_air_pollution	Nitrogen Dioxide	1	8150	246
+traffic_related_air_pollution	Nitrogen Oxides	1	133436	33
+traffic_related_air_pollution	Vehicle Emissions	1	13135	115
+type1_diabetes_autoimmunity	Arthritis, Juvenile	1	12778	19
+type1_diabetes_autoimmunity	Autoimmune Diseases	1	603596	61
+type1_diabetes_autoimmunity	Celiac Disease	1	23368	11
+type1_diabetes_autoimmunity	Diabetes Mellitus, Type 1	1	95097	79
+type1_diabetes_autoimmunity	Inflammatory Bowel Diseases	1	112643	64
+vaccination	Immunization	1	235238	46
+vaccination	Measles-Mumps-Rubella Vaccine	1	3427	44
+vaccination	Vaccination	1	126792	548
+vaccination	Vaccines	1	312493	168
+vaccine_adverse_event	Anaphylaxis	1	24152	21
+vaccine_adverse_event	Drug-Related Side Effects and Adverse Reactions	1	145713	88
+vaccine_adverse_event	Guillain-Barre Syndrome	1	7085	42
+vaccine_adverse_event	Intussusception	1	8953	16
+vaccine_adverse_event	Seizures, Febrile	1	3520	55
+violence_crime	Adverse Childhood Experiences	1	6528	24
+violence_crime	Crime	1	175051	16
+violence_crime	Exposure to Violence	1	1410	2
+violence_crime	Gun Violence	1	785	4
+wildfire_smoke	Smoke	1	28570	54
+wildfire_smoke	Wildfires	1	2298	39

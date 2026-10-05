@@ -1,0 +1,520 @@
+vocabulary_id_1	concept_code_1	relationship_id	vocabulary_id_2	concept_code_2	concept_name_2	source
+NCIt	C127779	Is a	NCIt	C15206	Clinical Study	ols4
+NCIt	C127779	Is a	NCIt	C15429	Research Activity	ols4
+NCIt	C127779	Is a	NCIt	C16084	Observational Study	ols4
+NCIt	C127779	Is a	NCIt	C16203	Clinical or Research Activity	ols4
+NCIt	C127779	Is a	NCIt	C208216	Clinical Study by Type	ols4
+NCIt	C127779	Is a	NCIt	C43431	Activity	ols4
+NCIt	C127779	Is a	NCIt	C63536	Study	ols4
+NCIt	C127779	Is a	NCIt	C70821	Clinical Study by Design	ols4
+NCIt	C176231	Is a	NCIt	C17187	Technology	ols4
+NCIt	C176231	Is a	NCIt	C18141	Computer Sciences	ols4
+NCIt	C176231	Is a	NCIt	C19160	Occupation or Discipline	ols4
+NCIt	C176231	Is a	NCIt	C20181	Conceptual Entity	ols4
+NCIt	C18092	Is a	NCIt	C19896	Miscellaneous Molecular Biology Terms	ols4
+NCIt	C18092	Is a	NCIt	C20181	Conceptual Entity	ols4
+NCIt	C18235	Is a	NCIt	C16847	Technique	ols4
+NCIt	C18235	Is a	NCIt	C19044	Statistical Technique	ols4
+NCIt	C18235	Is a	NCIt	C43431	Activity	ols4
+NCIt	C19044	Is a	NCIt	C16847	Technique	ols4
+NCIt	C19044	Is a	NCIt	C43431	Activity	ols4
+SNOMED	100801000119107	Is a	SNOMED	118185001	Finding related to pregnancy	ols4
+SNOMED	100801000119107	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	100801000119107	Is a	SNOMED	248982007	Pregnancy, childbirth and puerperium finding	ols4
+SNOMED	100801000119107	Is a	SNOMED	365949003	Health-related behavior finding (finding)	ols4
+SNOMED	100801000119107	Is a	SNOMED	365980008	Finding of tobacco use and exposure	ols4
+SNOMED	100801000119107	Is a	SNOMED	384821006	Mental state, behavior and/or psychosocial function finding (finding)	ols4
+SNOMED	100801000119107	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	100801000119107	Is a	SNOMED	427189007	Maternal tobacco use	ols4
+SNOMED	100801000119107	Is a	SNOMED	844005	Behavior finding (finding)	ols4
+SNOMED	102424008	Is a	SNOMED	102420004	Exposure to pollution	ols4
+SNOMED	102424008	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	102424008	Is a	SNOMED	272379006	Event	ols4
+SNOMED	102424008	Is a	SNOMED	418715001	Exposure to potentially harmful entity	ols4
+SNOMED	105531004	Is a	SNOMED	118240005	Finding by method	ols4
+SNOMED	105531004	Is a	SNOMED	129681004	Environmental finding	ols4
+SNOMED	105531004	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	105531004	Is a	SNOMED	365448001	Social and personal history finding	ols4
+SNOMED	105531004	Is a	SNOMED	365500004	Housing, local environment and transport finding	ols4
+SNOMED	105531004	Is a	SNOMED	365508006	Finding of residence and accommodation circumstances (finding)	ols4
+SNOMED	105531004	Is a	SNOMED	365854008	History finding	ols4
+SNOMED	105531004	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	1119304009	Is a	SNOMED	123948009	Disorder following viral disease	ols4
+SNOMED	1119304009	Is a	SNOMED	123976001	Post-infectious disorder	ols4
+SNOMED	1119304009	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	1119304009	Is a	SNOMED	27624003	Chronic disease	ols4
+SNOMED	1119304009	Is a	SNOMED	302049001	Sequela of disorder	ols4
+SNOMED	1119304009	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	1119304009	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	11687002	Is a	SNOMED	126877002	Disorder of glucose metabolism	ols4
+SNOMED	11687002	Is a	SNOMED	1269101009	Maternal disorder during antenatal and/or intrapartum and/or postpartum period	ols4
+SNOMED	11687002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	11687002	Is a	SNOMED	198609003	Complication of pregnancy, childbirth and/or puerperium	ols4
+SNOMED	11687002	Is a	SNOMED	199223000	Diabetes mellitus during pregnancy, childbirth and the puerperium	ols4
+SNOMED	11687002	Is a	SNOMED	20957000	Disorder of carbohydrate metabolism	ols4
+SNOMED	11687002	Is a	SNOMED	237597000	Disorder of glucose regulation	ols4
+SNOMED	11687002	Is a	SNOMED	237598005	Hyperglycemic disorder (disorder)	ols4
+SNOMED	11687002	Is a	SNOMED	237625008	Hyperglycemic disorder in pregnancy (disorder)	ols4
+SNOMED	11687002	Is a	SNOMED	248982007	Pregnancy, childbirth and puerperium finding	ols4
+SNOMED	11687002	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	11687002	Is a	SNOMED	362969004	Disorder of endocrine system	ols4
+SNOMED	11687002	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	11687002	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	11687002	Is a	SNOMED	73211009	Diabetes mellitus	ols4
+SNOMED	11687002	Is a	SNOMED	75934005	Metabolic disease	ols4
+SNOMED	11687002	Is a	SNOMED	80394007	Hyperglycemia (disorder)	ols4
+SNOMED	1220613005	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	1220613005	Is a	SNOMED	160476009	Social / personal history observable	ols4
+SNOMED	1220613005	Is a	SNOMED	224153006	Local environment and neighborhood details (observable entity)	ols4
+SNOMED	1220613005	Is a	SNOMED	302149003	Housing, local environment and transport detail	ols4
+SNOMED	1220613005	Is a	SNOMED	363787002	Observable entity	ols4
+SNOMED	1220613005	Is a	SNOMED	406195007	Community details	ols4
+SNOMED	1287374007	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	1287374007	Is a	SNOMED	254291000	Staging and scales	ols4
+SNOMED	1287374007	Is a	SNOMED	273249006	Assessment scales	ols4
+SNOMED	129465004	Is a	SNOMED	129464000	Medical administrative equipment	ols4
+SNOMED	129465004	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	129465004	Is a	SNOMED	260787004	Physical object	ols4
+SNOMED	129465004	Is a	SNOMED	272181003	Clinical equipment and/or device	ols4
+SNOMED	129465004	Is a	SNOMED	49062001	Device	ols4
+SNOMED	133931009	Is a	SNOMED	125676002	Person	ols4
+SNOMED	133931009	Is a	SNOMED	125677006	Relative	ols4
+SNOMED	133931009	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	133931009	Is a	SNOMED	303071001	Person in the family	ols4
+SNOMED	133931009	Is a	SNOMED	394854006	Immediate family member	ols4
+SNOMED	133931009	Is a	SNOMED	410598002	Person categorized by age (person)	ols4
+SNOMED	133931009	Is a	SNOMED	410599005	Minor	ols4
+SNOMED	133931009	Is a	SNOMED	48176007	Social context	ols4
+SNOMED	133931009	Is a	SNOMED	67822003	Child	ols4
+SNOMED	133936004	Is a	SNOMED	125676002	Person	ols4
+SNOMED	133936004	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	133936004	Is a	SNOMED	410598002	Person categorized by age (person)	ols4
+SNOMED	133936004	Is a	SNOMED	48176007	Social context	ols4
+SNOMED	133937008	Is a	SNOMED	125676002	Person	ols4
+SNOMED	133937008	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	133937008	Is a	SNOMED	410598002	Person categorized by age (person)	ols4
+SNOMED	133937008	Is a	SNOMED	410599005	Minor	ols4
+SNOMED	133937008	Is a	SNOMED	48176007	Social context	ols4
+SNOMED	1351963007	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	1351963007	Is a	SNOMED	260787004	Physical object	ols4
+SNOMED	1351963007	Is a	SNOMED	49062001	Device	ols4
+SNOMED	1351963007	Is a	SNOMED	706593004	Information system	ols4
+SNOMED	1351963007	Is a	SNOMED	707728009	Device system	ols4
+SNOMED	16060351000119105	Is a	SNOMED	118188004	Neonatal finding	ols4
+SNOMED	16060351000119105	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	16060351000119105	Is a	SNOMED	22925008	Neonatal disorder	ols4
+SNOMED	16060351000119105	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	16060351000119105	Is a	SNOMED	414025005	Fetal and/or neonatal disorder	ols4
+SNOMED	16060351000119105	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	16090371000119103	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	16090371000119103	Is a	SNOMED	272379006	Event	ols4
+SNOMED	16090371000119103	Is a	SNOMED	418715001	Exposure to potentially harmful entity	ols4
+SNOMED	171375004	Is a	SNOMED	108217004	Interview, history AND/OR physical examination	ols4
+SNOMED	171375004	Is a	SNOMED	128927009	Procedure by method	ols4
+SNOMED	171375004	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	171375004	Is a	SNOMED	162673000	General examination of patient	ols4
+SNOMED	171375004	Is a	SNOMED	1640009	History and physical examination, insurance	ols4
+SNOMED	171375004	Is a	SNOMED	315306007	Examination by method	ols4
+SNOMED	171375004	Is a	SNOMED	362958002	Procedure by site	ols4
+SNOMED	171375004	Is a	SNOMED	386053000	Evaluation procedure	ols4
+SNOMED	171375004	Is a	SNOMED	5880005	Physical examination	ols4
+SNOMED	171375004	Is a	SNOMED	63332003	History AND physical examination	ols4
+SNOMED	171375004	Is a	SNOMED	71388002	Procedure	ols4
+SNOMED	171375004	Is a	SNOMED	79206001	Specialized medical examination (procedure)	ols4
+SNOMED	171375004	Is a	SNOMED	84100007	History taking	ols4
+SNOMED	195967001	Is a	SNOMED	106048009	Respiratory finding	ols4
+SNOMED	195967001	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	195967001	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	195967001	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	195967001	Is a	SNOMED	50043002	Disorder of respiratory system	ols4
+SNOMED	195967001	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	197480006	Is a	SNOMED	106126000	Emotional state finding	ols4
+SNOMED	197480006	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	197480006	Is a	SNOMED	36456004	Mental state finding	ols4
+SNOMED	197480006	Is a	SNOMED	384821006	Mental state, behavior and/or psychosocial function finding (finding)	ols4
+SNOMED	197480006	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	197480006	Is a	SNOMED	48694002	Anxiety	ols4
+SNOMED	197480006	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	197480006	Is a	SNOMED	74732009	Mental disorder	ols4
+SNOMED	216780005	Is a	SNOMED	1145155005	Lead and/or lead compound poisoning	ols4
+SNOMED	216780005	Is a	SNOMED	1145156006	Accidental poisoning caused by lead and/or lead compound	ols4
+SNOMED	216780005	Is a	SNOMED	1149322001	Intoxication	ols4
+SNOMED	216780005	Is a	SNOMED	1155644000	Poisoning caused by metal and/or metal compound	ols4
+SNOMED	216780005	Is a	SNOMED	1155647007	Accidental poisoning caused by metal and/or metal compound	ols4
+SNOMED	216780005	Is a	SNOMED	1155944003	Poisoning caused by heavy metal and/or heavy metal compound	ols4
+SNOMED	216780005	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	216780005	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	216780005	Is a	SNOMED	417163006	Traumatic or non-traumatic injury	ols4
+SNOMED	216780005	Is a	SNOMED	417746004	Traumatic injury	ols4
+SNOMED	216780005	Is a	SNOMED	445931006	Poisoning by fumes	ols4
+SNOMED	216780005	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	216780005	Is a	SNOMED	72431002	Accidental poisoning	ols4
+SNOMED	216780005	Is a	SNOMED	75478009	Poisoning	ols4
+SNOMED	224153006	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	224153006	Is a	SNOMED	160476009	Social / personal history observable	ols4
+SNOMED	224153006	Is a	SNOMED	302149003	Housing, local environment and transport detail	ols4
+SNOMED	224153006	Is a	SNOMED	363787002	Observable entity	ols4
+SNOMED	224153006	Is a	SNOMED	406195007	Community details	ols4
+SNOMED	24079001	Is a	SNOMED	106076001	Skin finding	ols4
+SNOMED	24079001	Is a	SNOMED	106077005	Integumentary system finding	ols4
+SNOMED	24079001	Is a	SNOMED	128139000	Inflammatory disorder	ols4
+SNOMED	24079001	Is a	SNOMED	128598002	Disorder of integument	ols4
+SNOMED	24079001	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	24079001	Is a	SNOMED	19660004	Disorder of soft tissue	ols4
+SNOMED	24079001	Is a	SNOMED	248402002	General finding of soft tissue	ols4
+SNOMED	24079001	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	24079001	Is a	SNOMED	363168001	Inflammation of skin and/or subcutaneous tissue	ols4
+SNOMED	24079001	Is a	SNOMED	363169009	Inflammation of specific body organs	ols4
+SNOMED	24079001	Is a	SNOMED	363170005	Inflammation of specific body structures or tissue	ols4
+SNOMED	24079001	Is a	SNOMED	363171009	Inflammation of specific body systems	ols4
+SNOMED	24079001	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	24079001	Is a	SNOMED	415531008	Skin AND/OR mucosa finding	ols4
+SNOMED	24079001	Is a	SNOMED	43116000	Eczema	ols4
+SNOMED	24079001	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	24079001	Is a	SNOMED	703938007	Inflammatory dermatosis	ols4
+SNOMED	24079001	Is a	SNOMED	80659006	Disorder of skin and/or subcutaneous tissue	ols4
+SNOMED	24079001	Is a	SNOMED	95320005	Disorder of skin	ols4
+SNOMED	242384008	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	242384008	Is a	SNOMED	272379006	Event	ols4
+SNOMED	242384008	Is a	SNOMED	418019003	Accidental event	ols4
+SNOMED	242384008	Is a	SNOMED	418098005	Accidental exposure to potentially harmful entity	ols4
+SNOMED	242384008	Is a	SNOMED	418715001	Exposure to potentially harmful entity	ols4
+SNOMED	242384008	Is a	SNOMED	773760007	Traumatic event	ols4
+SNOMED	248290002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	248290002	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	248290002	Is a	SNOMED	5294002	Developmental disorder	ols4
+SNOMED	248290002	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	267258002	Is a	SNOMED	106112009	Fetal finding (finding)	ols4
+SNOMED	267258002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	267258002	Is a	SNOMED	22033007	Fetal growth restriction	ols4
+SNOMED	267258002	Is a	SNOMED	276604007	Fetal growth abnormality	ols4
+SNOMED	267258002	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	267258002	Is a	SNOMED	414025005	Fetal and/or neonatal disorder	ols4
+SNOMED	267258002	Is a	SNOMED	444896005	Growth retardation	ols4
+SNOMED	267258002	Is a	SNOMED	5294002	Developmental disorder	ols4
+SNOMED	267258002	Is a	SNOMED	609520005	Disorder of fetal structure	ols4
+SNOMED	267258002	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	267258002	Is a	SNOMED	70591005	Fetal disorder (disorder)	ols4
+SNOMED	273596002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	273596002	Is a	SNOMED	254291000	Staging and scales	ols4
+SNOMED	273596002	Is a	SNOMED	273249006	Assessment scales	ols4
+SNOMED	276610007	Is a	SNOMED	107647005	Weight finding	ols4
+SNOMED	276610007	Is a	SNOMED	118188004	Neonatal finding	ols4
+SNOMED	276610007	Is a	SNOMED	1269435001	Fetal intrapartum and/or early neonatal disorder	ols4
+SNOMED	276610007	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	276610007	Is a	SNOMED	22495007	Abnormal weight	ols4
+SNOMED	276610007	Is a	SNOMED	22925008	Neonatal disorder	ols4
+SNOMED	276610007	Is a	SNOMED	276603001	Perinatal disorder of growth and/or development	ols4
+SNOMED	276610007	Is a	SNOMED	276609002	Birth weight abnormality	ols4
+SNOMED	276610007	Is a	SNOMED	365605003	Body measurement finding	ols4
+SNOMED	276610007	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	276610007	Is a	SNOMED	414025005	Fetal and/or neonatal disorder	ols4
+SNOMED	276610007	Is a	SNOMED	415073005	Perinatal disorder	ols4
+SNOMED	276610007	Is a	SNOMED	47340003	Birth weight finding	ols4
+SNOMED	276610007	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	289908002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	289908002	Is a	SNOMED	246464006	Function	ols4
+SNOMED	289908002	Is a	SNOMED	289907007	Female genital tract functions	ols4
+SNOMED	289908002	Is a	SNOMED	363787002	Observable entity	ols4
+SNOMED	289908002	Is a	SNOMED	76859005	Sexual function	ols4
+SNOMED	293104008	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	293104008	Is a	SNOMED	281647001	Adverse reaction	ols4
+SNOMED	293104008	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	293104008	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	32485007	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	32485007	Is a	SNOMED	14734007	Administrative procedure	ols4
+SNOMED	32485007	Is a	SNOMED	305056002	Admission procedure	ols4
+SNOMED	32485007	Is a	SNOMED	305335007	Admission to establishment	ols4
+SNOMED	32485007	Is a	SNOMED	71388002	Procedure	ols4
+SNOMED	35489007	Is a	SNOMED	106126000	Emotional state finding	ols4
+SNOMED	35489007	Is a	SNOMED	106131003	Mood finding	ols4
+SNOMED	35489007	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	35489007	Is a	SNOMED	36456004	Mental state finding	ols4
+SNOMED	35489007	Is a	SNOMED	384821006	Mental state, behavior and/or psychosocial function finding (finding)	ols4
+SNOMED	35489007	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	35489007	Is a	SNOMED	46206005	Mood disorder	ols4
+SNOMED	35489007	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	35489007	Is a	SNOMED	74732009	Mental disorder	ols4
+SNOMED	35919005	Is a	SNOMED	129104009	Developmental mental disorder	ols4
+SNOMED	35919005	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	35919005	Is a	SNOMED	192562009	Disorder of psychological development	ols4
+SNOMED	35919005	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	35919005	Is a	SNOMED	5294002	Developmental disorder	ols4
+SNOMED	35919005	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	35919005	Is a	SNOMED	700364009	Neurodevelopmental disorder	ols4
+SNOMED	35919005	Is a	SNOMED	74732009	Mental disorder	ols4
+SNOMED	38341003	Is a	SNOMED	106063007	Cardiovascular finding	ols4
+SNOMED	38341003	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	38341003	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	38341003	Is a	SNOMED	366157005	Cardiovascular measurement - finding	ols4
+SNOMED	38341003	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	38341003	Is a	SNOMED	49601007	Disorder of cardiovascular system	ols4
+SNOMED	38341003	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	396331005	Is a	SNOMED	118948005	Disorder of abdomen	ols4
+SNOMED	396331005	Is a	SNOMED	119292006	Disorder of gastrointestinal tract	ols4
+SNOMED	396331005	Is a	SNOMED	1269424006	Gluten intolerance	ols4
+SNOMED	396331005	Is a	SNOMED	128121009	Disorder of trunk	ols4
+SNOMED	396331005	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	396331005	Is a	SNOMED	235719002	Intolerance to food	ols4
+SNOMED	396331005	Is a	SNOMED	249561001	Abdominal organ finding	ols4
+SNOMED	396331005	Is a	SNOMED	249562008	Bowel finding	ols4
+SNOMED	396331005	Is a	SNOMED	302292003	Finding of trunk structure	ols4
+SNOMED	396331005	Is a	SNOMED	32230006	Malabsorption syndrome	ols4
+SNOMED	396331005	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	396331005	Is a	SNOMED	386617003	Digestive system finding	ols4
+SNOMED	396331005	Is a	SNOMED	386618008	Gastrointestinal tract finding	ols4
+SNOMED	396331005	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	396331005	Is a	SNOMED	406123005	Viscus structure finding	ols4
+SNOMED	396331005	Is a	SNOMED	418471000	Propensity to adverse reactions to food	ols4
+SNOMED	396331005	Is a	SNOMED	420134006	Propensity to adverse reaction	ols4
+SNOMED	396331005	Is a	SNOMED	53619000	Disorder of digestive system	ols4
+SNOMED	396331005	Is a	SNOMED	609624008	Finding of abdomen	ols4
+SNOMED	396331005	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	396331005	Is a	SNOMED	76712006	Disorder of digestive organ	ols4
+SNOMED	396331005	Is a	SNOMED	782197009	Intolerance to substance	ols4
+SNOMED	396331005	Is a	SNOMED	822987005	Finding of abdominopelvic segment of trunk	ols4
+SNOMED	396331005	Is a	SNOMED	822988000	Disorder of abdominopelvic segment of trunk	ols4
+SNOMED	396331005	Is a	SNOMED	84410009	Disorder of digestive tract	ols4
+SNOMED	396331005	Is a	SNOMED	85919009	Disorder of intestine	ols4
+SNOMED	398254007	Is a	SNOMED	106005003	Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium	ols4
+SNOMED	398254007	Is a	SNOMED	106063007	Cardiovascular finding	ols4
+SNOMED	398254007	Is a	SNOMED	118185001	Finding related to pregnancy	ols4
+SNOMED	398254007	Is a	SNOMED	1269101009	Maternal disorder during antenatal and/or intrapartum and/or postpartum period	ols4
+SNOMED	398254007	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	398254007	Is a	SNOMED	173300003	Disorder of pregnancy	ols4
+SNOMED	398254007	Is a	SNOMED	198609003	Complication of pregnancy, childbirth and/or puerperium	ols4
+SNOMED	398254007	Is a	SNOMED	248982007	Pregnancy, childbirth and puerperium finding	ols4
+SNOMED	398254007	Is a	SNOMED	288250001	Maternal hypertension	ols4
+SNOMED	398254007	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	398254007	Is a	SNOMED	366157005	Cardiovascular measurement - finding	ols4
+SNOMED	398254007	Is a	SNOMED	367390009	Hypertension in the obstetric context	ols4
+SNOMED	398254007	Is a	SNOMED	38341003	Hypertensive disorder	ols4
+SNOMED	398254007	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	398254007	Is a	SNOMED	48194001	Pregnancy-induced hypertension	ols4
+SNOMED	398254007	Is a	SNOMED	49601007	Disorder of cardiovascular system	ols4
+SNOMED	398254007	Is a	SNOMED	609496007	Complication occurring during pregnancy	ols4
+SNOMED	398254007	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	398254007	Is a	SNOMED	724497009	Disease of circulatory system complicating pregnancy childbirth and puerperium	ols4
+SNOMED	400179000	Is a	SNOMED	118238000	Urogenital finding	ols4
+SNOMED	400179000	Is a	SNOMED	127345001	Disorder of endocrine gonad	ols4
+SNOMED	400179000	Is a	SNOMED	128121009	Disorder of trunk	ols4
+SNOMED	400179000	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	400179000	Is a	SNOMED	237812002	Disorder of puberty	ols4
+SNOMED	400179000	Is a	SNOMED	300479008	Genital finding	ols4
+SNOMED	400179000	Is a	SNOMED	302292003	Finding of trunk structure	ols4
+SNOMED	400179000	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	400179000	Is a	SNOMED	362968007	Disorder of reproductive system	ols4
+SNOMED	400179000	Is a	SNOMED	362969004	Disorder of endocrine system	ols4
+SNOMED	400179000	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	400179000	Is a	SNOMED	42030000	Disorder of the genitourinary system	ols4
+SNOMED	400179000	Is a	SNOMED	5294002	Developmental disorder	ols4
+SNOMED	400179000	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	400179000	Is a	SNOMED	822987005	Finding of abdominopelvic segment of trunk	ols4
+SNOMED	400179000	Is a	SNOMED	822988000	Disorder of abdominopelvic segment of trunk	ols4
+SNOMED	406506008	Is a	SNOMED	118228005	Functional finding	ols4
+SNOMED	406506008	Is a	SNOMED	129104009	Developmental mental disorder	ols4
+SNOMED	406506008	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	406506008	Is a	SNOMED	229712006	Disorders of attention and motor control	ols4
+SNOMED	406506008	Is a	SNOMED	268674003	Developmental disorder of motor function	ols4
+SNOMED	406506008	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	406506008	Is a	SNOMED	5294002	Developmental disorder	ols4
+SNOMED	406506008	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	406506008	Is a	SNOMED	700364009	Neurodevelopmental disorder	ols4
+SNOMED	406506008	Is a	SNOMED	74732009	Mental disorder	ols4
+SNOMED	409002	Is a	SNOMED	105958000	Test AND/OR disease related diet	ols4
+SNOMED	409002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	409002	Is a	SNOMED	226077000	Therapeutic diet	ols4
+SNOMED	409002	Is a	SNOMED	300893006	Nutritional finding	ols4
+SNOMED	409002	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	409002	Is a	SNOMED	41829006	Dietary finding	ols4
+SNOMED	41000179103	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	41000179103	Is a	SNOMED	184216000	Patient record type	ols4
+SNOMED	41000179103	Is a	SNOMED	307851007	Record type	ols4
+SNOMED	41000179103	Is a	SNOMED	419891008	Record artifact (record artifact)	ols4
+SNOMED	4120002	Is a	SNOMED	106048009	Respiratory finding	ols4
+SNOMED	4120002	Is a	SNOMED	118946009	Disorder of thorax	ols4
+SNOMED	4120002	Is a	SNOMED	128121009	Disorder of trunk	ols4
+SNOMED	4120002	Is a	SNOMED	128139000	Inflammatory disorder	ols4
+SNOMED	4120002	Is a	SNOMED	128272009	Disorder of lower respiratory system	ols4
+SNOMED	4120002	Is a	SNOMED	128997002	Inflammatory disorder of lower respiratory tract	ols4
+SNOMED	4120002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	4120002	Is a	SNOMED	19829001	Disorder of lung	ols4
+SNOMED	4120002	Is a	SNOMED	233776003	Tracheobronchial disorder	ols4
+SNOMED	4120002	Is a	SNOMED	298705000	Finding of region of thorax	ols4
+SNOMED	4120002	Is a	SNOMED	301226008	Lower respiratory tract finding	ols4
+SNOMED	4120002	Is a	SNOMED	301227004	Tracheobronchial finding	ols4
+SNOMED	4120002	Is a	SNOMED	301230006	Lung finding	ols4
+SNOMED	4120002	Is a	SNOMED	302292003	Finding of trunk structure	ols4
+SNOMED	4120002	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	4120002	Is a	SNOMED	363169009	Inflammation of specific body organs	ols4
+SNOMED	4120002	Is a	SNOMED	363170005	Inflammation of specific body structures or tissue	ols4
+SNOMED	4120002	Is a	SNOMED	363171009	Inflammation of specific body systems	ols4
+SNOMED	4120002	Is a	SNOMED	363180009	Inflammatory disorder of the respiratory tract	ols4
+SNOMED	4120002	Is a	SNOMED	373405005	Inflammatory disorder of the respiratory system	ols4
+SNOMED	4120002	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	4120002	Is a	SNOMED	406123005	Viscus structure finding	ols4
+SNOMED	4120002	Is a	SNOMED	50043002	Disorder of respiratory system	ols4
+SNOMED	4120002	Is a	SNOMED	609622007	Disorder of thoracic segment of trunk	ols4
+SNOMED	4120002	Is a	SNOMED	609623002	Finding of upper trunk	ols4
+SNOMED	4120002	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	4120002	Is a	SNOMED	68917000	Bronchiolar disease	ols4
+SNOMED	41497008	Is a	SNOMED	102957003	Neurological finding	ols4
+SNOMED	41497008	Is a	SNOMED	105723007	Body temperature finding	ols4
+SNOMED	41497008	Is a	SNOMED	118227000	Vital signs finding	ols4
+SNOMED	41497008	Is a	SNOMED	123979008	Abnormal body temperature	ols4
+SNOMED	41497008	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	41497008	Is a	SNOMED	246556002	Central nervous system finding	ols4
+SNOMED	41497008	Is a	SNOMED	299718000	Finding of brain	ols4
+SNOMED	41497008	Is a	SNOMED	301343009	Temperature-associated finding	ols4
+SNOMED	41497008	Is a	SNOMED	313287004	Seizure related finding	ols4
+SNOMED	41497008	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	41497008	Is a	SNOMED	406122000	Head finding	ols4
+SNOMED	41497008	Is a	SNOMED	50177009	Body temperature above reference range	ols4
+SNOMED	41497008	Is a	SNOMED	91175000	Seizure	ols4
+SNOMED	419620001	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	419620001	Is a	SNOMED	272379006	Event	ols4
+SNOMED	440013005	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	440013005	Is a	SNOMED	248983002	Obstetric history	ols4
+SNOMED	440013005	Is a	SNOMED	363787002	Observable entity	ols4
+SNOMED	440013005	Is a	SNOMED	363788007	Clinical history/examination observable	ols4
+SNOMED	440013005	Is a	SNOMED	364319003	Pregnancy, childbirth / puerperium observable	ols4
+SNOMED	440013005	Is a	SNOMED	364320009	Pregnancy observable	ols4
+SNOMED	440013005	Is a	SNOMED	364324000	Measure of pregnancy	ols4
+SNOMED	44054006	Is a	SNOMED	126877002	Disorder of glucose metabolism	ols4
+SNOMED	44054006	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	44054006	Is a	SNOMED	20957000	Disorder of carbohydrate metabolism	ols4
+SNOMED	44054006	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	44054006	Is a	SNOMED	362969004	Disorder of endocrine system	ols4
+SNOMED	44054006	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	44054006	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	44054006	Is a	SNOMED	73211009	Diabetes mellitus	ols4
+SNOMED	44054006	Is a	SNOMED	75934005	Metabolic disease	ols4
+SNOMED	444862003	Is a	SNOMED	107647005	Weight finding	ols4
+SNOMED	444862003	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	444862003	Is a	SNOMED	365605003	Body measurement finding	ols4
+SNOMED	444862003	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	444862003	Is a	SNOMED	414915002	Obese	ols4
+SNOMED	444862003	Is a	SNOMED	414916001	Obesity	ols4
+SNOMED	444862003	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	444862003	Is a	SNOMED	840358001	High body weight	ols4
+SNOMED	4525004	Is a	SNOMED	128927009	Procedure by method	ols4
+SNOMED	4525004	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	4525004	Is a	SNOMED	14736009	History and physical examination with evaluation and management of patient (procedure)	ols4
+SNOMED	4525004	Is a	SNOMED	308335008	Patient encounter procedure	ols4
+SNOMED	4525004	Is a	SNOMED	386053000	Evaluation procedure	ols4
+SNOMED	4525004	Is a	SNOMED	71388002	Procedure	ols4
+SNOMED	46635009	Is a	SNOMED	126877002	Disorder of glucose metabolism	ols4
+SNOMED	46635009	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	46635009	Is a	SNOMED	20957000	Disorder of carbohydrate metabolism	ols4
+SNOMED	46635009	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	46635009	Is a	SNOMED	362969004	Disorder of endocrine system	ols4
+SNOMED	46635009	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	46635009	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	46635009	Is a	SNOMED	73211009	Diabetes mellitus	ols4
+SNOMED	46635009	Is a	SNOMED	75934005	Metabolic disease	ols4
+SNOMED	51178009	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	51178009	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	51178009	Is a	SNOMED	418362005	Dead - sudden death	ols4
+SNOMED	51178009	Is a	SNOMED	419099009	Dead	ols4
+SNOMED	56018004	Is a	SNOMED	106048009	Respiratory finding	ols4
+SNOMED	56018004	Is a	SNOMED	106051002	Finding related to respiratory sounds	ols4
+SNOMED	56018004	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	56018004	Is a	SNOMED	301282008	Finding of respiration	ols4
+SNOMED	56018004	Is a	SNOMED	301285005	Finding of sound of breathing	ols4
+SNOMED	56018004	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	67822003	Is a	SNOMED	125676002	Person	ols4
+SNOMED	67822003	Is a	SNOMED	125677006	Relative	ols4
+SNOMED	67822003	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	67822003	Is a	SNOMED	303071001	Person in the family	ols4
+SNOMED	67822003	Is a	SNOMED	394854006	Immediate family member	ols4
+SNOMED	67822003	Is a	SNOMED	410598002	Person categorized by age (person)	ols4
+SNOMED	67822003	Is a	SNOMED	410599005	Minor	ols4
+SNOMED	67822003	Is a	SNOMED	48176007	Social context	ols4
+SNOMED	69771008	Is a	SNOMED	119291004	Disorder of upper gastrointestinal tract	ols4
+SNOMED	69771008	Is a	SNOMED	119292006	Disorder of gastrointestinal tract	ols4
+SNOMED	69771008	Is a	SNOMED	128332003	Congenital anomaly of digestive organ	ols4
+SNOMED	69771008	Is a	SNOMED	128347007	Congenital anomaly of gastrointestinal tract	ols4
+SNOMED	69771008	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	69771008	Is a	SNOMED	275262008	Congenital malformation of upper alimentary tract	ols4
+SNOMED	69771008	Is a	SNOMED	276654001	Congenital malformation	ols4
+SNOMED	69771008	Is a	SNOMED	300284004	Finding of esophagus (finding)	ols4
+SNOMED	69771008	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	69771008	Is a	SNOMED	37657006	Disorder of esophagus (disorder)	ols4
+SNOMED	69771008	Is a	SNOMED	386617003	Digestive system finding	ols4
+SNOMED	69771008	Is a	SNOMED	386618008	Gastrointestinal tract finding	ols4
+SNOMED	69771008	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	69771008	Is a	SNOMED	406123005	Viscus structure finding	ols4
+SNOMED	69771008	Is a	SNOMED	414025005	Fetal and/or neonatal disorder	ols4
+SNOMED	69771008	Is a	SNOMED	42357009	Disorder of digestive system specific to fetus OR newborn	ols4
+SNOMED	69771008	Is a	SNOMED	50410009	Disorder of upper digestive tract	ols4
+SNOMED	69771008	Is a	SNOMED	5294002	Developmental disorder	ols4
+SNOMED	69771008	Is a	SNOMED	53619000	Disorder of digestive system	ols4
+SNOMED	69771008	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	69771008	Is a	SNOMED	66091009	Congenital disease	ols4
+SNOMED	69771008	Is a	SNOMED	69518005	Congenital anomaly of digestive system	ols4
+SNOMED	69771008	Is a	SNOMED	76712006	Disorder of digestive organ	ols4
+SNOMED	69771008	Is a	SNOMED	84410009	Disorder of digestive tract	ols4
+SNOMED	69771008	Is a	SNOMED	95470009	Congenital anomaly of digestive tract	ols4
+SNOMED	733423003	Is a	SNOMED	105729006	Finding of health perception, health management pattern (finding)	ols4
+SNOMED	733423003	Is a	SNOMED	129843006	Health management finding	ols4
+SNOMED	733423003	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	733423003	Is a	SNOMED	300893006	Nutritional finding	ols4
+SNOMED	733423003	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	758638001	Is a	SNOMED	118598001	Property	ols4
+SNOMED	758638001	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	758638001	Is a	SNOMED	362981000	Qualifier value	ols4
+SNOMED	763111006	Is a	SNOMED	128927009	Procedure by method	ols4
+SNOMED	763111006	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	763111006	Is a	SNOMED	386053000	Evaluation procedure	ols4
+SNOMED	763111006	Is a	SNOMED	445536008	Assessment using assessment scale	ols4
+SNOMED	763111006	Is a	SNOMED	71388002	Procedure	ols4
+SNOMED	767299002	Is a	SNOMED	1149322001	Intoxication	ols4
+SNOMED	767299002	Is a	SNOMED	1155644000	Poisoning caused by metal and/or metal compound	ols4
+SNOMED	767299002	Is a	SNOMED	1155944003	Poisoning caused by heavy metal and/or heavy metal compound	ols4
+SNOMED	767299002	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	767299002	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	767299002	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	767299002	Is a	SNOMED	75478009	Poisoning	ols4
+SNOMED	78427001	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	78427001	Is a	SNOMED	16090731000119102	Occupational exposure to risk factor	ols4
+SNOMED	78427001	Is a	SNOMED	272379006	Event	ols4
+SNOMED	78427001	Is a	SNOMED	418715001	Exposure to potentially harmful entity	ols4
+SNOMED	78427001	Is a	SNOMED	6300007	Exposed to noise	ols4
+SNOMED	78427001	Is a	SNOMED	773760007	Traumatic event	ols4
+SNOMED	78427001	Is a	SNOMED	83208000	Exposure to mechanical force	ols4
+SNOMED	78427001	Is a	SNOMED	88817006	Exposure to inanimate mechanical force	ols4
+SNOMED	89738003	Is a	SNOMED	1149322001	Intoxication	ols4
+SNOMED	89738003	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	89738003	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	89738003	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	89738003	Is a	SNOMED	75478009	Poisoning	ols4
+SNOMED	89738003	Is a	SNOMED	767146004	Toxic effect of arsenic and/or arsenic compound	ols4
+SNOMED	91857003	Is a	SNOMED	127035006	Bone marrow disorder	ols4
+SNOMED	91857003	Is a	SNOMED	129154003	Hematologic neoplasm (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	91857003	Is a	SNOMED	188725004	Lymphoid leukemia (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	269475001	Malignant neoplasm of lymphoid, hematopoietic and/or related tissue (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	277466009	Lymphoproliferative disorder	ols4
+SNOMED	91857003	Is a	SNOMED	277606000	Lymphoreticular tumor (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	300848003	Mass of body structure	ols4
+SNOMED	91857003	Is a	SNOMED	300853008	Mass of lymphoreticular structure	ols4
+SNOMED	91857003	Is a	SNOMED	362965005	Disorder of body system	ols4
+SNOMED	91857003	Is a	SNOMED	363346000	Malignant neoplastic disease	ols4
+SNOMED	91857003	Is a	SNOMED	399981008	Neoplasm and/or hamartoma	ols4
+SNOMED	91857003	Is a	SNOMED	404684003	Clinical finding	ols4
+SNOMED	91857003	Is a	SNOMED	414026006	Disorder of hematopoietic cell proliferation (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	414027002	Disorder of hematopoietic structure (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	414823004	Neoplasm affecting hematopoietic structure (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	414824005	Neoplasm of bone marrow	ols4
+SNOMED	91857003	Is a	SNOMED	414825006	Neoplasm of hematopoietic cell type (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	55342001	Neoplastic disease	ols4
+SNOMED	91857003	Is a	SNOMED	64572001	Disease	ols4
+SNOMED	91857003	Is a	SNOMED	91855006	Acute leukemia, disease (disorder)	ols4
+SNOMED	91857003	Is a	SNOMED	93143009	Leukemia, disease (disorder)	ols4
+SNOMED	9856004	Is a	SNOMED	107733003	Introduction procedure	ols4
+SNOMED	9856004	Is a	SNOMED	127785005	Administration to produce immunity, either active or passive (procedure)	ols4
+SNOMED	9856004	Is a	SNOMED	128927009	Procedure by method	ols4
+SNOMED	9856004	Is a	SNOMED	138875005	SNOMED CT Concept	ols4
+SNOMED	9856004	Is a	SNOMED	312871001	Administration of bacterial vaccine	ols4
+SNOMED	9856004	Is a	SNOMED	33879002	Administration of vaccine to produce active immunity (procedure)	ols4
+SNOMED	9856004	Is a	SNOMED	71388002	Procedure	ols4
