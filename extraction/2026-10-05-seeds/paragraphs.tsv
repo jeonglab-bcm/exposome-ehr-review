@@ -1,0 +1,256 @@
+id	sha	chars	kind	section
+20505766:p001	a90a0460033b	448	abstract	Abstract > Background
+20505766:p002	0bdd7551f04b	1073	abstract	Abstract > Methods and Findings
+20505766:p003	446c1fa69492	392	abstract	Abstract > Conclusions and Significance
+20505766:p004	1021454981d7	1007	other	Introduction
+20505766:p005	d885ff22550f	399	other	Introduction
+20505766:p006	f4cf9d5e37c8	1141	other	Introduction
+20505766:p007	460e3fec1e46	700	other	Introduction
+20505766:p008	4b49e9889d85	163	methods	Methods > Ethics Statement
+20505766:p009	390f5facb1f7	469	methods	Methods > Ethics Statement
+20505766:p010	2f379fc16942	535	methods	Methods > Ethics Statement
+20505766:p011	92157ef440aa	663	methods	Methods > Ethics Statement
+20505766:p012	c9ce7a21eb9e	397	methods	Methods > Ethics Statement
+20505766:p013	800537982ded	906	methods	Methods > Ethics Statement
+20505766:p014	e991747a8cb7	578	methods	Methods > Ethics Statement
+20505766:p015	c3718b6a8768	584	methods	Methods > Ethics Statement
+20505766:p016	d974e4085709	964	methods	Methods > Ethics Statement
+20505766:p017	6e37716dfbe5	690	methods	Methods > Ethics Statement
+20505766:p018	87d3d8eaedca	436	methods	Methods > Ethics Statement
+20505766:p019	465a1da7f4b4	635	methods	Methods > Ethics Statement
+20505766:p020	00bb447332de	372	methods	Methods > Ethics Statement
+20505766:p021	73acde61a484	405	methods	Methods > Ethics Statement
+20505766:p022	2034bb938fee	1831	methods	Methods > Ethics Statement
+20505766:p023	8627ca453a92	265	results	Results
+20505766:p024	fb445658fcf9	1251	results	Results > Population characteristics
+20505766:p025	ad96e4e77269	682	results	Results > Environment Associations with T2D
+20505766:p026	13662fa5a12e	1224	results	Results > Environment Associations with T2D
+20505766:p027	5685fe5d9d80	1220	results	Results > Nutrients and Vitamins: Carotenes and γ-tocopherol
+20505766:p028	6ba6bfc5fa82	626	results	Results > Nutrients and Vitamins: Carotenes and γ-tocopherol
+20505766:p029	66d3d5157813	761	results	Results > Persistent Pollutants: Polychlorinated Biphenyls and Organochlorine Pesticides
+20505766:p030	e892f029c5ef	510	results	Results > Persistent Pollutants: Polychlorinated Biphenyls and Organochlorine Pesticides
+20505766:p031	d851cac43dc0	521	results	Results > Secondary analysis to test validity of the final estimates
+20505766:p032	66e340c7cfb0	1140	results	Results > Secondary analysis to test validity of the final estimates
+20505766:p033	3fbee21644ee	1314	results	Results > Secondary analysis to test validity of the final estimates
+20505766:p034	e973aae5f6ba	1112	results	Results > Secondary analysis to test validity of the final estimates
+20505766:p035	0473b95b4af1	698	results	Results > Secondary analysis to test validity of the final estimates
+20505766:p036	bf82cfb100ce	1141	results	Results > Secondary analysis to test validity of the final estimates
+20505766:p037	b917bed48d3b	319	results	Results > Secondary analysis to test validity of the final estimates
+20505766:p038	57eeba915caf	1014	discussion	Discussion
+20505766:p039	a96e0eb898ee	675	discussion	Discussion
+20505766:p040	5654bffe7378	421	discussion	Discussion
+20505766:p041	76a292f3c1f0	677	discussion	Discussion
+20505766:p042	adef3192c92a	740	discussion	Discussion
+20505766:p043	9125eea5a090	655	discussion	Discussion
+20505766:p044	dcac14164f06	765	discussion	Discussion
+20505766:p045	f32b3c43b14c	1506	discussion	Discussion
+20505766:p046	4300f09757e6	642	discussion	Discussion
+20505766:p047	c70db2329683	487	discussion	Discussion
+20505766:p048	91dee359c8bc	624	discussion	Discussion
+20505766:p049	dc188a8e72d5	399	discussion	Discussion
+30206078:p001	e8ca6971a9d1	510	abstract	Abstract > Purpose
+30206078:p002	84d8cef08252	682	abstract	Abstract > Participants
+30206078:p003	637a07efaf3a	647	abstract	Abstract > Findings to date
+30206078:p004	54f648af0371	231	abstract	Abstract > Future plans
+30206078:p005	4671b4fc0f83	963	other	Introduction
+30206078:p006	4b6377672f1b	1167	other	Introduction
+30206078:p007	06da93144bc5	1000	methods	Cohorts participating in HELIX
+30206078:p008	7514c21133e8	518	methods	Cohorts participating in HELIX
+30206078:p009	3da1a0f6d399	841	methods	Cohorts participating in HELIX
+30206078:p010	510ef6221036	801	methods	HELIX entire cohort
+30206078:p011	d3d2689e06fd	1408	methods	HELIX entire cohort
+30206078:p012	a0f146c4a072	611	methods	HELIX subcohort
+30206078:p013	c355d4f81b4f	979	methods	HELIX subcohort
+30206078:p014	ac18238eaf7e	593	methods	HELIX subcohort
+30206078:p015	b15b1644f47b	380	methods	HELIX subcohort
+30206078:p016	64e877164d9f	570	methods	HELIX subcohort > Questionnaire information
+30206078:p017	c805d46245ae	838	methods	HELIX subcohort > Questionnaire information
+30206078:p018	76f7f94e4c74	890	methods	HELIX subcohort > Questionnaire information
+30206078:p019	36399c6f9fdc	745	methods	HELIX subcohort > Anthropometry and body composition
+30206078:p020	31b4d732b16e	902	methods	HELIX subcohort > Anthropometry and body composition
+30206078:p021	9122b764b627	763	methods	HELIX subcohort > Anthropometry and body composition
+30206078:p022	b1a8cf927d6c	494	methods	HELIX subcohort > Blood pressure
+30206078:p023	df5a6264cb41	1548	methods	HELIX subcohort > Respiratory health
+30206078:p024	79cc04b11f01	283	methods	HELIX subcohort > Respiratory health
+30206078:p025	92b4050d1e86	798	methods	HELIX subcohort > Neurodevelopment
+30206078:p026	1de84a92b837	280	methods	HELIX subcohort > Neurodevelopment
+30206078:p027	a30ea5f2c9b7	553	methods	HELIX subcohort > Neurodevelopment
+30206078:p028	75db48a5c573	1969	methods	HELIX subcohort > Biological sample collection
+30206078:p029	aa0474fde020	1370	methods	Exposure assessment
+30206078:p030	9b93df997091	1318	methods	Exposure assessment
+30206078:p031	7673c73c8b38	840	methods	Exposure assessment
+30206078:p032	f04a94d105e6	1295	other	Measurement of molecular signatures
+30206078:p033	0e6d88dcc93d	1172	other	Measurement of molecular signatures
+30206078:p034	99f93d423a85	512	other	Measurement of molecular signatures
+30206078:p035	180e18864700	1158	other	Panel studies
+30206078:p036	13877452c159	699	other	Panel studies
+30206078:p037	88d02461a49c	464	other	Panel studies
+30206078:p038	ba0ed4a9b218	450	other	Panel studies
+30206078:p039	c9e7ad346cbc	488	other	Patient and public involvement
+30206078:p040	46cc8160b67e	518	results	Findings to date > Baseline characteristics of the entire cohort
+30206078:p041	bb35b3bdbe60	740	results	Findings to date > Baseline characteristics of the subcohort
+30206078:p042	2a9e83f30c8d	1222	results	Findings to date > Baseline characteristics of the subcohort
+30206078:p043	47bb7007ec91	1119	results	Findings to date > Baseline characteristics of the subcohort
+30206078:p044	f35ae328e3a1	575	results	Findings to date > Baseline characteristics of the subcohort
+30206078:p045	cd0649ac77cf	561	results	Findings to date > Baseline characteristics of the subcohort
+30206078:p046	448ce0ad3194	474	results	Findings to date > Baseline characteristics of the child panel study
+30206078:p047	a097cc09ca92	560	results	Findings to date > Baseline characteristics of the child panel study
+30206078:p048	49f833532c1f	1321	results	Findings to date > Strengths and limitations
+30206078:p049	27a709892368	897	other	Ethics and data protection
+30206078:p050	9edbffe5619f	988	other	Ethics and data protection
+30206078:p051	37c855b3eaa4	1047	other	Data warehouse
+32579081:p001	e0a7da6e1cde	198	abstract	Abstract > Background:
+32579081:p002	9df346ba6938	171	abstract	Abstract > Objectives:
+32579081:p003	a55b624fa0f6	722	abstract	Abstract > Methods:
+32579081:p004	d59d1a184d13	783	abstract	Abstract > Results:
+32579081:p005	3b86c1164fe0	409	abstract	Abstract > Discussion:
+32579081:p006	5c282c915f17	912	other	Introduction
+32579081:p007	96e280275b73	1297	other	Introduction
+32579081:p008	9f864c1d8357	1246	other	Introduction
+32579081:p009	de2cfa615eff	243	other	Introduction
+32579081:p010	80c8960599cb	2408	methods	Methods > Study Population
+32579081:p011	ac05de4f685b	1100	methods	Methods > Environmental Exposures
+32579081:p012	3105c361a96b	1039	methods	Methods > Urban Environment
+32579081:p013	f2f442556bd6	2305	methods	Methods > Urban Environment
+32579081:p014	a80d0d25c6aa	1174	methods	Methods > Urban Environment
+32579081:p015	ce1a63b87526	453	methods	Methods > Urban Environment
+32579081:p016	da433eac11f1	366	methods	Methods > Urban Environment
+32579081:p017	bcf76d490685	1070	methods	Methods > Urban Environment
+32579081:p018	6075ac8b255a	573	methods	Methods > Urban Environment
+32579081:p019	51c56062bd1b	850	methods	Methods > Urban Environment
+32579081:p020	a5a096f8a7ed	1821	methods	Methods > Indoor Air Pollution
+32579081:p021	f640dccc7e57	1341	methods	Methods > Tobacco Smoking
+32579081:p022	a15987c1b453	716	methods	Methods > Chemical Exposures
+32579081:p023	30365cb7af5d	1541	methods	Methods > Chemical Exposures
+32579081:p024	43444099d782	849	methods	Methods > Chemical Exposures
+32579081:p025	8c847474d01d	570	methods	Methods > Chemical Exposures
+32579081:p026	e336b07c6c77	626	methods	Methods > Chemical Exposures
+32579081:p027	baed330cf2e5	824	methods	Methods > Water Disinfection By-Products
+32579081:p028	37da260c1786	1125	methods	Methods > Social and Economic Capital
+32579081:p029	7ab3627ac71d	322	methods	Methods > Social and Economic Capital
+32579081:p030	12d1ab3cbea9	1593	methods	Methods > Childhood Obesity Outcomes
+32579081:p031	f815d0a0333c	375	methods	Methods > Childhood Obesity Outcomes
+32579081:p032	99689123b51a	1494	methods	Methods > Covariates
+32579081:p033	f224cb6a9e89	1076	methods	Methods > Statistical Analysis
+32579081:p034	09af6edc431c	402	methods	Methods > Statistical Analysis > ExWAS (exposure-wide association study) as a screening analysis of single exposures.
+32579081:p035	bd16138e8c6a	507	methods	Methods > Statistical Analysis > DSA (deletion/substitution/addition) algorithm.
+32579081:p036	06031ef32b92	1249	methods	Methods > Statistical Analysis > DSA (deletion/substitution/addition) algorithm.
+32579081:p037	050b93d775d0	542	methods	Methods > Statistical Analysis > DSA (deletion/substitution/addition) algorithm.
+32579081:p038	36590e1761b7	1720	methods	Methods > Statistical Analysis > DSA (deletion/substitution/addition) algorithm.
+32579081:p039	5fbbe4a4bb37	619	results	Results
+32579081:p040	38f7c8b9cce1	1068	results	Results
+32579081:p041	9694254a696f	738	results	Results
+32579081:p042	3eee731c6aee	729	results	Results
+32579081:p043	c3b3c4689cdc	1318	results	Results
+32579081:p044	a03d46ec2412	688	discussion	Discussion
+32579081:p045	f3e0c114cd37	1040	discussion	Discussion
+32579081:p046	941274543ab5	1419	discussion	Discussion
+32579081:p047	1ec6245801a6	1129	discussion	Discussion
+32579081:p048	83af28f16517	975	discussion	Discussion
+32579081:p049	0e6633d5c839	1848	discussion	Discussion
+32579081:p050	8506b8700427	1533	discussion	Discussion
+32579081:p051	01e350ae8629	1900	discussion	Discussion
+32579081:p052	c83eb082347e	950	discussion	Discussion
+32579081:p053	f488272b7f77	1084	discussion	Discussion
+32579081:p054	114ace2029b1	235	discussion	Discussion
+32579081:p055	7b5770ae0ce2	431	discussion	Discussion
+32579081:p056	1798e49b8163	469	discussion	Discussion
+32579081:p057	4be30935ac85	1184	discussion	Discussion
+32579081:p058	eca5e86ca4ed	469	discussion	Discussion
+29126118:p001	9cf779958489	462	abstract	Abstract > Objective
+29126118:p002	dbbb7ddc8979	760	abstract	Abstract > Materials and Methods
+29126118:p003	6807a6a28065	368	abstract	Abstract > Results
+29126118:p004	65077afb69c7	211	abstract	Abstract > Conclusion
+29126118:p005	836997032cf7	586	other	BACKGROUND AND SIGNIFICANCE
+29126118:p006	1f307146d87b	904	other	BACKGROUND AND SIGNIFICANCE
+29126118:p007	a577dc3e8654	1016	other	BACKGROUND AND SIGNIFICANCE
+29126118:p008	32df91a9c65a	646	other	BACKGROUND AND SIGNIFICANCE
+29126118:p009	3d315e33c771	1100	other	BACKGROUND AND SIGNIFICANCE
+29126118:p010	c440f9460d0e	503	other	BACKGROUND AND SIGNIFICANCE
+29126118:p011	33e9f1e31f0b	694	methods	MATERIALS AND METHODS > Geocoding software
+29126118:p012	ced0be7cad7d	452	methods	MATERIALS AND METHODS > Geocoding software
+29126118:p013	c7900f14d7ce	637	methods	MATERIALS AND METHODS > Geomarker assessment software
+29126118:p014	55fd4a34c7fc	878	methods	MATERIALS AND METHODS > Geomarker assessment software
+29126118:p015	b60c71b584eb	1486	methods	MATERIALS AND METHODS > Comparison to other geocoding methods
+29126118:p016	c4cc9f19ae45	219	methods	MATERIALS AND METHODS > Comparison to other geocoding methods
+29126118:p017	06cebc14684e	724	methods	MATERIALS AND METHODS > Comparison to other geocoding methods
+29126118:p018	2a6498e84a23	975	methods	MATERIALS AND METHODS > Multisite study application
+29126118:p019	5228c81f9b42	954	results	Results > DeGAUSS software
+29126118:p020	fd81d04e28ba	666	results	Results > DeGAUSS software
+29126118:p021	725643d7356c	1854	results	Results > Comparison to other geocoding methods
+29126118:p022	c3834ad9f451	1117	results	Results > Comparison to other geocoding methods
+29126118:p023	64a1597d22c2	972	results	Results > Comparison to other geocoding methods
+29126118:p024	a546b2941dc2	2197	results	Results > Example multisite application
+29126118:p025	1392550bd96f	462	results	Results > Example multisite application
+29126118:p026	e0b09a8d2bf8	578	discussion	DISCUSSION
+29126118:p027	d93d70e1c8e2	1007	discussion	DISCUSSION
+29126118:p028	87bbd233e9d4	577	discussion	DISCUSSION
+29126118:p029	1188c9604bca	1597	discussion	DISCUSSION
+29126118:p030	015607c9e32d	1206	discussion	DISCUSSION
+29126118:p031	e1d12d42c34d	676	discussion	DISCUSSION
+29126118:p032	8583e5597da2	338	discussion	CONCLUSION
+37089437:p001	2ef356d20b5a	1854	abstract	Abstract
+37089437:p002	147813531902	1093	other	Introduction
+37089437:p003	00fbf00f69ab	1137	other	Introduction
+37089437:p004	e1a906c7ff05	567	other	Introduction
+37089437:p005	a120afeed6d4	606	methods	Methods > Study population
+37089437:p006	a9ecf19f9587	601	methods	Methods > Study population
+37089437:p007	adeb83ed4356	192	methods	Methods > COVID-19 hospitalization
+37089437:p008	14d3fd3913c8	667	methods	Methods > The spatial and contextual exposome
+37089437:p009	0fad17bcee07	1394	methods	Methods > The spatial and contextual exposome > Natural environment
+37089437:p010	090e6189c797	939	methods	Methods > The spatial and contextual exposome > Built environment
+37089437:p011	d1fe1034521b	802	methods	Methods > The spatial and contextual exposome > Social environment
+37089437:p012	6036c6ff82ef	1288	methods	Methods > Covariates
+37089437:p013	2dc9f5c02fb0	432	methods	Methods > Statistical analysis
+37089437:p014	c411ed0dd77e	2284	methods	Methods > Statistical analysis
+37089437:p015	6622938ef2e3	883	methods	Methods > Statistical analysis
+37089437:p016	25025ef269c7	596	results	Results
+37089437:p017	0a555968d2a9	485	results	Results
+37089437:p018	410e509437f2	911	results	Results
+37089437:p019	efdafad0be52	1072	results	Results
+37089437:p020	3a114a77ece3	712	results	Results
+37089437:p021	6500315f114c	890	discussion	Discussion
+37089437:p022	1d521c4e020a	2841	discussion	Discussion
+37089437:p023	b194973d12f4	1053	discussion	Discussion
+37089437:p024	7b5434e11172	1321	discussion	Discussion
+37089437:p025	df5dcfe4d41d	655	discussion	Discussion
+37089437:p026	5dcc6a30db07	1502	discussion	Discussion
+37089437:p027	fe8fdca702fb	657	discussion	Conclusions
+37089437:p028	7e2f75fc321a	432	availability	Data availability
+35970309:p001	39bc7e162b34	126	abstract	Abstract > Background:
+35970309:p002	8f23f2cd1599	147	abstract	Abstract > Objectives:
+35970309:p003	e56367aeb378	352	abstract	Abstract > Methods:
+35970309:p004	e54322113781	963	abstract	Abstract > Results:
+35970309:p005	c72b0fb2b4b4	201	abstract	Abstract > Conclusions:
+35970309:p006	357a9c73b2fb	175	abstract	Abstract
+35970309:p007	b3ae72799c25	683	other	INTRODUCTION
+35970309:p008	1f1ce296f2d5	813	other	INTRODUCTION
+35970309:p009	e97c2d61c75b	960	other	INTRODUCTION
+35970309:p010	b912cd6b2328	1438	methods	METHODS > Study population
+35970309:p011	7ae7befde1fc	199	methods	METHODS > Primary outcome
+35970309:p012	845b523f4df2	596	methods	METHODS > Individual-level factors
+35970309:p013	956732bff8fa	1151	methods	METHODS > Neighborhood-level factors
+35970309:p014	36afbcc66ca9	1232	methods	METHODS > Statistical analysis
+35970309:p015	9bd48737511b	1289	methods	METHODS > Statistical analysis > Mediation analysis
+35970309:p016	e790cd9fa284	1563	methods	METHODS > Statistical analysis > Mixed-effects analysis
+35970309:p017	20397160c58c	759	methods	METHODS > Statistical analysis > Prediction model development and validation
+35970309:p018	a5a92e264de9	735	results	RESULTS > Visits characteristics and racial disparities
+35970309:p019	8ca7ea4cc20f	256	results	RESULTS > Visits characteristics and racial disparities
+35970309:p020	aae18f0ec5c8	402	results	RESULTS > Visits characteristics and racial disparities
+35970309:p021	1183bfce4177	280	results	RESULTS > Visits characteristics and racial disparities
+35970309:p022	dca2c925dce3	830	results	RESULTS > Mediation analysis
+35970309:p023	202d5a98ef51	491	results	RESULTS > Factors and interactions associated with rate of ED visits
+35970309:p024	9101826954f0	926	results	RESULTS > Factors and interactions associated with rate of ED visits
+35970309:p025	62a085fa1431	465	results	RESULTS > Prediction model and validation
+35970309:p026	67a82573b69a	913	discussion	DISCUSSION
+35970309:p027	ba6199b32779	1730	discussion	DISCUSSION
+35970309:p028	aa93f3ecca64	1497	discussion	DISCUSSION
+35970309:p029	f655b9f8f263	1282	discussion	DISCUSSION
+35970309:p030	0119cb3c7407	1160	discussion	DISCUSSION
+35970309:p031	ce30bb4fa590	1111	discussion	DISCUSSION
+35970309:p032	c6e30867b0c3	943	discussion	DISCUSSION
+35970309:p033	d869f72b64d4	1022	discussion	DISCUSSION
+24914115:p001	cea5032651a1	410	abstract	Abstract > BACKGROUND
+24914115:p002	73c06d39144e	504	abstract	Abstract > METHODS
+24914115:p003	00c4e6b3cad2	359	abstract	Abstract > RESULTS
+24914115:p004	6ddfeb8f0722	316	abstract	Abstract > INTERPRETATION

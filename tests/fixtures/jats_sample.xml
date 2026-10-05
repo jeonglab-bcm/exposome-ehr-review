@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<pmc-articleset><article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <front>
+    <article-meta>
+      <article-id pub-id-type="pmid">99900001</article-id>
+      <title-group><article-title>Synthetic test article</article-title></title-group>
+      <permissions>
+        <license xlink:href="https://creativecommons.org/licenses/by/4.0/"><license-p>CC BY 4.0</license-p></license>
+      </permissions>
+      <abstract>
+        <sec><title>Background</title><p>Air pollution may affect children.</p></sec>
+        <sec><title>Results</title><p>PM2.5 was associated with asthma.</p></sec>
+      </abstract>
+      <abstract abstract-type="graphical"><p>A graphical abstract that must be skipped.</p></abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec><title>Methods</title>
+      <sec><title>Data sources</title>
+        <p>Asthma diagnoses were taken from electronic health records <xref ref-type="bibr" rid="b1">1</xref>,<xref ref-type="bibr" rid="b2">2</xref>.</p>
+        <p>Addresses were geocoded.<list><list-item><p>A nested list item stays in its parent.</p></list-item></list></p>
+      </sec>
+    </sec>
+    <sec><title>Results</title>
+      <sec><title>Sensitivity analysis</title><p>Each 5 ug/m3 of PM2.5 raised asthma risk.</p></sec>
+      <table-wrap><caption><p>A table caption that must be skipped.</p></caption></table-wrap>
+    </sec>
+    <sec><title>Discussion</title><p>We found a harmful association.</p></sec>
+  </body>
+  <back>
+    <sec sec-type="data-availability"><title>Data Availability Statement</title><p>Data are available on request.</p></sec>
+    <ref-list><ref id="b1"><mixed-citation>A reference that must be skipped.</mixed-citation></ref></ref-list>
+  </back>
+</article></pmc-articleset>
